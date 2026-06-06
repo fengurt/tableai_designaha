@@ -28,7 +28,7 @@ Replicate this structure per brand as each design system matures. `npm install` 
 KiND ships as a **Cursor plugin** (`.cursor-plugin/plugin.json`) bundling the `kind-design` skill (with a portable bundled token snapshot) and the `kind-design` MCP server.
 
 - **Already in this repo** — open `tableai_designaha` in Cursor and the skill auto-loads from `.cursor/skills/`. Nothing to install.
-- **Quick, single-skill (paste a URL)** — Cursor → **Settings → Rules → Add Rule → Remote Rule (Github)** → paste `https://github.com/fengurt/tableai_designaha`.
+- **Quick, paste-a-URL rule** — Cursor → **Settings → Rules → Add Rule → Remote Rule (Github)** → paste `https://github.com/fengurt/tableai_designaha`. This imports `.cursor/rules/kind-design.mdc` (a lightweight brand-guardrails rule) into `.cursor/rules/imported/`. (Remote Rule only pulls `.mdc` rules — the full skill comes via the plugin path below.)
 - **Plugin (recommended for sharing)** — publish at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish), or for a team: **Team Marketplace → Settings → Plugins → Add Marketplace → Import from Repo** → `fengurt/tableai_designaha`. Designers then install it from the Marketplace.
 - **Test a plugin locally** — clone into `~/.cursor/plugins/local/kind-design`.
 

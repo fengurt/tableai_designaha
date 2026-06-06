@@ -1,0 +1,29 @@
+---
+description: KiND (善渡科技) brand guardrails — apply when building/styling KiND surfaces, writing KiND copy, or reviewing UI/marketing for brand compliance. A Member of Table AI Alliance.
+alwaysApply: false
+---
+
+# KiND brand guardrails
+
+Warm, human-first, low-saturation green surfaces. *AI for all, not for few.*
+
+## Non-negotiable
+- Write **KiND** — capital K, N, D, lowercase i. Never `Kind`, never `KIND`.
+- Logo: **KiND** with the **N in accent (teal)**, paired with **善渡科技**. Clear space ≥ one K-height. Never recolor outside the palette, add gradients/shadows, or alter the `i`/caps.
+- Slogan stays English in every locale: **for all, not for few.**
+- Three lines always written 脑 / 身 / 智 · **Mind / Body / Wisdom**.
+- Body copy is **sentence case, never all-caps** (eyebrows are the only uppercase exception).
+- Coral is the *one* warm accent — use sparingly; everything else lives in the greens.
+
+## Core tokens
+`--teal #0E8C7B` (PRIMARY) · `--mint #2FD0B2` (accent / ::selection) · `--ink #052E28` · `--forest #063B33` (body text) · `--paper #F8FBF9` (bg) · `--coral #E8765A` (sparingly). Build with semantic `--bg/--surface/--text/--border/--accent` where a surface may re-theme; dark mode brightens accent teal→mint.
+
+Type: **Fraunces** + Noto Serif SC (display, 600, `letter-spacing:-.02em`) · **Hanken Grotesk** + Noto Sans SC (body, 400/500 only) · **Geist Mono** (code/labels).
+
+## Voice
+Warm authority · plain & concrete · inclusive · purposeful optimism — a trusted peer, not stiff or boastful.
+- **Say**: "market-proven, 100,000+ units shipped" · "we're paid on results" · "make AI serve everyone" · 善工 / Kind Workforce / 落地.
+- **Don't**: "revolutionary / disrupts the industry" · "all-round empowerment" · replacing workers · 10x/ninja · 赋能/抓手/闭环 · AI doom or hype.
+
+## Depth
+For full tokens, components, and the living preview, use the **`kind-design` skill** (and the `kind-design` MCP server for live token queries: `get_token`, `validate_color`).
