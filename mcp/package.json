@@ -1,0 +1,25 @@
+{
+  "name": "@tableai/kind-design-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MCP server exposing the KiND design system as resources and tools.",
+  "type": "module",
+  "bin": {
+    "kind-design-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "inspect": "npx @modelcontextprotocol/inspector tsx src/index.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "$description": "KiND (善渡科技) design tokens — W3C DTCG format. Single source of truth; build artifacts (kind.css, Tailwind, Figma) are generated from this file. Pairs with 'KiND Design.md' for narrative, voice, and guardrails.",
+  "color": {
+    "$type": "color",
+    "ink": { "$value": "#052E28", "$description": "Deepest green — dark backgrounds, text on light" },
+    "forest": { "$value": "#063B33", "$description": "Secondary deep / default body text" },
+    "pine": { "$value": "#0A5D50", "$description": "Mid green" },
+    "teal": { "$value": "#0E8C7B", "$description": "PRIMARY brand" },
+    "jade": { "$value": "#13A98C", "$description": "Brighter primary tint" },
+    "mint": { "$value": "#2FD0B2", "$description": "Accent / highlight (and ::selection)" },
+    "seafoam": { "$value": "#7FE3CE", "$description": "Light accent" },
+    "coral": { "$value": "#E8765A", "$description": "Warm accent — use sparingly" },
+    "coral-deep": { "$value": "#993C1D", "$description": "Coral text / don't states" },
+    "coral-tint": { "$value": "#FAECE7", "$description": "Coral wash" },
+    "paper": { "$value": "#F8FBF9", "$description": "Primary background" },
+    "mist": { "$value": "#E7F4F1", "$description": "Tint band" },
+    "mist-2": { "$value": "#D7ECE6", "$description": "Deeper tint" },
+    "cloud": { "$value": "#EEF3F1", "$description": "Neutral cool" },
+    "muted": { "$value": "#52746C", "$description": "Secondary text" },
+    "muted-2": { "$value": "#6E8C84", "$description": "Tertiary text" },
+    "line": { "$value": "#063B331F", "$description": "Hairline — forest @ 12% alpha" },
+    "on-ink": { "$value": "#EAF6F2", "$description": "Text on dark" },
+    "on-ink-mut": { "$value": "#9FC6BC", "$description": "Muted text on dark" }
+  },
+  "accent": {
+    "$type": "color",
+    "$description": "Themeable accent — defaults to brand teal/mint. Build with these, not raw teal, where a surface may be re-themed.",
+    "default": { "$value": "{color.teal}" },
+    "bright": { "$value": "{color.mint}" }
+  },
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "serif": { "$value": ["Fraunces", "Noto Serif SC", "serif"], "$description": "Display / headings — Fraunces (EN), Noto Serif SC (中)" },
+      "sans": { "$value": ["Hanken Grotesk", "Noto Sans SC", "sans-serif"], "$description": "Body / UI — Hanken Grotesk (EN), Noto Sans SC (中)" },
+      "mono": { "$value": ["Geist Mono", "monospace"], "$description": "Code / labels" }
+    },
+    "weight": {
+      "$type": "fontWeight",
+      "body": { "$value": 400 },
+      "body-strong": { "$value": 500 },
+      "heading": { "$value": 600 }
+    },
+    "size": {
+      "$type": "dimension",
+      "$description": "Fluid clamp() scale. $value holds the min for token math; clampValue holds the responsive expression.",
+      "mega": { "$value": "64px", "$extensions": { "kind.clamp": "clamp(64px,13vw,200px)" } },
+      "display": { "$value": "46px", "$extensions": { "kind.clamp": "clamp(46px,8vw,104px)" } },
+      "h1": { "$value": "38px", "$extensions": { "kind.clamp": "clamp(38px,5.4vw,76px)" } },
+      "h2": { "$value": "30px", "$extensions": { "kind.clamp": "clamp(30px,4vw,52px)" } },
+      "h3": { "$value": "22px", "$extensions": { "kind.clamp": "clamp(22px,2.4vw,30px)" } },
+      "h4": { "$value": "20px" },
+      "lead": { "$value": "18px", "$extensions": { "kind.clamp": "clamp(18px,1.7vw,22px)" } },
+      "body": { "$value": "17px" },
+      "sm": { "$value": "15px" },
+      "xs": { "$value": "13px" },
+      "eyebrow": { "$value": "12px", "$description": "uppercase, .24em tracking" }
+    }
+  },
+  "space": {
+    "$type": "dimension",
+    "$description": "8pt-ish scale: 4·8·12·16·24·32·48·64·96·128",
+    "1": { "$value": "4px" },
+    "2": { "$value": "8px" },
+    "3": { "$value": "12px" },
+    "4": { "$value": "16px" },
+    "5": { "$value": "24px" },
+    "6": { "$value": "32px" },
+    "7": { "$value": "48px" },
+    "8": { "$value": "64px" },
+    "9": { "$value": "96px" },
+    "10": { "$value": "128px" },
+    "section": { "$value": "72px", "$extensions": { "kind.clamp": "clamp(72px,11vw,148px)" } }
+  },
+  "radius": {
+    "$type": "dimension",
+    "sm": { "$value": "8px" },
+    "md": { "$value": "14px" },
+    "lg": { "$value": "20px" },
+    "xl": { "$value": "28px" },
+    "2xl": { "$value": "40px" },
+    "pill": { "$value": "999px" }
+  },
+  "shadow": {
+    "$type": "shadow",
+    "$description": "Soft, green-tinted elevation: sh-1 hairline → sh-4 deep lift.",
+    "1": { "$value": { "color": "#063B3314", "offsetX": "0px", "offsetY": "1px", "blur": "2px", "spread": "0px" } },
+    "2": { "$value": { "color": "#063B331F", "offsetX": "0px", "offsetY": "4px", "blur": "12px", "spread": "-2px" } },
+    "3": { "$value": { "color": "#063B3329", "offsetX": "0px", "offsetY": "10px", "blur": "30px", "spread": "-6px" } },
+    "4": { "$value": { "color": "#063B3333", "offsetX": "0px", "offsetY": "24px", "blur": "60px", "spread": "-12px" } }
+  },
+  "motion": {
+    "duration": {
+      "$type": "duration",
+      "base": { "$value": "700ms" }
+    },
+    "ease": {
+      "$type": "cubicBezier",
+      "default": { "$value": [0.2, 0.7, 0.2, 1] },
+      "out": { "$value": [0.16, 1, 0.3, 1] }
+    }
+  },
+  "layout": {
+    "$type": "dimension",
+    "wrap": { "$value": "1200px", "$description": ".wrap max width" },
+    "wrap-wide": { "$value": "1440px", "$description": ".wrap-wide max width" }
+  }
+}

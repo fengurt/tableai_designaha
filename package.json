@@ -1,0 +1,13 @@
+{
+  "name": "tableai-designaha",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Design systems for Table AI Alliance brands — DTCG tokens, build pipeline, and agent integrations.",
+  "type": "module",
+  "scripts": {
+    "build:tokens": "node build-tokens.mjs"
+  },
+  "devDependencies": {
+    "style-dictionary": "^4.3.0"
+  }
+}
