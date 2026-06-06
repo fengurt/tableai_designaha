@@ -5,7 +5,8 @@
   "description": "Design systems for Table AI Alliance brands — DTCG tokens, build pipeline, and agent integrations.",
   "type": "module",
   "scripts": {
-    "build:tokens": "node build-tokens.mjs"
+    "build:tokens": "node build-tokens.mjs",
+    "sync:skill": "cp KiND/tokens/kind.tokens.json .cursor/skills/kind-design/tokens.json"
   },
   "devDependencies": {
     "style-dictionary": "^4.3.0"

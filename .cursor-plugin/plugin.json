@@ -1,0 +1,12 @@
+{
+  "name": "kind-design",
+  "version": "0.1.0",
+  "description": "KiND (善渡科技) design system for agents — DTCG brand tokens, components, voice and guardrails, plus an MCP server for live token queries. A Member of Table AI Alliance.",
+  "author": { "name": "Table AI Alliance" },
+  "homepage": "https://github.com/fengurt/tableai_designaha",
+  "repository": "https://github.com/fengurt/tableai_designaha",
+  "license": "MIT",
+  "keywords": ["design-system", "design-tokens", "dtcg", "branding", "kind", "tableai"],
+  "skills": ".cursor/skills",
+  "mcpServers": "mcp.json"
+}

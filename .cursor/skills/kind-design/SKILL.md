@@ -33,11 +33,9 @@ Type: **Fraunces** + Noto Serif SC (display, weight 600, `letter-spacing:-.02em`
 
 ## Source of truth & artifacts
 
-- **Tokens** (machine source): `KiND/tokens/kind.tokens.json` — W3C DTCG. Read for exact values, fluid type scale, spacing, radii, shadows, motion. Includes a `semantic` group (light `$value` + dark `$extensions['kind.dark']`).
-- **CSS** (ready to use): `KiND/kind.css` — full component library, raw + semantic `:root` tokens, and the dark theme. Link this when building KiND surfaces.
-- **Tailwind**: `KiND/tailwind.preset.js` — `presets: [kind]`; semantic colors (`bg-bg`, `text-text`, `border-border`, `text-accent`) follow the theme automatically.
-- **Preview** (living style guide): `KiND/preview.html` — open via a local server; has a dark-mode toggle.
-- **Build**: `npm run build:tokens` regenerates `KiND/dist/` from the tokens.
+- **Tokens (bundled, portable)**: `tokens.json` — next to this file; a W3C DTCG snapshot for exact values, the fluid type scale, spacing, radii, shadows, motion, and the `semantic` group (light `$value` + dark `$extensions['kind.dark']`). Read this first; it works wherever the skill is installed.
+- **Live tokens (optional)**: the `kind-design` MCP server exposes the same tokens via `get_token` / `validate_color` / resource `kind://tokens` for programmatic queries.
+- **Canonical source + CSS** (in the `tableai_designaha` repo): tokens `KiND/tokens/kind.tokens.json`, component CSS `KiND/kind.css`, Tailwind `KiND/tailwind.preset.js` (`presets:[kind]`; `bg-bg`/`text-text`/`text-accent` follow the theme), living preview `KiND/preview.html` (dark-mode toggle), build `npm run build:tokens`.
 
 ## Theming (light / dark)
 

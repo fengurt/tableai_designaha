@@ -23,3 +23,14 @@ KiND is the first brand wired up for AI agents. The pattern, cheapest → most c
 
 Replicate this structure per brand as each design system matures. `npm install` and the build require network access.
 
+## Install the KiND skill (colleagues & external designers)
+
+KiND ships as a **Cursor plugin** (`.cursor-plugin/plugin.json`) bundling the `kind-design` skill (with a portable bundled token snapshot) and the `kind-design` MCP server.
+
+- **Already in this repo** — open `tableai_designaha` in Cursor and the skill auto-loads from `.cursor/skills/`. Nothing to install.
+- **Quick, single-skill (paste a URL)** — Cursor → **Settings → Rules → Add Rule → Remote Rule (Github)** → paste `https://github.com/fengurt/tableai_designaha`.
+- **Plugin (recommended for sharing)** — publish at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish), or for a team: **Team Marketplace → Settings → Plugins → Add Marketplace → Import from Repo** → `fengurt/tableai_designaha`. Designers then install it from the Marketplace.
+- **Test a plugin locally** — clone into `~/.cursor/plugins/local/kind-design`.
+
+The skill works standalone (it reads its bundled `tokens.json`). The MCP server is optional and needs its deps first: `cd mcp && npm install`. Keep the bundled snapshot current with `npm run sync:skill` after editing canonical tokens.
+

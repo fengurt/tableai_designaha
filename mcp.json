@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "kind-design": {
+      "command": "npx",
+      "args": ["-y", "tsx", "mcp/src/index.ts"]
+    }
+  }
+}
