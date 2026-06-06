@@ -29,6 +29,20 @@
     "default": { "$value": "{color.teal}" },
     "bright": { "$value": "{color.mint}" }
   },
+  "semantic": {
+    "$type": "color",
+    "$description": "Role-based aliases that drive theming. $value is the light theme; $extensions['kind.dark'] is the dark theme. Components should consume these, not raw palette tokens, wherever a surface may be re-themed.",
+    "bg": { "$value": "{color.paper}", "$extensions": { "kind.dark": "{color.ink}" }, "$description": "Page background" },
+    "surface": { "$value": "#FFFFFF", "$extensions": { "kind.dark": "{color.forest}" }, "$description": "Card / raised surface" },
+    "surface-2": { "$value": "{color.mist}", "$extensions": { "kind.dark": "{color.pine}" }, "$description": "Tint band / inset surface" },
+    "text": { "$value": "{color.forest}", "$extensions": { "kind.dark": "{color.on-ink}" }, "$description": "Primary text" },
+    "text-muted": { "$value": "{color.muted}", "$extensions": { "kind.dark": "{color.on-ink-mut}" }, "$description": "Secondary text" },
+    "text-subtle": { "$value": "{color.muted-2}", "$extensions": { "kind.dark": "#86B6AA" }, "$description": "Tertiary text" },
+    "border": { "$value": "{color.line}", "$extensions": { "kind.dark": "#EAF6F21F" }, "$description": "Hairline" },
+    "border-strong": { "$value": "{color.line-2}", "$extensions": { "kind.dark": "#EAF6F238" }, "$description": "Stronger hairline" },
+    "accent": { "$value": "{color.teal}", "$extensions": { "kind.dark": "{color.mint}" }, "$description": "Accent — brighter in dark for contrast" },
+    "accent-bright": { "$value": "{color.mint}", "$extensions": { "kind.dark": "{color.seafoam}" }, "$description": "Accent highlight" }
+  },
   "font": {
     "family": {
       "$type": "fontFamily",

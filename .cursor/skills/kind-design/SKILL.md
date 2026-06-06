@@ -33,10 +33,15 @@ Type: **Fraunces** + Noto Serif SC (display, weight 600, `letter-spacing:-.02em`
 
 ## Source of truth & artifacts
 
-- **Tokens** (machine source): `KiND/tokens/kind.tokens.json` — W3C DTCG. Read for exact values, fluid type scale, spacing, radii, shadows, motion.
-- **CSS** (ready to use): `KiND/kind.css` — full component library + `:root` tokens. Link this when building KiND surfaces.
-- **Preview** (living style guide): `KiND/preview.html` — open via a local server to see colors/type/components.
+- **Tokens** (machine source): `KiND/tokens/kind.tokens.json` — W3C DTCG. Read for exact values, fluid type scale, spacing, radii, shadows, motion. Includes a `semantic` group (light `$value` + dark `$extensions['kind.dark']`).
+- **CSS** (ready to use): `KiND/kind.css` — full component library, raw + semantic `:root` tokens, and the dark theme. Link this when building KiND surfaces.
+- **Tailwind**: `KiND/tailwind.preset.js` — `presets: [kind]`; semantic colors (`bg-bg`, `text-text`, `border-border`, `text-accent`) follow the theme automatically.
+- **Preview** (living style guide): `KiND/preview.html` — open via a local server; has a dark-mode toggle.
 - **Build**: `npm run build:tokens` regenerates `KiND/dist/` from the tokens.
+
+## Theming (light / dark)
+
+Build with **semantic tokens**, not raw palette, on any surface that may re-theme: `--bg` `--surface` `--surface-2` `--text` `--text-muted` `--text-subtle` `--border` `--border-strong` `--accent` `--accent-bright`. Dark mode is opt-in via `<html data-theme="dark">` (or `"auto"` to follow the OS). In dark, accent brightens (teal → mint) for contrast. Raw palette tokens (`--teal`, `--ink`, …) stay fixed and are fine for brand-locked marks like the footer.
 
 ## Components (from `kind.css`)
 
