@@ -32,6 +32,7 @@ Deep-dive companion to `SKILL.md`. Machine-readable values live in `KiND/tokens/
 | `--muted` | `#52746C` | Secondary text |
 | `--muted-2` | `#6E8C84` | Tertiary text |
 | `--line` | `rgba(6,59,51,.12)` | Hairline |
+| `--line-2` | `rgba(6,59,51,.20)` | Stronger hairline |
 | `--on-ink` | `#EAF6F2` | Text on dark |
 | `--on-ink-mut` | `#9FC6BC` | Muted text on dark |
 

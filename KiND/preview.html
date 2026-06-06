@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KiND · Design System Preview</title>
+<meta name="description" content="Living style guide for the KiND design system — for all, not for few." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Noto+Serif+SC:wght@500;600&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="kind.css" />
+<style>
+  /* page-local styles only — everything brand-level comes from kind.css */
+  .section{padding:var(--s-8) 0;border-bottom:1px solid var(--line)}
+  .section h2{font-size:var(--t-h2);margin:var(--s-3) 0 var(--s-5)}
+  .swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:var(--s-3)}
+  .sw{border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;background:#fff}
+  .sw .chip-color{height:72px}
+  .sw .meta{padding:10px 12px;font-family:var(--mono);font-size:var(--t-xs);color:var(--muted)}
+  .sw .meta b{display:block;color:var(--forest);font-family:var(--sans);font-size:var(--t-sm);font-weight:600;margin-bottom:2px}
+  .scale > *{margin:0 0 var(--s-2)}
+  .row{display:flex;flex-wrap:wrap;gap:var(--s-3);align-items:center}
+  .grid3{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:var(--s-4)}
+  .logo-demo{font-family:var(--serif);font-weight:600;font-size:48px;letter-spacing:-.02em}
+  .logo-demo b{color:var(--accent)}
+  .logo-demo .cn{font-size:24px;color:var(--muted);margin-left:12px}
+</style>
+</head>
+<body>
+  <nav class="nav scrolled">
+    <div class="nav-in">
+      <span class="nav-logo"><span class="mk">Ki<b>N</b>D</span><span class="cn">善渡科技</span></span>
+      <span class="nav-links">
+        <a href="#color">Color</a><a href="#type">Type</a><a href="#components">Components</a>
+      </span>
+      <span class="nav-right"><a class="btn btn--primary" href="#">Get started <span class="arw">→</span></a></span>
+    </div>
+  </nav>
+
+  <header class="wrap" style="padding:var(--s-9) 0 var(--s-7)">
+    <span class="eyebrow">Design System · 设计系统</span>
+    <h1 style="font-size:var(--t-display);margin:var(--s-4) 0 var(--s-4)">KiND turns AI into a <em style="font-style:normal;color:var(--accent)">Kind Workforce</em>.</h1>
+    <p class="lead" style="max-width:60ch">A living preview of <code class="mono">kind.css</code> — tokens, type, color, and components. Source of truth: <code class="mono">KiND/tokens/kind.tokens.json</code>. <em>for all, not for few.</em></p>
+    <div class="row" style="margin-top:var(--s-5)">
+      <span class="logo-demo">Ki<b>N</b>D<span class="cn">善渡科技</span></span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="section" id="color">
+      <span class="eyebrow">Color</span>
+      <h2 class="serif">Greens, warmth, neutrals</h2>
+      <div class="swatches" id="swatches"></div>
+    </section>
+
+    <section class="section" id="type">
+      <span class="eyebrow">Typography</span>
+      <h2 class="serif">Fluid scale</h2>
+      <div class="scale">
+        <div class="serif" style="font-size:var(--t-display)">Display · Fraunces</div>
+        <div class="serif" style="font-size:var(--t-h1)">Heading 1</div>
+        <div class="serif" style="font-size:var(--t-h2)">Heading 2</div>
+        <div class="serif" style="font-size:var(--t-h3)">Heading 3</div>
+        <p class="lead">Lead — Hanken Grotesk, set in <code class="mono">--muted</code> with pretty wrapping for sustained reading.</p>
+        <p style="font-size:var(--t-body);max-width:62ch">Body copy is sentence case, never all-caps, in two weights only (400 / 500). Warm authority, plain and concrete — like a trusted peer.</p>
+        <p class="mono" style="font-size:var(--t-sm)">Geist Mono · code &amp; labels · --teal #0E8C7B</p>
+      </div>
+    </section>
+
+    <section class="section" id="components">
+      <span class="eyebrow">Components</span>
+      <h2 class="serif">Buttons, chips, tags, cards</h2>
+
+      <div class="row" style="margin-bottom:var(--s-5)">
+        <button class="btn btn--primary">Primary <span class="arw">→</span></button>
+        <button class="btn btn--dark">Dark</button>
+        <button class="btn btn--ghost">Ghost</button>
+        <button class="btn btn--lg btn--primary">Large</button>
+      </div>
+
+      <div class="row" style="margin-bottom:var(--s-5)">
+        <span class="chip"><b>KiND</b> · Kind Workforce</span>
+        <span class="chip">善工 · 落地</span>
+        <span class="tag tag--teal">Mind 脑</span>
+        <span class="tag tag--coral">Body 身</span>
+        <span class="tag tag--mut">Wisdom 智</span>
+      </div>
+
+      <div class="grid3">
+        <article class="card">
+          <span class="tag tag--teal" style="margin-bottom:12px">Mind 脑</span>
+          <h3 style="font-size:var(--t-h3);margin-bottom:8px">AI-driven brand PR &amp; growth</h3>
+          <p class="u-mut" style="font-size:var(--t-sm)">Market-proven, results-first. We're paid on outcomes.</p>
+        </article>
+        <article class="card">
+          <span class="tag tag--coral" style="margin-bottom:12px">Body 身</span>
+          <h3 style="font-size:var(--t-h3);margin-bottom:8px">Software-hardware &amp; robotics OEM</h3>
+          <p class="u-mut" style="font-size:var(--t-sm)">100,000+ units shipped. Built to land it.</p>
+        </article>
+        <article class="card">
+          <span class="tag tag--mut" style="margin-bottom:12px">Wisdom 智</span>
+          <h3 style="font-size:var(--t-h3);margin-bottom:8px">Expert consulting &amp; education</h3>
+          <p class="u-mut" style="font-size:var(--t-sm)">Make AI serve everyone — for all, not for few.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span class="eyebrow on-dark">A Member of Table AI Alliance</span>
+      <p class="serif" style="font-size:var(--t-h2);margin-top:var(--s-3)">for all, not for few.</p>
+      <p style="color:var(--on-ink-mut);margin-top:var(--s-3)">KiND · 善渡科技 · Hong Kong</p>
+    </div>
+    <span class="wm">善</span>
+  </footer>
+
+  <script>
+    // Render swatches straight from the DTCG token file — proves the single source of truth drives the preview.
+    fetch('tokens/kind.tokens.json')
+      .then(r => r.json())
+      .then(tokens => {
+        const colors = tokens.color;
+        const el = document.getElementById('swatches');
+        Object.entries(colors).forEach(([name, t]) => {
+          if (!t || !t.$value) return;
+          const card = document.createElement('div');
+          card.className = 'sw';
+          card.innerHTML =
+            '<div class="chip-color" style="background:' + t.$value + '"></div>' +
+            '<div class="meta"><b>--' + name + '</b>' + t.$value +
+            (t.$description ? '<br>' + t.$description : '') + '</div>';
+          el.appendChild(card);
+        });
+      })
+      .catch(() => {
+        document.getElementById('swatches').innerHTML =
+          '<p class="u-mut">Open via a local server (e.g. <code class="mono">python3 -m http.server</code>) to load tokens.</p>';
+      });
+    // Activate reveal motion clock + nav scroll state.
+    document.documentElement.classList.add('reveal-ready');
+    addEventListener('scroll', () => {
+      document.querySelector('.nav').classList.toggle('scrolled', scrollY > 8);
+    });
+  </script>
+</body>
+</html>

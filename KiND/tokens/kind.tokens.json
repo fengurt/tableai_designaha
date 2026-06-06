@@ -19,6 +19,7 @@
     "muted": { "$value": "#52746C", "$description": "Secondary text" },
     "muted-2": { "$value": "#6E8C84", "$description": "Tertiary text" },
     "line": { "$value": "#063B331F", "$description": "Hairline — forest @ 12% alpha" },
+    "line-2": { "$value": "#063B3333", "$description": "Stronger hairline — forest @ 20% alpha" },
     "on-ink": { "$value": "#EAF6F2", "$description": "Text on dark" },
     "on-ink-mut": { "$value": "#9FC6BC", "$description": "Muted text on dark" }
   },
@@ -84,10 +85,10 @@
   "shadow": {
     "$type": "shadow",
     "$description": "Soft, green-tinted elevation: sh-1 hairline → sh-4 deep lift.",
-    "1": { "$value": { "color": "#063B3314", "offsetX": "0px", "offsetY": "1px", "blur": "2px", "spread": "0px" } },
-    "2": { "$value": { "color": "#063B331F", "offsetX": "0px", "offsetY": "4px", "blur": "12px", "spread": "-2px" } },
-    "3": { "$value": { "color": "#063B3329", "offsetX": "0px", "offsetY": "10px", "blur": "30px", "spread": "-6px" } },
-    "4": { "$value": { "color": "#063B3333", "offsetX": "0px", "offsetY": "24px", "blur": "60px", "spread": "-12px" } }
+    "1": { "$value": { "color": "#063B330F", "offsetX": "0px", "offsetY": "1px", "blur": "2px", "spread": "0px" } },
+    "2": { "$value": { "color": "#063B334D", "offsetX": "0px", "offsetY": "10px", "blur": "30px", "spread": "-18px" } },
+    "3": { "$value": { "color": "#063B3373", "offsetX": "0px", "offsetY": "26px", "blur": "60px", "spread": "-34px" } },
+    "4": { "$value": { "color": "#063B338C", "offsetX": "0px", "offsetY": "40px", "blur": "90px", "spread": "-50px" } }
   },
   "motion": {
     "duration": {

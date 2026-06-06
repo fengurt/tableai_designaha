@@ -1,0 +1,182 @@
+/* ============================================================
+   KiND · 善渡科技 — Design System v2.0
+   "for all, not for few."
+   Component library. Token values mirror the single source of
+   truth at KiND/tokens/kind.tokens.json (W3C DTCG). When the
+   build runs (npm run build:tokens), the :root block below can
+   be replaced by the generated KiND/dist/kind.tokens.css.
+   ============================================================ */
+
+/* ---------- 1. TOKENS ---------- */
+:root{
+  --ink:#052E28; --forest:#063B33; --pine:#0A5D50; --teal:#0E8C7B;
+  --jade:#13A98C; --mint:#2FD0B2; --seafoam:#7FE3CE;
+
+  --coral:#E8765A; --coral-deep:#993C1D; --coral-tint:#FAECE7;
+
+  --paper:#F8FBF9; --mist:#E7F4F1; --mist-2:#D7ECE6; --cloud:#EEF3F1;
+  --muted:#52746C; --muted-2:#6E8C84;
+  --line:rgba(6,59,51,.12); --line-2:rgba(6,59,51,.20);
+  --on-ink:#EAF6F2; --on-ink-mut:#9FC6BC;
+
+  --serif:"Fraunces","Noto Serif SC",Georgia,serif;
+  --sans:"Hanken Grotesk","Noto Sans SC",-apple-system,BlinkMacSystemFont,sans-serif;
+  --mono:"Geist Mono","SF Mono",ui-monospace,Menlo,monospace;
+
+  --t-mega:clamp(64px,13vw,200px); --t-display:clamp(46px,8vw,104px);
+  --t-h1:clamp(38px,5.4vw,76px); --t-h2:clamp(30px,4vw,52px);
+  --t-h3:clamp(22px,2.4vw,30px); --t-h4:20px;
+  --t-lead:clamp(18px,1.7vw,22px); --t-body:17px; --t-sm:15px; --t-xs:13px;
+  --t-eyebrow:12px;
+
+  --s-1:4px; --s-2:8px; --s-3:12px; --s-4:16px; --s-5:24px;
+  --s-6:32px; --s-7:48px; --s-8:64px; --s-9:96px; --s-10:128px;
+  --s-section:clamp(72px,11vw,148px);
+
+  --r-sm:8px; --r-md:14px; --r-lg:20px; --r-xl:28px; --r-2xl:40px; --r-pill:999px;
+
+  --sh-1:0 1px 2px rgba(6,59,51,.06);
+  --sh-2:0 10px 30px -18px rgba(6,59,51,.30);
+  --sh-3:0 26px 60px -34px rgba(6,59,51,.45);
+  --sh-4:0 40px 90px -50px rgba(6,59,51,.55);
+
+  --ease:cubic-bezier(.2,.7,.2,1); --ease-out:cubic-bezier(.16,1,.3,1); --dur:.7s;
+
+  --accent:var(--teal); --accent-bright:var(--mint);
+  --maxw:1200px;
+}
+
+/* ---------- 2. RESET / BASE ---------- */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--sans);color:var(--forest);background:var(--paper);
+  line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  overflow-x:hidden;font-feature-settings:"ss01","cv01";
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+::selection{background:var(--mint);color:var(--ink)}
+button{font-family:inherit}
+
+/* ---------- 3. LAYOUT ---------- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.wrap-wide{max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+section{position:relative}
+
+/* ---------- 4. TYPOGRAPHY PRIMITIVES ---------- */
+.serif{font-family:var(--serif)}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:var(--t-eyebrow);letter-spacing:.24em;text-transform:uppercase;
+  color:var(--accent);font-weight:600;
+}
+.eyebrow::before{content:"";width:28px;height:1.5px;background:currentColor;opacity:.55;flex:none}
+.eyebrow.center{justify-content:center}
+.eyebrow.on-dark{color:var(--mint)}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;letter-spacing:-.02em;line-height:1.04;text-wrap:balance}
+.lead{font-size:var(--t-lead);color:var(--muted);line-height:1.6;text-wrap:pretty}
+.mono{font-family:var(--mono)}
+
+/* ---------- 5. BUTTONS ---------- */
+.btn{
+  --bg:var(--ink);--fg:var(--on-ink);
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--sans);font-weight:600;font-size:var(--t-sm);
+  padding:14px 26px;border-radius:var(--r-pill);border:1.5px solid transparent;
+  background:var(--bg);color:var(--fg);cursor:pointer;
+  transition:transform .35s var(--ease-out),box-shadow .35s var(--ease),background .25s,color .25s,border-color .25s;
+  will-change:transform;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--sh-2)}
+.btn:active{transform:translateY(0)}
+.btn .arw{transition:transform .35s var(--ease-out)}
+.btn:hover .arw{transform:translateX(4px)}
+.btn--primary{--bg:var(--accent);--fg:#fff}
+.btn--dark{--bg:var(--ink);--fg:var(--on-ink)}
+.btn--ghost{--bg:transparent;--fg:var(--forest);border-color:var(--line-2)}
+.btn--ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn--on-ink{--bg:var(--mint);--fg:var(--ink)}
+.btn--lg{padding:17px 32px;font-size:16px}
+
+/* ---------- 6. CHIPS / TAGS ---------- */
+.chip{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:var(--t-xs);font-weight:500;color:var(--forest);
+  border:1px solid var(--line);border-radius:var(--r-pill);
+  padding:8px 16px;background:rgba(255,255,255,.6);
+  transition:border-color .25s,color .25s,background .25s,transform .25s var(--ease-out);
+}
+.chip:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
+.chip b{color:var(--accent);font-weight:600}
+.tag{display:inline-block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;padding:5px 12px;border-radius:var(--r-pill)}
+.tag--teal{color:var(--accent);background:var(--mist)}
+.tag--coral{color:var(--coral-deep);background:var(--coral-tint)}
+.tag--mut{color:var(--muted);background:var(--cloud)}
+
+/* ---------- 7. NAV ---------- */
+.nav{position:sticky;top:0;z-index:80;
+  background:color-mix(in srgb,var(--paper) 80%,transparent);
+  backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);
+  border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
+.nav.scrolled{border-bottom-color:var(--line)}
+.nav-in{max-width:1440px;margin:0 auto;padding:16px clamp(20px,4vw,48px);
+  display:flex;align-items:center;justify-content:space-between;gap:24px}
+.nav-logo{font-family:var(--serif);font-weight:600;font-size:22px;letter-spacing:-.02em;display:flex;align-items:baseline;gap:10px}
+.nav-logo .mk b{color:var(--accent)}
+.nav-logo .cn{font-size:15px;color:var(--muted);font-weight:500;white-space:nowrap}
+.nav-links{display:flex;gap:28px;align-items:center;font-size:var(--t-sm);color:var(--muted)}
+.nav-links a{position:relative;transition:color .25s;padding:4px 0;white-space:nowrap}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:0;background:var(--accent);transition:width .3s var(--ease-out)}
+.nav-links a:hover{color:var(--accent)}
+.nav-links a:hover::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:18px}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:var(--r-pill);overflow:hidden;background:rgba(255,255,255,.5)}
+.langbtn{padding:6px 14px;font-size:var(--t-xs);font-weight:600;font-family:var(--sans);background:transparent;border:0;color:var(--muted);cursor:pointer;transition:all .25s}
+.langbtn.active{background:var(--ink);color:#fff}
+@media(max-width:820px){.nav-links a{display:none}}
+
+/* ---------- 8. CARDS ---------- */
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:30px;transition:transform .4s var(--ease-out),box-shadow .4s var(--ease),border-color .4s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--sh-3);border-color:transparent}
+
+/* ---------- 9. REVEAL MOTION ----------
+   Default = visible (safe). Hidden+animate only applied when JS confirms
+   the render clock is live (html.reveal-ready). Frozen/throttled or
+   reduced-motion environments simply show content. */
+.reveal{opacity:1;transform:none}
+html.reveal-ready .reveal{opacity:0;transform:translateY(26px)}
+html.reveal-ready .reveal.in{opacity:1;transform:none;transition:opacity .9s var(--ease),transform .9s var(--ease)}
+html.reveal-ready .reveal[data-d="1"].in{transition-delay:.08s}
+html.reveal-ready .reveal[data-d="2"].in{transition-delay:.16s}
+html.reveal-ready .reveal[data-d="3"].in{transition-delay:.24s}
+html.reveal-ready .reveal[data-d="4"].in{transition-delay:.32s}
+html.reveal-ready .reveal[data-d="5"].in{transition-delay:.40s}
+html[data-motion="off"] .reveal{opacity:1!important;transform:none!important;transition:none!important}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1!important;transform:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+
+/* clip-reveal for headlines */
+.clip{display:inline-block;overflow:hidden;vertical-align:bottom}
+.clip > span{display:inline-block}
+html.reveal-ready .clip > span{transform:translateY(110%);transition:transform 1s var(--ease-out)}
+html.reveal-ready .in .clip > span,html.reveal-ready .clip.in > span{transform:none}
+html[data-motion="off"] .clip > span{transform:none!important}
+@media (prefers-reduced-motion:reduce){.clip > span{transform:none!important}}
+
+/* ---------- 10. FOOTER ---------- */
+.footer{background:var(--ink);color:var(--on-ink);padding:clamp(64px,9vw,120px) 0 56px;position:relative;overflow:hidden}
+.footer .wm{position:absolute;right:-3%;bottom:-22%;font-family:var(--serif);font-weight:600;
+  font-size:clamp(220px,34vw,440px);color:rgba(47,208,178,.06);line-height:.8;pointer-events:none;user-select:none}
+
+/* ---------- 11. UTIL ---------- */
+html[data-corners="sharp"]{--r-sm:2px;--r-md:3px;--r-lg:4px;--r-xl:6px;--r-2xl:10px;--r-pill:6px}
+.u-mist{background:var(--mist)}
+.u-ink{background:var(--ink);color:var(--on-ink)}
+.u-center{text-align:center}
+.u-mut{color:var(--muted)}
+.divider{height:1px;background:var(--line);border:0}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}

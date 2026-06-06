@@ -31,13 +31,16 @@ Build with `--accent` / `--accent-bright` (default teal/mint), not raw teal, whe
 
 Type: **Fraunces** + Noto Serif SC (display, weight 600, `letter-spacing:-.02em`), **Hanken Grotesk** + Noto Sans SC (body, weights 400/500 only), **Geist Mono** (code/labels).
 
-## Source of truth
+## Source of truth & artifacts
 
-The full, machine-readable token set is W3C DTCG JSON at `KiND/tokens/kind.tokens.json` (relative to repo root). Read it for exact values, the fluid type scale, spacing, radii, shadows, and motion. Generated CSS/JS live in `KiND/dist/` (run `npm run build:tokens`).
+- **Tokens** (machine source): `KiND/tokens/kind.tokens.json` — W3C DTCG. Read for exact values, fluid type scale, spacing, radii, shadows, motion.
+- **CSS** (ready to use): `KiND/kind.css` — full component library + `:root` tokens. Link this when building KiND surfaces.
+- **Preview** (living style guide): `KiND/preview.html` — open via a local server to see colors/type/components.
+- **Build**: `npm run build:tokens` regenerates `KiND/dist/` from the tokens.
 
-## Components
+## Components (from `kind.css`)
 
-`.eyebrow` (uppercase label + leading rule) · `.btn` (pill, weight 600, lifts -2px; variants `--primary` `--dark` `--ghost` `--on-ink` `--lg`) · `.chip` · `.tag` (`--teal`/`--coral`/`--mut`) · `.nav` (sticky blurred paper, hairline `.scrolled`) · `.card` (white, hairline, lifts -6px) · `.footer` (ink bg, oversized watermark glyph).
+`.eyebrow` (uppercase label + leading rule; `.center`/`.on-dark`) · `.btn` (pill, weight 600, lifts -2px; variants `--primary` `--dark` `--ghost` `--on-ink` `--lg`) · `.chip` · `.tag` (`--teal`/`--coral`/`--mut`) · `.nav` (sticky blurred paper, hairline `.scrolled`) · `.card` (white, hairline, lifts -6px) · `.footer` (ink bg, oversized watermark glyph) · utilities `.serif` `.mono` `.lead` `.u-mist` `.u-ink` `.u-center` `.u-mut` `.divider` `.sr-only`.
 
 ## Voice
 
