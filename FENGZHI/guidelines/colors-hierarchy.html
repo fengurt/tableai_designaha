@@ -1,0 +1,22 @@
+<!-- @dsCard group="Colors" viewport="700x180" subtitle="文字与线的层级 — 软墨正文、石灰注释、规则线、深金文字" name="辅助色与层级" -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--surface-page); font-family: var(--font-body); padding: 18px 20px; }
+  .ln { display: flex; align-items: center; gap: 14px; padding: 9px 0; border-bottom: var(--rule-hairline) solid var(--line); }
+  .ln:last-child { border-bottom: none; }
+  .tok { font-family: var(--font-western); font-size: 10px; color: var(--text-caption); width: 110px; letter-spacing: 0.04em; }
+  .demo { font-size: 14px; }
+</style>
+</head>
+<body>
+  <div class="ln"><span class="tok">--ink</span><span class="demo" style="color: var(--ink); font-family: var(--font-display); font-weight: 600;">标题与字标用墨黑</span></div>
+  <div class="ln"><span class="tok">--ink-soft</span><span class="demo" style="color: var(--ink-soft);">正文用软墨，长文不刺眼</span></div>
+  <div class="ln"><span class="tok">--stone</span><span class="demo" style="color: var(--stone); font-size: 12px; letter-spacing: 0.18em;">注释与英文小字用石灰 CAPTION</span></div>
+  <div class="ln"><span class="tok">--gold-deep</span><span class="demo" style="color: var(--gold-deep);">金色文字一律用深金，保证可读</span></div>
+  <div class="ln"><span class="tok">--line</span><span style="flex: 1; height: 1px; background: var(--line);"></span><span class="tok" style="width: auto;">规则线 1px</span></div>
+</body>
+</html>

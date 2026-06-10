@@ -1,0 +1,35 @@
+<!-- @dsCard group="Brand" viewport="700x210" subtitle="界格徽记 — 四界十一门的抽象：四格之界，右上鎏金为「识界之始」" name="徽记 · 界格" -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--surface-page); padding: 20px 22px; font-family: var(--font-body); display: flex; gap: 26px; align-items: center; }
+  .cell { border: 1px solid var(--line); background: var(--surface-card); display: flex; align-items: center; justify-content: center; width: 110px; height: 110px; flex-direction: column; gap: 8px; }
+  .cell.dark { background: var(--ink); border-color: var(--ink); }
+  .lab { font-family: var(--font-western); font-size: 9px; color: var(--text-caption); letter-spacing: 0.08em; }
+  .note { font-size: 12px; line-height: 1.9; color: var(--text-body); flex: 1; }
+</style>
+</head>
+<body>
+  <div style="display: flex; gap: 10px;">
+    <div>
+      <div class="cell"><img src="../assets/jiege-mark.svg" width="44" height="44" alt="界格徽记"></div>
+      <div class="lab" style="text-align: center; margin-top: 6px;">标准版</div>
+    </div>
+    <div>
+      <div class="cell dark"><img src="../assets/jiege-mark-reversed.svg" width="44" height="44" alt="界格徽记反白"></div>
+      <div class="lab" style="text-align: center; margin-top: 6px;">反白版</div>
+    </div>
+    <div>
+      <div class="cell"><img src="../assets/jiege-mark-mono.svg" width="44" height="44" alt="界格徽记单色"></div>
+      <div class="lab" style="text-align: center; margin-top: 6px;">单色墨版</div>
+    </div>
+  </div>
+  <div class="note">
+    四等分方格 = 四界（身体 / 他人 / 自我 / 时间）；右上格鎏金，意为「一切转变，始于识界」。
+    最小尺寸 12px；四周净空 ≥ 徽记宽度的 50%；不旋转、不加圆角、不改变金格位置。
+  </div>
+</body>
+</html>

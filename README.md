@@ -11,6 +11,7 @@ Open design-system reference for Table AI Alliance brands. One folder per brand;
 | [MANAENDLESS](./MANAENDLESS/) | MANA Endless · 无魔协会 |
 | [OPCGLOBAL](./OPCGLOBAL/) | OPC Global · 欧匹赛全球联盟 |
 | [IPTRUST](./IPTRUST/) | IPTrustasset |
+| [FENGZHI](./FENGZHI/) | 峰值永造局 · The Transformation Company · 界格 |
 
 ## Agent integration (KiND — reference implementation)
 

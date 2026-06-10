@@ -1,0 +1,20 @@
+/* 峰值永造局 · 间距与形态 — 方向 A「界格」
+   纪律：无圆角、无阴影；细规则线分区；留白 ≥40%。 */
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 40px;
+  --space-6: 64px;
+  --space-7: 104px;
+
+  --radius: 0px;            /* 永远无圆角 */
+  --shadow: none;           /* 永远无阴影 */
+  --rule-hairline: 0.5px;   /* 表格内线 */
+  --rule-thin: 1px;         /* 标准分区线 */
+  --frame-border: 1px solid var(--line); /* 展示框 */
+
+  --page-margin: 64px;      /* 文档页边距 */
+  --deck-margin: 96px;      /* 1920 deck 页边距 */
+}

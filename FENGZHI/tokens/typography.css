@@ -1,0 +1,31 @@
+/* 峰值永造局 · 字体 — 方向 A「界格」
+   中文宋体大字距标题 × 中文黑体细正文 × Helvetica 数字注释 */
+:root {
+  --font-display: "Noto Serif SC", "Songti SC", serif;
+  --font-body: "Noto Sans SC", "PingFang SC", "Helvetica Neue", sans-serif;
+  --font-western: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* 字重 */
+  --weight-display: 600;     /* 标题、字标 */
+  --weight-display-light: 500;
+  --weight-body: 300;        /* 正文细黑 */
+  --weight-body-strong: 500;
+
+  /* 字距（中文标题拉开，西文小字大距） */
+  --track-wordmark: 0.34em;  /* 字标 峰值永造局 */
+  --track-display: 0.08em;   /* 页面标题 */
+  --track-kicker: 0.22em;    /* 眉题/KICKER */
+  --track-caption: 0.18em;   /* 英文注释小字 */
+
+  /* 字号阶（文档量纲；1920 deck 量纲见 readme） */
+  --text-xs: 11px;    /* 页眉页脚、出处 */
+  --text-sm: 13px;    /* 注释 */
+  --text-base: 16px;  /* 正文 */
+  --text-lg: 21px;    /* 小标题 */
+  --text-xl: 28px;    /* 章节标题 */
+  --text-2xl: 40px;   /* 页面标题 */
+  --text-3xl: 64px;   /* 大数字/封面 */
+
+  --leading-body: 1.9;
+  --leading-display: 1.35;
+}

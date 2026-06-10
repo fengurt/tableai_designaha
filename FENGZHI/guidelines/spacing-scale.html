@@ -1,0 +1,32 @@
+<!-- @dsCard group="Spacing" viewport="700x180" subtitle="8px 基数间距阶 + 规则线两档 — 无圆角、无阴影" name="间距与规则线" -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--surface-page); padding: 18px 20px; font-family: var(--font-body); }
+  .scale { display: flex; align-items: flex-end; gap: 14px; }
+  .s { background: var(--ink); width: 22px; }
+  .lab { font-family: var(--font-western); font-size: 9px; color: var(--text-caption); text-align: center; margin-top: 5px; }
+  .rules { display: flex; gap: 28px; margin-top: 16px; align-items: center; font-size: 11px; color: var(--text-body); }
+</style>
+</head>
+<body>
+  <div class="scale">
+    <div><div class="s" style="height: 4px;"></div><div class="lab">4</div></div>
+    <div><div class="s" style="height: 8px;"></div><div class="lab">8</div></div>
+    <div><div class="s" style="height: 16px;"></div><div class="lab">16</div></div>
+    <div><div class="s" style="height: 24px;"></div><div class="lab">24</div></div>
+    <div><div class="s" style="height: 40px;"></div><div class="lab">40</div></div>
+    <div><div class="s" style="height: 64px;"></div><div class="lab">64</div></div>
+    <div style="flex: 1;"></div>
+    <div style="font-size: 11px; color: var(--text-body); text-align: right; line-height: 1.8;">radius 0 · shadow none<br>留白 ≥ 40%</div>
+  </div>
+  <div class="rules">
+    <span>规则线</span>
+    <span style="flex: 1; height: 0.5px; background: var(--line); display: block;"></span><span>0.5px 内线</span>
+    <span style="flex: 1; height: 1px; background: var(--line); display: block;"></span><span>1px 分区</span>
+  </div>
+</body>
+</html>

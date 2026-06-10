@@ -1,0 +1,17 @@
+---
+description: 峰值永造局 (The Transformation Company) 界格 brand guardrails — apply when building/styling surfaces, decks, mocks, or reviewing UI/copy. Paper-white, ink serif, gold ≤4%, zero radius/shadows, hairline rules.
+alwaysApply: false
+---
+
+# 峰值永造局 brand guardrails
+
+方向 A「界格」— Swiss precision × Eastern restraint.
+
+## Non-negotiable
+- Paper `#FAF7F2` · ink `#1A1714` · stone `#8C857A` · gold `oklch(.66 .09 80)` ≤4% accent only; gold text uses `--gold-deep`. No gradients, overlays, or new colors.
+- Noto Serif SC display (wide tracking) · Noto Sans SC 300 body · zero border-radius · zero shadows · hairline rules only.
+- 中文为主; 我们 not 您尊享. No `!`, emoji, 赋能/极致/颠覆/闭环. Every number cites its source.
+- Only symbol: **界格徽记** (`FENGZHI/assets/jiege-mark*.svg`). Lists use `·` or numbers.
+
+## Depth
+Full tokens, components, slides, and voice: **`fengzhiyongzaoju-design` skill** and `FENGZHI/readme.md`.

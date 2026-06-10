@@ -1,0 +1,28 @@
+<!-- @dsCard group="Colors" viewport="700x190" subtitle="用色比例与鎏金纪律 — 金 ≤4%，只点不铺" name="用色比例" -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--surface-page); font-family: var(--font-body); padding: 18px 20px; }
+  .bar { display: flex; height: 44px; border: 1px solid rgba(0,0,0,0.08); }
+  .leg { display: flex; gap: 18px; margin-top: 10px; font-size: 11px; color: var(--text-body); }
+  .leg b { font-weight: 500; }
+  .rules { margin: 14px 0 0; padding: 0 0 0 16px; font-size: 12px; line-height: 1.9; color: var(--text-body); }
+</style>
+</head>
+<body>
+  <div class="bar">
+    <div style="width: 78%; background: var(--paper);"></div>
+    <div style="width: 12%; background: var(--ink);"></div>
+    <div style="width: 7%; background: var(--stone);"></div>
+    <div style="width: 3%; background: var(--gold);"></div>
+  </div>
+  <div class="leg"><span><b>纸白</b> ~78%</span><span><b>墨黑</b> ~12%</span><span><b>石灰</b> ~7%</span><span><b>鎏金</b> ≤4%</span></div>
+  <ul class="rules">
+    <li>鎏金只用于：界格徽记、关键数字、规则线端点——永不作底色或大面积铺色。</li>
+    <li>无渐变、无半透明叠色；层级靠墨的深浅与字距，不靠颜色数量。</li>
+  </ul>
+</body>
+</html>
