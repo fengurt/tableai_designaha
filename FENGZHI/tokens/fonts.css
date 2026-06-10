@@ -1,0 +1,5 @@
+/* 峰值永造局 — webfonts
+   中文衬线：思源宋体 Noto Serif SC（标题、字标）
+   中文黑体：思源黑体 Noto Sans SC（正文）
+   西文与数字：Helvetica Neue（系统字体，无需加载） */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap");

@@ -1,0 +1,27 @@
+<!-- @dsCard group="Spacing" viewport="700x230" subtitle="版式骨架 — 页眉细线、居中主体、页脚双语；一页一句话一个数字" name="版式骨架" -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--surface-page); padding: 16px 20px; font-family: var(--font-body); }
+  .page { border: 1px solid var(--line); background: var(--surface-card); width: 320px; aspect-ratio: 16/9; margin: 0 auto; padding: 10px 14px; box-sizing: border-box; display: flex; flex-direction: column; }
+  .hf { display: flex; justify-content: space-between; font-size: 5px; letter-spacing: 0.2em; color: var(--stone); }
+  .mid { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; }
+  .note { font-size: 11px; color: var(--text-body); line-height: 1.9; max-width: 560px; margin: 12px auto 0; text-align: center; }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="hf" style="border-bottom: 0.5px solid var(--line); padding-bottom: 5px;"><span>峰值永造局 · 种子轮</span><span>机密 CONFIDENTIAL</span></div>
+    <div class="mid">
+      <div style="width: 9px; height: 9px; border: 0.8px solid var(--ink); display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;"><span></span><span style="background: var(--gold);"></span><span></span><span></span></div>
+      <div style="font-family: var(--font-display); font-weight: 600; font-size: 11px; letter-spacing: 0.2em; color: var(--ink);">一页只说一句话</div>
+      <div style="font-size: 6px; color: var(--ink-soft);">辅证一行 · 数字标注出处</div>
+    </div>
+    <div class="hf" style="border-top: 0.5px solid var(--line); padding-top: 5px;"><span>转变经济 · THE TRANSFORMATION ECONOMY</span><span>P4 / 12</span></div>
+  </div>
+  <div class="note">页眉页脚用 0.5–1px 细线 + 石灰小字界定；主体大量留白。文档页边距 64px，1920 幻灯片页边距 96px。</div>
+</body>
+</html>

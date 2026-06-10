@@ -1,0 +1,39 @@
+<!-- @dsCard group="Components" viewport="700x300" subtitle="核心组件 — 徽记、字标、眉题、大数字、页眉页脚" name="核心组件" -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; background: var(--surface-page); padding: 18px 22px; font-family: var(--font-body); }
+  .row { display: flex; align-items: center; gap: 24px; padding: 12px 0; border-bottom: 0.5px solid var(--line); }
+  .row:last-child { border-bottom: none; }
+  .tok { font-family: var(--font-western); font-size: 9px; letter-spacing: 0.08em; color: var(--text-caption); width: 92px; flex-shrink: 0; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <span class="tok">JiegeMark</span>
+    <img src="../../assets/jiege-mark.svg" width="28" height="28" alt="">
+    <img src="../../assets/jiege-mark-mono.svg" width="28" height="28" alt="">
+    <span style="background: var(--ink); padding: 5px; display: inline-flex;"><img src="../../assets/jiege-mark-reversed.svg" width="18" height="18" alt=""></span>
+  </div>
+  <div class="row">
+    <span class="tok">Wordmark</span>
+    <span style="display: inline-flex; align-items: center; gap: 9px;"><img src="../../assets/jiege-mark.svg" width="16" height="16" alt=""><span style="font-family: var(--font-display); font-weight: 600; font-size: 14px; letter-spacing: 0.22em; color: var(--ink);">峰值永造局</span></span>
+  </div>
+  <div class="row">
+    <span class="tok">Kicker</span>
+    <span style="font-family: var(--font-western); font-size: 10px; letter-spacing: 0.22em; color: var(--stone);">THE TRANSFORMATION COMPANY</span>
+    <span style="font-size: 10px; letter-spacing: 0.22em; color: var(--gold-deep);">体验是载体 · AI 是杠杆</span>
+  </div>
+  <div class="row">
+    <span class="tok">Stat</span>
+    <span><span style="font-family: var(--font-western); font-weight: 300; font-size: 32px; color: var(--ink); line-height: 1;">100</span><span style="font-size: 11px; color: var(--ink-soft); margin-left: 10px;">个家族账户即过亿</span><span style="font-size: 9.5px; color: var(--stone); margin-left: 8px;">McKinsey · 2025E</span></span>
+  </div>
+  <div class="row">
+    <span class="tok">PageChrome</span>
+    <span style="flex: 1; display: flex; justify-content: space-between; font-size: 9px; letter-spacing: 0.2em; color: var(--stone); border-bottom: 1px solid var(--line); padding-bottom: 7px;"><span>峰值永造局 · 种子轮</span><span>机密 CONFIDENTIAL</span></span>
+  </div>
+</body>
+</html>

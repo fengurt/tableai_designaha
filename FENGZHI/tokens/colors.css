@@ -1,0 +1,24 @@
+/* 峰值永造局 · 色彩 — 方向 A「界格」
+   纪律：纸白为底，墨黑为字，鎏金 ≤4% 仅作点缀，永不大面积铺色。 */
+:root {
+  /* 基础色 */
+  --paper: #FAF7F2;        /* 纸白 — 页面底色 */
+  --paper-raised: #FFFFFF; /* 纯白 — 框线内的展示面 */
+  --ink: #1A1714;          /* 墨黑 — 标题、字标、强调 */
+  --ink-soft: #5C554C;     /* 软墨 — 正文 */
+  --stone: #8C857A;        /* 石灰 — 注释、页眉页脚、英文小字 */
+  --line: #E5DFD4;         /* 规则线 — 0.5–1px 分区线 */
+  --gold: oklch(0.66 0.09 80);      /* 鎏金 — 界格徽记、图形点缀（≈#AF8C4F） */
+  --gold-deep: oklch(0.55 0.09 80); /* 深金 — 金色文字专用，保证可读（≈#8F7038） */
+
+  /* 语义别名 */
+  --surface-page: var(--paper);
+  --surface-card: var(--paper-raised);
+  --text-display: var(--ink);
+  --text-body: var(--ink-soft);
+  --text-caption: var(--stone);
+  --text-accent: var(--gold-deep);
+  --accent: var(--gold);
+  --rule: var(--line);
+  --rule-strong: var(--ink);
+}

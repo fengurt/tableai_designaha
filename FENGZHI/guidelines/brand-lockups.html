@@ -1,0 +1,31 @@
+<!-- @dsCard group="Brand" viewport="700x250" subtitle="字标组合 — 居中竖排组合（封面）与横排组合（页眉、文档）" name="字标组合" -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--surface-page); padding: 18px 20px; font-family: var(--font-body); display: flex; gap: 14px; }
+  .frame { border: 1px solid var(--line); background: var(--surface-card); flex: 1; display: flex; align-items: center; justify-content: center; padding: 22px 10px; }
+  .lab { font-family: var(--font-western); font-size: 9px; color: var(--text-caption); letter-spacing: 0.08em; text-align: center; margin-top: 7px; }
+  .wm { font-family: var(--font-display); font-weight: 600; color: var(--ink); }
+</style>
+</head>
+<body>
+  <div style="flex: 1.1;">
+    <div class="frame" style="flex-direction: column; gap: 12px; display: flex;">
+      <img src="../assets/jiege-mark.svg" width="26" height="26" alt="">
+      <div class="wm" style="font-size: 21px; letter-spacing: 0.34em; margin-right: -0.34em;">峰值永造局</div>
+      <div style="font-family: var(--font-western); font-size: 7px; letter-spacing: 0.42em; margin-right: -0.42em; color: var(--stone);">THE TRANSFORMATION COMPANY</div>
+    </div>
+    <div class="lab">主组合 · 封面与章节页</div>
+  </div>
+  <div style="flex: 1;">
+    <div class="frame" style="gap: 10px; display: flex; align-items: center;">
+      <img src="../assets/jiege-mark.svg" width="18" height="18" alt="">
+      <div class="wm" style="font-size: 15px; letter-spacing: 0.22em;">峰值永造局</div>
+    </div>
+    <div class="lab">横排组合 · 页眉、签名、小尺寸</div>
+  </div>
+</body>
+</html>
