@@ -4,7 +4,7 @@ Open design-system reference for Table AI Alliance brands. One folder per brand;
 
 | Folder | Brand |
 |--------|-------|
-| [TABLEAI](./TABLEAI/) | Table AI — international think tank |
+| [TABLEAI](./TABLEAI/) | Table AI — international think tank (white · Deep Blue · Gold) |
 | [VANAHOM](./VANAHOM/) | VANAHOM · 凡纳弘途 |
 | [KiND](./KiND/) | KiND · 善渡科技 |
 | [APHA](./APHA/) | Asia-Pacific Healing Arts Alliance · 亚太艺术疗愈联盟 |

@@ -1,0 +1,19 @@
+---
+description: Table AI brand guardrails — international think-tank aesthetic. Apply when building/styling Table AI surfaces (consulting pages, briefs, decks, workspace), writing copy, or reviewing UI for brand compliance.
+alwaysApply: false
+---
+
+# Table AI brand guardrails
+
+Calm, intentional, institute-grade. Four principles: Altruistic · Authentic · Artistic · Elegant (利他 · 真实 · 艺术 · 优雅).
+
+## Non-negotiable
+- White ground · Deep Blue `#0A1626` for text/structure · Gold `#A88B52` accent **≤8%**, never a gold background. Gold text on white uses `--gold-deep #785F2A`.
+- Manrope throughout (display 700 / heading 600 / body 400 / label 600 uppercase). Deep Blue on white ≥ 12:1.
+- 8px grid (`xs4 sm8 md16 lg24 xl40 xxl80`), container max `1200px`. Micro radii (2–4px) or square; no heavy shadows — use whitespace + 1px rules. ≥40% whitespace.
+- Motion: fade + small translate, `300ms ease-out`; respect reduced-motion; never playful.
+- Real, cool, low-saturation photography only. No candy colors, purple gradients, or generic SaaS look.
+- Voice: precise, neutral, evidence-forward; bilingual when apt; cite sources; no hype adjectives.
+
+## Depth
+Full tokens, component states, and per-tool instructions: **`tableai-design` skill**, `TABLEAI/tokens/tableai.tokens.json`, and `TABLEAI/TableAI_DESIGN.md`.

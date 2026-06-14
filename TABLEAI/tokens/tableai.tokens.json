@@ -1,0 +1,75 @@
+{
+  "$description": "Table AI design tokens — W3C DTCG format. Single source of truth for the international think-tank brand: white ground, Universe Deep Blue structure, Sundial Dark Gold accent ≤8%. Pairs with TABLEAI/TableAI_DESIGN.md (philosophy + guardrails).",
+  "color": {
+    "$type": "color",
+    "white": { "$value": "#FFFFFF", "$description": "Base — background, large whitespace, lightness" },
+    "deep-blue": { "$value": "#0A1626", "$description": "寰宇深蓝 Universe Deep Blue — primary text, structure lines, brand mark" },
+    "deep-blue-soft": { "$value": "#101C2C", "$description": "Elevated dark panels / containers" },
+    "deep-blue-muted": { "$value": "#3C4759", "$description": "Borders on dark, hover on navy" },
+    "gold": { "$value": "#A88B52", "$description": "日晷暗金 Sundial Dark Gold — CTA, interaction states, key data, fine detail. ≤8% of visible area" },
+    "gold-deep": { "$value": "#785F2A", "$description": "Gold text on white (readable accent text)" },
+    "gold-mist": { "$value": "#A88B5214", "$description": "Subtle gold wash — active/focus tint (≈8% opacity)" },
+    "ink": { "$value": "#1B1B1D", "$description": "Neutral on-surface text" },
+    "ink-variant": { "$value": "#44474C", "$description": "Secondary text, captions" },
+    "outline": { "$value": "#75777D", "$description": "Borders, dividers" },
+    "outline-variant": { "$value": "#C5C6CD", "$description": "Subtle hairline" },
+    "surface": { "$value": "#FBF9FA", "$description": "Off-white page surface" },
+    "surface-container": { "$value": "#F0EDEF", "$description": "Tinted container" },
+    "error": { "$value": "#BA1A1A", "$description": "Error / destructive" }
+  },
+  "semantic": {
+    "$type": "color",
+    "$description": "Role-based aliases driving theming. Build with these where a surface may re-theme.",
+    "bg": { "$value": "{color.white}", "$description": "Page background" },
+    "surface": { "$value": "{color.surface}", "$description": "Off-white panel" },
+    "text": { "$value": "{color.deep-blue}", "$description": "Primary text & structure" },
+    "text-muted": { "$value": "{color.ink-variant}", "$description": "Secondary text" },
+    "border": { "$value": "{color.outline-variant}", "$description": "Hairline divider" },
+    "border-strong": { "$value": "{color.deep-blue}", "$description": "High-contrast rule" },
+    "accent": { "$value": "{color.gold}", "$description": "CTA / interaction / key metrics" },
+    "accent-text": { "$value": "{color.gold-deep}", "$description": "Gold text on white" }
+  },
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "sans": { "$value": ["Manrope", "Noto Sans SC", "system-ui", "sans-serif"], "$description": "Display + body + UI" }
+    },
+    "weight": {
+      "$type": "fontWeight",
+      "body": { "$value": 400 },
+      "label": { "$value": 600 },
+      "heading": { "$value": 600 },
+      "display": { "$value": 700 }
+    },
+    "size": {
+      "$type": "dimension",
+      "headline-xl": { "$value": "40px", "$extensions": { "tableai.lineHeight": "1.2", "tableai.letterSpacing": "-0.02em", "tableai.weight": 700 } },
+      "headline-lg": { "$value": "32px", "$extensions": { "tableai.lineHeight": "1.25", "tableai.weight": 600 } },
+      "headline-md": { "$value": "24px", "$extensions": { "tableai.lineHeight": "1.3", "tableai.weight": 600 } },
+      "body-lg": { "$value": "18px", "$extensions": { "tableai.lineHeight": "1.6" } },
+      "body-md": { "$value": "16px", "$extensions": { "tableai.lineHeight": "1.6" } },
+      "label-sm": { "$value": "12px", "$extensions": { "tableai.lineHeight": "1", "tableai.letterSpacing": "0.05em", "tableai.weight": 600 } }
+    }
+  },
+  "space": {
+    "$type": "dimension",
+    "$description": "8px-based grid",
+    "xs": { "$value": "4px" },
+    "sm": { "$value": "8px" },
+    "md": { "$value": "16px" },
+    "lg": { "$value": "24px" },
+    "xl": { "$value": "40px" },
+    "xxl": { "$value": "80px" },
+    "container-max": { "$value": "1200px" }
+  },
+  "radius": {
+    "$type": "dimension",
+    "$description": "Micro radii only — investor-grade restraint (2–4px) or square.",
+    "sm": { "$value": "2px" },
+    "default": { "$value": "4px" },
+    "md": { "$value": "6px" },
+    "lg": { "$value": "8px" },
+    "xl": { "$value": "12px" },
+    "full": { "$value": "9999px" }
+  }
+}

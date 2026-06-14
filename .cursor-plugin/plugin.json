@@ -6,7 +6,7 @@
   "homepage": "https://github.com/fengurt/tableai_designaha",
   "repository": "https://github.com/fengurt/tableai_designaha",
   "license": "MIT",
-  "keywords": ["design-system", "design-tokens", "branding", "kind", "fengzhi", "tableai"],
+  "keywords": ["design-system", "design-tokens", "branding", "kind", "fengzhi", "tableai", "think-tank"],
   "skills": ".cursor/skills",
   "mcpServers": "mcp.json"
 }
