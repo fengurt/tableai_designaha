@@ -239,7 +239,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       </div>
     </section>
     <section class="section-head">
-      <p class="eyebrow" data-i18n="home.systems">10 个 IP 系统</p>
+      <p class="eyebrow" data-i18n="home.systems">IP 系统</p>
       <h2 data-i18n="home.sectionTitle">直接进入 IP。</h2>
     </section>
     <section class="ip-grid" id="brandGrid" aria-live="polite"></section>
@@ -596,7 +596,7 @@ const i18n = {
     "home.lead": "极速、极简地进入每个 IP：颜色、语气、规范、资产与机器可读源文件都从 GitHub 同步。",
     "home.openJson": "打开 JSON 索引",
     "home.adminEdit": "管理编辑",
-    "home.systems": "10 个 IP 系统",
+    "home.systems": "IP 系统",
     "home.sectionTitle": "直接进入 IP。",
     "status.documented": "已建档",
     "status.placeholder": "待建档",
@@ -629,7 +629,7 @@ const i18n = {
     "home.lead": "Fast, minimal access to every IP: color, voice, guidelines, assets, and machine-readable source stay synced from GitHub.",
     "home.openJson": "Open JSON index",
     "home.adminEdit": "Admin edit",
-    "home.systems": "10 IP systems",
+    "home.systems": "IP systems",
     "home.sectionTitle": "Enter the IP directly.",
     "status.documented": "Documented",
     "status.placeholder": "Pending",

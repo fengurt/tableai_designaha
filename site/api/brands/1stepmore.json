@@ -1,0 +1,48 @@
+{
+  "slug": "1stepmore",
+  "folder": "1stepmore",
+  "name": "1stepmore",
+  "nativeName": "壹目贯维",
+  "description": "Placeholder brand system for 1stepmore · 壹目贯维.",
+  "primaryGuide": "1stepmore/README.md",
+  "theme": {
+    "mode": "light",
+    "primary": "#123047",
+    "accent": "#C89B3C",
+    "secondary": "#5A7184",
+    "surface": "#F4F1EA",
+    "paper": "#FFFFFF",
+    "ink": "#17212A",
+    "muted": "#62707A",
+    "line": "rgba(18, 48, 71, 0.16)",
+    "keywords": [
+      "one step",
+      "clarity",
+      "continuity",
+      "systems",
+      "precision"
+    ]
+  },
+  "url": "brand.html?brand=1stepmore",
+  "apiUrl": "api/brands/1stepmore.json",
+  "status": "documented",
+  "guides": [
+    {
+      "path": "1stepmore/README.md",
+      "title": "README",
+      "format": "md",
+      "primary": true,
+      "excerpt": "1stepmore · 壹目贯维 主 IP： 1stepmore 中文名： 壹目贯维 Status Placeholder brand folder. Add design guidelines, tokens, assets, and voice rules here as the IP system matures. Local Structure assets/brand images/ — brand visuals and generated hero images tokens/ — machine readable design tokens",
+      "text": "# 1stepmore · 壹目贯维\n\n主 IP：**1stepmore**  \n中文名：**壹目贯维**\n\n## Status\n\nPlaceholder brand folder. Add design guidelines, tokens, assets, and voice rules here as the IP system matures.\n\n## Local Structure\n\n- `assets/brand-images/` — brand visuals and generated hero images\n- `tokens/` — machine-readable design tokens\n\n"
+    }
+  ],
+  "tokens": [],
+  "images": [],
+  "editablePaths": [
+    "1stepmore/README.md"
+  ],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/1stepmore",
+    "folder": "1stepmore"
+  }
+}

@@ -4,7 +4,7 @@
   "name": "APHA",
   "nativeName": "亚太艺术疗愈联盟",
   "description": "Asia-Pacific Healing Arts Alliance.",
-  "primaryGuide": "",
+  "primaryGuide": "APHA/README.md",
   "theme": {
     "mode": "light",
     "primary": "#557F8F",
@@ -25,8 +25,17 @@
   },
   "url": "brand.html?brand=apha",
   "apiUrl": "api/brands/apha.json",
-  "status": "placeholder",
-  "guides": [],
+  "status": "documented",
+  "guides": [
+    {
+      "path": "APHA/README.md",
+      "title": "README",
+      "format": "md",
+      "primary": true,
+      "excerpt": "APHA Chinese name: 亚太艺术疗愈联盟 English descriptor: Asia Pacific Healing Arts Alliance Brand Role APHA is an Asia Pacific arts and healing alliance IP for creative wellbeing, therapeutic arts, and cross cultural care practices. Visual Direction Temperament: restorative, humane, professional, warm, spacious. Color cues: mineral blue, sage green, clay, warm ivory. Imagery cues: gentle movement, art practice, natural textur",
+      "text": "# APHA\n\nChinese name: 亚太艺术疗愈联盟\n\nEnglish descriptor: Asia-Pacific Healing Arts Alliance\n\n## Brand Role\n\nAPHA is an Asia-Pacific arts and healing alliance IP for creative wellbeing, therapeutic arts, and cross-cultural care practices.\n\n## Visual Direction\n\n- Temperament: restorative, humane, professional, warm, spacious.\n- Color cues: mineral blue, sage green, clay, warm ivory.\n- Imagery cues: gentle movement, art practice, natural textures, care circles, regional cultural exchange.\n\n## Agent Notes\n\n- Use `亚太艺术疗愈联盟` as the Chinese IP name.\n- Use `APHA` as the public IP shorthand.\n- Keep the visual system calm and trustworthy, with enough warmth to avoid clinical coldness.\n"
+    }
+  ],
   "tokens": [],
   "images": [
     {
@@ -35,7 +44,9 @@
       "title": "Apha Brand Hero"
     }
   ],
-  "editablePaths": [],
+  "editablePaths": [
+    "APHA/README.md"
+  ],
   "source": {
     "github": "https://github.com/fengurt/tableai_designaha/tree/main/APHA",
     "folder": "APHA"

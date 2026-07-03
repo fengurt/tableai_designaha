@@ -1,0 +1,48 @@
+{
+  "slug": "changoods",
+  "folder": "Changoods",
+  "name": "Changoods",
+  "nativeName": "常幸",
+  "description": "Placeholder brand system for 常幸 · Changoods.",
+  "primaryGuide": "Changoods/README.md",
+  "theme": {
+    "mode": "light",
+    "primary": "#486B3F",
+    "accent": "#D2A94C",
+    "secondary": "#A7B98F",
+    "surface": "#F7F5EC",
+    "paper": "#FFFFFF",
+    "ink": "#243222",
+    "muted": "#65725F",
+    "line": "rgba(72, 107, 63, 0.16)",
+    "keywords": [
+      "good fortune",
+      "everyday",
+      "warmth",
+      "goods",
+      "wellbeing"
+    ]
+  },
+  "url": "brand.html?brand=changoods",
+  "apiUrl": "api/brands/changoods.json",
+  "status": "documented",
+  "guides": [
+    {
+      "path": "Changoods/README.md",
+      "title": "README",
+      "format": "md",
+      "primary": true,
+      "excerpt": "常幸 · Changoods 主 IP： 常幸 英文名： Changoods Status Placeholder brand folder. Add design guidelines, tokens, assets, and voice rules here as the IP system matures. Local Structure assets/brand images/ — brand visuals and generated hero images tokens/ — machine readable design tokens",
+      "text": "# 常幸 · Changoods\n\n主 IP：**常幸**  \n英文名：**Changoods**\n\n## Status\n\nPlaceholder brand folder. Add design guidelines, tokens, assets, and voice rules here as the IP system matures.\n\n## Local Structure\n\n- `assets/brand-images/` — brand visuals and generated hero images\n- `tokens/` — machine-readable design tokens\n\n"
+    }
+  ],
+  "tokens": [],
+  "images": [],
+  "editablePaths": [
+    "Changoods/README.md"
+  ],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/Changoods",
+    "folder": "Changoods"
+  }
+}

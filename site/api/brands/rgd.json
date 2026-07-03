@@ -1,0 +1,48 @@
+{
+  "slug": "rgd",
+  "folder": "RGD",
+  "name": "RGD",
+  "nativeName": "燃古豋",
+  "description": "Placeholder brand system for 燃古豋 · RGD.",
+  "primaryGuide": "RGD/README.md",
+  "theme": {
+    "mode": "dark",
+    "primary": "#E06B3A",
+    "accent": "#C8A15A",
+    "secondary": "#8D3326",
+    "surface": "#17110D",
+    "paper": "#211711",
+    "ink": "#F5E9D5",
+    "muted": "#C6A989",
+    "line": "rgba(224, 107, 58, 0.28)",
+    "keywords": [
+      "ember",
+      "ancient",
+      "ritual",
+      "craft",
+      "fire"
+    ]
+  },
+  "url": "brand.html?brand=rgd",
+  "apiUrl": "api/brands/rgd.json",
+  "status": "documented",
+  "guides": [
+    {
+      "path": "RGD/README.md",
+      "title": "README",
+      "format": "md",
+      "primary": true,
+      "excerpt": "燃古豋 · RGD 主 IP： 燃古豋 英文名： RGD Status Placeholder brand folder. Add design guidelines, tokens, assets, and voice rules here as the IP system matures. Local Structure assets/brand images/ — brand visuals and generated hero images tokens/ — machine readable design tokens",
+      "text": "# 燃古豋 · RGD\n\n主 IP：**燃古豋**  \n英文名：**RGD**\n\n## Status\n\nPlaceholder brand folder. Add design guidelines, tokens, assets, and voice rules here as the IP system matures.\n\n## Local Structure\n\n- `assets/brand-images/` — brand visuals and generated hero images\n- `tokens/` — machine-readable design tokens\n\n"
+    }
+  ],
+  "tokens": [],
+  "images": [],
+  "editablePaths": [
+    "RGD/README.md"
+  ],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/RGD",
+    "folder": "RGD"
+  }
+}

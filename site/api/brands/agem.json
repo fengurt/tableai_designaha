@@ -1,0 +1,48 @@
+{
+  "slug": "agem",
+  "folder": "AGEM",
+  "name": "AGEM",
+  "nativeName": "游赋社",
+  "description": "Placeholder brand system for 游赋社 · AGEM.",
+  "primaryGuide": "AGEM/README.md",
+  "theme": {
+    "mode": "light",
+    "primary": "#155E75",
+    "accent": "#D9823B",
+    "secondary": "#7AA6A1",
+    "surface": "#F5F7F2",
+    "paper": "#FFFFFF",
+    "ink": "#173036",
+    "muted": "#5B6F70",
+    "line": "rgba(21, 94, 117, 0.16)",
+    "keywords": [
+      "travel",
+      "play",
+      "culture",
+      "community",
+      "creation"
+    ]
+  },
+  "url": "brand.html?brand=agem",
+  "apiUrl": "api/brands/agem.json",
+  "status": "documented",
+  "guides": [
+    {
+      "path": "AGEM/README.md",
+      "title": "README",
+      "format": "md",
+      "primary": true,
+      "excerpt": "游赋社 · AGEM 主 IP： 游赋社 英文名： AGEM Status Placeholder brand folder. Add design guidelines, tokens, assets, and voice rules here as the IP system matures. Local Structure assets/brand images/ — brand visuals and generated hero images tokens/ — machine readable design tokens",
+      "text": "# 游赋社 · AGEM\n\n主 IP：**游赋社**  \n英文名：**AGEM**\n\n## Status\n\nPlaceholder brand folder. Add design guidelines, tokens, assets, and voice rules here as the IP system matures.\n\n## Local Structure\n\n- `assets/brand-images/` — brand visuals and generated hero images\n- `tokens/` — machine-readable design tokens\n\n"
+    }
+  ],
+  "tokens": [],
+  "images": [],
+  "editablePaths": [
+    "AGEM/README.md"
+  ],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/AGEM",
+    "folder": "AGEM"
+  }
+}

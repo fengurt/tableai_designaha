@@ -1,0 +1,48 @@
+{
+  "slug": "boya",
+  "folder": "BOYA",
+  "name": "PKU BOYA Academy",
+  "nativeName": "博雅问渠书院",
+  "description": "Liberal education and inquiry academy IP system.",
+  "primaryGuide": "BOYA/README.md",
+  "theme": {
+    "mode": "light",
+    "primary": "#243B6B",
+    "accent": "#B89A5E",
+    "secondary": "#7F8EA8",
+    "surface": "#F6F4EE",
+    "paper": "#FFFFFF",
+    "ink": "#1E2738",
+    "muted": "#657086",
+    "line": "rgba(36, 59, 107, 0.16)",
+    "keywords": [
+      "academy",
+      "boya",
+      "knowledge",
+      "inquiry",
+      "classical learning"
+    ]
+  },
+  "url": "brand.html?brand=boya",
+  "apiUrl": "api/brands/boya.json",
+  "status": "documented",
+  "guides": [
+    {
+      "path": "BOYA/README.md",
+      "title": "README",
+      "format": "md",
+      "primary": true,
+      "excerpt": "PKU BOYA Academy Chinese name: 博雅问渠书院 Brand Role PKU BOYA Academy is a learning and inquiry IP centered on liberal education, classical depth, and contemporary knowledge flow. Visual Direction Temperament: scholarly, clear, calm, rigorous, open. Color cues: academy blue, warm gold, paper white, soft stone grey. Imagery cues: reading rooms, flowing water, question marks, book margins, courtyards, knowledge maps. Agent",
+      "text": "# PKU BOYA Academy\n\nChinese name: 博雅问渠书院\n\n## Brand Role\n\nPKU BOYA Academy is a learning and inquiry IP centered on liberal education, classical depth, and contemporary knowledge flow.\n\n## Visual Direction\n\n- Temperament: scholarly, clear, calm, rigorous, open.\n- Color cues: academy blue, warm gold, paper white, soft stone grey.\n- Imagery cues: reading rooms, flowing water, question marks, book margins, courtyards, knowledge maps.\n\n## Agent Notes\n\n- Use `博雅问渠书院` as the Chinese IP name.\n- Use `PKU BOYA Academy` as the English IP name.\n- Keep visual prompts refined and academic, avoiding overly decorative campus clichés.\n"
+    }
+  ],
+  "tokens": [],
+  "images": [],
+  "editablePaths": [
+    "BOYA/README.md"
+  ],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/BOYA",
+    "folder": "BOYA"
+  }
+}

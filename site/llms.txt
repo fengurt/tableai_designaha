@@ -19,6 +19,11 @@ Brands:
 - 峰值永造局 (fengzhi): /api/brands/fengzhi.json · palette #1A1714 / #A47B36
 - Axisee (axisee): /api/brands/axisee.json · palette #1A2B4A / #B12137
 - Sidera (sidera): /api/brands/sidera.json · palette #B58B4C / #D4A862
+- 1stepmore (1stepmore): /api/brands/1stepmore.json · palette #123047 / #C89B3C
+- AGEM (agem): /api/brands/agem.json · palette #155E75 / #D9823B
+- RGD (rgd): /api/brands/rgd.json · palette #E06B3A / #C8A15A
+- Changoods (changoods): /api/brands/changoods.json · palette #486B3F / #D2A94C
+- PKU BOYA Academy (boya): /api/brands/boya.json · palette #243B6B / #B89A5E
 
 Admin workflow:
 - /admin.html unlocks with the generated admin key.

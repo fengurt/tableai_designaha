@@ -65,7 +65,7 @@
     "name": "APHA",
     "nativeName": "亚太艺术疗愈联盟",
     "description": "Asia-Pacific Healing Arts Alliance.",
-    "primaryGuide": "",
+    "primaryGuide": "APHA/README.md",
     "theme": {
       "mode": "light",
       "primary": "#557F8F",
@@ -197,6 +197,106 @@
       "muted": "#A99B7E",
       "line": "rgba(181, 139, 76, 0.32)",
       "keywords": ["ink", "earth gold", "cream", "vermillion", "wisdom navigator"]
+    }
+  },
+  {
+    "slug": "1stepmore",
+    "folder": "1stepmore",
+    "name": "1stepmore",
+    "nativeName": "壹目贯维",
+    "description": "Placeholder brand system for 1stepmore · 壹目贯维.",
+    "primaryGuide": "1stepmore/README.md",
+    "theme": {
+      "mode": "light",
+      "primary": "#123047",
+      "accent": "#C89B3C",
+      "secondary": "#5A7184",
+      "surface": "#F4F1EA",
+      "paper": "#FFFFFF",
+      "ink": "#17212A",
+      "muted": "#62707A",
+      "line": "rgba(18, 48, 71, 0.16)",
+      "keywords": ["one step", "clarity", "continuity", "systems", "precision"]
+    }
+  },
+  {
+    "slug": "agem",
+    "folder": "AGEM",
+    "name": "AGEM",
+    "nativeName": "游赋社",
+    "description": "Placeholder brand system for 游赋社 · AGEM.",
+    "primaryGuide": "AGEM/README.md",
+    "theme": {
+      "mode": "light",
+      "primary": "#155E75",
+      "accent": "#D9823B",
+      "secondary": "#7AA6A1",
+      "surface": "#F5F7F2",
+      "paper": "#FFFFFF",
+      "ink": "#173036",
+      "muted": "#5B6F70",
+      "line": "rgba(21, 94, 117, 0.16)",
+      "keywords": ["travel", "play", "culture", "community", "creation"]
+    }
+  },
+  {
+    "slug": "rgd",
+    "folder": "RGD",
+    "name": "RGD",
+    "nativeName": "燃古豋",
+    "description": "Placeholder brand system for 燃古豋 · RGD.",
+    "primaryGuide": "RGD/README.md",
+    "theme": {
+      "mode": "dark",
+      "primary": "#E06B3A",
+      "accent": "#C8A15A",
+      "secondary": "#8D3326",
+      "surface": "#17110D",
+      "paper": "#211711",
+      "ink": "#F5E9D5",
+      "muted": "#C6A989",
+      "line": "rgba(224, 107, 58, 0.28)",
+      "keywords": ["ember", "ancient", "ritual", "craft", "fire"]
+    }
+  },
+  {
+    "slug": "changoods",
+    "folder": "Changoods",
+    "name": "Changoods",
+    "nativeName": "常幸",
+    "description": "Placeholder brand system for 常幸 · Changoods.",
+    "primaryGuide": "Changoods/README.md",
+    "theme": {
+      "mode": "light",
+      "primary": "#486B3F",
+      "accent": "#D2A94C",
+      "secondary": "#A7B98F",
+      "surface": "#F7F5EC",
+      "paper": "#FFFFFF",
+      "ink": "#243222",
+      "muted": "#65725F",
+      "line": "rgba(72, 107, 63, 0.16)",
+      "keywords": ["good fortune", "everyday", "warmth", "goods", "wellbeing"]
+    }
+  },
+  {
+    "slug": "boya",
+    "folder": "BOYA",
+    "name": "PKU BOYA Academy",
+    "nativeName": "博雅问渠书院",
+    "description": "Liberal education and inquiry academy IP system.",
+    "primaryGuide": "BOYA/README.md",
+    "theme": {
+      "mode": "light",
+      "primary": "#243B6B",
+      "accent": "#B89A5E",
+      "secondary": "#7F8EA8",
+      "surface": "#F6F4EE",
+      "paper": "#FFFFFF",
+      "ink": "#1E2738",
+      "muted": "#657086",
+      "line": "rgba(36, 59, 107, 0.16)",
+      "keywords": ["academy", "boya", "knowledge", "inquiry", "classical learning"]
     }
   }
 ]
