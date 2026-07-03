@@ -1,0 +1,83 @@
+{
+  "name": "Table AI Design Aha",
+  "description": "Public, agent-friendly design guidelines for Table AI Alliance brands.",
+  "generatedAt": "2026-07-03T10:02:40.360Z",
+  "brands": [
+    {
+      "slug": "tableai",
+      "name": "Table AI",
+      "apiUrl": "api/brands/tableai.json",
+      "guideUrl": "brand.html?brand=tableai"
+    },
+    {
+      "slug": "vanahom",
+      "name": "VANAHOM",
+      "apiUrl": "api/brands/vanahom.json",
+      "guideUrl": "brand.html?brand=vanahom"
+    },
+    {
+      "slug": "kind",
+      "name": "KiND",
+      "apiUrl": "api/brands/kind.json",
+      "guideUrl": "brand.html?brand=kind"
+    },
+    {
+      "slug": "apha",
+      "name": "APHA",
+      "apiUrl": "api/brands/apha.json",
+      "guideUrl": "brand.html?brand=apha"
+    },
+    {
+      "slug": "manaendless",
+      "name": "MANA Endless",
+      "apiUrl": "api/brands/manaendless.json",
+      "guideUrl": "brand.html?brand=manaendless"
+    },
+    {
+      "slug": "opcglobal",
+      "name": "OPC Global",
+      "apiUrl": "api/brands/opcglobal.json",
+      "guideUrl": "brand.html?brand=opcglobal"
+    },
+    {
+      "slug": "iptrust",
+      "name": "IPTrustasset",
+      "apiUrl": "api/brands/iptrust.json",
+      "guideUrl": "brand.html?brand=iptrust"
+    },
+    {
+      "slug": "fengzhi",
+      "name": "峰值永造局",
+      "apiUrl": "api/brands/fengzhi.json",
+      "guideUrl": "brand.html?brand=fengzhi"
+    },
+    {
+      "slug": "axisee",
+      "name": "Axisee",
+      "apiUrl": "api/brands/axisee.json",
+      "guideUrl": "brand.html?brand=axisee"
+    },
+    {
+      "slug": "sidera",
+      "name": "Sidera",
+      "apiUrl": "api/brands/sidera.json",
+      "guideUrl": "brand.html?brand=sidera"
+    }
+  ],
+  "mcp": {
+    "local": "mcp/src/index.ts",
+    "resources": "api/brands/{slug}.json",
+    "tools": [
+      "list_brands",
+      "get_brand",
+      "get_guideline",
+      "list_tokens",
+      "get_token"
+    ]
+  },
+  "sync": {
+    "sourceOfTruth": "https://github.com/fengurt/tableai_designaha",
+    "githubToWebsite": "GitHub Pages rebuilds site/ on push to main.",
+    "websiteToGithub": "admin.html commits edits through the GitHub Contents API."
+  }
+}

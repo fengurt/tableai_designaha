@@ -1,0 +1,25 @@
+{
+  "slug": "opcglobal",
+  "folder": "OPCGLOBAL",
+  "name": "OPC Global",
+  "nativeName": "欧匹赛全球联盟",
+  "description": "Global alliance brand placeholder for future design guidelines.",
+  "primaryGuide": "",
+  "url": "brand.html?brand=opcglobal",
+  "apiUrl": "api/brands/opcglobal.json",
+  "status": "placeholder",
+  "guides": [],
+  "tokens": [],
+  "images": [
+    {
+      "path": "OPCGLOBAL/assets/brand-images/opcglobal-brand-hero.png",
+      "sitePath": "assets/brand-images/opcglobal.png",
+      "title": "Opcglobal Brand Hero"
+    }
+  ],
+  "editablePaths": [],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/OPCGLOBAL",
+    "folder": "OPCGLOBAL"
+  }
+}

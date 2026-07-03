@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Table AI Design Aha</title>
+  <meta name="description" content="Agent-friendly design guidelines for Table AI Alliance brands.">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./">Table AI Design Aha</a>
+    <nav>
+      <a href="api/manifest.json">Manifest</a>
+      <a href="llms.txt">llms.txt</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Design systems for people and agents</p>
+      <h1>All brand guidelines in one public, machine-readable website.</h1>
+      <p>Each brand has a human page, a JSON API endpoint, source links, generated brand imagery, and editable canonical files in GitHub.</p>
+      <div class="actions">
+        <a class="button" href="api/brands.json">Open JSON index</a>
+        <a class="button ghost" href="admin.html">Admin edit</a>
+      </div>
+    </section>
+    <section class="grid" id="brandGrid" aria-live="polite"></section>
+  </main>
+  <script src="assets/site.js" type="module"></script>
+</body>
+</html>

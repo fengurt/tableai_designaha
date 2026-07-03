@@ -1,0 +1,25 @@
+{
+  "slug": "manaendless",
+  "folder": "MANAENDLESS",
+  "name": "MANA Endless",
+  "nativeName": "无魔协会",
+  "description": "Alliance brand placeholder for future design guidelines.",
+  "primaryGuide": "",
+  "url": "brand.html?brand=manaendless",
+  "apiUrl": "api/brands/manaendless.json",
+  "status": "placeholder",
+  "guides": [],
+  "tokens": [],
+  "images": [
+    {
+      "path": "MANAENDLESS/assets/brand-images/manaendless-brand-hero.png",
+      "sitePath": "assets/brand-images/manaendless.png",
+      "title": "Manaendless Brand Hero"
+    }
+  ],
+  "editablePaths": [],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/MANAENDLESS",
+    "folder": "MANAENDLESS"
+  }
+}

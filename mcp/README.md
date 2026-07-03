@@ -1,34 +1,42 @@
-# KiND Design MCP server
+# Table AI Design Aha MCP server
 
-Exposes the KiND design system to any MCP client (Cursor, Claude Desktop, CLI, CI) on top of the same single source of truth — `KiND/tokens/kind.tokens.json`.
+Exposes every Table AI Alliance brand folder as MCP resources and tools. The same
+repo files feed the public website, the JSON API, and this local MCP server.
 
 ## Capabilities
 
 | Kind | Name | Purpose |
 |------|------|---------|
-| Resource | `kind://tokens` | Full DTCG token set as JSON |
-| Tool | `get_token(name)` | Resolve a dotted token, e.g. `color.teal` → `#0E8C7B` |
-| Tool | `list_tokens(group?)` | List token names, optionally by prefix |
-| Tool | `validate_color(hex)` | Is a hex color on-brand? Returns the token or the palette |
+| Resource | `brand://{slug}` | Full brand payload with guidelines and token file paths |
+| Tool | `list_brands()` | List all available brand folders |
+| Tool | `get_brand(slug)` | Brand summary plus guideline/token paths |
+| Tool | `get_guideline(slug, path?)` | Primary guideline text, or a specific guideline path |
+| Tool | `list_tokens(slug, group?)` | List design token names for JSON/CSS token files |
+| Tool | `get_token(slug, name)` | Resolve a token by dotted name |
+| Tool | `validate_color(slug, hex)` | Check whether a hex color is an exact brand token |
 
-## Run locally (stdio)
+Current brand slugs come from `config/brands.json`: `tableai`, `vanahom`,
+`kind`, `apha`, `manaendless`, `opcglobal`, `iptrust`, `fengzhi`, `axisee`,
+and `sidera`.
+
+## Run locally
 
 ```bash
 cd mcp
 npm install
-npm run inspect   # opens MCP Inspector against the server
+npm run inspect
 # or
-npm run dev       # runs the stdio server directly
+npm run dev
 ```
 
-## Connect a client (stdio)
+## Connect a client
 
-Cursor `~/.cursor/mcp.json` (or Claude Desktop `claude_desktop_config.json`):
+Cursor `~/.cursor/mcp.json` or Claude Desktop:
 
 ```json
 {
   "mcpServers": {
-    "kind-design": {
+    "tableai-designaha": {
       "command": "npx",
       "args": ["tsx", "/absolute/path/to/tableai_designaha/mcp/src/index.ts"]
     }
@@ -36,26 +44,16 @@ Cursor `~/.cursor/mcp.json` (or Claude Desktop `claude_desktop_config.json`):
 }
 ```
 
-After `npm run build`, you can instead point `command` at `node` and `args` at `dist/index.js`.
+After `npm run build`, point `command` at `node` and `args` at
+`/absolute/path/to/tableai_designaha/mcp/dist/index.js`.
 
-## Going remote (later)
+## Hosted website API
 
-For a hosted server reachable by every client without local install, port this to a
-Cloudflare Worker using `McpAgent` + Streamable HTTP and deploy with `wrangler`:
+The static website build publishes agent-friendly files:
 
-```bash
-npm create cloudflare@latest -- kind-design-mcp \
-  --template=cloudflare/ai/demos/remote-mcp-authless
-```
+- `site/llms.txt`
+- `site/api/manifest.json`
+- `site/api/brands.json`
+- `site/api/brands/{slug}.json`
 
-Move the `registerTool` / `registerResource` logic into the Worker's `init()`, read tokens
-from a bundled import or KV/R2, and clients connect via:
-
-```json
-{ "mcpServers": { "kind-design": { "command": "npx", "args": ["mcp-remote", "https://kind-design-mcp.<acct>.workers.dev/mcp"] } } }
-```
-
-## Design note
-
-The server never hardcodes token values — it reads `KiND/tokens/kind.tokens.json` at call
-time, so the Skill, the Style Dictionary build, and this MCP all stay in sync from one file.
+GitHub Pages should serve those files after the deploy workflow runs.

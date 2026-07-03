@@ -6,6 +6,9 @@
   "type": "module",
   "scripts": {
     "build:tokens": "node build-tokens.mjs",
+    "build:site": "node scripts/build-site.mjs",
+    "sync:site": "node scripts/sync-site.mjs",
+    "provision:admin-key": "node scripts/provision-admin-key.mjs",
     "sync:skill": "cp KiND/tokens/kind.tokens.json .cursor/skills/kind-design/tokens.json"
   },
   "devDependencies": {

@@ -1,0 +1,248 @@
+[
+  {
+    "slug": "tableai",
+    "folder": "TABLEAI",
+    "name": "Table AI",
+    "nativeName": "Table AI Alliance",
+    "description": "International think tank design system for the Table AI Alliance.",
+    "primaryGuide": "TABLEAI/TableAI_DESIGN.md",
+    "url": "brand.html?brand=tableai",
+    "apiUrl": "api/brands/tableai.json",
+    "status": "documented",
+    "editablePaths": [
+      "TABLEAI/TableAI_DESIGN.md"
+    ],
+    "source": {
+      "github": "https://github.com/fengurt/tableai_designaha/tree/main/TABLEAI",
+      "folder": "TABLEAI"
+    },
+    "guideCount": 1,
+    "tokenCount": 1,
+    "imageCount": 1,
+    "heroImage": "assets/brand-images/tableai.png",
+    "primaryExcerpt": "设计规范文件 (design.md) 1. 核心设计哲学 本项目采用极简且富有启发性的视觉语言。设计应体现以下四个维度： 利他 (Altruistic) ：界面直观，优先考虑用户价值与操作效率。 真实 (Authentic) ：拒绝过度装饰，展现材质与结构的自然美感。 艺术 (Artistic) ：强调比例、对齐与留白的艺术性平衡。 优雅 (Elegant) ：通过色彩与细节传递专业且高端的质感。 2. 色彩系统 (Color Palette) 严禁使用预设的基础色，必须严格执行以下色值： 底色 (Base) : White ( FFFFFF) 用途：背景、大面积留白、轻盈感来源。 主色 (Primary) : 寰宇深蓝 (Universe Deep Blue) 0A1626 用途：主要文字、结构线条、重要功能区块、品牌标识。 点缀色 (Accent) : 日晷暗金 (Sundial Dark Gold) A88B52 用途：行"
+  },
+  {
+    "slug": "vanahom",
+    "folder": "VANAHOM",
+    "name": "VANAHOM",
+    "nativeName": "凡纳弘途",
+    "description": "Mission-driven hospitality and extended-services enterprise builder.",
+    "primaryGuide": "VANAHOM/vanahom_design.md",
+    "url": "brand.html?brand=vanahom",
+    "apiUrl": "api/brands/vanahom.json",
+    "status": "documented",
+    "editablePaths": [
+      "VANAHOM/vanahom_design.md"
+    ],
+    "source": {
+      "github": "https://github.com/fengurt/tableai_designaha/tree/main/VANAHOM",
+      "folder": "VANAHOM"
+    },
+    "guideCount": 1,
+    "tokenCount": 0,
+    "imageCount": 1,
+    "heroImage": "assets/brand-images/vanahom.png",
+    "primaryExcerpt": "VANAHOM — Design System 凡纳弘途 · VANAHOM Building Tomorrow, Today — 为者常成，行者常至 A single reference for anyone designing or building VANAHOM surfaces — decks, briefs, brand pages, the workspace. Pairs with vanahom deck.html (the living deck) and the logo set in vanahom logo/ . A Member of the Table AI Alliance — same think tank register, its own ground. 1. Brand in one breath VANAHOM is a mission driven company that rebui"
+  },
+  {
+    "slug": "kind",
+    "folder": "KiND",
+    "name": "KiND",
+    "nativeName": "善渡科技",
+    "description": "Human-first AI workforce brand: for all, not for few.",
+    "primaryGuide": "KiND/KiND Design.md",
+    "url": "brand.html?brand=kind",
+    "apiUrl": "api/brands/kind.json",
+    "status": "documented",
+    "editablePaths": [
+      "KiND/KiND Design.md",
+      "KiND/kind-skill-md.md",
+      "KiND/preview.html"
+    ],
+    "source": {
+      "github": "https://github.com/fengurt/tableai_designaha/tree/main/KiND",
+      "folder": "KiND"
+    },
+    "guideCount": 3,
+    "tokenCount": 1,
+    "imageCount": 1,
+    "heroImage": "assets/brand-images/kind.png",
+    "primaryExcerpt": "KiND — Design System 善渡科技 · Kind Technology for all, not for few. A single reference for anyone designing or building KiND surfaces. Pairs with kind.css (tokens + components) and the Brand Book (story, voice, lexicon). 1. Brand in one breath KiND turns AI into a Kind Workforce anyone can hire — AI for all, not for few. The name is a pun and the axis of everything: kind (warm, human first) and a kind of (a new role — "
+  },
+  {
+    "slug": "apha",
+    "folder": "APHA",
+    "name": "APHA",
+    "nativeName": "亚太艺术疗愈联盟",
+    "description": "Asia-Pacific Healing Arts Alliance.",
+    "primaryGuide": "",
+    "url": "brand.html?brand=apha",
+    "apiUrl": "api/brands/apha.json",
+    "status": "placeholder",
+    "editablePaths": [],
+    "source": {
+      "github": "https://github.com/fengurt/tableai_designaha/tree/main/APHA",
+      "folder": "APHA"
+    },
+    "guideCount": 0,
+    "tokenCount": 0,
+    "imageCount": 1,
+    "heroImage": "assets/brand-images/apha.png",
+    "primaryExcerpt": "Asia-Pacific Healing Arts Alliance."
+  },
+  {
+    "slug": "manaendless",
+    "folder": "MANAENDLESS",
+    "name": "MANA Endless",
+    "nativeName": "无魔协会",
+    "description": "Alliance brand placeholder for future design guidelines.",
+    "primaryGuide": "",
+    "url": "brand.html?brand=manaendless",
+    "apiUrl": "api/brands/manaendless.json",
+    "status": "placeholder",
+    "editablePaths": [],
+    "source": {
+      "github": "https://github.com/fengurt/tableai_designaha/tree/main/MANAENDLESS",
+      "folder": "MANAENDLESS"
+    },
+    "guideCount": 0,
+    "tokenCount": 0,
+    "imageCount": 1,
+    "heroImage": "assets/brand-images/manaendless.png",
+    "primaryExcerpt": "Alliance brand placeholder for future design guidelines."
+  },
+  {
+    "slug": "opcglobal",
+    "folder": "OPCGLOBAL",
+    "name": "OPC Global",
+    "nativeName": "欧匹赛全球联盟",
+    "description": "Global alliance brand placeholder for future design guidelines.",
+    "primaryGuide": "",
+    "url": "brand.html?brand=opcglobal",
+    "apiUrl": "api/brands/opcglobal.json",
+    "status": "placeholder",
+    "editablePaths": [],
+    "source": {
+      "github": "https://github.com/fengurt/tableai_designaha/tree/main/OPCGLOBAL",
+      "folder": "OPCGLOBAL"
+    },
+    "guideCount": 0,
+    "tokenCount": 0,
+    "imageCount": 1,
+    "heroImage": "assets/brand-images/opcglobal.png",
+    "primaryExcerpt": "Global alliance brand placeholder for future design guidelines."
+  },
+  {
+    "slug": "iptrust",
+    "folder": "IPTRUST",
+    "name": "IPTrustasset",
+    "nativeName": "IPTRUST",
+    "description": "Trusted intellectual-property asset stewardship brand placeholder.",
+    "primaryGuide": "",
+    "url": "brand.html?brand=iptrust",
+    "apiUrl": "api/brands/iptrust.json",
+    "status": "placeholder",
+    "editablePaths": [],
+    "source": {
+      "github": "https://github.com/fengurt/tableai_designaha/tree/main/IPTRUST",
+      "folder": "IPTRUST"
+    },
+    "guideCount": 0,
+    "tokenCount": 0,
+    "imageCount": 1,
+    "heroImage": "assets/brand-images/iptrust.png",
+    "primaryExcerpt": "Trusted intellectual-property asset stewardship brand placeholder."
+  },
+  {
+    "slug": "fengzhi",
+    "folder": "FENGZHI",
+    "name": "峰值永造局",
+    "nativeName": "The Transformation Company · 界格",
+    "description": "AI-native transformation delivery brand system.",
+    "primaryGuide": "FENGZHI/readme.md",
+    "url": "brand.html?brand=fengzhi",
+    "apiUrl": "api/brands/fengzhi.json",
+    "status": "documented",
+    "editablePaths": [
+      "FENGZHI/readme.md",
+      "FENGZHI/components/core/core.card.html",
+      "FENGZHI/components/core/JiegeMark.prompt.md",
+      "FENGZHI/components/core/Kicker.prompt.md",
+      "FENGZHI/components/core/PageChrome.prompt.md",
+      "FENGZHI/components/core/Stat.prompt.md",
+      "FENGZHI/components/core/Wordmark.prompt.md",
+      "FENGZHI/FENGZHI Brand Kit.html",
+      "FENGZHI/guidelines/brand-lockups.html",
+      "FENGZHI/guidelines/brand-mark.html",
+      "FENGZHI/guidelines/brand-voice.html",
+      "FENGZHI/guidelines/colors-core.html",
+      "FENGZHI/guidelines/colors-hierarchy.html",
+      "FENGZHI/guidelines/colors-usage.html",
+      "FENGZHI/guidelines/spacing-layout.html",
+      "FENGZHI/guidelines/spacing-scale.html",
+      "FENGZHI/guidelines/type-body.html",
+      "FENGZHI/guidelines/type-display.html",
+      "FENGZHI/guidelines/type-numbers.html",
+      "FENGZHI/slides/slide-cover.html",
+      "FENGZHI/slides/slide-ladder.html",
+      "FENGZHI/slides/slide-section.html",
+      "FENGZHI/slides/slide-stat.html"
+    ],
+    "source": {
+      "github": "https://github.com/fengurt/tableai_designaha/tree/main/FENGZHI",
+      "folder": "FENGZHI"
+    },
+    "guideCount": 23,
+    "tokenCount": 4,
+    "imageCount": 1,
+    "heroImage": "assets/brand-images/fengzhi.png",
+    "primaryExcerpt": "峰值永造局 · 品牌设计系统（方向 A「界格」） 峰值永造局 （英文名待定，过渡用 THE TRANSFORMATION COMPANY）是第一家 AI 原生的「转变交付」公司：为中国超高净值企业家家族，把人的关键转变做成可诊断、可设计、可交付、可持续的产品。品类叙事为「转变经济」（Joe Pine, HBR Press 2026），三支柱：体验是载体 · AI 是杠杆 · 转变履约网络是壁垒。 来源材料： uploads/峰值永造局 种子轮Deck骨架与完整附件 v1.0.docx （种子轮 12 页 Deck 骨架；提取文本在 research/doc text.txt ）。视觉方向经三方向比稿（见 峰值永造局 品牌方向.html ），定稿方向 A「界格」——瑞士精密 × 东方克制。 CONTENT FUNDAMENTALS（文案基本面） 语言 ：中文为主，英文为辅（小字注释、机构出处、眉题）。称谓用「我们」，不用「您尊享」"
+  },
+  {
+    "slug": "axisee",
+    "folder": "Axisee",
+    "name": "Axisee",
+    "nativeName": "酒店盈利大师",
+    "description": "AI General Manager for hotel marketing, private-domain operations, and revenue.",
+    "primaryGuide": "Axisee/axisee_design.md",
+    "url": "brand.html?brand=axisee",
+    "apiUrl": "api/brands/axisee.json",
+    "status": "documented",
+    "editablePaths": [
+      "Axisee/axisee_design.md"
+    ],
+    "source": {
+      "github": "https://github.com/fengurt/tableai_designaha/tree/main/Axisee",
+      "folder": "Axisee"
+    },
+    "guideCount": 1,
+    "tokenCount": 0,
+    "imageCount": 1,
+    "heroImage": "assets/brand-images/axisee.png",
+    "primaryExcerpt": "Axisee Design System The canonical design guideline for all Axisee products. 单一可信来源 · Single Source of Truth for every Axisee UI (web, admin console, mobile member, 企微 sidebar tools). Axisee（酒店盈利大师 / Hotel Revenue Master ）is a centralized AI General Manager for hotel AI marketing, 私域营销 (private domain marketing) and profit optimization. The product is organized around three intelligent Agents , and the entire visual "
+  },
+  {
+    "slug": "sidera",
+    "folder": "Sidera",
+    "name": "Sidera",
+    "nativeName": "侍天",
+    "description": "Wisdom Navigator design system for premium F&B chains.",
+    "primaryGuide": "Sidera/sidera_design.md",
+    "url": "brand.html?brand=sidera",
+    "apiUrl": "api/brands/sidera.json",
+    "status": "documented",
+    "editablePaths": [
+      "Sidera/sidera_design.md"
+    ],
+    "source": {
+      "github": "https://github.com/fengurt/tableai_designaha/tree/main/Sidera",
+      "folder": "Sidera"
+    },
+    "guideCount": 1,
+    "tokenCount": 0,
+    "imageCount": 1,
+    "heroImage": "assets/brand-images/sidera.png",
+    "primaryExcerpt": "Sidera 侍天 — Design System Build ready brand & visual spec for agents producing on brand 侍天 work. 一句话： 土金为骨、玄墨为底、思源宋体为肉；沉稳敢言、有据可依。 Gold is the bones, ink is the ground, serif is the flesh — composed, forthright, evidence based. Sidera 侍天 — 智慧领航者 · Wisdom Navigator for premium F&B chains. We equip every valuable mid to high end F&B chain with a \"see clearly, move betably, compound easily\" smart navigation system: 海图 Ch"
+  }
+]

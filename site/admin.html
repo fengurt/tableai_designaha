@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin · Table AI Design Aha</title>
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./">Table AI Design Aha</a>
+    <nav>
+      <a href="api/manifest.json">Manifest</a>
+      <a href="https://github.com/fengurt/tableai_designaha">GitHub</a>
+    </nav>
+  </header>
+  <main class="admin">
+    <section class="panel" id="unlockPanel">
+      <p class="eyebrow">Admin</p>
+      <h1>Unlock editor</h1>
+      <p class="muted">The admin key unlocks this browser editor. Saving still requires a GitHub token with contents write access, so canonical edits flow back into the repo.</p>
+      <label>Admin API key <input id="adminKey" type="password" autocomplete="current-password"></label>
+      <button id="unlockButton">Unlock</button>
+      <p class="notice" id="unlockStatus"></p>
+    </section>
+    <section class="panel hidden" id="editorPanel">
+      <p class="eyebrow">Two-way sync</p>
+      <h1>Edit GitHub source</h1>
+      <div class="form-grid">
+        <label>GitHub token <input id="githubToken" type="password" autocomplete="off" placeholder="Fine-grained PAT or classic token"></label>
+        <label>Branch <input id="branch" value="main"></label>
+        <label>Brand <select id="brandSelect"></select></label>
+        <label>File <select id="fileSelect"></select></label>
+      </div>
+      <div class="actions">
+        <button id="loadFile">Load file</button>
+        <button id="saveFile">Commit edit</button>
+      </div>
+      <textarea id="editor" spellcheck="false" placeholder="Load an editable guideline file..."></textarea>
+      <label>Commit message <input id="commitMessage" value="Update brand guideline from admin site"></label>
+      <p class="notice" id="editorStatus"></p>
+    </section>
+  </main>
+  <script src="assets/admin.js" type="module"></script>
+</body>
+</html>

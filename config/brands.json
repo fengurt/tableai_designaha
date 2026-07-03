@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "tableai",
+    "folder": "TABLEAI",
+    "name": "Table AI",
+    "nativeName": "Table AI Alliance",
+    "description": "International think tank design system for the Table AI Alliance.",
+    "primaryGuide": "TABLEAI/TableAI_DESIGN.md"
+  },
+  {
+    "slug": "vanahom",
+    "folder": "VANAHOM",
+    "name": "VANAHOM",
+    "nativeName": "凡纳弘途",
+    "description": "Mission-driven hospitality and extended-services enterprise builder.",
+    "primaryGuide": "VANAHOM/vanahom_design.md"
+  },
+  {
+    "slug": "kind",
+    "folder": "KiND",
+    "name": "KiND",
+    "nativeName": "善渡科技",
+    "description": "Human-first AI workforce brand: for all, not for few.",
+    "primaryGuide": "KiND/KiND Design.md"
+  },
+  {
+    "slug": "apha",
+    "folder": "APHA",
+    "name": "APHA",
+    "nativeName": "亚太艺术疗愈联盟",
+    "description": "Asia-Pacific Healing Arts Alliance.",
+    "primaryGuide": ""
+  },
+  {
+    "slug": "manaendless",
+    "folder": "MANAENDLESS",
+    "name": "MANA Endless",
+    "nativeName": "无魔协会",
+    "description": "Alliance brand placeholder for future design guidelines.",
+    "primaryGuide": ""
+  },
+  {
+    "slug": "opcglobal",
+    "folder": "OPCGLOBAL",
+    "name": "OPC Global",
+    "nativeName": "欧匹赛全球联盟",
+    "description": "Global alliance brand placeholder for future design guidelines.",
+    "primaryGuide": ""
+  },
+  {
+    "slug": "iptrust",
+    "folder": "IPTRUST",
+    "name": "IPTrustasset",
+    "nativeName": "IPTRUST",
+    "description": "Trusted intellectual-property asset stewardship brand placeholder.",
+    "primaryGuide": ""
+  },
+  {
+    "slug": "fengzhi",
+    "folder": "FENGZHI",
+    "name": "峰值永造局",
+    "nativeName": "The Transformation Company · 界格",
+    "description": "AI-native transformation delivery brand system.",
+    "primaryGuide": "FENGZHI/readme.md"
+  },
+  {
+    "slug": "axisee",
+    "folder": "Axisee",
+    "name": "Axisee",
+    "nativeName": "酒店盈利大师",
+    "description": "AI General Manager for hotel marketing, private-domain operations, and revenue.",
+    "primaryGuide": "Axisee/axisee_design.md"
+  },
+  {
+    "slug": "sidera",
+    "folder": "Sidera",
+    "name": "Sidera",
+    "nativeName": "侍天",
+    "description": "Wisdom Navigator design system for premium F&B chains.",
+    "primaryGuide": "Sidera/sidera_design.md"
+  }
+]

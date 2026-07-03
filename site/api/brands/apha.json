@@ -1,0 +1,25 @@
+{
+  "slug": "apha",
+  "folder": "APHA",
+  "name": "APHA",
+  "nativeName": "亚太艺术疗愈联盟",
+  "description": "Asia-Pacific Healing Arts Alliance.",
+  "primaryGuide": "",
+  "url": "brand.html?brand=apha",
+  "apiUrl": "api/brands/apha.json",
+  "status": "placeholder",
+  "guides": [],
+  "tokens": [],
+  "images": [
+    {
+      "path": "APHA/assets/brand-images/apha-brand-hero.png",
+      "sitePath": "assets/brand-images/apha.png",
+      "title": "Apha Brand Hero"
+    }
+  ],
+  "editablePaths": [],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/APHA",
+    "folder": "APHA"
+  }
+}

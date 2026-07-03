@@ -1,0 +1,25 @@
+{
+  "slug": "iptrust",
+  "folder": "IPTRUST",
+  "name": "IPTrustasset",
+  "nativeName": "IPTRUST",
+  "description": "Trusted intellectual-property asset stewardship brand placeholder.",
+  "primaryGuide": "",
+  "url": "brand.html?brand=iptrust",
+  "apiUrl": "api/brands/iptrust.json",
+  "status": "placeholder",
+  "guides": [],
+  "tokens": [],
+  "images": [
+    {
+      "path": "IPTRUST/assets/brand-images/iptrust-brand-hero.png",
+      "sitePath": "assets/brand-images/iptrust.png",
+      "title": "Iptrust Brand Hero"
+    }
+  ],
+  "editablePaths": [],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/IPTRUST",
+    "folder": "IPTRUST"
+  }
+}

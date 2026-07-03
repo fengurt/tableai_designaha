@@ -1,22 +1,106 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import { readFile } from "node:fs/promises";
+import { readFile, readdir, stat } from "node:fs/promises";
+import { existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
-import { dirname, resolve } from "node:path";
+import { dirname, extname, relative, resolve } from "node:path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-// Canonical source of truth lives at repo root: KiND/tokens/kind.tokens.json
-const TOKENS_PATH = resolve(__dirname, "../../KiND/tokens/kind.tokens.json");
+const REPO_ROOT = resolve(__dirname, "../..");
+const BRANDS_PATH = resolve(REPO_ROOT, "config/brands.json");
+
+type BrandConfig = {
+  slug: string;
+  folder: string;
+  name: string;
+  nativeName?: string;
+  description: string;
+  primaryGuide?: string;
+};
+
+type Guide = {
+  path: string;
+  title: string;
+  format: string;
+  primary: boolean;
+  text: string;
+};
 
 type Token = { $value?: unknown; $type?: string; $description?: string; [k: string]: unknown };
 
-async function loadTokens(): Promise<Record<string, Token>> {
-  return JSON.parse(await readFile(TOKENS_PATH, "utf8"));
+type BrandPayload = BrandConfig & {
+  guides: Guide[];
+  tokenFiles: string[];
+};
+
+async function walk(dir: string): Promise<string[]> {
+  if (!existsSync(dir)) return [];
+  const entries = await readdir(dir);
+  const files: string[] = [];
+  for (const entry of entries) {
+    if (entry === ".DS_Store") continue;
+    const full = resolve(dir, entry);
+    const s = await stat(full);
+    if (s.isDirectory()) {
+      files.push(...await walk(full));
+    } else {
+      files.push(full);
+    }
+  }
+  return files;
 }
 
-/** Flatten DTCG groups into "group.name" -> token, resolving one level of $type from the group. */
-function flatten(obj: Record<string, any>, prefix = "", groupType?: string): Record<string, Token> {
+function titleFromPath(path: string) {
+  return path
+    .split("/")
+    .pop()
+    ?.replace(/\.[^.]+$/, "")
+    .replace(/[-_]+/g, " ")
+    .replace(/\b\w/g, (m) => m.toUpperCase()) ?? path;
+}
+
+function isGuide(path: string) {
+  return [".md", ".html"].includes(extname(path).toLowerCase());
+}
+
+function isToken(path: string) {
+  return path.includes("/tokens/") && [".json", ".css"].includes(extname(path).toLowerCase());
+}
+
+async function loadBrandConfigs(): Promise<BrandConfig[]> {
+  return JSON.parse(await readFile(BRANDS_PATH, "utf8"));
+}
+
+async function loadBrand(slug: string): Promise<BrandPayload> {
+  const configs = await loadBrandConfigs();
+  const brand = configs.find((item) => item.slug === slug);
+  if (!brand) throw new Error(`Unknown brand "${slug}"`);
+
+  const files = await walk(resolve(REPO_ROOT, brand.folder));
+  const guides: Guide[] = [];
+  const tokenFiles: string[] = [];
+
+  for (const full of files) {
+    const rel = relative(REPO_ROOT, full).replaceAll("\\", "/");
+    if (isGuide(rel)) {
+      guides.push({
+        path: rel,
+        title: titleFromPath(rel),
+        format: extname(rel).slice(1),
+        primary: rel === brand.primaryGuide,
+        text: await readFile(full, "utf8"),
+      });
+    }
+    if (isToken(rel)) tokenFiles.push(rel);
+  }
+
+  guides.sort((a, b) => Number(b.primary) - Number(a.primary) || a.path.localeCompare(b.path));
+  tokenFiles.sort((a, b) => a.localeCompare(b));
+  return { ...brand, guides, tokenFiles };
+}
+
+function flattenJsonTokens(obj: Record<string, any>, prefix = "", groupType?: string): Record<string, Token> {
   const out: Record<string, Token> = {};
   const type = (obj.$type as string) ?? groupType;
   for (const [key, val] of Object.entries(obj)) {
@@ -25,84 +109,175 @@ function flatten(obj: Record<string, any>, prefix = "", groupType?: string): Rec
     if (val && typeof val === "object" && "$value" in val) {
       out[path] = { ...val, $type: (val.$type as string) ?? type };
     } else if (val && typeof val === "object") {
-      Object.assign(out, flatten(val, path, type));
+      Object.assign(out, flattenJsonTokens(val, path, type));
     }
   }
   return out;
 }
 
-const server = new McpServer({ name: "kind-design", version: "0.1.0" });
-
-// Resource: the full token set (machine-readable, single source of truth).
-server.registerResource(
-  "kind-tokens",
-  "kind://tokens",
-  {
-    title: "KiND design tokens (DTCG)",
-    description: "W3C DTCG-format design tokens for the KiND design system.",
-    mimeType: "application/json",
-  },
-  async (uri) => {
-    const raw = await readFile(TOKENS_PATH, "utf8");
-    return { contents: [{ uri: uri.href, mimeType: "application/json", text: raw }] };
+function flattenCssTokens(text: string): Record<string, Token> {
+  const out: Record<string, Token> = {};
+  for (const match of text.matchAll(/--([a-zA-Z0-9-_]+)\s*:\s*([^;]+);/g)) {
+    const name = match[1].replaceAll("-", ".");
+    const value = match[2].trim();
+    out[name] = {
+      $value: value,
+      $type: /^#|rgb|oklch|hsl/.test(value) ? "color" : "unknown",
+      $description: `CSS custom property --${match[1]}`,
+    };
   }
-);
+  return out;
+}
 
-// Tool: look up a single token value by dotted name (e.g. "color.teal").
-server.registerTool(
-  "get_token",
-  {
-    title: "Get a KiND token",
-    description: "Resolve a token by dotted name (e.g. 'color.teal', 'font.size.h1') to its value.",
-    inputSchema: { name: z.string().describe("Dotted token name, e.g. color.teal") },
-  },
-  async ({ name }) => {
-    const flat = flatten(await loadTokens());
-    const t = flat[name];
-    if (!t) {
-      const suggestions = Object.keys(flat).filter((k) => k.includes(name.split(".").pop() ?? "")).slice(0, 8);
+async function loadTokens(slug: string): Promise<Record<string, Token>> {
+  const brand = await loadBrand(slug);
+  const out: Record<string, Token> = {};
+
+  for (const rel of brand.tokenFiles) {
+    const full = resolve(REPO_ROOT, rel);
+    const text = await readFile(full, "utf8");
+    if (rel.endsWith(".json")) {
+      Object.assign(out, flattenJsonTokens(JSON.parse(text)));
+    } else if (rel.endsWith(".css")) {
+      Object.assign(out, flattenCssTokens(text));
+    }
+  }
+
+  return out;
+}
+
+const brandConfigs = await loadBrandConfigs();
+const server = new McpServer({ name: "tableai-designaha", version: "0.2.0" });
+
+for (const brand of brandConfigs) {
+  server.registerResource(
+    `${brand.slug}-brand`,
+    `brand://${brand.slug}`,
+    {
+      title: `${brand.name} brand guidelines`,
+      description: brand.description,
+      mimeType: "application/json",
+    },
+    async (uri) => {
+      const payload = await loadBrand(brand.slug);
       return {
-        content: [{ type: "text", text: `Token "${name}" not found.${suggestions.length ? ` Did you mean: ${suggestions.join(", ")}?` : ""}` }],
-        isError: true,
+        contents: [{ uri: uri.href, mimeType: "application/json", text: JSON.stringify(payload, null, 2) }],
       };
     }
-    return { content: [{ type: "text", text: JSON.stringify({ name, ...t }, null, 2) }] };
+  );
+}
+
+server.registerTool(
+  "list_brands",
+  {
+    title: "List Table AI Alliance brands",
+    description: "List available brand design systems and placeholder brand folders.",
+    inputSchema: {},
+  },
+  async () => ({
+    content: [{
+      type: "text",
+      text: brandConfigs.map((brand) => `${brand.slug}\t${brand.name}\t${brand.description}`).join("\n"),
+    }],
+  })
+);
+
+server.registerTool(
+  "get_brand",
+  {
+    title: "Get a brand design system",
+    description: "Return a brand summary, guideline paths, and token file paths.",
+    inputSchema: { slug: z.string().describe("Brand slug, e.g. kind, tableai, vanahom") },
+  },
+  async ({ slug }) => {
+    const brand = await loadBrand(slug);
+    return {
+      content: [{ type: "text", text: JSON.stringify({ ...brand, guides: brand.guides.map(({ text, ...g }) => g) }, null, 2) }],
+    };
   }
 );
 
-// Tool: list all token names, optionally filtered by group prefix.
+server.registerTool(
+  "get_guideline",
+  {
+    title: "Get brand guideline text",
+    description: "Return the primary guideline or a specific guideline path for a brand.",
+    inputSchema: {
+      slug: z.string().describe("Brand slug"),
+      path: z.string().optional().describe("Optional exact guideline path"),
+    },
+  },
+  async ({ slug, path }) => {
+    const brand = await loadBrand(slug);
+    const guide = path ? brand.guides.find((item) => item.path === path) : brand.guides[0];
+    if (!guide) {
+      return { content: [{ type: "text", text: `No guideline found for ${slug}${path ? ` at ${path}` : ""}.` }], isError: true };
+    }
+    return { content: [{ type: "text", text: guide.text }] };
+  }
+);
+
 server.registerTool(
   "list_tokens",
   {
-    title: "List KiND tokens",
-    description: "List token names, optionally filtered by group prefix (e.g. 'color', 'font.size').",
-    inputSchema: { group: z.string().optional().describe("Optional group prefix filter") },
+    title: "List brand tokens",
+    description: "List token names for a brand, optionally filtered by dotted group prefix.",
+    inputSchema: {
+      slug: z.string().describe("Brand slug"),
+      group: z.string().optional().describe("Optional token prefix"),
+    },
   },
-  async ({ group }) => {
-    const flat = flatten(await loadTokens());
-    const names = Object.keys(flat).filter((k) => !group || k.startsWith(group));
-    return { content: [{ type: "text", text: names.join("\n") || "No matching tokens." }] };
+  async ({ slug, group }) => {
+    const flat = await loadTokens(slug);
+    const names = Object.keys(flat).filter((name) => !group || name.startsWith(group));
+    return { content: [{ type: "text", text: names.join("\n") || `No tokens found for ${slug}.` }] };
   }
 );
 
-// Tool: check whether a hex color is part of the KiND palette.
+server.registerTool(
+  "get_token",
+  {
+    title: "Get a brand token",
+    description: "Resolve a token by dotted name for a brand.",
+    inputSchema: {
+      slug: z.string().describe("Brand slug"),
+      name: z.string().describe("Dotted token name, e.g. color.teal"),
+    },
+  },
+  async ({ slug, name }) => {
+    const flat = await loadTokens(slug);
+    const token = flat[name];
+    if (!token) {
+      const suggestions = Object.keys(flat).filter((key) => key.includes(name.split(".").pop() ?? "")).slice(0, 8);
+      return {
+        content: [{ type: "text", text: `Token "${name}" not found for ${slug}.${suggestions.length ? ` Did you mean: ${suggestions.join(", ")}?` : ""}` }],
+        isError: true,
+      };
+    }
+    return { content: [{ type: "text", text: JSON.stringify({ slug, name, ...token }, null, 2) }] };
+  }
+);
+
 server.registerTool(
   "validate_color",
   {
-    title: "Validate a color against the KiND palette",
-    description: "Check whether a hex color is an exact KiND brand color; returns the matching token or the nearest options.",
-    inputSchema: { hex: z.string().describe("Hex color, e.g. #0E8C7B") },
+    title: "Validate a color against a brand palette",
+    description: "Check whether a hex color is an exact brand token color.",
+    inputSchema: {
+      slug: z.string().describe("Brand slug"),
+      hex: z.string().describe("Hex color, e.g. #0E8C7B"),
+    },
   },
-  async ({ hex }) => {
-    const flat = flatten(await loadTokens());
+  async ({ slug, hex }) => {
+    const flat = await loadTokens(slug);
     const target = hex.trim().toLowerCase();
-    const colors = Object.entries(flat).filter(([, t]) => t.$type === "color" && typeof t.$value === "string");
-    const match = colors.find(([, t]) => String(t.$value).toLowerCase() === target);
+    const colors = Object.entries(flat).filter(([, token]) => token.$type === "color" && typeof token.$value === "string");
+    const match = colors.find(([, token]) => String(token.$value).toLowerCase() === target);
     if (match) {
-      return { content: [{ type: "text", text: `✓ ${hex} is on-brand: ${match[0]} (${match[1].$description ?? ""})` }] };
+      return { content: [{ type: "text", text: `${hex} is on-brand for ${slug}: ${match[0]} (${match[1].$description ?? ""})` }] };
     }
-    const palette = colors.map(([n, t]) => `${n}: ${t.$value}`).join("\n");
-    return { content: [{ type: "text", text: `✗ ${hex} is not a KiND brand color. Use one of:\n${palette}` }] };
+    const palette = colors.map(([name, token]) => `${name}: ${token.$value}`).join("\n");
+    return { content: [{ type: "text", text: `${hex} is not an exact ${slug} brand color.${palette ? ` Use one of:\n${palette}` : " No palette tokens are available yet."}` }] };
   }
 );
 
@@ -112,6 +287,6 @@ async function main() {
 }
 
 main().catch((err) => {
-  console.error("kind-design MCP failed to start:", err);
+  console.error("tableai-designaha MCP failed to start:", err);
   process.exit(1);
 });

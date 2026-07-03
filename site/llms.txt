@@ -1,0 +1,25 @@
+# Table AI Design Aha
+
+Agent-friendly design guidelines for Table AI Alliance brands.
+
+Machine-readable entry points:
+- /api/manifest.json
+- /api/brands.json
+- /api/brands/{slug}.json
+
+Brands:
+- Table AI (tableai): /api/brands/tableai.json
+- VANAHOM (vanahom): /api/brands/vanahom.json
+- KiND (kind): /api/brands/kind.json
+- APHA (apha): /api/brands/apha.json
+- MANA Endless (manaendless): /api/brands/manaendless.json
+- OPC Global (opcglobal): /api/brands/opcglobal.json
+- IPTrustasset (iptrust): /api/brands/iptrust.json
+- 峰值永造局 (fengzhi): /api/brands/fengzhi.json
+- Axisee (axisee): /api/brands/axisee.json
+- Sidera (sidera): /api/brands/sidera.json
+
+Admin workflow:
+- /admin.html unlocks with the generated admin key.
+- Edits are committed back to GitHub via the GitHub Contents API.
+- GitHub Pages rebuilds from main after changes land.
