@@ -5,6 +5,24 @@
   "nativeName": "Table AI Alliance",
   "description": "International think tank design system for the Table AI Alliance.",
   "primaryGuide": "TABLEAI/TableAI_DESIGN.md",
+  "theme": {
+    "mode": "light",
+    "primary": "#0A1626",
+    "accent": "#A88B52",
+    "secondary": "#545F72",
+    "surface": "#FBF9FA",
+    "paper": "#FFFFFF",
+    "ink": "#1B1B1D",
+    "muted": "#44474C",
+    "line": "rgba(10, 22, 38, 0.16)",
+    "keywords": [
+      "white",
+      "deep blue",
+      "dark gold",
+      "think tank",
+      "minimal"
+    ]
+  },
   "url": "brand.html?brand=tableai",
   "apiUrl": "api/brands/tableai.json",
   "status": "documented",

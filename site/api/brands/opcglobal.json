@@ -5,6 +5,24 @@
   "nativeName": "欧匹赛全球联盟",
   "description": "Global alliance brand placeholder for future design guidelines.",
   "primaryGuide": "",
+  "theme": {
+    "mode": "light",
+    "primary": "#1D3557",
+    "accent": "#B79B63",
+    "secondary": "#A23E3E",
+    "surface": "#F3F5F6",
+    "paper": "#FFFFFF",
+    "ink": "#162130",
+    "muted": "#596776",
+    "line": "rgba(29, 53, 87, 0.16)",
+    "keywords": [
+      "deep blue",
+      "graphite",
+      "gold",
+      "global alliance",
+      "standards"
+    ]
+  },
   "url": "brand.html?brand=opcglobal",
   "apiUrl": "api/brands/opcglobal.json",
   "status": "placeholder",

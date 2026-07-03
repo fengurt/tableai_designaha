@@ -5,6 +5,24 @@
   "nativeName": "侍天",
   "description": "Wisdom Navigator design system for premium F&B chains.",
   "primaryGuide": "Sidera/sidera_design.md",
+  "theme": {
+    "mode": "dark",
+    "primary": "#B58B4C",
+    "accent": "#D4A862",
+    "secondary": "#9E3B2E",
+    "surface": "#14100A",
+    "paper": "#18130B",
+    "ink": "#EFE6D2",
+    "muted": "#A99B7E",
+    "line": "rgba(181, 139, 76, 0.32)",
+    "keywords": [
+      "ink",
+      "earth gold",
+      "cream",
+      "vermillion",
+      "wisdom navigator"
+    ]
+  },
   "url": "brand.html?brand=sidera",
   "apiUrl": "api/brands/sidera.json",
   "status": "documented",

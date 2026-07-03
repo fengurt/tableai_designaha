@@ -5,6 +5,24 @@
   "nativeName": "无魔协会",
   "description": "Alliance brand placeholder for future design guidelines.",
   "primaryGuide": "",
+  "theme": {
+    "mode": "dark",
+    "primary": "#7BC8C4",
+    "accent": "#B7A7D8",
+    "secondary": "#5E6877",
+    "surface": "#15171C",
+    "paper": "#20232B",
+    "ink": "#F2F0E8",
+    "muted": "#B8BDC7",
+    "line": "rgba(242, 240, 232, 0.16)",
+    "keywords": [
+      "charcoal",
+      "silver",
+      "violet grey",
+      "clarity",
+      "continuous learning"
+    ]
+  },
   "url": "brand.html?brand=manaendless",
   "apiUrl": "api/brands/manaendless.json",
   "status": "placeholder",

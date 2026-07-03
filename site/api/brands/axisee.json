@@ -5,6 +5,24 @@
   "nativeName": "酒店盈利大师",
   "description": "AI General Manager for hotel marketing, private-domain operations, and revenue.",
   "primaryGuide": "Axisee/axisee_design.md",
+  "theme": {
+    "mode": "light",
+    "primary": "#1A2B4A",
+    "accent": "#B12137",
+    "secondary": "#D4AF37",
+    "surface": "#F9FAFB",
+    "paper": "#FFFFFF",
+    "ink": "#2C2C2C",
+    "muted": "#555555",
+    "line": "rgba(26, 43, 74, 0.16)",
+    "keywords": [
+      "universe blue",
+      "Vanahom red",
+      "promising gold",
+      "hotel AI",
+      "three agents"
+    ]
+  },
   "url": "brand.html?brand=axisee",
   "apiUrl": "api/brands/axisee.json",
   "status": "documented",

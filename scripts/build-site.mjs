@@ -186,7 +186,7 @@ await writeFile(join(siteDir, "llms.txt"), [
   "- /api/brands/{slug}.json",
   "",
   "Brands:",
-  ...indexPayload.map((brand) => `- ${brand.name} (${brand.slug}): /api/brands/${brand.slug}.json`),
+  ...indexPayload.map((brand) => `- ${brand.name} (${brand.slug}): /api/brands/${brand.slug}.json · palette ${brand.theme?.primary ?? "n/a"} / ${brand.theme?.accent ?? "n/a"}`),
   "",
   "Admin workflow:",
   "- /admin.html unlocks with the generated admin key.",
@@ -359,25 +359,90 @@ p { line-height: 1.65; }
   border: 1px solid var(--line);
   border-radius: 8px;
 }
-.card { overflow: hidden; text-decoration: none; display: flex; flex-direction: column; min-height: 350px; }
+.card {
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 380px;
+  background: var(--brand-paper, var(--paper));
+  border-color: var(--brand-line, var(--line));
+  color: var(--brand-ink, var(--ink));
+  position: relative;
+  transition: transform .18s ease, border-color .18s ease;
+}
+.card::before {
+  content: "";
+  display: block;
+  height: 5px;
+  background: var(--brand-primary, var(--accent));
+}
+.card:hover { transform: translateY(-3px); border-color: var(--brand-primary, var(--line)); }
+.card.theme-dark { background: var(--brand-paper); color: var(--brand-ink); }
 .card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #eceae4; border-bottom: 1px solid var(--line); }
 .card-body { padding: 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.card-body .eyebrow { color: var(--brand-primary, var(--accent)); }
+.card-body .muted, .card-body p { color: var(--brand-muted, var(--muted)); }
+.card-body h2 { color: var(--brand-ink, var(--ink)); }
 .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; color: var(--muted); font-size: 13px; }
-.pill { border: 1px solid var(--line); border-radius: 999px; padding: 4px 8px; background: white; }
+.pill {
+  border: 1px solid var(--brand-line, var(--line));
+  border-radius: 999px;
+  padding: 4px 8px;
+  background: color-mix(in srgb, var(--brand-primary, var(--blue)) 7%, var(--brand-paper, white));
+  color: var(--brand-ink, var(--ink));
+}
+.swatches { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px; }
+.swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, .16);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .2);
+}
+.swatch-label { font-size: 12px; color: var(--brand-muted, var(--muted)); }
 .brand-page { padding: 36px 0 90px; }
+.brand-shell {
+  margin: -36px calc((100vw - min(1180px, calc(100vw - 36px))) / -2) -90px;
+  padding: 42px max(18px, calc((100vw - 1180px) / 2)) 90px;
+  background: var(--brand-surface, var(--bg));
+  color: var(--brand-ink, var(--ink));
+  min-height: calc(100vh - 76px);
+}
+.brand-shell.theme-dark .top-note,
+.brand-shell.theme-dark p,
+.brand-shell.theme-dark .muted { color: var(--brand-muted); }
+.brand-shell .eyebrow { color: var(--brand-primary, var(--accent)); }
+.brand-shell h1, .brand-shell h2, .brand-shell h3 { color: var(--brand-ink, var(--ink)); }
+.brand-shell .button {
+  background: var(--brand-primary, var(--blue));
+  border-color: var(--brand-primary, var(--blue));
+  color: var(--brand-button-text, white);
+}
+.brand-shell .button.ghost {
+  background: transparent;
+  color: var(--brand-primary, var(--blue));
+  border-color: var(--brand-primary, var(--blue));
+}
+.brand-shell.theme-dark .button.ghost { color: var(--brand-ink); border-color: var(--brand-line); }
 .brand-hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(280px, .95fr); gap: clamp(22px, 4vw, 48px); align-items: center; margin-bottom: 36px; }
 .brand-hero img { width: 100%; border-radius: 8px; border: 1px solid var(--line); }
 .resource-list { display: grid; gap: 14px; margin: 24px 0; }
+.resource, .guide {
+  background: var(--brand-paper, var(--paper));
+  color: var(--brand-ink, var(--ink));
+  border-color: var(--brand-line, var(--line));
+}
 .resource { padding: 18px; }
 .guide { margin: 18px 0; padding: 22px; }
 pre {
   white-space: pre-wrap;
   overflow-wrap: anywhere;
-  color: #262626;
-  background: #f5f3ee;
+  color: var(--brand-ink, #262626);
+  background: color-mix(in srgb, var(--brand-surface, #f5f3ee) 82%, var(--brand-paper, white));
   padding: 18px;
   border-radius: 6px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--brand-line, var(--line));
   max-height: 560px;
   overflow: auto;
 }
@@ -421,17 +486,56 @@ function escapeHtml(value) {
   }[char]));
 }
 
+function themeStyle(theme = {}) {
+  const isDark = theme.mode === "dark";
+  const buttonText = isDark ? theme.surface || "#14100A" : "#ffffff";
+  const vars = {
+    "--brand-primary": theme.primary,
+    "--brand-accent": theme.accent,
+    "--brand-secondary": theme.secondary,
+    "--brand-surface": theme.surface,
+    "--brand-paper": theme.paper,
+    "--brand-ink": theme.ink,
+    "--brand-muted": theme.muted,
+    "--brand-line": theme.line,
+    "--brand-button-text": buttonText,
+  };
+  return Object.entries(vars)
+    .filter(([, value]) => value)
+    .map(([key, value]) => \`\${key}:\${value}\`)
+    .join(";");
+}
+
+function themeClass(theme = {}) {
+  return theme.mode === "dark" ? "theme-dark" : "theme-light";
+}
+
+function swatches(theme = {}, labeled = false) {
+  const colors = [
+    ["Primary", theme.primary],
+    ["Accent", theme.accent],
+    ["Secondary", theme.secondary],
+    ["Surface", theme.surface],
+    ["Ink", theme.ink],
+  ].filter(([, value]) => value);
+  return \`<div class="swatches">\${colors.map(([label, value]) => \`
+    <span class="swatch" title="\${escapeHtml(label)} \${escapeHtml(value)}" style="background:\${escapeHtml(value)}"></span>
+    \${labeled ? \`<span class="swatch-label">\${escapeHtml(label)} \${escapeHtml(value)}</span>\` : ""}
+  \`).join("")}</div>\`;
+}
+
 async function renderIndex() {
   const grid = $("#brandGrid");
   if (!grid) return;
   const brands = await loadJson("api/brands.json");
   grid.innerHTML = brands.map((brand) => \`
-    <a class="card" href="\${brand.url}">
+    <a class="card \${themeClass(brand.theme)}" href="\${brand.url}" style="\${themeStyle(brand.theme)}">
       \${brand.heroImage ? \`<img src="\${brand.heroImage}" alt="">\` : ""}
       <div class="card-body">
         <p class="eyebrow">\${escapeHtml(brand.status)}</p>
         <h2>\${escapeHtml(brand.name)}</h2>
         <p class="muted">\${escapeHtml(brand.nativeName || brand.description)}</p>
+        \${swatches(brand.theme)}
         <p>\${escapeHtml(brand.primaryExcerpt)}</p>
         <div class="meta">
           <span class="pill">\${brand.guideCount} guides</span>
@@ -451,30 +555,34 @@ async function renderBrand() {
   document.title = \`\${brand.name} · Brand Guidelines\`;
   const hero = brand.images?.[0]?.sitePath;
   page.innerHTML = \`
-    <section class="brand-hero">
-      <div>
-        <p class="eyebrow">\${escapeHtml(brand.status)}</p>
-        <h1>\${escapeHtml(brand.name)}</h1>
-        <p class="muted">\${escapeHtml(brand.nativeName || "")}</p>
-        <p>\${escapeHtml(brand.description)}</p>
-        <div class="actions">
-          <a class="button" href="\${brand.apiUrl}">Open JSON endpoint</a>
-          <a class="button ghost" href="\${brand.source.github}">Source folder</a>
+    <div class="brand-shell \${themeClass(brand.theme)}" style="\${themeStyle(brand.theme)}">
+      <section class="brand-hero">
+        <div>
+          <p class="eyebrow">\${escapeHtml(brand.status)}</p>
+          <h1>\${escapeHtml(brand.name)}</h1>
+          <p class="muted">\${escapeHtml(brand.nativeName || "")}</p>
+          <p>\${escapeHtml(brand.description)}</p>
+          \${swatches(brand.theme, true)}
+          <div class="actions">
+            <a class="button" href="\${brand.apiUrl}">Open JSON endpoint</a>
+            <a class="button ghost" href="\${brand.source.github}">Source folder</a>
+          </div>
         </div>
-      </div>
-      \${hero ? \`<img src="\${hero}" alt="">\` : ""}
-    </section>
-    <section class="resource-list">
-      <div class="resource"><strong>Editable source paths</strong><br>\${brand.editablePaths?.map(escapeHtml).join("<br>") || "No guideline files yet."}</div>
-      <div class="resource"><strong>Token files</strong><br>\${brand.tokens?.map((token) => escapeHtml(token.path)).join("<br>") || "No token files yet."}</div>
-    </section>
-    \${brand.guides?.map((guide) => \`
-      <article class="guide">
-        <p class="eyebrow">\${escapeHtml(guide.format)} · \${escapeHtml(guide.path)}</p>
-        <h2>\${escapeHtml(guide.title)}</h2>
-        <pre>\${escapeHtml(guide.text)}</pre>
-      </article>
-    \`).join("") || ""}
+        \${hero ? \`<img src="\${hero}" alt="">\` : ""}
+      </section>
+      <section class="resource-list">
+        <div class="resource"><strong>Brand color tokens</strong><br>\${escapeHtml(brand.theme?.keywords?.join(" · ") || "No theme keywords yet.")}</div>
+        <div class="resource"><strong>Editable source paths</strong><br>\${brand.editablePaths?.map(escapeHtml).join("<br>") || "No guideline files yet."}</div>
+        <div class="resource"><strong>Token files</strong><br>\${brand.tokens?.map((token) => escapeHtml(token.path)).join("<br>") || "No token files yet."}</div>
+      </section>
+      \${brand.guides?.map((guide) => \`
+        <article class="guide">
+          <p class="eyebrow">\${escapeHtml(guide.format)} · \${escapeHtml(guide.path)}</p>
+          <h2>\${escapeHtml(guide.title)}</h2>
+          <pre>\${escapeHtml(guide.text)}</pre>
+        </article>
+      \`).join("") || ""}
+    </div>
   \`;
 }
 

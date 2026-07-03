@@ -5,6 +5,24 @@
   "nativeName": "凡纳弘途",
   "description": "Mission-driven hospitality and extended-services enterprise builder.",
   "primaryGuide": "VANAHOM/vanahom_design.md",
+  "theme": {
+    "mode": "light",
+    "primary": "#B12137",
+    "accent": "#A8ADAD",
+    "secondary": "#8E1A2C",
+    "surface": "#F6F4F2",
+    "paper": "#FFFFFF",
+    "ink": "#211B1C",
+    "muted": "#6E7475",
+    "line": "rgba(33, 27, 28, 0.14)",
+    "keywords": [
+      "Hongtu red",
+      "Cangling grey",
+      "white space",
+      "hospitality",
+      "wellbeing"
+    ]
+  },
   "url": "brand.html?brand=vanahom",
   "apiUrl": "api/brands/vanahom.json",
   "status": "documented",

@@ -8,16 +8,16 @@ Machine-readable entry points:
 - /api/brands/{slug}.json
 
 Brands:
-- Table AI (tableai): /api/brands/tableai.json
-- VANAHOM (vanahom): /api/brands/vanahom.json
-- KiND (kind): /api/brands/kind.json
-- APHA (apha): /api/brands/apha.json
-- MANA Endless (manaendless): /api/brands/manaendless.json
-- OPC Global (opcglobal): /api/brands/opcglobal.json
-- IPTrustasset (iptrust): /api/brands/iptrust.json
-- 峰值永造局 (fengzhi): /api/brands/fengzhi.json
-- Axisee (axisee): /api/brands/axisee.json
-- Sidera (sidera): /api/brands/sidera.json
+- Table AI (tableai): /api/brands/tableai.json · palette #0A1626 / #A88B52
+- VANAHOM (vanahom): /api/brands/vanahom.json · palette #B12137 / #A8ADAD
+- KiND (kind): /api/brands/kind.json · palette #0E8C7B / #E8765A
+- APHA (apha): /api/brands/apha.json · palette #557F8F / #8FAF83
+- MANA Endless (manaendless): /api/brands/manaendless.json · palette #7BC8C4 / #B7A7D8
+- OPC Global (opcglobal): /api/brands/opcglobal.json · palette #1D3557 / #B79B63
+- IPTrustasset (iptrust): /api/brands/iptrust.json · palette #10263D / #B99B5B
+- 峰值永造局 (fengzhi): /api/brands/fengzhi.json · palette #1A1714 / #A47B36
+- Axisee (axisee): /api/brands/axisee.json · palette #1A2B4A / #B12137
+- Sidera (sidera): /api/brands/sidera.json · palette #B58B4C / #D4A862
 
 Admin workflow:
 - /admin.html unlocks with the generated admin key.

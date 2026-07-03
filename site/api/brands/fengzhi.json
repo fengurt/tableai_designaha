@@ -5,6 +5,24 @@
   "nativeName": "The Transformation Company · 界格",
   "description": "AI-native transformation delivery brand system.",
   "primaryGuide": "FENGZHI/readme.md",
+  "theme": {
+    "mode": "light",
+    "primary": "#1A1714",
+    "accent": "#A47B36",
+    "secondary": "#8C857A",
+    "surface": "#FAF7F2",
+    "paper": "#FFFFFF",
+    "ink": "#1A1714",
+    "muted": "#6F685F",
+    "line": "rgba(26, 23, 20, 0.16)",
+    "keywords": [
+      "paper white",
+      "ink black",
+      "stone grey",
+      "deep gold",
+      "transformation"
+    ]
+  },
   "url": "brand.html?brand=fengzhi",
   "apiUrl": "api/brands/fengzhi.json",
   "status": "documented",

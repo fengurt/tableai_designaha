@@ -5,6 +5,24 @@
   "nativeName": "善渡科技",
   "description": "Human-first AI workforce brand: for all, not for few.",
   "primaryGuide": "KiND/KiND Design.md",
+  "theme": {
+    "mode": "light",
+    "primary": "#0E8C7B",
+    "accent": "#E8765A",
+    "secondary": "#2FD0B2",
+    "surface": "#F8FBF9",
+    "paper": "#FFFFFF",
+    "ink": "#052E28",
+    "muted": "#52746C",
+    "line": "rgba(6, 59, 51, 0.14)",
+    "keywords": [
+      "teal",
+      "mint",
+      "coral",
+      "kind workforce",
+      "inclusive AI"
+    ]
+  },
   "url": "brand.html?brand=kind",
   "apiUrl": "api/brands/kind.json",
   "status": "documented",
