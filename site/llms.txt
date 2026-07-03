@@ -1,6 +1,7 @@
 # 岁知社 IPTrust
 
-A public IP trust hub for brand guidelines, design systems, assets, and agent-readable source files.
+岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。
+English: A fast, minimal IP trust hub for brand guidelines, design systems, assets, and agent-readable source files.
 
 Machine-readable entry points:
 - /api/manifest.json

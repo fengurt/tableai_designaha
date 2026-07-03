@@ -15,7 +15,7 @@ const adminConfig = existsSync(join(root, "config/site-admin.public.json"))
   ? JSON.parse(await readFile(join(root, "config/site-admin.public.json"), "utf8"))
   : {};
 const hubName = "岁知社 IPTrust";
-const hubDescription = "A public IP trust hub for brand guidelines, design systems, assets, and agent-readable source files.";
+const hubDescription = "岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。";
 
 async function walk(dir) {
   if (!existsSync(dir)) return [];
@@ -181,6 +181,7 @@ await writeFile(join(siteDir, "llms.txt"), [
   `# ${hubName}`,
   "",
   hubDescription,
+  "English: A fast, minimal IP trust hub for brand guidelines, design systems, assets, and agent-readable source files.",
   "",
   "Machine-readable entry points:",
   "- /api/manifest.json",
@@ -203,7 +204,7 @@ await writeFile(join(siteDir, "favicon.svg"), html`<svg xmlns="http://www.w3.org
 </svg>`);
 
 await writeFile(join(siteDir, "index.html"), html`<!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -216,32 +217,30 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
   <header class="topbar">
     <a class="brand" href="./">${hubName}</a>
     <nav>
-      <a href="api/manifest.json">Manifest</a>
+      <a href="api/manifest.json" data-i18n="nav.manifest">Manifest</a>
       <a href="llms.txt">llms.txt</a>
-      <a href="admin.html">Admin</a>
+      <a href="admin.html" data-i18n="nav.admin">Admin</a>
+      <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language">EN</button>
     </nav>
   </header>
   <main>
     <section class="hub-hero">
       <div class="hero-copy">
-        <p class="eyebrow">IP trust registry · Agent-ready brand source</p>
+        <p class="eyebrow" data-i18n="home.eyebrow">IP 信任索引 · Agent 可读品牌源</p>
         <h1>岁知社 IPTrust</h1>
-        <p>One living hub for every IP: brand color, voice, image, design rule, token file, and machine-readable guideline stays synced from GitHub.</p>
+        <p data-i18n="home.lead">极速、极简地进入每个 IP：颜色、语气、规范、资产与机器可读源文件都从 GitHub 同步。</p>
         <div class="actions">
-          <a class="button" href="api/brands.json">Open JSON index</a>
-          <a class="button ghost" href="admin.html">Admin edit</a>
+          <a class="button" href="api/brands.json" data-i18n="home.openJson">打开 JSON 索引</a>
+          <a class="button ghost" href="admin.html" data-i18n="home.adminEdit">管理编辑</a>
         </div>
       </div>
-      <div class="hero-gallery" aria-hidden="true">
-        <img src="assets/brand-images/tableai.png" alt="">
-        <img src="assets/brand-images/vanahom.png" alt="">
-        <img src="assets/brand-images/kind.png" alt="">
-        <img src="assets/brand-images/sidera.png" alt="">
+      <div class="hero-index" aria-hidden="true">
+        ${indexPayload.map((brand, index) => `<span style="--brand-primary:${brand.theme?.primary ?? "#0A1626"};--brand-paper:${brand.theme?.paper ?? "#fff"}">${String(index + 1).padStart(2, "0")} ${brand.name}</span>`).join("")}
       </div>
     </section>
     <section class="section-head">
-      <p class="eyebrow">Ten distinct IP systems</p>
-      <h2>Each card behaves like its own brand room.</h2>
+      <p class="eyebrow" data-i18n="home.systems">10 个 IP 系统</p>
+      <h2 data-i18n="home.sectionTitle">直接进入 IP。</h2>
     </section>
     <section class="ip-grid" id="brandGrid" aria-live="polite"></section>
   </main>
@@ -250,7 +249,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
 </html>`);
 
 await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -263,7 +262,8 @@ await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
     <a class="brand" href="./">${hubName}</a>
     <nav>
       <a href="api/brands.json">API</a>
-      <a href="admin.html">Admin</a>
+      <a href="admin.html" data-i18n="nav.admin">Admin</a>
+      <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language">EN</button>
     </nav>
   </header>
   <main id="brandPage" class="brand-page" aria-live="polite"></main>
@@ -272,7 +272,7 @@ await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
 </html>`);
 
 await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -284,37 +284,39 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
   <header class="topbar">
     <a class="brand" href="./">${hubName}</a>
     <nav>
-      <a href="api/manifest.json">Manifest</a>
+      <a href="api/manifest.json" data-i18n="nav.manifest">Manifest</a>
       <a href="https://github.com/${adminConfig.owner ?? "fengurt"}/${adminConfig.repo ?? "tableai_designaha"}">GitHub</a>
+      <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language">EN</button>
     </nav>
   </header>
   <main class="admin">
     <section class="panel" id="unlockPanel">
-      <p class="eyebrow">Admin</p>
-      <h1>Unlock editor</h1>
-      <p class="muted">The admin key unlocks this browser editor. Saving still requires a GitHub token with contents write access, so canonical edits flow back into the repo.</p>
-      <label>Admin API key <input id="adminKey" type="password" autocomplete="current-password"></label>
-      <button id="unlockButton">Unlock</button>
+      <p class="eyebrow" data-i18n="nav.admin">管理</p>
+      <h1 data-i18n="admin.unlockTitle">解锁编辑器</h1>
+      <p class="muted" data-i18n="admin.unlockBody">Admin key 用于解锁浏览器编辑器；保存仍需 GitHub 写入令牌，确保修改回到仓库。</p>
+      <label><span data-i18n="admin.keyLabel">Admin API key</span><input id="adminKey" type="password" autocomplete="current-password"></label>
+      <button id="unlockButton" data-i18n="admin.unlockButton">解锁</button>
       <p class="notice" id="unlockStatus"></p>
     </section>
     <section class="panel hidden" id="editorPanel">
-      <p class="eyebrow">Two-way sync</p>
-      <h1>Edit GitHub source</h1>
+      <p class="eyebrow" data-i18n="admin.sync">双向同步</p>
+      <h1 data-i18n="admin.editTitle">编辑 GitHub 源文件</h1>
       <div class="form-grid">
-        <label>GitHub token <input id="githubToken" type="password" autocomplete="off" placeholder="Fine-grained PAT or classic token"></label>
-        <label>Branch <input id="branch" value="${adminConfig.branch ?? "main"}"></label>
-        <label>Brand <select id="brandSelect"></select></label>
-        <label>File <select id="fileSelect"></select></label>
+        <label><span data-i18n="admin.githubToken">GitHub token</span><input id="githubToken" type="password" autocomplete="off" placeholder="Fine-grained PAT or classic token"></label>
+        <label><span data-i18n="admin.branch">分支</span><input id="branch" value="${adminConfig.branch ?? "main"}"></label>
+        <label><span data-i18n="admin.brand">IP</span><select id="brandSelect"></select></label>
+        <label><span data-i18n="admin.file">文件</span><select id="fileSelect"></select></label>
       </div>
       <div class="actions">
-        <button id="loadFile">Load file</button>
-        <button id="saveFile">Commit edit</button>
+        <button id="loadFile" data-i18n="admin.loadFile">载入文件</button>
+        <button id="saveFile" data-i18n="admin.saveFile">提交修改</button>
       </div>
       <textarea id="editor" spellcheck="false" placeholder="Load an editable guideline file..."></textarea>
-      <label>Commit message <input id="commitMessage" value="Update brand guideline from admin site"></label>
+      <label><span data-i18n="admin.commitMessage">提交信息</span><input id="commitMessage" value="Update brand guideline from admin site"></label>
       <p class="notice" id="editorStatus"></p>
     </section>
   </main>
+  <script src="assets/site.js" type="module"></script>
   <script src="assets/admin.js" type="module"></script>
 </body>
 </html>`);
@@ -339,8 +341,7 @@ body {
 }
 .hub-home {
   background:
-    linear-gradient(180deg, rgba(255, 254, 250, .84), rgba(242, 240, 235, .98) 42%),
-    radial-gradient(circle at top right, rgba(154, 122, 63, .18), transparent 34%),
+    linear-gradient(180deg, rgba(255, 254, 250, .92), rgba(242, 240, 235, .98) 42%),
     var(--bg);
 }
 a { color: inherit; }
@@ -360,14 +361,23 @@ a { color: inherit; }
 .brand { font-weight: 750; text-decoration: none; letter-spacing: 0; }
 nav { display: flex; gap: 18px; color: var(--muted); font-size: 14px; }
 nav a { text-decoration: none; }
+.lang-toggle {
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 750;
+}
 main { width: min(1180px, calc(100vw - 36px)); margin: 0 auto; }
 .hub-hero {
-  min-height: calc(100vh - 74px);
+  min-height: 62vh;
   display: grid;
-  grid-template-columns: minmax(0, .95fr) minmax(360px, .9fr);
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, .72fr);
   gap: 42px;
   align-items: center;
-  padding: 54px 0 42px;
+  padding: clamp(48px, 8vw, 96px) 0 36px;
 }
 .hero-copy { max-width: 760px; }
 .eyebrow { color: var(--accent); font-size: 12px; font-weight: 760; text-transform: uppercase; letter-spacing: .18em; }
@@ -376,21 +386,21 @@ h2 { font-size: 36px; line-height: 1.08; margin: 0 0 12px; letter-spacing: 0; }
 h3 { margin: 0 0 8px; }
 p { line-height: 1.65; }
 .hub-hero p:not(.eyebrow), .muted { color: var(--muted); font-size: 18px; max-width: 760px; }
-.hero-gallery {
+.hero-index {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  align-items: stretch;
+  gap: 8px;
+  align-self: end;
 }
-.hero-gallery img {
-  width: 100%;
-  height: 100%;
-  min-height: 174px;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 1px solid rgba(22, 20, 18, .12);
+.hero-index span {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid var(--line);
+  color: var(--brand-primary);
+  padding: 9px 0;
+  font-size: 14px;
+  font-weight: 760;
 }
-.hero-gallery img:first-child { grid-row: span 2; }
 .section-head {
   display: flex;
   justify-content: space-between;
@@ -414,11 +424,20 @@ p { line-height: 1.65; }
   cursor: pointer;
 }
 .button.ghost { background: transparent; color: var(--blue); }
+.lang-toggle {
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 750;
+}
 .ip-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 18px;
-  padding: 22px 0 88px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  padding: 14px 0 88px;
 }
 .card, .panel, .guide, .resource {
   background: var(--paper);
@@ -428,13 +447,11 @@ p { line-height: 1.65; }
 .ip-card {
   overflow: hidden;
   text-decoration: none;
-  display: grid;
-  grid-template-rows: 220px 1fr;
-  min-height: 520px;
-  grid-column: span 4;
-  background:
-    linear-gradient(145deg, color-mix(in srgb, var(--brand-primary) 12%, transparent), transparent 44%),
-    var(--brand-paper, var(--paper));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px;
+  background: var(--brand-paper, var(--paper));
   border-color: var(--brand-line, var(--line));
   color: var(--brand-ink, var(--ink));
   position: relative;
@@ -450,28 +467,15 @@ p { line-height: 1.65; }
   background: var(--brand-primary, var(--accent));
   z-index: 2;
 }
-.ip-card:hover { transform: translateY(-4px); border-color: var(--brand-primary, var(--line)); box-shadow: 0 22px 60px rgba(22, 20, 18, .10); }
+.ip-card:hover { transform: translateY(-3px); border-color: var(--brand-primary, var(--line)); box-shadow: 0 16px 42px rgba(22, 20, 18, .08); }
 .ip-card.theme-dark { background: var(--brand-paper); color: var(--brand-ink); }
-.ip-card.featured { grid-column: span 6; grid-template-rows: 300px 1fr; }
 .ip-card[data-brand="sidera"],
 .ip-card[data-brand="manaendless"] { background: var(--brand-paper); }
 .ip-card[data-brand="fengzhi"] { border-radius: 0; }
 .ip-card[data-brand="kind"] { border-radius: 18px; }
 .ip-card[data-brand="vanahom"]::before { width: 3px; }
-.card-media { position: relative; overflow: hidden; background: var(--brand-surface); }
-.card-media::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 52%, color-mix(in srgb, var(--brand-paper) 82%, transparent));
-}
-.ip-card.theme-dark .card-media::after { background: linear-gradient(180deg, transparent 40%, color-mix(in srgb, var(--brand-paper) 88%, transparent)); }
-.card-media img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.01); }
 .brand-sigil {
-  position: absolute;
-  right: 16px;
-  bottom: 14px;
-  z-index: 1;
+  align-self: flex-end;
   min-width: 48px;
   height: 48px;
   display: grid;
@@ -484,31 +488,10 @@ p { line-height: 1.65; }
 .ip-card[data-brand="sidera"] .brand-sigil { background: var(--brand-secondary); color: var(--brand-ink); }
 .ip-card[data-brand="kind"] .brand-sigil { border-radius: 999px; }
 .ip-card[data-brand="fengzhi"] .brand-sigil { border-radius: 0; }
-.card-body { padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.card-body { padding: 18px 18px 16px; display: flex; flex-direction: column; gap: 12px; min-height: 100%; }
 .card-body .eyebrow { color: var(--brand-primary, var(--accent)); }
 .card-body .muted, .card-body p { color: var(--brand-muted, var(--muted)); }
-.card-body h2 { color: var(--brand-ink, var(--ink)); font-size: 32px; line-height: 1.05; }
-.ip-card.featured .card-body h2 { font-size: 40px; }
-.card-essence {
-  min-height: 78px;
-  display: -webkit-box;
-  -webkit-line-clamp: 7;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.ip-card.featured .card-essence { -webkit-line-clamp: 8; }
-.keyword-row { display: flex; flex-wrap: wrap; gap: 7px; }
-.keyword {
-  border: 1px solid var(--brand-line);
-  color: var(--brand-ink);
-  background: color-mix(in srgb, var(--brand-primary) 8%, var(--brand-paper));
-  border-radius: 999px;
-  padding: 5px 8px;
-  font-size: 12px;
-  line-height: 1;
-}
-.ip-card[data-brand="fengzhi"] .keyword,
-.ip-card[data-brand="sidera"] .keyword { border-radius: 2px; }
+.card-body h2 { color: var(--brand-ink, var(--ink)); font-size: 28px; line-height: 1.02; margin-top: auto; }
 .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; color: var(--muted); font-size: 13px; }
 .pill {
   border: 1px solid var(--brand-line, var(--line));
@@ -591,20 +574,115 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .topbar { align-items: flex-start; flex-direction: column; }
   .hub-hero, .brand-hero, .form-grid { grid-template-columns: 1fr; }
   .hub-hero { min-height: auto; padding-top: 36px; }
-  .hero-gallery { grid-template-columns: 1fr 1fr; }
   .section-head { display: block; }
-  .ip-grid { grid-template-columns: 1fr; }
-  .ip-card, .ip-card.featured { grid-column: auto; grid-template-rows: 210px 1fr; min-height: 0; }
+  .ip-grid { grid-template-columns: 1fr 1fr; }
+  .ip-card { min-height: 176px; }
   h1 { font-size: 40px; }
   h2 { font-size: 28px; }
-  .card-body h2, .ip-card.featured .card-body h2 { font-size: 30px; }
+  .card-body h2 { font-size: 24px; }
 }
 @media (min-width: 761px) and (max-width: 1080px) {
   .hub-hero { grid-template-columns: 1fr; min-height: auto; }
-  .ip-card, .ip-card.featured { grid-column: span 6; }
+  .ip-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }`);
 
 await writeFile(join(assetsDir, "site.js"), html`const $ = (selector) => document.querySelector(selector);
+
+const i18n = {
+  zh: {
+    "nav.manifest": "清单",
+    "nav.admin": "管理",
+    "home.eyebrow": "IP 信任索引 · Agent 可读品牌源",
+    "home.lead": "极速、极简地进入每个 IP：颜色、语气、规范、资产与机器可读源文件都从 GitHub 同步。",
+    "home.openJson": "打开 JSON 索引",
+    "home.adminEdit": "管理编辑",
+    "home.systems": "10 个 IP 系统",
+    "home.sectionTitle": "直接进入 IP。",
+    "status.documented": "已建档",
+    "status.placeholder": "待建档",
+    "meta.guides": "规范",
+    "brand.openJson": "打开 JSON",
+    "brand.source": "源文件",
+    "brand.colors": "品牌颜色",
+    "brand.editable": "可编辑源文件",
+    "brand.tokens": "Token 文件",
+    "brand.noneGuide": "暂无规范文件",
+    "brand.noneTokens": "暂无 token 文件",
+    "admin.unlockTitle": "解锁编辑器",
+    "admin.unlockBody": "Admin key 用于解锁浏览器编辑器；保存仍需 GitHub 写入令牌，确保修改回到仓库。",
+    "admin.keyLabel": "Admin API key",
+    "admin.unlockButton": "解锁",
+    "admin.sync": "双向同步",
+    "admin.editTitle": "编辑 GitHub 源文件",
+    "admin.githubToken": "GitHub token",
+    "admin.branch": "分支",
+    "admin.brand": "IP",
+    "admin.file": "文件",
+    "admin.loadFile": "载入文件",
+    "admin.saveFile": "提交修改",
+    "admin.commitMessage": "提交信息"
+  },
+  en: {
+    "nav.manifest": "Manifest",
+    "nav.admin": "Admin",
+    "home.eyebrow": "IP trust index · Agent-readable brand source",
+    "home.lead": "Fast, minimal access to every IP: color, voice, guidelines, assets, and machine-readable source stay synced from GitHub.",
+    "home.openJson": "Open JSON index",
+    "home.adminEdit": "Admin edit",
+    "home.systems": "10 IP systems",
+    "home.sectionTitle": "Enter the IP directly.",
+    "status.documented": "Documented",
+    "status.placeholder": "Pending",
+    "meta.guides": "guides",
+    "brand.openJson": "Open JSON",
+    "brand.source": "Source",
+    "brand.colors": "Brand colors",
+    "brand.editable": "Editable source",
+    "brand.tokens": "Token files",
+    "brand.noneGuide": "No guideline files yet",
+    "brand.noneTokens": "No token files yet",
+    "admin.unlockTitle": "Unlock editor",
+    "admin.unlockBody": "The admin key unlocks this browser editor. Saving still requires a GitHub token with contents write access.",
+    "admin.keyLabel": "Admin API key",
+    "admin.unlockButton": "Unlock",
+    "admin.sync": "Two-way sync",
+    "admin.editTitle": "Edit GitHub source",
+    "admin.githubToken": "GitHub token",
+    "admin.branch": "Branch",
+    "admin.brand": "IP",
+    "admin.file": "File",
+    "admin.loadFile": "Load file",
+    "admin.saveFile": "Commit edit",
+    "admin.commitMessage": "Commit message"
+  }
+};
+
+let currentLang = localStorage.getItem("iptrust-lang") || "zh";
+
+function t(key) {
+  return i18n[currentLang]?.[key] || i18n.zh[key] || key;
+}
+
+function applyI18n() {
+  document.documentElement.lang = currentLang === "zh" ? "zh-CN" : "en";
+  document.querySelectorAll("[data-i18n]").forEach((node) => {
+    node.textContent = t(node.dataset.i18n);
+  });
+  const toggle = $("#langToggle");
+  if (toggle) toggle.textContent = currentLang === "zh" ? "EN" : "中";
+}
+
+function setupLanguageToggle() {
+  const toggle = $("#langToggle");
+  if (!toggle) return;
+  toggle.addEventListener("click", async () => {
+    currentLang = currentLang === "zh" ? "en" : "zh";
+    localStorage.setItem("iptrust-lang", currentLang);
+    applyI18n();
+    await renderIndex();
+    await renderBrand();
+  });
+}
 
 async function loadJson(path) {
   const res = await fetch(path);
@@ -670,13 +748,11 @@ function brandInitial(brand = {}) {
 }
 
 function cardClass(brand = {}) {
-  const featured = ["tableai", "vanahom", "fengzhi", "sidera"].includes(brand.slug) ? " featured" : "";
-  return \`ip-card \${themeClass(brand.theme)}\${featured}\`;
+  return \`ip-card \${themeClass(brand.theme)}\`;
 }
 
-function keywordChips(theme = {}) {
-  const keywords = Array.isArray(theme.keywords) ? theme.keywords.slice(0, 4) : [];
-  return \`<div class="keyword-row">\${keywords.map((keyword) => \`<span class="keyword">\${escapeHtml(keyword)}</span>\`).join("")}</div>\`;
+function statusLabel(status) {
+  return status === "documented" ? t("status.documented") : t("status.placeholder");
 }
 
 async function renderIndex() {
@@ -685,20 +761,14 @@ async function renderIndex() {
   const brands = await loadJson("api/brands.json");
   grid.innerHTML = brands.map((brand) => \`
     <a class="\${cardClass(brand)}" data-brand="\${escapeHtml(brand.slug)}" href="\${brand.url}" style="\${themeStyle(brand.theme)}">
-      <div class="card-media">
-        \${brand.heroImage ? \`<img src="\${brand.heroImage}" alt="">\` : ""}
-        <span class="brand-sigil">\${escapeHtml(brandInitial(brand))}</span>
-      </div>
       <div class="card-body">
-        <p class="eyebrow">\${escapeHtml(brand.status)} · \${escapeHtml(brand.folder)}</p>
+        <span class="brand-sigil">\${escapeHtml(brandInitial(brand))}</span>
+        <p class="eyebrow">\${escapeHtml(statusLabel(brand.status))}</p>
         <h2>\${escapeHtml(brand.name)}</h2>
-        <p class="muted">\${escapeHtml(brand.nativeName || brand.description)}</p>
-        <p class="card-essence">\${escapeHtml(brand.primaryExcerpt)}</p>
-        \${keywordChips(brand.theme)}
+        <p class="muted">\${escapeHtml(brand.nativeName || "")}</p>
         <div class="meta">
-          <span class="pill">\${brand.guideCount} guides</span>
-          <span class="pill">\${brand.tokenCount} token files</span>
-          <span class="pill">JSON API</span>
+          <span class="pill">\${brand.guideCount} \${t("meta.guides")}</span>
+          <span class="pill">API</span>
         </div>
       </div>
     </a>
@@ -722,16 +792,16 @@ async function renderBrand() {
           <p>\${escapeHtml(brand.description)}</p>
           \${swatches(brand.theme, true)}
           <div class="actions">
-            <a class="button" href="\${brand.apiUrl}">Open JSON endpoint</a>
-            <a class="button ghost" href="\${brand.source.github}">Source folder</a>
+            <a class="button" href="\${brand.apiUrl}">\${t("brand.openJson")}</a>
+            <a class="button ghost" href="\${brand.source.github}">\${t("brand.source")}</a>
           </div>
         </div>
         \${hero ? \`<img src="\${hero}" alt="">\` : ""}
       </section>
       <section class="resource-list">
-        <div class="resource"><strong>Brand color tokens</strong><br>\${escapeHtml(brand.theme?.keywords?.join(" · ") || "No theme keywords yet.")}</div>
-        <div class="resource"><strong>Editable source paths</strong><br>\${brand.editablePaths?.map(escapeHtml).join("<br>") || "No guideline files yet."}</div>
-        <div class="resource"><strong>Token files</strong><br>\${brand.tokens?.map((token) => escapeHtml(token.path)).join("<br>") || "No token files yet."}</div>
+        <div class="resource"><strong>\${t("brand.colors")}</strong><br>\${escapeHtml(brand.theme?.keywords?.join(" · ") || "")}</div>
+        <div class="resource"><strong>\${t("brand.editable")}</strong><br>\${brand.editablePaths?.map(escapeHtml).join("<br>") || t("brand.noneGuide")}</div>
+        <div class="resource"><strong>\${t("brand.tokens")}</strong><br>\${brand.tokens?.map((token) => escapeHtml(token.path)).join("<br>") || t("brand.noneTokens")}</div>
       </section>
       \${brand.guides?.map((guide) => \`
         <article class="guide">
@@ -744,6 +814,8 @@ async function renderBrand() {
   \`;
 }
 
+applyI18n();
+setupLanguageToggle();
 renderIndex().catch(console.error);
 renderBrand().catch(console.error);`);
 

@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>岁知社 IPTrust</title>
-  <meta name="description" content="A public IP trust hub for brand guidelines, design systems, assets, and agent-readable source files.">
+  <meta name="description" content="岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
 </head>
@@ -12,32 +12,30 @@
   <header class="topbar">
     <a class="brand" href="./">岁知社 IPTrust</a>
     <nav>
-      <a href="api/manifest.json">Manifest</a>
+      <a href="api/manifest.json" data-i18n="nav.manifest">Manifest</a>
       <a href="llms.txt">llms.txt</a>
-      <a href="admin.html">Admin</a>
+      <a href="admin.html" data-i18n="nav.admin">Admin</a>
+      <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language">EN</button>
     </nav>
   </header>
   <main>
     <section class="hub-hero">
       <div class="hero-copy">
-        <p class="eyebrow">IP trust registry · Agent-ready brand source</p>
+        <p class="eyebrow" data-i18n="home.eyebrow">IP 信任索引 · Agent 可读品牌源</p>
         <h1>岁知社 IPTrust</h1>
-        <p>One living hub for every IP: brand color, voice, image, design rule, token file, and machine-readable guideline stays synced from GitHub.</p>
+        <p data-i18n="home.lead">极速、极简地进入每个 IP：颜色、语气、规范、资产与机器可读源文件都从 GitHub 同步。</p>
         <div class="actions">
-          <a class="button" href="api/brands.json">Open JSON index</a>
-          <a class="button ghost" href="admin.html">Admin edit</a>
+          <a class="button" href="api/brands.json" data-i18n="home.openJson">打开 JSON 索引</a>
+          <a class="button ghost" href="admin.html" data-i18n="home.adminEdit">管理编辑</a>
         </div>
       </div>
-      <div class="hero-gallery" aria-hidden="true">
-        <img src="assets/brand-images/tableai.png" alt="">
-        <img src="assets/brand-images/vanahom.png" alt="">
-        <img src="assets/brand-images/kind.png" alt="">
-        <img src="assets/brand-images/sidera.png" alt="">
+      <div class="hero-index" aria-hidden="true">
+        <span style="--brand-primary:#0A1626;--brand-paper:#FFFFFF">01 Table AI</span><span style="--brand-primary:#B12137;--brand-paper:#FFFFFF">02 VANAHOM</span><span style="--brand-primary:#0E8C7B;--brand-paper:#FFFFFF">03 KiND</span><span style="--brand-primary:#557F8F;--brand-paper:#FFFDF7">04 APHA</span><span style="--brand-primary:#7BC8C4;--brand-paper:#20232B">05 MANA Endless</span><span style="--brand-primary:#1D3557;--brand-paper:#FFFFFF">06 OPC Global</span><span style="--brand-primary:#10263D;--brand-paper:#FFFFFF">07 IPTrustasset</span><span style="--brand-primary:#1A1714;--brand-paper:#FFFFFF">08 峰值永造局</span><span style="--brand-primary:#1A2B4A;--brand-paper:#FFFFFF">09 Axisee</span><span style="--brand-primary:#B58B4C;--brand-paper:#18130B">10 Sidera</span>
       </div>
     </section>
     <section class="section-head">
-      <p class="eyebrow">Ten distinct IP systems</p>
-      <h2>Each card behaves like its own brand room.</h2>
+      <p class="eyebrow" data-i18n="home.systems">10 个 IP 系统</p>
+      <h2 data-i18n="home.sectionTitle">直接进入 IP。</h2>
     </section>
     <section class="ip-grid" id="brandGrid" aria-live="polite"></section>
   </main>
