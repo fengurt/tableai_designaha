@@ -54,19 +54,41 @@ function swatches(theme = {}, labeled = false) {
   `).join("")}</div>`;
 }
 
+function brandInitial(brand = {}) {
+  if (brand.slug === "fengzhi") return "界";
+  if (brand.slug === "sidera") return "侍";
+  if (brand.slug === "vanahom") return "V";
+  if (brand.slug === "kind") return "K";
+  if (brand.slug === "tableai") return "AI";
+  return String(brand.name || brand.slug || "IP").slice(0, 2);
+}
+
+function cardClass(brand = {}) {
+  const featured = ["tableai", "vanahom", "fengzhi", "sidera"].includes(brand.slug) ? " featured" : "";
+  return `ip-card ${themeClass(brand.theme)}${featured}`;
+}
+
+function keywordChips(theme = {}) {
+  const keywords = Array.isArray(theme.keywords) ? theme.keywords.slice(0, 4) : [];
+  return `<div class="keyword-row">${keywords.map((keyword) => `<span class="keyword">${escapeHtml(keyword)}</span>`).join("")}</div>`;
+}
+
 async function renderIndex() {
   const grid = $("#brandGrid");
   if (!grid) return;
   const brands = await loadJson("api/brands.json");
   grid.innerHTML = brands.map((brand) => `
-    <a class="card ${themeClass(brand.theme)}" href="${brand.url}" style="${themeStyle(brand.theme)}">
-      ${brand.heroImage ? `<img src="${brand.heroImage}" alt="">` : ""}
+    <a class="${cardClass(brand)}" data-brand="${escapeHtml(brand.slug)}" href="${brand.url}" style="${themeStyle(brand.theme)}">
+      <div class="card-media">
+        ${brand.heroImage ? `<img src="${brand.heroImage}" alt="">` : ""}
+        <span class="brand-sigil">${escapeHtml(brandInitial(brand))}</span>
+      </div>
       <div class="card-body">
-        <p class="eyebrow">${escapeHtml(brand.status)}</p>
+        <p class="eyebrow">${escapeHtml(brand.status)} · ${escapeHtml(brand.folder)}</p>
         <h2>${escapeHtml(brand.name)}</h2>
         <p class="muted">${escapeHtml(brand.nativeName || brand.description)}</p>
-        ${swatches(brand.theme)}
-        <p>${escapeHtml(brand.primaryExcerpt)}</p>
+        <p class="card-essence">${escapeHtml(brand.primaryExcerpt)}</p>
+        ${keywordChips(brand.theme)}
         <div class="meta">
           <span class="pill">${brand.guideCount} guides</span>
           <span class="pill">${brand.tokenCount} token files</span>

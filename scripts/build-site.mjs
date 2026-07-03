@@ -14,6 +14,8 @@ const brands = JSON.parse(await readFile(join(root, "config/brands.json"), "utf8
 const adminConfig = existsSync(join(root, "config/site-admin.public.json"))
   ? JSON.parse(await readFile(join(root, "config/site-admin.public.json"), "utf8"))
   : {};
+const hubName = "岁知社 IPTrust";
+const hubDescription = "A public IP trust hub for brand guidelines, design systems, assets, and agent-readable source files.";
 
 async function walk(dir) {
   if (!existsSync(dir)) return [];
@@ -147,8 +149,8 @@ const indexPayload = brandPayloads.map(({ guides, tokens, images, ...brand }) =>
 
 await writeFile(join(apiDir, "brands.json"), JSON.stringify(indexPayload, null, 2));
 await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
-  name: "Table AI Design Aha",
-  description: "Public, agent-friendly design guidelines for Table AI Alliance brands.",
+  name: hubName,
+  description: hubDescription,
   generatedAt: new Date().toISOString(),
   brands: indexPayload.map((brand) => ({
     slug: brand.slug,
@@ -176,9 +178,9 @@ await writeFile(join(siteDir, "admin-config.json"), JSON.stringify({
 }, null, 2));
 
 await writeFile(join(siteDir, "llms.txt"), [
-  "# Table AI Design Aha",
+  `# ${hubName}`,
   "",
-  "Agent-friendly design guidelines for Table AI Alliance brands.",
+  hubDescription,
   "",
   "Machine-readable entry points:",
   "- /api/manifest.json",
@@ -194,18 +196,25 @@ await writeFile(join(siteDir, "llms.txt"), [
   "- GitHub Pages rebuilds from main after changes land.",
 ].join("\n"));
 
+await writeFile(join(siteDir, "favicon.svg"), html`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="10" fill="#0A1626"/>
+  <path d="M16 18h32v28H16z" fill="none" stroke="#A88B52" stroke-width="3"/>
+  <path d="M24 26h16M24 34h16M24 42h10" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"/>
+</svg>`);
+
 await writeFile(join(siteDir, "index.html"), html`<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Table AI Design Aha</title>
-  <meta name="description" content="Agent-friendly design guidelines for Table AI Alliance brands.">
+  <title>${hubName}</title>
+  <meta name="description" content="${hubDescription}">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
 </head>
-<body>
+<body class="hub-home">
   <header class="topbar">
-    <a class="brand" href="./">Table AI Design Aha</a>
+    <a class="brand" href="./">${hubName}</a>
     <nav>
       <a href="api/manifest.json">Manifest</a>
       <a href="llms.txt">llms.txt</a>
@@ -213,16 +222,28 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
     </nav>
   </header>
   <main>
-    <section class="hero">
-      <p class="eyebrow">Design systems for people and agents</p>
-      <h1>All brand guidelines in one public, machine-readable website.</h1>
-      <p>Each brand has a human page, a JSON API endpoint, source links, generated brand imagery, and editable canonical files in GitHub.</p>
-      <div class="actions">
-        <a class="button" href="api/brands.json">Open JSON index</a>
-        <a class="button ghost" href="admin.html">Admin edit</a>
+    <section class="hub-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">IP trust registry · Agent-ready brand source</p>
+        <h1>岁知社 IPTrust</h1>
+        <p>One living hub for every IP: brand color, voice, image, design rule, token file, and machine-readable guideline stays synced from GitHub.</p>
+        <div class="actions">
+          <a class="button" href="api/brands.json">Open JSON index</a>
+          <a class="button ghost" href="admin.html">Admin edit</a>
+        </div>
+      </div>
+      <div class="hero-gallery" aria-hidden="true">
+        <img src="assets/brand-images/tableai.png" alt="">
+        <img src="assets/brand-images/vanahom.png" alt="">
+        <img src="assets/brand-images/kind.png" alt="">
+        <img src="assets/brand-images/sidera.png" alt="">
       </div>
     </section>
-    <section class="grid" id="brandGrid" aria-live="polite"></section>
+    <section class="section-head">
+      <p class="eyebrow">Ten distinct IP systems</p>
+      <h2>Each card behaves like its own brand room.</h2>
+    </section>
+    <section class="ip-grid" id="brandGrid" aria-live="polite"></section>
   </main>
   <script src="assets/site.js" type="module"></script>
 </body>
@@ -234,11 +255,12 @@ await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brand Guidelines</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="./">Table AI Design Aha</a>
+    <a class="brand" href="./">${hubName}</a>
     <nav>
       <a href="api/brands.json">API</a>
       <a href="admin.html">Admin</a>
@@ -254,12 +276,13 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin · Table AI Design Aha</title>
+  <title>Admin · ${hubName}</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="./">Table AI Design Aha</a>
+    <a class="brand" href="./">${hubName}</a>
     <nav>
       <a href="api/manifest.json">Manifest</a>
       <a href="https://github.com/${adminConfig.owner ?? "fengurt"}/${adminConfig.repo ?? "tableai_designaha"}">GitHub</a>
@@ -298,12 +321,12 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
 
 await writeFile(join(assetsDir, "site.css"), html`:root {
   color-scheme: light;
-  --bg: #f7f6f3;
+  --bg: #f2f0eb;
   --paper: #fffefa;
-  --ink: #171717;
-  --muted: #60656f;
-  --line: rgba(20, 20, 20, .12);
-  --accent: #a88b52;
+  --ink: #161412;
+  --muted: #66635d;
+  --line: rgba(22, 20, 18, .13);
+  --accent: #9a7a3f;
   --blue: #0a1626;
   --green: #0e8c7b;
 }
@@ -314,6 +337,12 @@ body {
   color: var(--ink);
   background: var(--bg);
 }
+.hub-home {
+  background:
+    linear-gradient(180deg, rgba(255, 254, 250, .84), rgba(242, 240, 235, .98) 42%),
+    radial-gradient(circle at top right, rgba(154, 122, 63, .18), transparent 34%),
+    var(--bg);
+}
 a { color: inherit; }
 .topbar {
   display: flex;
@@ -322,7 +351,7 @@ a { color: inherit; }
   gap: 24px;
   padding: 18px clamp(18px, 4vw, 48px);
   border-bottom: 1px solid var(--line);
-  background: rgba(255, 254, 250, .86);
+  background: rgba(255, 254, 250, .82);
   backdrop-filter: blur(16px);
   position: sticky;
   top: 0;
@@ -332,13 +361,45 @@ a { color: inherit; }
 nav { display: flex; gap: 18px; color: var(--muted); font-size: 14px; }
 nav a { text-decoration: none; }
 main { width: min(1180px, calc(100vw - 36px)); margin: 0 auto; }
-.hero { padding: clamp(56px, 8vw, 108px) 0 44px; max-width: 920px; }
+.hub-hero {
+  min-height: calc(100vh - 74px);
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(360px, .9fr);
+  gap: 42px;
+  align-items: center;
+  padding: 54px 0 42px;
+}
+.hero-copy { max-width: 760px; }
 .eyebrow { color: var(--accent); font-size: 12px; font-weight: 760; text-transform: uppercase; letter-spacing: .18em; }
-h1 { font-size: clamp(38px, 6vw, 78px); line-height: 1.02; margin: 12px 0 18px; letter-spacing: 0; max-width: 980px; }
-h2 { font-size: clamp(26px, 3vw, 38px); margin: 0 0 12px; letter-spacing: 0; }
+h1 { font-size: 76px; line-height: .96; margin: 12px 0 18px; letter-spacing: 0; max-width: 980px; }
+h2 { font-size: 36px; line-height: 1.08; margin: 0 0 12px; letter-spacing: 0; }
 h3 { margin: 0 0 8px; }
 p { line-height: 1.65; }
-.hero p:not(.eyebrow), .muted { color: var(--muted); font-size: 17px; max-width: 760px; }
+.hub-hero p:not(.eyebrow), .muted { color: var(--muted); font-size: 18px; max-width: 760px; }
+.hero-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: stretch;
+}
+.hero-gallery img {
+  width: 100%;
+  height: 100%;
+  min-height: 174px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(22, 20, 18, .12);
+}
+.hero-gallery img:first-child { grid-row: span 2; }
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  align-items: end;
+  padding: 18px 0 22px;
+  border-top: 1px solid var(--line);
+}
+.section-head h2 { max-width: 560px; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
 .button, button {
   appearance: none;
@@ -353,37 +414,101 @@ p { line-height: 1.65; }
   cursor: pointer;
 }
 .button.ghost { background: transparent; color: var(--blue); }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; padding: 22px 0 80px; }
+.ip-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 18px;
+  padding: 22px 0 88px;
+}
 .card, .panel, .guide, .resource {
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 8px;
 }
-.card {
+.ip-card {
   overflow: hidden;
   text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  min-height: 380px;
-  background: var(--brand-paper, var(--paper));
+  display: grid;
+  grid-template-rows: 220px 1fr;
+  min-height: 520px;
+  grid-column: span 4;
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--brand-primary) 12%, transparent), transparent 44%),
+    var(--brand-paper, var(--paper));
   border-color: var(--brand-line, var(--line));
   color: var(--brand-ink, var(--ink));
   position: relative;
-  transition: transform .18s ease, border-color .18s ease;
+  border: 1px solid var(--brand-line, var(--line));
+  border-radius: 8px;
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
 }
-.card::before {
+.ip-card::before {
   content: "";
-  display: block;
-  height: 5px;
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
   background: var(--brand-primary, var(--accent));
+  z-index: 2;
 }
-.card:hover { transform: translateY(-3px); border-color: var(--brand-primary, var(--line)); }
-.card.theme-dark { background: var(--brand-paper); color: var(--brand-ink); }
-.card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #eceae4; border-bottom: 1px solid var(--line); }
-.card-body { padding: 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.ip-card:hover { transform: translateY(-4px); border-color: var(--brand-primary, var(--line)); box-shadow: 0 22px 60px rgba(22, 20, 18, .10); }
+.ip-card.theme-dark { background: var(--brand-paper); color: var(--brand-ink); }
+.ip-card.featured { grid-column: span 6; grid-template-rows: 300px 1fr; }
+.ip-card[data-brand="sidera"],
+.ip-card[data-brand="manaendless"] { background: var(--brand-paper); }
+.ip-card[data-brand="fengzhi"] { border-radius: 0; }
+.ip-card[data-brand="kind"] { border-radius: 18px; }
+.ip-card[data-brand="vanahom"]::before { width: 3px; }
+.card-media { position: relative; overflow: hidden; background: var(--brand-surface); }
+.card-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 52%, color-mix(in srgb, var(--brand-paper) 82%, transparent));
+}
+.ip-card.theme-dark .card-media::after { background: linear-gradient(180deg, transparent 40%, color-mix(in srgb, var(--brand-paper) 88%, transparent)); }
+.card-media img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.01); }
+.brand-sigil {
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+  z-index: 1;
+  min-width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--brand-line);
+  background: color-mix(in srgb, var(--brand-paper) 88%, transparent);
+  color: var(--brand-primary);
+  font-weight: 800;
+}
+.ip-card[data-brand="sidera"] .brand-sigil { background: var(--brand-secondary); color: var(--brand-ink); }
+.ip-card[data-brand="kind"] .brand-sigil { border-radius: 999px; }
+.ip-card[data-brand="fengzhi"] .brand-sigil { border-radius: 0; }
+.card-body { padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
 .card-body .eyebrow { color: var(--brand-primary, var(--accent)); }
 .card-body .muted, .card-body p { color: var(--brand-muted, var(--muted)); }
-.card-body h2 { color: var(--brand-ink, var(--ink)); }
+.card-body h2 { color: var(--brand-ink, var(--ink)); font-size: 32px; line-height: 1.05; }
+.ip-card.featured .card-body h2 { font-size: 40px; }
+.card-essence {
+  min-height: 78px;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.ip-card.featured .card-essence { -webkit-line-clamp: 8; }
+.keyword-row { display: flex; flex-wrap: wrap; gap: 7px; }
+.keyword {
+  border: 1px solid var(--brand-line);
+  color: var(--brand-ink);
+  background: color-mix(in srgb, var(--brand-primary) 8%, var(--brand-paper));
+  border-radius: 999px;
+  padding: 5px 8px;
+  font-size: 12px;
+  line-height: 1;
+}
+.ip-card[data-brand="fengzhi"] .keyword,
+.ip-card[data-brand="sidera"] .keyword { border-radius: 2px; }
 .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; color: var(--muted); font-size: 13px; }
 .pill {
   border: 1px solid var(--brand-line, var(--line));
@@ -464,8 +589,19 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
 .notice { color: var(--green); font-weight: 700; }
 @media (max-width: 760px) {
   .topbar { align-items: flex-start; flex-direction: column; }
-  .brand-hero, .form-grid { grid-template-columns: 1fr; }
+  .hub-hero, .brand-hero, .form-grid { grid-template-columns: 1fr; }
+  .hub-hero { min-height: auto; padding-top: 36px; }
+  .hero-gallery { grid-template-columns: 1fr 1fr; }
+  .section-head { display: block; }
+  .ip-grid { grid-template-columns: 1fr; }
+  .ip-card, .ip-card.featured { grid-column: auto; grid-template-rows: 210px 1fr; min-height: 0; }
   h1 { font-size: 40px; }
+  h2 { font-size: 28px; }
+  .card-body h2, .ip-card.featured .card-body h2 { font-size: 30px; }
+}
+@media (min-width: 761px) and (max-width: 1080px) {
+  .hub-hero { grid-template-columns: 1fr; min-height: auto; }
+  .ip-card, .ip-card.featured { grid-column: span 6; }
 }`);
 
 await writeFile(join(assetsDir, "site.js"), html`const $ = (selector) => document.querySelector(selector);
@@ -524,19 +660,41 @@ function swatches(theme = {}, labeled = false) {
   \`).join("")}</div>\`;
 }
 
+function brandInitial(brand = {}) {
+  if (brand.slug === "fengzhi") return "界";
+  if (brand.slug === "sidera") return "侍";
+  if (brand.slug === "vanahom") return "V";
+  if (brand.slug === "kind") return "K";
+  if (brand.slug === "tableai") return "AI";
+  return String(brand.name || brand.slug || "IP").slice(0, 2);
+}
+
+function cardClass(brand = {}) {
+  const featured = ["tableai", "vanahom", "fengzhi", "sidera"].includes(brand.slug) ? " featured" : "";
+  return \`ip-card \${themeClass(brand.theme)}\${featured}\`;
+}
+
+function keywordChips(theme = {}) {
+  const keywords = Array.isArray(theme.keywords) ? theme.keywords.slice(0, 4) : [];
+  return \`<div class="keyword-row">\${keywords.map((keyword) => \`<span class="keyword">\${escapeHtml(keyword)}</span>\`).join("")}</div>\`;
+}
+
 async function renderIndex() {
   const grid = $("#brandGrid");
   if (!grid) return;
   const brands = await loadJson("api/brands.json");
   grid.innerHTML = brands.map((brand) => \`
-    <a class="card \${themeClass(brand.theme)}" href="\${brand.url}" style="\${themeStyle(brand.theme)}">
-      \${brand.heroImage ? \`<img src="\${brand.heroImage}" alt="">\` : ""}
+    <a class="\${cardClass(brand)}" data-brand="\${escapeHtml(brand.slug)}" href="\${brand.url}" style="\${themeStyle(brand.theme)}">
+      <div class="card-media">
+        \${brand.heroImage ? \`<img src="\${brand.heroImage}" alt="">\` : ""}
+        <span class="brand-sigil">\${escapeHtml(brandInitial(brand))}</span>
+      </div>
       <div class="card-body">
-        <p class="eyebrow">\${escapeHtml(brand.status)}</p>
+        <p class="eyebrow">\${escapeHtml(brand.status)} · \${escapeHtml(brand.folder)}</p>
         <h2>\${escapeHtml(brand.name)}</h2>
         <p class="muted">\${escapeHtml(brand.nativeName || brand.description)}</p>
-        \${swatches(brand.theme)}
-        <p>\${escapeHtml(brand.primaryExcerpt)}</p>
+        <p class="card-essence">\${escapeHtml(brand.primaryExcerpt)}</p>
+        \${keywordChips(brand.theme)}
         <div class="meta">
           <span class="pill">\${brand.guideCount} guides</span>
           <span class="pill">\${brand.tokenCount} token files</span>

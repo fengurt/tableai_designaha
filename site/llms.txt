@@ -1,6 +1,6 @@
-# Table AI Design Aha
+# 岁知社 IPTrust
 
-Agent-friendly design guidelines for Table AI Alliance brands.
+A public IP trust hub for brand guidelines, design systems, assets, and agent-readable source files.
 
 Machine-readable entry points:
 - /api/manifest.json
