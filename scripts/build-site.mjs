@@ -638,10 +638,6 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       <div class="hero-copy">
         <h1 data-i18n="hub.name">${hubNameCn}</h1>
         <p data-i18n="home.lead">高楼宾客似曾识，日光底下无新事。</p>
-        <div class="actions">
-          <a class="button" href="#agent-entry" data-i18n="nav.agent">我是 Agent</a>
-          <a class="button ghost" href="#collab-entry" data-i18n="nav.collab">我想合作</a>
-        </div>
       </div>
       <div class="hero-index" id="heroIndex" aria-live="polite"></div>
     </section>
@@ -649,58 +645,28 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       <article class="portal" id="agent-entry">
         <p class="eyebrow">Agent</p>
         <h3 data-i18n="portal.agentTitle">我是 Agent</h3>
-        <p data-i18n="portal.agentBody">点击复制 IPTrust Skill，直接发给你的 Agent 小伙伴。</p>
-        <button class="portal-action" type="button" data-portal-action="agent" data-i18n="portal.agentAction">复制 Skill</button>
+        <p data-i18n="portal.agentBody">复制 Skill。</p>
+        <button class="portal-action" type="button" data-portal-action="agent" data-portal-href="skills/iptrust-live-update/SKILL.md" data-i18n="portal.agentAction">Skill</button>
         <p class="portal-status" data-portal-status="agent" aria-live="polite"></p>
-        <div class="portal-links">
-          <a href="api/brands.json">JSON</a>
-          <a href="llms.txt">llms.txt</a>
-          <a href="skills/iptrust-live-update/SKILL.md">Skill</a>
-          <a href="api/manifest.json">Manifest</a>
-          <a href="api/search.json" data-i18n="portal.searchApi">搜索 API</a>
-          <a href="#version-history" data-i18n="history.title">历史版本</a>
-        </div>
       </article>
       <article class="portal" id="partner-entry">
         <p class="eyebrow">Partner</p>
         <h3 data-i18n="portal.partnerTitle">我是合伙人</h3>
-        <p data-i18n="portal.partnerBody">请联系获取管理 API。API 可单独管理单个 IP，也可管理多个 IP 组合。</p>
-        <button class="portal-action" type="button" data-portal-action="partner" data-i18n="portal.partnerAction">查看管理方式</button>
+        <p data-i18n="portal.partnerBody">Key first.</p>
+        <button class="portal-action" type="button" data-portal-action="partner" data-portal-href="admin.html" data-i18n="portal.partnerAction">Key first</button>
         <p class="portal-status" data-portal-status="partner" aria-live="polite"></p>
-        <ul class="portal-points">
-          <li data-i18n="portal.partnerPointApi">API 可按单个或多个 IP 授权。</li>
-          <li data-i18n="portal.partnerPointLogin">后台通过 API Key + Google Authenticator 登录。</li>
-        </ul>
-        <div class="portal-links">
-          <a href="#brandGrid" data-i18n="portal.openIps">查看 IP</a>
-          <a href="admin.html" data-i18n="portal.admin">管理入口</a>
-        </div>
       </article>
       <article class="portal" id="collab-entry">
         <p class="eyebrow">Collab</p>
         <h3 data-i18n="portal.collabTitle">我想合作</h3>
-        <p data-i18n="portal.collabBody">我们的 IP 进化论服务方案：定位、命名、视觉、Agent Skill、官网、API 与长期版本管理。</p>
-        <div class="collab-card">
-          <a class="collab-mail" href="mailto:hi@tableai.ai">hi@tableai.ai</a>
-          <img src="assets/contact/wecom-qr.png" alt="企业微信二维码" loading="lazy">
-        </div>
-        <div class="portal-links">
-          <a href="https://github.com/${adminConfig.owner ?? "fengurt"}/${adminConfig.repo ?? "tableai_designaha"}/issues/new" data-i18n="portal.github">发起合作</a>
-          <a href="#brandGrid" data-i18n="portal.explore">先看 IP</a>
-        </div>
+        <p data-i18n="portal.collabBody">hi@tableai.ai</p>
+        <button class="portal-action" type="button" data-portal-action="collab" data-portal-href="mailto:hi@tableai.ai" data-i18n="portal.collabAction">Email</button>
+        <p class="portal-status" data-portal-status="collab" aria-live="polite"></p>
       </article>
-    </section>
-    <section class="history-panel" id="version-history">
-      <div>
-        <p class="eyebrow">History</p>
-        <h2 data-i18n="history.title">历史版本</h2>
-      </div>
-      <div class="version-list" id="versionList" aria-live="polite"></div>
     </section>
     <section class="section-head">
       <div>
-        <p class="eyebrow" data-i18n="home.systems">IP 系统</p>
-        <h2 data-i18n="home.sectionTitle">直接进入 IP。</h2>
+        <h2 data-i18n="home.sectionTitle">IP</h2>
       </div>
       <span id="brandCount" class="count-pill"></span>
     </section>
@@ -872,27 +838,33 @@ nav a:hover { color: var(--ink); }
 .lang-toggle:hover span { color: var(--ink); }
 main { width: min(1180px, calc(100vw - 36px)); margin: 0 auto; }
 .hub-hero {
-  min-height: 62vh;
+  min-height: 54vh;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(320px, .72fr);
-  gap: 42px;
+  grid-template-columns: minmax(0, .92fr) minmax(340px, .78fr);
+  gap: clamp(24px, 4vw, 42px);
   align-items: center;
-  padding: clamp(48px, 8vw, 96px) 0 36px;
+  padding: clamp(34px, 6vw, 72px) 0 24px;
 }
 .hero-copy { max-width: 760px; }
 .eyebrow { color: var(--accent); font-size: 12px; font-weight: 760; text-transform: uppercase; letter-spacing: .18em; }
-h1 { font-size: 76px; line-height: .96; margin: 12px 0 18px; letter-spacing: 0; max-width: 980px; }
-h2 { font-size: 36px; line-height: 1.08; margin: 0 0 12px; letter-spacing: 0; }
+h1 { font-size: clamp(54px, 7.2vw, 74px); line-height: .96; margin: 8px 0 16px; letter-spacing: 0; max-width: 980px; }
+h2 { font-size: clamp(26px, 3.5vw, 34px); line-height: 1.08; margin: 0 0 8px; letter-spacing: 0; }
 h3 { margin: 0 0 8px; }
 p { line-height: 1.65; }
-.hub-hero p:not(.eyebrow), .muted { color: var(--muted); font-size: 18px; max-width: 760px; }
+.hub-hero p:not(.eyebrow), .muted { color: var(--muted); font-size: 16px; max-width: 640px; }
 .hero-index {
   display: grid;
   gap: 8px;
-  align-self: end;
+  align-self: center;
+  max-height: min(520px, 58vh);
+  overflow: auto;
+  padding: 2px 10px 2px 0;
   border-top: 0;
   perspective: 1200px;
+  mask-image: linear-gradient(to bottom, transparent, #000 24px, #000 calc(100% - 24px), transparent);
+  scrollbar-width: none;
 }
+.hero-index::-webkit-scrollbar { display: none; }
 .hero-index-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto auto;
@@ -998,35 +970,41 @@ p { line-height: 1.65; }
   justify-content: space-between;
   gap: 28px;
   align-items: end;
-  padding: 18px 0 22px;
+  padding: 10px 0 18px;
   border-top: 1px solid var(--line);
 }
 .entry-portals {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  padding: 0 0 42px;
+  gap: clamp(12px, 2vw, 20px);
+  padding: 8px 0 34px;
 }
 .portal {
-  border-top: 1px solid var(--line);
-  padding: 18px 0 0;
+  border-top: 1px solid color-mix(in srgb, var(--ink) 18%, transparent);
+  padding: 14px 0 0;
+  min-height: 136px;
+  display: grid;
+  align-content: start;
 }
 .portal h3 {
-  font-size: 24px;
+  font-size: 21px;
   line-height: 1.1;
-  margin: 10px 0 8px;
+  margin: 8px 0 6px;
 }
 .portal p:not(.eyebrow) {
   color: var(--muted);
-  font-size: 14px;
-  line-height: 1.55;
+  font-size: 13px;
+  line-height: 1.35;
   margin: 0;
 }
 .portal-action {
-  margin-top: 14px;
+  justify-self: start;
+  margin-top: 16px;
   border: 1px solid var(--ink);
   background: var(--ink);
   color: var(--paper);
+  min-height: 38px;
+  padding: 9px 14px;
 }
 .portal-action:hover,
 .portal-action.copied {
@@ -1034,10 +1012,11 @@ p { line-height: 1.65; }
   border-color: var(--blue);
 }
 .portal-status {
-  min-height: 22px;
-  margin-top: 10px !important;
+  min-height: 18px;
+  margin-top: 8px !important;
   color: var(--ink) !important;
-  font-weight: 760;
+  font-size: 12px !important;
+  font-weight: 720;
 }
 .portal-points {
   display: grid;
@@ -1564,7 +1543,7 @@ const i18n = {
     "home.openJson": "打开 JSON 索引",
     "home.adminEdit": "管理编辑",
     "home.systems": "IP 系统",
-    "home.sectionTitle": "直接进入 IP。",
+    "home.sectionTitle": "IP",
     "home.searchPlaceholder": "搜索 IP / slug",
     "home.noResults": "没有匹配的 IP。",
     "status.documented": "已建档",
@@ -1591,17 +1570,19 @@ const i18n = {
     "brand.noneGuide": "暂无规范文件",
     "brand.noneTokens": "暂无 token 文件",
     "portal.agentTitle": "我是 Agent",
-    "portal.agentBody": "点击复制 IPTrust Skill，直接发给你的 Agent 小伙伴。",
-    "portal.agentAction": "复制 Skill",
-    "portal.agentCopied": "✓ 已复制 Skill。请发给你的 Agent 小伙伴 ✦",
+    "portal.agentBody": "复制 Skill。",
+    "portal.agentAction": "Skill",
+    "portal.agentCopied": "已复制。打开 Skill。",
     "portal.partnerTitle": "我是合伙人",
-    "portal.partnerBody": "请联系获取管理 API。API 可单独管理单个 IP，也可管理多个 IP 组合。",
-    "portal.partnerAction": "查看管理方式",
-    "portal.partnerStatus": "请联系获取管理 API。后台支持 API Key + Google Authenticator。",
+    "portal.partnerBody": "Key first.",
+    "portal.partnerAction": "Key first",
+    "portal.partnerStatus": "请联系获取管理 API。",
     "portal.partnerPointApi": "API 可按单个或多个 IP 授权。",
     "portal.partnerPointLogin": "后台通过 API Key + Google Authenticator 登录。",
     "portal.collabTitle": "我想合作",
-    "portal.collabBody": "我们的 IP 进化论服务方案：定位、命名、视觉、Agent Skill、官网、API 与长期版本管理。",
+    "portal.collabBody": "hi@tableai.ai",
+    "portal.collabAction": "Email",
+    "portal.collabStatus": "正在打开邮箱。",
     "portal.openIps": "查看 IP",
     "portal.admin": "管理入口",
     "portal.github": "发起合作",
@@ -1640,7 +1621,7 @@ const i18n = {
     "home.openJson": "Open JSON index",
     "home.adminEdit": "Admin edit",
     "home.systems": "IP systems",
-    "home.sectionTitle": "Enter the IP directly.",
+    "home.sectionTitle": "IP",
     "home.searchPlaceholder": "Search IP / slug",
     "home.noResults": "No matching IP.",
     "status.documented": "Documented",
@@ -1667,17 +1648,19 @@ const i18n = {
     "brand.noneGuide": "No guideline files yet",
     "brand.noneTokens": "No token files yet",
     "portal.agentTitle": "I am an Agent",
-    "portal.agentBody": "Click to copy the IPTrust Skill and send it to your agent teammate.",
-    "portal.agentAction": "Copy Skill",
-    "portal.agentCopied": "✓ Skill copied. Send it to your agent teammate ✦",
+    "portal.agentBody": "Copy Skill.",
+    "portal.agentAction": "Skill",
+    "portal.agentCopied": "Copied. Opening Skill.",
     "portal.partnerTitle": "I am a Partner",
-    "portal.partnerBody": "Contact us for the management API. API access can cover one IP or multiple IPs.",
-    "portal.partnerAction": "View admin path",
-    "portal.partnerStatus": "Contact us for the management API. Admin supports API Key + Google Authenticator.",
+    "portal.partnerBody": "Key first.",
+    "portal.partnerAction": "Key first",
+    "portal.partnerStatus": "Contact us for the management API.",
     "portal.partnerPointApi": "API access can be scoped to one or multiple IPs.",
     "portal.partnerPointLogin": "Admin login uses API Key + Google Authenticator.",
     "portal.collabTitle": "Work with Us",
-    "portal.collabBody": "Our IP evolution service: positioning, naming, identity, Agent Skill, website, API, and long-term versioning.",
+    "portal.collabBody": "hi@tableai.ai",
+    "portal.collabAction": "Email",
+    "portal.collabStatus": "Opening email.",
     "portal.openIps": "View IPs",
     "portal.admin": "Admin entry",
     "portal.github": "Start on GitHub",
@@ -1773,7 +1756,6 @@ function setupLanguageToggle() {
     await renderHeroIndex();
     await renderIndex();
     await renderBrand();
-    await renderVersions();
   });
 }
 
@@ -2177,7 +2159,14 @@ function setupPortalActions() {
     button.dataset.ready = "true";
     button.addEventListener("click", async () => {
       const action = button.dataset.portalAction;
+      const href = button.dataset.portalHref;
       const statusNode = document.querySelector(\`[data-portal-status="\${action}"]\`);
+      const openTarget = () => {
+        if (!href) return;
+        window.setTimeout(() => {
+          location.href = href;
+        }, 620);
+      };
       try {
         if (action === "agent") {
           const text = cachedPortalSkillText || skillBaseText();
@@ -2187,6 +2176,7 @@ function setupPortalActions() {
           if (statusNode) statusNode.textContent = message;
           showToast(message);
           setTimeout(() => button.classList.remove("copied"), 1000);
+          openTarget();
           return;
         }
         if (action === "partner") {
@@ -2194,6 +2184,15 @@ function setupPortalActions() {
           button.classList.add("copied");
           showToast(t("portal.partnerStatus"));
           setTimeout(() => button.classList.remove("copied"), 1000);
+          openTarget();
+          return;
+        }
+        if (action === "collab") {
+          if (statusNode) statusNode.textContent = t("portal.collabStatus");
+          button.classList.add("copied");
+          showToast(t("portal.collabStatus"));
+          setTimeout(() => button.classList.remove("copied"), 1000);
+          openTarget();
         }
       } catch (error) {
         if (statusNode) statusNode.textContent = t("copy.fail");
@@ -2430,7 +2429,6 @@ setupLanguageToggle();
 setupSearch();
 setupPortalActions();
 renderHeroIndex().catch(console.error);
-renderVersions().catch(console.error);
 renderIndex().catch(console.error);
 renderBrand().catch(console.error);`);
 await copyFile(join(assetsDir, "site.js"), join(siteDir, siteJsPath));

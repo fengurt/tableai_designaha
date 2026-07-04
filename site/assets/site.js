@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "4a8c416";
+const BUILD_VERSION = "0e3d71b";
 
 const i18n = {
   cn: {
@@ -14,7 +14,7 @@ const i18n = {
     "home.openJson": "打开 JSON 索引",
     "home.adminEdit": "管理编辑",
     "home.systems": "IP 系统",
-    "home.sectionTitle": "直接进入 IP。",
+    "home.sectionTitle": "IP",
     "home.searchPlaceholder": "搜索 IP / slug",
     "home.noResults": "没有匹配的 IP。",
     "status.documented": "已建档",
@@ -41,17 +41,19 @@ const i18n = {
     "brand.noneGuide": "暂无规范文件",
     "brand.noneTokens": "暂无 token 文件",
     "portal.agentTitle": "我是 Agent",
-    "portal.agentBody": "点击复制 IPTrust Skill，直接发给你的 Agent 小伙伴。",
-    "portal.agentAction": "复制 Skill",
-    "portal.agentCopied": "✓ 已复制 Skill。请发给你的 Agent 小伙伴 ✦",
+    "portal.agentBody": "复制 Skill。",
+    "portal.agentAction": "Skill",
+    "portal.agentCopied": "已复制。打开 Skill。",
     "portal.partnerTitle": "我是合伙人",
-    "portal.partnerBody": "请联系获取管理 API。API 可单独管理单个 IP，也可管理多个 IP 组合。",
-    "portal.partnerAction": "查看管理方式",
-    "portal.partnerStatus": "请联系获取管理 API。后台支持 API Key + Google Authenticator。",
+    "portal.partnerBody": "Key first.",
+    "portal.partnerAction": "Key first",
+    "portal.partnerStatus": "请联系获取管理 API。",
     "portal.partnerPointApi": "API 可按单个或多个 IP 授权。",
     "portal.partnerPointLogin": "后台通过 API Key + Google Authenticator 登录。",
     "portal.collabTitle": "我想合作",
-    "portal.collabBody": "我们的 IP 进化论服务方案：定位、命名、视觉、Agent Skill、官网、API 与长期版本管理。",
+    "portal.collabBody": "hi@tableai.ai",
+    "portal.collabAction": "Email",
+    "portal.collabStatus": "正在打开邮箱。",
     "portal.openIps": "查看 IP",
     "portal.admin": "管理入口",
     "portal.github": "发起合作",
@@ -90,7 +92,7 @@ const i18n = {
     "home.openJson": "Open JSON index",
     "home.adminEdit": "Admin edit",
     "home.systems": "IP systems",
-    "home.sectionTitle": "Enter the IP directly.",
+    "home.sectionTitle": "IP",
     "home.searchPlaceholder": "Search IP / slug",
     "home.noResults": "No matching IP.",
     "status.documented": "Documented",
@@ -117,17 +119,19 @@ const i18n = {
     "brand.noneGuide": "No guideline files yet",
     "brand.noneTokens": "No token files yet",
     "portal.agentTitle": "I am an Agent",
-    "portal.agentBody": "Click to copy the IPTrust Skill and send it to your agent teammate.",
-    "portal.agentAction": "Copy Skill",
-    "portal.agentCopied": "✓ Skill copied. Send it to your agent teammate ✦",
+    "portal.agentBody": "Copy Skill.",
+    "portal.agentAction": "Skill",
+    "portal.agentCopied": "Copied. Opening Skill.",
     "portal.partnerTitle": "I am a Partner",
-    "portal.partnerBody": "Contact us for the management API. API access can cover one IP or multiple IPs.",
-    "portal.partnerAction": "View admin path",
-    "portal.partnerStatus": "Contact us for the management API. Admin supports API Key + Google Authenticator.",
+    "portal.partnerBody": "Key first.",
+    "portal.partnerAction": "Key first",
+    "portal.partnerStatus": "Contact us for the management API.",
     "portal.partnerPointApi": "API access can be scoped to one or multiple IPs.",
     "portal.partnerPointLogin": "Admin login uses API Key + Google Authenticator.",
     "portal.collabTitle": "Work with Us",
-    "portal.collabBody": "Our IP evolution service: positioning, naming, identity, Agent Skill, website, API, and long-term versioning.",
+    "portal.collabBody": "hi@tableai.ai",
+    "portal.collabAction": "Email",
+    "portal.collabStatus": "Opening email.",
     "portal.openIps": "View IPs",
     "portal.admin": "Admin entry",
     "portal.github": "Start on GitHub",
@@ -223,7 +227,6 @@ function setupLanguageToggle() {
     await renderHeroIndex();
     await renderIndex();
     await renderBrand();
-    await renderVersions();
   });
 }
 
@@ -627,7 +630,14 @@ function setupPortalActions() {
     button.dataset.ready = "true";
     button.addEventListener("click", async () => {
       const action = button.dataset.portalAction;
+      const href = button.dataset.portalHref;
       const statusNode = document.querySelector(`[data-portal-status="${action}"]`);
+      const openTarget = () => {
+        if (!href) return;
+        window.setTimeout(() => {
+          location.href = href;
+        }, 620);
+      };
       try {
         if (action === "agent") {
           const text = cachedPortalSkillText || skillBaseText();
@@ -637,6 +647,7 @@ function setupPortalActions() {
           if (statusNode) statusNode.textContent = message;
           showToast(message);
           setTimeout(() => button.classList.remove("copied"), 1000);
+          openTarget();
           return;
         }
         if (action === "partner") {
@@ -644,6 +655,15 @@ function setupPortalActions() {
           button.classList.add("copied");
           showToast(t("portal.partnerStatus"));
           setTimeout(() => button.classList.remove("copied"), 1000);
+          openTarget();
+          return;
+        }
+        if (action === "collab") {
+          if (statusNode) statusNode.textContent = t("portal.collabStatus");
+          button.classList.add("copied");
+          showToast(t("portal.collabStatus"));
+          setTimeout(() => button.classList.remove("copied"), 1000);
+          openTarget();
         }
       } catch (error) {
         if (statusNode) statusNode.textContent = t("copy.fail");
@@ -880,6 +900,5 @@ setupLanguageToggle();
 setupSearch();
 setupPortalActions();
 renderHeroIndex().catch(console.error);
-renderVersions().catch(console.error);
 renderIndex().catch(console.error);
 renderBrand().catch(console.error);

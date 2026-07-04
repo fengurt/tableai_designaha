@@ -71,14 +71,26 @@
     "en": ""
   },
   "version": {
-    "hash": "4a8c416b2ca504511003d35767d331e113811358",
-    "shortHash": "4a8c416",
-    "date": "2026-07-04T21:33:22+08:00",
-    "message": "Version site assets for Cloudflare cache",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4a8c416b2ca504511003d35767d331e113811358"
+    "hash": "0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
+    "shortHash": "0e3d71b",
+    "date": "2026-07-04T21:38:07+08:00",
+    "message": "Add PaM Design Office IP",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8"
   },
   "historyUrl": "api/history/vanahom.json",
   "history": [
+    {
+      "hash": "0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
+      "shortHash": "0e3d71b",
+      "date": "2026-07-04T21:38:07+08:00",
+      "message": "Add PaM Design Office IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
+      "sourcePaths": [
+        "config/brands.json",
+        "VANAHOM",
+        "VANAHOM/vanahom_design.md"
+      ]
+    },
     {
       "hash": "534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
       "shortHash": "534c825",
@@ -133,18 +145,6 @@
       "date": "2026-07-04T07:52:24+08:00",
       "message": "Add IPTrust brand systems",
       "url": "https://github.com/fengurt/tableai_designaha/commit/a550421605e0fadecfb30c3fd5066754feda54d7",
-      "sourcePaths": [
-        "config/brands.json",
-        "VANAHOM",
-        "VANAHOM/vanahom_design.md"
-      ]
-    },
-    {
-      "hash": "e98dae7a98dfe32921ebc76e2783caeb85e64d61",
-      "shortHash": "e98dae7",
-      "date": "2026-07-03T21:55:07+08:00",
-      "message": "Add per-IP brand theming to design site",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/e98dae7a98dfe32921ebc76e2783caeb85e64d61",
       "sourcePaths": [
         "config/brands.json",
         "VANAHOM",

@@ -6,7 +6,7 @@
   <title>岁知社 IPTrust</title>
   <meta name="description" content="岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site-4a8c416.css">
+  <link rel="stylesheet" href="assets/site-0e3d71b.css">
 </head>
 <body class="hub-home">
   <header class="topbar">
@@ -27,10 +27,6 @@
       <div class="hero-copy">
         <h1 data-i18n="hub.name">岁知社</h1>
         <p data-i18n="home.lead">高楼宾客似曾识，日光底下无新事。</p>
-        <div class="actions">
-          <a class="button" href="#agent-entry" data-i18n="nav.agent">我是 Agent</a>
-          <a class="button ghost" href="#collab-entry" data-i18n="nav.collab">我想合作</a>
-        </div>
       </div>
       <div class="hero-index" id="heroIndex" aria-live="polite"></div>
     </section>
@@ -38,63 +34,33 @@
       <article class="portal" id="agent-entry">
         <p class="eyebrow">Agent</p>
         <h3 data-i18n="portal.agentTitle">我是 Agent</h3>
-        <p data-i18n="portal.agentBody">点击复制 IPTrust Skill，直接发给你的 Agent 小伙伴。</p>
-        <button class="portal-action" type="button" data-portal-action="agent" data-i18n="portal.agentAction">复制 Skill</button>
+        <p data-i18n="portal.agentBody">复制 Skill。</p>
+        <button class="portal-action" type="button" data-portal-action="agent" data-portal-href="skills/iptrust-live-update/SKILL.md" data-i18n="portal.agentAction">Skill</button>
         <p class="portal-status" data-portal-status="agent" aria-live="polite"></p>
-        <div class="portal-links">
-          <a href="api/brands.json">JSON</a>
-          <a href="llms.txt">llms.txt</a>
-          <a href="skills/iptrust-live-update/SKILL.md">Skill</a>
-          <a href="api/manifest.json">Manifest</a>
-          <a href="api/search.json" data-i18n="portal.searchApi">搜索 API</a>
-          <a href="#version-history" data-i18n="history.title">历史版本</a>
-        </div>
       </article>
       <article class="portal" id="partner-entry">
         <p class="eyebrow">Partner</p>
         <h3 data-i18n="portal.partnerTitle">我是合伙人</h3>
-        <p data-i18n="portal.partnerBody">请联系获取管理 API。API 可单独管理单个 IP，也可管理多个 IP 组合。</p>
-        <button class="portal-action" type="button" data-portal-action="partner" data-i18n="portal.partnerAction">查看管理方式</button>
+        <p data-i18n="portal.partnerBody">Key first.</p>
+        <button class="portal-action" type="button" data-portal-action="partner" data-portal-href="admin.html" data-i18n="portal.partnerAction">Key first</button>
         <p class="portal-status" data-portal-status="partner" aria-live="polite"></p>
-        <ul class="portal-points">
-          <li data-i18n="portal.partnerPointApi">API 可按单个或多个 IP 授权。</li>
-          <li data-i18n="portal.partnerPointLogin">后台通过 API Key + Google Authenticator 登录。</li>
-        </ul>
-        <div class="portal-links">
-          <a href="#brandGrid" data-i18n="portal.openIps">查看 IP</a>
-          <a href="admin.html" data-i18n="portal.admin">管理入口</a>
-        </div>
       </article>
       <article class="portal" id="collab-entry">
         <p class="eyebrow">Collab</p>
         <h3 data-i18n="portal.collabTitle">我想合作</h3>
-        <p data-i18n="portal.collabBody">我们的 IP 进化论服务方案：定位、命名、视觉、Agent Skill、官网、API 与长期版本管理。</p>
-        <div class="collab-card">
-          <a class="collab-mail" href="mailto:hi@tableai.ai">hi@tableai.ai</a>
-          <img src="assets/contact/wecom-qr.png" alt="企业微信二维码" loading="lazy">
-        </div>
-        <div class="portal-links">
-          <a href="https://github.com/fengurt/tableai_designaha/issues/new" data-i18n="portal.github">发起合作</a>
-          <a href="#brandGrid" data-i18n="portal.explore">先看 IP</a>
-        </div>
+        <p data-i18n="portal.collabBody">hi@tableai.ai</p>
+        <button class="portal-action" type="button" data-portal-action="collab" data-portal-href="mailto:hi@tableai.ai" data-i18n="portal.collabAction">Email</button>
+        <p class="portal-status" data-portal-status="collab" aria-live="polite"></p>
       </article>
-    </section>
-    <section class="history-panel" id="version-history">
-      <div>
-        <p class="eyebrow">History</p>
-        <h2 data-i18n="history.title">历史版本</h2>
-      </div>
-      <div class="version-list" id="versionList" aria-live="polite"></div>
     </section>
     <section class="section-head">
       <div>
-        <p class="eyebrow" data-i18n="home.systems">IP 系统</p>
-        <h2 data-i18n="home.sectionTitle">直接进入 IP。</h2>
+        <h2 data-i18n="home.sectionTitle">IP</h2>
       </div>
       <span id="brandCount" class="count-pill"></span>
     </section>
     <section class="ip-grid" id="brandGrid" aria-live="polite"></section>
   </main>
-  <script src="assets/site-4a8c416.js" type="module"></script>
+  <script src="assets/site-0e3d71b.js" type="module"></script>
 </body>
 </html>
