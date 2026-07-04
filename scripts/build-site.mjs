@@ -609,6 +609,14 @@ await writeFile(join(siteDir, "favicon.svg"), html`<svg xmlns="http://www.w3.org
   <path d="M24 26h16M24 34h16M24 42h10" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"/>
 </svg>`);
 
+const topbarIcon = {
+  agent: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.75v2.5"/><rect x="5" y="7" width="14" height="10" rx="4"/><path d="M8.5 17.5 7 20"/><path d="M15.5 17.5 17 20"/><path d="M9 11.25h.01"/><path d="M15 11.25h.01"/><path d="M10 14h4"/></svg>`,
+  partner: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 7.5a4 4 0 1 1-2.2 5.78L4 22l-2-2 8.72-9.3A4 4 0 0 1 15.5 7.5Z"/><path d="m14 14 2 2"/><path d="m17 11 2 2"/></svg>`,
+  collab: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16v11H4z"/><path d="m4 7 8 6 8-6"/></svg>`,
+  api: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7V3"/><path d="M15 7V3"/><path d="M7 7h10v5a5 5 0 0 1-10 0V7Z"/><path d="M12 17v4"/><path d="M8.5 21h7"/></svg>`,
+  globe: `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.25 2.4 3.38 5.4 3.38 9S14.25 18.6 12 21"/><path d="M12 3C9.75 5.4 8.62 8.4 8.62 12S9.75 18.6 12 21"/></svg>`,
+};
+
 await writeFile(join(siteDir, "index.html"), html`<!doctype html>
 <html lang="zh-CN">
 <head>
@@ -626,11 +634,12 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
       <div class="global-results" id="globalResults" aria-live="polite"></div>
     </div>
-    <nav>
-      <a href="#agent-entry" data-i18n="nav.agent">我是 Agent</a>
-      <a href="#partner-entry" data-i18n="nav.partner">我是合伙人</a>
-      <a href="#collab-entry" data-i18n="nav.collab">我想合作</a>
-      <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language"><span class="is-active">CN</span><span class="lang-divider">/</span><span>EN</span></button>
+    <nav class="icon-nav" aria-label="Primary actions">
+      <a class="nav-icon" href="api/manifest.json" aria-label="API manifest" title="API manifest" data-tip="API">${topbarIcon.api}<span class="api-pulse"></span></a>
+      <a class="nav-icon" href="#agent-entry" aria-label="我是 Agent" title="我是 Agent" data-tip="Agent">${topbarIcon.agent}</a>
+      <a class="nav-icon" href="#partner-entry" aria-label="我是合伙人" title="我是合伙人" data-tip="Partner">${topbarIcon.partner}</a>
+      <a class="nav-icon" href="#collab-entry" aria-label="我想合作" title="我想合作" data-tip="Collab">${topbarIcon.collab}</a>
+      <button class="lang-toggle nav-icon" type="button" id="langToggle" aria-label="Switch language" title="Switch language" data-tip="Language">${topbarIcon.globe}<span class="lang-code is-active">CN</span><span class="lang-code">EN</span></button>
     </nav>
   </header>
   <main>
@@ -820,22 +829,102 @@ a { color: inherit; }
 nav { display: flex; align-items: center; gap: 18px; color: var(--muted); font-size: 14px; }
 nav a { text-decoration: none; }
 nav a:hover { color: var(--ink); }
+.hub-home .icon-nav {
+  gap: 8px;
+  padding: 3px;
+  border: 1px solid color-mix(in srgb, var(--ink) 9%, transparent);
+  border-radius: 999px;
+  background: rgba(255, 254, 250, .64);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .82);
+}
+.nav-icon {
+  width: 36px;
+  height: 36px;
+  min-height: 36px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  color: color-mix(in srgb, var(--ink) 70%, var(--muted));
+  display: inline-grid;
+  place-items: center;
+  position: relative;
+  transition: background .16s ease, border-color .16s ease, color .16s ease, transform .16s ease;
+}
+.nav-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.85;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.nav-icon:hover,
+.nav-icon:focus-visible {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+  transform: translateY(-1px);
+}
+.nav-icon::after {
+  content: attr(data-tip);
+  position: absolute;
+  right: 50%;
+  top: calc(100% + 9px);
+  transform: translateX(50%);
+  padding: 5px 7px;
+  border-radius: 6px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 11px;
+  font-weight: 760;
+  line-height: 1;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .14s ease;
+  z-index: 40;
+}
+.nav-icon:hover::after,
+.nav-icon:focus-visible::after { opacity: 1; }
+.nav-icon[href="api/manifest.json"] {
+  color: #0E8C7B;
+  background: rgba(14, 140, 123, .08);
+  border-color: rgba(14, 140, 123, .18);
+}
+.nav-icon[href="api/manifest.json"]:hover,
+.nav-icon[href="api/manifest.json"]:focus-visible {
+  background: #0E8C7B;
+  border-color: #0E8C7B;
+  color: white;
+}
+.api-pulse {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #0E8C7B;
+  box-shadow: 0 0 0 4px rgba(14, 140, 123, .13);
+}
 .lang-toggle {
   min-height: 0;
-  padding: 2px 0;
-  border: 0;
-  background: transparent;
-  color: var(--ink);
   font: inherit;
   font-weight: 750;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
 }
-.lang-toggle span { color: var(--muted); }
-.lang-toggle .is-active { color: var(--ink); }
-.lang-toggle .lang-divider { color: color-mix(in srgb, var(--muted) 44%, transparent); font-weight: 500; }
-.lang-toggle:hover span { color: var(--ink); }
+.lang-toggle .lang-code {
+  position: absolute;
+  right: 4px;
+  bottom: 3px;
+  color: inherit;
+  font-size: 8px;
+  font-weight: 860;
+  letter-spacing: 0;
+  opacity: 0;
+}
+.lang-toggle .lang-code.is-active { opacity: 1; }
 main { width: min(1180px, calc(100vw - 36px)); margin: 0 auto; }
 .hub-hero {
   min-height: 54vh;
@@ -1719,6 +1808,12 @@ function renderLanguageToggle() {
   const toggle = $("#langToggle");
   if (!toggle) return;
   toggle.setAttribute("aria-label", \`Language: \${localeMeta[currentLocale].label}\`);
+  if (toggle.classList.contains("nav-icon")) {
+    toggle.querySelectorAll(".lang-code").forEach((node) => {
+      node.classList.toggle("is-active", node.textContent.toLowerCase() === currentLocale);
+    });
+    return;
+  }
   toggle.innerHTML = \`
     <span class="\${currentLocale === "cn" ? "is-active" : ""}">CN</span>
     <span class="lang-divider">/</span>

@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "d420206";
+const BUILD_VERSION = "a0e6ecd";
 
 const i18n = {
   cn: {
@@ -190,6 +190,12 @@ function renderLanguageToggle() {
   const toggle = $("#langToggle");
   if (!toggle) return;
   toggle.setAttribute("aria-label", `Language: ${localeMeta[currentLocale].label}`);
+  if (toggle.classList.contains("nav-icon")) {
+    toggle.querySelectorAll(".lang-code").forEach((node) => {
+      node.classList.toggle("is-active", node.textContent.toLowerCase() === currentLocale);
+    });
+    return;
+  }
   toggle.innerHTML = `
     <span class="${currentLocale === "cn" ? "is-active" : ""}">CN</span>
     <span class="lang-divider">/</span>

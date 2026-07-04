@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-04T14:01:40.762Z",
+  "generatedAt": "2026-07-04T14:09:48.935Z",
   "version": {
-    "hash": "d420206221cd9243de4d808a2f4d6d05653fc791",
-    "shortHash": "d420206",
-    "date": "2026-07-04T21:59:47+08:00",
-    "message": "Simplify homepage entry experience",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/d420206221cd9243de4d808a2f4d6d05653fc791"
+    "hash": "a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
+    "shortHash": "a0e6ecd",
+    "date": "2026-07-04T22:02:17+08:00",
+    "message": "Add Sidera reference notes",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a0e6ecdeb7c9f436d1fc0081c43299056e0601ce"
   },
   "brands": [
     {
@@ -201,11 +201,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "d420206221cd9243de4d808a2f4d6d05653fc791",
-      "shortHash": "d420206",
-      "date": "2026-07-04T21:59:47+08:00",
-      "message": "Simplify homepage entry experience",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/d420206221cd9243de4d808a2f4d6d05653fc791"
+      "hash": "a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
+      "shortHash": "a0e6ecd",
+      "date": "2026-07-04T22:02:17+08:00",
+      "message": "Add Sidera reference notes",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a0e6ecdeb7c9f436d1fc0081c43299056e0601ce"
     }
   },
   "sync": {

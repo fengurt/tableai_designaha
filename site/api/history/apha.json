@@ -13,11 +13,11 @@
     "APHA/README.md"
   ],
   "latest": {
-    "hash": "0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
-    "shortHash": "0e3d71b",
-    "date": "2026-07-04T21:38:07+08:00",
-    "message": "Add PaM Design Office IP",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
+    "hash": "a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
+    "shortHash": "a0e6ecd",
+    "date": "2026-07-04T22:02:17+08:00",
+    "message": "Add Sidera reference notes",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
     "sourcePaths": [
       "config/brands.json",
       "APHA",
@@ -25,6 +25,18 @@
     ]
   },
   "versions": [
+    {
+      "hash": "a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
+      "shortHash": "a0e6ecd",
+      "date": "2026-07-04T22:02:17+08:00",
+      "message": "Add Sidera reference notes",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
+      "sourcePaths": [
+        "config/brands.json",
+        "APHA",
+        "APHA/README.md"
+      ]
+    },
     {
       "hash": "0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
       "shortHash": "0e3d71b",

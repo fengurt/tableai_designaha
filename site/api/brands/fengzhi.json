@@ -71,14 +71,26 @@
     "en": ""
   },
   "version": {
-    "hash": "d420206221cd9243de4d808a2f4d6d05653fc791",
-    "shortHash": "d420206",
-    "date": "2026-07-04T21:59:47+08:00",
-    "message": "Simplify homepage entry experience",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/d420206221cd9243de4d808a2f4d6d05653fc791"
+    "hash": "a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
+    "shortHash": "a0e6ecd",
+    "date": "2026-07-04T22:02:17+08:00",
+    "message": "Add Sidera reference notes",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a0e6ecdeb7c9f436d1fc0081c43299056e0601ce"
   },
   "historyUrl": "api/history/fengzhi.json",
   "history": [
+    {
+      "hash": "a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
+      "shortHash": "a0e6ecd",
+      "date": "2026-07-04T22:02:17+08:00",
+      "message": "Add Sidera reference notes",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
+      "sourcePaths": [
+        "config/brands.json",
+        "FENGZHI",
+        "FENGZHI/readme.md"
+      ]
+    },
     {
       "hash": "0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
       "shortHash": "0e3d71b",
@@ -133,18 +145,6 @@
       "date": "2026-07-04T10:52:32+08:00",
       "message": "Add global search and version history",
       "url": "https://github.com/fengurt/tableai_designaha/commit/c723f8453cb7795108b51880986e7d9a664da5b1",
-      "sourcePaths": [
-        "config/brands.json",
-        "FENGZHI",
-        "FENGZHI/readme.md"
-      ]
-    },
-    {
-      "hash": "a550421605e0fadecfb30c3fd5066754feda54d7",
-      "shortHash": "a550421",
-      "date": "2026-07-04T07:52:24+08:00",
-      "message": "Add IPTrust brand systems",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/a550421605e0fadecfb30c3fd5066754feda54d7",
       "sourcePaths": [
         "config/brands.json",
         "FENGZHI",
