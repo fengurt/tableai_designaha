@@ -1,3 +1,8 @@
 name = "tableai-designaha"
 pages_build_output_dir = "site"
 compatibility_date = "2026-05-03"
+
+[[r2_buckets]]
+binding = "MEDIA_BUCKET"
+bucket_name = "iptrust-media"
+preview_bucket_name = "iptrust-media-preview"
