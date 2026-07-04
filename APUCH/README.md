@@ -1,21 +1,21 @@
-# 岁知社 APUCH
+# APUCH
 
-English name: APUCH
+Meaning: A Place U Called Home
+
+Chinese name: 
 
 ## Brand Role
 
-岁知社 APUCH 是面向文化智能、公共知识与 Agent 可读协作的 IP 系统。
-
-APUCH is an IP under 岁知社 for cultural intelligence, public knowledge, and agent-readable collaboration.
+APUCH means A Place U Called Home.
 
 ## Visual Direction
 
-- Temperament: concise, thoughtful, civic, archival, quietly contemporary.
+- Temperament: warm, safe, intimate, open, home-like.
 - Color cues: deep ink blue, knowledge gold, soft paper, institutional green.
-- Imagery cues: archive cards, daylight on paper, civic halls, knowledge indexes, agent-readable maps.
+- Imagery cues: threshold, home light, table, doorway, belonging, shelter, warm civic space.
 
 ## Agent Notes
 
-- Use `岁知社 APUCH` as the Chinese IP name.
-- Use `APUCH` as the English/public IP name.
-- Keep references precise, calm, and source-aware.
+- Use `APUCH` as the public IP name.
+- Expand `APUCH` as `A Place U Called Home`.
+- Chinese name is currently blank.

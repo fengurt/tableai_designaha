@@ -1,7 +1,8 @@
 # 岁知社 IPTrust
 
 岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。
-English: A fast, minimal IP trust hub for brand guidelines, design systems, assets, and agent-readable source files.
+English name: IPTrust
+English: IPTrust is an IP trust hub for people and agents.
 
 Machine-readable entry points:
 - /api/manifest.json
@@ -27,7 +28,7 @@ Brands:
 - 燃古豋 (rgd): /api/brands/rgd.json · mainLocale CN · palette #E06B3A / #C8A15A
 - 常幸 (changoods): /api/brands/changoods.json · mainLocale CN · palette #486B3F / #D2A94C
 - 博雅问渠书院 (boya): /api/brands/boya.json · mainLocale CN · palette #243B6B / #B89A5E
-- 岁知社 APUCH (apuch): /api/brands/apuch.json · mainLocale CN · palette #14304A / #A88B52
+- APUCH (apuch): /api/brands/apuch.json · mainLocale EN · palette #14304A / #A88B52
 
 Admin workflow:
 - /admin.html unlocks with the generated admin key.

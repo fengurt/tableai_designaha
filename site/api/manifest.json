@@ -1,13 +1,23 @@
 {
   "name": "岁知社 IPTrust",
   "description": "岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。",
-  "generatedAt": "2026-07-04T08:27:27.546Z",
+  "display": {
+    "cn": {
+      "name": "岁知社",
+      "description": "岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。"
+    },
+    "en": {
+      "name": "IPTrust",
+      "description": "IPTrust is an IP trust hub for people and agents."
+    }
+  },
+  "generatedAt": "2026-07-04T08:33:03.925Z",
   "version": {
-    "hash": "74581d0117b9cb73e37d569f221acb4affc8ab87",
-    "shortHash": "74581d0",
-    "date": "2026-07-04T16:21:48+08:00",
-    "message": "Simplify admin copy and align language toggle",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/74581d0117b9cb73e37d569f221acb4affc8ab87"
+    "hash": "e979ff5bf2ae516742ed5de22a5febebcdaea867",
+    "shortHash": "e979ff5",
+    "date": "2026-07-04T16:28:28+08:00",
+    "message": "Systematize CN EN language handling",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/e979ff5bf2ae516742ed5de22a5febebcdaea867"
   },
   "brands": [
     {
@@ -132,9 +142,9 @@
     },
     {
       "slug": "apuch",
-      "name": "岁知社 APUCH",
-      "mainLanguage": "zh",
-      "mainLocale": "CN",
+      "name": "APUCH",
+      "mainLanguage": "en",
+      "mainLocale": "EN",
       "apiUrl": "api/brands/apuch.json",
       "guideUrl": "brand.html?brand=apuch"
     }
@@ -160,11 +170,11 @@
   "history": {
     "apiUrl": "api/versions.json",
     "latest": {
-      "hash": "74581d0117b9cb73e37d569f221acb4affc8ab87",
-      "shortHash": "74581d0",
-      "date": "2026-07-04T16:21:48+08:00",
-      "message": "Simplify admin copy and align language toggle",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/74581d0117b9cb73e37d569f221acb4affc8ab87"
+      "hash": "e979ff5bf2ae516742ed5de22a5febebcdaea867",
+      "shortHash": "e979ff5",
+      "date": "2026-07-04T16:28:28+08:00",
+      "message": "Systematize CN EN language handling",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/e979ff5bf2ae516742ed5de22a5febebcdaea867"
     }
   },
   "sync": {

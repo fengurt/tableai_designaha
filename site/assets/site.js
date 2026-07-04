@@ -2,6 +2,8 @@ const $ = (selector) => document.querySelector(selector);
 
 const i18n = {
   cn: {
+    "hub.name": "岁知社",
+    "hub.description": "岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。",
     "nav.manifest": "清单",
     "nav.admin": "管理",
     "nav.agent": "我是 Agent",
@@ -65,6 +67,8 @@ const i18n = {
     "admin.editorPlaceholder": "载入文件..."
   },
   en: {
+    "hub.name": "IPTrust",
+    "hub.description": "IPTrust is an IP trust hub for people and agents.",
     "nav.manifest": "Manifest",
     "nav.admin": "Admin",
     "nav.agent": "I am an Agent",
@@ -168,6 +172,11 @@ function renderLanguageToggle() {
 function applyI18n() {
   document.documentElement.lang = localeMeta[currentLocale].htmlLang;
   document.documentElement.dataset.locale = currentLocale;
+  if (document.body.classList.contains("hub-home")) {
+    document.title = t("hub.name");
+  } else if (document.querySelector(".admin")) {
+    document.title = `Admin · ${t("hub.name")}`;
+  }
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     node.textContent = t(node.dataset.i18n);
   });
@@ -351,11 +360,13 @@ function statusLabel(status) {
 function localizedBrand(brand = {}) {
   const lang = contentLang();
   const display = brand.display?.[lang] || {};
+  const hasIntro = Object.prototype.hasOwnProperty.call(brand.intro ?? {}, lang);
+  const hasBusiness = Object.prototype.hasOwnProperty.call(brand.profile?.business ?? brand.business ?? {}, lang);
   return {
     name: display.name || brand.name || brand.slug,
     secondaryName: display.secondaryName || brand.nativeName || "",
-    intro: brand.intro?.[lang] || brand.primaryExcerpt || brand.description || "",
-    business: brand.profile?.business?.[lang] || brand.business?.[lang] || "",
+    intro: hasIntro ? (brand.intro?.[lang] ?? "") : (brand.primaryExcerpt || brand.description || ""),
+    business: hasBusiness ? ((brand.profile?.business ?? brand.business)?.[lang] ?? "") : "",
   };
 }
 

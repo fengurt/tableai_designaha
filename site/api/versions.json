@@ -1,5 +1,12 @@
 [
   {
+    "hash": "e979ff5bf2ae516742ed5de22a5febebcdaea867",
+    "shortHash": "e979ff5",
+    "date": "2026-07-04T16:28:28+08:00",
+    "message": "Systematize CN EN language handling",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/e979ff5bf2ae516742ed5de22a5febebcdaea867"
+  },
+  {
     "hash": "74581d0117b9cb73e37d569f221acb4affc8ab87",
     "shortHash": "74581d0",
     "date": "2026-07-04T16:21:48+08:00",
@@ -75,12 +82,5 @@
     "date": "2026-07-03T21:55:07+08:00",
     "message": "Add per-IP brand theming to design site",
     "url": "https://github.com/fengurt/tableai_designaha/commit/e98dae7a98dfe32921ebc76e2783caeb85e64d61"
-  },
-  {
-    "hash": "99b7f2d15f0ea20e6e9f92f124d0a0b3ff9c47b9",
-    "shortHash": "99b7f2d",
-    "date": "2026-07-03T18:10:01+08:00",
-    "message": "Deploy agent-friendly brand guidelines site",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/99b7f2d15f0ea20e6e9f92f124d0a0b3ff9c47b9"
   }
 ]

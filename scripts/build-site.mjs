@@ -16,7 +16,10 @@ const adminConfig = existsSync(join(root, "config/site-admin.public.json"))
   ? JSON.parse(await readFile(join(root, "config/site-admin.public.json"), "utf8"))
   : {};
 const hubName = "岁知社 IPTrust";
+const hubNameCn = "岁知社";
+const hubNameEn = "IPTrust";
 const hubDescription = "岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。";
+const hubDescriptionEn = "IPTrust is an IP trust hub for people and agents.";
 
 async function walk(dir) {
   if (!existsSync(dir)) return [];
@@ -140,8 +143,9 @@ function clipSentence(text = "", max = 170) {
 }
 
 function liveIntro(brand, guides, lang) {
-  const configured = brand.intro?.[lang];
-  if (configured) return clipSentence(configured);
+  if (Object.prototype.hasOwnProperty.call(brand.intro ?? {}, lang)) {
+    return clipSentence(brand.intro[lang] ?? "");
+  }
   const primary = guides.find((g) => g.primary) ?? guides[0];
   const lines = introLines(primary?.text || "");
   const fromGuide = lang === "zh"
@@ -326,6 +330,10 @@ await writeFile(join(apiDir, "versions.json"), JSON.stringify(versions, null, 2)
 await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
   name: hubName,
   description: hubDescription,
+  display: {
+    cn: { name: hubNameCn, description: hubDescription },
+    en: { name: hubNameEn, description: hubDescriptionEn },
+  },
   generatedAt: new Date().toISOString(),
   version: versions[0] ?? null,
   brands: indexPayload.map((brand) => ({
@@ -373,7 +381,8 @@ await writeFile(join(siteDir, "llms.txt"), [
   `# ${hubName}`,
   "",
   hubDescription,
-  "English: A fast, minimal IP trust hub for brand guidelines, design systems, assets, and agent-readable source files.",
+  `English name: ${hubNameEn}`,
+  `English: ${hubDescriptionEn}`,
   "",
   "Machine-readable entry points:",
   "- /api/manifest.json",
@@ -410,7 +419,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
 </head>
 <body class="hub-home">
   <header class="topbar">
-    <a class="brand" href="./">${hubName}</a>
+    <a class="brand" href="./" data-i18n="hub.name">${hubNameCn}</a>
     <nav>
       <a href="#agent-entry" data-i18n="nav.agent">我是 Agent</a>
       <a href="#partner-entry" data-i18n="nav.partner">我是合伙人</a>
@@ -422,7 +431,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
     <section class="hub-hero">
       <div class="hero-copy">
         <p class="eyebrow" data-i18n="home.eyebrow">IP 信任索引 · Agent 可读品牌源</p>
-        <h1>岁知社 IPTrust</h1>
+        <h1 data-i18n="hub.name">${hubNameCn}</h1>
         <p data-i18n="home.lead">高楼宾客似曾识，日光底下无新事。</p>
         <div class="actions">
           <a class="button" href="#agent-entry" data-i18n="nav.agent">我是 Agent</a>
@@ -499,7 +508,7 @@ await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="./">${hubName}</a>
+    <a class="brand" href="./" data-i18n="hub.name">${hubNameCn}</a>
     <nav>
       <a href="api/brands.json">API</a>
       <a href="admin.html" data-i18n="nav.admin">Admin</a>
@@ -522,7 +531,7 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="./">${hubName}</a>
+    <a class="brand" href="./" data-i18n="hub.name">${hubNameCn}</a>
     <nav>
       <a href="api/manifest.json" data-i18n="nav.manifest">Manifest</a>
       <a href="https://github.com/${adminConfig.owner ?? "fengurt"}/${adminConfig.repo ?? "tableai_designaha"}">GitHub</a>
@@ -1198,6 +1207,8 @@ await writeFile(join(assetsDir, "site.js"), html`const $ = (selector) => documen
 
 const i18n = {
   cn: {
+    "hub.name": "岁知社",
+    "hub.description": "岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。",
     "nav.manifest": "清单",
     "nav.admin": "管理",
     "nav.agent": "我是 Agent",
@@ -1261,6 +1272,8 @@ const i18n = {
     "admin.editorPlaceholder": "载入文件..."
   },
   en: {
+    "hub.name": "IPTrust",
+    "hub.description": "IPTrust is an IP trust hub for people and agents.",
     "nav.manifest": "Manifest",
     "nav.admin": "Admin",
     "nav.agent": "I am an Agent",
@@ -1364,6 +1377,11 @@ function renderLanguageToggle() {
 function applyI18n() {
   document.documentElement.lang = localeMeta[currentLocale].htmlLang;
   document.documentElement.dataset.locale = currentLocale;
+  if (document.body.classList.contains("hub-home")) {
+    document.title = t("hub.name");
+  } else if (document.querySelector(".admin")) {
+    document.title = \`Admin · \${t("hub.name")}\`;
+  }
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     node.textContent = t(node.dataset.i18n);
   });
@@ -1547,11 +1565,13 @@ function statusLabel(status) {
 function localizedBrand(brand = {}) {
   const lang = contentLang();
   const display = brand.display?.[lang] || {};
+  const hasIntro = Object.prototype.hasOwnProperty.call(brand.intro ?? {}, lang);
+  const hasBusiness = Object.prototype.hasOwnProperty.call(brand.profile?.business ?? brand.business ?? {}, lang);
   return {
     name: display.name || brand.name || brand.slug,
     secondaryName: display.secondaryName || brand.nativeName || "",
-    intro: brand.intro?.[lang] || brand.primaryExcerpt || brand.description || "",
-    business: brand.profile?.business?.[lang] || brand.business?.[lang] || "",
+    intro: hasIntro ? (brand.intro?.[lang] ?? "") : (brand.primaryExcerpt || brand.description || ""),
+    business: hasBusiness ? ((brand.profile?.business ?? brand.business)?.[lang] ?? "") : "",
   };
 }
 

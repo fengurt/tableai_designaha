@@ -1220,18 +1220,18 @@
   {
     "slug": "apuch",
     "folder": "APUCH",
-    "name": "岁知社 APUCH",
-    "nativeName": "APUCH",
-    "description": "岁知社旗下的文化智能与公共知识 IP 系统。",
+    "name": "APUCH",
+    "nativeName": "",
+    "description": "A Place U Called Home.",
     "officialWebsite": "",
-    "mainLanguage": "zh",
+    "mainLanguage": "en",
     "intro": {
-      "zh": "岁知社 APUCH 是面向文化智能、公共知识与 Agent 可读协作的 IP 系统。",
-      "en": "APUCH is an IP system for cultural intelligence, public knowledge, and agent-readable collaboration."
+      "zh": "",
+      "en": "APUCH means A Place U Called Home."
     },
     "business": {
-      "zh": "文化智能、公共知识、档案与 Agent 可读协作。",
-      "en": "Cultural intelligence, public knowledge, archives, and agent-readable collaboration."
+      "zh": "",
+      "en": ""
     },
     "primaryGuide": "APUCH/README.md",
     "theme": {
@@ -1245,40 +1245,40 @@
       "muted": "#5E6870",
       "line": "rgba(20, 48, 74, 0.16)",
       "keywords": [
-        "cultural intelligence",
-        "public knowledge",
-        "archive",
-        "agent-readable",
-        "IPTrust"
+        "home",
+        "belonging",
+        "shelter",
+        "threshold",
+        "A Place U Called Home"
       ]
     },
-    "mainName": "岁知社 APUCH",
-    "mainLocale": "CN",
+    "mainName": "APUCH",
+    "mainLocale": "EN",
     "profile": {
       "officialWebsite": "",
-      "mainLanguage": "zh",
-      "mainLocale": "CN",
+      "mainLanguage": "en",
+      "mainLocale": "EN",
       "intro": {
-        "zh": "岁知社 APUCH 是面向文化智能、公共知识与 Agent 可读协作的 IP 系统。",
-        "en": "APUCH is an IP system for cultural intelligence, public knowledge, and agent-readable collaboration."
+        "zh": "",
+        "en": "APUCH means A Place U Called Home."
       },
       "business": {
-        "zh": "文化智能、公共知识、档案与 Agent 可读协作。",
-        "en": "Cultural intelligence, public knowledge, archives, and agent-readable collaboration."
+        "zh": "",
+        "en": ""
       }
     },
     "display": {
       "default": {
-        "language": "zh",
-        "name": "岁知社 APUCH"
+        "language": "en",
+        "name": "APUCH"
       },
       "zh": {
-        "name": "岁知社 APUCH",
-        "secondaryName": "APUCH"
+        "name": "APUCH",
+        "secondaryName": ""
       },
       "en": {
         "name": "APUCH",
-        "secondaryName": "岁知社 APUCH"
+        "secondaryName": ""
       }
     },
     "url": "brand.html?brand=apuch",
@@ -1295,6 +1295,6 @@
     "tokenCount": 0,
     "imageCount": 0,
     "heroImage": "",
-    "primaryExcerpt": "岁知社 APUCH English name: APUCH Brand Role 岁知社 APUCH 是面向文化智能、公共知识与 Agent 可读协作的 IP 系统。 APUCH is an IP under 岁知社 for cultural intelligence, public knowledge, and agent readable collaboration. Visual Direction Temperament: concise, thoughtful, civic, archival, quietly contemporary. Color cues: deep ink blue, knowledge gold, soft paper, institutional green. Imagery cues: archive cards, daylight on paper, civic halls, knowl"
+    "primaryExcerpt": "APUCH Meaning: A Place U Called Home Chinese name: Brand Role APUCH means A Place U Called Home. Visual Direction Temperament: warm, safe, intimate, open, home like. Color cues: deep ink blue, knowledge gold, soft paper, institutional green. Imagery cues: threshold, home light, table, doorway, belonging, shelter, warm civic space. Agent Notes Use APUCH as the public IP name. Expand APUCH as A Place U Called Home . Ch"
   }
 ]
