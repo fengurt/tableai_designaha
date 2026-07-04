@@ -38,6 +38,7 @@ a { color: inherit; }
 .brand { font-weight: 750; text-decoration: none; letter-spacing: 0; }
 nav { display: flex; gap: 18px; color: var(--muted); font-size: 14px; }
 nav a { text-decoration: none; }
+nav a:hover { color: var(--ink); }
 .lang-toggle {
   min-height: 0;
   padding: 0;
@@ -111,8 +112,32 @@ p { line-height: 1.65; }
   border-radius: 999px;
   background: var(--dot);
   cursor: pointer;
+  position: relative;
 }
 .color-dot.copied { outline: 2px solid var(--brand-primary, var(--blue)); outline-offset: 2px; }
+.color-dot::after {
+  content: attr(data-color-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 220px;
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 11px;
+  line-height: 1.3;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity .14s ease;
+  z-index: 20;
+}
+.color-dot:hover::after,
+.color-dot:focus-visible::after { opacity: 1; }
 .icon-copy {
   width: 30px;
   height: 30px;
@@ -139,6 +164,44 @@ p { line-height: 1.65; }
   padding: 18px 0 22px;
   border-top: 1px solid var(--line);
 }
+.entry-portals {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0 0 42px;
+}
+.portal {
+  border-top: 1px solid var(--line);
+  padding: 18px 0 0;
+}
+.portal h3 {
+  font-size: 24px;
+  line-height: 1.1;
+  margin: 10px 0 8px;
+}
+.portal p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+}
+.portal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.portal-links a {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 760;
+  padding: 7px 10px;
+  text-decoration: none;
+  background: rgba(255, 254, 250, .7);
+}
+.portal-links a:hover { border-color: var(--blue); }
 .section-head h2 { max-width: 560px; }
 .home-tools {
   display: flex;
@@ -471,6 +534,7 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .hero-index { align-self: stretch; }
   .hero-index-row { grid-template-columns: minmax(0, 1fr) auto; }
   .hero-index-colors { display: none; }
+  .entry-portals { grid-template-columns: 1fr; }
   .section-head { display: grid; align-items: start; }
   .home-tools { width: 100%; }
   .ip-grid { grid-template-columns: 1fr; }

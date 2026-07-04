@@ -300,9 +300,9 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
   <header class="topbar">
     <a class="brand" href="./">${hubName}</a>
     <nav>
-      <a href="api/manifest.json" data-i18n="nav.manifest">Manifest</a>
-      <a href="llms.txt">llms.txt</a>
-      <a href="admin.html" data-i18n="nav.admin">Admin</a>
+      <a href="#agent-entry" data-i18n="nav.agent">我是 Agent</a>
+      <a href="#partner-entry" data-i18n="nav.partner">我是合伙人</a>
+      <a href="#collab-entry" data-i18n="nav.collab">我想合作</a>
       <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language">EN</button>
     </nav>
   </header>
@@ -311,13 +311,44 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       <div class="hero-copy">
         <p class="eyebrow" data-i18n="home.eyebrow">IP 信任索引 · Agent 可读品牌源</p>
         <h1>岁知社 IPTrust</h1>
-        <p data-i18n="home.lead">进入每个 IP。</p>
+        <p data-i18n="home.lead">高楼宾客似曾识，日光底下无新事。</p>
         <div class="actions">
-          <a class="button" href="api/brands.json" data-i18n="home.openJson">打开 JSON 索引</a>
-          <a class="button ghost" href="admin.html" data-i18n="home.adminEdit">管理编辑</a>
+          <a class="button" href="#agent-entry" data-i18n="nav.agent">我是 Agent</a>
+          <a class="button ghost" href="#collab-entry" data-i18n="nav.collab">我想合作</a>
         </div>
       </div>
       <div class="hero-index" id="heroIndex" aria-live="polite"></div>
+    </section>
+    <section class="entry-portals" aria-label="IPTrust entries">
+      <article class="portal" id="agent-entry">
+        <p class="eyebrow">Agent</p>
+        <h3 data-i18n="portal.agentTitle">我是 Agent</h3>
+        <p data-i18n="portal.agentBody">读取最新 IP 规范、API、llms 与 skill。</p>
+        <div class="portal-links">
+          <a href="api/brands.json">JSON</a>
+          <a href="llms.txt">llms.txt</a>
+          <a href="skills/iptrust-live-update/SKILL.md">Skill</a>
+          <a href="api/manifest.json">Manifest</a>
+        </div>
+      </article>
+      <article class="portal" id="partner-entry">
+        <p class="eyebrow">Partner</p>
+        <h3 data-i18n="portal.partnerTitle">我是合伙人</h3>
+        <p data-i18n="portal.partnerBody">查看 IP 组合、品牌资产与协作入口。</p>
+        <div class="portal-links">
+          <a href="#brandGrid" data-i18n="portal.openIps">查看 IP</a>
+          <a href="admin.html" data-i18n="portal.admin">管理入口</a>
+        </div>
+      </article>
+      <article class="portal" id="collab-entry">
+        <p class="eyebrow">Collab</p>
+        <h3 data-i18n="portal.collabTitle">我想合作</h3>
+        <p data-i18n="portal.collabBody">提交新 IP、共创品牌系统或接入 Agent 工作流。</p>
+        <div class="portal-links">
+          <a href="https://github.com/${adminConfig.owner ?? "fengurt"}/${adminConfig.repo ?? "tableai_designaha"}/issues/new" data-i18n="portal.github">发起合作</a>
+          <a href="#brandGrid" data-i18n="portal.explore">先看 IP</a>
+        </div>
+      </article>
     </section>
     <section class="section-head">
       <div>
@@ -448,6 +479,7 @@ a { color: inherit; }
 .brand { font-weight: 750; text-decoration: none; letter-spacing: 0; }
 nav { display: flex; gap: 18px; color: var(--muted); font-size: 14px; }
 nav a { text-decoration: none; }
+nav a:hover { color: var(--ink); }
 .lang-toggle {
   min-height: 0;
   padding: 0;
@@ -521,8 +553,32 @@ p { line-height: 1.65; }
   border-radius: 999px;
   background: var(--dot);
   cursor: pointer;
+  position: relative;
 }
 .color-dot.copied { outline: 2px solid var(--brand-primary, var(--blue)); outline-offset: 2px; }
+.color-dot::after {
+  content: attr(data-color-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 220px;
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 11px;
+  line-height: 1.3;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity .14s ease;
+  z-index: 20;
+}
+.color-dot:hover::after,
+.color-dot:focus-visible::after { opacity: 1; }
 .icon-copy {
   width: 30px;
   height: 30px;
@@ -549,6 +605,44 @@ p { line-height: 1.65; }
   padding: 18px 0 22px;
   border-top: 1px solid var(--line);
 }
+.entry-portals {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0 0 42px;
+}
+.portal {
+  border-top: 1px solid var(--line);
+  padding: 18px 0 0;
+}
+.portal h3 {
+  font-size: 24px;
+  line-height: 1.1;
+  margin: 10px 0 8px;
+}
+.portal p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+}
+.portal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.portal-links a {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 760;
+  padding: 7px 10px;
+  text-decoration: none;
+  background: rgba(255, 254, 250, .7);
+}
+.portal-links a:hover { border-color: var(--blue); }
 .section-head h2 { max-width: 560px; }
 .home-tools {
   display: flex;
@@ -881,6 +975,7 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .hero-index { align-self: stretch; }
   .hero-index-row { grid-template-columns: minmax(0, 1fr) auto; }
   .hero-index-colors { display: none; }
+  .entry-portals { grid-template-columns: 1fr; }
   .section-head { display: grid; align-items: start; }
   .home-tools { width: 100%; }
   .ip-grid { grid-template-columns: 1fr; }
@@ -900,8 +995,11 @@ const i18n = {
   zh: {
     "nav.manifest": "清单",
     "nav.admin": "管理",
+    "nav.agent": "我是 Agent",
+    "nav.partner": "我是合伙人",
+    "nav.collab": "我想合作",
     "home.eyebrow": "IP 信任索引 · Agent 可读品牌源",
-    "home.lead": "进入每个 IP。",
+    "home.lead": "高楼宾客似曾识，日光底下无新事。",
     "home.openJson": "打开 JSON 索引",
     "home.adminEdit": "管理编辑",
     "home.systems": "IP 系统",
@@ -922,6 +1020,16 @@ const i18n = {
     "brand.tokens": "Token 文件",
     "brand.noneGuide": "暂无规范文件",
     "brand.noneTokens": "暂无 token 文件",
+    "portal.agentTitle": "我是 Agent",
+    "portal.agentBody": "读取最新 IP 规范、API、llms 与 skill。",
+    "portal.partnerTitle": "我是合伙人",
+    "portal.partnerBody": "查看 IP 组合、品牌资产与协作入口。",
+    "portal.collabTitle": "我想合作",
+    "portal.collabBody": "提交新 IP、共创品牌系统或接入 Agent 工作流。",
+    "portal.openIps": "查看 IP",
+    "portal.admin": "管理入口",
+    "portal.github": "发起合作",
+    "portal.explore": "先看 IP",
     "admin.unlockTitle": "解锁编辑器",
     "admin.unlockBody": "Admin key 用于解锁浏览器编辑器；保存仍需 GitHub 写入令牌，确保修改回到仓库。",
     "admin.keyLabel": "Admin API key",
@@ -939,8 +1047,11 @@ const i18n = {
   en: {
     "nav.manifest": "Manifest",
     "nav.admin": "Admin",
+    "nav.agent": "I am an Agent",
+    "nav.partner": "I am a Partner",
+    "nav.collab": "Work with Us",
     "home.eyebrow": "IP trust index · Agent-readable brand source",
-    "home.lead": "Enter every IP.",
+    "home.lead": "Old guests in high halls; nothing new under the sun.",
     "home.openJson": "Open JSON index",
     "home.adminEdit": "Admin edit",
     "home.systems": "IP systems",
@@ -961,6 +1072,16 @@ const i18n = {
     "brand.tokens": "Token files",
     "brand.noneGuide": "No guideline files yet",
     "brand.noneTokens": "No token files yet",
+    "portal.agentTitle": "I am an Agent",
+    "portal.agentBody": "Read the latest IP guidelines, APIs, llms, and skill.",
+    "portal.partnerTitle": "I am a Partner",
+    "portal.partnerBody": "Explore IP portfolios, brand assets, and collaboration paths.",
+    "portal.collabTitle": "Work with Us",
+    "portal.collabBody": "Submit a new IP, co-create a brand system, or connect an Agent workflow.",
+    "portal.openIps": "View IPs",
+    "portal.admin": "Admin entry",
+    "portal.github": "Start on GitHub",
+    "portal.explore": "Explore first",
     "admin.unlockTitle": "Unlock editor",
     "admin.unlockBody": "The admin key unlocks this browser editor. Saving still requires a GitHub token with contents write access.",
     "admin.keyLabel": "Admin API key",
@@ -1088,9 +1209,50 @@ function palette(theme = {}) {
   ].filter(([, value]) => value);
 }
 
+function hexToRgb(hex = "") {
+  const clean = hex.replace("#", "").trim();
+  if (!/^[0-9a-f]{6}$/i.test(clean)) return null;
+  return {
+    r: parseInt(clean.slice(0, 2), 16),
+    g: parseInt(clean.slice(2, 4), 16),
+    b: parseInt(clean.slice(4, 6), 16),
+  };
+}
+
+function rgbValue(hex) {
+  const rgb = hexToRgb(hex);
+  return rgb ? \`rgb(\${rgb.r}, \${rgb.g}, \${rgb.b})\` : hex;
+}
+
+function pantoneApprox(hex) {
+  const rgb = hexToRgb(hex);
+  if (!rgb) return \`PANTONE approx \${hex}\`;
+  const max = Math.max(rgb.r, rgb.g, rgb.b);
+  const min = Math.min(rgb.r, rgb.g, rgb.b);
+  const delta = max - min;
+  let hue = 0;
+  if (delta) {
+    if (max === rgb.r) hue = ((rgb.g - rgb.b) / delta) % 6;
+    if (max === rgb.g) hue = (rgb.b - rgb.r) / delta + 2;
+    if (max === rgb.b) hue = (rgb.r - rgb.g) / delta + 4;
+    hue = Math.round(hue * 60);
+    if (hue < 0) hue += 360;
+  }
+  if (max < 46) return "PANTONE Black 6 C";
+  if (delta < 18) return "PANTONE Cool Gray 7 C";
+  if (hue < 20 || hue >= 345) return "PANTONE 7621 C";
+  if (hue < 48) return "PANTONE 7578 C";
+  if (hue < 74) return "PANTONE 872 C";
+  if (hue < 155) return "PANTONE 5535 C";
+  if (hue < 190) return "PANTONE 3272 C";
+  if (hue < 245) return "PANTONE 296 C";
+  if (hue < 292) return "PANTONE 7673 C";
+  return "PANTONE 7645 C";
+}
+
 function colorDots(theme = {}) {
   return \`<span class="hero-index-colors">\${palette(theme).map(([label, value]) => \`
-    <button class="color-dot" type="button" data-copy-color="\${escapeHtml(value)}" aria-label="Copy \${escapeHtml(label)} \${escapeHtml(value)}" title="\${escapeHtml(label)} \${escapeHtml(value)}" style="--dot:\${escapeHtml(value)}"></button>
+    <button class="color-dot" type="button" data-copy-rgb="\${escapeHtml(rgbValue(value))}" data-copy-pantone="\${escapeHtml(pantoneApprox(value))}" data-color-tooltip="\${escapeHtml(label)} · \${escapeHtml(rgbValue(value))} · Tab \${escapeHtml(pantoneApprox(value))}" aria-label="Copy \${escapeHtml(label)} \${escapeHtml(rgbValue(value))}" title="\${escapeHtml(label)} \${escapeHtml(rgbValue(value))}" style="--dot:\${escapeHtml(value)}"></button>
   \`).join("")}</span>\`;
 }
 
@@ -1209,11 +1371,20 @@ function setupCopyButtons(brands) {
       }
     });
   });
-  document.querySelectorAll("[data-copy-color]").forEach((button) => {
+  document.querySelectorAll("[data-copy-rgb]").forEach((button) => {
     button.addEventListener("click", async (event) => {
       event.preventDefault();
       event.stopPropagation();
-      const result = await writeClipboardText(button.dataset.copyColor);
+      const result = await writeClipboardText(button.dataset.copyRgb);
+      button.classList.add("copied");
+      button.title = result === "selected" ? t("copy.selected") : t("copy.done");
+      setTimeout(() => button.classList.remove("copied"), 900);
+    });
+    button.addEventListener("keydown", async (event) => {
+      if (event.key !== "Tab") return;
+      event.preventDefault();
+      event.stopPropagation();
+      const result = await writeClipboardText(button.dataset.copyPantone);
       button.classList.add("copied");
       button.title = result === "selected" ? t("copy.selected") : t("copy.done");
       setTimeout(() => button.classList.remove("copied"), 900);

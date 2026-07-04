@@ -12,9 +12,9 @@
   <header class="topbar">
     <a class="brand" href="./">岁知社 IPTrust</a>
     <nav>
-      <a href="api/manifest.json" data-i18n="nav.manifest">Manifest</a>
-      <a href="llms.txt">llms.txt</a>
-      <a href="admin.html" data-i18n="nav.admin">Admin</a>
+      <a href="#agent-entry" data-i18n="nav.agent">我是 Agent</a>
+      <a href="#partner-entry" data-i18n="nav.partner">我是合伙人</a>
+      <a href="#collab-entry" data-i18n="nav.collab">我想合作</a>
       <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language">EN</button>
     </nav>
   </header>
@@ -23,13 +23,44 @@
       <div class="hero-copy">
         <p class="eyebrow" data-i18n="home.eyebrow">IP 信任索引 · Agent 可读品牌源</p>
         <h1>岁知社 IPTrust</h1>
-        <p data-i18n="home.lead">进入每个 IP。</p>
+        <p data-i18n="home.lead">高楼宾客似曾识，日光底下无新事。</p>
         <div class="actions">
-          <a class="button" href="api/brands.json" data-i18n="home.openJson">打开 JSON 索引</a>
-          <a class="button ghost" href="admin.html" data-i18n="home.adminEdit">管理编辑</a>
+          <a class="button" href="#agent-entry" data-i18n="nav.agent">我是 Agent</a>
+          <a class="button ghost" href="#collab-entry" data-i18n="nav.collab">我想合作</a>
         </div>
       </div>
       <div class="hero-index" id="heroIndex" aria-live="polite"></div>
+    </section>
+    <section class="entry-portals" aria-label="IPTrust entries">
+      <article class="portal" id="agent-entry">
+        <p class="eyebrow">Agent</p>
+        <h3 data-i18n="portal.agentTitle">我是 Agent</h3>
+        <p data-i18n="portal.agentBody">读取最新 IP 规范、API、llms 与 skill。</p>
+        <div class="portal-links">
+          <a href="api/brands.json">JSON</a>
+          <a href="llms.txt">llms.txt</a>
+          <a href="skills/iptrust-live-update/SKILL.md">Skill</a>
+          <a href="api/manifest.json">Manifest</a>
+        </div>
+      </article>
+      <article class="portal" id="partner-entry">
+        <p class="eyebrow">Partner</p>
+        <h3 data-i18n="portal.partnerTitle">我是合伙人</h3>
+        <p data-i18n="portal.partnerBody">查看 IP 组合、品牌资产与协作入口。</p>
+        <div class="portal-links">
+          <a href="#brandGrid" data-i18n="portal.openIps">查看 IP</a>
+          <a href="admin.html" data-i18n="portal.admin">管理入口</a>
+        </div>
+      </article>
+      <article class="portal" id="collab-entry">
+        <p class="eyebrow">Collab</p>
+        <h3 data-i18n="portal.collabTitle">我想合作</h3>
+        <p data-i18n="portal.collabBody">提交新 IP、共创品牌系统或接入 Agent 工作流。</p>
+        <div class="portal-links">
+          <a href="https://github.com/fengurt/tableai_designaha/issues/new" data-i18n="portal.github">发起合作</a>
+          <a href="#brandGrid" data-i18n="portal.explore">先看 IP</a>
+        </div>
+      </article>
     </section>
     <section class="section-head">
       <div>
