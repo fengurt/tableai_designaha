@@ -6,11 +6,17 @@
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
 
-/assets/site.css
+/assets/site-*.css
   Cache-Control: public, max-age=31536000, immutable
 
-/assets/site.js
+/assets/site-*.js
   Cache-Control: public, max-age=31536000, immutable
+
+/assets/site.css
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/site.js
+  Cache-Control: public, max-age=0, must-revalidate
 
 /assets/brand-images/*
   Cache-Control: public, max-age=86400, stale-while-revalidate=604800

@@ -322,6 +322,8 @@ const previousHistoryBySlug = new Map(await Promise.all(brands.map(async (brand)
 })));
 const versions = mergeVersionHistory(loadVersions(), previousVersions, 20);
 const buildVersion = versions[0]?.shortHash ?? "dev";
+const siteCssPath = `assets/site-${buildVersion}.css`;
+const siteJsPath = `assets/site-${buildVersion}.js`;
 
 await rm(siteDir, { recursive: true, force: true });
 await mkdir(brandApiDir, { recursive: true });
@@ -541,11 +543,17 @@ await writeFile(join(siteDir, "_headers"), [
   "/*.html",
   "  Cache-Control: public, max-age=0, must-revalidate",
   "",
-  "/assets/site.css",
+  "/assets/site-*.css",
   "  Cache-Control: public, max-age=31536000, immutable",
   "",
-  "/assets/site.js",
+  "/assets/site-*.js",
   "  Cache-Control: public, max-age=31536000, immutable",
+  "",
+  "/assets/site.css",
+  "  Cache-Control: public, max-age=0, must-revalidate",
+  "",
+  "/assets/site.js",
+  "  Cache-Control: public, max-age=0, must-revalidate",
   "",
   "/assets/brand-images/*",
   "  Cache-Control: public, max-age=86400, stale-while-revalidate=604800",
@@ -609,7 +617,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
   <title>${hubName}</title>
   <meta name="description" content="${hubDescription}">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site.css?v=${buildVersion}">
+  <link rel="stylesheet" href="${siteCssPath}">
 </head>
 <body class="hub-home">
   <header class="topbar">
@@ -698,7 +706,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
     </section>
     <section class="ip-grid" id="brandGrid" aria-live="polite"></section>
   </main>
-  <script src="assets/site.js?v=${buildVersion}" type="module"></script>
+  <script src="${siteJsPath}" type="module"></script>
 </body>
 </html>`);
 
@@ -709,7 +717,7 @@ await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brand Guidelines</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site.css?v=${buildVersion}">
+  <link rel="stylesheet" href="${siteCssPath}">
 </head>
 <body>
   <header class="topbar">
@@ -725,7 +733,7 @@ await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
     </nav>
   </header>
   <main id="brandPage" class="brand-page" aria-live="polite"></main>
-  <script src="assets/site.js?v=${buildVersion}" type="module"></script>
+  <script src="${siteJsPath}" type="module"></script>
 </body>
 </html>`);
 
@@ -737,7 +745,7 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin · ${hubName}</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site.css?v=${buildVersion}">
+  <link rel="stylesheet" href="${siteCssPath}">
 </head>
 <body>
   <header class="topbar">
@@ -777,7 +785,7 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
       <p class="notice" id="editorStatus"></p>
     </section>
   </main>
-  <script src="assets/site.js?v=${buildVersion}" type="module"></script>
+  <script src="${siteJsPath}" type="module"></script>
   <script src="assets/admin.js" type="module"></script>
 </body>
 </html>`);
@@ -1538,6 +1546,7 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .hub-hero { grid-template-columns: 1fr; min-height: auto; }
   .ip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }`);
+await copyFile(join(assetsDir, "site.css"), join(siteDir, siteCssPath));
 
 await writeFile(join(assetsDir, "site.js"), html`const $ = (selector) => document.querySelector(selector);
 const BUILD_VERSION = "${buildVersion}";
@@ -2424,6 +2433,7 @@ renderHeroIndex().catch(console.error);
 renderVersions().catch(console.error);
 renderIndex().catch(console.error);
 renderBrand().catch(console.error);`);
+await copyFile(join(assetsDir, "site.js"), join(siteDir, siteJsPath));
 
 await writeFile(join(assetsDir, "admin.js"), html`const $ = (selector) => document.querySelector(selector);
 const state = { config: null, brands: [], authScopes: [], currentFile: null, currentSha: null };
