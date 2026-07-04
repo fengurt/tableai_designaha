@@ -635,13 +635,41 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       <div class="global-results" id="globalResults" aria-live="polite"></div>
     </div>
     <nav class="icon-nav" aria-label="Primary actions">
-      <a class="nav-icon" href="api/manifest.json" aria-label="API manifest" title="API manifest" data-tip="API">${topbarIcon.api}<span class="api-pulse"></span></a>
+      <button class="nav-icon" type="button" id="apiConnectButton" aria-label="API connect" title="API connect" data-tip="API">${topbarIcon.api}<span class="api-pulse"></span></button>
       <a class="nav-icon" href="#agent-entry" aria-label="我是 Agent" title="我是 Agent" data-tip="Agent">${topbarIcon.agent}</a>
       <a class="nav-icon" href="#partner-entry" aria-label="我是合伙人" title="我是合伙人" data-tip="Partner">${topbarIcon.partner}</a>
       <a class="nav-icon" href="#collab-entry" aria-label="我想合作" title="我想合作" data-tip="Collab">${topbarIcon.collab}</a>
       <button class="lang-toggle nav-icon" type="button" id="langToggle" aria-label="Switch language" title="Switch language" data-tip="Language">${topbarIcon.globe}</button>
     </nav>
   </header>
+  <section class="api-connect-panel hidden" id="apiConnectPanel" aria-live="polite">
+    <div class="api-connect-head">
+      <div>
+        <p class="eyebrow">API</p>
+        <h2 data-i18n="api.title">连接 System API</h2>
+      </div>
+      <button class="icon-copy" type="button" id="apiConnectClose" data-icon-only="true" aria-label="Close">×</button>
+    </div>
+    <div class="api-connect-form" id="apiConnectForm">
+      <label><span data-i18n="api.key">Admin API Key</span><input id="apiAdminKey" type="password" autocomplete="current-password"></label>
+      <label><span data-i18n="api.totp">Google Authenticator</span><input id="apiTotpCode" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" maxlength="8" placeholder="000000"></label>
+      <label><span data-i18n="api.scopes">IP scope</span><select id="apiScopes" multiple size="4"></select></label>
+      <button class="portal-action" type="button" id="apiConnectSubmit" data-i18n="api.connect">Connect</button>
+    </div>
+    <p class="portal-status" id="apiConnectStatus"></p>
+    <div class="api-ops hidden" id="apiConnectedOps">
+      <strong class="connected-pill" data-i18n="api.connected">Connected</strong>
+      <p class="muted" id="apiScopeText"></p>
+      <div class="portal-links">
+        <a href="admin.html" data-i18n="api.openAdmin">Admin</a>
+        <a href="api/manifest.json">Manifest</a>
+        <a href="api/brands.json">Brands</a>
+        <a href="api/search.json">Search</a>
+        <a href="api/media/">Media</a>
+        <button class="api-copy" type="button" data-api-copy="manifest" data-i18n="api.copyCurl">Copy cURL</button>
+      </div>
+    </div>
+  </section>
   <main>
     <section class="hub-hero">
       <div class="hero-copy">
@@ -888,13 +916,14 @@ nav a:hover { color: var(--ink); }
 }
 .nav-icon:hover::after,
 .nav-icon:focus-visible::after { opacity: 1; }
-.nav-icon[href="api/manifest.json"] {
+.nav-icon#apiConnectButton {
   color: #0E8C7B;
   background: rgba(14, 140, 123, .08);
   border-color: rgba(14, 140, 123, .18);
 }
-.nav-icon[href="api/manifest.json"]:hover,
-.nav-icon[href="api/manifest.json"]:focus-visible {
+.nav-icon#apiConnectButton:hover,
+.nav-icon#apiConnectButton:focus-visible,
+.nav-icon#apiConnectButton.api-connected {
   background: #0E8C7B;
   border-color: #0E8C7B;
   color: white;
@@ -925,6 +954,63 @@ nav a:hover { color: var(--ink); }
   opacity: 0;
 }
 .lang-toggle .lang-code.is-active { opacity: 1; }
+.api-connect-panel {
+  position: fixed;
+  right: clamp(18px, 4vw, 48px);
+  top: 92px;
+  z-index: 30;
+  width: min(420px, calc(100vw - 36px));
+  padding: 18px;
+  border: 1px solid color-mix(in srgb, var(--green) 24%, var(--line));
+  border-radius: 10px;
+  background: rgba(255, 254, 250, .96);
+  box-shadow: 0 24px 80px rgba(22, 20, 18, .16);
+  backdrop-filter: blur(18px);
+}
+.api-connect-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 16px;
+}
+.api-connect-head h2 {
+  font-size: 22px;
+  margin: 4px 0 8px;
+}
+.api-connect-form {
+  display: grid;
+  gap: 10px;
+}
+.api-connect-form label {
+  margin: 0;
+}
+.api-connect-form select {
+  min-height: 92px;
+}
+.api-ops {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+.connected-pill {
+  justify-self: start;
+  border: 1px solid rgba(14, 140, 123, .24);
+  border-radius: 999px;
+  padding: 7px 10px;
+  color: #0E8C7B;
+  background: rgba(14, 140, 123, .08);
+  font-size: 12px;
+}
+.api-copy {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 760;
+  padding: 7px 10px;
+  background: rgba(255, 254, 250, .7);
+}
+.api-copy:hover { border-color: var(--green); color: var(--green); }
 main { width: min(1180px, calc(100vw - 36px)); margin: 0 auto; }
 .hub-hero {
   min-height: 54vh;
@@ -1677,6 +1763,21 @@ const i18n = {
     "portal.github": "发起合作",
     "portal.explore": "先看 IP",
     "portal.searchApi": "搜索 API",
+    "api.title": "连接 System API",
+    "api.key": "Admin API Key",
+    "api.totp": "Google Authenticator",
+    "api.scopes": "IP 权限",
+    "api.connect": "Connect",
+    "api.connected": "Connected",
+    "api.connecting": "Connecting...",
+    "api.notConfigured": "Cloudflare secrets 未配置。",
+    "api.badKey": "API Key 不对。",
+    "api.badTotp": "验证码不对。",
+    "api.failed": "连接失败。",
+    "api.scopesGranted": "Scopes: ",
+    "api.openAdmin": "Admin",
+    "api.copyCurl": "Copy cURL",
+    "api.copiedCurl": "已复制 cURL 模板。",
     "history.title": "历史版本",
     "history.empty": "暂无版本记录",
     "search.global": "全局搜索",
@@ -1755,6 +1856,21 @@ const i18n = {
     "portal.github": "Start on GitHub",
     "portal.explore": "Explore first",
     "portal.searchApi": "Search API",
+    "api.title": "Connect System API",
+    "api.key": "Admin API Key",
+    "api.totp": "Google Authenticator",
+    "api.scopes": "IP scopes",
+    "api.connect": "Connect",
+    "api.connected": "Connected",
+    "api.connecting": "Connecting...",
+    "api.notConfigured": "Cloudflare secrets are not configured.",
+    "api.badKey": "Wrong API Key.",
+    "api.badTotp": "Wrong code.",
+    "api.failed": "Connection failed.",
+    "api.scopesGranted": "Scopes: ",
+    "api.openAdmin": "Admin",
+    "api.copyCurl": "Copy cURL",
+    "api.copiedCurl": "cURL template copied.",
     "history.title": "Version history",
     "history.empty": "No version records yet",
     "search.global": "Global search",
@@ -2295,6 +2411,105 @@ function setupPortalActions() {
   });
 }
 
+function apiStatus(message, isError = false) {
+  const node = $("#apiConnectStatus");
+  if (!node) return;
+  node.textContent = message;
+  node.style.color = isError ? "#b12137" : "#0E8C7B";
+}
+
+async function populateApiScopes() {
+  const select = $("#apiScopes");
+  if (!select || select.dataset.ready) return;
+  const brands = await loadJson("api/brands.json");
+  select.innerHTML = [
+    \`<option value="*">*</option>\`,
+    ...brands.map((brand) => \`<option value="\${escapeHtml(brand.slug)}">\${escapeHtml(brand.mainName || brand.name || brand.slug)}</option>\`),
+  ].join("");
+  select.querySelector('option[value="*"]').selected = true;
+  select.dataset.ready = "true";
+}
+
+function selectedApiScopes() {
+  const select = $("#apiScopes");
+  if (!select) return ["*"];
+  const values = [...select.selectedOptions].map((option) => option.value);
+  return values.length ? values : ["*"];
+}
+
+function apiErrorMessage(error) {
+  if (error === "admin_auth_not_configured") return t("api.notConfigured");
+  if (error === "bad_api_key") return t("api.badKey");
+  if (error === "bad_totp") return t("api.badTotp");
+  return error || t("api.failed");
+}
+
+function apiCurlTemplate() {
+  return [
+    \`curl -X POST "\${new URL("api/admin/login", location.href).href}"\`,
+    \`  -H "Content-Type: application/json"\`,
+    \`  -H "X-Admin-Key: <ADMIN_API_KEY>"\`,
+    \`  -d '{"totp":"<GOOGLE_AUTHENTICATOR_CODE>","scopes":["*"]}'\`,
+  ].join("\\n");
+}
+
+function setupApiConnect() {
+  const button = $("#apiConnectButton");
+  const panel = $("#apiConnectPanel");
+  const close = $("#apiConnectClose");
+  const submit = $("#apiConnectSubmit");
+  const form = $("#apiConnectForm");
+  const ops = $("#apiConnectedOps");
+  if (!button || !panel || button.dataset.ready) return;
+  button.dataset.ready = "true";
+
+  button.addEventListener("click", async () => {
+    panel.classList.toggle("hidden");
+    if (!panel.classList.contains("hidden")) {
+      await populateApiScopes().catch((error) => apiStatus(error.message, true));
+      $("#apiAdminKey")?.focus();
+    }
+  });
+  close?.addEventListener("click", () => panel.classList.add("hidden"));
+  document.querySelectorAll("[data-api-copy]").forEach((copyButton) => {
+    copyButton.addEventListener("click", async () => {
+      const result = await writeClipboardText(apiCurlTemplate());
+      const message = result === "selected" ? t("copy.selected") : t("api.copiedCurl");
+      apiStatus(message);
+      showToast(message);
+    });
+  });
+
+  submit?.addEventListener("click", async () => {
+    const adminKey = $("#apiAdminKey")?.value || "";
+    const totp = $("#apiTotpCode")?.value.trim() || "";
+    apiStatus(t("api.connecting"));
+    try {
+      const res = await fetch("api/admin/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Admin-Key": adminKey,
+        },
+        body: JSON.stringify({ adminKey, totp, scopes: selectedApiScopes() }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(apiErrorMessage(data.error));
+      const scopes = data.scopes?.length ? data.scopes : data.allowedScopes || ["*"];
+      button.classList.add("api-connected");
+      form?.classList.add("hidden");
+      ops?.classList.remove("hidden");
+      $("#apiScopeText").textContent = \`\${t("api.scopesGranted")}\${scopes.join(", ")}\`;
+      apiStatus(t("api.connected"));
+      showToast(t("api.connected"));
+    } catch (error) {
+      button.classList.remove("api-connected");
+      apiStatus(error.message || t("api.failed"), true);
+      showToast(error.message || t("api.failed"));
+    }
+  });
+}
+
 function setupCopyButtons(brands) {
   const bySlug = new Map(brands.map((brand) => [brand.slug, brand]));
   document.querySelectorAll("[data-copy-brand]").forEach((button) => {
@@ -2521,6 +2736,7 @@ applyI18n();
 setupLanguageToggle();
 setupSearch();
 setupPortalActions();
+setupApiConnect();
 renderHeroIndex().catch(console.error);
 renderIndex().catch(console.error);
 renderBrand().catch(console.error);`);

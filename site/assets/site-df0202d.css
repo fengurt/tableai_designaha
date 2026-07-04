@@ -118,13 +118,14 @@ nav a:hover { color: var(--ink); }
 }
 .nav-icon:hover::after,
 .nav-icon:focus-visible::after { opacity: 1; }
-.nav-icon[href="api/manifest.json"] {
+.nav-icon#apiConnectButton {
   color: #0E8C7B;
   background: rgba(14, 140, 123, .08);
   border-color: rgba(14, 140, 123, .18);
 }
-.nav-icon[href="api/manifest.json"]:hover,
-.nav-icon[href="api/manifest.json"]:focus-visible {
+.nav-icon#apiConnectButton:hover,
+.nav-icon#apiConnectButton:focus-visible,
+.nav-icon#apiConnectButton.api-connected {
   background: #0E8C7B;
   border-color: #0E8C7B;
   color: white;
@@ -155,6 +156,63 @@ nav a:hover { color: var(--ink); }
   opacity: 0;
 }
 .lang-toggle .lang-code.is-active { opacity: 1; }
+.api-connect-panel {
+  position: fixed;
+  right: clamp(18px, 4vw, 48px);
+  top: 92px;
+  z-index: 30;
+  width: min(420px, calc(100vw - 36px));
+  padding: 18px;
+  border: 1px solid color-mix(in srgb, var(--green) 24%, var(--line));
+  border-radius: 10px;
+  background: rgba(255, 254, 250, .96);
+  box-shadow: 0 24px 80px rgba(22, 20, 18, .16);
+  backdrop-filter: blur(18px);
+}
+.api-connect-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 16px;
+}
+.api-connect-head h2 {
+  font-size: 22px;
+  margin: 4px 0 8px;
+}
+.api-connect-form {
+  display: grid;
+  gap: 10px;
+}
+.api-connect-form label {
+  margin: 0;
+}
+.api-connect-form select {
+  min-height: 92px;
+}
+.api-ops {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+.connected-pill {
+  justify-self: start;
+  border: 1px solid rgba(14, 140, 123, .24);
+  border-radius: 999px;
+  padding: 7px 10px;
+  color: #0E8C7B;
+  background: rgba(14, 140, 123, .08);
+  font-size: 12px;
+}
+.api-copy {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 760;
+  padding: 7px 10px;
+  background: rgba(255, 254, 250, .7);
+}
+.api-copy:hover { border-color: var(--green); color: var(--green); }
 main { width: min(1180px, calc(100vw - 36px)); margin: 0 auto; }
 .hub-hero {
   min-height: 54vh;

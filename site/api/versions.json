@@ -1,5 +1,12 @@
 [
   {
+    "hash": "df0202da7b5426135d2010d61f72e04189d1b276",
+    "shortHash": "df0202d",
+    "date": "2026-07-04T22:12:02+08:00",
+    "message": "Make homepage toolbar fully icon based",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/df0202da7b5426135d2010d61f72e04189d1b276"
+  },
+  {
     "hash": "0f2e2d97870af52bc066ed485e15cb42b064eae3",
     "shortHash": "0f2e2d9",
     "date": "2026-07-04T22:10:20+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-07-04T17:18:29+08:00",
     "message": "Remove homepage hero eyebrow",
     "url": "https://github.com/fengurt/tableai_designaha/commit/72cafacde8d20ca88efd27c5f00b16154a6c06e9"
-  },
-  {
-    "hash": "28013cb13ecc9bb047077803476b2f3104fa651f",
-    "shortHash": "28013cb",
-    "date": "2026-07-04T17:15:25+08:00",
-    "message": "Add Cloudflare Pages performance path",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/28013cb13ecc9bb047077803476b2f3104fa651f"
   }
 ]
