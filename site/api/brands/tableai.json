@@ -4,6 +4,16 @@
   "name": "Table AI",
   "nativeName": "Table AI",
   "description": "International think tank design system for the Table AI Alliance.",
+  "officialWebsite": "",
+  "mainLanguage": "en",
+  "intro": {
+    "zh": "Table AI 是面向国际智库、联盟协作与 Agent 工作流的 AI 原生设计系统。",
+    "en": "Table AI is an AI-native design system for international think tanks, alliance collaboration, and agent workflows."
+  },
+  "business": {
+    "zh": "智库协作、AI 工作流、品牌与设计系统。",
+    "en": "Think tank collaboration, AI workflows, brand and design systems."
+  },
   "primaryGuide": "TABLEAI/TableAI_DESIGN.md",
   "theme": {
     "mode": "light",
@@ -24,7 +34,18 @@
     ]
   },
   "mainName": "Table AI",
-  "mainLanguage": "en",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "en",
+    "intro": {
+      "zh": "Table AI 是面向国际智库、联盟协作与 Agent 工作流的 AI 原生设计系统。",
+      "en": "Table AI is an AI-native design system for international think tanks, alliance collaboration, and agent workflows."
+    },
+    "business": {
+      "zh": "智库协作、AI 工作流、品牌与设计系统。",
+      "en": "Think tank collaboration, AI workflows, brand and design systems."
+    }
+  },
   "display": {
     "default": {
       "language": "en",
@@ -38,10 +59,6 @@
       "name": "Table AI",
       "secondaryName": ""
     }
-  },
-  "intro": {
-    "zh": "本项目采用极简且富有启发性的视觉语言。设计应体现以下四个维度：",
-    "en": "Table AI brand system with live guidelines, colors, voice, assets, and agent-readable source files."
   },
   "url": "brand.html?brand=tableai",
   "apiUrl": "api/brands/tableai.json",

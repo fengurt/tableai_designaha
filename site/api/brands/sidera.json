@@ -4,6 +4,16 @@
   "name": "Sidera",
   "nativeName": "侍天",
   "description": "Wisdom Navigator design system for premium F&B chains.",
+  "officialWebsite": "",
+  "mainLanguage": "en",
+  "intro": {
+    "zh": "Sidera 是面向高端餐饮连锁的 Wisdom Navigator 设计系统。",
+    "en": "Sidera is a Wisdom Navigator design system for premium F&B chains."
+  },
+  "business": {
+    "zh": "餐饮连锁、经营导航、品牌与服务系统。",
+    "en": "F&B chains, operating navigation, brand and service systems."
+  },
   "primaryGuide": "Sidera/sidera_design.md",
   "theme": {
     "mode": "dark",
@@ -24,7 +34,18 @@
     ]
   },
   "mainName": "Sidera",
-  "mainLanguage": "en",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "en",
+    "intro": {
+      "zh": "Sidera 是面向高端餐饮连锁的 Wisdom Navigator 设计系统。",
+      "en": "Sidera is a Wisdom Navigator design system for premium F&B chains."
+    },
+    "business": {
+      "zh": "餐饮连锁、经营导航、品牌与服务系统。",
+      "en": "F&B chains, operating navigation, brand and service systems."
+    }
+  },
   "display": {
     "default": {
       "language": "en",
@@ -38,10 +59,6 @@
       "name": "Sidera",
       "secondaryName": "侍天"
     }
-  },
-  "intro": {
-    "zh": "Sidera 侍天 — Design System",
-    "en": "Build-ready brand & visual spec for agents producing on-brand 侍天 work."
   },
   "url": "brand.html?brand=sidera",
   "apiUrl": "api/brands/sidera.json",

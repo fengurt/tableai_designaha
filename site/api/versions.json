@@ -1,5 +1,12 @@
 [
   {
+    "hash": "088ab8909a2d4284cd64d7924cc60fa39b8eb206",
+    "shortHash": "088ab89",
+    "date": "2026-07-04T11:59:40+08:00",
+    "message": "Add APUCH IP to IPTrust",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/088ab8909a2d4284cd64d7924cc60fa39b8eb206"
+  },
+  {
     "hash": "c723f8453cb7795108b51880986e7d9a664da5b1",
     "shortHash": "c723f84",
     "date": "2026-07-04T10:52:32+08:00",
@@ -75,12 +82,5 @@
     "date": "2026-07-03T15:52:46+08:00",
     "message": "Add Axisee and Sidera design specs",
     "url": "https://github.com/fengurt/tableai_designaha/commit/3c2fd51e401f26ccf67daf2ae41ad44a9a7e7d6a"
-  },
-  {
-    "hash": "d4e7b9a6009d588cfb4cb0be3db6156d3e27099b",
-    "shortHash": "d4e7b9a",
-    "date": "2026-06-18T23:18:04+08:00",
-    "message": "Merge pull request #2 from fengurt/feat/kind-skill-md",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/d4e7b9a6009d588cfb4cb0be3db6156d3e27099b"
   }
 ]

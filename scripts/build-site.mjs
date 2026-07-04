@@ -86,11 +86,12 @@ function enName(brand) {
 }
 
 function mainLanguage(brand) {
+  if (["zh", "en"].includes(brand.mainLanguage)) return brand.mainLanguage;
   return hasCjk(brand.name) ? "zh" : "en";
 }
 
 function mainName(brand) {
-  return brand.name;
+  return mainLanguage(brand) === "zh" ? zhName(brand) : enName(brand);
 }
 
 function secondaryName(primary, secondary) {
@@ -133,6 +134,8 @@ function clipSentence(text = "", max = 170) {
 }
 
 function liveIntro(brand, guides, lang) {
+  const configured = brand.intro?.[lang];
+  if (configured) return clipSentence(configured);
   const primary = guides.find((g) => g.primary) ?? guides[0];
   const lines = introLines(primary?.text || "");
   const fromGuide = lang === "zh"
@@ -143,6 +146,21 @@ function liveIntro(brand, guides, lang) {
     return `${zhName(brand)}的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。`;
   }
   return `${enName(brand)} brand system with live guidelines, colors, voice, assets, and agent-readable source files.`;
+}
+
+function profile(brand) {
+  return {
+    officialWebsite: brand.officialWebsite ?? "",
+    mainLanguage: mainLanguage(brand),
+    intro: {
+      zh: brand.intro?.zh ?? "",
+      en: brand.intro?.en ?? "",
+    },
+    business: {
+      zh: brand.business?.zh ?? "",
+      en: brand.business?.en ?? "",
+    },
+  };
 }
 
 function html(strings, ...values) {
@@ -237,6 +255,7 @@ for (const brand of brands) {
     ...brand,
     mainName: mainName(brand),
     mainLanguage: mainLanguage(brand),
+    profile: profile(brand),
     display,
     intro,
     url: `brand.html?brand=${brand.slug}`,
@@ -270,7 +289,15 @@ const searchPayload = brandPayloads.flatMap((brand) => {
     slug: brand.slug,
     title: brand.display?.default?.name ?? brand.name,
     subtitle: uniqueValues([brand.display?.zh?.name, brand.display?.en?.name, brand.nativeName]).join(" · "),
-    text: [brand.intro?.zh, brand.intro?.en, brand.description, brand.theme?.keywords?.join(" ")].filter(Boolean).join(" "),
+    text: [
+      brand.intro?.zh,
+      brand.intro?.en,
+      brand.profile?.business?.zh,
+      brand.profile?.business?.en,
+      brand.description,
+      brand.officialWebsite,
+      brand.theme?.keywords?.join(" "),
+    ].filter(Boolean).join(" "),
     url: brand.url,
   }];
   const guides = brand.guides.map((guide) => ({
@@ -295,7 +322,8 @@ await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
   version: versions[0] ?? null,
   brands: indexPayload.map((brand) => ({
     slug: brand.slug,
-    name: brand.name,
+    name: brand.mainName,
+    mainLanguage: brand.mainLanguage,
     apiUrl: `api/brands/${brand.slug}.json`,
     guideUrl: `brand.html?brand=${brand.slug}`,
   })),
@@ -342,7 +370,7 @@ await writeFile(join(siteDir, "llms.txt"), [
   "- /skills/iptrust-live-update/SKILL.md",
   "",
   "Brands:",
-  ...indexPayload.map((brand) => `- ${brand.name} (${brand.slug}): /api/brands/${brand.slug}.json · palette ${brand.theme?.primary ?? "n/a"} / ${brand.theme?.accent ?? "n/a"}`),
+  ...indexPayload.map((brand) => `- ${brand.mainName} (${brand.slug}): /api/brands/${brand.slug}.json · mainLanguage ${brand.mainLanguage} · palette ${brand.theme?.primary ?? "n/a"} / ${brand.theme?.accent ?? "n/a"}`),
   "",
   "Admin workflow:",
   "- /admin.html unlocks with the generated admin key.",
@@ -984,6 +1012,17 @@ p { line-height: 1.65; }
   overflow: hidden;
   min-height: 38px;
 }
+.card-profile {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--brand-muted, var(--muted));
+}
+.card-profile span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .copy-reference {
   position: absolute;
   right: 14px;
@@ -1074,6 +1113,7 @@ p { line-height: 1.65; }
 .brand-hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(280px, .95fr); gap: clamp(22px, 4vw, 48px); align-items: center; margin-bottom: 36px; }
 .brand-hero img { width: 100%; border-radius: 8px; border: 1px solid var(--line); }
 .resource-list { display: grid; gap: 14px; margin: 24px 0; }
+.resource-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 24px 0; }
 .resource, .guide {
   background: var(--brand-paper, var(--paper));
   color: var(--brand-ink, var(--ink));
@@ -1111,6 +1151,7 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
 @media (max-width: 760px) {
   .topbar { align-items: flex-start; flex-direction: column; }
   .hub-hero, .brand-hero, .form-grid { grid-template-columns: 1fr; }
+  .resource-grid { grid-template-columns: 1fr; }
   .hub-hero { min-height: auto; padding-top: 36px; }
   .hero-index { align-self: stretch; }
   .hero-index-row { grid-template-columns: minmax(0, 1fr) auto; }
@@ -1159,6 +1200,11 @@ const i18n = {
     "brand.openJson": "打开 JSON",
     "brand.source": "源文件",
     "brand.colors": "品牌颜色",
+    "brand.website": "官网",
+    "brand.mainLanguage": "主语言",
+    "brand.business": "业务",
+    "brand.intro": "简介",
+    "brand.blank": "未填写",
     "brand.editable": "可编辑源文件",
     "brand.tokens": "Token 文件",
     "brand.noneGuide": "暂无规范文件",
@@ -1215,6 +1261,11 @@ const i18n = {
     "brand.openJson": "Open JSON",
     "brand.source": "Source",
     "brand.colors": "Brand colors",
+    "brand.website": "Website",
+    "brand.mainLanguage": "Main language",
+    "brand.business": "Business",
+    "brand.intro": "Intro",
+    "brand.blank": "Blank",
     "brand.editable": "Editable source",
     "brand.tokens": "Token files",
     "brand.noneGuide": "No guideline files yet",
@@ -1444,17 +1495,39 @@ function localizedBrand(brand = {}) {
     name: display.name || brand.name || brand.slug,
     secondaryName: display.secondaryName || brand.nativeName || "",
     intro: brand.intro?.[currentLang] || brand.primaryExcerpt || brand.description || "",
+    business: brand.profile?.business?.[currentLang] || brand.business?.[currentLang] || "",
   };
 }
 
+function mainBrand(brand = {}) {
+  const display = brand.display?.default || {};
+  const lang = display.language || brand.mainLanguage || currentLang;
+  const localized = brand.display?.[lang] || {};
+  const fallback = localizedBrand(brand);
+  return {
+    name: display.name || brand.mainName || localized.name || fallback.name || brand.slug,
+    secondaryName: localized.secondaryName || fallback.secondaryName || "",
+    intro: brand.intro?.[lang] || fallback.intro || brand.description || "",
+    business: brand.profile?.business?.[lang] || brand.business?.[lang] || "",
+    language: lang,
+  };
+}
+
+function fieldValue(value) {
+  return value || t("brand.blank");
+}
+
 function referenceText(brand = {}) {
-  const localized = localizedBrand(brand);
+  const localized = mainBrand(brand);
   const apiUrl = new URL(brand.apiUrl || \`api/brands/\${brand.slug}.json\`, location.href).href;
   const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", location.href).href;
   return [
     \`IP: \${localized.name}\${localized.secondaryName ? \` / \${localized.secondaryName}\` : ""}\`,
     \`Slug: \${brand.slug}\`,
+    \`Main language: \${brand.mainLanguage || localized.language || ""}\`,
+    \`Website: \${brand.officialWebsite || ""}\`,
     \`Intro: \${localized.intro}\`,
+    \`Business: \${localized.business || ""}\`,
     \`Brand API: \${apiUrl}\`,
     \`Skill: \${skillUrl}\`,
   ].join("\\n");
@@ -1588,7 +1661,7 @@ async function renderHeroIndex() {
   if (!index) return;
   cachedBrands ??= await loadJson("api/brands.json");
   index.innerHTML = cachedBrands.map((brand, idx) => {
-    const localized = localizedBrand(brand);
+    const localized = mainBrand(brand);
     return \`
       <div class="hero-index-row" data-brand="\${escapeHtml(brand.slug)}" style="\${themeStyle(brand.theme)};--row-index:\${idx}">
         <a class="hero-index-link" href="\${brand.url}">
@@ -1626,14 +1699,20 @@ async function renderIndex() {
   const brands = cachedBrands;
   const filtered = currentQuery
     ? brands.filter((brand) => {
-        const localized = localizedBrand(brand);
+        const localized = mainBrand(brand);
         return [
           brand.slug,
           brand.name,
           brand.nativeName,
+          brand.mainName,
+          brand.mainLanguage,
+          brand.officialWebsite,
+          brand.profile?.business?.zh,
+          brand.profile?.business?.en,
           localized.name,
           localized.secondaryName,
           localized.intro,
+          localized.business,
           brand.theme?.keywords?.join(" "),
         ].join(" ").toLowerCase().includes(currentQuery);
       })
@@ -1645,28 +1724,35 @@ async function renderIndex() {
     grid.innerHTML = \`<p class="empty-state">\${escapeHtml(t("home.noResults"))}</p>\`;
     return;
   }
-  grid.innerHTML = filtered.map((brand) => \`
+  grid.innerHTML = filtered.map((brand) => {
+    const localized = mainBrand(brand);
+    return \`
     <article class="\${cardClass(brand)}" data-brand="\${escapeHtml(brand.slug)}" style="\${themeStyle(brand.theme)}">
-      <a class="ip-card-link" href="\${brand.url}" aria-label="\${escapeHtml(localizedBrand(brand).name)}">
+      <a class="ip-card-link" href="\${brand.url}" aria-label="\${escapeHtml(localized.name)}">
         <div class="card-body">
           <div class="card-art">
             <span class="art-code">\${escapeHtml(brand.slug)}</span>
             <span class="art-metric">\${brand.guideCount}G · \${brand.tokenCount}T</span>
           </div>
           <p class="eyebrow">\${escapeHtml(statusLabel(brand.status))}</p>
-          <h2>\${escapeHtml(localizedBrand(brand).name)}</h2>
+          <h2>\${escapeHtml(localized.name)}</h2>
           \${miniPalette(brand.theme)}
-          <p class="muted">\${escapeHtml(localizedBrand(brand).secondaryName || "")}</p>
-          <p class="card-intro">\${escapeHtml(localizedBrand(brand).intro || "")}</p>
+          <p class="muted">\${escapeHtml(localized.secondaryName || "")}</p>
+          <p class="card-intro">\${escapeHtml(localized.intro || "")}</p>
+          <div class="card-profile">
+            <span>\${escapeHtml(t("brand.mainLanguage"))}: \${escapeHtml(brand.mainLanguage || localized.language || "")}</span>
+            <span>\${escapeHtml(t("brand.business"))}: \${escapeHtml(localized.business || "")}</span>
+          </div>
           <div class="meta">
             <span class="pill">\${brand.guideCount} \${t("meta.guides")}</span>
             <span class="pill">API</span>
           </div>
         </div>
       </a>
-      <button class="copy-reference icon-copy" type="button" data-icon-only="true" data-copy-brand="\${escapeHtml(brand.slug)}" aria-label="\${escapeHtml(t("copy.reference"))} \${escapeHtml(localizedBrand(brand).name)}">\${copyIcon()}</button>
+      <button class="copy-reference icon-copy" type="button" data-icon-only="true" data-copy-brand="\${escapeHtml(brand.slug)}" aria-label="\${escapeHtml(t("copy.reference"))} \${escapeHtml(localized.name)}">\${copyIcon()}</button>
     </article>
-  \`).join("");
+  \`;
+  }).join("");
   setupCopyButtons(filtered);
 }
 
@@ -1695,6 +1781,12 @@ async function renderBrand() {
         \${hero ? \`<img src="\${hero}" alt="">\` : ""}
       </section>
       <section class="resource-list">
+        <div class="resource-grid">
+          <div class="resource"><strong>\${t("brand.website")}</strong><br>\${brand.officialWebsite ? \`<a href="\${escapeHtml(brand.officialWebsite)}">\${escapeHtml(brand.officialWebsite)}</a>\` : escapeHtml(t("brand.blank"))}</div>
+          <div class="resource"><strong>\${t("brand.mainLanguage")}</strong><br>\${escapeHtml(brand.mainLanguage || brand.profile?.mainLanguage || t("brand.blank"))}</div>
+          <div class="resource"><strong>\${t("brand.intro")}</strong><br>\${escapeHtml(localized.intro || t("brand.blank"))}</div>
+          <div class="resource"><strong>\${t("brand.business")}</strong><br>\${escapeHtml(localized.business || t("brand.blank"))}</div>
+        </div>
         <div class="resource"><strong>\${t("brand.colors")}</strong><br>\${escapeHtml(brand.theme?.keywords?.join(" · ") || "")}</div>
         <div class="resource"><strong>\${t("brand.editable")}</strong><br>\${brand.editablePaths?.map(escapeHtml).join("<br>") || t("brand.noneGuide")}</div>
         <div class="resource"><strong>\${t("brand.tokens")}</strong><br>\${brand.tokens?.map((token) => escapeHtml(token.path)).join("<br>") || t("brand.noneTokens")}</div>

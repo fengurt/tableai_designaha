@@ -4,6 +4,16 @@
   "name": "MANA Endless",
   "nativeName": "无魔协会",
   "description": "Alliance brand placeholder for future design guidelines.",
+  "officialWebsite": "",
+  "mainLanguage": "zh",
+  "intro": {
+    "zh": "无魔协会是面向持续学习、清明协作与联盟实验的 IP。",
+    "en": "MANA Endless is an IP for continuous learning, clear collaboration, and alliance experiments."
+  },
+  "business": {
+    "zh": "联盟、学习社区与协作实验。",
+    "en": "Alliance, learning community, and collaboration experiments."
+  },
   "primaryGuide": "",
   "theme": {
     "mode": "dark",
@@ -23,12 +33,23 @@
       "continuous learning"
     ]
   },
-  "mainName": "MANA Endless",
-  "mainLanguage": "en",
+  "mainName": "无魔协会",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "无魔协会是面向持续学习、清明协作与联盟实验的 IP。",
+      "en": "MANA Endless is an IP for continuous learning, clear collaboration, and alliance experiments."
+    },
+    "business": {
+      "zh": "联盟、学习社区与协作实验。",
+      "en": "Alliance, learning community, and collaboration experiments."
+    }
+  },
   "display": {
     "default": {
-      "language": "en",
-      "name": "MANA Endless"
+      "language": "zh",
+      "name": "无魔协会"
     },
     "zh": {
       "name": "无魔协会",
@@ -38,10 +59,6 @@
       "name": "MANA Endless",
       "secondaryName": "无魔协会"
     }
-  },
-  "intro": {
-    "zh": "无魔协会的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
-    "en": "MANA Endless brand system with live guidelines, colors, voice, assets, and agent-readable source files."
   },
   "url": "brand.html?brand=manaendless",
   "apiUrl": "api/brands/manaendless.json",

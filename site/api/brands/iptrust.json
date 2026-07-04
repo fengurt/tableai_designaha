@@ -4,6 +4,16 @@
   "name": "IPTrustasset",
   "nativeName": "IPTRUST",
   "description": "Trusted intellectual-property asset stewardship brand placeholder.",
+  "officialWebsite": "",
+  "mainLanguage": "en",
+  "intro": {
+    "zh": "IPTrustasset 是面向知识产权资产可信管理与协作的 IP。",
+    "en": "IPTrustasset is an IP for trusted intellectual-property asset stewardship and collaboration."
+  },
+  "business": {
+    "zh": "IP 资产管理、信任索引与品牌源文件治理。",
+    "en": "IP asset stewardship, trust indexing, and brand-source governance."
+  },
   "primaryGuide": "",
   "theme": {
     "mode": "light",
@@ -24,7 +34,18 @@
     ]
   },
   "mainName": "IPTrustasset",
-  "mainLanguage": "en",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "en",
+    "intro": {
+      "zh": "IPTrustasset 是面向知识产权资产可信管理与协作的 IP。",
+      "en": "IPTrustasset is an IP for trusted intellectual-property asset stewardship and collaboration."
+    },
+    "business": {
+      "zh": "IP 资产管理、信任索引与品牌源文件治理。",
+      "en": "IP asset stewardship, trust indexing, and brand-source governance."
+    }
+  },
   "display": {
     "default": {
       "language": "en",
@@ -38,10 +59,6 @@
       "name": "IPTrustasset",
       "secondaryName": ""
     }
-  },
-  "intro": {
-    "zh": "IPTrustasset的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
-    "en": "IPTrustasset brand system with live guidelines, colors, voice, assets, and agent-readable source files."
   },
   "url": "brand.html?brand=iptrust",
   "apiUrl": "api/brands/iptrust.json",

@@ -4,6 +4,16 @@
   "name": "RGD",
   "nativeName": "燃古豋",
   "description": "Placeholder brand system for 燃古豋 · RGD.",
+  "officialWebsite": "",
+  "mainLanguage": "zh",
+  "intro": {
+    "zh": "燃古豋是面向古意、火光、仪式与手作精神的 IP。",
+    "en": "RGD is an IP for ancient spirit, firelight, ritual, and craft."
+  },
+  "business": {
+    "zh": "文化内容、仪式体验、手作与美学产品。",
+    "en": "Cultural content, ritual experiences, craft, and aesthetic products."
+  },
   "primaryGuide": "RGD/README.md",
   "theme": {
     "mode": "dark",
@@ -23,12 +33,23 @@
       "fire"
     ]
   },
-  "mainName": "RGD",
-  "mainLanguage": "en",
+  "mainName": "燃古豋",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "燃古豋是面向古意、火光、仪式与手作精神的 IP。",
+      "en": "RGD is an IP for ancient spirit, firelight, ritual, and craft."
+    },
+    "business": {
+      "zh": "文化内容、仪式体验、手作与美学产品。",
+      "en": "Cultural content, ritual experiences, craft, and aesthetic products."
+    }
+  },
   "display": {
     "default": {
-      "language": "en",
-      "name": "RGD"
+      "language": "zh",
+      "name": "燃古豋"
     },
     "zh": {
       "name": "燃古豋",
@@ -38,10 +59,6 @@
       "name": "RGD",
       "secondaryName": "燃古豋"
     }
-  },
-  "intro": {
-    "zh": "燃古豋的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
-    "en": "RGD brand system with live guidelines, colors, voice, assets, and agent-readable source files."
   },
   "url": "brand.html?brand=rgd",
   "apiUrl": "api/brands/rgd.json",

@@ -4,6 +4,16 @@
   "name": "PKU BOYA Academy",
   "nativeName": "博雅问渠书院",
   "description": "Liberal education and inquiry academy IP system.",
+  "officialWebsite": "",
+  "mainLanguage": "zh",
+  "intro": {
+    "zh": "博雅问渠书院是面向博雅教育、经典深度与当代知识流动的书院 IP。",
+    "en": "PKU BOYA Academy is an academy IP for liberal education, classical depth, and contemporary knowledge flow."
+  },
+  "business": {
+    "zh": "博雅教育、知识研究、书院课程与公共学习。",
+    "en": "Liberal education, knowledge research, academy programs, and public learning."
+  },
   "primaryGuide": "BOYA/README.md",
   "theme": {
     "mode": "light",
@@ -23,12 +33,23 @@
       "classical learning"
     ]
   },
-  "mainName": "PKU BOYA Academy",
-  "mainLanguage": "en",
+  "mainName": "博雅问渠书院",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "博雅问渠书院是面向博雅教育、经典深度与当代知识流动的书院 IP。",
+      "en": "PKU BOYA Academy is an academy IP for liberal education, classical depth, and contemporary knowledge flow."
+    },
+    "business": {
+      "zh": "博雅教育、知识研究、书院课程与公共学习。",
+      "en": "Liberal education, knowledge research, academy programs, and public learning."
+    }
+  },
   "display": {
     "default": {
-      "language": "en",
-      "name": "PKU BOYA Academy"
+      "language": "zh",
+      "name": "博雅问渠书院"
     },
     "zh": {
       "name": "博雅问渠书院",
@@ -38,10 +59,6 @@
       "name": "PKU BOYA Academy",
       "secondaryName": "博雅问渠书院"
     }
-  },
-  "intro": {
-    "zh": "博雅问渠书院的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
-    "en": "PKU BOYA Academy is a learning and inquiry IP centered on liberal education, classical depth, and contemporary knowledge flow."
   },
   "url": "brand.html?brand=boya",
   "apiUrl": "api/brands/boya.json",

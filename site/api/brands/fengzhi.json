@@ -4,6 +4,16 @@
   "name": "峰值永造局",
   "nativeName": "The Transformation Company · 界格",
   "description": "AI-native transformation delivery brand system.",
+  "officialWebsite": "",
+  "mainLanguage": "zh",
+  "intro": {
+    "zh": "峰值永造局是 AI 原生的组织转型与交付系统品牌。",
+    "en": "The Transformation Company is an AI-native transformation and delivery brand system."
+  },
+  "business": {
+    "zh": "组织转型、战略交付、AI 原生运营。",
+    "en": "Transformation, strategic delivery, and AI-native operations."
+  },
   "primaryGuide": "FENGZHI/readme.md",
   "theme": {
     "mode": "light",
@@ -24,7 +34,18 @@
     ]
   },
   "mainName": "峰值永造局",
-  "mainLanguage": "zh",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "峰值永造局是 AI 原生的组织转型与交付系统品牌。",
+      "en": "The Transformation Company is an AI-native transformation and delivery brand system."
+    },
+    "business": {
+      "zh": "组织转型、战略交付、AI 原生运营。",
+      "en": "Transformation, strategic delivery, and AI-native operations."
+    }
+  },
   "display": {
     "default": {
       "language": "zh",
@@ -38,10 +59,6 @@
       "name": "The Transformation Company",
       "secondaryName": "峰值永造局"
     }
-  },
-  "intro": {
-    "zh": "峰值永造局 · 品牌设计系统（方向 A「界格」）",
-    "en": "The Transformation Company brand system with live guidelines, colors, voice, assets, and agent-readable source files."
   },
   "url": "brand.html?brand=fengzhi",
   "apiUrl": "api/brands/fengzhi.json",

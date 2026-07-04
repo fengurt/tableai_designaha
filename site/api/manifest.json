@@ -1,108 +1,124 @@
 {
   "name": "岁知社 IPTrust",
   "description": "岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。",
-  "generatedAt": "2026-07-04T03:59:11.396Z",
+  "generatedAt": "2026-07-04T07:58:46.126Z",
   "version": {
-    "hash": "c723f8453cb7795108b51880986e7d9a664da5b1",
-    "shortHash": "c723f84",
-    "date": "2026-07-04T10:52:32+08:00",
-    "message": "Add global search and version history",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/c723f8453cb7795108b51880986e7d9a664da5b1"
+    "hash": "088ab8909a2d4284cd64d7924cc60fa39b8eb206",
+    "shortHash": "088ab89",
+    "date": "2026-07-04T11:59:40+08:00",
+    "message": "Add APUCH IP to IPTrust",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/088ab8909a2d4284cd64d7924cc60fa39b8eb206"
   },
   "brands": [
     {
       "slug": "tableai",
       "name": "Table AI",
+      "mainLanguage": "en",
       "apiUrl": "api/brands/tableai.json",
       "guideUrl": "brand.html?brand=tableai"
     },
     {
       "slug": "vanahom",
-      "name": "VANAHOM",
+      "name": "凡纳弘途",
+      "mainLanguage": "zh",
       "apiUrl": "api/brands/vanahom.json",
       "guideUrl": "brand.html?brand=vanahom"
     },
     {
       "slug": "kind",
       "name": "KiND",
+      "mainLanguage": "en",
       "apiUrl": "api/brands/kind.json",
       "guideUrl": "brand.html?brand=kind"
     },
     {
       "slug": "apha",
-      "name": "APHA",
+      "name": "亚太艺术疗愈联盟",
+      "mainLanguage": "zh",
       "apiUrl": "api/brands/apha.json",
       "guideUrl": "brand.html?brand=apha"
     },
     {
       "slug": "manaendless",
-      "name": "MANA Endless",
+      "name": "无魔协会",
+      "mainLanguage": "zh",
       "apiUrl": "api/brands/manaendless.json",
       "guideUrl": "brand.html?brand=manaendless"
     },
     {
       "slug": "opcglobal",
-      "name": "OPC Global",
+      "name": "欧匹赛全球联盟",
+      "mainLanguage": "zh",
       "apiUrl": "api/brands/opcglobal.json",
       "guideUrl": "brand.html?brand=opcglobal"
     },
     {
       "slug": "iptrust",
       "name": "IPTrustasset",
+      "mainLanguage": "en",
       "apiUrl": "api/brands/iptrust.json",
       "guideUrl": "brand.html?brand=iptrust"
     },
     {
       "slug": "fengzhi",
       "name": "峰值永造局",
+      "mainLanguage": "zh",
       "apiUrl": "api/brands/fengzhi.json",
       "guideUrl": "brand.html?brand=fengzhi"
     },
     {
       "slug": "axisee",
       "name": "Axisee",
+      "mainLanguage": "en",
       "apiUrl": "api/brands/axisee.json",
       "guideUrl": "brand.html?brand=axisee"
     },
     {
       "slug": "sidera",
       "name": "Sidera",
+      "mainLanguage": "en",
       "apiUrl": "api/brands/sidera.json",
       "guideUrl": "brand.html?brand=sidera"
     },
     {
       "slug": "1stepmore",
       "name": "1stepmore",
+      "mainLanguage": "en",
       "apiUrl": "api/brands/1stepmore.json",
       "guideUrl": "brand.html?brand=1stepmore"
     },
     {
       "slug": "agem",
-      "name": "AGEM",
+      "name": "游赋社",
+      "mainLanguage": "zh",
       "apiUrl": "api/brands/agem.json",
       "guideUrl": "brand.html?brand=agem"
     },
     {
       "slug": "rgd",
-      "name": "RGD",
+      "name": "燃古豋",
+      "mainLanguage": "zh",
       "apiUrl": "api/brands/rgd.json",
       "guideUrl": "brand.html?brand=rgd"
     },
     {
       "slug": "changoods",
-      "name": "Changoods",
+      "name": "常幸",
+      "mainLanguage": "zh",
       "apiUrl": "api/brands/changoods.json",
       "guideUrl": "brand.html?brand=changoods"
     },
     {
       "slug": "boya",
-      "name": "PKU BOYA Academy",
+      "name": "博雅问渠书院",
+      "mainLanguage": "zh",
       "apiUrl": "api/brands/boya.json",
       "guideUrl": "brand.html?brand=boya"
     },
     {
       "slug": "apuch",
       "name": "岁知社 APUCH",
+      "mainLanguage": "zh",
       "apiUrl": "api/brands/apuch.json",
       "guideUrl": "brand.html?brand=apuch"
     }
@@ -128,11 +144,11 @@
   "history": {
     "apiUrl": "api/versions.json",
     "latest": {
-      "hash": "c723f8453cb7795108b51880986e7d9a664da5b1",
-      "shortHash": "c723f84",
-      "date": "2026-07-04T10:52:32+08:00",
-      "message": "Add global search and version history",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/c723f8453cb7795108b51880986e7d9a664da5b1"
+      "hash": "088ab8909a2d4284cd64d7924cc60fa39b8eb206",
+      "shortHash": "088ab89",
+      "date": "2026-07-04T11:59:40+08:00",
+      "message": "Add APUCH IP to IPTrust",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/088ab8909a2d4284cd64d7924cc60fa39b8eb206"
     }
   },
   "sync": {

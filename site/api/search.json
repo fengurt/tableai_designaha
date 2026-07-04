@@ -4,7 +4,7 @@
     "slug": "tableai",
     "title": "Table AI",
     "subtitle": "Table AI",
-    "text": "本项目采用极简且富有启发性的视觉语言。设计应体现以下四个维度： Table AI brand system with live guidelines, colors, voice, assets, and agent-readable source files. International think tank design system for the Table AI Alliance. white deep blue dark gold think tank minimal",
+    "text": "Table AI 是面向国际智库、联盟协作与 Agent 工作流的 AI 原生设计系统。 Table AI is an AI-native design system for international think tanks, alliance collaboration, and agent workflows. 智库协作、AI 工作流、品牌与设计系统。 Think tank collaboration, AI workflows, brand and design systems. International think tank design system for the Table AI Alliance. white deep blue dark gold think tank minimal",
     "url": "brand.html?brand=tableai"
   },
   {
@@ -18,16 +18,16 @@
   {
     "type": "ip",
     "slug": "vanahom",
-    "title": "VANAHOM",
+    "title": "凡纳弘途",
     "subtitle": "凡纳弘途 · VANAHOM",
-    "text": "Building Tomorrow, Today — 为者常成，行者常至 A Member of the Table AI Alliance — same think-tank register, its own ground. Mission-driven hospitality and extended-services enterprise builder. Hongtu red Cangling grey white space hospitality wellbeing",
+    "text": "凡纳弘途是使命驱动的酒店、旅居与延展服务企业构建者。 VANAHOM is a mission-driven builder for hospitality, stay, and extended-service ventures. 酒店、旅居、康养与延展服务。 Hospitality, stay, wellbeing, and extended services. Mission-driven hospitality and extended-services enterprise builder. Hongtu red Cangling grey white space hospitality wellbeing",
     "url": "brand.html?brand=vanahom"
   },
   {
     "type": "guide",
     "slug": "vanahom",
     "title": "Vanahom Design",
-    "subtitle": "VANAHOM · VANAHOM/vanahom_design.md",
+    "subtitle": "凡纳弘途 · VANAHOM/vanahom_design.md",
     "text": "VANAHOM — Design System 凡纳弘途 · VANAHOM Building Tomorrow, Today — 为者常成，行者常至 A single reference for anyone designing or building VANAHOM surfaces — decks, briefs, brand pages, the workspace. Pairs with vanahom deck.html (the living deck) and the logo set in vanahom logo/ . A Member of the Table AI Alliance — same think tank register, its own ground. 1. Brand in one breath VANAHOM is a mission driven company that rebui",
     "url": "brand.html?brand=vanahom"
   },
@@ -36,7 +36,7 @@
     "slug": "kind",
     "title": "KiND",
     "subtitle": "善渡科技 · KiND",
-    "text": "善渡科技 · Kind Technology KiND turns AI into a Kind Workforce anyone can hire — AI for all, not for few. Human-first AI workforce brand: for all, not for few. teal mint coral kind workforce inclusive AI",
+    "text": "KiND 是以人为先的 AI 劳动力品牌，让 AI 服务所有人，而不是少数人。 KiND is a human-first AI workforce brand: AI for all, not for few. AI 劳动力、智能体产品与企业自动化。 AI workforce, agent products, and enterprise automation. Human-first AI workforce brand: for all, not for few. teal mint coral kind workforce inclusive AI",
     "url": "brand.html?brand=kind"
   },
   {
@@ -66,33 +66,33 @@
   {
     "type": "ip",
     "slug": "apha",
-    "title": "APHA",
+    "title": "亚太艺术疗愈联盟",
     "subtitle": "亚太艺术疗愈联盟 · APHA",
-    "text": "亚太艺术疗愈联盟的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。 APHA is an Asia-Pacific arts and healing alliance IP for creative wellbeing, therapeutic arts, and cross-cultural care practices. Asia-Pacific Healing Arts Alliance. mineral blue sage clay healing arts Asia-Pacific",
+    "text": "亚太艺术疗愈联盟连接艺术、身心疗愈与跨区域协作。 APHA connects healing arts, wellbeing practice, and Asia-Pacific collaboration. 艺术疗愈、教育、研究与联盟协作。 Healing arts, education, research, and alliance collaboration. Asia-Pacific Healing Arts Alliance. mineral blue sage clay healing arts Asia-Pacific",
     "url": "brand.html?brand=apha"
   },
   {
     "type": "guide",
     "slug": "apha",
     "title": "README",
-    "subtitle": "APHA · APHA/README.md",
+    "subtitle": "亚太艺术疗愈联盟 · APHA/README.md",
     "text": "APHA Chinese name: 亚太艺术疗愈联盟 English descriptor: Asia Pacific Healing Arts Alliance Brand Role APHA is an Asia Pacific arts and healing alliance IP for creative wellbeing, therapeutic arts, and cross cultural care practices. Visual Direction Temperament: restorative, humane, professional, warm, spacious. Color cues: mineral blue, sage green, clay, warm ivory. Imagery cues: gentle movement, art practice, natural textur",
     "url": "brand.html?brand=apha"
   },
   {
     "type": "ip",
     "slug": "manaendless",
-    "title": "MANA Endless",
+    "title": "无魔协会",
     "subtitle": "无魔协会 · MANA Endless",
-    "text": "无魔协会的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。 MANA Endless brand system with live guidelines, colors, voice, assets, and agent-readable source files. Alliance brand placeholder for future design guidelines. charcoal silver violet grey clarity continuous learning",
+    "text": "无魔协会是面向持续学习、清明协作与联盟实验的 IP。 MANA Endless is an IP for continuous learning, clear collaboration, and alliance experiments. 联盟、学习社区与协作实验。 Alliance, learning community, and collaboration experiments. Alliance brand placeholder for future design guidelines. charcoal silver violet grey clarity continuous learning",
     "url": "brand.html?brand=manaendless"
   },
   {
     "type": "ip",
     "slug": "opcglobal",
-    "title": "OPC Global",
+    "title": "欧匹赛全球联盟",
     "subtitle": "欧匹赛全球联盟 · OPC Global",
-    "text": "欧匹赛全球联盟的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。 OPC Global brand system with live guidelines, colors, voice, assets, and agent-readable source files. Global alliance brand placeholder for future design guidelines. deep blue graphite gold global alliance standards",
+    "text": "欧匹赛全球联盟是面向全球协作、标准与资源连接的 IP。 OPC Global is an IP for global collaboration, standards, and resource connection. 全球联盟、标准建设与跨区域协作。 Global alliance, standards, and cross-region collaboration. Global alliance brand placeholder for future design guidelines. deep blue graphite gold global alliance standards",
     "url": "brand.html?brand=opcglobal"
   },
   {
@@ -100,7 +100,7 @@
     "slug": "iptrust",
     "title": "IPTrustasset",
     "subtitle": "IPTrustasset · IPTRUST",
-    "text": "IPTrustasset的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。 IPTrustasset brand system with live guidelines, colors, voice, assets, and agent-readable source files. Trusted intellectual-property asset stewardship brand placeholder. navy platinum dark gold IP assets trust",
+    "text": "IPTrustasset 是面向知识产权资产可信管理与协作的 IP。 IPTrustasset is an IP for trusted intellectual-property asset stewardship and collaboration. IP 资产管理、信任索引与品牌源文件治理。 IP asset stewardship, trust indexing, and brand-source governance. Trusted intellectual-property asset stewardship brand placeholder. navy platinum dark gold IP assets trust",
     "url": "brand.html?brand=iptrust"
   },
   {
@@ -108,7 +108,7 @@
     "slug": "fengzhi",
     "title": "峰值永造局",
     "subtitle": "峰值永造局 · The Transformation Company · The Transformation Company · 界格",
-    "text": "峰值永造局 · 品牌设计系统（方向 A「界格」） The Transformation Company brand system with live guidelines, colors, voice, assets, and agent-readable source files. AI-native transformation delivery brand system. paper white ink black stone grey deep gold transformation",
+    "text": "峰值永造局是 AI 原生的组织转型与交付系统品牌。 The Transformation Company is an AI-native transformation and delivery brand system. 组织转型、战略交付、AI 原生运营。 Transformation, strategic delivery, and AI-native operations. AI-native transformation delivery brand system. paper white ink black stone grey deep gold transformation",
     "url": "brand.html?brand=fengzhi"
   },
   {
@@ -300,7 +300,7 @@
     "slug": "axisee",
     "title": "Axisee",
     "subtitle": "酒店盈利大师 · Axisee",
-    "text": "单一可信来源 · Single Source of Truth for every Axisee UI (web, admin console, mobile member, 企微 sidebar tools). The canonical design guideline for all Axisee products. AI General Manager for hotel marketing, private-domain operations, and revenue. universe blue Vanahom red promising gold hotel AI three agents",
+    "text": "Axisee 是面向酒店营销、私域运营与收入增长的 AI 总经理。 Axisee is an AI General Manager for hotel marketing, private-domain operations, and revenue growth. 酒店营销、私域运营、收益管理。 Hotel marketing, private-domain operations, and revenue management. AI General Manager for hotel marketing, private-domain operations, and revenue. universe blue Vanahom red promising gold hotel AI three agents",
     "url": "brand.html?brand=axisee"
   },
   {
@@ -316,7 +316,7 @@
     "slug": "sidera",
     "title": "Sidera",
     "subtitle": "侍天 · Sidera",
-    "text": "Sidera 侍天 — Design System Build-ready brand & visual spec for agents producing on-brand 侍天 work. Wisdom Navigator design system for premium F&B chains. ink earth gold cream vermillion wisdom navigator",
+    "text": "Sidera 是面向高端餐饮连锁的 Wisdom Navigator 设计系统。 Sidera is a Wisdom Navigator design system for premium F&B chains. 餐饮连锁、经营导航、品牌与服务系统。 F&B chains, operating navigation, brand and service systems. Wisdom Navigator design system for premium F&B chains. ink earth gold cream vermillion wisdom navigator",
     "url": "brand.html?brand=sidera"
   },
   {
@@ -332,7 +332,7 @@
     "slug": "1stepmore",
     "title": "1stepmore",
     "subtitle": "壹目贯维 · 1stepmore",
-    "text": "壹目贯维的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。 1stepmore brand system with live guidelines, colors, voice, assets, and agent-readable source files. Placeholder brand system for 1stepmore · 壹目贯维. one step clarity continuity systems precision",
+    "text": "1stepmore 是面向清晰决策、连续系统与精密执行的 IP。 1stepmore is an IP for clear decisions, continuous systems, and precise execution. 系统方法、决策工具与执行框架。 Systems methods, decision tools, and execution frameworks. Placeholder brand system for 1stepmore · 壹目贯维. one step clarity continuity systems precision",
     "url": "brand.html?brand=1stepmore"
   },
   {
@@ -346,64 +346,64 @@
   {
     "type": "ip",
     "slug": "agem",
-    "title": "AGEM",
+    "title": "游赋社",
     "subtitle": "游赋社 · AGEM",
-    "text": "游赋社的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。 AGEM brand system with live guidelines, colors, voice, assets, and agent-readable source files. Placeholder brand system for 游赋社 · AGEM. travel play culture community creation",
+    "text": "游赋社是面向游历、文化体验与共创社区的 IP。 AGEM is an IP for travel, cultural experience, and co-creative community. 文化游历、体验设计、社区共创。 Cultural travel, experience design, and community co-creation. Placeholder brand system for 游赋社 · AGEM. travel play culture community creation",
     "url": "brand.html?brand=agem"
   },
   {
     "type": "guide",
     "slug": "agem",
     "title": "README",
-    "subtitle": "AGEM · AGEM/README.md",
+    "subtitle": "游赋社 · AGEM/README.md",
     "text": "游赋社 · AGEM 主 IP： 游赋社 英文名： AGEM Status Placeholder brand folder. Add design guidelines, tokens, assets, and voice rules here as the IP system matures. Local Structure assets/brand images/ — brand visuals and generated hero images tokens/ — machine readable design tokens",
     "url": "brand.html?brand=agem"
   },
   {
     "type": "ip",
     "slug": "rgd",
-    "title": "RGD",
+    "title": "燃古豋",
     "subtitle": "燃古豋 · RGD",
-    "text": "燃古豋的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。 RGD brand system with live guidelines, colors, voice, assets, and agent-readable source files. Placeholder brand system for 燃古豋 · RGD. ember ancient ritual craft fire",
+    "text": "燃古豋是面向古意、火光、仪式与手作精神的 IP。 RGD is an IP for ancient spirit, firelight, ritual, and craft. 文化内容、仪式体验、手作与美学产品。 Cultural content, ritual experiences, craft, and aesthetic products. Placeholder brand system for 燃古豋 · RGD. ember ancient ritual craft fire",
     "url": "brand.html?brand=rgd"
   },
   {
     "type": "guide",
     "slug": "rgd",
     "title": "README",
-    "subtitle": "RGD · RGD/README.md",
+    "subtitle": "燃古豋 · RGD/README.md",
     "text": "燃古豋 · RGD 主 IP： 燃古豋 英文名： RGD Status Placeholder brand folder. Add design guidelines, tokens, assets, and voice rules here as the IP system matures. Local Structure assets/brand images/ — brand visuals and generated hero images tokens/ — machine readable design tokens",
     "url": "brand.html?brand=rgd"
   },
   {
     "type": "ip",
     "slug": "changoods",
-    "title": "Changoods",
+    "title": "常幸",
     "subtitle": "常幸 · Changoods",
-    "text": "常幸的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。 Changoods brand system with live guidelines, colors, voice, assets, and agent-readable source files. Placeholder brand system for 常幸 · Changoods. good fortune everyday warmth goods wellbeing",
+    "text": "常幸是面向日常好运、温暖物品与身心友好生活的 IP。 Changoods is an IP for everyday good fortune, warm goods, and wellbeing-oriented living. 生活方式、好物、身心友好产品。 Lifestyle, goods, and wellbeing-oriented products. Placeholder brand system for 常幸 · Changoods. good fortune everyday warmth goods wellbeing",
     "url": "brand.html?brand=changoods"
   },
   {
     "type": "guide",
     "slug": "changoods",
     "title": "README",
-    "subtitle": "Changoods · Changoods/README.md",
+    "subtitle": "常幸 · Changoods/README.md",
     "text": "常幸 · Changoods 主 IP： 常幸 英文名： Changoods Status Placeholder brand folder. Add design guidelines, tokens, assets, and voice rules here as the IP system matures. Local Structure assets/brand images/ — brand visuals and generated hero images tokens/ — machine readable design tokens",
     "url": "brand.html?brand=changoods"
   },
   {
     "type": "ip",
     "slug": "boya",
-    "title": "PKU BOYA Academy",
+    "title": "博雅问渠书院",
     "subtitle": "博雅问渠书院 · PKU BOYA Academy",
-    "text": "博雅问渠书院的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。 PKU BOYA Academy is a learning and inquiry IP centered on liberal education, classical depth, and contemporary knowledge flow. Liberal education and inquiry academy IP system. academy boya knowledge inquiry classical learning",
+    "text": "博雅问渠书院是面向博雅教育、经典深度与当代知识流动的书院 IP。 PKU BOYA Academy is an academy IP for liberal education, classical depth, and contemporary knowledge flow. 博雅教育、知识研究、书院课程与公共学习。 Liberal education, knowledge research, academy programs, and public learning. Liberal education and inquiry academy IP system. academy boya knowledge inquiry classical learning",
     "url": "brand.html?brand=boya"
   },
   {
     "type": "guide",
     "slug": "boya",
     "title": "README",
-    "subtitle": "PKU BOYA Academy · BOYA/README.md",
+    "subtitle": "博雅问渠书院 · BOYA/README.md",
     "text": "PKU BOYA Academy Chinese name: 博雅问渠书院 Brand Role PKU BOYA Academy is a learning and inquiry IP centered on liberal education, classical depth, and contemporary knowledge flow. Visual Direction Temperament: scholarly, clear, calm, rigorous, open. Color cues: academy blue, warm gold, paper white, soft stone grey. Imagery cues: reading rooms, flowing water, question marks, book margins, courtyards, knowledge maps. Agent",
     "url": "brand.html?brand=boya"
   },
@@ -412,7 +412,7 @@
     "slug": "apuch",
     "title": "岁知社 APUCH",
     "subtitle": "岁知社 APUCH · APUCH",
-    "text": "岁知社 APUCH 是面向文化智能、公共知识与 Agent 可读协作的 IP 系统。 APUCH is an IP under 岁知社 for cultural intelligence, public knowledge, and agent-readable collaboration. 岁知社旗下的文化智能与公共知识 IP 系统。 cultural intelligence public knowledge archive agent-readable IPTrust",
+    "text": "岁知社 APUCH 是面向文化智能、公共知识与 Agent 可读协作的 IP 系统。 APUCH is an IP system for cultural intelligence, public knowledge, and agent-readable collaboration. 文化智能、公共知识、档案与 Agent 可读协作。 Cultural intelligence, public knowledge, archives, and agent-readable collaboration. 岁知社旗下的文化智能与公共知识 IP 系统。 cultural intelligence public knowledge archive agent-readable IPTrust",
     "url": "brand.html?brand=apuch"
   },
   {

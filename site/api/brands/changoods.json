@@ -4,6 +4,16 @@
   "name": "Changoods",
   "nativeName": "常幸",
   "description": "Placeholder brand system for 常幸 · Changoods.",
+  "officialWebsite": "",
+  "mainLanguage": "zh",
+  "intro": {
+    "zh": "常幸是面向日常好运、温暖物品与身心友好生活的 IP。",
+    "en": "Changoods is an IP for everyday good fortune, warm goods, and wellbeing-oriented living."
+  },
+  "business": {
+    "zh": "生活方式、好物、身心友好产品。",
+    "en": "Lifestyle, goods, and wellbeing-oriented products."
+  },
   "primaryGuide": "Changoods/README.md",
   "theme": {
     "mode": "light",
@@ -23,12 +33,23 @@
       "wellbeing"
     ]
   },
-  "mainName": "Changoods",
-  "mainLanguage": "en",
+  "mainName": "常幸",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "常幸是面向日常好运、温暖物品与身心友好生活的 IP。",
+      "en": "Changoods is an IP for everyday good fortune, warm goods, and wellbeing-oriented living."
+    },
+    "business": {
+      "zh": "生活方式、好物、身心友好产品。",
+      "en": "Lifestyle, goods, and wellbeing-oriented products."
+    }
+  },
   "display": {
     "default": {
-      "language": "en",
-      "name": "Changoods"
+      "language": "zh",
+      "name": "常幸"
     },
     "zh": {
       "name": "常幸",
@@ -38,10 +59,6 @@
       "name": "Changoods",
       "secondaryName": "常幸"
     }
-  },
-  "intro": {
-    "zh": "常幸的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
-    "en": "Changoods brand system with live guidelines, colors, voice, assets, and agent-readable source files."
   },
   "url": "brand.html?brand=changoods",
   "apiUrl": "api/brands/changoods.json",

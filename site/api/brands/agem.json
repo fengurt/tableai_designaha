@@ -4,6 +4,16 @@
   "name": "AGEM",
   "nativeName": "游赋社",
   "description": "Placeholder brand system for 游赋社 · AGEM.",
+  "officialWebsite": "",
+  "mainLanguage": "zh",
+  "intro": {
+    "zh": "游赋社是面向游历、文化体验与共创社区的 IP。",
+    "en": "AGEM is an IP for travel, cultural experience, and co-creative community."
+  },
+  "business": {
+    "zh": "文化游历、体验设计、社区共创。",
+    "en": "Cultural travel, experience design, and community co-creation."
+  },
   "primaryGuide": "AGEM/README.md",
   "theme": {
     "mode": "light",
@@ -23,12 +33,23 @@
       "creation"
     ]
   },
-  "mainName": "AGEM",
-  "mainLanguage": "en",
+  "mainName": "游赋社",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "游赋社是面向游历、文化体验与共创社区的 IP。",
+      "en": "AGEM is an IP for travel, cultural experience, and co-creative community."
+    },
+    "business": {
+      "zh": "文化游历、体验设计、社区共创。",
+      "en": "Cultural travel, experience design, and community co-creation."
+    }
+  },
   "display": {
     "default": {
-      "language": "en",
-      "name": "AGEM"
+      "language": "zh",
+      "name": "游赋社"
     },
     "zh": {
       "name": "游赋社",
@@ -38,10 +59,6 @@
       "name": "AGEM",
       "secondaryName": "游赋社"
     }
-  },
-  "intro": {
-    "zh": "游赋社的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
-    "en": "AGEM brand system with live guidelines, colors, voice, assets, and agent-readable source files."
   },
   "url": "brand.html?brand=agem",
   "apiUrl": "api/brands/agem.json",

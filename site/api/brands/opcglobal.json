@@ -4,6 +4,16 @@
   "name": "OPC Global",
   "nativeName": "欧匹赛全球联盟",
   "description": "Global alliance brand placeholder for future design guidelines.",
+  "officialWebsite": "",
+  "mainLanguage": "zh",
+  "intro": {
+    "zh": "欧匹赛全球联盟是面向全球协作、标准与资源连接的 IP。",
+    "en": "OPC Global is an IP for global collaboration, standards, and resource connection."
+  },
+  "business": {
+    "zh": "全球联盟、标准建设与跨区域协作。",
+    "en": "Global alliance, standards, and cross-region collaboration."
+  },
   "primaryGuide": "",
   "theme": {
     "mode": "light",
@@ -23,12 +33,23 @@
       "standards"
     ]
   },
-  "mainName": "OPC Global",
-  "mainLanguage": "en",
+  "mainName": "欧匹赛全球联盟",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "欧匹赛全球联盟是面向全球协作、标准与资源连接的 IP。",
+      "en": "OPC Global is an IP for global collaboration, standards, and resource connection."
+    },
+    "business": {
+      "zh": "全球联盟、标准建设与跨区域协作。",
+      "en": "Global alliance, standards, and cross-region collaboration."
+    }
+  },
   "display": {
     "default": {
-      "language": "en",
-      "name": "OPC Global"
+      "language": "zh",
+      "name": "欧匹赛全球联盟"
     },
     "zh": {
       "name": "欧匹赛全球联盟",
@@ -38,10 +59,6 @@
       "name": "OPC Global",
       "secondaryName": "欧匹赛全球联盟"
     }
-  },
-  "intro": {
-    "zh": "欧匹赛全球联盟的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
-    "en": "OPC Global brand system with live guidelines, colors, voice, assets, and agent-readable source files."
   },
   "url": "brand.html?brand=opcglobal",
   "apiUrl": "api/brands/opcglobal.json",

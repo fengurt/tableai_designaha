@@ -4,6 +4,16 @@
   "name": "KiND",
   "nativeName": "善渡科技",
   "description": "Human-first AI workforce brand: for all, not for few.",
+  "officialWebsite": "",
+  "mainLanguage": "en",
+  "intro": {
+    "zh": "KiND 是以人为先的 AI 劳动力品牌，让 AI 服务所有人，而不是少数人。",
+    "en": "KiND is a human-first AI workforce brand: AI for all, not for few."
+  },
+  "business": {
+    "zh": "AI 劳动力、智能体产品与企业自动化。",
+    "en": "AI workforce, agent products, and enterprise automation."
+  },
   "primaryGuide": "KiND/KiND Design.md",
   "theme": {
     "mode": "light",
@@ -24,7 +34,18 @@
     ]
   },
   "mainName": "KiND",
-  "mainLanguage": "en",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "en",
+    "intro": {
+      "zh": "KiND 是以人为先的 AI 劳动力品牌，让 AI 服务所有人，而不是少数人。",
+      "en": "KiND is a human-first AI workforce brand: AI for all, not for few."
+    },
+    "business": {
+      "zh": "AI 劳动力、智能体产品与企业自动化。",
+      "en": "AI workforce, agent products, and enterprise automation."
+    }
+  },
   "display": {
     "default": {
       "language": "en",
@@ -38,10 +59,6 @@
       "name": "KiND",
       "secondaryName": "善渡科技"
     }
-  },
-  "intro": {
-    "zh": "善渡科技 · Kind Technology",
-    "en": "KiND turns AI into a Kind Workforce anyone can hire — AI for all, not for few."
   },
   "url": "brand.html?brand=kind",
   "apiUrl": "api/brands/kind.json",

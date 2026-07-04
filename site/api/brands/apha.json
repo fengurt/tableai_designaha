@@ -4,6 +4,16 @@
   "name": "APHA",
   "nativeName": "亚太艺术疗愈联盟",
   "description": "Asia-Pacific Healing Arts Alliance.",
+  "officialWebsite": "",
+  "mainLanguage": "zh",
+  "intro": {
+    "zh": "亚太艺术疗愈联盟连接艺术、身心疗愈与跨区域协作。",
+    "en": "APHA connects healing arts, wellbeing practice, and Asia-Pacific collaboration."
+  },
+  "business": {
+    "zh": "艺术疗愈、教育、研究与联盟协作。",
+    "en": "Healing arts, education, research, and alliance collaboration."
+  },
   "primaryGuide": "APHA/README.md",
   "theme": {
     "mode": "light",
@@ -23,12 +33,23 @@
       "Asia-Pacific"
     ]
   },
-  "mainName": "APHA",
-  "mainLanguage": "en",
+  "mainName": "亚太艺术疗愈联盟",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "亚太艺术疗愈联盟连接艺术、身心疗愈与跨区域协作。",
+      "en": "APHA connects healing arts, wellbeing practice, and Asia-Pacific collaboration."
+    },
+    "business": {
+      "zh": "艺术疗愈、教育、研究与联盟协作。",
+      "en": "Healing arts, education, research, and alliance collaboration."
+    }
+  },
   "display": {
     "default": {
-      "language": "en",
-      "name": "APHA"
+      "language": "zh",
+      "name": "亚太艺术疗愈联盟"
     },
     "zh": {
       "name": "亚太艺术疗愈联盟",
@@ -38,10 +59,6 @@
       "name": "APHA",
       "secondaryName": "亚太艺术疗愈联盟"
     }
-  },
-  "intro": {
-    "zh": "亚太艺术疗愈联盟的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
-    "en": "APHA is an Asia-Pacific arts and healing alliance IP for creative wellbeing, therapeutic arts, and cross-cultural care practices."
   },
   "url": "brand.html?brand=apha",
   "apiUrl": "api/brands/apha.json",

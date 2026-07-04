@@ -4,6 +4,16 @@
   "name": "岁知社 APUCH",
   "nativeName": "APUCH",
   "description": "岁知社旗下的文化智能与公共知识 IP 系统。",
+  "officialWebsite": "",
+  "mainLanguage": "zh",
+  "intro": {
+    "zh": "岁知社 APUCH 是面向文化智能、公共知识与 Agent 可读协作的 IP 系统。",
+    "en": "APUCH is an IP system for cultural intelligence, public knowledge, and agent-readable collaboration."
+  },
+  "business": {
+    "zh": "文化智能、公共知识、档案与 Agent 可读协作。",
+    "en": "Cultural intelligence, public knowledge, archives, and agent-readable collaboration."
+  },
   "primaryGuide": "APUCH/README.md",
   "theme": {
     "mode": "light",
@@ -24,7 +34,18 @@
     ]
   },
   "mainName": "岁知社 APUCH",
-  "mainLanguage": "zh",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "岁知社 APUCH 是面向文化智能、公共知识与 Agent 可读协作的 IP 系统。",
+      "en": "APUCH is an IP system for cultural intelligence, public knowledge, and agent-readable collaboration."
+    },
+    "business": {
+      "zh": "文化智能、公共知识、档案与 Agent 可读协作。",
+      "en": "Cultural intelligence, public knowledge, archives, and agent-readable collaboration."
+    }
+  },
   "display": {
     "default": {
       "language": "zh",
@@ -38,10 +59,6 @@
       "name": "APUCH",
       "secondaryName": "岁知社 APUCH"
     }
-  },
-  "intro": {
-    "zh": "岁知社 APUCH 是面向文化智能、公共知识与 Agent 可读协作的 IP 系统。",
-    "en": "APUCH is an IP under 岁知社 for cultural intelligence, public knowledge, and agent-readable collaboration."
   },
   "url": "brand.html?brand=apuch",
   "apiUrl": "api/brands/apuch.json",
