@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-04T11:21:06.630Z",
+  "generatedAt": "2026-07-04T11:22:56.760Z",
   "version": {
-    "hash": "3b76a2c57d94dc9aa144f54f84b84ded524cc16b",
-    "shortHash": "3b76a2c",
-    "date": "2026-07-04T18:33:47+08:00",
-    "message": "Bind Cloudflare R2 media bucket",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3b76a2c57d94dc9aa144f54f84b84ded524cc16b"
+    "hash": "1d5ea4d5ecda9bbc650819819c83970dd21c4b08",
+    "shortHash": "1d5ea4d",
+    "date": "2026-07-04T19:21:39+08:00",
+    "message": "Canonicalize apuch domain and sync site",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/1d5ea4d5ecda9bbc650819819c83970dd21c4b08"
   },
   "brands": [
     {
@@ -170,11 +170,11 @@
   "history": {
     "apiUrl": "api/versions.json",
     "latest": {
-      "hash": "3b76a2c57d94dc9aa144f54f84b84ded524cc16b",
-      "shortHash": "3b76a2c",
-      "date": "2026-07-04T18:33:47+08:00",
-      "message": "Bind Cloudflare R2 media bucket",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3b76a2c57d94dc9aa144f54f84b84ded524cc16b"
+      "hash": "1d5ea4d5ecda9bbc650819819c83970dd21c4b08",
+      "shortHash": "1d5ea4d",
+      "date": "2026-07-04T19:21:39+08:00",
+      "message": "Canonicalize apuch domain and sync site",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/1d5ea4d5ecda9bbc650819819c83970dd21c4b08"
     }
   },
   "sync": {

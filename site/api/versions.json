@@ -1,5 +1,12 @@
 [
   {
+    "hash": "1d5ea4d5ecda9bbc650819819c83970dd21c4b08",
+    "shortHash": "1d5ea4d",
+    "date": "2026-07-04T19:21:39+08:00",
+    "message": "Canonicalize apuch domain and sync site",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/1d5ea4d5ecda9bbc650819819c83970dd21c4b08"
+  },
+  {
     "hash": "3b76a2c57d94dc9aa144f54f84b84ded524cc16b",
     "shortHash": "3b76a2c",
     "date": "2026-07-04T18:33:47+08:00",
@@ -75,12 +82,5 @@
     "date": "2026-07-04T10:46:14+08:00",
     "message": "Refine IPTrust public entry UX",
     "url": "https://github.com/fengurt/tableai_designaha/commit/a0998f7e8a9aa8e198f1671ff03ed3cf2aaf4f8c"
-  },
-  {
-    "hash": "fb8ed395e5b616bfb0a83fd54f2b68e49103e50b",
-    "shortHash": "fb8ed39",
-    "date": "2026-07-04T09:46:53+08:00",
-    "message": "Upgrade IPTrust interactive brand cards",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/fb8ed395e5b616bfb0a83fd54f2b68e49103e50b"
   }
 ]
