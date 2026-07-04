@@ -465,7 +465,6 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
   <main>
     <section class="hub-hero">
       <div class="hero-copy">
-        <p class="eyebrow" data-i18n="home.eyebrow">IP 信任索引 · Agent 可读品牌源</p>
         <h1 data-i18n="hub.name">${hubNameCn}</h1>
         <p data-i18n="home.lead">高楼宾客似曾识，日光底下无新事。</p>
         <div class="actions">
@@ -1250,7 +1249,6 @@ const i18n = {
     "nav.agent": "我是 Agent",
     "nav.partner": "我是合伙人",
     "nav.collab": "我想合作",
-    "home.eyebrow": "IP 信任索引 · Agent 可读品牌源",
     "home.lead": "高楼宾客似曾识，日光底下无新事。",
     "home.openJson": "打开 JSON 索引",
     "home.adminEdit": "管理编辑",
@@ -1315,7 +1313,6 @@ const i18n = {
     "nav.agent": "I am an Agent",
     "nav.partner": "I am a Partner",
     "nav.collab": "Work with Us",
-    "home.eyebrow": "IP trust index · Agent-readable brand source",
     "home.lead": "Old guests in high halls; nothing new under the sun.",
     "home.openJson": "Open JSON index",
     "home.adminEdit": "Admin edit",
