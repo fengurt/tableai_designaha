@@ -71,11 +71,11 @@
     "en": ""
   },
   "version": {
-    "hash": "0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
-    "shortHash": "0e3d71b",
-    "date": "2026-07-04T21:38:07+08:00",
-    "message": "Add PaM Design Office IP",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8"
+    "hash": "d420206221cd9243de4d808a2f4d6d05653fc791",
+    "shortHash": "d420206",
+    "date": "2026-07-04T21:59:47+08:00",
+    "message": "Simplify homepage entry experience",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/d420206221cd9243de4d808a2f4d6d05653fc791"
   },
   "historyUrl": "api/history/apha.json",
   "history": [

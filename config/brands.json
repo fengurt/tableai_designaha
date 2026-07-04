@@ -285,6 +285,10 @@
       "zh": "餐饮连锁、经营导航、品牌与服务系统。",
       "en": "F&B chains, operating navigation, brand and service systems."
     },
+    "notes": {
+      "zh": "参考链接：https://frienji.kenjilopezalt.com/；https://www.seriouseats.com/",
+      "en": "Reference links: https://frienji.kenjilopezalt.com/; https://www.seriouseats.com/"
+    },
     "primaryGuide": "Sidera/sidera_design.md",
     "theme": {
       "mode": "dark",
