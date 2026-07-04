@@ -192,6 +192,65 @@ p { line-height: 1.65; }
   line-height: 1.55;
   margin: 0;
 }
+.portal-action {
+  margin-top: 14px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+.portal-action:hover,
+.portal-action.copied {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+.portal-status {
+  min-height: 22px;
+  margin-top: 10px !important;
+  color: var(--ink) !important;
+  font-weight: 760;
+}
+.portal-points {
+  display: grid;
+  gap: 5px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+.portal-points li::before {
+  content: "+";
+  margin-right: 6px;
+  color: var(--blue);
+  font-weight: 900;
+}
+.collab-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 108px;
+  gap: 14px;
+  align-items: end;
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 254, 250, .72);
+}
+.collab-mail {
+  color: var(--ink);
+  font-size: 17px;
+  font-weight: 860;
+  text-decoration: none;
+}
+.collab-mail:hover { color: var(--blue); }
+.collab-card img {
+  width: 108px;
+  height: 108px;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: white;
+}
 .portal-links {
   display: flex;
   flex-wrap: wrap;
@@ -615,6 +674,7 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .hero-index-row { grid-template-columns: minmax(0, 1fr) auto; }
   .hero-index-colors { display: none; }
   .entry-portals { grid-template-columns: 1fr; }
+  .collab-card { grid-template-columns: 1fr; align-items: start; }
   .history-panel { grid-template-columns: 1fr; }
   .version-item { grid-template-columns: 70px minmax(0, 1fr); }
   .version-item time { display: none; }

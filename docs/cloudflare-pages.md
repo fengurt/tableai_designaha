@@ -47,10 +47,13 @@ apuch.art -> tableai-designaha.pages.dev
 www.apuch.art -> tableai-designaha.pages.dev
 ```
 
-The production site canonicalizes `www.apuch.art` to `apuch.art` through `site/_redirects`:
+The production site canonicalizes `www.apuch.art` to `apuch.art` through `functions/_middleware.js`:
 
-```txt
-https://www.apuch.art/* -> https://apuch.art/:splat
+```js
+if (url.hostname === "www.apuch.art") {
+  url.hostname = "apuch.art";
+  return Response.redirect(url.toString(), 301);
+}
 ```
 
 ## Media storage
@@ -94,11 +97,30 @@ MEDIA_ADMIN_KEY=<strong random key>
 
 Clients may send either `X-Admin-Key: <key>` or `Authorization: Bearer <key>`.
 
+## Admin API login
+
+The public admin page can unlock with API Key + Google Authenticator before loading the GitHub editor.
+
+Cloudflare Pages secrets:
+
+```txt
+ADMIN_API_KEY=<strong random key>
+ADMIN_TOTP_SECRET=<base32 secret used in Google Authenticator>
+```
+
+Optional scoped access:
+
+```txt
+ADMIN_IP_SCOPES=tableai,apuch,apha
+```
+
+Use `*` or omit `ADMIN_IP_SCOPES` for all IPs. The login endpoint is `POST /api/admin/login` with `X-Admin-Key` and a six-digit `totp`.
+
 Local smoke test:
 
 ```sh
 npm run build:site
-wrangler pages dev site --compatibility-date=2026-05-03 --port=8788 --r2 MEDIA_BUCKET --binding MEDIA_ADMIN_KEY=local-dev-key
+wrangler pages dev site --compatibility-date=2026-05-03 --port=8788 --r2 MEDIA_BUCKET --binding MEDIA_ADMIN_KEY=local-dev-key --binding ADMIN_API_KEY=local-admin-key --binding ADMIN_TOTP_SECRET=JBSWY3DPEHPK3PXP
 curl http://127.0.0.1:8788/api/health
 printf 'hello' | curl -X PUT http://127.0.0.1:8788/api/media/test.txt -H 'X-Admin-Key: local-dev-key' --data-binary @-
 ```

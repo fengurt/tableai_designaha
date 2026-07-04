@@ -10,6 +10,7 @@ const apiDir = join(siteDir, "api");
 const brandApiDir = join(apiDir, "brands");
 const assetsDir = join(siteDir, "assets");
 const imageDir = join(assetsDir, "brand-images");
+const contactDir = join(assetsDir, "contact");
 
 const brands = JSON.parse(await readFile(join(root, "config/brands.json"), "utf8"));
 const adminConfig = existsSync(join(root, "config/site-admin.public.json"))
@@ -202,9 +203,13 @@ function loadVersions() {
 await rm(siteDir, { recursive: true, force: true });
 await mkdir(brandApiDir, { recursive: true });
 await mkdir(imageDir, { recursive: true });
+await mkdir(contactDir, { recursive: true });
 await mkdir(join(siteDir, "skills", "iptrust-live-update"), { recursive: true });
 if (existsSync(join(root, "skills/iptrust-live-update/SKILL.md"))) {
   await copyFile(join(root, "skills/iptrust-live-update/SKILL.md"), join(siteDir, "skills/iptrust-live-update/SKILL.md"));
+}
+if (existsSync(join(root, "assets/contact/wecom-qr.png"))) {
+  await copyFile(join(root, "assets/contact/wecom-qr.png"), join(contactDir, "wecom-qr.png"));
 }
 
 const brandPayloads = [];
@@ -408,8 +413,6 @@ await writeFile(join(siteDir, "_headers"), [
 ].join("\n"));
 
 await writeFile(join(siteDir, "_redirects"), [
-  "https://www.apuch.art/*  https://apuch.art/:splat  301",
-  "/admin  /admin.html  200",
   "/llms  /llms.txt  200",
   "/manifest  /api/manifest.json  200",
   "/brands  /api/brands.json  200",
@@ -482,7 +485,9 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       <article class="portal" id="agent-entry">
         <p class="eyebrow">Agent</p>
         <h3 data-i18n="portal.agentTitle">我是 Agent</h3>
-        <p data-i18n="portal.agentBody">读取最新 IP 规范、API、llms 与 skill。</p>
+        <p data-i18n="portal.agentBody">点击复制 IPTrust Skill，直接发给你的 Agent 小伙伴。</p>
+        <button class="portal-action" type="button" data-portal-action="agent" data-i18n="portal.agentAction">复制 Skill</button>
+        <p class="portal-status" data-portal-status="agent" aria-live="polite"></p>
         <div class="portal-links">
           <a href="api/brands.json">JSON</a>
           <a href="llms.txt">llms.txt</a>
@@ -495,7 +500,13 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       <article class="portal" id="partner-entry">
         <p class="eyebrow">Partner</p>
         <h3 data-i18n="portal.partnerTitle">我是合伙人</h3>
-        <p data-i18n="portal.partnerBody">查看 IP 组合、品牌资产与协作入口。</p>
+        <p data-i18n="portal.partnerBody">请联系获取管理 API。API 可单独管理单个 IP，也可管理多个 IP 组合。</p>
+        <button class="portal-action" type="button" data-portal-action="partner" data-i18n="portal.partnerAction">查看管理方式</button>
+        <p class="portal-status" data-portal-status="partner" aria-live="polite"></p>
+        <ul class="portal-points">
+          <li data-i18n="portal.partnerPointApi">API 可按单个或多个 IP 授权。</li>
+          <li data-i18n="portal.partnerPointLogin">后台通过 API Key + Google Authenticator 登录。</li>
+        </ul>
         <div class="portal-links">
           <a href="#brandGrid" data-i18n="portal.openIps">查看 IP</a>
           <a href="admin.html" data-i18n="portal.admin">管理入口</a>
@@ -504,7 +515,11 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       <article class="portal" id="collab-entry">
         <p class="eyebrow">Collab</p>
         <h3 data-i18n="portal.collabTitle">我想合作</h3>
-        <p data-i18n="portal.collabBody">提交新 IP、共创品牌系统或接入 Agent 工作流。</p>
+        <p data-i18n="portal.collabBody">我们的 IP 进化论服务方案：定位、命名、视觉、Agent Skill、官网、API 与长期版本管理。</p>
+        <div class="collab-card">
+          <a class="collab-mail" href="mailto:hi@tableai.ai">hi@tableai.ai</a>
+          <img src="assets/contact/wecom-qr.png" alt="企业微信二维码" loading="lazy">
+        </div>
         <div class="portal-links">
           <a href="https://github.com/${adminConfig.owner ?? "fengurt"}/${adminConfig.repo ?? "tableai_designaha"}/issues/new" data-i18n="portal.github">发起合作</a>
           <a href="#brandGrid" data-i18n="portal.explore">先看 IP</a>
@@ -562,6 +577,7 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
+  <base href="../">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin · ${hubName}</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -580,8 +596,10 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
     <section class="panel" id="unlockPanel">
       <p class="eyebrow" data-i18n="nav.admin">管理</p>
       <h1 data-i18n="admin.unlockTitle">先输入 Key</h1>
-      <p class="muted" data-i18n="admin.unlockBody">解锁，再编辑。</p>
+      <p class="muted" data-i18n="admin.unlockBody">使用 API Key + Google Authenticator 登录；可按单个或多个 IP 授权。</p>
       <label><span data-i18n="admin.keyLabel">Key</span><input id="adminKey" type="password" autocomplete="current-password"></label>
+      <label><span data-i18n="admin.totpLabel">Google Authenticator</span><input id="totpCode" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" maxlength="8" placeholder="000000"></label>
+      <label><span data-i18n="admin.scopeLabel">IP 权限范围</span><select id="adminScopes" multiple size="4"></select></label>
       <button id="unlockButton" data-i18n="admin.unlockButton">继续</button>
       <p class="notice" id="unlockStatus"></p>
     </section>
@@ -607,6 +625,9 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
   <script src="assets/admin.js" type="module"></script>
 </body>
 </html>`);
+
+await mkdir(join(siteDir, "admin"), { recursive: true });
+await copyFile(join(siteDir, "admin.html"), join(siteDir, "admin", "index.html"));
 
 await writeFile(join(assetsDir, "site.css"), html`:root {
   color-scheme: light;
@@ -801,6 +822,65 @@ p { line-height: 1.65; }
   font-size: 14px;
   line-height: 1.55;
   margin: 0;
+}
+.portal-action {
+  margin-top: 14px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+.portal-action:hover,
+.portal-action.copied {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+.portal-status {
+  min-height: 22px;
+  margin-top: 10px !important;
+  color: var(--ink) !important;
+  font-weight: 760;
+}
+.portal-points {
+  display: grid;
+  gap: 5px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+.portal-points li::before {
+  content: "+";
+  margin-right: 6px;
+  color: var(--blue);
+  font-weight: 900;
+}
+.collab-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 108px;
+  gap: 14px;
+  align-items: end;
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 254, 250, .72);
+}
+.collab-mail {
+  color: var(--ink);
+  font-size: 17px;
+  font-weight: 860;
+  text-decoration: none;
+}
+.collab-mail:hover { color: var(--blue); }
+.collab-card img {
+  width: 108px;
+  height: 108px;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: white;
 }
 .portal-links {
   display: flex;
@@ -1225,6 +1305,7 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .hero-index-row { grid-template-columns: minmax(0, 1fr) auto; }
   .hero-index-colors { display: none; }
   .entry-portals { grid-template-columns: 1fr; }
+  .collab-card { grid-template-columns: 1fr; align-items: start; }
   .history-panel { grid-template-columns: 1fr; }
   .version-item { grid-template-columns: 70px minmax(0, 1fr); }
   .version-item time { display: none; }
@@ -1280,11 +1361,17 @@ const i18n = {
     "brand.noneGuide": "暂无规范文件",
     "brand.noneTokens": "暂无 token 文件",
     "portal.agentTitle": "我是 Agent",
-    "portal.agentBody": "读取最新 IP 规范、API、llms 与 skill。",
+    "portal.agentBody": "点击复制 IPTrust Skill，直接发给你的 Agent 小伙伴。",
+    "portal.agentAction": "复制 Skill",
+    "portal.agentCopied": "✓ 已复制 Skill。请发给你的 Agent 小伙伴 ✦",
     "portal.partnerTitle": "我是合伙人",
-    "portal.partnerBody": "查看 IP 组合、品牌资产与协作入口。",
+    "portal.partnerBody": "请联系获取管理 API。API 可单独管理单个 IP，也可管理多个 IP 组合。",
+    "portal.partnerAction": "查看管理方式",
+    "portal.partnerStatus": "请联系获取管理 API。后台支持 API Key + Google Authenticator。",
+    "portal.partnerPointApi": "API 可按单个或多个 IP 授权。",
+    "portal.partnerPointLogin": "后台通过 API Key + Google Authenticator 登录。",
     "portal.collabTitle": "我想合作",
-    "portal.collabBody": "提交新 IP、共创品牌系统或接入 Agent 工作流。",
+    "portal.collabBody": "我们的 IP 进化论服务方案：定位、命名、视觉、Agent Skill、官网、API 与长期版本管理。",
     "portal.openIps": "查看 IP",
     "portal.admin": "管理入口",
     "portal.github": "发起合作",
@@ -1296,6 +1383,8 @@ const i18n = {
     "admin.unlockTitle": "先输入 Key",
     "admin.unlockBody": "解锁，再编辑。",
     "admin.keyLabel": "Key",
+    "admin.totpLabel": "Google Authenticator",
+    "admin.scopeLabel": "IP 权限范围",
     "admin.unlockButton": "继续",
     "admin.sync": "同步",
     "admin.editTitle": "编辑源文件",
@@ -1344,11 +1433,17 @@ const i18n = {
     "brand.noneGuide": "No guideline files yet",
     "brand.noneTokens": "No token files yet",
     "portal.agentTitle": "I am an Agent",
-    "portal.agentBody": "Read the latest IP guidelines, APIs, llms, and skill.",
+    "portal.agentBody": "Click to copy the IPTrust Skill and send it to your agent teammate.",
+    "portal.agentAction": "Copy Skill",
+    "portal.agentCopied": "✓ Skill copied. Send it to your agent teammate ✦",
     "portal.partnerTitle": "I am a Partner",
-    "portal.partnerBody": "Explore IP portfolios, brand assets, and collaboration paths.",
+    "portal.partnerBody": "Contact us for the management API. API access can cover one IP or multiple IPs.",
+    "portal.partnerAction": "View admin path",
+    "portal.partnerStatus": "Contact us for the management API. Admin supports API Key + Google Authenticator.",
+    "portal.partnerPointApi": "API access can be scoped to one or multiple IPs.",
+    "portal.partnerPointLogin": "Admin login uses API Key + Google Authenticator.",
     "portal.collabTitle": "Work with Us",
-    "portal.collabBody": "Submit a new IP, co-create a brand system, or connect an Agent workflow.",
+    "portal.collabBody": "Our IP evolution service: positioning, naming, identity, Agent Skill, website, API, and long-term versioning.",
     "portal.openIps": "View IPs",
     "portal.admin": "Admin entry",
     "portal.github": "Start on GitHub",
@@ -1360,6 +1455,8 @@ const i18n = {
     "admin.unlockTitle": "Key first",
     "admin.unlockBody": "Unlock. Then edit.",
     "admin.keyLabel": "Key",
+    "admin.totpLabel": "Google Authenticator",
+    "admin.scopeLabel": "IP scope",
     "admin.unlockButton": "Continue",
     "admin.sync": "Sync",
     "admin.editTitle": "Edit source",
@@ -1652,6 +1749,28 @@ function referenceText(brand = {}) {
   ].join("\\n");
 }
 
+async function portalSkillText() {
+  const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", location.href);
+  skillUrl.searchParams.set("v", BUILD_VERSION);
+  const manifestUrl = new URL("api/manifest.json", location.href).href;
+  const searchUrl = new URL("api/search.json", location.href).href;
+  let skill = "";
+  try {
+    const res = await fetch(skillUrl);
+    if (res.ok) skill = await res.text();
+  } catch (error) {
+    console.warn("Could not load IPTrust Skill for copy.", error);
+  }
+  return [
+    "IPTrust Skill ✦",
+    "Hub: " + location.origin + location.pathname,
+    "Manifest: " + manifestUrl,
+    "Search API: " + searchUrl,
+    "",
+    skill || "Use the IPTrust manifest and brand APIs to read each IP's latest name, colors, intro, business, language, and guideline files.",
+  ].join("\\n");
+}
+
 function copyWithTextarea(text) {
   const textarea = document.createElement("textarea");
   textarea.value = text;
@@ -1679,7 +1798,6 @@ function showManualCopy(text) {
 }
 
 async function writeClipboardText(text) {
-  if (copyWithTextarea(text)) return "copied";
   try {
     if (navigator.clipboard?.writeText) {
       await Promise.race([
@@ -1689,7 +1807,12 @@ async function writeClipboardText(text) {
       return "copied";
     }
   } catch (error) {
-    console.warn("Clipboard API unavailable, falling back to manual selection.", error);
+    console.warn("Clipboard API unavailable, trying legacy copy.", error);
+  }
+  try {
+    if (copyWithTextarea(text)) return "copied";
+  } catch (error) {
+    console.warn("Legacy copy unavailable, falling back to manual selection.", error);
   }
   showManualCopy(text);
   return "selected";
@@ -1704,6 +1827,33 @@ async function copyReference(brand, button) {
     if (!button.dataset.iconOnly) button.textContent = previous || t("copy.reference");
     button.classList.remove("copied");
   }, 1200);
+}
+
+function setupPortalActions() {
+  document.querySelectorAll("[data-portal-action]").forEach((button) => {
+    if (button.dataset.ready) return;
+    button.dataset.ready = "true";
+    button.addEventListener("click", async () => {
+      const action = button.dataset.portalAction;
+      const statusNode = document.querySelector(\`[data-portal-status="\${action}"]\`);
+      try {
+        if (action === "agent") {
+          const text = await portalSkillText();
+          await writeClipboardText(text);
+          button.classList.add("copied");
+          if (statusNode) statusNode.textContent = t("portal.agentCopied");
+          setTimeout(() => button.classList.remove("copied"), 1000);
+          return;
+        }
+        if (action === "partner") {
+          if (statusNode) statusNode.textContent = t("portal.partnerStatus");
+        }
+      } catch (error) {
+        if (statusNode) statusNode.textContent = t("copy.fail");
+        console.error(error);
+      }
+    });
+  });
 }
 
 function setupCopyButtons(brands) {
@@ -1924,13 +2074,14 @@ async function renderBrand() {
 applyI18n();
 setupLanguageToggle();
 setupSearch();
+setupPortalActions();
 renderHeroIndex().catch(console.error);
 renderVersions().catch(console.error);
 renderIndex().catch(console.error);
 renderBrand().catch(console.error);`);
 
 await writeFile(join(assetsDir, "admin.js"), html`const $ = (selector) => document.querySelector(selector);
-const state = { config: null, brands: [], currentFile: null, currentSha: null };
+const state = { config: null, brands: [], authScopes: [], currentFile: null, currentSha: null };
 const adminCopy = {
   cn: {
     needToken: "先填 Token。",
@@ -1938,6 +2089,9 @@ const adminCopy = {
     saved: "已保存。等待部署。",
     noKey: "缺少 Key 配置。",
     badKey: "Key 不对。",
+    totpRequired: "请填写 Google Authenticator 动态码。",
+    apiLoginFailed: "API 登录失败。",
+    apiNotConfigured: "后台 API 尚未配置 Cloudflare secrets。",
     unlocked: "已解锁。Token next.",
   },
   en: {
@@ -1946,6 +2100,9 @@ const adminCopy = {
     saved: "Saved. Deploying.",
     noKey: "No key set.",
     badKey: "Wrong key.",
+    totpRequired: "Enter the Google Authenticator code.",
+    apiLoginFailed: "API login failed.",
+    apiNotConfigured: "Admin API is not configured with Cloudflare secrets yet.",
     unlocked: "Unlocked. Token next.",
   },
 };
@@ -2006,8 +2163,30 @@ function contentsUrl(path, branch) {
 
 async function populateBrands() {
   state.brands = await loadJson("api/brands.json");
-  $("#brandSelect").innerHTML = state.brands.map((brand) => \`<option value="\${brand.slug}">\${brand.mainName || brand.name}</option>\`).join("");
+  const scopes = state.authScopes.length ? state.authScopes : ["*"];
+  const brands = scopes.includes("*")
+    ? state.brands
+    : state.brands.filter((brand) => scopes.includes(brand.slug));
+  $("#brandSelect").innerHTML = brands.map((brand) => \`<option value="\${brand.slug}">\${brand.mainName || brand.name}</option>\`).join("");
   await populateFiles();
+}
+
+async function populateAdminScopes() {
+  const select = $("#adminScopes");
+  if (!select) return;
+  const brands = await loadJson("api/brands.json");
+  select.innerHTML = [
+    \`<option value="*">*</option>\`,
+    ...brands.map((brand) => \`<option value="\${brand.slug}">\${brand.mainName || brand.name}</option>\`),
+  ].join("");
+  select.querySelector('option[value="*"]').selected = true;
+}
+
+function selectedAdminScopes() {
+  const select = $("#adminScopes");
+  if (!select) return ["*"];
+  const values = [...select.selectedOptions].map((option) => option.value);
+  return values.length ? values : ["*"];
 }
 
 async function populateFiles() {
@@ -2052,8 +2231,44 @@ async function saveFile() {
   status(copy("saved"));
 }
 
+async function apiUnlock(config) {
+  const key = $("#adminKey").value;
+  const totp = $("#totpCode")?.value.trim();
+  if (!totp) throw new Error(copy("totpRequired"));
+  const res = await fetch("api/admin/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-Admin-Key": key,
+    },
+    body: JSON.stringify({
+      adminKey: key,
+      totp,
+      scopes: selectedAdminScopes(),
+      repo: config.repo,
+    }),
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) {
+    if (data.error === "admin_auth_not_configured") throw new Error(copy("apiNotConfigured"));
+    if (data.error === "bad_api_key") throw new Error(copy("badKey"));
+    if (data.error === "bad_totp") throw new Error(copy("totpRequired"));
+    throw new Error(data.error || copy("apiLoginFailed"));
+  }
+  state.authScopes = data.scopes?.length ? data.scopes : data.allowedScopes || ["*"];
+}
+
 async function unlock() {
   state.config = await loadJson("admin-config.json");
+  const totp = $("#totpCode")?.value.trim();
+  if (totp) {
+    await apiUnlock(state.config);
+    $("#unlockPanel").classList.add("hidden");
+    $("#editorPanel").classList.remove("hidden");
+    await populateBrands();
+    status(copy("unlocked"));
+    return;
+  }
   const expected = state.config.adminKeySha256;
   if (!expected) {
     $("#unlockStatus").textContent = copy("noKey");
@@ -2070,6 +2285,8 @@ async function unlock() {
   await populateBrands();
   status(copy("unlocked"));
 }
+
+populateAdminScopes().catch(console.error);
 
 $("#unlockButton")?.addEventListener("click", () => unlock().catch((err) => {
   $("#unlockStatus").textContent = err.message;

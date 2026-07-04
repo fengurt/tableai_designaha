@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "1d5ea4d";
+const BUILD_VERSION = "7724d94";
 
 const i18n = {
   cn: {
@@ -37,11 +37,17 @@ const i18n = {
     "brand.noneGuide": "暂无规范文件",
     "brand.noneTokens": "暂无 token 文件",
     "portal.agentTitle": "我是 Agent",
-    "portal.agentBody": "读取最新 IP 规范、API、llms 与 skill。",
+    "portal.agentBody": "点击复制 IPTrust Skill，直接发给你的 Agent 小伙伴。",
+    "portal.agentAction": "复制 Skill",
+    "portal.agentCopied": "✓ 已复制 Skill。请发给你的 Agent 小伙伴 ✦",
     "portal.partnerTitle": "我是合伙人",
-    "portal.partnerBody": "查看 IP 组合、品牌资产与协作入口。",
+    "portal.partnerBody": "请联系获取管理 API。API 可单独管理单个 IP，也可管理多个 IP 组合。",
+    "portal.partnerAction": "查看管理方式",
+    "portal.partnerStatus": "请联系获取管理 API。后台支持 API Key + Google Authenticator。",
+    "portal.partnerPointApi": "API 可按单个或多个 IP 授权。",
+    "portal.partnerPointLogin": "后台通过 API Key + Google Authenticator 登录。",
     "portal.collabTitle": "我想合作",
-    "portal.collabBody": "提交新 IP、共创品牌系统或接入 Agent 工作流。",
+    "portal.collabBody": "我们的 IP 进化论服务方案：定位、命名、视觉、Agent Skill、官网、API 与长期版本管理。",
     "portal.openIps": "查看 IP",
     "portal.admin": "管理入口",
     "portal.github": "发起合作",
@@ -53,6 +59,8 @@ const i18n = {
     "admin.unlockTitle": "先输入 Key",
     "admin.unlockBody": "解锁，再编辑。",
     "admin.keyLabel": "Key",
+    "admin.totpLabel": "Google Authenticator",
+    "admin.scopeLabel": "IP 权限范围",
     "admin.unlockButton": "继续",
     "admin.sync": "同步",
     "admin.editTitle": "编辑源文件",
@@ -101,11 +109,17 @@ const i18n = {
     "brand.noneGuide": "No guideline files yet",
     "brand.noneTokens": "No token files yet",
     "portal.agentTitle": "I am an Agent",
-    "portal.agentBody": "Read the latest IP guidelines, APIs, llms, and skill.",
+    "portal.agentBody": "Click to copy the IPTrust Skill and send it to your agent teammate.",
+    "portal.agentAction": "Copy Skill",
+    "portal.agentCopied": "✓ Skill copied. Send it to your agent teammate ✦",
     "portal.partnerTitle": "I am a Partner",
-    "portal.partnerBody": "Explore IP portfolios, brand assets, and collaboration paths.",
+    "portal.partnerBody": "Contact us for the management API. API access can cover one IP or multiple IPs.",
+    "portal.partnerAction": "View admin path",
+    "portal.partnerStatus": "Contact us for the management API. Admin supports API Key + Google Authenticator.",
+    "portal.partnerPointApi": "API access can be scoped to one or multiple IPs.",
+    "portal.partnerPointLogin": "Admin login uses API Key + Google Authenticator.",
     "portal.collabTitle": "Work with Us",
-    "portal.collabBody": "Submit a new IP, co-create a brand system, or connect an Agent workflow.",
+    "portal.collabBody": "Our IP evolution service: positioning, naming, identity, Agent Skill, website, API, and long-term versioning.",
     "portal.openIps": "View IPs",
     "portal.admin": "Admin entry",
     "portal.github": "Start on GitHub",
@@ -117,6 +131,8 @@ const i18n = {
     "admin.unlockTitle": "Key first",
     "admin.unlockBody": "Unlock. Then edit.",
     "admin.keyLabel": "Key",
+    "admin.totpLabel": "Google Authenticator",
+    "admin.scopeLabel": "IP scope",
     "admin.unlockButton": "Continue",
     "admin.sync": "Sync",
     "admin.editTitle": "Edit source",
@@ -409,6 +425,28 @@ function referenceText(brand = {}) {
   ].join("\n");
 }
 
+async function portalSkillText() {
+  const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", location.href);
+  skillUrl.searchParams.set("v", BUILD_VERSION);
+  const manifestUrl = new URL("api/manifest.json", location.href).href;
+  const searchUrl = new URL("api/search.json", location.href).href;
+  let skill = "";
+  try {
+    const res = await fetch(skillUrl);
+    if (res.ok) skill = await res.text();
+  } catch (error) {
+    console.warn("Could not load IPTrust Skill for copy.", error);
+  }
+  return [
+    "IPTrust Skill ✦",
+    "Hub: " + location.origin + location.pathname,
+    "Manifest: " + manifestUrl,
+    "Search API: " + searchUrl,
+    "",
+    skill || "Use the IPTrust manifest and brand APIs to read each IP's latest name, colors, intro, business, language, and guideline files.",
+  ].join("\n");
+}
+
 function copyWithTextarea(text) {
   const textarea = document.createElement("textarea");
   textarea.value = text;
@@ -436,7 +474,6 @@ function showManualCopy(text) {
 }
 
 async function writeClipboardText(text) {
-  if (copyWithTextarea(text)) return "copied";
   try {
     if (navigator.clipboard?.writeText) {
       await Promise.race([
@@ -446,7 +483,12 @@ async function writeClipboardText(text) {
       return "copied";
     }
   } catch (error) {
-    console.warn("Clipboard API unavailable, falling back to manual selection.", error);
+    console.warn("Clipboard API unavailable, trying legacy copy.", error);
+  }
+  try {
+    if (copyWithTextarea(text)) return "copied";
+  } catch (error) {
+    console.warn("Legacy copy unavailable, falling back to manual selection.", error);
   }
   showManualCopy(text);
   return "selected";
@@ -461,6 +503,33 @@ async function copyReference(brand, button) {
     if (!button.dataset.iconOnly) button.textContent = previous || t("copy.reference");
     button.classList.remove("copied");
   }, 1200);
+}
+
+function setupPortalActions() {
+  document.querySelectorAll("[data-portal-action]").forEach((button) => {
+    if (button.dataset.ready) return;
+    button.dataset.ready = "true";
+    button.addEventListener("click", async () => {
+      const action = button.dataset.portalAction;
+      const statusNode = document.querySelector(`[data-portal-status="${action}"]`);
+      try {
+        if (action === "agent") {
+          const text = await portalSkillText();
+          await writeClipboardText(text);
+          button.classList.add("copied");
+          if (statusNode) statusNode.textContent = t("portal.agentCopied");
+          setTimeout(() => button.classList.remove("copied"), 1000);
+          return;
+        }
+        if (action === "partner") {
+          if (statusNode) statusNode.textContent = t("portal.partnerStatus");
+        }
+      } catch (error) {
+        if (statusNode) statusNode.textContent = t("copy.fail");
+        console.error(error);
+      }
+    });
+  });
 }
 
 function setupCopyButtons(brands) {
@@ -681,6 +750,7 @@ async function renderBrand() {
 applyI18n();
 setupLanguageToggle();
 setupSearch();
+setupPortalActions();
 renderHeroIndex().catch(console.error);
 renderVersions().catch(console.error);
 renderIndex().catch(console.error);

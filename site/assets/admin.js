@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const state = { config: null, brands: [], currentFile: null, currentSha: null };
+const state = { config: null, brands: [], authScopes: [], currentFile: null, currentSha: null };
 const adminCopy = {
   cn: {
     needToken: "先填 Token。",
@@ -7,6 +7,9 @@ const adminCopy = {
     saved: "已保存。等待部署。",
     noKey: "缺少 Key 配置。",
     badKey: "Key 不对。",
+    totpRequired: "请填写 Google Authenticator 动态码。",
+    apiLoginFailed: "API 登录失败。",
+    apiNotConfigured: "后台 API 尚未配置 Cloudflare secrets。",
     unlocked: "已解锁。Token next.",
   },
   en: {
@@ -15,6 +18,9 @@ const adminCopy = {
     saved: "Saved. Deploying.",
     noKey: "No key set.",
     badKey: "Wrong key.",
+    totpRequired: "Enter the Google Authenticator code.",
+    apiLoginFailed: "API login failed.",
+    apiNotConfigured: "Admin API is not configured with Cloudflare secrets yet.",
     unlocked: "Unlocked. Token next.",
   },
 };
@@ -75,8 +81,30 @@ function contentsUrl(path, branch) {
 
 async function populateBrands() {
   state.brands = await loadJson("api/brands.json");
-  $("#brandSelect").innerHTML = state.brands.map((brand) => `<option value="${brand.slug}">${brand.mainName || brand.name}</option>`).join("");
+  const scopes = state.authScopes.length ? state.authScopes : ["*"];
+  const brands = scopes.includes("*")
+    ? state.brands
+    : state.brands.filter((brand) => scopes.includes(brand.slug));
+  $("#brandSelect").innerHTML = brands.map((brand) => `<option value="${brand.slug}">${brand.mainName || brand.name}</option>`).join("");
   await populateFiles();
+}
+
+async function populateAdminScopes() {
+  const select = $("#adminScopes");
+  if (!select) return;
+  const brands = await loadJson("api/brands.json");
+  select.innerHTML = [
+    `<option value="*">*</option>`,
+    ...brands.map((brand) => `<option value="${brand.slug}">${brand.mainName || brand.name}</option>`),
+  ].join("");
+  select.querySelector('option[value="*"]').selected = true;
+}
+
+function selectedAdminScopes() {
+  const select = $("#adminScopes");
+  if (!select) return ["*"];
+  const values = [...select.selectedOptions].map((option) => option.value);
+  return values.length ? values : ["*"];
 }
 
 async function populateFiles() {
@@ -121,8 +149,44 @@ async function saveFile() {
   status(copy("saved"));
 }
 
+async function apiUnlock(config) {
+  const key = $("#adminKey").value;
+  const totp = $("#totpCode")?.value.trim();
+  if (!totp) throw new Error(copy("totpRequired"));
+  const res = await fetch("api/admin/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-Admin-Key": key,
+    },
+    body: JSON.stringify({
+      adminKey: key,
+      totp,
+      scopes: selectedAdminScopes(),
+      repo: config.repo,
+    }),
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) {
+    if (data.error === "admin_auth_not_configured") throw new Error(copy("apiNotConfigured"));
+    if (data.error === "bad_api_key") throw new Error(copy("badKey"));
+    if (data.error === "bad_totp") throw new Error(copy("totpRequired"));
+    throw new Error(data.error || copy("apiLoginFailed"));
+  }
+  state.authScopes = data.scopes?.length ? data.scopes : data.allowedScopes || ["*"];
+}
+
 async function unlock() {
   state.config = await loadJson("admin-config.json");
+  const totp = $("#totpCode")?.value.trim();
+  if (totp) {
+    await apiUnlock(state.config);
+    $("#unlockPanel").classList.add("hidden");
+    $("#editorPanel").classList.remove("hidden");
+    await populateBrands();
+    status(copy("unlocked"));
+    return;
+  }
   const expected = state.config.adminKeySha256;
   if (!expected) {
     $("#unlockStatus").textContent = copy("noKey");
@@ -139,6 +203,8 @@ async function unlock() {
   await populateBrands();
   status(copy("unlocked"));
 }
+
+populateAdminScopes().catch(console.error);
 
 $("#unlockButton")?.addEventListener("click", () => unlock().catch((err) => {
   $("#unlockStatus").textContent = err.message;

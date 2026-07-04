@@ -1,5 +1,19 @@
 [
   {
+    "hash": "7724d9475ca70a078be10921cce0b10757a05f9b",
+    "shortHash": "7724d94",
+    "date": "2026-07-04T19:25:10+08:00",
+    "message": "Sync generated site metadata",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/7724d9475ca70a078be10921cce0b10757a05f9b"
+  },
+  {
+    "hash": "669e89697e3806042cb178b2808bf6e552281147",
+    "shortHash": "669e896",
+    "date": "2026-07-04T19:23:08+08:00",
+    "message": "Redirect www apuch to canonical domain",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/669e89697e3806042cb178b2808bf6e552281147"
+  },
+  {
     "hash": "1d5ea4d5ecda9bbc650819819c83970dd21c4b08",
     "shortHash": "1d5ea4d",
     "date": "2026-07-04T19:21:39+08:00",
@@ -68,19 +82,5 @@
     "date": "2026-07-04T11:59:40+08:00",
     "message": "Add APUCH IP to IPTrust",
     "url": "https://github.com/fengurt/tableai_designaha/commit/088ab8909a2d4284cd64d7924cc60fa39b8eb206"
-  },
-  {
-    "hash": "c723f8453cb7795108b51880986e7d9a664da5b1",
-    "shortHash": "c723f84",
-    "date": "2026-07-04T10:52:32+08:00",
-    "message": "Add global search and version history",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/c723f8453cb7795108b51880986e7d9a664da5b1"
-  },
-  {
-    "hash": "a0998f7e8a9aa8e198f1671ff03ed3cf2aaf4f8c",
-    "shortHash": "a0998f7",
-    "date": "2026-07-04T10:46:14+08:00",
-    "message": "Refine IPTrust public entry UX",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a0998f7e8a9aa8e198f1671ff03ed3cf2aaf4f8c"
   }
 ]

@@ -6,7 +6,7 @@
   <title>岁知社 IPTrust</title>
   <meta name="description" content="岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site.css?v=1d5ea4d">
+  <link rel="stylesheet" href="assets/site.css?v=7724d94">
 </head>
 <body class="hub-home">
   <header class="topbar">
@@ -34,7 +34,9 @@
       <article class="portal" id="agent-entry">
         <p class="eyebrow">Agent</p>
         <h3 data-i18n="portal.agentTitle">我是 Agent</h3>
-        <p data-i18n="portal.agentBody">读取最新 IP 规范、API、llms 与 skill。</p>
+        <p data-i18n="portal.agentBody">点击复制 IPTrust Skill，直接发给你的 Agent 小伙伴。</p>
+        <button class="portal-action" type="button" data-portal-action="agent" data-i18n="portal.agentAction">复制 Skill</button>
+        <p class="portal-status" data-portal-status="agent" aria-live="polite"></p>
         <div class="portal-links">
           <a href="api/brands.json">JSON</a>
           <a href="llms.txt">llms.txt</a>
@@ -47,7 +49,13 @@
       <article class="portal" id="partner-entry">
         <p class="eyebrow">Partner</p>
         <h3 data-i18n="portal.partnerTitle">我是合伙人</h3>
-        <p data-i18n="portal.partnerBody">查看 IP 组合、品牌资产与协作入口。</p>
+        <p data-i18n="portal.partnerBody">请联系获取管理 API。API 可单独管理单个 IP，也可管理多个 IP 组合。</p>
+        <button class="portal-action" type="button" data-portal-action="partner" data-i18n="portal.partnerAction">查看管理方式</button>
+        <p class="portal-status" data-portal-status="partner" aria-live="polite"></p>
+        <ul class="portal-points">
+          <li data-i18n="portal.partnerPointApi">API 可按单个或多个 IP 授权。</li>
+          <li data-i18n="portal.partnerPointLogin">后台通过 API Key + Google Authenticator 登录。</li>
+        </ul>
         <div class="portal-links">
           <a href="#brandGrid" data-i18n="portal.openIps">查看 IP</a>
           <a href="admin.html" data-i18n="portal.admin">管理入口</a>
@@ -56,7 +64,11 @@
       <article class="portal" id="collab-entry">
         <p class="eyebrow">Collab</p>
         <h3 data-i18n="portal.collabTitle">我想合作</h3>
-        <p data-i18n="portal.collabBody">提交新 IP、共创品牌系统或接入 Agent 工作流。</p>
+        <p data-i18n="portal.collabBody">我们的 IP 进化论服务方案：定位、命名、视觉、Agent Skill、官网、API 与长期版本管理。</p>
+        <div class="collab-card">
+          <a class="collab-mail" href="mailto:hi@tableai.ai">hi@tableai.ai</a>
+          <img src="assets/contact/wecom-qr.png" alt="企业微信二维码" loading="lazy">
+        </div>
         <div class="portal-links">
           <a href="https://github.com/fengurt/tableai_designaha/issues/new" data-i18n="portal.github">发起合作</a>
           <a href="#brandGrid" data-i18n="portal.explore">先看 IP</a>
@@ -83,6 +95,6 @@
     </section>
     <section class="ip-grid" id="brandGrid" aria-live="polite"></section>
   </main>
-  <script src="assets/site.js?v=1d5ea4d" type="module"></script>
+  <script src="assets/site.js?v=7724d94" type="module"></script>
 </body>
 </html>
