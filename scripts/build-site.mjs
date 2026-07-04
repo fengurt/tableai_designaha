@@ -408,6 +408,7 @@ await writeFile(join(siteDir, "_headers"), [
 ].join("\n"));
 
 await writeFile(join(siteDir, "_redirects"), [
+  "https://www.apuch.art/*  https://apuch.art/:splat  301",
   "/admin  /admin.html  200",
   "/llms  /llms.txt  200",
   "/manifest  /api/manifest.json  200",

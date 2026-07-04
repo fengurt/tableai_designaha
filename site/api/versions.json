@@ -1,5 +1,19 @@
 [
   {
+    "hash": "3b76a2c57d94dc9aa144f54f84b84ded524cc16b",
+    "shortHash": "3b76a2c",
+    "date": "2026-07-04T18:33:47+08:00",
+    "message": "Bind Cloudflare R2 media bucket",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/3b76a2c57d94dc9aa144f54f84b84ded524cc16b"
+  },
+  {
+    "hash": "a5de4619202f775fca949c6263ffe2f3f33f9d73",
+    "shortHash": "a5de461",
+    "date": "2026-07-04T18:05:46+08:00",
+    "message": "Add Cloudflare media API foundation",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a5de4619202f775fca949c6263ffe2f3f33f9d73"
+  },
+  {
     "hash": "72cafacde8d20ca88efd27c5f00b16154a6c06e9",
     "shortHash": "72cafac",
     "date": "2026-07-04T17:18:29+08:00",
@@ -68,19 +82,5 @@
     "date": "2026-07-04T09:46:53+08:00",
     "message": "Upgrade IPTrust interactive brand cards",
     "url": "https://github.com/fengurt/tableai_designaha/commit/fb8ed395e5b616bfb0a83fd54f2b68e49103e50b"
-  },
-  {
-    "hash": "01576fddad9743777909aad19b7b1709b4fea224",
-    "shortHash": "01576fd",
-    "date": "2026-07-04T09:34:49+08:00",
-    "message": "Add live IPTrust updates and copy UX",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/01576fddad9743777909aad19b7b1709b4fea224"
-  },
-  {
-    "hash": "a550421605e0fadecfb30c3fd5066754feda54d7",
-    "shortHash": "a550421",
-    "date": "2026-07-04T07:52:24+08:00",
-    "message": "Add IPTrust brand systems",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a550421605e0fadecfb30c3fd5066754feda54d7"
   }
 ]

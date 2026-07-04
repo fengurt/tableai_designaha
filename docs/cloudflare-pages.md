@@ -47,6 +47,12 @@ apuch.art -> tableai-designaha.pages.dev
 www.apuch.art -> tableai-designaha.pages.dev
 ```
 
+The production site canonicalizes `www.apuch.art` to `apuch.art` through `site/_redirects`:
+
+```txt
+https://www.apuch.art/* -> https://apuch.art/:splat
+```
+
 ## Media storage
 
 Pages Functions are ready for R2-backed media storage:
