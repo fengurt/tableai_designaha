@@ -1,13 +1,13 @@
 {
   "name": "岁知社 IPTrust",
   "description": "岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。",
-  "generatedAt": "2026-07-04T07:58:46.126Z",
+  "generatedAt": "2026-07-04T08:20:14.575Z",
   "version": {
-    "hash": "088ab8909a2d4284cd64d7924cc60fa39b8eb206",
-    "shortHash": "088ab89",
-    "date": "2026-07-04T11:59:40+08:00",
-    "message": "Add APUCH IP to IPTrust",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/088ab8909a2d4284cd64d7924cc60fa39b8eb206"
+    "hash": "1f20db30a5e970cf81e24c76e4613bc7e0036f09",
+    "shortHash": "1f20db3",
+    "date": "2026-07-04T16:01:00+08:00",
+    "message": "Add IP profile fields and main language display",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/1f20db30a5e970cf81e24c76e4613bc7e0036f09"
   },
   "brands": [
     {
@@ -144,11 +144,11 @@
   "history": {
     "apiUrl": "api/versions.json",
     "latest": {
-      "hash": "088ab8909a2d4284cd64d7924cc60fa39b8eb206",
-      "shortHash": "088ab89",
-      "date": "2026-07-04T11:59:40+08:00",
-      "message": "Add APUCH IP to IPTrust",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/088ab8909a2d4284cd64d7924cc60fa39b8eb206"
+      "hash": "1f20db30a5e970cf81e24c76e4613bc7e0036f09",
+      "shortHash": "1f20db3",
+      "date": "2026-07-04T16:01:00+08:00",
+      "message": "Add IP profile fields and main language display",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/1f20db30a5e970cf81e24c76e4613bc7e0036f09"
     }
   },
   "sync": {

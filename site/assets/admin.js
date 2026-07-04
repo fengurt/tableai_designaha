@@ -1,5 +1,31 @@
 const $ = (selector) => document.querySelector(selector);
 const state = { config: null, brands: [], currentFile: null, currentSha: null };
+const adminCopy = {
+  zh: {
+    needToken: "先填 Token。",
+    loaded: "已载入",
+    saved: "已保存。等待部署。",
+    noKey: "缺少 Key 配置。",
+    badKey: "Key 不对。",
+    unlocked: "已解锁。Token next.",
+  },
+  en: {
+    needToken: "Token first.",
+    loaded: "Loaded",
+    saved: "Saved. Deploying.",
+    noKey: "No key set.",
+    badKey: "Wrong key.",
+    unlocked: "Unlocked. Token next.",
+  },
+};
+
+function lang() {
+  return document.documentElement.lang?.startsWith("zh") ? "zh" : "en";
+}
+
+function copy(key) {
+  return adminCopy[lang()]?.[key] || adminCopy.en[key] || key;
+}
 
 async function sha256(text) {
   const bytes = new TextEncoder().encode(text);
@@ -34,7 +60,7 @@ function b64EncodeUnicode(value) {
 
 function githubHeaders() {
   const token = $("#githubToken").value.trim();
-  if (!token) throw new Error("Paste a GitHub token with contents write access.");
+  if (!token) throw new Error(copy("needToken"));
   return {
     "Accept": "application/vnd.github+json",
     "Authorization": `Bearer ${token}`,
@@ -49,7 +75,7 @@ function contentsUrl(path, branch) {
 
 async function populateBrands() {
   state.brands = await loadJson("api/brands.json");
-  $("#brandSelect").innerHTML = state.brands.map((brand) => `<option value="${brand.slug}">${brand.name}</option>`).join("");
+  $("#brandSelect").innerHTML = state.brands.map((brand) => `<option value="${brand.slug}">${brand.mainName || brand.name}</option>`).join("");
   await populateFiles();
 }
 
@@ -72,7 +98,7 @@ async function loadFile() {
   state.currentFile = path;
   state.currentSha = data.sha;
   $("#editor").value = b64DecodeUnicode(data.content);
-  status(`Loaded ${path}`);
+  status(`${copy("loaded")} ${path}`);
 }
 
 async function saveFile() {
@@ -92,26 +118,26 @@ async function saveFile() {
   if (!res.ok) throw new Error(await res.text());
   const data = await res.json();
   state.currentSha = data.content.sha;
-  status(`Committed ${state.currentFile}. GitHub Pages will rebuild after the push.`);
+  status(copy("saved"));
 }
 
 async function unlock() {
   state.config = await loadJson("admin-config.json");
   const expected = state.config.adminKeySha256;
   if (!expected) {
-    $("#unlockStatus").textContent = "No admin key hash is configured. Run npm run provision:admin-key, rebuild, and redeploy.";
+    $("#unlockStatus").textContent = copy("noKey");
     return;
   }
   const actual = await sha256($("#adminKey").value);
   if (actual !== expected) {
-    $("#unlockStatus").textContent = "Admin key did not match.";
+    $("#unlockStatus").textContent = copy("badKey");
     $("#unlockStatus").style.color = "#b12137";
     return;
   }
   $("#unlockPanel").classList.add("hidden");
   $("#editorPanel").classList.remove("hidden");
   await populateBrands();
-  status("Unlocked. Paste a GitHub token to load and save canonical source files.");
+  status(copy("unlocked"));
 }
 
 $("#unlockButton")?.addEventListener("click", () => unlock().catch((err) => {

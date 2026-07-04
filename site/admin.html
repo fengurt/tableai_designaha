@@ -19,26 +19,26 @@
   <main class="admin">
     <section class="panel" id="unlockPanel">
       <p class="eyebrow" data-i18n="nav.admin">管理</p>
-      <h1 data-i18n="admin.unlockTitle">解锁编辑器</h1>
-      <p class="muted" data-i18n="admin.unlockBody">Admin key 用于解锁浏览器编辑器；保存仍需 GitHub 写入令牌，确保修改回到仓库。</p>
-      <label><span data-i18n="admin.keyLabel">Admin API key</span><input id="adminKey" type="password" autocomplete="current-password"></label>
-      <button id="unlockButton" data-i18n="admin.unlockButton">解锁</button>
+      <h1 data-i18n="admin.unlockTitle">先输入 Key</h1>
+      <p class="muted" data-i18n="admin.unlockBody">解锁，再编辑。</p>
+      <label><span data-i18n="admin.keyLabel">Key</span><input id="adminKey" type="password" autocomplete="current-password"></label>
+      <button id="unlockButton" data-i18n="admin.unlockButton">继续</button>
       <p class="notice" id="unlockStatus"></p>
     </section>
     <section class="panel hidden" id="editorPanel">
-      <p class="eyebrow" data-i18n="admin.sync">双向同步</p>
-      <h1 data-i18n="admin.editTitle">编辑 GitHub 源文件</h1>
+      <p class="eyebrow" data-i18n="admin.sync">同步</p>
+      <h1 data-i18n="admin.editTitle">编辑源文件</h1>
       <div class="form-grid">
-        <label><span data-i18n="admin.githubToken">GitHub token</span><input id="githubToken" type="password" autocomplete="off" placeholder="Fine-grained PAT or classic token"></label>
+        <label><span data-i18n="admin.githubToken">Token</span><input id="githubToken" type="password" autocomplete="off" placeholder="GitHub token" data-i18n-placeholder="admin.tokenPlaceholder"></label>
         <label><span data-i18n="admin.branch">分支</span><input id="branch" value="main"></label>
         <label><span data-i18n="admin.brand">IP</span><select id="brandSelect"></select></label>
         <label><span data-i18n="admin.file">文件</span><select id="fileSelect"></select></label>
       </div>
       <div class="actions">
-        <button id="loadFile" data-i18n="admin.loadFile">载入文件</button>
-        <button id="saveFile" data-i18n="admin.saveFile">提交修改</button>
+        <button id="loadFile" data-i18n="admin.loadFile">载入</button>
+        <button id="saveFile" data-i18n="admin.saveFile">保存</button>
       </div>
-      <textarea id="editor" spellcheck="false" placeholder="Load an editable guideline file..."></textarea>
+      <textarea id="editor" spellcheck="false" placeholder="载入文件..." data-i18n-placeholder="admin.editorPlaceholder"></textarea>
       <label><span data-i18n="admin.commitMessage">提交信息</span><input id="commitMessage" value="Update brand guideline from admin site"></label>
       <p class="notice" id="editorStatus"></p>
     </section>

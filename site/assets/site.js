@@ -48,19 +48,21 @@ const i18n = {
     "history.title": "历史版本",
     "history.empty": "暂无版本记录",
     "search.global": "全局搜索",
-    "admin.unlockTitle": "解锁编辑器",
-    "admin.unlockBody": "Admin key 用于解锁浏览器编辑器；保存仍需 GitHub 写入令牌，确保修改回到仓库。",
-    "admin.keyLabel": "Admin API key",
-    "admin.unlockButton": "解锁",
-    "admin.sync": "双向同步",
-    "admin.editTitle": "编辑 GitHub 源文件",
-    "admin.githubToken": "GitHub token",
+    "admin.unlockTitle": "先输入 Key",
+    "admin.unlockBody": "解锁，再编辑。",
+    "admin.keyLabel": "Key",
+    "admin.unlockButton": "继续",
+    "admin.sync": "同步",
+    "admin.editTitle": "编辑源文件",
+    "admin.githubToken": "Token",
     "admin.branch": "分支",
     "admin.brand": "IP",
     "admin.file": "文件",
-    "admin.loadFile": "载入文件",
-    "admin.saveFile": "提交修改",
-    "admin.commitMessage": "提交信息"
+    "admin.loadFile": "载入",
+    "admin.saveFile": "保存",
+    "admin.commitMessage": "提交信息",
+    "admin.tokenPlaceholder": "GitHub token",
+    "admin.editorPlaceholder": "载入文件..."
   },
   en: {
     "nav.manifest": "Manifest",
@@ -109,19 +111,21 @@ const i18n = {
     "history.title": "Version history",
     "history.empty": "No version records yet",
     "search.global": "Global search",
-    "admin.unlockTitle": "Unlock editor",
-    "admin.unlockBody": "The admin key unlocks this browser editor. Saving still requires a GitHub token with contents write access.",
-    "admin.keyLabel": "Admin API key",
-    "admin.unlockButton": "Unlock",
-    "admin.sync": "Two-way sync",
-    "admin.editTitle": "Edit GitHub source",
-    "admin.githubToken": "GitHub token",
+    "admin.unlockTitle": "Key first",
+    "admin.unlockBody": "Unlock. Then edit.",
+    "admin.keyLabel": "Key",
+    "admin.unlockButton": "Continue",
+    "admin.sync": "Sync",
+    "admin.editTitle": "Edit source",
+    "admin.githubToken": "Token",
     "admin.branch": "Branch",
     "admin.brand": "IP",
     "admin.file": "File",
-    "admin.loadFile": "Load file",
-    "admin.saveFile": "Commit edit",
-    "admin.commitMessage": "Commit message"
+    "admin.loadFile": "Load",
+    "admin.saveFile": "Save",
+    "admin.commitMessage": "Message",
+    "admin.tokenPlaceholder": "GitHub token",
+    "admin.editorPlaceholder": "Load file..."
   }
 };
 
@@ -141,9 +145,12 @@ function applyI18n() {
     node.textContent = t(node.dataset.i18n);
   });
   const toggle = $("#langToggle");
-  if (toggle) toggle.textContent = currentLang === "zh" ? "EN" : "中";
+  if (toggle) toggle.textContent = currentLang === "zh" ? "EN" : "CN";
   const search = $("#brandSearch");
   if (search) search.placeholder = t("home.searchPlaceholder");
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((node) => {
+    node.setAttribute("placeholder", t(node.dataset.i18nPlaceholder));
+  });
 }
 
 function setupLanguageToggle() {
