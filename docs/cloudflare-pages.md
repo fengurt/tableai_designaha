@@ -105,7 +105,7 @@ Cloudflare Pages secrets:
 
 ```txt
 ADMIN_API_KEY=<strong random key>
-ADMIN_TOTP_SECRET=<base32 secret used in Google Authenticator>
+ADMIN_TOTP_SECRET=<optional base32 secret used in Google Authenticator>
 ```
 
 Optional scoped access:
@@ -114,7 +114,7 @@ Optional scoped access:
 ADMIN_IP_SCOPES=tableai,apuch,apha
 ```
 
-Use `*` or omit `ADMIN_IP_SCOPES` for all IPs. The login endpoint is `POST /api/admin/login` with `X-Admin-Key` and a six-digit `totp`.
+Use `*` or omit `ADMIN_IP_SCOPES` for all IPs. The System API login endpoint is `POST /api/admin/login` with `X-Admin-Key`; if `ADMIN_TOTP_SECRET` is set, a six-digit `totp` may be sent as an optional stronger check.
 
 Local smoke test:
 

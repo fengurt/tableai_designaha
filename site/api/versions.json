@@ -1,5 +1,12 @@
 [
   {
+    "hash": "98dcf4e96e7f20b939a199f874fe542a1f3de479",
+    "shortHash": "98dcf4e",
+    "date": "2026-07-04T22:25:24+08:00",
+    "message": "Add homepage API connect panel",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/98dcf4e96e7f20b939a199f874fe542a1f3de479"
+  },
+  {
     "hash": "df0202da7b5426135d2010d61f72e04189d1b276",
     "shortHash": "df0202d",
     "date": "2026-07-04T22:12:02+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-07-04T18:05:46+08:00",
     "message": "Add Cloudflare media API foundation",
     "url": "https://github.com/fengurt/tableai_designaha/commit/a5de4619202f775fca949c6263ffe2f3f33f9d73"
-  },
-  {
-    "hash": "72cafacde8d20ca88efd27c5f00b16154a6c06e9",
-    "shortHash": "72cafac",
-    "date": "2026-07-04T17:18:29+08:00",
-    "message": "Remove homepage hero eyebrow",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/72cafacde8d20ca88efd27c5f00b16154a6c06e9"
   }
 ]

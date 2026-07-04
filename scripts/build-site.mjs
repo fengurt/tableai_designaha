@@ -651,9 +651,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       <button class="icon-copy" type="button" id="apiConnectClose" data-icon-only="true" aria-label="Close">×</button>
     </div>
     <div class="api-connect-form" id="apiConnectForm">
-      <label><span data-i18n="api.key">Admin API Key</span><input id="apiAdminKey" type="password" autocomplete="current-password"></label>
-      <label><span data-i18n="api.totp">Google Authenticator</span><input id="apiTotpCode" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" maxlength="8" placeholder="000000"></label>
-      <label><span data-i18n="api.scopes">IP scope</span><select id="apiScopes" multiple size="4"></select></label>
+      <label><span data-i18n="api.key">System API Key</span><input id="apiAdminKey" type="password" autocomplete="current-password"></label>
       <button class="portal-action" type="button" id="apiConnectSubmit" data-i18n="api.connect">Connect</button>
     </div>
     <p class="portal-status" id="apiConnectStatus"></p>
@@ -1764,9 +1762,7 @@ const i18n = {
     "portal.explore": "先看 IP",
     "portal.searchApi": "搜索 API",
     "api.title": "连接 System API",
-    "api.key": "Admin API Key",
-    "api.totp": "Google Authenticator",
-    "api.scopes": "IP 权限",
+    "api.key": "System API Key",
     "api.connect": "Connect",
     "api.connected": "Connected",
     "api.connecting": "Connecting...",
@@ -1774,7 +1770,7 @@ const i18n = {
     "api.badKey": "API Key 不对。",
     "api.badTotp": "验证码不对。",
     "api.failed": "连接失败。",
-    "api.scopesGranted": "Scopes: ",
+    "api.scopesGranted": "Access: ",
     "api.openAdmin": "Admin",
     "api.copyCurl": "Copy cURL",
     "api.copiedCurl": "已复制 cURL 模板。",
@@ -1857,9 +1853,7 @@ const i18n = {
     "portal.explore": "Explore first",
     "portal.searchApi": "Search API",
     "api.title": "Connect System API",
-    "api.key": "Admin API Key",
-    "api.totp": "Google Authenticator",
-    "api.scopes": "IP scopes",
+    "api.key": "System API Key",
     "api.connect": "Connect",
     "api.connected": "Connected",
     "api.connecting": "Connecting...",
@@ -1867,7 +1861,7 @@ const i18n = {
     "api.badKey": "Wrong API Key.",
     "api.badTotp": "Wrong code.",
     "api.failed": "Connection failed.",
-    "api.scopesGranted": "Scopes: ",
+    "api.scopesGranted": "Access: ",
     "api.openAdmin": "Admin",
     "api.copyCurl": "Copy cURL",
     "api.copiedCurl": "cURL template copied.",
@@ -2418,25 +2412,6 @@ function apiStatus(message, isError = false) {
   node.style.color = isError ? "#b12137" : "#0E8C7B";
 }
 
-async function populateApiScopes() {
-  const select = $("#apiScopes");
-  if (!select || select.dataset.ready) return;
-  const brands = await loadJson("api/brands.json");
-  select.innerHTML = [
-    \`<option value="*">*</option>\`,
-    ...brands.map((brand) => \`<option value="\${escapeHtml(brand.slug)}">\${escapeHtml(brand.mainName || brand.name || brand.slug)}</option>\`),
-  ].join("");
-  select.querySelector('option[value="*"]').selected = true;
-  select.dataset.ready = "true";
-}
-
-function selectedApiScopes() {
-  const select = $("#apiScopes");
-  if (!select) return ["*"];
-  const values = [...select.selectedOptions].map((option) => option.value);
-  return values.length ? values : ["*"];
-}
-
 function apiErrorMessage(error) {
   if (error === "admin_auth_not_configured") return t("api.notConfigured");
   if (error === "bad_api_key") return t("api.badKey");
@@ -2449,7 +2424,7 @@ function apiCurlTemplate() {
     \`curl -X POST "\${new URL("api/admin/login", location.href).href}"\`,
     \`  -H "Content-Type: application/json"\`,
     \`  -H "X-Admin-Key: <ADMIN_API_KEY>"\`,
-    \`  -d '{"totp":"<GOOGLE_AUTHENTICATOR_CODE>","scopes":["*"]}'\`,
+    \`  -d '{"adminKey":"<ADMIN_API_KEY>"}'\`,
   ].join("\\n");
 }
 
@@ -2466,7 +2441,6 @@ function setupApiConnect() {
   button.addEventListener("click", async () => {
     panel.classList.toggle("hidden");
     if (!panel.classList.contains("hidden")) {
-      await populateApiScopes().catch((error) => apiStatus(error.message, true));
       $("#apiAdminKey")?.focus();
     }
   });
@@ -2482,7 +2456,6 @@ function setupApiConnect() {
 
   submit?.addEventListener("click", async () => {
     const adminKey = $("#apiAdminKey")?.value || "";
-    const totp = $("#apiTotpCode")?.value.trim() || "";
     apiStatus(t("api.connecting"));
     try {
       const res = await fetch("api/admin/login", {
@@ -2491,7 +2464,7 @@ function setupApiConnect() {
           "Content-Type": "application/json",
           "X-Admin-Key": adminKey,
         },
-        body: JSON.stringify({ adminKey, totp, scopes: selectedApiScopes() }),
+        body: JSON.stringify({ adminKey }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(apiErrorMessage(data.error));

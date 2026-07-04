@@ -89,10 +89,10 @@ export async function onRequest({ request, env }) {
     return json({ error: "method_not_allowed" }, { status: 405 });
   }
 
-  if (!env.ADMIN_API_KEY || !env.ADMIN_TOTP_SECRET) {
+  if (!env.ADMIN_API_KEY) {
     return json({
       error: "admin_auth_not_configured",
-      hint: "Set ADMIN_API_KEY and ADMIN_TOTP_SECRET in Cloudflare Pages secrets.",
+      hint: "Set ADMIN_API_KEY in Cloudflare Pages secrets.",
     }, { status: 503 });
   }
 
@@ -105,9 +105,11 @@ export async function onRequest({ request, env }) {
     return json({ error: "bad_api_key" }, { status: 401 });
   }
 
-  const totpOk = await verifyTotp(env.ADMIN_TOTP_SECRET, body.totp);
-  if (!totpOk) {
-    return json({ error: "bad_totp" }, { status: 401 });
+  if (env.ADMIN_TOTP_SECRET && body.totp) {
+    const totpOk = await verifyTotp(env.ADMIN_TOTP_SECRET, body.totp);
+    if (!totpOk) {
+      return json({ error: "bad_totp" }, { status: 401 });
+    }
   }
 
   const allowedScopes = parseScopes(env.ADMIN_IP_SCOPES);
@@ -118,7 +120,7 @@ export async function onRequest({ request, env }) {
 
   return json({
     ok: true,
-    auth: "api_key_totp",
+    auth: body.totp ? "api_key_totp" : "api_key",
     scopes: grantedScopes,
     allowedScopes,
   });

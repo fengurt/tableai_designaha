@@ -71,11 +71,11 @@
     "en": ""
   },
   "version": {
-    "hash": "df0202da7b5426135d2010d61f72e04189d1b276",
-    "shortHash": "df0202d",
-    "date": "2026-07-04T22:12:02+08:00",
-    "message": "Make homepage toolbar fully icon based",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/df0202da7b5426135d2010d61f72e04189d1b276"
+    "hash": "98dcf4e96e7f20b939a199f874fe542a1f3de479",
+    "shortHash": "98dcf4e",
+    "date": "2026-07-04T22:25:24+08:00",
+    "message": "Add homepage API connect panel",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/98dcf4e96e7f20b939a199f874fe542a1f3de479"
   },
   "historyUrl": "api/history/changoods.json",
   "history": [
