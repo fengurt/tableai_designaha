@@ -71,11 +71,11 @@
     "en": ""
   },
   "version": {
-    "hash": "98dcf4e96e7f20b939a199f874fe542a1f3de479",
-    "shortHash": "98dcf4e",
-    "date": "2026-07-04T22:25:24+08:00",
-    "message": "Add homepage API connect panel",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/98dcf4e96e7f20b939a199f874fe542a1f3de479"
+    "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
+    "shortHash": "3d16dc3",
+    "date": "2026-07-04T22:34:53+08:00",
+    "message": "Simplify System API key connection",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/3d16dc3a1bb17d2cf00a6096cf93652564b5edd8"
   },
   "historyUrl": "api/history/boya.json",
   "history": [

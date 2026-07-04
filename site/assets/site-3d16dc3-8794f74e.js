@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "98dcf4e";
+const BUILD_VERSION = "3d16dc3-8794f74e";
 
 const i18n = {
   cn: {
@@ -59,7 +59,7 @@ const i18n = {
     "portal.github": "发起合作",
     "portal.explore": "先看 IP",
     "portal.searchApi": "搜索 API",
-    "api.title": "连接 System API",
+    "api.title": "System API",
     "api.key": "System API Key",
     "api.connect": "Connect",
     "api.connected": "Connected",
@@ -69,6 +69,7 @@ const i18n = {
     "api.badTotp": "验证码不对。",
     "api.failed": "连接失败。",
     "api.scopesGranted": "Access: ",
+    "api.allAccess": "全部 IP",
     "api.openAdmin": "Admin",
     "api.copyCurl": "Copy cURL",
     "api.copiedCurl": "已复制 cURL 模板。",
@@ -150,7 +151,7 @@ const i18n = {
     "portal.github": "Start on GitHub",
     "portal.explore": "Explore first",
     "portal.searchApi": "Search API",
-    "api.title": "Connect System API",
+    "api.title": "System API",
     "api.key": "System API Key",
     "api.connect": "Connect",
     "api.connected": "Connected",
@@ -160,6 +161,7 @@ const i18n = {
     "api.badTotp": "Wrong code.",
     "api.failed": "Connection failed.",
     "api.scopesGranted": "Access: ",
+    "api.allAccess": "All IP",
     "api.openAdmin": "Admin",
     "api.copyCurl": "Copy cURL",
     "api.copiedCurl": "cURL template copied.",
@@ -726,6 +728,43 @@ function apiCurlTemplate() {
   ].join("\n");
 }
 
+const API_CONNECT_COOKIE = "iptrust_api_connected";
+
+function setApiCookie(scopes = ["*"]) {
+  const value = JSON.stringify({ connected: true, scopes, at: Date.now() });
+  const secure = location.protocol === "https:" ? "; Secure" : "";
+  document.cookie = API_CONNECT_COOKIE + "=" + encodeURIComponent(value) + "; path=/; max-age=604800; SameSite=Lax" + secure;
+}
+
+function clearApiCookie() {
+  const secure = location.protocol === "https:" ? "; Secure" : "";
+  document.cookie = API_CONNECT_COOKIE + "=; path=/; max-age=0; SameSite=Lax" + secure;
+}
+
+function readApiCookie() {
+  const entry = document.cookie
+    .split("; ")
+    .find((item) => item.startsWith(API_CONNECT_COOKIE + "="));
+  if (!entry) return null;
+  try {
+    return JSON.parse(decodeURIComponent(entry.slice(API_CONNECT_COOKIE.length + 1)));
+  } catch {
+    return null;
+  }
+}
+
+function renderApiConnected(scopes = ["*"]) {
+  $("#apiConnectButton")?.classList.add("api-connected");
+  $("#apiConnectPanel")?.classList.add("is-connected");
+  $("#apiConnectForm")?.classList.add("hidden");
+  $("#apiConnectedOps")?.classList.remove("hidden");
+  const scopeText = $("#apiScopeText");
+  if (scopeText) {
+    scopeText.textContent = scopes.includes("*") ? t("api.allAccess") : `${t("api.scopesGranted")}${scopes.join(", ")}`;
+  }
+  apiStatus(t("api.connected"));
+}
+
 function setupApiConnect() {
   const button = $("#apiConnectButton");
   const panel = $("#apiConnectPanel");
@@ -736,9 +775,12 @@ function setupApiConnect() {
   if (!button || !panel || button.dataset.ready) return;
   button.dataset.ready = "true";
 
+  const saved = readApiCookie();
+  if (saved?.connected) renderApiConnected(saved.scopes?.length ? saved.scopes : ["*"]);
+
   button.addEventListener("click", async () => {
     panel.classList.toggle("hidden");
-    if (!panel.classList.contains("hidden")) {
+    if (!panel.classList.contains("hidden") && !button.classList.contains("api-connected")) {
       $("#apiAdminKey")?.focus();
     }
   });
@@ -767,14 +809,15 @@ function setupApiConnect() {
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(apiErrorMessage(data.error));
       const scopes = data.scopes?.length ? data.scopes : data.allowedScopes || ["*"];
-      button.classList.add("api-connected");
-      form?.classList.add("hidden");
-      ops?.classList.remove("hidden");
-      $("#apiScopeText").textContent = `${t("api.scopesGranted")}${scopes.join(", ")}`;
-      apiStatus(t("api.connected"));
+      setApiCookie(scopes);
+      renderApiConnected(scopes);
       showToast(t("api.connected"));
     } catch (error) {
+      clearApiCookie();
       button.classList.remove("api-connected");
+      panel.classList.remove("is-connected");
+      form?.classList.remove("hidden");
+      ops?.classList.add("hidden");
       apiStatus(error.message || t("api.failed"), true);
       showToast(error.message || t("api.failed"));
     }

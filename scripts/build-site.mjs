@@ -1,6 +1,7 @@
 import { mkdir, readFile, rm, writeFile, copyFile, readdir, stat } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import { dirname, extname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -321,7 +322,11 @@ const previousHistoryBySlug = new Map(await Promise.all(brands.map(async (brand)
   return [brand.slug, previous?.versions ?? []];
 })));
 const versions = mergeVersionHistory(loadVersions(), previousVersions, 20);
-const buildVersion = versions[0]?.shortHash ?? "dev";
+const buildFingerprint = createHash("sha256");
+for (const inputPath of ["scripts/build-site.mjs", "config/brands.json", "package.json"]) {
+  buildFingerprint.update(await readFile(join(root, inputPath)));
+}
+const buildVersion = `${versions[0]?.shortHash ?? "dev"}-${buildFingerprint.digest("hex").slice(0, 8)}`;
 const siteCssPath = `assets/site-${buildVersion}.css`;
 const siteJsPath = `assets/site-${buildVersion}.js`;
 
@@ -954,50 +959,90 @@ nav a:hover { color: var(--ink); }
 .lang-toggle .lang-code.is-active { opacity: 1; }
 .api-connect-panel {
   position: fixed;
-  right: clamp(18px, 4vw, 48px);
-  top: 92px;
+  right: clamp(14px, 4vw, 48px);
+  top: 74px;
   z-index: 30;
-  width: min(420px, calc(100vw - 36px));
-  padding: 18px;
-  border: 1px solid color-mix(in srgb, var(--green) 24%, var(--line));
-  border-radius: 10px;
-  background: rgba(255, 254, 250, .96);
-  box-shadow: 0 24px 80px rgba(22, 20, 18, .16);
-  backdrop-filter: blur(18px);
+  width: min(330px, calc(100vw - 28px));
+  padding: 12px;
+  border: 1px solid color-mix(in srgb, var(--green) 18%, var(--line));
+  border-radius: 18px;
+  background: rgba(255, 254, 250, .92);
+  box-shadow: 0 18px 56px rgba(22, 20, 18, .12);
+  backdrop-filter: blur(22px);
 }
 .api-connect-head {
   display: flex;
   justify-content: space-between;
-  align-items: start;
-  gap: 16px;
+  align-items: center;
+  gap: 10px;
 }
+.api-connect-head .eyebrow { display: none; }
 .api-connect-head h2 {
-  font-size: 22px;
-  margin: 4px 0 8px;
+  font-size: 13px;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: 0;
 }
+.api-connect-panel.is-connected #apiConnectStatus { display: none; }
 .api-connect-form {
   display: grid;
-  gap: 10px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 8px;
+  margin-top: 10px;
 }
 .api-connect-form label {
   margin: 0;
+  gap: 5px;
 }
-.api-connect-form select {
-  min-height: 92px;
+.api-connect-form label span {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 760;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.api-connect-form input {
+  min-height: 34px;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 13px;
+  background: rgba(255, 255, 255, .72);
+}
+.api-connect-form .portal-action {
+  min-height: 34px;
+  margin: 0;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 12px;
 }
 .api-ops {
   display: grid;
-  gap: 10px;
-  margin-top: 12px;
+  gap: 8px;
+  margin-top: 10px;
 }
 .connected-pill {
   justify-self: start;
   border: 1px solid rgba(14, 140, 123, .24);
   border-radius: 999px;
-  padding: 7px 10px;
+  padding: 5px 9px;
   color: #0E8C7B;
   background: rgba(14, 140, 123, .08);
-  font-size: 12px;
+  font-size: 11px;
+}
+.api-ops .muted {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.3;
+}
+.api-ops .portal-links {
+  gap: 6px;
+  margin-top: 2px;
+}
+.api-ops .portal-links a,
+.api-ops .api-copy {
+  padding: 5px 8px;
+  font-size: 11px;
 }
 .api-copy {
   border: 1px solid var(--line);
@@ -1761,7 +1806,7 @@ const i18n = {
     "portal.github": "发起合作",
     "portal.explore": "先看 IP",
     "portal.searchApi": "搜索 API",
-    "api.title": "连接 System API",
+    "api.title": "System API",
     "api.key": "System API Key",
     "api.connect": "Connect",
     "api.connected": "Connected",
@@ -1771,6 +1816,7 @@ const i18n = {
     "api.badTotp": "验证码不对。",
     "api.failed": "连接失败。",
     "api.scopesGranted": "Access: ",
+    "api.allAccess": "全部 IP",
     "api.openAdmin": "Admin",
     "api.copyCurl": "Copy cURL",
     "api.copiedCurl": "已复制 cURL 模板。",
@@ -1852,7 +1898,7 @@ const i18n = {
     "portal.github": "Start on GitHub",
     "portal.explore": "Explore first",
     "portal.searchApi": "Search API",
-    "api.title": "Connect System API",
+    "api.title": "System API",
     "api.key": "System API Key",
     "api.connect": "Connect",
     "api.connected": "Connected",
@@ -1862,6 +1908,7 @@ const i18n = {
     "api.badTotp": "Wrong code.",
     "api.failed": "Connection failed.",
     "api.scopesGranted": "Access: ",
+    "api.allAccess": "All IP",
     "api.openAdmin": "Admin",
     "api.copyCurl": "Copy cURL",
     "api.copiedCurl": "cURL template copied.",
@@ -2428,6 +2475,43 @@ function apiCurlTemplate() {
   ].join("\\n");
 }
 
+const API_CONNECT_COOKIE = "iptrust_api_connected";
+
+function setApiCookie(scopes = ["*"]) {
+  const value = JSON.stringify({ connected: true, scopes, at: Date.now() });
+  const secure = location.protocol === "https:" ? "; Secure" : "";
+  document.cookie = API_CONNECT_COOKIE + "=" + encodeURIComponent(value) + "; path=/; max-age=604800; SameSite=Lax" + secure;
+}
+
+function clearApiCookie() {
+  const secure = location.protocol === "https:" ? "; Secure" : "";
+  document.cookie = API_CONNECT_COOKIE + "=; path=/; max-age=0; SameSite=Lax" + secure;
+}
+
+function readApiCookie() {
+  const entry = document.cookie
+    .split("; ")
+    .find((item) => item.startsWith(API_CONNECT_COOKIE + "="));
+  if (!entry) return null;
+  try {
+    return JSON.parse(decodeURIComponent(entry.slice(API_CONNECT_COOKIE.length + 1)));
+  } catch {
+    return null;
+  }
+}
+
+function renderApiConnected(scopes = ["*"]) {
+  $("#apiConnectButton")?.classList.add("api-connected");
+  $("#apiConnectPanel")?.classList.add("is-connected");
+  $("#apiConnectForm")?.classList.add("hidden");
+  $("#apiConnectedOps")?.classList.remove("hidden");
+  const scopeText = $("#apiScopeText");
+  if (scopeText) {
+    scopeText.textContent = scopes.includes("*") ? t("api.allAccess") : \`\${t("api.scopesGranted")}\${scopes.join(", ")}\`;
+  }
+  apiStatus(t("api.connected"));
+}
+
 function setupApiConnect() {
   const button = $("#apiConnectButton");
   const panel = $("#apiConnectPanel");
@@ -2438,9 +2522,12 @@ function setupApiConnect() {
   if (!button || !panel || button.dataset.ready) return;
   button.dataset.ready = "true";
 
+  const saved = readApiCookie();
+  if (saved?.connected) renderApiConnected(saved.scopes?.length ? saved.scopes : ["*"]);
+
   button.addEventListener("click", async () => {
     panel.classList.toggle("hidden");
-    if (!panel.classList.contains("hidden")) {
+    if (!panel.classList.contains("hidden") && !button.classList.contains("api-connected")) {
       $("#apiAdminKey")?.focus();
     }
   });
@@ -2469,14 +2556,15 @@ function setupApiConnect() {
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(apiErrorMessage(data.error));
       const scopes = data.scopes?.length ? data.scopes : data.allowedScopes || ["*"];
-      button.classList.add("api-connected");
-      form?.classList.add("hidden");
-      ops?.classList.remove("hidden");
-      $("#apiScopeText").textContent = \`\${t("api.scopesGranted")}\${scopes.join(", ")}\`;
-      apiStatus(t("api.connected"));
+      setApiCookie(scopes);
+      renderApiConnected(scopes);
       showToast(t("api.connected"));
     } catch (error) {
+      clearApiCookie();
       button.classList.remove("api-connected");
+      panel.classList.remove("is-connected");
+      form?.classList.remove("hidden");
+      ops?.classList.add("hidden");
       apiStatus(error.message || t("api.failed"), true);
       showToast(error.message || t("api.failed"));
     }
