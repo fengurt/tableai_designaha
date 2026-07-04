@@ -639,7 +639,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       <a class="nav-icon" href="#agent-entry" aria-label="我是 Agent" title="我是 Agent" data-tip="Agent">${topbarIcon.agent}</a>
       <a class="nav-icon" href="#partner-entry" aria-label="我是合伙人" title="我是合伙人" data-tip="Partner">${topbarIcon.partner}</a>
       <a class="nav-icon" href="#collab-entry" aria-label="我想合作" title="我想合作" data-tip="Collab">${topbarIcon.collab}</a>
-      <button class="lang-toggle nav-icon" type="button" id="langToggle" aria-label="Switch language" title="Switch language" data-tip="Language">${topbarIcon.globe}<span class="lang-code is-active">CN</span><span class="lang-code">EN</span></button>
+      <button class="lang-toggle nav-icon" type="button" id="langToggle" aria-label="Switch language" title="Switch language" data-tip="Language">${topbarIcon.globe}</button>
     </nav>
   </header>
   <main>
@@ -1809,9 +1809,7 @@ function renderLanguageToggle() {
   if (!toggle) return;
   toggle.setAttribute("aria-label", \`Language: \${localeMeta[currentLocale].label}\`);
   if (toggle.classList.contains("nav-icon")) {
-    toggle.querySelectorAll(".lang-code").forEach((node) => {
-      node.classList.toggle("is-active", node.textContent.toLowerCase() === currentLocale);
-    });
+    toggle.dataset.tip = localeMeta[currentLocale].label;
     return;
   }
   toggle.innerHTML = \`

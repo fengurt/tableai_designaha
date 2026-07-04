@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "a0e6ecd";
+const BUILD_VERSION = "0f2e2d9";
 
 const i18n = {
   cn: {
@@ -191,9 +191,7 @@ function renderLanguageToggle() {
   if (!toggle) return;
   toggle.setAttribute("aria-label", `Language: ${localeMeta[currentLocale].label}`);
   if (toggle.classList.contains("nav-icon")) {
-    toggle.querySelectorAll(".lang-code").forEach((node) => {
-      node.classList.toggle("is-active", node.textContent.toLowerCase() === currentLocale);
-    });
+    toggle.dataset.tip = localeMeta[currentLocale].label;
     return;
   }
   toggle.innerHTML = `
