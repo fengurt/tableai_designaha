@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-04T11:44:51.347Z",
+  "generatedAt": "2026-07-04T11:50:00.079Z",
   "version": {
-    "hash": "7724d9475ca70a078be10921cce0b10757a05f9b",
-    "shortHash": "7724d94",
-    "date": "2026-07-04T19:25:10+08:00",
-    "message": "Sync generated site metadata",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/7724d9475ca70a078be10921cce0b10757a05f9b"
+    "hash": "0db166661358bccc3f124971e161e067a41dfad8",
+    "shortHash": "0db1666",
+    "date": "2026-07-04T19:46:22+08:00",
+    "message": "Add portal actions and admin TOTP login",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/0db166661358bccc3f124971e161e067a41dfad8"
   },
   "brands": [
     {
@@ -170,11 +170,11 @@
   "history": {
     "apiUrl": "api/versions.json",
     "latest": {
-      "hash": "7724d9475ca70a078be10921cce0b10757a05f9b",
-      "shortHash": "7724d94",
-      "date": "2026-07-04T19:25:10+08:00",
-      "message": "Sync generated site metadata",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/7724d9475ca70a078be10921cce0b10757a05f9b"
+      "hash": "0db166661358bccc3f124971e161e067a41dfad8",
+      "shortHash": "0db1666",
+      "date": "2026-07-04T19:46:22+08:00",
+      "message": "Add portal actions and admin TOTP login",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/0db166661358bccc3f124971e161e067a41dfad8"
     }
   },
   "sync": {

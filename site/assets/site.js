@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "7724d94";
+const BUILD_VERSION = "0db1666";
 
 const i18n = {
   cn: {
@@ -164,6 +164,7 @@ let cachedBrands = null;
 let cachedSearch = null;
 let cachedVersions = null;
 let currentQuery = "";
+let cachedPortalSkillText = "";
 
 function contentLang(locale = currentLocale) {
   return localeMeta[locale]?.contentLang || "zh";
@@ -409,6 +410,32 @@ function languageLabel(value) {
   return value || "";
 }
 
+function skillBaseText(skill = "") {
+  const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", location.href).href;
+  return [
+    "IPTrust Skill ✦",
+    "Hub: " + location.origin + location.pathname,
+    "Manifest: " + new URL("api/manifest.json", location.href).href,
+    "Search API: " + new URL("api/search.json", location.href).href,
+    `Skill: ${skillUrl}`,
+    "",
+    skill || "Use the IPTrust manifest and brand APIs to read each IP's latest name, colors, intro, business, language, and guideline files.",
+  ].join("\n");
+}
+
+async function portalSkillText() {
+  const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", location.href);
+  skillUrl.searchParams.set("v", BUILD_VERSION);
+  let skill = "";
+  try {
+    const res = await fetch(skillUrl);
+    if (res.ok) skill = await res.text();
+  } catch (error) {
+    console.warn("Could not load IPTrust Skill for copy.", error);
+  }
+  return skillBaseText(skill);
+}
+
 function referenceText(brand = {}) {
   const localized = mainBrand(brand);
   const apiUrl = new URL(brand.apiUrl || `api/brands/${brand.slug}.json`, location.href).href;
@@ -422,28 +449,6 @@ function referenceText(brand = {}) {
     `Business: ${localized.business || ""}`,
     `Brand API: ${apiUrl}`,
     `Skill: ${skillUrl}`,
-  ].join("\n");
-}
-
-async function portalSkillText() {
-  const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", location.href);
-  skillUrl.searchParams.set("v", BUILD_VERSION);
-  const manifestUrl = new URL("api/manifest.json", location.href).href;
-  const searchUrl = new URL("api/search.json", location.href).href;
-  let skill = "";
-  try {
-    const res = await fetch(skillUrl);
-    if (res.ok) skill = await res.text();
-  } catch (error) {
-    console.warn("Could not load IPTrust Skill for copy.", error);
-  }
-  return [
-    "IPTrust Skill ✦",
-    "Hub: " + location.origin + location.pathname,
-    "Manifest: " + manifestUrl,
-    "Search API: " + searchUrl,
-    "",
-    skill || "Use the IPTrust manifest and brand APIs to read each IP's latest name, colors, intro, business, language, and guideline files.",
   ].join("\n");
 }
 
@@ -506,6 +511,8 @@ async function copyReference(brand, button) {
 }
 
 function setupPortalActions() {
+  cachedPortalSkillText = skillBaseText();
+  portalSkillText().then((text) => cachedPortalSkillText = text).catch(console.error);
   document.querySelectorAll("[data-portal-action]").forEach((button) => {
     if (button.dataset.ready) return;
     button.dataset.ready = "true";
@@ -514,7 +521,7 @@ function setupPortalActions() {
       const statusNode = document.querySelector(`[data-portal-status="${action}"]`);
       try {
         if (action === "agent") {
-          const text = await portalSkillText();
+          const text = cachedPortalSkillText || skillBaseText();
           await writeClipboardText(text);
           button.classList.add("copied");
           if (statusNode) statusNode.textContent = t("portal.agentCopied");
