@@ -25,7 +25,7 @@ jobs:
         id: cloudflare
         shell: bash
         run: |
-          project="${CLOUDFLARE_PAGES_PROJECT:-iptrust}"
+          project="${CLOUDFLARE_PAGES_PROJECT:-tableai-designaha}"
           echo "project=${project}" >> "$GITHUB_OUTPUT"
           if [[ -n "${CLOUDFLARE_API_TOKEN}" && -n "${CLOUDFLARE_ACCOUNT_ID}" ]]; then
             echo "enabled=true" >> "$GITHUB_OUTPUT"

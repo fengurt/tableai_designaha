@@ -1,5 +1,12 @@
 [
   {
+    "hash": "72cafacde8d20ca88efd27c5f00b16154a6c06e9",
+    "shortHash": "72cafac",
+    "date": "2026-07-04T17:18:29+08:00",
+    "message": "Remove homepage hero eyebrow",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/72cafacde8d20ca88efd27c5f00b16154a6c06e9"
+  },
+  {
     "hash": "28013cb13ecc9bb047077803476b2f3104fa651f",
     "shortHash": "28013cb",
     "date": "2026-07-04T17:15:25+08:00",
@@ -75,12 +82,5 @@
     "date": "2026-07-04T07:52:24+08:00",
     "message": "Add IPTrust brand systems",
     "url": "https://github.com/fengurt/tableai_designaha/commit/a550421605e0fadecfb30c3fd5066754feda54d7"
-  },
-  {
-    "hash": "3a5082efc370439fa7dfa64f17ed2e2efbe41db3",
-    "shortHash": "3a5082e",
-    "date": "2026-07-04T06:45:26+08:00",
-    "message": "Simplify IPTrust homepage and add site i18n",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3a5082efc370439fa7dfa64f17ed2e2efbe41db3"
   }
 ]

@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-04T09:17:15.615Z",
+  "generatedAt": "2026-07-04T10:04:57.672Z",
   "version": {
-    "hash": "28013cb13ecc9bb047077803476b2f3104fa651f",
-    "shortHash": "28013cb",
-    "date": "2026-07-04T17:15:25+08:00",
-    "message": "Add Cloudflare Pages performance path",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/28013cb13ecc9bb047077803476b2f3104fa651f"
+    "hash": "72cafacde8d20ca88efd27c5f00b16154a6c06e9",
+    "shortHash": "72cafac",
+    "date": "2026-07-04T17:18:29+08:00",
+    "message": "Remove homepage hero eyebrow",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/72cafacde8d20ca88efd27c5f00b16154a6c06e9"
   },
   "brands": [
     {
@@ -170,11 +170,11 @@
   "history": {
     "apiUrl": "api/versions.json",
     "latest": {
-      "hash": "28013cb13ecc9bb047077803476b2f3104fa651f",
-      "shortHash": "28013cb",
-      "date": "2026-07-04T17:15:25+08:00",
-      "message": "Add Cloudflare Pages performance path",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/28013cb13ecc9bb047077803476b2f3104fa651f"
+      "hash": "72cafacde8d20ca88efd27c5f00b16154a6c06e9",
+      "shortHash": "72cafac",
+      "date": "2026-07-04T17:18:29+08:00",
+      "message": "Remove homepage hero eyebrow",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/72cafacde8d20ca88efd27c5f00b16154a6c06e9"
     }
   },
   "sync": {

@@ -6,8 +6,11 @@
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
 
-/assets/*
-  Cache-Control: public, max-age=300, must-revalidate
+/assets/site.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/site.js
+  Cache-Control: public, max-age=31536000, immutable
 
 /assets/brand-images/*
   Cache-Control: public, max-age=86400, stale-while-revalidate=604800

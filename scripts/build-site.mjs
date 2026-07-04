@@ -387,8 +387,11 @@ await writeFile(join(siteDir, "_headers"), [
   "/*.html",
   "  Cache-Control: public, max-age=0, must-revalidate",
   "",
-  "/assets/*",
-  "  Cache-Control: public, max-age=300, must-revalidate",
+  "/assets/site.css",
+  "  Cache-Control: public, max-age=31536000, immutable",
+  "",
+  "/assets/site.js",
+  "  Cache-Control: public, max-age=31536000, immutable",
   "",
   "/assets/brand-images/*",
   "  Cache-Control: public, max-age=86400, stale-while-revalidate=604800",
@@ -450,7 +453,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
   <title>${hubName}</title>
   <meta name="description" content="${hubDescription}">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/site.css?v=${buildVersion}">
 </head>
 <body class="hub-home">
   <header class="topbar">
@@ -527,7 +530,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
     </section>
     <section class="ip-grid" id="brandGrid" aria-live="polite"></section>
   </main>
-  <script src="assets/site.js" type="module"></script>
+  <script src="assets/site.js?v=${buildVersion}" type="module"></script>
 </body>
 </html>`);
 
@@ -538,7 +541,7 @@ await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brand Guidelines</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/site.css?v=${buildVersion}">
 </head>
 <body>
   <header class="topbar">
@@ -550,7 +553,7 @@ await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
     </nav>
   </header>
   <main id="brandPage" class="brand-page" aria-live="polite"></main>
-  <script src="assets/site.js" type="module"></script>
+  <script src="assets/site.js?v=${buildVersion}" type="module"></script>
 </body>
 </html>`);
 
@@ -561,7 +564,7 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin · ${hubName}</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/site.css?v=${buildVersion}">
 </head>
 <body>
   <header class="topbar">
@@ -599,7 +602,7 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
       <p class="notice" id="editorStatus"></p>
     </section>
   </main>
-  <script src="assets/site.js" type="module"></script>
+  <script src="assets/site.js?v=${buildVersion}" type="module"></script>
   <script src="assets/admin.js" type="module"></script>
 </body>
 </html>`);
