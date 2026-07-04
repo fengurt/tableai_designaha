@@ -1,5 +1,12 @@
 [
   {
+    "hash": "a659504e4814895ee61f21397a435ebe074443b9",
+    "shortHash": "a659504",
+    "date": "2026-07-04T20:00:43+08:00",
+    "message": "Honor IP main language display",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a659504e4814895ee61f21397a435ebe074443b9"
+  },
+  {
     "hash": "d7aa033c0b3df3034fb0233fc056384659d54d03",
     "shortHash": "d7aa033",
     "date": "2026-07-04T19:51:41+08:00",
@@ -75,12 +82,5 @@
     "date": "2026-07-04T16:28:28+08:00",
     "message": "Systematize CN EN language handling",
     "url": "https://github.com/fengurt/tableai_designaha/commit/e979ff5bf2ae516742ed5de22a5febebcdaea867"
-  },
-  {
-    "hash": "74581d0117b9cb73e37d569f221acb4affc8ab87",
-    "shortHash": "74581d0",
-    "date": "2026-07-04T16:21:48+08:00",
-    "message": "Simplify admin copy and align language toggle",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/74581d0117b9cb73e37d569f221acb4affc8ab87"
   }
 ]

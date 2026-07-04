@@ -1781,17 +1781,48 @@ async function portalSkillText() {
 
 function referenceText(brand = {}) {
   const localized = mainBrand(brand);
+  const ipPageUrl = new URL(brand.url || \`brand.html?brand=\${brand.slug}\`, location.href).href;
   const apiUrl = new URL(brand.apiUrl || \`api/brands/\${brand.slug}.json\`, location.href).href;
   const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", location.href).href;
+  const mcpSource = new URL("api/manifest.json", location.href).href;
+  const colors = palette(brand.theme)
+    .map(([label, value]) => \`\${label}: \${value} / \${rgbValue(value)}\`)
+    .join("\\n");
   return [
-    \`IP: \${localized.name}\${localized.secondaryName ? \` / \${languageLabel(localized.secondaryLanguage)} \${localized.secondaryName}\` : ""}\`,
+    "IPTrust Agent Reference",
+    "",
+    "[IP Identity]",
+    \`Name: \${localized.name}\`,
+    localized.secondaryName ? \`Other name: \${languageLabel(localized.secondaryLanguage)} · \${localized.secondaryName}\` : "",
     \`Slug: \${brand.slug}\`,
     \`Main language: \${languageLabel(brand.mainLanguage || localized.language)}\`,
-    \`Website: \${brand.officialWebsite || ""}\`,
-    \`Intro: \${localized.intro}\`,
-    \`Business: \${localized.business || ""}\`,
+    "",
+    "[Links]",
+    \`IP page: \${ipPageUrl}\`,
+    \`Official website: \${brand.officialWebsite || "TBD"}\`,
     \`Brand API: \${apiUrl}\`,
-    \`Skill: \${skillUrl}\`,
+    \`IPTrust Skill: \${skillUrl}\`,
+    \`MCP manifest: \${mcpSource}\`,
+    "",
+    "[Core]",
+    \`Intro: \${localized.intro || "TBD"}\`,
+    \`Business: \${localized.business || "TBD"}\`,
+    "",
+    "[Palette]",
+    colors || "TBD",
+    "",
+    "[Agent Skill Usage]",
+    "1. Load the IPTrust Skill first.",
+    "2. Prefer MCP tools for live brand standards.",
+    "3. Fall back to the Brand API JSON when MCP is unavailable.",
+    "4. Keep the main IP name in the main language; show other-language name as a labeled alternate.",
+    "",
+    "[MCP Calls]",
+    \`list_brands({})\`,
+    \`get_brand({ "slug": "\${brand.slug}" })\`,
+    \`get_guideline({ "slug": "\${brand.slug}" })\`,
+    \`list_tokens({ "slug": "\${brand.slug}" })\`,
+    \`validate_color({ "slug": "\${brand.slug}", "hex": "\${brand.theme?.primary || "#000000"}" })\`,
   ].join("\\n");
 }
 

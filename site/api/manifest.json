@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-04T11:58:26.985Z",
+  "generatedAt": "2026-07-04T12:30:07.128Z",
   "version": {
-    "hash": "d7aa033c0b3df3034fb0233fc056384659d54d03",
-    "shortHash": "d7aa033",
-    "date": "2026-07-04T19:51:41+08:00",
-    "message": "Preload agent skill copy text",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/d7aa033c0b3df3034fb0233fc056384659d54d03"
+    "hash": "a659504e4814895ee61f21397a435ebe074443b9",
+    "shortHash": "a659504",
+    "date": "2026-07-04T20:00:43+08:00",
+    "message": "Honor IP main language display",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a659504e4814895ee61f21397a435ebe074443b9"
   },
   "brands": [
     {
@@ -170,11 +170,11 @@
   "history": {
     "apiUrl": "api/versions.json",
     "latest": {
-      "hash": "d7aa033c0b3df3034fb0233fc056384659d54d03",
-      "shortHash": "d7aa033",
-      "date": "2026-07-04T19:51:41+08:00",
-      "message": "Preload agent skill copy text",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/d7aa033c0b3df3034fb0233fc056384659d54d03"
+      "hash": "a659504e4814895ee61f21397a435ebe074443b9",
+      "shortHash": "a659504",
+      "date": "2026-07-04T20:00:43+08:00",
+      "message": "Honor IP main language display",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a659504e4814895ee61f21397a435ebe074443b9"
     }
   },
   "sync": {
