@@ -34,8 +34,8 @@
     }
   },
   "intro": {
-    "zh": "> 单一可信来源 · Single Source of Truth for every Axisee UI (web, admin console, mobile member, 企微 sidebar tools).",
-    "en": "> **The canonical design guideline for all Axisee products.**"
+    "zh": "单一可信来源 · Single Source of Truth for every Axisee UI (web, admin console, mobile member, 企微 sidebar tools).",
+    "en": "The canonical design guideline for all Axisee products."
   },
   "url": "brand.html?brand=axisee",
   "apiUrl": "api/brands/axisee.json",

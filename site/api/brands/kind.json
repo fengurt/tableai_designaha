@@ -34,8 +34,8 @@
     }
   },
   "intro": {
-    "zh": "*善渡科技 · Kind Technology**",
-    "en": "KiND turns AI into a **Kind Workforce** anyone can hire — *AI for all, not for few."
+    "zh": "善渡科技 · Kind Technology",
+    "en": "KiND turns AI into a Kind Workforce anyone can hire — AI for all, not for few."
   },
   "url": "brand.html?brand=kind",
   "apiUrl": "api/brands/kind.json",

@@ -35,7 +35,7 @@
   },
   "intro": {
     "zh": "Sidera 侍天 — Design System",
-    "en": "> Build-ready brand & visual spec for agents producing on-brand 侍天 work."
+    "en": "Build-ready brand & visual spec for agents producing on-brand 侍天 work."
   },
   "url": "brand.html?brand=sidera",
   "apiUrl": "api/brands/sidera.json",

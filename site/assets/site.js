@@ -5,7 +5,7 @@ const i18n = {
     "nav.manifest": "清单",
     "nav.admin": "管理",
     "home.eyebrow": "IP 信任索引 · Agent 可读品牌源",
-    "home.lead": "极速、极简地进入每个 IP：颜色、语气、规范、资产与机器可读源文件都从 GitHub 同步。",
+    "home.lead": "进入每个 IP。",
     "home.openJson": "打开 JSON 索引",
     "home.adminEdit": "管理编辑",
     "home.systems": "IP 系统",
@@ -44,7 +44,7 @@ const i18n = {
     "nav.manifest": "Manifest",
     "nav.admin": "Admin",
     "home.eyebrow": "IP trust index · Agent-readable brand source",
-    "home.lead": "Fast, minimal access to every IP: color, voice, guidelines, assets, and machine-readable source stay synced from GitHub.",
+    "home.lead": "Enter every IP.",
     "home.openJson": "Open JSON index",
     "home.adminEdit": "Admin edit",
     "home.systems": "IP systems",
@@ -107,6 +107,7 @@ function setupLanguageToggle() {
     currentLang = currentLang === "zh" ? "en" : "zh";
     localStorage.setItem("iptrust-lang", currentLang);
     applyI18n();
+    await renderHeroIndex();
     await renderIndex();
     await renderBrand();
   });
@@ -139,6 +140,10 @@ function escapeHtml(value) {
     '"': "&quot;",
     "'": "&#039;",
   }[char]));
+}
+
+function copyIcon() {
+  return `<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="10" height="10" rx="2"></rect><path d="M5 15V7a2 2 0 0 1 2-2h8"></path></svg>`;
 }
 
 function themeStyle(theme = {}) {
@@ -179,6 +184,26 @@ function swatches(theme = {}, labeled = false) {
   `).join("")}</div>`;
 }
 
+function palette(theme = {}) {
+  return [
+    ["Primary", theme.primary],
+    ["Accent", theme.accent],
+    ["Secondary", theme.secondary],
+  ].filter(([, value]) => value);
+}
+
+function colorDots(theme = {}) {
+  return `<span class="hero-index-colors">${palette(theme).map(([label, value]) => `
+    <button class="color-dot" type="button" data-copy-color="${escapeHtml(value)}" aria-label="Copy ${escapeHtml(label)} ${escapeHtml(value)}" title="${escapeHtml(label)} ${escapeHtml(value)}" style="--dot:${escapeHtml(value)}"></button>
+  `).join("")}</span>`;
+}
+
+function miniPalette(theme = {}) {
+  return `<span class="mini-palette" aria-hidden="true">${palette(theme).map(([, value]) => `
+    <span class="mini-swatch" style="--dot:${escapeHtml(value)}"></span>
+  `).join("")}</span>`;
+}
+
 function brandInitial(brand = {}) {
   if (brand.slug === "fengzhi") return "界";
   if (brand.slug === "sidera") return "侍";
@@ -208,11 +233,13 @@ function localizedBrand(brand = {}) {
 function referenceText(brand = {}) {
   const localized = localizedBrand(brand);
   const apiUrl = new URL(brand.apiUrl || `api/brands/${brand.slug}.json`, location.href).href;
+  const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", location.href).href;
   return [
     `IP: ${localized.name}${localized.secondaryName ? ` / ${localized.secondaryName}` : ""}`,
     `Slug: ${brand.slug}`,
     `Intro: ${localized.intro}`,
     `Brand API: ${apiUrl}`,
+    `Skill: ${skillUrl}`,
   ].join("\n");
 }
 
@@ -262,10 +289,10 @@ async function writeClipboardText(text) {
 async function copyReference(brand, button) {
   const result = await writeClipboardText(referenceText(brand));
   const previous = button.textContent;
-  button.textContent = result === "selected" ? t("copy.selected") : t("copy.done");
+  if (!button.dataset.iconOnly) button.textContent = result === "selected" ? t("copy.selected") : t("copy.done");
   button.classList.add("copied");
   setTimeout(() => {
-    button.textContent = previous || t("copy.reference");
+    if (!button.dataset.iconOnly) button.textContent = previous || t("copy.reference");
     button.classList.remove("copied");
   }, 1200);
 }
@@ -286,6 +313,35 @@ function setupCopyButtons(brands) {
       }
     });
   });
+  document.querySelectorAll("[data-copy-color]").forEach((button) => {
+    button.addEventListener("click", async (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const result = await writeClipboardText(button.dataset.copyColor);
+      button.classList.add("copied");
+      button.title = result === "selected" ? t("copy.selected") : t("copy.done");
+      setTimeout(() => button.classList.remove("copied"), 900);
+    });
+  });
+}
+
+async function renderHeroIndex() {
+  const index = $("#heroIndex");
+  if (!index) return;
+  cachedBrands ??= await loadJson("api/brands.json");
+  index.innerHTML = cachedBrands.map((brand, idx) => {
+    const localized = localizedBrand(brand);
+    return `
+      <div class="hero-index-row" data-brand="${escapeHtml(brand.slug)}" style="${themeStyle(brand.theme)};--row-index:${idx}">
+        <a class="hero-index-link" href="${brand.url}">
+          <span class="hero-index-title">${String(idx + 1).padStart(2, "0")} ${escapeHtml(localized.name)}</span>
+        </a>
+        ${colorDots(brand.theme)}
+        <button class="icon-copy" type="button" data-icon-only="true" data-copy-brand="${escapeHtml(brand.slug)}" aria-label="${escapeHtml(t("copy.reference"))} ${escapeHtml(localized.name)}">${copyIcon()}</button>
+      </div>
+    `;
+  }).join("");
+  setupCopyButtons(cachedBrands);
 }
 
 async function renderIndex() {
@@ -317,17 +373,22 @@ async function renderIndex() {
     <article class="${cardClass(brand)}" data-brand="${escapeHtml(brand.slug)}" style="${themeStyle(brand.theme)}">
       <a class="ip-card-link" href="${brand.url}" aria-label="${escapeHtml(localizedBrand(brand).name)}">
         <div class="card-body">
-          <span class="brand-sigil">${escapeHtml(brandInitial(brand))}</span>
+          <div class="card-art">
+            <span class="art-code">${escapeHtml(brand.slug)}</span>
+            <span class="art-metric">${brand.guideCount}G · ${brand.tokenCount}T</span>
+          </div>
           <p class="eyebrow">${escapeHtml(statusLabel(brand.status))}</p>
           <h2>${escapeHtml(localizedBrand(brand).name)}</h2>
+          ${miniPalette(brand.theme)}
           <p class="muted">${escapeHtml(localizedBrand(brand).secondaryName || "")}</p>
+          <p class="card-intro">${escapeHtml(localizedBrand(brand).intro || "")}</p>
           <div class="meta">
             <span class="pill">${brand.guideCount} ${t("meta.guides")}</span>
             <span class="pill">API</span>
           </div>
         </div>
       </a>
-      <button class="copy-reference" type="button" data-copy-brand="${escapeHtml(brand.slug)}" aria-label="${escapeHtml(t("copy.reference"))} ${escapeHtml(localizedBrand(brand).name)}">${t("copy.reference")}</button>
+      <button class="copy-reference icon-copy" type="button" data-icon-only="true" data-copy-brand="${escapeHtml(brand.slug)}" aria-label="${escapeHtml(t("copy.reference"))} ${escapeHtml(localizedBrand(brand).name)}">${copyIcon()}</button>
     </article>
   `).join("");
   setupCopyButtons(filtered);
@@ -376,5 +437,6 @@ async function renderBrand() {
 applyI18n();
 setupLanguageToggle();
 setupSearch();
+renderHeroIndex().catch(console.error);
 renderIndex().catch(console.error);
 renderBrand().catch(console.error);

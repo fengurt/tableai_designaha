@@ -34,8 +34,8 @@
     }
   },
   "intro": {
-    "zh": "Building Tomorrow, Today — 为者常成，行者常至*",
-    "en": "> A Member of the Table AI Alliance — same think-tank register, its own ground."
+    "zh": "Building Tomorrow, Today — 为者常成，行者常至",
+    "en": "A Member of the Table AI Alliance — same think-tank register, its own ground."
   },
   "url": "brand.html?brand=vanahom",
   "apiUrl": "api/brands/vanahom.json",

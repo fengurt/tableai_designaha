@@ -108,7 +108,7 @@ function cjkRatio(text = "") {
 }
 
 function clipSentence(text = "", max = 170) {
-  const clean = text.trim();
+  const clean = text.replace(/[#*_`>|]/g, "").replace(/\s+/g, " ").trim();
   if (clean.length <= max) return clean;
   const boundary = clean.slice(0, max).search(/[。！？.!?](?!.*[。！？.!?])/);
   if (boundary > 48) return clean.slice(0, boundary + 1);
@@ -311,15 +311,13 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       <div class="hero-copy">
         <p class="eyebrow" data-i18n="home.eyebrow">IP 信任索引 · Agent 可读品牌源</p>
         <h1>岁知社 IPTrust</h1>
-        <p data-i18n="home.lead">极速、极简地进入每个 IP：颜色、语气、规范、资产与机器可读源文件都从 GitHub 同步。</p>
+        <p data-i18n="home.lead">进入每个 IP。</p>
         <div class="actions">
           <a class="button" href="api/brands.json" data-i18n="home.openJson">打开 JSON 索引</a>
           <a class="button ghost" href="admin.html" data-i18n="home.adminEdit">管理编辑</a>
         </div>
       </div>
-      <div class="hero-index" aria-hidden="true">
-        ${indexPayload.map((brand, index) => `<span style="--brand-primary:${brand.theme?.primary ?? "#0A1626"};--brand-paper:${brand.theme?.paper ?? "#fff"}">${String(index + 1).padStart(2, "0")} ${brand.name}</span>`).join("")}
-      </div>
+      <div class="hero-index" id="heroIndex" aria-live="polite"></div>
     </section>
     <section class="section-head">
       <div>
@@ -477,18 +475,71 @@ p { line-height: 1.65; }
 .hub-hero p:not(.eyebrow), .muted { color: var(--muted); font-size: 18px; max-width: 760px; }
 .hero-index {
   display: grid;
-  gap: 8px;
+  gap: 0;
   align-self: end;
+  border-top: 1px solid var(--line);
 }
-.hero-index span {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
+.hero-index-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 12px;
   border-bottom: 1px solid var(--line);
   color: var(--brand-primary);
-  padding: 9px 0;
+  padding: 8px 0;
   font-size: 14px;
   font-weight: 760;
+  text-decoration: none;
+  transform: translateY(8px);
+  opacity: 0;
+  animation: row-rise .54s cubic-bezier(.2,.8,.2,1) forwards;
+  animation-delay: calc(var(--row-index, 0) * 32ms);
+}
+.hero-index-link {
+  color: inherit;
+  min-width: 0;
+  text-decoration: none;
+}
+.hero-index-row:hover {
+  background: color-mix(in srgb, var(--brand-primary) 7%, transparent);
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.hero-index-title {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hero-index-colors { display: flex; gap: 5px; }
+.color-dot {
+  width: 18px;
+  height: 18px;
+  min-height: 18px;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, .14);
+  border-radius: 999px;
+  background: var(--dot);
+  cursor: pointer;
+}
+.color-dot.copied { outline: 2px solid var(--brand-primary, var(--blue)); outline-offset: 2px; }
+.icon-copy {
+  width: 30px;
+  height: 30px;
+  min-height: 30px;
+  padding: 0;
+  border-radius: 999px;
+  border-color: var(--brand-line, var(--line));
+  background: color-mix(in srgb, var(--brand-paper, white) 88%, var(--brand-primary, var(--blue)));
+  color: var(--brand-primary, var(--blue));
+  display: grid;
+  place-items: center;
+}
+.icon-copy svg { width: 15px; height: 15px; stroke: currentColor; stroke-width: 2; fill: none; }
+.icon-copy:hover,
+.icon-copy.copied { background: var(--brand-primary, var(--blue)); color: var(--brand-button-text, white); }
+@keyframes row-rise {
+  to { opacity: 1; transform: translateY(0); }
 }
 .section-head {
   display: flex;
@@ -545,8 +596,8 @@ p { line-height: 1.65; }
 }
 .ip-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
   padding: 14px 0 88px;
 }
 .empty-state {
@@ -566,14 +617,14 @@ p { line-height: 1.65; }
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 220px;
+  min-height: 330px;
   background: var(--brand-paper, var(--paper));
   border-color: var(--brand-line, var(--line));
   color: var(--brand-ink, var(--ink));
   position: relative;
   border: 1px solid var(--brand-line, var(--line));
   border-radius: 8px;
-  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
 }
 .ip-card::before {
   content: "";
@@ -583,7 +634,7 @@ p { line-height: 1.65; }
   background: var(--brand-primary, var(--accent));
   z-index: 2;
 }
-.ip-card:hover { transform: translateY(-3px); border-color: var(--brand-primary, var(--line)); box-shadow: 0 16px 42px rgba(22, 20, 18, .08); }
+.ip-card:hover { transform: translateY(-5px); border-color: var(--brand-primary, var(--line)); box-shadow: 0 22px 60px rgba(22, 20, 18, .12); }
 .ip-card.theme-dark { background: var(--brand-paper); color: var(--brand-ink); }
 .ip-card-link {
   color: inherit;
@@ -611,14 +662,98 @@ p { line-height: 1.65; }
 .ip-card[data-brand="sidera"] .brand-sigil { background: var(--brand-secondary); color: var(--brand-ink); }
 .ip-card[data-brand="kind"] .brand-sigil { border-radius: 999px; }
 .ip-card[data-brand="fengzhi"] .brand-sigil { border-radius: 0; }
-.card-body { padding: 18px 18px 16px; display: flex; flex-direction: column; gap: 12px; min-height: 100%; }
+.card-body { padding: 14px; display: flex; flex-direction: column; gap: 12px; min-height: 100%; }
+.card-art {
+  min-height: 150px;
+  border: 1px solid var(--brand-line, var(--line));
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 22%, color-mix(in srgb, var(--brand-accent) 78%, transparent) 0 10%, transparent 28%),
+    linear-gradient(135deg, color-mix(in srgb, var(--brand-primary) 24%, var(--brand-paper)) 0%, var(--brand-paper) 48%, color-mix(in srgb, var(--brand-secondary) 25%, var(--brand-paper)) 100%);
+}
+.card-art::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 1px solid color-mix(in srgb, var(--brand-primary) 38%, transparent);
+  border-radius: 999px 999px 6px 6px;
+  transform: rotate(-8deg);
+}
+.card-art::after {
+  content: "";
+  position: absolute;
+  inset: auto 14px 14px auto;
+  width: 44%;
+  aspect-ratio: 1;
+  border: 1px solid color-mix(in srgb, var(--brand-accent) 50%, transparent);
+  background:
+    linear-gradient(90deg, transparent 49%, color-mix(in srgb, var(--brand-primary) 30%, transparent) 50%, transparent 51%),
+    linear-gradient(0deg, transparent 49%, color-mix(in srgb, var(--brand-primary) 30%, transparent) 50%, transparent 51%);
+  opacity: .72;
+}
+.ip-card[data-brand="tableai"] .card-art {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--brand-primary) 18%, transparent) 1px, transparent 1px),
+    linear-gradient(0deg, color-mix(in srgb, var(--brand-primary) 12%, transparent) 1px, transparent 1px),
+    linear-gradient(135deg, var(--brand-paper), color-mix(in srgb, var(--brand-accent) 24%, var(--brand-paper)));
+  background-size: 26px 26px, 26px 26px, auto;
+}
+.ip-card[data-brand="vanahom"] .card-art::before { border-radius: 6px; transform: rotate(0); inset: 20px 42px; }
+.ip-card[data-brand="kind"] .card-art::before { border-radius: 999px; inset: 18px 44px 16px 18px; }
+.ip-card[data-brand="apha"] .card-art::before { border-radius: 60% 40% 50% 50%; transform: rotate(14deg); }
+.ip-card[data-brand="manaendless"] .card-art,
+.ip-card[data-brand="sidera"] .card-art,
+.ip-card[data-brand="rgd"] .card-art {
+  background:
+    radial-gradient(circle at 70% 18%, color-mix(in srgb, var(--brand-accent) 62%, transparent) 0 9%, transparent 24%),
+    linear-gradient(135deg, color-mix(in srgb, var(--brand-primary) 26%, var(--brand-paper)), var(--brand-paper));
+}
+.ip-card[data-brand="fengzhi"] .card-art::before { border-radius: 0; transform: rotate(0); inset: 22px; }
+.ip-card[data-brand="axisee"] .card-art::after { width: 34%; border-radius: 999px; }
+.ip-card[data-brand="boya"] .card-art::before { border-radius: 6px 999px 999px 6px; transform: rotate(-16deg); }
+.art-code {
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+  color: var(--brand-primary);
+  font-weight: 840;
+  font-size: 13px;
+}
+.art-metric {
+  position: absolute;
+  right: 14px;
+  top: 12px;
+  color: var(--brand-ink);
+  font-size: 12px;
+  font-weight: 760;
+}
+.mini-palette { display: flex; gap: 6px; margin-top: 2px; }
+.mini-swatch {
+  width: 24px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--dot);
+  border: 1px solid rgba(0, 0, 0, .1);
+}
 .card-body .eyebrow { color: var(--brand-primary, var(--accent)); }
 .card-body .muted, .card-body p { color: var(--brand-muted, var(--muted)); }
-.card-body h2 { color: var(--brand-ink, var(--ink)); font-size: 28px; line-height: 1.02; margin-top: auto; padding-right: 58px; }
+.card-body h2 { color: var(--brand-ink, var(--ink)); font-size: 30px; line-height: 1.02; margin: 2px 0 0; padding-right: 48px; }
+.card-intro {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--brand-muted, var(--muted));
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 38px;
+}
 .copy-reference {
   position: absolute;
   right: 14px;
-  bottom: 14px;
+  top: 14px;
   z-index: 3;
   min-height: 32px;
   max-width: 72px;
@@ -743,17 +878,20 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .topbar { align-items: flex-start; flex-direction: column; }
   .hub-hero, .brand-hero, .form-grid { grid-template-columns: 1fr; }
   .hub-hero { min-height: auto; padding-top: 36px; }
+  .hero-index { align-self: stretch; }
+  .hero-index-row { grid-template-columns: minmax(0, 1fr) auto; }
+  .hero-index-colors { display: none; }
   .section-head { display: grid; align-items: start; }
   .home-tools { width: 100%; }
-  .ip-grid { grid-template-columns: 1fr 1fr; }
-  .ip-card { min-height: 176px; }
+  .ip-grid { grid-template-columns: 1fr; }
+  .ip-card { min-height: 320px; }
   h1 { font-size: 40px; }
   h2 { font-size: 28px; }
   .card-body h2 { font-size: 24px; }
 }
 @media (min-width: 761px) and (max-width: 1080px) {
   .hub-hero { grid-template-columns: 1fr; min-height: auto; }
-  .ip-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .ip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }`);
 
 await writeFile(join(assetsDir, "site.js"), html`const $ = (selector) => document.querySelector(selector);
@@ -763,7 +901,7 @@ const i18n = {
     "nav.manifest": "清单",
     "nav.admin": "管理",
     "home.eyebrow": "IP 信任索引 · Agent 可读品牌源",
-    "home.lead": "极速、极简地进入每个 IP：颜色、语气、规范、资产与机器可读源文件都从 GitHub 同步。",
+    "home.lead": "进入每个 IP。",
     "home.openJson": "打开 JSON 索引",
     "home.adminEdit": "管理编辑",
     "home.systems": "IP 系统",
@@ -802,7 +940,7 @@ const i18n = {
     "nav.manifest": "Manifest",
     "nav.admin": "Admin",
     "home.eyebrow": "IP trust index · Agent-readable brand source",
-    "home.lead": "Fast, minimal access to every IP: color, voice, guidelines, assets, and machine-readable source stay synced from GitHub.",
+    "home.lead": "Enter every IP.",
     "home.openJson": "Open JSON index",
     "home.adminEdit": "Admin edit",
     "home.systems": "IP systems",
@@ -865,6 +1003,7 @@ function setupLanguageToggle() {
     currentLang = currentLang === "zh" ? "en" : "zh";
     localStorage.setItem("iptrust-lang", currentLang);
     applyI18n();
+    await renderHeroIndex();
     await renderIndex();
     await renderBrand();
   });
@@ -897,6 +1036,10 @@ function escapeHtml(value) {
     '"': "&quot;",
     "'": "&#039;",
   }[char]));
+}
+
+function copyIcon() {
+  return \`<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="10" height="10" rx="2"></rect><path d="M5 15V7a2 2 0 0 1 2-2h8"></path></svg>\`;
 }
 
 function themeStyle(theme = {}) {
@@ -937,6 +1080,26 @@ function swatches(theme = {}, labeled = false) {
   \`).join("")}</div>\`;
 }
 
+function palette(theme = {}) {
+  return [
+    ["Primary", theme.primary],
+    ["Accent", theme.accent],
+    ["Secondary", theme.secondary],
+  ].filter(([, value]) => value);
+}
+
+function colorDots(theme = {}) {
+  return \`<span class="hero-index-colors">\${palette(theme).map(([label, value]) => \`
+    <button class="color-dot" type="button" data-copy-color="\${escapeHtml(value)}" aria-label="Copy \${escapeHtml(label)} \${escapeHtml(value)}" title="\${escapeHtml(label)} \${escapeHtml(value)}" style="--dot:\${escapeHtml(value)}"></button>
+  \`).join("")}</span>\`;
+}
+
+function miniPalette(theme = {}) {
+  return \`<span class="mini-palette" aria-hidden="true">\${palette(theme).map(([, value]) => \`
+    <span class="mini-swatch" style="--dot:\${escapeHtml(value)}"></span>
+  \`).join("")}</span>\`;
+}
+
 function brandInitial(brand = {}) {
   if (brand.slug === "fengzhi") return "界";
   if (brand.slug === "sidera") return "侍";
@@ -966,11 +1129,13 @@ function localizedBrand(brand = {}) {
 function referenceText(brand = {}) {
   const localized = localizedBrand(brand);
   const apiUrl = new URL(brand.apiUrl || \`api/brands/\${brand.slug}.json\`, location.href).href;
+  const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", location.href).href;
   return [
     \`IP: \${localized.name}\${localized.secondaryName ? \` / \${localized.secondaryName}\` : ""}\`,
     \`Slug: \${brand.slug}\`,
     \`Intro: \${localized.intro}\`,
     \`Brand API: \${apiUrl}\`,
+    \`Skill: \${skillUrl}\`,
   ].join("\\n");
 }
 
@@ -1020,10 +1185,10 @@ async function writeClipboardText(text) {
 async function copyReference(brand, button) {
   const result = await writeClipboardText(referenceText(brand));
   const previous = button.textContent;
-  button.textContent = result === "selected" ? t("copy.selected") : t("copy.done");
+  if (!button.dataset.iconOnly) button.textContent = result === "selected" ? t("copy.selected") : t("copy.done");
   button.classList.add("copied");
   setTimeout(() => {
-    button.textContent = previous || t("copy.reference");
+    if (!button.dataset.iconOnly) button.textContent = previous || t("copy.reference");
     button.classList.remove("copied");
   }, 1200);
 }
@@ -1044,6 +1209,35 @@ function setupCopyButtons(brands) {
       }
     });
   });
+  document.querySelectorAll("[data-copy-color]").forEach((button) => {
+    button.addEventListener("click", async (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const result = await writeClipboardText(button.dataset.copyColor);
+      button.classList.add("copied");
+      button.title = result === "selected" ? t("copy.selected") : t("copy.done");
+      setTimeout(() => button.classList.remove("copied"), 900);
+    });
+  });
+}
+
+async function renderHeroIndex() {
+  const index = $("#heroIndex");
+  if (!index) return;
+  cachedBrands ??= await loadJson("api/brands.json");
+  index.innerHTML = cachedBrands.map((brand, idx) => {
+    const localized = localizedBrand(brand);
+    return \`
+      <div class="hero-index-row" data-brand="\${escapeHtml(brand.slug)}" style="\${themeStyle(brand.theme)};--row-index:\${idx}">
+        <a class="hero-index-link" href="\${brand.url}">
+          <span class="hero-index-title">\${String(idx + 1).padStart(2, "0")} \${escapeHtml(localized.name)}</span>
+        </a>
+        \${colorDots(brand.theme)}
+        <button class="icon-copy" type="button" data-icon-only="true" data-copy-brand="\${escapeHtml(brand.slug)}" aria-label="\${escapeHtml(t("copy.reference"))} \${escapeHtml(localized.name)}">\${copyIcon()}</button>
+      </div>
+    \`;
+  }).join("");
+  setupCopyButtons(cachedBrands);
 }
 
 async function renderIndex() {
@@ -1075,17 +1269,22 @@ async function renderIndex() {
     <article class="\${cardClass(brand)}" data-brand="\${escapeHtml(brand.slug)}" style="\${themeStyle(brand.theme)}">
       <a class="ip-card-link" href="\${brand.url}" aria-label="\${escapeHtml(localizedBrand(brand).name)}">
         <div class="card-body">
-          <span class="brand-sigil">\${escapeHtml(brandInitial(brand))}</span>
+          <div class="card-art">
+            <span class="art-code">\${escapeHtml(brand.slug)}</span>
+            <span class="art-metric">\${brand.guideCount}G · \${brand.tokenCount}T</span>
+          </div>
           <p class="eyebrow">\${escapeHtml(statusLabel(brand.status))}</p>
           <h2>\${escapeHtml(localizedBrand(brand).name)}</h2>
+          \${miniPalette(brand.theme)}
           <p class="muted">\${escapeHtml(localizedBrand(brand).secondaryName || "")}</p>
+          <p class="card-intro">\${escapeHtml(localizedBrand(brand).intro || "")}</p>
           <div class="meta">
             <span class="pill">\${brand.guideCount} \${t("meta.guides")}</span>
             <span class="pill">API</span>
           </div>
         </div>
       </a>
-      <button class="copy-reference" type="button" data-copy-brand="\${escapeHtml(brand.slug)}" aria-label="\${escapeHtml(t("copy.reference"))} \${escapeHtml(localizedBrand(brand).name)}">\${t("copy.reference")}</button>
+      <button class="copy-reference icon-copy" type="button" data-icon-only="true" data-copy-brand="\${escapeHtml(brand.slug)}" aria-label="\${escapeHtml(t("copy.reference"))} \${escapeHtml(localizedBrand(brand).name)}">\${copyIcon()}</button>
     </article>
   \`).join("");
   setupCopyButtons(filtered);
@@ -1134,6 +1333,7 @@ async function renderBrand() {
 applyI18n();
 setupLanguageToggle();
 setupSearch();
+renderHeroIndex().catch(console.error);
 renderIndex().catch(console.error);
 renderBrand().catch(console.error);`);
 

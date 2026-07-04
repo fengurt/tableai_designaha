@@ -78,7 +78,7 @@ function cjkRatio(text = "") {
 }
 
 function clipSentence(text = "", max = 170) {
-  const clean = text.trim();
+  const clean = text.replace(/[#*_`>|]/g, "").replace(/\s+/g, " ").trim();
   if (clean.length <= max) return clean;
   const boundary = clean.slice(0, max).search(/[。！？.!?](?!.*[。！？.!?])/);
   if (boundary > 48) return clean.slice(0, boundary + 1);

@@ -90,8 +90,8 @@
       }
     },
     "intro": {
-      "zh": "Building Tomorrow, Today — 为者常成，行者常至*",
-      "en": "> A Member of the Table AI Alliance — same think-tank register, its own ground."
+      "zh": "Building Tomorrow, Today — 为者常成，行者常至",
+      "en": "A Member of the Table AI Alliance — same think-tank register, its own ground."
     },
     "url": "brand.html?brand=vanahom",
     "apiUrl": "api/brands/vanahom.json",
@@ -145,8 +145,8 @@
       }
     },
     "intro": {
-      "zh": "*善渡科技 · Kind Technology**",
-      "en": "KiND turns AI into a **Kind Workforce** anyone can hire — *AI for all, not for few."
+      "zh": "善渡科技 · Kind Technology",
+      "en": "KiND turns AI into a Kind Workforce anyone can hire — AI for all, not for few."
     },
     "url": "brand.html?brand=kind",
     "apiUrl": "api/brands/kind.json",
@@ -493,8 +493,8 @@
       }
     },
     "intro": {
-      "zh": "> 单一可信来源 · Single Source of Truth for every Axisee UI (web, admin console, mobile member, 企微 sidebar tools).",
-      "en": "> **The canonical design guideline for all Axisee products.**"
+      "zh": "单一可信来源 · Single Source of Truth for every Axisee UI (web, admin console, mobile member, 企微 sidebar tools).",
+      "en": "The canonical design guideline for all Axisee products."
     },
     "url": "brand.html?brand=axisee",
     "apiUrl": "api/brands/axisee.json",
@@ -549,7 +549,7 @@
     },
     "intro": {
       "zh": "Sidera 侍天 — Design System",
-      "en": "> Build-ready brand & visual spec for agents producing on-brand 侍天 work."
+      "en": "Build-ready brand & visual spec for agents producing on-brand 侍天 work."
     },
     "url": "brand.html?brand=sidera",
     "apiUrl": "api/brands/sidera.json",
