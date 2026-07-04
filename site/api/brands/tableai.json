@@ -2,7 +2,7 @@
   "slug": "tableai",
   "folder": "TABLEAI",
   "name": "Table AI",
-  "nativeName": "Table AI Alliance",
+  "nativeName": "Table AI",
   "description": "International think tank design system for the Table AI Alliance.",
   "primaryGuide": "TABLEAI/TableAI_DESIGN.md",
   "theme": {
@@ -23,14 +23,20 @@
       "minimal"
     ]
   },
+  "mainName": "Table AI",
+  "mainLanguage": "en",
   "display": {
+    "default": {
+      "language": "en",
+      "name": "Table AI"
+    },
     "zh": {
-      "name": "Table AI Alliance",
-      "secondaryName": "Table AI"
+      "name": "Table AI",
+      "secondaryName": ""
     },
     "en": {
       "name": "Table AI",
-      "secondaryName": "Table AI Alliance"
+      "secondaryName": ""
     }
   },
   "intro": {

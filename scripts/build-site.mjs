@@ -1,5 +1,6 @@
 import { mkdir, readFile, rm, writeFile, copyFile, readdir, stat } from "node:fs/promises";
 import { existsSync } from "node:fs";
+import { execFileSync } from "node:child_process";
 import { dirname, extname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -73,7 +74,7 @@ function hasCjk(text = "") {
 function zhName(brand) {
   if (hasCjk(brand.name)) return brand.name;
   if (brand.nativeName && hasCjk(brand.nativeName)) return brand.nativeName;
-  return brand.nativeName || brand.name;
+  return brand.name;
 }
 
 function enName(brand) {
@@ -82,6 +83,22 @@ function enName(brand) {
     return brand.nativeName.replace(/\s*[·|｜/]\s*[\u3400-\u9fff].*$/, "").trim() || brand.nativeName;
   }
   return brand.name;
+}
+
+function mainLanguage(brand) {
+  return hasCjk(brand.name) ? "zh" : "en";
+}
+
+function mainName(brand) {
+  return brand.name;
+}
+
+function secondaryName(primary, secondary) {
+  return primary && secondary && primary !== secondary ? secondary : "";
+}
+
+function uniqueValues(values) {
+  return [...new Set(values.filter(Boolean))];
 }
 
 function introLines(text = "") {
@@ -130,6 +147,27 @@ function liveIntro(brand, guides, lang) {
 
 function html(strings, ...values) {
   return String.raw({ raw: strings }, ...values);
+}
+
+function loadVersions() {
+  try {
+    const out = execFileSync("git", ["log", "-12", "--date=iso-strict", "--pretty=format:%H%x09%h%x09%cI%x09%s"], {
+      cwd: root,
+      encoding: "utf8",
+    }).trim();
+    return out.split("\n").filter(Boolean).map((line) => {
+      const [hash, shortHash, date, ...messageParts] = line.split("\t");
+      return {
+        hash,
+        shortHash,
+        date,
+        message: messageParts.join("\t"),
+        url: `https://github.com/${adminConfig.owner ?? "fengurt"}/${adminConfig.repo ?? "tableai_designaha"}/commit/${hash}`,
+      };
+    });
+  } catch {
+    return [];
+  }
 }
 
 await rm(siteDir, { recursive: true, force: true });
@@ -186,8 +224,9 @@ for (const brand of brands) {
   images.sort((a, b) => a.path.localeCompare(b.path));
 
   const display = {
-    zh: { name: zhName(brand), secondaryName: enName(brand) },
-    en: { name: enName(brand), secondaryName: zhName(brand) },
+    default: { language: mainLanguage(brand), name: mainName(brand) },
+    zh: { name: zhName(brand), secondaryName: secondaryName(zhName(brand), enName(brand)) },
+    en: { name: enName(brand), secondaryName: secondaryName(enName(brand), zhName(brand)) },
   };
   const intro = {
     zh: liveIntro(brand, guides, "zh"),
@@ -196,6 +235,8 @@ for (const brand of brands) {
 
   const payload = {
     ...brand,
+    mainName: mainName(brand),
+    mainLanguage: mainLanguage(brand),
     display,
     intro,
     url: `brand.html?brand=${brand.slug}`,
@@ -223,12 +264,35 @@ const indexPayload = brandPayloads.map(({ guides, tokens, images, ...brand }) =>
   primaryGuide: guides.find((g) => g.primary)?.path ?? guides[0]?.path ?? "",
   primaryExcerpt: guides.find((g) => g.primary)?.excerpt ?? guides[0]?.excerpt ?? brand.description,
 }));
+const searchPayload = brandPayloads.flatMap((brand) => {
+  const base = [{
+    type: "ip",
+    slug: brand.slug,
+    title: brand.display?.default?.name ?? brand.name,
+    subtitle: uniqueValues([brand.display?.zh?.name, brand.display?.en?.name, brand.nativeName]).join(" · "),
+    text: [brand.intro?.zh, brand.intro?.en, brand.description, brand.theme?.keywords?.join(" ")].filter(Boolean).join(" "),
+    url: brand.url,
+  }];
+  const guides = brand.guides.map((guide) => ({
+    type: "guide",
+    slug: brand.slug,
+    title: guide.title,
+    subtitle: `${brand.display?.default?.name ?? brand.name} · ${guide.path}`,
+    text: guide.excerpt,
+    url: `brand.html?brand=${brand.slug}`,
+  }));
+  return [...base, ...guides];
+});
+const versions = loadVersions();
 
 await writeFile(join(apiDir, "brands.json"), JSON.stringify(indexPayload, null, 2));
+await writeFile(join(apiDir, "search.json"), JSON.stringify(searchPayload, null, 2));
+await writeFile(join(apiDir, "versions.json"), JSON.stringify(versions, null, 2));
 await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
   name: hubName,
   description: hubDescription,
   generatedAt: new Date().toISOString(),
+  version: versions[0] ?? null,
   brands: indexPayload.map((brand) => ({
     slug: brand.slug,
     name: brand.name,
@@ -245,6 +309,10 @@ await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
     path: "skills/iptrust-live-update/SKILL.md",
     description: "Agent workflow for refreshing IP introductions from the latest brand source files.",
   }],
+  history: {
+    apiUrl: "api/versions.json",
+    latest: versions[0] ?? null,
+  },
   sync: {
     sourceOfTruth: `https://github.com/${adminConfig.owner ?? "fengurt"}/${adminConfig.repo ?? "tableai_designaha"}`,
     githubToWebsite: "GitHub Pages rebuilds site/ on push to main.",
@@ -269,6 +337,8 @@ await writeFile(join(siteDir, "llms.txt"), [
   "- /api/manifest.json",
   "- /api/brands.json",
   "- /api/brands/{slug}.json",
+  "- /api/search.json",
+  "- /api/versions.json",
   "- /skills/iptrust-live-update/SKILL.md",
   "",
   "Brands:",
@@ -329,6 +399,8 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
           <a href="llms.txt">llms.txt</a>
           <a href="skills/iptrust-live-update/SKILL.md">Skill</a>
           <a href="api/manifest.json">Manifest</a>
+          <a href="api/search.json" data-i18n="portal.searchApi">搜索 API</a>
+          <a href="#version-history" data-i18n="history.title">历史版本</a>
         </div>
       </article>
       <article class="portal" id="partner-entry">
@@ -350,6 +422,13 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
         </div>
       </article>
     </section>
+    <section class="history-panel" id="version-history">
+      <div>
+        <p class="eyebrow">History</p>
+        <h2 data-i18n="history.title">历史版本</h2>
+      </div>
+      <div class="version-list" id="versionList" aria-live="polite"></div>
+    </section>
     <section class="section-head">
       <div>
         <p class="eyebrow" data-i18n="home.systems">IP 系统</p>
@@ -358,6 +437,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       <div class="home-tools">
         <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
         <span id="brandCount" class="count-pill"></span>
+        <div class="global-results" id="globalResults" aria-live="polite"></div>
       </div>
     </section>
     <section class="ip-grid" id="brandGrid" aria-live="polite"></section>
@@ -643,12 +723,42 @@ p { line-height: 1.65; }
   background: rgba(255, 254, 250, .7);
 }
 .portal-links a:hover { border-color: var(--blue); }
+.history-panel {
+  display: grid;
+  grid-template-columns: minmax(220px, .44fr) minmax(0, 1fr);
+  gap: 28px;
+  padding: 4px 0 42px;
+}
+.version-list {
+  display: grid;
+  gap: 8px;
+  border-top: 1px solid var(--line);
+}
+.version-item {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--line);
+  padding: 10px 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration: none;
+}
+.version-item strong { color: var(--ink); }
+.version-item span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .section-head h2 { max-width: 560px; }
 .home-tools {
   display: flex;
   align-items: center;
   gap: 10px;
   min-width: min(360px, 100%);
+  position: relative;
 }
 .home-tools input {
   min-height: 42px;
@@ -664,6 +774,36 @@ p { line-height: 1.65; }
   font-size: 13px;
   font-weight: 760;
   background: rgba(255, 254, 250, .72);
+}
+.global-results {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  width: min(560px, calc(100vw - 36px));
+  max-height: 420px;
+  overflow: auto;
+  display: none;
+  z-index: 8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 254, 250, .96);
+  box-shadow: 0 18px 60px rgba(22, 20, 18, .14);
+}
+.global-results.is-open { display: grid; }
+.global-result {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+}
+.global-result:last-child { border-bottom: 0; }
+.global-result strong { color: var(--ink); }
+.global-result small { color: var(--accent); font-weight: 760; }
+.global-result span {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
 }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
 .button, button {
@@ -976,6 +1116,9 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .hero-index-row { grid-template-columns: minmax(0, 1fr) auto; }
   .hero-index-colors { display: none; }
   .entry-portals { grid-template-columns: 1fr; }
+  .history-panel { grid-template-columns: 1fr; }
+  .version-item { grid-template-columns: 70px minmax(0, 1fr); }
+  .version-item time { display: none; }
   .section-head { display: grid; align-items: start; }
   .home-tools { width: 100%; }
   .ip-grid { grid-template-columns: 1fr; }
@@ -1030,6 +1173,10 @@ const i18n = {
     "portal.admin": "管理入口",
     "portal.github": "发起合作",
     "portal.explore": "先看 IP",
+    "portal.searchApi": "搜索 API",
+    "history.title": "历史版本",
+    "history.empty": "暂无版本记录",
+    "search.global": "全局搜索",
     "admin.unlockTitle": "解锁编辑器",
     "admin.unlockBody": "Admin key 用于解锁浏览器编辑器；保存仍需 GitHub 写入令牌，确保修改回到仓库。",
     "admin.keyLabel": "Admin API key",
@@ -1082,6 +1229,10 @@ const i18n = {
     "portal.admin": "Admin entry",
     "portal.github": "Start on GitHub",
     "portal.explore": "Explore first",
+    "portal.searchApi": "Search API",
+    "history.title": "Version history",
+    "history.empty": "No version records yet",
+    "search.global": "Global search",
     "admin.unlockTitle": "Unlock editor",
     "admin.unlockBody": "The admin key unlocks this browser editor. Saving still requires a GitHub token with contents write access.",
     "admin.keyLabel": "Admin API key",
@@ -1100,6 +1251,8 @@ const i18n = {
 
 let currentLang = localStorage.getItem("iptrust-lang") || "zh";
 let cachedBrands = null;
+let cachedSearch = null;
+let cachedVersions = null;
 let currentQuery = "";
 
 function t(key) {
@@ -1127,6 +1280,7 @@ function setupLanguageToggle() {
     await renderHeroIndex();
     await renderIndex();
     await renderBrand();
+    await renderVersions();
   });
 }
 
@@ -1147,6 +1301,11 @@ async function loadJson(path) {
   const res = await fetch(url, { cache: "no-store" });
   if (!res.ok) throw new Error(\`Could not load \${path}\`);
   return res.json();
+}
+
+async function loadSearch() {
+  cachedSearch ??= await loadJson("api/search.json");
+  return cachedSearch;
 }
 
 function escapeHtml(value) {
@@ -1392,6 +1551,38 @@ function setupCopyButtons(brands) {
   });
 }
 
+function normalizeSearchText(value = "") {
+  return String(value).toLowerCase();
+}
+
+async function renderGlobalResults(query) {
+  const panel = $("#globalResults");
+  if (!panel) return;
+  const q = normalizeSearchText(query).trim();
+  if (!q) {
+    panel.classList.remove("is-open");
+    panel.innerHTML = "";
+    return;
+  }
+  const search = await loadSearch();
+  const results = search
+    .filter((item) => [item.title, item.subtitle, item.text, item.slug, item.type].join(" ").toLowerCase().includes(q))
+    .slice(0, 9);
+  if (!results.length) {
+    panel.classList.add("is-open");
+    panel.innerHTML = \`<div class="global-result"><span>\${escapeHtml(t("home.noResults"))}</span></div>\`;
+    return;
+  }
+  panel.classList.add("is-open");
+  panel.innerHTML = results.map((item) => \`
+    <a class="global-result" href="\${escapeHtml(item.url)}">
+      <small>\${escapeHtml(item.type)} · \${escapeHtml(item.slug)}</small>
+      <strong>\${escapeHtml(item.title)}</strong>
+      <span>\${escapeHtml(item.subtitle || item.text || "")}</span>
+    </a>
+  \`).join("");
+}
+
 async function renderHeroIndex() {
   const index = $("#heroIndex");
   if (!index) return;
@@ -1409,6 +1600,23 @@ async function renderHeroIndex() {
     \`;
   }).join("");
   setupCopyButtons(cachedBrands);
+}
+
+async function renderVersions() {
+  const list = $("#versionList");
+  if (!list) return;
+  cachedVersions ??= await loadJson("api/versions.json");
+  if (!cachedVersions.length) {
+    list.innerHTML = \`<p class="muted">\${escapeHtml(t("history.empty"))}</p>\`;
+    return;
+  }
+  list.innerHTML = cachedVersions.slice(0, 6).map((version) => \`
+    <a class="version-item" href="\${escapeHtml(version.url)}">
+      <strong>\${escapeHtml(version.shortHash)}</strong>
+      <span>\${escapeHtml(version.message)}</span>
+      <time>\${escapeHtml(new Date(version.date).toLocaleDateString(currentLang === "zh" ? "zh-CN" : "en-US"))}</time>
+    </a>
+  \`).join("");
 }
 
 async function renderIndex() {
@@ -1432,6 +1640,7 @@ async function renderIndex() {
     : brands;
   const count = $("#brandCount");
   if (count) count.textContent = currentQuery ? \`\${filtered.length}/\${brands.length} IP\` : \`\${brands.length} IP\`;
+  await renderGlobalResults(currentQuery);
   if (!filtered.length) {
     grid.innerHTML = \`<p class="empty-state">\${escapeHtml(t("home.noResults"))}</p>\`;
     return;
@@ -1505,6 +1714,7 @@ applyI18n();
 setupLanguageToggle();
 setupSearch();
 renderHeroIndex().catch(console.error);
+renderVersions().catch(console.error);
 renderIndex().catch(console.error);
 renderBrand().catch(console.error);`);
 

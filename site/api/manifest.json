@@ -1,7 +1,14 @@
 {
   "name": "岁知社 IPTrust",
   "description": "岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。",
-  "generatedAt": "2026-07-04T02:45:34.188Z",
+  "generatedAt": "2026-07-04T02:51:36.787Z",
+  "version": {
+    "hash": "a0998f7e8a9aa8e198f1671ff03ed3cf2aaf4f8c",
+    "shortHash": "a0998f7",
+    "date": "2026-07-04T10:46:14+08:00",
+    "message": "Refine IPTrust public entry UX",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a0998f7e8a9aa8e198f1671ff03ed3cf2aaf4f8c"
+  },
   "brands": [
     {
       "slug": "tableai",
@@ -112,6 +119,16 @@
       "description": "Agent workflow for refreshing IP introductions from the latest brand source files."
     }
   ],
+  "history": {
+    "apiUrl": "api/versions.json",
+    "latest": {
+      "hash": "a0998f7e8a9aa8e198f1671ff03ed3cf2aaf4f8c",
+      "shortHash": "a0998f7",
+      "date": "2026-07-04T10:46:14+08:00",
+      "message": "Refine IPTrust public entry UX",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a0998f7e8a9aa8e198f1671ff03ed3cf2aaf4f8c"
+    }
+  },
   "sync": {
     "sourceOfTruth": "https://github.com/fengurt/tableai_designaha",
     "githubToWebsite": "GitHub Pages rebuilds site/ on push to main.",

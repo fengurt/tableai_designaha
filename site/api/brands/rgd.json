@@ -23,7 +23,13 @@
       "fire"
     ]
   },
+  "mainName": "RGD",
+  "mainLanguage": "en",
   "display": {
+    "default": {
+      "language": "en",
+      "name": "RGD"
+    },
     "zh": {
       "name": "燃古豋",
       "secondaryName": "RGD"

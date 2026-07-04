@@ -7,6 +7,8 @@ Machine-readable entry points:
 - /api/manifest.json
 - /api/brands.json
 - /api/brands/{slug}.json
+- /api/search.json
+- /api/versions.json
 - /skills/iptrust-live-update/SKILL.md
 
 Brands:

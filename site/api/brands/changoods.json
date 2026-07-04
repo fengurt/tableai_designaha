@@ -23,7 +23,13 @@
       "wellbeing"
     ]
   },
+  "mainName": "Changoods",
+  "mainLanguage": "en",
   "display": {
+    "default": {
+      "language": "en",
+      "name": "Changoods"
+    },
     "zh": {
       "name": "常幸",
       "secondaryName": "Changoods"

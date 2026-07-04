@@ -23,7 +23,13 @@
       "classical learning"
     ]
   },
+  "mainName": "PKU BOYA Academy",
+  "mainLanguage": "en",
   "display": {
+    "default": {
+      "language": "en",
+      "name": "PKU BOYA Academy"
+    },
     "zh": {
       "name": "博雅问渠书院",
       "secondaryName": "PKU BOYA Academy"

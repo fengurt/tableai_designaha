@@ -23,18 +23,24 @@
       "trust"
     ]
   },
+  "mainName": "IPTrustasset",
+  "mainLanguage": "en",
   "display": {
+    "default": {
+      "language": "en",
+      "name": "IPTrustasset"
+    },
     "zh": {
-      "name": "IPTRUST",
-      "secondaryName": "IPTrustasset"
+      "name": "IPTrustasset",
+      "secondaryName": ""
     },
     "en": {
       "name": "IPTrustasset",
-      "secondaryName": "IPTRUST"
+      "secondaryName": ""
     }
   },
   "intro": {
-    "zh": "IPTRUST的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
+    "zh": "IPTrustasset的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
     "en": "IPTrustasset brand system with live guidelines, colors, voice, assets, and agent-readable source files."
   },
   "url": "brand.html?brand=iptrust",

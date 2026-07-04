@@ -23,7 +23,13 @@
       "precision"
     ]
   },
+  "mainName": "1stepmore",
+  "mainLanguage": "en",
   "display": {
+    "default": {
+      "language": "en",
+      "name": "1stepmore"
+    },
     "zh": {
       "name": "壹目贯维",
       "secondaryName": "1stepmore"

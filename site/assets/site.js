@@ -39,6 +39,10 @@ const i18n = {
     "portal.admin": "管理入口",
     "portal.github": "发起合作",
     "portal.explore": "先看 IP",
+    "portal.searchApi": "搜索 API",
+    "history.title": "历史版本",
+    "history.empty": "暂无版本记录",
+    "search.global": "全局搜索",
     "admin.unlockTitle": "解锁编辑器",
     "admin.unlockBody": "Admin key 用于解锁浏览器编辑器；保存仍需 GitHub 写入令牌，确保修改回到仓库。",
     "admin.keyLabel": "Admin API key",
@@ -91,6 +95,10 @@ const i18n = {
     "portal.admin": "Admin entry",
     "portal.github": "Start on GitHub",
     "portal.explore": "Explore first",
+    "portal.searchApi": "Search API",
+    "history.title": "Version history",
+    "history.empty": "No version records yet",
+    "search.global": "Global search",
     "admin.unlockTitle": "Unlock editor",
     "admin.unlockBody": "The admin key unlocks this browser editor. Saving still requires a GitHub token with contents write access.",
     "admin.keyLabel": "Admin API key",
@@ -109,6 +117,8 @@ const i18n = {
 
 let currentLang = localStorage.getItem("iptrust-lang") || "zh";
 let cachedBrands = null;
+let cachedSearch = null;
+let cachedVersions = null;
 let currentQuery = "";
 
 function t(key) {
@@ -136,6 +146,7 @@ function setupLanguageToggle() {
     await renderHeroIndex();
     await renderIndex();
     await renderBrand();
+    await renderVersions();
   });
 }
 
@@ -156,6 +167,11 @@ async function loadJson(path) {
   const res = await fetch(url, { cache: "no-store" });
   if (!res.ok) throw new Error(`Could not load ${path}`);
   return res.json();
+}
+
+async function loadSearch() {
+  cachedSearch ??= await loadJson("api/search.json");
+  return cachedSearch;
 }
 
 function escapeHtml(value) {
@@ -401,6 +417,38 @@ function setupCopyButtons(brands) {
   });
 }
 
+function normalizeSearchText(value = "") {
+  return String(value).toLowerCase();
+}
+
+async function renderGlobalResults(query) {
+  const panel = $("#globalResults");
+  if (!panel) return;
+  const q = normalizeSearchText(query).trim();
+  if (!q) {
+    panel.classList.remove("is-open");
+    panel.innerHTML = "";
+    return;
+  }
+  const search = await loadSearch();
+  const results = search
+    .filter((item) => [item.title, item.subtitle, item.text, item.slug, item.type].join(" ").toLowerCase().includes(q))
+    .slice(0, 9);
+  if (!results.length) {
+    panel.classList.add("is-open");
+    panel.innerHTML = `<div class="global-result"><span>${escapeHtml(t("home.noResults"))}</span></div>`;
+    return;
+  }
+  panel.classList.add("is-open");
+  panel.innerHTML = results.map((item) => `
+    <a class="global-result" href="${escapeHtml(item.url)}">
+      <small>${escapeHtml(item.type)} · ${escapeHtml(item.slug)}</small>
+      <strong>${escapeHtml(item.title)}</strong>
+      <span>${escapeHtml(item.subtitle || item.text || "")}</span>
+    </a>
+  `).join("");
+}
+
 async function renderHeroIndex() {
   const index = $("#heroIndex");
   if (!index) return;
@@ -418,6 +466,23 @@ async function renderHeroIndex() {
     `;
   }).join("");
   setupCopyButtons(cachedBrands);
+}
+
+async function renderVersions() {
+  const list = $("#versionList");
+  if (!list) return;
+  cachedVersions ??= await loadJson("api/versions.json");
+  if (!cachedVersions.length) {
+    list.innerHTML = `<p class="muted">${escapeHtml(t("history.empty"))}</p>`;
+    return;
+  }
+  list.innerHTML = cachedVersions.slice(0, 6).map((version) => `
+    <a class="version-item" href="${escapeHtml(version.url)}">
+      <strong>${escapeHtml(version.shortHash)}</strong>
+      <span>${escapeHtml(version.message)}</span>
+      <time>${escapeHtml(new Date(version.date).toLocaleDateString(currentLang === "zh" ? "zh-CN" : "en-US"))}</time>
+    </a>
+  `).join("");
 }
 
 async function renderIndex() {
@@ -441,6 +506,7 @@ async function renderIndex() {
     : brands;
   const count = $("#brandCount");
   if (count) count.textContent = currentQuery ? `${filtered.length}/${brands.length} IP` : `${brands.length} IP`;
+  await renderGlobalResults(currentQuery);
   if (!filtered.length) {
     grid.innerHTML = `<p class="empty-state">${escapeHtml(t("home.noResults"))}</p>`;
     return;
@@ -514,5 +580,6 @@ applyI18n();
 setupLanguageToggle();
 setupSearch();
 renderHeroIndex().catch(console.error);
+renderVersions().catch(console.error);
 renderIndex().catch(console.error);
 renderBrand().catch(console.error);

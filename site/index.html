@@ -41,6 +41,8 @@
           <a href="llms.txt">llms.txt</a>
           <a href="skills/iptrust-live-update/SKILL.md">Skill</a>
           <a href="api/manifest.json">Manifest</a>
+          <a href="api/search.json" data-i18n="portal.searchApi">搜索 API</a>
+          <a href="#version-history" data-i18n="history.title">历史版本</a>
         </div>
       </article>
       <article class="portal" id="partner-entry">
@@ -62,6 +64,13 @@
         </div>
       </article>
     </section>
+    <section class="history-panel" id="version-history">
+      <div>
+        <p class="eyebrow">History</p>
+        <h2 data-i18n="history.title">历史版本</h2>
+      </div>
+      <div class="version-list" id="versionList" aria-live="polite"></div>
+    </section>
     <section class="section-head">
       <div>
         <p class="eyebrow" data-i18n="home.systems">IP 系统</p>
@@ -70,6 +79,7 @@
       <div class="home-tools">
         <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
         <span id="brandCount" class="count-pill"></span>
+        <div class="global-results" id="globalResults" aria-live="polite"></div>
       </div>
     </section>
     <section class="ip-grid" id="brandGrid" aria-live="polite"></section>

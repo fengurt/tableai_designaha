@@ -23,7 +23,13 @@
       "wisdom navigator"
     ]
   },
+  "mainName": "Sidera",
+  "mainLanguage": "en",
   "display": {
+    "default": {
+      "language": "en",
+      "name": "Sidera"
+    },
     "zh": {
       "name": "侍天",
       "secondaryName": "Sidera"

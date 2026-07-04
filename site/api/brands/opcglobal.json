@@ -23,7 +23,13 @@
       "standards"
     ]
   },
+  "mainName": "OPC Global",
+  "mainLanguage": "en",
   "display": {
+    "default": {
+      "language": "en",
+      "name": "OPC Global"
+    },
     "zh": {
       "name": "欧匹赛全球联盟",
       "secondaryName": "OPC Global"

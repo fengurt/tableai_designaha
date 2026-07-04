@@ -23,7 +23,13 @@
       "three agents"
     ]
   },
+  "mainName": "Axisee",
+  "mainLanguage": "en",
   "display": {
+    "default": {
+      "language": "en",
+      "name": "Axisee"
+    },
     "zh": {
       "name": "酒店盈利大师",
       "secondaryName": "Axisee"

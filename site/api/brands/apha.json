@@ -23,7 +23,13 @@
       "Asia-Pacific"
     ]
   },
+  "mainName": "APHA",
+  "mainLanguage": "en",
   "display": {
+    "default": {
+      "language": "en",
+      "name": "APHA"
+    },
     "zh": {
       "name": "亚太艺术疗愈联盟",
       "secondaryName": "APHA"

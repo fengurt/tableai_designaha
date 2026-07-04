@@ -1,0 +1,410 @@
+[
+  {
+    "type": "ip",
+    "slug": "tableai",
+    "title": "Table AI",
+    "subtitle": "Table AI",
+    "text": "本项目采用极简且富有启发性的视觉语言。设计应体现以下四个维度： Table AI brand system with live guidelines, colors, voice, assets, and agent-readable source files. International think tank design system for the Table AI Alliance. white deep blue dark gold think tank minimal",
+    "url": "brand.html?brand=tableai"
+  },
+  {
+    "type": "guide",
+    "slug": "tableai",
+    "title": "TableAI DESIGN",
+    "subtitle": "Table AI · TABLEAI/TableAI_DESIGN.md",
+    "text": "设计规范文件 (design.md) 1. 核心设计哲学 本项目采用极简且富有启发性的视觉语言。设计应体现以下四个维度： 利他 (Altruistic) ：界面直观，优先考虑用户价值与操作效率。 真实 (Authentic) ：拒绝过度装饰，展现材质与结构的自然美感。 艺术 (Artistic) ：强调比例、对齐与留白的艺术性平衡。 优雅 (Elegant) ：通过色彩与细节传递专业且高端的质感。 2. 色彩系统 (Color Palette) 严禁使用预设的基础色，必须严格执行以下色值： 底色 (Base) : White ( FFFFFF) 用途：背景、大面积留白、轻盈感来源。 主色 (Primary) : 寰宇深蓝 (Universe Deep Blue) 0A1626 用途：主要文字、结构线条、重要功能区块、品牌标识。 点缀色 (Accent) : 日晷暗金 (Sundial Dark Gold) A88B52 用途：行",
+    "url": "brand.html?brand=tableai"
+  },
+  {
+    "type": "ip",
+    "slug": "vanahom",
+    "title": "VANAHOM",
+    "subtitle": "凡纳弘途 · VANAHOM",
+    "text": "Building Tomorrow, Today — 为者常成，行者常至 A Member of the Table AI Alliance — same think-tank register, its own ground. Mission-driven hospitality and extended-services enterprise builder. Hongtu red Cangling grey white space hospitality wellbeing",
+    "url": "brand.html?brand=vanahom"
+  },
+  {
+    "type": "guide",
+    "slug": "vanahom",
+    "title": "Vanahom Design",
+    "subtitle": "VANAHOM · VANAHOM/vanahom_design.md",
+    "text": "VANAHOM — Design System 凡纳弘途 · VANAHOM Building Tomorrow, Today — 为者常成，行者常至 A single reference for anyone designing or building VANAHOM surfaces — decks, briefs, brand pages, the workspace. Pairs with vanahom deck.html (the living deck) and the logo set in vanahom logo/ . A Member of the Table AI Alliance — same think tank register, its own ground. 1. Brand in one breath VANAHOM is a mission driven company that rebui",
+    "url": "brand.html?brand=vanahom"
+  },
+  {
+    "type": "ip",
+    "slug": "kind",
+    "title": "KiND",
+    "subtitle": "善渡科技 · KiND",
+    "text": "善渡科技 · Kind Technology KiND turns AI into a Kind Workforce anyone can hire — AI for all, not for few. Human-first AI workforce brand: for all, not for few. teal mint coral kind workforce inclusive AI",
+    "url": "brand.html?brand=kind"
+  },
+  {
+    "type": "guide",
+    "slug": "kind",
+    "title": "KiND Design",
+    "subtitle": "KiND · KiND/KiND Design.md",
+    "text": "KiND — Design System 善渡科技 · Kind Technology for all, not for few. A single reference for anyone designing or building KiND surfaces. Pairs with kind.css (tokens + components) and the Brand Book (story, voice, lexicon). 1. Brand in one breath KiND turns AI into a Kind Workforce anyone can hire — AI for all, not for few. The name is a pun and the axis of everything: kind (warm, human first) and a kind of (a new role — ",
+    "url": "brand.html?brand=kind"
+  },
+  {
+    "type": "guide",
+    "slug": "kind",
+    "title": "Kind Skill Md",
+    "subtitle": "KiND · KiND/kind-skill-md.md",
+    "text": "KiND — Brand & Design System for all, not for few. KiND turns AI into a Kind Workforce anyone can hire. The name is the axis of everything: kind (warm, human first) and a kind of (a new role). This file is the operating guide. Read it first, then load the bundled files as the task needs them. Do not invent tokens, colors, or components — everything you need is in the files below. Folder layout kind brand/ ├─ SKILL.md",
+    "url": "brand.html?brand=kind"
+  },
+  {
+    "type": "guide",
+    "slug": "kind",
+    "title": "Preview",
+    "subtitle": "KiND · KiND/preview.html",
+    "text": "KiND · Design System Preview / page local styles only — everything brand level comes from kind.css / .section{padding:var( s 8) 0;border bottom:1px solid var( border)} .section h2{font size:var( t h2);margin:var( s 3) 0 var( s 5)} .swatches{display:grid;grid template columns:repeat(auto fill,minmax(150px,1fr));gap:var( s 3)} .sw{border:1px solid var( border);border radius:var( r md);overflow:hidden;background:var( su",
+    "url": "brand.html?brand=kind"
+  },
+  {
+    "type": "ip",
+    "slug": "apha",
+    "title": "APHA",
+    "subtitle": "亚太艺术疗愈联盟 · APHA",
+    "text": "亚太艺术疗愈联盟的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。 APHA is an Asia-Pacific arts and healing alliance IP for creative wellbeing, therapeutic arts, and cross-cultural care practices. Asia-Pacific Healing Arts Alliance. mineral blue sage clay healing arts Asia-Pacific",
+    "url": "brand.html?brand=apha"
+  },
+  {
+    "type": "guide",
+    "slug": "apha",
+    "title": "README",
+    "subtitle": "APHA · APHA/README.md",
+    "text": "APHA Chinese name: 亚太艺术疗愈联盟 English descriptor: Asia Pacific Healing Arts Alliance Brand Role APHA is an Asia Pacific arts and healing alliance IP for creative wellbeing, therapeutic arts, and cross cultural care practices. Visual Direction Temperament: restorative, humane, professional, warm, spacious. Color cues: mineral blue, sage green, clay, warm ivory. Imagery cues: gentle movement, art practice, natural textur",
+    "url": "brand.html?brand=apha"
+  },
+  {
+    "type": "ip",
+    "slug": "manaendless",
+    "title": "MANA Endless",
+    "subtitle": "无魔协会 · MANA Endless",
+    "text": "无魔协会的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。 MANA Endless brand system with live guidelines, colors, voice, assets, and agent-readable source files. Alliance brand placeholder for future design guidelines. charcoal silver violet grey clarity continuous learning",
+    "url": "brand.html?brand=manaendless"
+  },
+  {
+    "type": "ip",
+    "slug": "opcglobal",
+    "title": "OPC Global",
+    "subtitle": "欧匹赛全球联盟 · OPC Global",
+    "text": "欧匹赛全球联盟的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。 OPC Global brand system with live guidelines, colors, voice, assets, and agent-readable source files. Global alliance brand placeholder for future design guidelines. deep blue graphite gold global alliance standards",
+    "url": "brand.html?brand=opcglobal"
+  },
+  {
+    "type": "ip",
+    "slug": "iptrust",
+    "title": "IPTrustasset",
+    "subtitle": "IPTrustasset · IPTRUST",
+    "text": "IPTrustasset的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。 IPTrustasset brand system with live guidelines, colors, voice, assets, and agent-readable source files. Trusted intellectual-property asset stewardship brand placeholder. navy platinum dark gold IP assets trust",
+    "url": "brand.html?brand=iptrust"
+  },
+  {
+    "type": "ip",
+    "slug": "fengzhi",
+    "title": "峰值永造局",
+    "subtitle": "峰值永造局 · The Transformation Company · The Transformation Company · 界格",
+    "text": "峰值永造局 · 品牌设计系统（方向 A「界格」） The Transformation Company brand system with live guidelines, colors, voice, assets, and agent-readable source files. AI-native transformation delivery brand system. paper white ink black stone grey deep gold transformation",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "Readme",
+    "subtitle": "峰值永造局 · FENGZHI/readme.md",
+    "text": "峰值永造局 · 品牌设计系统（方向 A「界格」） 峰值永造局 （英文名待定，过渡用 THE TRANSFORMATION COMPANY）是第一家 AI 原生的「转变交付」公司：为中国超高净值企业家家族，把人的关键转变做成可诊断、可设计、可交付、可持续的产品。品类叙事为「转变经济」（Joe Pine, HBR Press 2026），三支柱：体验是载体 · AI 是杠杆 · 转变履约网络是壁垒。 来源材料： uploads/峰值永造局 种子轮Deck骨架与完整附件 v1.0.docx （种子轮 12 页 Deck 骨架；提取文本在 research/doc text.txt ）。视觉方向经三方向比稿（见 峰值永造局 品牌方向.html ），定稿方向 A「界格」——瑞士精密 × 东方克制。 CONTENT FUNDAMENTALS（文案基本面） 语言 ：中文为主，英文为辅（小字注释、机构出处、眉题）。称谓用「我们」，不用「您尊享」",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "Core.Card",
+    "subtitle": "峰值永造局 · FENGZHI/components/core/core.card.html",
+    "text": "body { margin: 0; background: var( surface page); padding: 18px 22px; font family: var( font body); } .row { display: flex; align items: center; gap: 24px; padding: 12px 0; border bottom: 0.5px solid var( line); } .row:last child { border bottom: none; } .tok { font family: var( font western); font size: 9px; letter spacing: 0.08em; color: var( text caption); width: 92px; flex shrink: 0; } JiegeMark Wordmark 峰值永造局 Ki",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "JiegeMark.Prompt",
+    "subtitle": "峰值永造局 · FENGZHI/components/core/JiegeMark.prompt.md",
+    "text": "界格徽记 — 峰值永造局的品牌符号，用于封面、页眉与落款；最小 12px，四周净空 ≥ 50% 宽度。 jsx {/ 墨黑底 /} {/ 单色印刷 /} 不旋转、不加圆角、不改变金格位置（右上）。",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "Kicker.Prompt",
+    "subtitle": "峰值永造局 · FENGZHI/components/core/Kicker.prompt.md",
+    "text": "眉题小字 — 章节眉题、页眉页脚、英文注释。 jsx BRAND FRAMEWORK · 01 体验是载体 · AI 是杠杆 · 转变履约网络是壁垒",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "PageChrome.Prompt",
+    "subtitle": "峰值永造局 · FENGZHI/components/core/PageChrome.prompt.md",
+    "text": "页眉/页脚 — 每页 deck 与文档的细线条框定。 jsx",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "Stat.Prompt",
+    "subtitle": "峰值永造局 · FENGZHI/components/core/Stat.prompt.md",
+    "text": "大数字陈列 — deck 与文档中的关键数据。纪律：每个数字标注出处。 jsx",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "Wordmark.Prompt",
+    "subtitle": "峰值永造局 · FENGZHI/components/core/Wordmark.prompt.md",
+    "text": "字标组合 — 封面用 stacked 主组合，页眉/签名用 horizontal 横排。 jsx {/ 主组合 /} {/ 页眉 /} {/ 封面放大 /}",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "FENGZHI Brand Kit",
+    "subtitle": "峰值永造局 · FENGZHI/FENGZHI Brand Kit.html",
+    "text": "峰值永造局 · Brand Kit v1 body { margin: 0; background: EBE7DF; font family: var( font body); color: var( text display); } .page { max width: 880px; margin: 0 auto; background: var( surface page); padding: 72px 80px; box sizing: border box; } @media print { body { background: var( surface page); } .page { padding: 40px 24px; } } .chrome { display: flex; justify content: space between; font size: 11px; letter spacing: 0.2e",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "Brand Lockups",
+    "subtitle": "峰值永造局 · FENGZHI/guidelines/brand-lockups.html",
+    "text": "body { margin: 0; background: var( surface page); padding: 18px 20px; font family: var( font body); display: flex; gap: 14px; } .frame { border: 1px solid var( line); background: var( surface card); flex: 1; display: flex; align items: center; justify content: center; padding: 22px 10px; } .lab { font family: var( font western); font size: 9px; color: var( text caption); letter spacing: 0.08em; text align: center; ma",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "Brand Mark",
+    "subtitle": "峰值永造局 · FENGZHI/guidelines/brand-mark.html",
+    "text": "body { margin: 0; background: var( surface page); padding: 20px 22px; font family: var( font body); display: flex; gap: 26px; align items: center; } .cell { border: 1px solid var( line); background: var( surface card); display: flex; align items: center; justify content: center; width: 110px; height: 110px; flex direction: column; gap: 8px; } .cell.dark { background: var( ink); border color: var( ink); } .lab { font ",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "Brand Voice",
+    "subtitle": "峰值永造局 · FENGZHI/guidelines/brand-voice.html",
+    "text": "body { margin: 0; background: var( surface page); padding: 18px 22px; font family: var( font body); } .knife { font family: var( font display); font size: 16px; font weight: 500; color: var( ink); line height: 1.8; border bottom: 1px solid var( line); padding bottom: 12px; } .grid { display: grid; grid template columns: 1fr 1fr; gap: 10px; margin top: 14px; } .no, .yes { padding: 10px 12px; font size: 11px; line heig",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "Colors Core",
+    "subtitle": "峰值永造局 · FENGZHI/guidelines/colors-core.html",
+    "text": "body { margin: 0; background: var( surface page); font family: var( font body); padding: 18px 20px; } .row { display: grid; grid template columns: repeat(4, 1fr); gap: 12px; } .chip { border: 1px solid rgba(0,0,0,0.08); height: 78px; } .name { font size: 12px; color: var( text body); margin top: 8px; font weight: 500; } .val { font size: 10px; font family: var( font western); color: var( text caption); letter spacing",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "Colors Hierarchy",
+    "subtitle": "峰值永造局 · FENGZHI/guidelines/colors-hierarchy.html",
+    "text": "body { margin: 0; background: var( surface page); font family: var( font body); padding: 18px 20px; } .ln { display: flex; align items: center; gap: 14px; padding: 9px 0; border bottom: var( rule hairline) solid var( line); } .ln:last child { border bottom: none; } .tok { font family: var( font western); font size: 10px; color: var( text caption); width: 110px; letter spacing: 0.04em; } .demo { font size: 14px; } ink",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "Colors Usage",
+    "subtitle": "峰值永造局 · FENGZHI/guidelines/colors-usage.html",
+    "text": "body { margin: 0; background: var( surface page); font family: var( font body); padding: 18px 20px; } .bar { display: flex; height: 44px; border: 1px solid rgba(0,0,0,0.08); } .leg { display: flex; gap: 18px; margin top: 10px; font size: 11px; color: var( text body); } .leg b { font weight: 500; } .rules { margin: 14px 0 0; padding: 0 0 0 16px; font size: 12px; line height: 1.9; color: var( text body); } 纸白 ~78% 墨黑 ~",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "Spacing Layout",
+    "subtitle": "峰值永造局 · FENGZHI/guidelines/spacing-layout.html",
+    "text": "body { margin: 0; background: var( surface page); padding: 16px 20px; font family: var( font body); } .page { border: 1px solid var( line); background: var( surface card); width: 320px; aspect ratio: 16/9; margin: 0 auto; padding: 10px 14px; box sizing: border box; display: flex; flex direction: column; } .hf { display: flex; justify content: space between; font size: 5px; letter spacing: 0.2em; color: var( stone); }",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "Spacing Scale",
+    "subtitle": "峰值永造局 · FENGZHI/guidelines/spacing-scale.html",
+    "text": "body { margin: 0; background: var( surface page); padding: 18px 20px; font family: var( font body); } .scale { display: flex; align items: flex end; gap: 14px; } .s { background: var( ink); width: 22px; } .lab { font family: var( font western); font size: 9px; color: var( text caption); text align: center; margin top: 5px; } .rules { display: flex; gap: 28px; margin top: 16px; align items: center; font size: 11px; co",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "Type Body",
+    "subtitle": "峰值永造局 · FENGZHI/guidelines/type-body.html",
+    "text": "body { margin: 0; background: var( surface page); padding: 20px 22px; font family: var( font body); } .meta { font family: var( font western); font size: 10px; color: var( text caption); letter spacing: 0.06em; margin top: 6px; } 转变无法靠看书与上课完成，只能靠被设计的体验与持续陪伴完成。我们的客户单位是企业家家族账户，不是订单——一个家族，全生命周期，每年多个关键时刻。 Body · Noto Sans SC 300 · 15–16px · line height 1.9 · 色 ink soft 来源：胡润研究院《2022 意才·胡润财富报告》 · 检索核验 2026 06 10 Caption /",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "Type Display",
+    "subtitle": "峰值永造局 · FENGZHI/guidelines/type-display.html",
+    "text": "body { margin: 0; background: var( surface page); padding: 20px 22px; font family: var( font body); } .spec { font family: var( font display); color: var( text display); } .meta { font family: var( font western); font size: 10px; color: var( text caption); letter spacing: 0.06em; margin top: 4px; } .block { padding: 10px 0; border bottom: var( rule hairline) solid var( line); } .block:last child { border bottom: none",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "Type Numbers",
+    "subtitle": "峰值永造局 · FENGZHI/guidelines/type-numbers.html",
+    "text": "body { margin: 0; background: var( surface page); padding: 20px 22px; font family: var( font body); display: flex; gap: 36px; align items: flex start; } .meta { font family: var( font western); font size: 10px; color: var( text caption); letter spacing: 0.06em; margin top: 6px; } 2 → 6 管家人效 · 18 个月 Stat · Helvetica Light · 数字大、注释小 THE TRANSFORMATION COMPANY 机密 CONFIDENTIAL · 仅供指定投资人 Kicker · 10–12px · tracking 0.22em",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "Slide Cover",
+    "subtitle": "峰值永造局 · FENGZHI/slides/slide-cover.html",
+    "text": "body { margin: 0; width: 1280px; height: 720px; background: var( surface page); font family: var( font body); display: flex; flex direction: column; padding: 44px 64px; box sizing: border box; } .chrome { display: flex; justify content: space between; font size: 14px; letter spacing: 0.22em; color: var( stone); } .mid { flex: 1; display: flex; flex direction: column; align items: center; justify content: center; gap:",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "Slide Ladder",
+    "subtitle": "峰值永造局 · FENGZHI/slides/slide-ladder.html",
+    "text": "body { margin: 0; width: 1280px; height: 720px; background: var( surface page); font family: var( font body); display: flex; flex direction: column; padding: 44px 64px; box sizing: border box; } .chrome { display: flex; justify content: space between; font size: 14px; letter spacing: 0.22em; color: var( stone); border bottom: 1px solid var( line); padding bottom: 18px; } .stairs { display: flex; align items: flex end",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "Slide Section",
+    "subtitle": "峰值永造局 · FENGZHI/slides/slide-section.html",
+    "text": "body { margin: 0; width: 1280px; height: 720px; background: var( ink); font family: var( font body); display: flex; flex direction: column; justify content: center; padding: 0 120px; box sizing: border box; color: var( paper); } 04 / 12 · 品类与定位 Pine 写了菜谱， 我们开第一家餐厅。 理论归他，交付系统归我们。",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "guide",
+    "slug": "fengzhi",
+    "title": "Slide Stat",
+    "subtitle": "峰值永造局 · FENGZHI/slides/slide-stat.html",
+    "text": "body { margin: 0; width: 1280px; height: 720px; background: var( surface page); font family: var( font body); display: flex; flex direction: column; padding: 44px 64px; box sizing: border box; } .chrome { display: flex; justify content: space between; font size: 14px; letter spacing: 0.22em; color: var( stone); } .cols { display: grid; grid template columns: repeat(3, 1fr); gap: 1px; background: var( line); border to",
+    "url": "brand.html?brand=fengzhi"
+  },
+  {
+    "type": "ip",
+    "slug": "axisee",
+    "title": "Axisee",
+    "subtitle": "酒店盈利大师 · Axisee",
+    "text": "单一可信来源 · Single Source of Truth for every Axisee UI (web, admin console, mobile member, 企微 sidebar tools). The canonical design guideline for all Axisee products. AI General Manager for hotel marketing, private-domain operations, and revenue. universe blue Vanahom red promising gold hotel AI three agents",
+    "url": "brand.html?brand=axisee"
+  },
+  {
+    "type": "guide",
+    "slug": "axisee",
+    "title": "Axisee Design",
+    "subtitle": "Axisee · Axisee/axisee_design.md",
+    "text": "Axisee Design System The canonical design guideline for all Axisee products. 单一可信来源 · Single Source of Truth for every Axisee UI (web, admin console, mobile member, 企微 sidebar tools). Axisee（酒店盈利大师 / Hotel Revenue Master ）is a centralized AI General Manager for hotel AI marketing, 私域营销 (private domain marketing) and profit optimization. The product is organized around three intelligent Agents , and the entire visual ",
+    "url": "brand.html?brand=axisee"
+  },
+  {
+    "type": "ip",
+    "slug": "sidera",
+    "title": "Sidera",
+    "subtitle": "侍天 · Sidera",
+    "text": "Sidera 侍天 — Design System Build-ready brand & visual spec for agents producing on-brand 侍天 work. Wisdom Navigator design system for premium F&B chains. ink earth gold cream vermillion wisdom navigator",
+    "url": "brand.html?brand=sidera"
+  },
+  {
+    "type": "guide",
+    "slug": "sidera",
+    "title": "Sidera Design",
+    "subtitle": "Sidera · Sidera/sidera_design.md",
+    "text": "Sidera 侍天 — Design System Build ready brand & visual spec for agents producing on brand 侍天 work. 一句话： 土金为骨、玄墨为底、思源宋体为肉；沉稳敢言、有据可依。 Gold is the bones, ink is the ground, serif is the flesh — composed, forthright, evidence based. Sidera 侍天 — 智慧领航者 · Wisdom Navigator for premium F&B chains. We equip every valuable mid to high end F&B chain with a \"see clearly, move betably, compound easily\" smart navigation system: 海图 Ch",
+    "url": "brand.html?brand=sidera"
+  },
+  {
+    "type": "ip",
+    "slug": "1stepmore",
+    "title": "1stepmore",
+    "subtitle": "壹目贯维 · 1stepmore",
+    "text": "壹目贯维的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。 1stepmore brand system with live guidelines, colors, voice, assets, and agent-readable source files. Placeholder brand system for 1stepmore · 壹目贯维. one step clarity continuity systems precision",
+    "url": "brand.html?brand=1stepmore"
+  },
+  {
+    "type": "guide",
+    "slug": "1stepmore",
+    "title": "README",
+    "subtitle": "1stepmore · 1stepmore/README.md",
+    "text": "1stepmore · 壹目贯维 主 IP： 1stepmore 中文名： 壹目贯维 Status Placeholder brand folder. Add design guidelines, tokens, assets, and voice rules here as the IP system matures. Local Structure assets/brand images/ — brand visuals and generated hero images tokens/ — machine readable design tokens",
+    "url": "brand.html?brand=1stepmore"
+  },
+  {
+    "type": "ip",
+    "slug": "agem",
+    "title": "AGEM",
+    "subtitle": "游赋社 · AGEM",
+    "text": "游赋社的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。 AGEM brand system with live guidelines, colors, voice, assets, and agent-readable source files. Placeholder brand system for 游赋社 · AGEM. travel play culture community creation",
+    "url": "brand.html?brand=agem"
+  },
+  {
+    "type": "guide",
+    "slug": "agem",
+    "title": "README",
+    "subtitle": "AGEM · AGEM/README.md",
+    "text": "游赋社 · AGEM 主 IP： 游赋社 英文名： AGEM Status Placeholder brand folder. Add design guidelines, tokens, assets, and voice rules here as the IP system matures. Local Structure assets/brand images/ — brand visuals and generated hero images tokens/ — machine readable design tokens",
+    "url": "brand.html?brand=agem"
+  },
+  {
+    "type": "ip",
+    "slug": "rgd",
+    "title": "RGD",
+    "subtitle": "燃古豋 · RGD",
+    "text": "燃古豋的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。 RGD brand system with live guidelines, colors, voice, assets, and agent-readable source files. Placeholder brand system for 燃古豋 · RGD. ember ancient ritual craft fire",
+    "url": "brand.html?brand=rgd"
+  },
+  {
+    "type": "guide",
+    "slug": "rgd",
+    "title": "README",
+    "subtitle": "RGD · RGD/README.md",
+    "text": "燃古豋 · RGD 主 IP： 燃古豋 英文名： RGD Status Placeholder brand folder. Add design guidelines, tokens, assets, and voice rules here as the IP system matures. Local Structure assets/brand images/ — brand visuals and generated hero images tokens/ — machine readable design tokens",
+    "url": "brand.html?brand=rgd"
+  },
+  {
+    "type": "ip",
+    "slug": "changoods",
+    "title": "Changoods",
+    "subtitle": "常幸 · Changoods",
+    "text": "常幸的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。 Changoods brand system with live guidelines, colors, voice, assets, and agent-readable source files. Placeholder brand system for 常幸 · Changoods. good fortune everyday warmth goods wellbeing",
+    "url": "brand.html?brand=changoods"
+  },
+  {
+    "type": "guide",
+    "slug": "changoods",
+    "title": "README",
+    "subtitle": "Changoods · Changoods/README.md",
+    "text": "常幸 · Changoods 主 IP： 常幸 英文名： Changoods Status Placeholder brand folder. Add design guidelines, tokens, assets, and voice rules here as the IP system matures. Local Structure assets/brand images/ — brand visuals and generated hero images tokens/ — machine readable design tokens",
+    "url": "brand.html?brand=changoods"
+  },
+  {
+    "type": "ip",
+    "slug": "boya",
+    "title": "PKU BOYA Academy",
+    "subtitle": "博雅问渠书院 · PKU BOYA Academy",
+    "text": "博雅问渠书院的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。 PKU BOYA Academy is a learning and inquiry IP centered on liberal education, classical depth, and contemporary knowledge flow. Liberal education and inquiry academy IP system. academy boya knowledge inquiry classical learning",
+    "url": "brand.html?brand=boya"
+  },
+  {
+    "type": "guide",
+    "slug": "boya",
+    "title": "README",
+    "subtitle": "PKU BOYA Academy · BOYA/README.md",
+    "text": "PKU BOYA Academy Chinese name: 博雅问渠书院 Brand Role PKU BOYA Academy is a learning and inquiry IP centered on liberal education, classical depth, and contemporary knowledge flow. Visual Direction Temperament: scholarly, clear, calm, rigorous, open. Color cues: academy blue, warm gold, paper white, soft stone grey. Imagery cues: reading rooms, flowing water, question marks, book margins, courtyards, knowledge maps. Agent",
+    "url": "brand.html?brand=boya"
+  }
+]

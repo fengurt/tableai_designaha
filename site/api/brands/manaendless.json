@@ -23,7 +23,13 @@
       "continuous learning"
     ]
   },
+  "mainName": "MANA Endless",
+  "mainLanguage": "en",
   "display": {
+    "default": {
+      "language": "en",
+      "name": "MANA Endless"
+    },
     "zh": {
       "name": "无魔协会",
       "secondaryName": "MANA Endless"

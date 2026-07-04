@@ -3,7 +3,7 @@
     "slug": "tableai",
     "folder": "TABLEAI",
     "name": "Table AI",
-    "nativeName": "Table AI Alliance",
+    "nativeName": "Table AI",
     "description": "International think tank design system for the Table AI Alliance.",
     "primaryGuide": "TABLEAI/TableAI_DESIGN.md",
     "theme": {
@@ -24,14 +24,20 @@
         "minimal"
       ]
     },
+    "mainName": "Table AI",
+    "mainLanguage": "en",
     "display": {
+      "default": {
+        "language": "en",
+        "name": "Table AI"
+      },
       "zh": {
-        "name": "Table AI Alliance",
-        "secondaryName": "Table AI"
+        "name": "Table AI",
+        "secondaryName": ""
       },
       "en": {
         "name": "Table AI",
-        "secondaryName": "Table AI Alliance"
+        "secondaryName": ""
       }
     },
     "intro": {
@@ -79,7 +85,13 @@
         "wellbeing"
       ]
     },
+    "mainName": "VANAHOM",
+    "mainLanguage": "en",
     "display": {
+      "default": {
+        "language": "en",
+        "name": "VANAHOM"
+      },
       "zh": {
         "name": "凡纳弘途",
         "secondaryName": "VANAHOM"
@@ -134,7 +146,13 @@
         "inclusive AI"
       ]
     },
+    "mainName": "KiND",
+    "mainLanguage": "en",
     "display": {
+      "default": {
+        "language": "en",
+        "name": "KiND"
+      },
       "zh": {
         "name": "善渡科技",
         "secondaryName": "KiND"
@@ -191,7 +209,13 @@
         "Asia-Pacific"
       ]
     },
+    "mainName": "APHA",
+    "mainLanguage": "en",
     "display": {
+      "default": {
+        "language": "en",
+        "name": "APHA"
+      },
       "zh": {
         "name": "亚太艺术疗愈联盟",
         "secondaryName": "APHA"
@@ -246,7 +270,13 @@
         "continuous learning"
       ]
     },
+    "mainName": "MANA Endless",
+    "mainLanguage": "en",
     "display": {
+      "default": {
+        "language": "en",
+        "name": "MANA Endless"
+      },
       "zh": {
         "name": "无魔协会",
         "secondaryName": "MANA Endless"
@@ -299,7 +329,13 @@
         "standards"
       ]
     },
+    "mainName": "OPC Global",
+    "mainLanguage": "en",
     "display": {
+      "default": {
+        "language": "en",
+        "name": "OPC Global"
+      },
       "zh": {
         "name": "欧匹赛全球联盟",
         "secondaryName": "OPC Global"
@@ -352,18 +388,24 @@
         "trust"
       ]
     },
+    "mainName": "IPTrustasset",
+    "mainLanguage": "en",
     "display": {
+      "default": {
+        "language": "en",
+        "name": "IPTrustasset"
+      },
       "zh": {
-        "name": "IPTRUST",
-        "secondaryName": "IPTrustasset"
+        "name": "IPTrustasset",
+        "secondaryName": ""
       },
       "en": {
         "name": "IPTrustasset",
-        "secondaryName": "IPTRUST"
+        "secondaryName": ""
       }
     },
     "intro": {
-      "zh": "IPTRUST的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
+      "zh": "IPTrustasset的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
       "en": "IPTrustasset brand system with live guidelines, colors, voice, assets, and agent-readable source files."
     },
     "url": "brand.html?brand=iptrust",
@@ -405,7 +447,13 @@
         "transformation"
       ]
     },
+    "mainName": "峰值永造局",
+    "mainLanguage": "zh",
     "display": {
+      "default": {
+        "language": "zh",
+        "name": "峰值永造局"
+      },
       "zh": {
         "name": "峰值永造局",
         "secondaryName": "The Transformation Company"
@@ -482,7 +530,13 @@
         "three agents"
       ]
     },
+    "mainName": "Axisee",
+    "mainLanguage": "en",
     "display": {
+      "default": {
+        "language": "en",
+        "name": "Axisee"
+      },
       "zh": {
         "name": "酒店盈利大师",
         "secondaryName": "Axisee"
@@ -537,7 +591,13 @@
         "wisdom navigator"
       ]
     },
+    "mainName": "Sidera",
+    "mainLanguage": "en",
     "display": {
+      "default": {
+        "language": "en",
+        "name": "Sidera"
+      },
       "zh": {
         "name": "侍天",
         "secondaryName": "Sidera"
@@ -592,7 +652,13 @@
         "precision"
       ]
     },
+    "mainName": "1stepmore",
+    "mainLanguage": "en",
     "display": {
+      "default": {
+        "language": "en",
+        "name": "1stepmore"
+      },
       "zh": {
         "name": "壹目贯维",
         "secondaryName": "1stepmore"
@@ -647,7 +713,13 @@
         "creation"
       ]
     },
+    "mainName": "AGEM",
+    "mainLanguage": "en",
     "display": {
+      "default": {
+        "language": "en",
+        "name": "AGEM"
+      },
       "zh": {
         "name": "游赋社",
         "secondaryName": "AGEM"
@@ -702,7 +774,13 @@
         "fire"
       ]
     },
+    "mainName": "RGD",
+    "mainLanguage": "en",
     "display": {
+      "default": {
+        "language": "en",
+        "name": "RGD"
+      },
       "zh": {
         "name": "燃古豋",
         "secondaryName": "RGD"
@@ -757,7 +835,13 @@
         "wellbeing"
       ]
     },
+    "mainName": "Changoods",
+    "mainLanguage": "en",
     "display": {
+      "default": {
+        "language": "en",
+        "name": "Changoods"
+      },
       "zh": {
         "name": "常幸",
         "secondaryName": "Changoods"
@@ -812,7 +896,13 @@
         "classical learning"
       ]
     },
+    "mainName": "PKU BOYA Academy",
+    "mainLanguage": "en",
     "display": {
+      "default": {
+        "language": "en",
+        "name": "PKU BOYA Academy"
+      },
       "zh": {
         "name": "博雅问渠书院",
         "secondaryName": "PKU BOYA Academy"

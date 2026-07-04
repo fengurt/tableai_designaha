@@ -23,7 +23,13 @@
       "wellbeing"
     ]
   },
+  "mainName": "VANAHOM",
+  "mainLanguage": "en",
   "display": {
+    "default": {
+      "language": "en",
+      "name": "VANAHOM"
+    },
     "zh": {
       "name": "凡纳弘途",
       "secondaryName": "VANAHOM"

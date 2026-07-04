@@ -23,7 +23,13 @@
       "transformation"
     ]
   },
+  "mainName": "峰值永造局",
+  "mainLanguage": "zh",
   "display": {
+    "default": {
+      "language": "zh",
+      "name": "峰值永造局"
+    },
     "zh": {
       "name": "峰值永造局",
       "secondaryName": "The Transformation Company"

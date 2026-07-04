@@ -23,7 +23,13 @@
       "creation"
     ]
   },
+  "mainName": "AGEM",
+  "mainLanguage": "en",
   "display": {
+    "default": {
+      "language": "en",
+      "name": "AGEM"
+    },
     "zh": {
       "name": "游赋社",
       "secondaryName": "AGEM"

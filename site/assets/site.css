@@ -202,12 +202,42 @@ p { line-height: 1.65; }
   background: rgba(255, 254, 250, .7);
 }
 .portal-links a:hover { border-color: var(--blue); }
+.history-panel {
+  display: grid;
+  grid-template-columns: minmax(220px, .44fr) minmax(0, 1fr);
+  gap: 28px;
+  padding: 4px 0 42px;
+}
+.version-list {
+  display: grid;
+  gap: 8px;
+  border-top: 1px solid var(--line);
+}
+.version-item {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--line);
+  padding: 10px 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration: none;
+}
+.version-item strong { color: var(--ink); }
+.version-item span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .section-head h2 { max-width: 560px; }
 .home-tools {
   display: flex;
   align-items: center;
   gap: 10px;
   min-width: min(360px, 100%);
+  position: relative;
 }
 .home-tools input {
   min-height: 42px;
@@ -223,6 +253,36 @@ p { line-height: 1.65; }
   font-size: 13px;
   font-weight: 760;
   background: rgba(255, 254, 250, .72);
+}
+.global-results {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  width: min(560px, calc(100vw - 36px));
+  max-height: 420px;
+  overflow: auto;
+  display: none;
+  z-index: 8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 254, 250, .96);
+  box-shadow: 0 18px 60px rgba(22, 20, 18, .14);
+}
+.global-results.is-open { display: grid; }
+.global-result {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+}
+.global-result:last-child { border-bottom: 0; }
+.global-result strong { color: var(--ink); }
+.global-result small { color: var(--accent); font-weight: 760; }
+.global-result span {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
 }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
 .button, button {
@@ -535,6 +595,9 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .hero-index-row { grid-template-columns: minmax(0, 1fr) auto; }
   .hero-index-colors { display: none; }
   .entry-portals { grid-template-columns: 1fr; }
+  .history-panel { grid-template-columns: 1fr; }
+  .version-item { grid-template-columns: 70px minmax(0, 1fr); }
+  .version-item time { display: none; }
   .section-head { display: grid; align-items: start; }
   .home-tools { width: 100%; }
   .ip-grid { grid-template-columns: 1fr; }

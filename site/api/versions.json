@@ -1,0 +1,86 @@
+[
+  {
+    "hash": "a0998f7e8a9aa8e198f1671ff03ed3cf2aaf4f8c",
+    "shortHash": "a0998f7",
+    "date": "2026-07-04T10:46:14+08:00",
+    "message": "Refine IPTrust public entry UX",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a0998f7e8a9aa8e198f1671ff03ed3cf2aaf4f8c"
+  },
+  {
+    "hash": "fb8ed395e5b616bfb0a83fd54f2b68e49103e50b",
+    "shortHash": "fb8ed39",
+    "date": "2026-07-04T09:46:53+08:00",
+    "message": "Upgrade IPTrust interactive brand cards",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/fb8ed395e5b616bfb0a83fd54f2b68e49103e50b"
+  },
+  {
+    "hash": "01576fddad9743777909aad19b7b1709b4fea224",
+    "shortHash": "01576fd",
+    "date": "2026-07-04T09:34:49+08:00",
+    "message": "Add live IPTrust updates and copy UX",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/01576fddad9743777909aad19b7b1709b4fea224"
+  },
+  {
+    "hash": "a550421605e0fadecfb30c3fd5066754feda54d7",
+    "shortHash": "a550421",
+    "date": "2026-07-04T07:52:24+08:00",
+    "message": "Add IPTrust brand systems",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a550421605e0fadecfb30c3fd5066754feda54d7"
+  },
+  {
+    "hash": "3a5082efc370439fa7dfa64f17ed2e2efbe41db3",
+    "shortHash": "3a5082e",
+    "date": "2026-07-04T06:45:26+08:00",
+    "message": "Simplify IPTrust homepage and add site i18n",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/3a5082efc370439fa7dfa64f17ed2e2efbe41db3"
+  },
+  {
+    "hash": "b508418667c2ef8e6999af1f5adfee010adb1d44",
+    "shortHash": "b508418",
+    "date": "2026-07-03T22:32:27+08:00",
+    "message": "Redesign IPTrust homepage with IP-specific cards",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/b508418667c2ef8e6999af1f5adfee010adb1d44"
+  },
+  {
+    "hash": "e98dae7a98dfe32921ebc76e2783caeb85e64d61",
+    "shortHash": "e98dae7",
+    "date": "2026-07-03T21:55:07+08:00",
+    "message": "Add per-IP brand theming to design site",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/e98dae7a98dfe32921ebc76e2783caeb85e64d61"
+  },
+  {
+    "hash": "99b7f2d15f0ea20e6e9f92f124d0a0b3ff9c47b9",
+    "shortHash": "99b7f2d",
+    "date": "2026-07-03T18:10:01+08:00",
+    "message": "Deploy agent-friendly brand guidelines site",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/99b7f2d15f0ea20e6e9f92f124d0a0b3ff9c47b9"
+  },
+  {
+    "hash": "8ec3dee0bb6481b9bf22f415030419ecdb102d9d",
+    "shortHash": "8ec3dee",
+    "date": "2026-07-03T15:53:45+08:00",
+    "message": "Merge pull request #3 from fengurt/feat/sidera-axisee-design",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/8ec3dee0bb6481b9bf22f415030419ecdb102d9d"
+  },
+  {
+    "hash": "3c2fd51e401f26ccf67daf2ae41ad44a9a7e7d6a",
+    "shortHash": "3c2fd51",
+    "date": "2026-07-03T15:52:46+08:00",
+    "message": "Add Axisee and Sidera design specs",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/3c2fd51e401f26ccf67daf2ae41ad44a9a7e7d6a"
+  },
+  {
+    "hash": "d4e7b9a6009d588cfb4cb0be3db6156d3e27099b",
+    "shortHash": "d4e7b9a",
+    "date": "2026-06-18T23:18:04+08:00",
+    "message": "Merge pull request #2 from fengurt/feat/kind-skill-md",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/d4e7b9a6009d588cfb4cb0be3db6156d3e27099b"
+  },
+  {
+    "hash": "163bc8fd2b671aaada1694df6096977a677808fd",
+    "shortHash": "163bc8f",
+    "date": "2026-06-18T23:17:23+08:00",
+    "message": "Add KiND skill markdown doc",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/163bc8fd2b671aaada1694df6096977a677808fd"
+  }
+]

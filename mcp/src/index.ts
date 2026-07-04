@@ -17,7 +17,9 @@ type BrandConfig = {
   nativeName?: string;
   description: string;
   primaryGuide?: string;
-  display?: Record<string, { name: string; secondaryName?: string }>;
+  mainName?: string;
+  mainLanguage?: string;
+  display?: Record<string, { name: string; secondaryName?: string; language?: string }>;
   intro?: Record<string, string>;
 };
 
@@ -43,7 +45,7 @@ function hasCjk(text = "") {
 function zhName(brand: BrandConfig) {
   if (hasCjk(brand.name)) return brand.name;
   if (brand.nativeName && hasCjk(brand.nativeName)) return brand.nativeName;
-  return brand.nativeName || brand.name;
+  return brand.name;
 }
 
 function enName(brand: BrandConfig) {
@@ -52,6 +54,18 @@ function enName(brand: BrandConfig) {
     return brand.nativeName.replace(/\s*[·|｜/]\s*[\u3400-\u9fff].*$/, "").trim() || brand.nativeName;
   }
   return brand.name;
+}
+
+function mainLanguage(brand: BrandConfig) {
+  return hasCjk(brand.name) ? "zh" : "en";
+}
+
+function mainName(brand: BrandConfig) {
+  return brand.name;
+}
+
+function secondaryName(primary: string, secondary: string) {
+  return primary && secondary && primary !== secondary ? secondary : "";
 }
 
 function introLines(text = "") {
@@ -160,14 +174,15 @@ async function loadBrand(slug: string): Promise<BrandPayload> {
   guides.sort((a, b) => Number(b.primary) - Number(a.primary) || a.path.localeCompare(b.path));
   tokenFiles.sort((a, b) => a.localeCompare(b));
   const display = {
-    zh: { name: zhName(brand), secondaryName: enName(brand) },
-    en: { name: enName(brand), secondaryName: zhName(brand) },
+    default: { language: mainLanguage(brand), name: mainName(brand) },
+    zh: { name: zhName(brand), secondaryName: secondaryName(zhName(brand), enName(brand)) },
+    en: { name: enName(brand), secondaryName: secondaryName(enName(brand), zhName(brand)) },
   };
   const intro = {
     zh: liveIntro(brand, guides, "zh"),
     en: liveIntro(brand, guides, "en"),
   };
-  return { ...brand, display, intro, guides, tokenFiles };
+  return { ...brand, mainName: mainName(brand), mainLanguage: mainLanguage(brand), display, intro, guides, tokenFiles };
 }
 
 function flattenJsonTokens(obj: Record<string, any>, prefix = "", groupType?: string): Record<string, Token> {

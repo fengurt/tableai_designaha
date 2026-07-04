@@ -23,7 +23,13 @@
       "inclusive AI"
     ]
   },
+  "mainName": "KiND",
+  "mainLanguage": "en",
   "display": {
+    "default": {
+      "language": "en",
+      "name": "KiND"
+    },
     "zh": {
       "name": "善渡科技",
       "secondaryName": "KiND"
