@@ -1,0 +1,53 @@
+{
+  "name": "IPTrust Brand API Schema",
+  "version": "1.0.0",
+  "description": "Every public IPTrust brand field is callable through JSON APIs and versioned through Git-backed history endpoints.",
+  "endpoints": {
+    "manifest": "api/manifest.json",
+    "allBrands": "api/brands.json",
+    "search": "api/search.json",
+    "allVersions": "api/versions.json",
+    "brand": "api/brands/{slug}.json",
+    "brandHistory": "api/history/{slug}.json",
+    "skill": "skills/iptrust-live-update/SKILL.md",
+    "llms": "llms.txt"
+  },
+  "brandFields": {
+    "slug": "Stable IP identifier.",
+    "folder": "Local source folder.",
+    "name": "Configured public/English name.",
+    "nativeName": "Configured native/Chinese or alternate name.",
+    "mainName": "Name chosen from mainLanguage.",
+    "mainLanguage": "Main display language: zh or en.",
+    "mainLocale": "Public label for mainLanguage: CN or EN.",
+    "officialWebsite": "Official website URL, blank when unknown.",
+    "description": "Short configured description.",
+    "display": "Bilingual display names and secondary labels.",
+    "profile": "Callable business profile fields: officialWebsite, mainLanguage, intro, business.",
+    "intro": "Live bilingual intro generated from config or primary guideline.",
+    "business": "Bilingual business/service scope.",
+    "theme": "Brand colors, surface, ink, line, mode, and keywords.",
+    "url": "Public website brand page.",
+    "apiUrl": "Per-IP JSON endpoint.",
+    "historyUrl": "Per-IP Git-backed version endpoint.",
+    "status": "documented or placeholder.",
+    "guides": "Guideline metadata and text.",
+    "tokens": "Token file metadata and text.",
+    "images": "Image asset metadata and public site paths.",
+    "editablePaths": "Source files editable from admin flow.",
+    "source": "GitHub source folder and local folder.",
+    "version": "Latest build/global version object.",
+    "history": "Latest per-IP history records."
+  },
+  "versioning": {
+    "model": "Git-backed history. Source edits flow through repository commits, then build into website JSON.",
+    "globalHistory": "api/versions.json",
+    "perBrandHistory": "api/history/{slug}.json",
+    "currentVersionField": "version",
+    "trackedPaths": [
+      "config/brands.json",
+      "{brand.folder}",
+      "{brand.primaryGuide}"
+    ]
+  }
+}

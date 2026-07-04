@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "2f8c635";
+const BUILD_VERSION = "757d234";
 
 const i18n = {
   cn: {
@@ -478,6 +478,8 @@ function referenceText(brand = {}) {
   const localized = mainBrand(brand);
   const ipPageUrl = new URL(brand.url || `brand.html?brand=${brand.slug}`, location.href).href;
   const apiUrl = new URL(brand.apiUrl || `api/brands/${brand.slug}.json`, location.href).href;
+  const historyUrl = new URL(brand.historyUrl || `api/history/${brand.slug}.json`, location.href).href;
+  const schemaUrl = new URL("api/schema.json", location.href).href;
   const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", location.href).href;
   const mcpSource = new URL("api/manifest.json", location.href).href;
   const colors = palette(brand.theme)
@@ -496,6 +498,8 @@ function referenceText(brand = {}) {
     `IP page: ${ipPageUrl}`,
     `Official website: ${brand.officialWebsite || "TBD"}`,
     `Brand API: ${apiUrl}`,
+    `History API: ${historyUrl}`,
+    `Field schema: ${schemaUrl}`,
     `IPTrust Skill: ${skillUrl}`,
     `MCP manifest: ${mcpSource}`,
     "",

@@ -1,0 +1,125 @@
+{
+  "slug": "vanahom",
+  "name": "凡纳弘途",
+  "mainLanguage": "zh",
+  "apiUrl": "api/brands/vanahom.json",
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/VANAHOM",
+    "folder": "VANAHOM"
+  },
+  "trackedPaths": [
+    "config/brands.json",
+    "VANAHOM",
+    "VANAHOM/vanahom_design.md"
+  ],
+  "latest": {
+    "hash": "534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
+    "shortHash": "534c825",
+    "date": "2026-07-04T16:34:09+08:00",
+    "message": "Correct APUCH language and IPTrust naming",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
+    "sourcePaths": [
+      "config/brands.json",
+      "VANAHOM",
+      "VANAHOM/vanahom_design.md"
+    ]
+  },
+  "versions": [
+    {
+      "hash": "534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
+      "shortHash": "534c825",
+      "date": "2026-07-04T16:34:09+08:00",
+      "message": "Correct APUCH language and IPTrust naming",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
+      "sourcePaths": [
+        "config/brands.json",
+        "VANAHOM",
+        "VANAHOM/vanahom_design.md"
+      ]
+    },
+    {
+      "hash": "1f20db30a5e970cf81e24c76e4613bc7e0036f09",
+      "shortHash": "1f20db3",
+      "date": "2026-07-04T16:01:00+08:00",
+      "message": "Add IP profile fields and main language display",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/1f20db30a5e970cf81e24c76e4613bc7e0036f09",
+      "sourcePaths": [
+        "config/brands.json",
+        "VANAHOM",
+        "VANAHOM/vanahom_design.md"
+      ]
+    },
+    {
+      "hash": "088ab8909a2d4284cd64d7924cc60fa39b8eb206",
+      "shortHash": "088ab89",
+      "date": "2026-07-04T11:59:40+08:00",
+      "message": "Add APUCH IP to IPTrust",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/088ab8909a2d4284cd64d7924cc60fa39b8eb206",
+      "sourcePaths": [
+        "config/brands.json",
+        "VANAHOM",
+        "VANAHOM/vanahom_design.md"
+      ]
+    },
+    {
+      "hash": "c723f8453cb7795108b51880986e7d9a664da5b1",
+      "shortHash": "c723f84",
+      "date": "2026-07-04T10:52:32+08:00",
+      "message": "Add global search and version history",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/c723f8453cb7795108b51880986e7d9a664da5b1",
+      "sourcePaths": [
+        "config/brands.json",
+        "VANAHOM",
+        "VANAHOM/vanahom_design.md"
+      ]
+    },
+    {
+      "hash": "a550421605e0fadecfb30c3fd5066754feda54d7",
+      "shortHash": "a550421",
+      "date": "2026-07-04T07:52:24+08:00",
+      "message": "Add IPTrust brand systems",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a550421605e0fadecfb30c3fd5066754feda54d7",
+      "sourcePaths": [
+        "config/brands.json",
+        "VANAHOM",
+        "VANAHOM/vanahom_design.md"
+      ]
+    },
+    {
+      "hash": "e98dae7a98dfe32921ebc76e2783caeb85e64d61",
+      "shortHash": "e98dae7",
+      "date": "2026-07-03T21:55:07+08:00",
+      "message": "Add per-IP brand theming to design site",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/e98dae7a98dfe32921ebc76e2783caeb85e64d61",
+      "sourcePaths": [
+        "config/brands.json",
+        "VANAHOM",
+        "VANAHOM/vanahom_design.md"
+      ]
+    },
+    {
+      "hash": "99b7f2d15f0ea20e6e9f92f124d0a0b3ff9c47b9",
+      "shortHash": "99b7f2d",
+      "date": "2026-07-03T18:10:01+08:00",
+      "message": "Deploy agent-friendly brand guidelines site",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/99b7f2d15f0ea20e6e9f92f124d0a0b3ff9c47b9",
+      "sourcePaths": [
+        "config/brands.json",
+        "VANAHOM",
+        "VANAHOM/vanahom_design.md"
+      ]
+    },
+    {
+      "hash": "ff3e458346ef8271b2c522fef05bbd12fee03776",
+      "shortHash": "ff3e458",
+      "date": "2026-06-06T07:44:29+08:00",
+      "message": "Initialize Table AI design-system repo with one folder per Alliance brand.",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ff3e458346ef8271b2c522fef05bbd12fee03776",
+      "sourcePaths": [
+        "config/brands.json",
+        "VANAHOM",
+        "VANAHOM/vanahom_design.md"
+      ]
+    }
+  ]
+}

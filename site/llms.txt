@@ -6,8 +6,10 @@ English: IPTrust is an IP trust hub for people and agents.
 
 Machine-readable entry points:
 - /api/manifest.json
+- /api/schema.json
 - /api/brands.json
 - /api/brands/{slug}.json
+- /api/history/{slug}.json
 - /api/search.json
 - /api/versions.json
 - /skills/iptrust-live-update/SKILL.md

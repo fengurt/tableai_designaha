@@ -8,6 +8,7 @@ const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const siteDir = join(root, "site");
 const apiDir = join(siteDir, "api");
 const brandApiDir = join(apiDir, "brands");
+const historyApiDir = join(apiDir, "history");
 const assetsDir = join(siteDir, "assets");
 const imageDir = join(assetsDir, "brand-images");
 const contactDir = join(assetsDir, "contact");
@@ -200,8 +201,95 @@ function loadVersions() {
   }
 }
 
+function loadBrandVersions(brand) {
+  const paths = uniqueValues([
+    "config/brands.json",
+    brand.folder,
+    brand.primaryGuide,
+  ]);
+  try {
+    const out = execFileSync("git", [
+      "log",
+      "-20",
+      "--date=iso-strict",
+      "--pretty=format:%H%x09%h%x09%cI%x09%s",
+      "--",
+      ...paths,
+    ], {
+      cwd: root,
+      encoding: "utf8",
+    }).trim();
+    return out.split("\n").filter(Boolean).map((line) => {
+      const [hash, shortHash, date, ...messageParts] = line.split("\t");
+      return {
+        hash,
+        shortHash,
+        date,
+        message: messageParts.join("\t"),
+        url: `https://github.com/${adminConfig.owner ?? "fengurt"}/${adminConfig.repo ?? "tableai_designaha"}/commit/${hash}`,
+        sourcePaths: paths,
+      };
+    });
+  } catch {
+    return [];
+  }
+}
+
+function apiSchemaPayload() {
+  return {
+    name: "IPTrust Brand API Schema",
+    version: "1.0.0",
+    description: "Every public IPTrust brand field is callable through JSON APIs and versioned through Git-backed history endpoints.",
+    endpoints: {
+      manifest: "api/manifest.json",
+      allBrands: "api/brands.json",
+      search: "api/search.json",
+      allVersions: "api/versions.json",
+      brand: "api/brands/{slug}.json",
+      brandHistory: "api/history/{slug}.json",
+      skill: "skills/iptrust-live-update/SKILL.md",
+      llms: "llms.txt",
+    },
+    brandFields: {
+      slug: "Stable IP identifier.",
+      folder: "Local source folder.",
+      name: "Configured public/English name.",
+      nativeName: "Configured native/Chinese or alternate name.",
+      mainName: "Name chosen from mainLanguage.",
+      mainLanguage: "Main display language: zh or en.",
+      mainLocale: "Public label for mainLanguage: CN or EN.",
+      officialWebsite: "Official website URL, blank when unknown.",
+      description: "Short configured description.",
+      display: "Bilingual display names and secondary labels.",
+      profile: "Callable business profile fields: officialWebsite, mainLanguage, intro, business.",
+      intro: "Live bilingual intro generated from config or primary guideline.",
+      business: "Bilingual business/service scope.",
+      theme: "Brand colors, surface, ink, line, mode, and keywords.",
+      url: "Public website brand page.",
+      apiUrl: "Per-IP JSON endpoint.",
+      historyUrl: "Per-IP Git-backed version endpoint.",
+      status: "documented or placeholder.",
+      guides: "Guideline metadata and text.",
+      tokens: "Token file metadata and text.",
+      images: "Image asset metadata and public site paths.",
+      editablePaths: "Source files editable from admin flow.",
+      source: "GitHub source folder and local folder.",
+      version: "Latest build/global version object.",
+      history: "Latest per-IP history records.",
+    },
+    versioning: {
+      model: "Git-backed history. Source edits flow through repository commits, then build into website JSON.",
+      globalHistory: "api/versions.json",
+      perBrandHistory: "api/history/{slug}.json",
+      currentVersionField: "version",
+      trackedPaths: ["config/brands.json", "{brand.folder}", "{brand.primaryGuide}"],
+    },
+  };
+}
+
 await rm(siteDir, { recursive: true, force: true });
 await mkdir(brandApiDir, { recursive: true });
+await mkdir(historyApiDir, { recursive: true });
 await mkdir(imageDir, { recursive: true });
 await mkdir(contactDir, { recursive: true });
 await mkdir(join(siteDir, "skills", "iptrust-live-update"), { recursive: true });
@@ -212,6 +300,8 @@ if (existsSync(join(root, "assets/contact/wecom-qr.png"))) {
   await copyFile(join(root, "assets/contact/wecom-qr.png"), join(contactDir, "wecom-qr.png"));
 }
 
+const versions = loadVersions();
+const buildVersion = versions[0]?.shortHash ?? "dev";
 const brandPayloads = [];
 
 for (const brand of brands) {
@@ -256,6 +346,7 @@ for (const brand of brands) {
   guides.sort((a, b) => Number(b.primary) - Number(a.primary) || a.path.localeCompare(b.path));
   tokens.sort((a, b) => a.path.localeCompare(b.path));
   images.sort((a, b) => a.path.localeCompare(b.path));
+  const history = loadBrandVersions(brand);
 
   const display = {
     default: { language: mainLanguage(brand), name: mainName(brand) },
@@ -275,6 +366,9 @@ for (const brand of brands) {
     profile: profile(brand),
     display,
     intro,
+    version: versions[0] ?? null,
+    historyUrl: `api/history/${brand.slug}.json`,
+    history: history.slice(0, 6),
     url: `brand.html?brand=${brand.slug}`,
     apiUrl: `api/brands/${brand.slug}.json`,
     status: guides.length ? "documented" : "placeholder",
@@ -288,10 +382,20 @@ for (const brand of brands) {
     },
   };
   brandPayloads.push(payload);
+  await writeFile(join(historyApiDir, `${brand.slug}.json`), JSON.stringify({
+    slug: brand.slug,
+    name: payload.mainName,
+    mainLanguage: payload.mainLanguage,
+    apiUrl: payload.apiUrl,
+    source: payload.source,
+    trackedPaths: uniqueValues(["config/brands.json", brand.folder, brand.primaryGuide]),
+    latest: history[0] ?? null,
+    versions: history,
+  }, null, 2));
   await writeFile(join(brandApiDir, `${brand.slug}.json`), JSON.stringify(payload, null, 2));
 }
 
-const indexPayload = brandPayloads.map(({ guides, tokens, images, ...brand }) => ({
+const indexPayload = brandPayloads.map(({ guides, tokens, images, history, ...brand }) => ({
   ...brand,
   guideCount: guides.length,
   tokenCount: tokens.length,
@@ -327,12 +431,10 @@ const searchPayload = brandPayloads.flatMap((brand) => {
   }));
   return [...base, ...guides];
 });
-const versions = loadVersions();
-const buildVersion = versions[0]?.shortHash ?? "dev";
-
 await writeFile(join(apiDir, "brands.json"), JSON.stringify(indexPayload, null, 2));
 await writeFile(join(apiDir, "search.json"), JSON.stringify(searchPayload, null, 2));
 await writeFile(join(apiDir, "versions.json"), JSON.stringify(versions, null, 2));
+await writeFile(join(apiDir, "schema.json"), JSON.stringify(apiSchemaPayload(), null, 2));
 await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
   name: hubName,
   description: hubDescription,
@@ -348,12 +450,18 @@ await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
     mainLanguage: brand.mainLanguage,
     mainLocale: brand.mainLocale,
     apiUrl: `api/brands/${brand.slug}.json`,
+    historyUrl: `api/history/${brand.slug}.json`,
     guideUrl: `brand.html?brand=${brand.slug}`,
   })),
   mcp: {
     local: "mcp/src/index.ts",
     resources: "api/brands/{slug}.json",
     tools: ["list_brands", "get_brand", "get_guideline", "list_tokens", "get_token"],
+  },
+  schema: {
+    apiUrl: "api/schema.json",
+    allFieldsCallable: true,
+    perBrandHistory: "api/history/{slug}.json",
   },
   skills: [{
     name: "iptrust-live-update",
@@ -362,6 +470,7 @@ await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
   }],
   history: {
     apiUrl: "api/versions.json",
+    perBrandApiUrl: "api/history/{slug}.json",
     latest: versions[0] ?? null,
   },
   sync: {
@@ -415,6 +524,7 @@ await writeFile(join(siteDir, "_headers"), [
 await writeFile(join(siteDir, "_redirects"), [
   "/llms  /llms.txt  200",
   "/manifest  /api/manifest.json  200",
+  "/schema  /api/schema.json  200",
   "/brands  /api/brands.json  200",
   "",
 ].join("\n"));
@@ -428,8 +538,10 @@ await writeFile(join(siteDir, "llms.txt"), [
   "",
   "Machine-readable entry points:",
   "- /api/manifest.json",
+  "- /api/schema.json",
   "- /api/brands.json",
   "- /api/brands/{slug}.json",
+  "- /api/history/{slug}.json",
   "- /api/search.json",
   "- /api/versions.json",
   "- /skills/iptrust-live-update/SKILL.md",
@@ -1867,6 +1979,8 @@ function referenceText(brand = {}) {
   const localized = mainBrand(brand);
   const ipPageUrl = new URL(brand.url || \`brand.html?brand=\${brand.slug}\`, location.href).href;
   const apiUrl = new URL(brand.apiUrl || \`api/brands/\${brand.slug}.json\`, location.href).href;
+  const historyUrl = new URL(brand.historyUrl || \`api/history/\${brand.slug}.json\`, location.href).href;
+  const schemaUrl = new URL("api/schema.json", location.href).href;
   const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", location.href).href;
   const mcpSource = new URL("api/manifest.json", location.href).href;
   const colors = palette(brand.theme)
@@ -1885,6 +1999,8 @@ function referenceText(brand = {}) {
     \`IP page: \${ipPageUrl}\`,
     \`Official website: \${brand.officialWebsite || "TBD"}\`,
     \`Brand API: \${apiUrl}\`,
+    \`History API: \${historyUrl}\`,
+    \`Field schema: \${schemaUrl}\`,
     \`IPTrust Skill: \${skillUrl}\`,
     \`MCP manifest: \${mcpSource}\`,
     "",
