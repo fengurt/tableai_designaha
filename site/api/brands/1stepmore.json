@@ -34,9 +34,11 @@
     ]
   },
   "mainName": "1stepmore",
+  "mainLocale": "EN",
   "profile": {
     "officialWebsite": "",
     "mainLanguage": "en",
+    "mainLocale": "EN",
     "intro": {
       "zh": "1stepmore 是面向清晰决策、连续系统与精密执行的 IP。",
       "en": "1stepmore is an IP for clear decisions, continuous systems, and precise execution."

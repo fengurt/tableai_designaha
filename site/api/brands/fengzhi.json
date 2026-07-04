@@ -34,9 +34,11 @@
     ]
   },
   "mainName": "峰值永造局",
+  "mainLocale": "CN",
   "profile": {
     "officialWebsite": "",
     "mainLanguage": "zh",
+    "mainLocale": "CN",
     "intro": {
       "zh": "峰值永造局是 AI 原生的组织转型与交付系统品牌。",
       "en": "The Transformation Company is an AI-native transformation and delivery brand system."

@@ -1,7 +1,7 @@
 const $ = (selector) => document.querySelector(selector);
 const state = { config: null, brands: [], currentFile: null, currentSha: null };
 const adminCopy = {
-  zh: {
+  cn: {
     needToken: "先填 Token。",
     loaded: "已载入",
     saved: "已保存。等待部署。",
@@ -20,11 +20,11 @@ const adminCopy = {
 };
 
 function lang() {
-  return document.documentElement.lang?.startsWith("zh") ? "zh" : "en";
+  return document.documentElement.dataset.locale === "en" ? "en" : "cn";
 }
 
 function copy(key) {
-  return adminCopy[lang()]?.[key] || adminCopy.en[key] || key;
+  return adminCopy[lang()]?.[key] || adminCopy.cn[key] || key;
 }
 
 async function sha256(text) {

@@ -34,9 +34,11 @@
     ]
   },
   "mainName": "Table AI",
+  "mainLocale": "EN",
   "profile": {
     "officialWebsite": "",
     "mainLanguage": "en",
+    "mainLocale": "EN",
     "intro": {
       "zh": "Table AI 是面向国际智库、联盟协作与 Agent 工作流的 AI 原生设计系统。",
       "en": "Table AI is an AI-native design system for international think tanks, alliance collaboration, and agent workflows."

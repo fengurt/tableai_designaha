@@ -34,9 +34,11 @@
     ]
   },
   "mainName": "常幸",
+  "mainLocale": "CN",
   "profile": {
     "officialWebsite": "",
     "mainLanguage": "zh",
+    "mainLocale": "CN",
     "intro": {
       "zh": "常幸是面向日常好运、温暖物品与身心友好生活的 IP。",
       "en": "Changoods is an IP for everyday good fortune, warm goods, and wellbeing-oriented living."

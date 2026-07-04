@@ -94,6 +94,12 @@ function mainName(brand) {
   return mainLanguage(brand) === "zh" ? zhName(brand) : enName(brand);
 }
 
+function publicLanguageLabel(value) {
+  if (value === "zh" || value === "cn") return "CN";
+  if (value === "en") return "EN";
+  return value || "";
+}
+
 function secondaryName(primary, secondary) {
   return primary && secondary && primary !== secondary ? secondary : "";
 }
@@ -152,6 +158,7 @@ function profile(brand) {
   return {
     officialWebsite: brand.officialWebsite ?? "",
     mainLanguage: mainLanguage(brand),
+    mainLocale: publicLanguageLabel(mainLanguage(brand)),
     intro: {
       zh: brand.intro?.zh ?? "",
       en: brand.intro?.en ?? "",
@@ -255,6 +262,7 @@ for (const brand of brands) {
     ...brand,
     mainName: mainName(brand),
     mainLanguage: mainLanguage(brand),
+    mainLocale: publicLanguageLabel(mainLanguage(brand)),
     profile: profile(brand),
     display,
     intro,
@@ -324,6 +332,7 @@ await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
     slug: brand.slug,
     name: brand.mainName,
     mainLanguage: brand.mainLanguage,
+    mainLocale: brand.mainLocale,
     apiUrl: `api/brands/${brand.slug}.json`,
     guideUrl: `brand.html?brand=${brand.slug}`,
   })),
@@ -345,6 +354,11 @@ await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
     sourceOfTruth: `https://github.com/${adminConfig.owner ?? "fengurt"}/${adminConfig.repo ?? "tableai_designaha"}`,
     githubToWebsite: "GitHub Pages rebuilds site/ on push to main.",
     websiteToGithub: "admin.html commits edits through the GitHub Contents API.",
+  },
+  locales: {
+    default: "CN",
+    available: ["CN", "EN"],
+    storageKey: "iptrust-locale",
   },
 }, null, 2));
 
@@ -370,7 +384,7 @@ await writeFile(join(siteDir, "llms.txt"), [
   "- /skills/iptrust-live-update/SKILL.md",
   "",
   "Brands:",
-  ...indexPayload.map((brand) => `- ${brand.mainName} (${brand.slug}): /api/brands/${brand.slug}.json · mainLanguage ${brand.mainLanguage} · palette ${brand.theme?.primary ?? "n/a"} / ${brand.theme?.accent ?? "n/a"}`),
+  ...indexPayload.map((brand) => `- ${brand.mainName} (${brand.slug}): /api/brands/${brand.slug}.json · mainLocale ${brand.mainLocale} · palette ${brand.theme?.primary ?? "n/a"} / ${brand.theme?.accent ?? "n/a"}`),
   "",
   "Admin workflow:",
   "- /admin.html unlocks with the generated admin key.",
@@ -401,7 +415,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       <a href="#agent-entry" data-i18n="nav.agent">我是 Agent</a>
       <a href="#partner-entry" data-i18n="nav.partner">我是合伙人</a>
       <a href="#collab-entry" data-i18n="nav.collab">我想合作</a>
-      <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language">EN</button>
+      <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language"><span class="is-active">CN</span><span class="lang-divider">/</span><span>EN</span></button>
     </nav>
   </header>
   <main>
@@ -489,7 +503,7 @@ await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
     <nav>
       <a href="api/brands.json">API</a>
       <a href="admin.html" data-i18n="nav.admin">Admin</a>
-      <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language">EN</button>
+      <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language"><span class="is-active">CN</span><span class="lang-divider">/</span><span>EN</span></button>
     </nav>
   </header>
   <main id="brandPage" class="brand-page" aria-live="polite"></main>
@@ -512,7 +526,7 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
     <nav>
       <a href="api/manifest.json" data-i18n="nav.manifest">Manifest</a>
       <a href="https://github.com/${adminConfig.owner ?? "fengurt"}/${adminConfig.repo ?? "tableai_designaha"}">GitHub</a>
-      <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language">EN</button>
+      <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language"><span class="is-active">CN</span><span class="lang-divider">/</span><span>EN</span></button>
     </nav>
   </header>
   <main class="admin">
@@ -590,13 +604,20 @@ nav a { text-decoration: none; }
 nav a:hover { color: var(--ink); }
 .lang-toggle {
   min-height: 0;
-  padding: 0;
+  padding: 2px 0;
   border: 0;
   background: transparent;
   color: var(--ink);
   font: inherit;
   font-weight: 750;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }
+.lang-toggle span { color: var(--muted); }
+.lang-toggle .is-active { color: var(--ink); }
+.lang-toggle .lang-divider { color: color-mix(in srgb, var(--muted) 44%, transparent); font-weight: 500; }
+.lang-toggle:hover span { color: var(--ink); }
 main { width: min(1180px, calc(100vw - 36px)); margin: 0 auto; }
 .hub-hero {
   min-height: 62vh;
@@ -1176,7 +1197,7 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
 await writeFile(join(assetsDir, "site.js"), html`const $ = (selector) => document.querySelector(selector);
 
 const i18n = {
-  zh: {
+  cn: {
     "nav.manifest": "清单",
     "nav.admin": "管理",
     "nav.agent": "我是 Agent",
@@ -1304,23 +1325,49 @@ const i18n = {
   }
 };
 
-let currentLang = localStorage.getItem("iptrust-lang") || "zh";
+const localeMeta = {
+  cn: { label: "CN", htmlLang: "zh-CN", contentLang: "zh", dateLocale: "zh-CN" },
+  en: { label: "EN", htmlLang: "en", contentLang: "en", dateLocale: "en-US" },
+};
+
+function normalizeLocale(value) {
+  if (value === "zh" || value === "cn" || value === "CN") return "cn";
+  if (value === "en" || value === "EN") return "en";
+  return "cn";
+}
+
+let currentLocale = normalizeLocale(localStorage.getItem("iptrust-locale") || localStorage.getItem("iptrust-lang"));
 let cachedBrands = null;
 let cachedSearch = null;
 let cachedVersions = null;
 let currentQuery = "";
 
+function contentLang(locale = currentLocale) {
+  return localeMeta[locale]?.contentLang || "zh";
+}
+
 function t(key) {
-  return i18n[currentLang]?.[key] || i18n.zh[key] || key;
+  return i18n[currentLocale]?.[key] || i18n.cn[key] || key;
+}
+
+function renderLanguageToggle() {
+  const toggle = $("#langToggle");
+  if (!toggle) return;
+  toggle.setAttribute("aria-label", \`Language: \${localeMeta[currentLocale].label}\`);
+  toggle.innerHTML = \`
+    <span class="\${currentLocale === "cn" ? "is-active" : ""}">CN</span>
+    <span class="lang-divider">/</span>
+    <span class="\${currentLocale === "en" ? "is-active" : ""}">EN</span>
+  \`;
 }
 
 function applyI18n() {
-  document.documentElement.lang = currentLang === "zh" ? "zh-CN" : "en";
+  document.documentElement.lang = localeMeta[currentLocale].htmlLang;
+  document.documentElement.dataset.locale = currentLocale;
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     node.textContent = t(node.dataset.i18n);
   });
-  const toggle = $("#langToggle");
-  if (toggle) toggle.textContent = currentLang === "zh" ? "EN" : "CN";
+  renderLanguageToggle();
   const search = $("#brandSearch");
   if (search) search.placeholder = t("home.searchPlaceholder");
   document.querySelectorAll("[data-i18n-placeholder]").forEach((node) => {
@@ -1332,8 +1379,9 @@ function setupLanguageToggle() {
   const toggle = $("#langToggle");
   if (!toggle) return;
   toggle.addEventListener("click", async () => {
-    currentLang = currentLang === "zh" ? "en" : "zh";
-    localStorage.setItem("iptrust-lang", currentLang);
+    currentLocale = currentLocale === "cn" ? "en" : "cn";
+    localStorage.setItem("iptrust-locale", currentLocale);
+    localStorage.setItem("iptrust-lang", contentLang(currentLocale));
     applyI18n();
     await renderHeroIndex();
     await renderIndex();
@@ -1497,18 +1545,19 @@ function statusLabel(status) {
 }
 
 function localizedBrand(brand = {}) {
-  const display = brand.display?.[currentLang] || {};
+  const lang = contentLang();
+  const display = brand.display?.[lang] || {};
   return {
     name: display.name || brand.name || brand.slug,
     secondaryName: display.secondaryName || brand.nativeName || "",
-    intro: brand.intro?.[currentLang] || brand.primaryExcerpt || brand.description || "",
-    business: brand.profile?.business?.[currentLang] || brand.business?.[currentLang] || "",
+    intro: brand.intro?.[lang] || brand.primaryExcerpt || brand.description || "",
+    business: brand.profile?.business?.[lang] || brand.business?.[lang] || "",
   };
 }
 
 function mainBrand(brand = {}) {
   const display = brand.display?.default || {};
-  const lang = display.language || brand.mainLanguage || currentLang;
+  const lang = display.language || brand.mainLanguage || contentLang();
   const localized = brand.display?.[lang] || {};
   const fallback = localizedBrand(brand);
   return {
@@ -1524,6 +1573,12 @@ function fieldValue(value) {
   return value || t("brand.blank");
 }
 
+function languageLabel(value) {
+  if (value === "zh" || value === "cn") return "CN";
+  if (value === "en") return "EN";
+  return value || "";
+}
+
 function referenceText(brand = {}) {
   const localized = mainBrand(brand);
   const apiUrl = new URL(brand.apiUrl || \`api/brands/\${brand.slug}.json\`, location.href).href;
@@ -1531,7 +1586,7 @@ function referenceText(brand = {}) {
   return [
     \`IP: \${localized.name}\${localized.secondaryName ? \` / \${localized.secondaryName}\` : ""}\`,
     \`Slug: \${brand.slug}\`,
-    \`Main language: \${brand.mainLanguage || localized.language || ""}\`,
+    \`Main language: \${languageLabel(brand.mainLanguage || localized.language)}\`,
     \`Website: \${brand.officialWebsite || ""}\`,
     \`Intro: \${localized.intro}\`,
     \`Business: \${localized.business || ""}\`,
@@ -1694,7 +1749,7 @@ async function renderVersions() {
     <a class="version-item" href="\${escapeHtml(version.url)}">
       <strong>\${escapeHtml(version.shortHash)}</strong>
       <span>\${escapeHtml(version.message)}</span>
-      <time>\${escapeHtml(new Date(version.date).toLocaleDateString(currentLang === "zh" ? "zh-CN" : "en-US"))}</time>
+      <time>\${escapeHtml(new Date(version.date).toLocaleDateString(localeMeta[currentLocale].dateLocale))}</time>
     </a>
   \`).join("");
 }
@@ -1747,7 +1802,7 @@ async function renderIndex() {
           <p class="muted">\${escapeHtml(localized.secondaryName || "")}</p>
           <p class="card-intro">\${escapeHtml(localized.intro || "")}</p>
           <div class="card-profile">
-            <span>\${escapeHtml(t("brand.mainLanguage"))}: \${escapeHtml(brand.mainLanguage || localized.language || "")}</span>
+            <span>\${escapeHtml(t("brand.mainLanguage"))}: \${escapeHtml(languageLabel(brand.mainLanguage || localized.language))}</span>
             <span>\${escapeHtml(t("brand.business"))}: \${escapeHtml(localized.business || "")}</span>
           </div>
           <div class="meta">
@@ -1790,7 +1845,7 @@ async function renderBrand() {
       <section class="resource-list">
         <div class="resource-grid">
           <div class="resource"><strong>\${t("brand.website")}</strong><br>\${brand.officialWebsite ? \`<a href="\${escapeHtml(brand.officialWebsite)}">\${escapeHtml(brand.officialWebsite)}</a>\` : escapeHtml(t("brand.blank"))}</div>
-          <div class="resource"><strong>\${t("brand.mainLanguage")}</strong><br>\${escapeHtml(brand.mainLanguage || brand.profile?.mainLanguage || t("brand.blank"))}</div>
+          <div class="resource"><strong>\${t("brand.mainLanguage")}</strong><br>\${escapeHtml(languageLabel(brand.mainLanguage || brand.profile?.mainLanguage) || t("brand.blank"))}</div>
           <div class="resource"><strong>\${t("brand.intro")}</strong><br>\${escapeHtml(localized.intro || t("brand.blank"))}</div>
           <div class="resource"><strong>\${t("brand.business")}</strong><br>\${escapeHtml(localized.business || t("brand.blank"))}</div>
         </div>
@@ -1820,7 +1875,7 @@ renderBrand().catch(console.error);`);
 await writeFile(join(assetsDir, "admin.js"), html`const $ = (selector) => document.querySelector(selector);
 const state = { config: null, brands: [], currentFile: null, currentSha: null };
 const adminCopy = {
-  zh: {
+  cn: {
     needToken: "先填 Token。",
     loaded: "已载入",
     saved: "已保存。等待部署。",
@@ -1839,11 +1894,11 @@ const adminCopy = {
 };
 
 function lang() {
-  return document.documentElement.lang?.startsWith("zh") ? "zh" : "en";
+  return document.documentElement.dataset.locale === "en" ? "en" : "cn";
 }
 
 function copy(key) {
-  return adminCopy[lang()]?.[key] || adminCopy.en[key] || key;
+  return adminCopy[lang()]?.[key] || adminCopy.cn[key] || key;
 }
 
 async function sha256(text) {

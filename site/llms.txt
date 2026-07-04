@@ -12,22 +12,22 @@ Machine-readable entry points:
 - /skills/iptrust-live-update/SKILL.md
 
 Brands:
-- Table AI (tableai): /api/brands/tableai.json · mainLanguage en · palette #0A1626 / #A88B52
-- 凡纳弘途 (vanahom): /api/brands/vanahom.json · mainLanguage zh · palette #B12137 / #A8ADAD
-- KiND (kind): /api/brands/kind.json · mainLanguage en · palette #0E8C7B / #E8765A
-- 亚太艺术疗愈联盟 (apha): /api/brands/apha.json · mainLanguage zh · palette #557F8F / #8FAF83
-- 无魔协会 (manaendless): /api/brands/manaendless.json · mainLanguage zh · palette #7BC8C4 / #B7A7D8
-- 欧匹赛全球联盟 (opcglobal): /api/brands/opcglobal.json · mainLanguage zh · palette #1D3557 / #B79B63
-- IPTrustasset (iptrust): /api/brands/iptrust.json · mainLanguage en · palette #10263D / #B99B5B
-- 峰值永造局 (fengzhi): /api/brands/fengzhi.json · mainLanguage zh · palette #1A1714 / #A47B36
-- Axisee (axisee): /api/brands/axisee.json · mainLanguage en · palette #1A2B4A / #B12137
-- Sidera (sidera): /api/brands/sidera.json · mainLanguage en · palette #B58B4C / #D4A862
-- 1stepmore (1stepmore): /api/brands/1stepmore.json · mainLanguage en · palette #123047 / #C89B3C
-- 游赋社 (agem): /api/brands/agem.json · mainLanguage zh · palette #155E75 / #D9823B
-- 燃古豋 (rgd): /api/brands/rgd.json · mainLanguage zh · palette #E06B3A / #C8A15A
-- 常幸 (changoods): /api/brands/changoods.json · mainLanguage zh · palette #486B3F / #D2A94C
-- 博雅问渠书院 (boya): /api/brands/boya.json · mainLanguage zh · palette #243B6B / #B89A5E
-- 岁知社 APUCH (apuch): /api/brands/apuch.json · mainLanguage zh · palette #14304A / #A88B52
+- Table AI (tableai): /api/brands/tableai.json · mainLocale EN · palette #0A1626 / #A88B52
+- 凡纳弘途 (vanahom): /api/brands/vanahom.json · mainLocale CN · palette #B12137 / #A8ADAD
+- KiND (kind): /api/brands/kind.json · mainLocale EN · palette #0E8C7B / #E8765A
+- 亚太艺术疗愈联盟 (apha): /api/brands/apha.json · mainLocale CN · palette #557F8F / #8FAF83
+- 无魔协会 (manaendless): /api/brands/manaendless.json · mainLocale CN · palette #7BC8C4 / #B7A7D8
+- 欧匹赛全球联盟 (opcglobal): /api/brands/opcglobal.json · mainLocale CN · palette #1D3557 / #B79B63
+- IPTrustasset (iptrust): /api/brands/iptrust.json · mainLocale EN · palette #10263D / #B99B5B
+- 峰值永造局 (fengzhi): /api/brands/fengzhi.json · mainLocale CN · palette #1A1714 / #A47B36
+- Axisee (axisee): /api/brands/axisee.json · mainLocale EN · palette #1A2B4A / #B12137
+- Sidera (sidera): /api/brands/sidera.json · mainLocale EN · palette #B58B4C / #D4A862
+- 1stepmore (1stepmore): /api/brands/1stepmore.json · mainLocale EN · palette #123047 / #C89B3C
+- 游赋社 (agem): /api/brands/agem.json · mainLocale CN · palette #155E75 / #D9823B
+- 燃古豋 (rgd): /api/brands/rgd.json · mainLocale CN · palette #E06B3A / #C8A15A
+- 常幸 (changoods): /api/brands/changoods.json · mainLocale CN · palette #486B3F / #D2A94C
+- 博雅问渠书院 (boya): /api/brands/boya.json · mainLocale CN · palette #243B6B / #B89A5E
+- 岁知社 APUCH (apuch): /api/brands/apuch.json · mainLocale CN · palette #14304A / #A88B52
 
 Admin workflow:
 - /admin.html unlocks with the generated admin key.

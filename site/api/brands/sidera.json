@@ -34,9 +34,11 @@
     ]
   },
   "mainName": "Sidera",
+  "mainLocale": "EN",
   "profile": {
     "officialWebsite": "",
     "mainLanguage": "en",
+    "mainLocale": "EN",
     "intro": {
       "zh": "Sidera 是面向高端餐饮连锁的 Wisdom Navigator 设计系统。",
       "en": "Sidera is a Wisdom Navigator design system for premium F&B chains."

@@ -34,9 +34,11 @@
     ]
   },
   "mainName": "KiND",
+  "mainLocale": "EN",
   "profile": {
     "officialWebsite": "",
     "mainLanguage": "en",
+    "mainLocale": "EN",
     "intro": {
       "zh": "KiND 是以人为先的 AI 劳动力品牌，让 AI 服务所有人，而不是少数人。",
       "en": "KiND is a human-first AI workforce brand: AI for all, not for few."

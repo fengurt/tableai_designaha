@@ -34,9 +34,11 @@
     ]
   },
   "mainName": "无魔协会",
+  "mainLocale": "CN",
   "profile": {
     "officialWebsite": "",
     "mainLanguage": "zh",
+    "mainLocale": "CN",
     "intro": {
       "zh": "无魔协会是面向持续学习、清明协作与联盟实验的 IP。",
       "en": "MANA Endless is an IP for continuous learning, clear collaboration, and alliance experiments."

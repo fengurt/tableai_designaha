@@ -34,9 +34,11 @@
     ]
   },
   "mainName": "燃古豋",
+  "mainLocale": "CN",
   "profile": {
     "officialWebsite": "",
     "mainLanguage": "zh",
+    "mainLocale": "CN",
     "intro": {
       "zh": "燃古豋是面向古意、火光、仪式与手作精神的 IP。",
       "en": "RGD is an IP for ancient spirit, firelight, ritual, and craft."

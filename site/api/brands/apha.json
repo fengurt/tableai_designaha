@@ -34,9 +34,11 @@
     ]
   },
   "mainName": "亚太艺术疗愈联盟",
+  "mainLocale": "CN",
   "profile": {
     "officialWebsite": "",
     "mainLanguage": "zh",
+    "mainLocale": "CN",
     "intro": {
       "zh": "亚太艺术疗愈联盟连接艺术、身心疗愈与跨区域协作。",
       "en": "APHA connects healing arts, wellbeing practice, and Asia-Pacific collaboration."

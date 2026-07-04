@@ -34,9 +34,11 @@
     ]
   },
   "mainName": "Axisee",
+  "mainLocale": "EN",
   "profile": {
     "officialWebsite": "",
     "mainLanguage": "en",
+    "mainLocale": "EN",
     "intro": {
       "zh": "Axisee 是面向酒店营销、私域运营与收入增长的 AI 总经理。",
       "en": "Axisee is an AI General Manager for hotel marketing, private-domain operations, and revenue growth."

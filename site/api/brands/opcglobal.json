@@ -34,9 +34,11 @@
     ]
   },
   "mainName": "欧匹赛全球联盟",
+  "mainLocale": "CN",
   "profile": {
     "officialWebsite": "",
     "mainLanguage": "zh",
+    "mainLocale": "CN",
     "intro": {
       "zh": "欧匹赛全球联盟是面向全球协作、标准与资源连接的 IP。",
       "en": "OPC Global is an IP for global collaboration, standards, and resource connection."

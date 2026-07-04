@@ -34,9 +34,11 @@
     ]
   },
   "mainName": "凡纳弘途",
+  "mainLocale": "CN",
   "profile": {
     "officialWebsite": "",
     "mainLanguage": "zh",
+    "mainLocale": "CN",
     "intro": {
       "zh": "凡纳弘途是使命驱动的酒店、旅居与延展服务企业构建者。",
       "en": "VANAHOM is a mission-driven builder for hospitality, stay, and extended-service ventures."

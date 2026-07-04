@@ -35,9 +35,11 @@
       ]
     },
     "mainName": "Table AI",
+    "mainLocale": "EN",
     "profile": {
       "officialWebsite": "",
       "mainLanguage": "en",
+      "mainLocale": "EN",
       "intro": {
         "zh": "Table AI 是面向国际智库、联盟协作与 Agent 工作流的 AI 原生设计系统。",
         "en": "Table AI is an AI-native design system for international think tanks, alliance collaboration, and agent workflows."
@@ -113,9 +115,11 @@
       ]
     },
     "mainName": "凡纳弘途",
+    "mainLocale": "CN",
     "profile": {
       "officialWebsite": "",
       "mainLanguage": "zh",
+      "mainLocale": "CN",
       "intro": {
         "zh": "凡纳弘途是使命驱动的酒店、旅居与延展服务企业构建者。",
         "en": "VANAHOM is a mission-driven builder for hospitality, stay, and extended-service ventures."
@@ -191,9 +195,11 @@
       ]
     },
     "mainName": "KiND",
+    "mainLocale": "EN",
     "profile": {
       "officialWebsite": "",
       "mainLanguage": "en",
+      "mainLocale": "EN",
       "intro": {
         "zh": "KiND 是以人为先的 AI 劳动力品牌，让 AI 服务所有人，而不是少数人。",
         "en": "KiND is a human-first AI workforce brand: AI for all, not for few."
@@ -271,9 +277,11 @@
       ]
     },
     "mainName": "亚太艺术疗愈联盟",
+    "mainLocale": "CN",
     "profile": {
       "officialWebsite": "",
       "mainLanguage": "zh",
+      "mainLocale": "CN",
       "intro": {
         "zh": "亚太艺术疗愈联盟连接艺术、身心疗愈与跨区域协作。",
         "en": "APHA connects healing arts, wellbeing practice, and Asia-Pacific collaboration."
@@ -349,9 +357,11 @@
       ]
     },
     "mainName": "无魔协会",
+    "mainLocale": "CN",
     "profile": {
       "officialWebsite": "",
       "mainLanguage": "zh",
+      "mainLocale": "CN",
       "intro": {
         "zh": "无魔协会是面向持续学习、清明协作与联盟实验的 IP。",
         "en": "MANA Endless is an IP for continuous learning, clear collaboration, and alliance experiments."
@@ -425,9 +435,11 @@
       ]
     },
     "mainName": "欧匹赛全球联盟",
+    "mainLocale": "CN",
     "profile": {
       "officialWebsite": "",
       "mainLanguage": "zh",
+      "mainLocale": "CN",
       "intro": {
         "zh": "欧匹赛全球联盟是面向全球协作、标准与资源连接的 IP。",
         "en": "OPC Global is an IP for global collaboration, standards, and resource connection."
@@ -501,9 +513,11 @@
       ]
     },
     "mainName": "IPTrustasset",
+    "mainLocale": "EN",
     "profile": {
       "officialWebsite": "",
       "mainLanguage": "en",
+      "mainLocale": "EN",
       "intro": {
         "zh": "IPTrustasset 是面向知识产权资产可信管理与协作的 IP。",
         "en": "IPTrustasset is an IP for trusted intellectual-property asset stewardship and collaboration."
@@ -577,9 +591,11 @@
       ]
     },
     "mainName": "峰值永造局",
+    "mainLocale": "CN",
     "profile": {
       "officialWebsite": "",
       "mainLanguage": "zh",
+      "mainLocale": "CN",
       "intro": {
         "zh": "峰值永造局是 AI 原生的组织转型与交付系统品牌。",
         "en": "The Transformation Company is an AI-native transformation and delivery brand system."
@@ -677,9 +693,11 @@
       ]
     },
     "mainName": "Axisee",
+    "mainLocale": "EN",
     "profile": {
       "officialWebsite": "",
       "mainLanguage": "en",
+      "mainLocale": "EN",
       "intro": {
         "zh": "Axisee 是面向酒店营销、私域运营与收入增长的 AI 总经理。",
         "en": "Axisee is an AI General Manager for hotel marketing, private-domain operations, and revenue growth."
@@ -755,9 +773,11 @@
       ]
     },
     "mainName": "Sidera",
+    "mainLocale": "EN",
     "profile": {
       "officialWebsite": "",
       "mainLanguage": "en",
+      "mainLocale": "EN",
       "intro": {
         "zh": "Sidera 是面向高端餐饮连锁的 Wisdom Navigator 设计系统。",
         "en": "Sidera is a Wisdom Navigator design system for premium F&B chains."
@@ -833,9 +853,11 @@
       ]
     },
     "mainName": "1stepmore",
+    "mainLocale": "EN",
     "profile": {
       "officialWebsite": "",
       "mainLanguage": "en",
+      "mainLocale": "EN",
       "intro": {
         "zh": "1stepmore 是面向清晰决策、连续系统与精密执行的 IP。",
         "en": "1stepmore is an IP for clear decisions, continuous systems, and precise execution."
@@ -911,9 +933,11 @@
       ]
     },
     "mainName": "游赋社",
+    "mainLocale": "CN",
     "profile": {
       "officialWebsite": "",
       "mainLanguage": "zh",
+      "mainLocale": "CN",
       "intro": {
         "zh": "游赋社是面向游历、文化体验与共创社区的 IP。",
         "en": "AGEM is an IP for travel, cultural experience, and co-creative community."
@@ -989,9 +1013,11 @@
       ]
     },
     "mainName": "燃古豋",
+    "mainLocale": "CN",
     "profile": {
       "officialWebsite": "",
       "mainLanguage": "zh",
+      "mainLocale": "CN",
       "intro": {
         "zh": "燃古豋是面向古意、火光、仪式与手作精神的 IP。",
         "en": "RGD is an IP for ancient spirit, firelight, ritual, and craft."
@@ -1067,9 +1093,11 @@
       ]
     },
     "mainName": "常幸",
+    "mainLocale": "CN",
     "profile": {
       "officialWebsite": "",
       "mainLanguage": "zh",
+      "mainLocale": "CN",
       "intro": {
         "zh": "常幸是面向日常好运、温暖物品与身心友好生活的 IP。",
         "en": "Changoods is an IP for everyday good fortune, warm goods, and wellbeing-oriented living."
@@ -1145,9 +1173,11 @@
       ]
     },
     "mainName": "博雅问渠书院",
+    "mainLocale": "CN",
     "profile": {
       "officialWebsite": "",
       "mainLanguage": "zh",
+      "mainLocale": "CN",
       "intro": {
         "zh": "博雅问渠书院是面向博雅教育、经典深度与当代知识流动的书院 IP。",
         "en": "PKU BOYA Academy is an academy IP for liberal education, classical depth, and contemporary knowledge flow."
@@ -1223,9 +1253,11 @@
       ]
     },
     "mainName": "岁知社 APUCH",
+    "mainLocale": "CN",
     "profile": {
       "officialWebsite": "",
       "mainLanguage": "zh",
+      "mainLocale": "CN",
       "intro": {
         "zh": "岁知社 APUCH 是面向文化智能、公共知识与 Agent 可读协作的 IP 系统。",
         "en": "APUCH is an IP system for cultural intelligence, public knowledge, and agent-readable collaboration."

@@ -1,5 +1,12 @@
 [
   {
+    "hash": "74581d0117b9cb73e37d569f221acb4affc8ab87",
+    "shortHash": "74581d0",
+    "date": "2026-07-04T16:21:48+08:00",
+    "message": "Simplify admin copy and align language toggle",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/74581d0117b9cb73e37d569f221acb4affc8ab87"
+  },
+  {
     "hash": "1f20db30a5e970cf81e24c76e4613bc7e0036f09",
     "shortHash": "1f20db3",
     "date": "2026-07-04T16:01:00+08:00",
@@ -75,12 +82,5 @@
     "date": "2026-07-03T18:10:01+08:00",
     "message": "Deploy agent-friendly brand guidelines site",
     "url": "https://github.com/fengurt/tableai_designaha/commit/99b7f2d15f0ea20e6e9f92f124d0a0b3ff9c47b9"
-  },
-  {
-    "hash": "8ec3dee0bb6481b9bf22f415030419ecdb102d9d",
-    "shortHash": "8ec3dee",
-    "date": "2026-07-03T15:53:45+08:00",
-    "message": "Merge pull request #3 from fengurt/feat/sidera-axisee-design",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/8ec3dee0bb6481b9bf22f415030419ecdb102d9d"
   }
 ]

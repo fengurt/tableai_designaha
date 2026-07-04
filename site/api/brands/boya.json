@@ -34,9 +34,11 @@
     ]
   },
   "mainName": "博雅问渠书院",
+  "mainLocale": "CN",
   "profile": {
     "officialWebsite": "",
     "mainLanguage": "zh",
+    "mainLocale": "CN",
     "intro": {
       "zh": "博雅问渠书院是面向博雅教育、经典深度与当代知识流动的书院 IP。",
       "en": "PKU BOYA Academy is an academy IP for liberal education, classical depth, and contemporary knowledge flow."

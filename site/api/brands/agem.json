@@ -34,9 +34,11 @@
     ]
   },
   "mainName": "游赋社",
+  "mainLocale": "CN",
   "profile": {
     "officialWebsite": "",
     "mainLanguage": "zh",
+    "mainLocale": "CN",
     "intro": {
       "zh": "游赋社是面向游历、文化体验与共创社区的 IP。",
       "en": "AGEM is an IP for travel, cultural experience, and co-creative community."

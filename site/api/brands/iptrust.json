@@ -34,9 +34,11 @@
     ]
   },
   "mainName": "IPTrustasset",
+  "mainLocale": "EN",
   "profile": {
     "officialWebsite": "",
     "mainLanguage": "en",
+    "mainLocale": "EN",
     "intro": {
       "zh": "IPTrustasset 是面向知识产权资产可信管理与协作的 IP。",
       "en": "IPTrustasset is an IP for trusted intellectual-property asset stewardship and collaboration."

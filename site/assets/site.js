@@ -1,7 +1,7 @@
 const $ = (selector) => document.querySelector(selector);
 
 const i18n = {
-  zh: {
+  cn: {
     "nav.manifest": "清单",
     "nav.admin": "管理",
     "nav.agent": "我是 Agent",
@@ -129,23 +129,49 @@ const i18n = {
   }
 };
 
-let currentLang = localStorage.getItem("iptrust-lang") || "zh";
+const localeMeta = {
+  cn: { label: "CN", htmlLang: "zh-CN", contentLang: "zh", dateLocale: "zh-CN" },
+  en: { label: "EN", htmlLang: "en", contentLang: "en", dateLocale: "en-US" },
+};
+
+function normalizeLocale(value) {
+  if (value === "zh" || value === "cn" || value === "CN") return "cn";
+  if (value === "en" || value === "EN") return "en";
+  return "cn";
+}
+
+let currentLocale = normalizeLocale(localStorage.getItem("iptrust-locale") || localStorage.getItem("iptrust-lang"));
 let cachedBrands = null;
 let cachedSearch = null;
 let cachedVersions = null;
 let currentQuery = "";
 
+function contentLang(locale = currentLocale) {
+  return localeMeta[locale]?.contentLang || "zh";
+}
+
 function t(key) {
-  return i18n[currentLang]?.[key] || i18n.zh[key] || key;
+  return i18n[currentLocale]?.[key] || i18n.cn[key] || key;
+}
+
+function renderLanguageToggle() {
+  const toggle = $("#langToggle");
+  if (!toggle) return;
+  toggle.setAttribute("aria-label", `Language: ${localeMeta[currentLocale].label}`);
+  toggle.innerHTML = `
+    <span class="${currentLocale === "cn" ? "is-active" : ""}">CN</span>
+    <span class="lang-divider">/</span>
+    <span class="${currentLocale === "en" ? "is-active" : ""}">EN</span>
+  `;
 }
 
 function applyI18n() {
-  document.documentElement.lang = currentLang === "zh" ? "zh-CN" : "en";
+  document.documentElement.lang = localeMeta[currentLocale].htmlLang;
+  document.documentElement.dataset.locale = currentLocale;
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     node.textContent = t(node.dataset.i18n);
   });
-  const toggle = $("#langToggle");
-  if (toggle) toggle.textContent = currentLang === "zh" ? "EN" : "CN";
+  renderLanguageToggle();
   const search = $("#brandSearch");
   if (search) search.placeholder = t("home.searchPlaceholder");
   document.querySelectorAll("[data-i18n-placeholder]").forEach((node) => {
@@ -157,8 +183,9 @@ function setupLanguageToggle() {
   const toggle = $("#langToggle");
   if (!toggle) return;
   toggle.addEventListener("click", async () => {
-    currentLang = currentLang === "zh" ? "en" : "zh";
-    localStorage.setItem("iptrust-lang", currentLang);
+    currentLocale = currentLocale === "cn" ? "en" : "cn";
+    localStorage.setItem("iptrust-locale", currentLocale);
+    localStorage.setItem("iptrust-lang", contentLang(currentLocale));
     applyI18n();
     await renderHeroIndex();
     await renderIndex();
@@ -322,18 +349,19 @@ function statusLabel(status) {
 }
 
 function localizedBrand(brand = {}) {
-  const display = brand.display?.[currentLang] || {};
+  const lang = contentLang();
+  const display = brand.display?.[lang] || {};
   return {
     name: display.name || brand.name || brand.slug,
     secondaryName: display.secondaryName || brand.nativeName || "",
-    intro: brand.intro?.[currentLang] || brand.primaryExcerpt || brand.description || "",
-    business: brand.profile?.business?.[currentLang] || brand.business?.[currentLang] || "",
+    intro: brand.intro?.[lang] || brand.primaryExcerpt || brand.description || "",
+    business: brand.profile?.business?.[lang] || brand.business?.[lang] || "",
   };
 }
 
 function mainBrand(brand = {}) {
   const display = brand.display?.default || {};
-  const lang = display.language || brand.mainLanguage || currentLang;
+  const lang = display.language || brand.mainLanguage || contentLang();
   const localized = brand.display?.[lang] || {};
   const fallback = localizedBrand(brand);
   return {
@@ -349,6 +377,12 @@ function fieldValue(value) {
   return value || t("brand.blank");
 }
 
+function languageLabel(value) {
+  if (value === "zh" || value === "cn") return "CN";
+  if (value === "en") return "EN";
+  return value || "";
+}
+
 function referenceText(brand = {}) {
   const localized = mainBrand(brand);
   const apiUrl = new URL(brand.apiUrl || `api/brands/${brand.slug}.json`, location.href).href;
@@ -356,7 +390,7 @@ function referenceText(brand = {}) {
   return [
     `IP: ${localized.name}${localized.secondaryName ? ` / ${localized.secondaryName}` : ""}`,
     `Slug: ${brand.slug}`,
-    `Main language: ${brand.mainLanguage || localized.language || ""}`,
+    `Main language: ${languageLabel(brand.mainLanguage || localized.language)}`,
     `Website: ${brand.officialWebsite || ""}`,
     `Intro: ${localized.intro}`,
     `Business: ${localized.business || ""}`,
@@ -519,7 +553,7 @@ async function renderVersions() {
     <a class="version-item" href="${escapeHtml(version.url)}">
       <strong>${escapeHtml(version.shortHash)}</strong>
       <span>${escapeHtml(version.message)}</span>
-      <time>${escapeHtml(new Date(version.date).toLocaleDateString(currentLang === "zh" ? "zh-CN" : "en-US"))}</time>
+      <time>${escapeHtml(new Date(version.date).toLocaleDateString(localeMeta[currentLocale].dateLocale))}</time>
     </a>
   `).join("");
 }
@@ -572,7 +606,7 @@ async function renderIndex() {
           <p class="muted">${escapeHtml(localized.secondaryName || "")}</p>
           <p class="card-intro">${escapeHtml(localized.intro || "")}</p>
           <div class="card-profile">
-            <span>${escapeHtml(t("brand.mainLanguage"))}: ${escapeHtml(brand.mainLanguage || localized.language || "")}</span>
+            <span>${escapeHtml(t("brand.mainLanguage"))}: ${escapeHtml(languageLabel(brand.mainLanguage || localized.language))}</span>
             <span>${escapeHtml(t("brand.business"))}: ${escapeHtml(localized.business || "")}</span>
           </div>
           <div class="meta">
@@ -615,7 +649,7 @@ async function renderBrand() {
       <section class="resource-list">
         <div class="resource-grid">
           <div class="resource"><strong>${t("brand.website")}</strong><br>${brand.officialWebsite ? `<a href="${escapeHtml(brand.officialWebsite)}">${escapeHtml(brand.officialWebsite)}</a>` : escapeHtml(t("brand.blank"))}</div>
-          <div class="resource"><strong>${t("brand.mainLanguage")}</strong><br>${escapeHtml(brand.mainLanguage || brand.profile?.mainLanguage || t("brand.blank"))}</div>
+          <div class="resource"><strong>${t("brand.mainLanguage")}</strong><br>${escapeHtml(languageLabel(brand.mainLanguage || brand.profile?.mainLanguage) || t("brand.blank"))}</div>
           <div class="resource"><strong>${t("brand.intro")}</strong><br>${escapeHtml(localized.intro || t("brand.blank"))}</div>
           <div class="resource"><strong>${t("brand.business")}</strong><br>${escapeHtml(localized.business || t("brand.blank"))}</div>
         </div>
