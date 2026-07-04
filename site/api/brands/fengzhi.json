@@ -63,11 +63,11 @@
     }
   },
   "version": {
-    "hash": "757d234f9731715e50bf6f416f2d9b5f3e4d9a22",
-    "shortHash": "757d234",
-    "date": "2026-07-04T20:46:39+08:00",
-    "message": "Refine IPTrust search and copy feedback UX",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/757d234f9731715e50bf6f416f2d9b5f3e4d9a22"
+    "hash": "50a423841491577f81a4f4d034726e7ca975cf48",
+    "shortHash": "50a4238",
+    "date": "2026-07-04T20:53:03+08:00",
+    "message": "Expose brand API schema and history endpoints",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/50a423841491577f81a4f4d034726e7ca975cf48"
   },
   "historyUrl": "api/history/fengzhi.json",
   "history": [

@@ -201,6 +201,29 @@ function loadVersions() {
   }
 }
 
+async function loadPreviousJson(path, fallback) {
+  if (!existsSync(path)) return fallback;
+  try {
+    return JSON.parse(await readFile(path, "utf8"));
+  } catch {
+    return fallback;
+  }
+}
+
+function mergeVersionHistory(current = [], previous = [], limit = 20, options = {}) {
+  if (options.preferPreviousWhenShallow && current.length <= 1 && previous.length > 1) {
+    return previous.slice(0, limit);
+  }
+  const merged = [];
+  const seen = new Set();
+  for (const item of [...current, ...previous]) {
+    if (!item?.hash || seen.has(item.hash)) continue;
+    seen.add(item.hash);
+    merged.push(item);
+  }
+  return merged.slice(0, limit);
+}
+
 function loadBrandVersions(brand) {
   const paths = uniqueValues([
     "config/brands.json",
@@ -287,6 +310,14 @@ function apiSchemaPayload() {
   };
 }
 
+const previousVersions = await loadPreviousJson(join(apiDir, "versions.json"), []);
+const previousHistoryBySlug = new Map(await Promise.all(brands.map(async (brand) => {
+  const previous = await loadPreviousJson(join(historyApiDir, `${brand.slug}.json`), null);
+  return [brand.slug, previous?.versions ?? []];
+})));
+const versions = mergeVersionHistory(loadVersions(), previousVersions, 20);
+const buildVersion = versions[0]?.shortHash ?? "dev";
+
 await rm(siteDir, { recursive: true, force: true });
 await mkdir(brandApiDir, { recursive: true });
 await mkdir(historyApiDir, { recursive: true });
@@ -300,8 +331,6 @@ if (existsSync(join(root, "assets/contact/wecom-qr.png"))) {
   await copyFile(join(root, "assets/contact/wecom-qr.png"), join(contactDir, "wecom-qr.png"));
 }
 
-const versions = loadVersions();
-const buildVersion = versions[0]?.shortHash ?? "dev";
 const brandPayloads = [];
 
 for (const brand of brands) {
@@ -346,7 +375,9 @@ for (const brand of brands) {
   guides.sort((a, b) => Number(b.primary) - Number(a.primary) || a.path.localeCompare(b.path));
   tokens.sort((a, b) => a.path.localeCompare(b.path));
   images.sort((a, b) => a.path.localeCompare(b.path));
-  const history = loadBrandVersions(brand);
+  const history = mergeVersionHistory(loadBrandVersions(brand), previousHistoryBySlug.get(brand.slug), 20, {
+    preferPreviousWhenShallow: true,
+  });
 
   const display = {
     default: { language: mainLanguage(brand), name: mainName(brand) },
