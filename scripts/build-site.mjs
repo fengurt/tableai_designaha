@@ -323,6 +323,7 @@ const searchPayload = brandPayloads.flatMap((brand) => {
   return [...base, ...guides];
 });
 const versions = loadVersions();
+const buildVersion = versions[0]?.shortHash ?? "dev";
 
 await writeFile(join(apiDir, "brands.json"), JSON.stringify(indexPayload, null, 2));
 await writeFile(join(apiDir, "search.json"), JSON.stringify(searchPayload, null, 2));
@@ -376,6 +377,40 @@ await writeFile(join(siteDir, "admin-config.json"), JSON.stringify({
   repo: adminConfig.repo ?? "tableai_designaha",
   branch: adminConfig.branch ?? "main",
 }, null, 2));
+
+await writeFile(join(siteDir, "_headers"), [
+  "/*",
+  "  X-Content-Type-Options: nosniff",
+  "  Referrer-Policy: strict-origin-when-cross-origin",
+  "  Permissions-Policy: camera=(), microphone=(), geolocation=()",
+  "",
+  "/*.html",
+  "  Cache-Control: public, max-age=0, must-revalidate",
+  "",
+  "/assets/*",
+  "  Cache-Control: public, max-age=300, must-revalidate",
+  "",
+  "/assets/brand-images/*",
+  "  Cache-Control: public, max-age=86400, stale-while-revalidate=604800",
+  "",
+  "/api/*",
+  "  Cache-Control: public, max-age=300, stale-while-revalidate=86400",
+  "",
+  "/llms.txt",
+  "  Cache-Control: public, max-age=300, stale-while-revalidate=86400",
+  "",
+  "/skills/*",
+  "  Cache-Control: public, max-age=300, stale-while-revalidate=86400",
+  "",
+].join("\n"));
+
+await writeFile(join(siteDir, "_redirects"), [
+  "/admin  /admin.html  200",
+  "/llms  /llms.txt  200",
+  "/manifest  /api/manifest.json  200",
+  "/brands  /api/brands.json  200",
+  "",
+].join("\n"));
 
 await writeFile(join(siteDir, "llms.txt"), [
   `# ${hubName}`,
@@ -1204,6 +1239,7 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
 }`);
 
 await writeFile(join(assetsDir, "site.js"), html`const $ = (selector) => document.querySelector(selector);
+const BUILD_VERSION = "${buildVersion}";
 
 const i18n = {
   cn: {
@@ -1421,8 +1457,8 @@ function setupSearch() {
 
 async function loadJson(path) {
   const url = new URL(path, location.href);
-  url.searchParams.set("v", Date.now().toString());
-  const res = await fetch(url, { cache: "no-store" });
+  url.searchParams.set("v", BUILD_VERSION);
+  const res = await fetch(url);
   if (!res.ok) throw new Error(\`Could not load \${path}\`);
   return res.json();
 }

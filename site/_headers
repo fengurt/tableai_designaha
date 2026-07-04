@@ -1,0 +1,22 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/*
+  Cache-Control: public, max-age=300, must-revalidate
+
+/assets/brand-images/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/api/*
+  Cache-Control: public, max-age=300, stale-while-revalidate=86400
+
+/llms.txt
+  Cache-Control: public, max-age=300, stale-while-revalidate=86400
+
+/skills/*
+  Cache-Control: public, max-age=300, stale-while-revalidate=86400

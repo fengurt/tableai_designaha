@@ -1,5 +1,12 @@
 [
   {
+    "hash": "534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
+    "shortHash": "534c825",
+    "date": "2026-07-04T16:34:09+08:00",
+    "message": "Correct APUCH language and IPTrust naming",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/534c825eb34e08787dc724f7a1d1e19e1bafdfb3"
+  },
+  {
     "hash": "e979ff5bf2ae516742ed5de22a5febebcdaea867",
     "shortHash": "e979ff5",
     "date": "2026-07-04T16:28:28+08:00",
@@ -75,12 +82,5 @@
     "date": "2026-07-03T22:32:27+08:00",
     "message": "Redesign IPTrust homepage with IP-specific cards",
     "url": "https://github.com/fengurt/tableai_designaha/commit/b508418667c2ef8e6999af1f5adfee010adb1d44"
-  },
-  {
-    "hash": "e98dae7a98dfe32921ebc76e2783caeb85e64d61",
-    "shortHash": "e98dae7",
-    "date": "2026-07-03T21:55:07+08:00",
-    "message": "Add per-IP brand theming to design site",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/e98dae7a98dfe32921ebc76e2783caeb85e64d61"
   }
 ]

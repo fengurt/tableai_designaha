@@ -1,0 +1,4 @@
+/admin  /admin.html  200
+/llms  /llms.txt  200
+/manifest  /api/manifest.json  200
+/brands  /api/brands.json  200

@@ -1,4 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
+const BUILD_VERSION = "534c825";
 
 const i18n = {
   cn: {
@@ -216,8 +217,8 @@ function setupSearch() {
 
 async function loadJson(path) {
   const url = new URL(path, location.href);
-  url.searchParams.set("v", Date.now().toString());
-  const res = await fetch(url, { cache: "no-store" });
+  url.searchParams.set("v", BUILD_VERSION);
+  const res = await fetch(url);
   if (!res.ok) throw new Error(`Could not load ${path}`);
   return res.json();
 }
