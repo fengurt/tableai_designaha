@@ -1,5 +1,12 @@
 [
   {
+    "hash": "4beb0a3e3c4790c755d86491b959e40f7fb55674",
+    "shortHash": "4beb0a3",
+    "date": "2026-07-04T20:57:15+08:00",
+    "message": "Preserve brand history during shallow builds",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4beb0a3e3c4790c755d86491b959e40f7fb55674"
+  },
+  {
     "hash": "50a423841491577f81a4f4d034726e7ca975cf48",
     "shortHash": "50a4238",
     "date": "2026-07-04T20:53:03+08:00",

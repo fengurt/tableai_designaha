@@ -16,11 +16,14 @@ type BrandConfig = {
   name: string;
   nativeName?: string;
   description: string;
+  officialWebsite?: string;
   primaryGuide?: string;
   mainName?: string;
   mainLanguage?: string;
   display?: Record<string, { name: string; secondaryName?: string; language?: string }>;
   intro?: Record<string, string>;
+  business?: Record<string, string>;
+  notes?: Record<string, string>;
 };
 
 type Guide = {
@@ -183,7 +186,11 @@ async function loadBrand(slug: string): Promise<BrandPayload> {
     zh: liveIntro(brand, guides, "zh"),
     en: liveIntro(brand, guides, "en"),
   };
-  return { ...brand, mainName: mainName(brand), mainLanguage: mainLanguage(brand), display, intro, guides, tokenFiles };
+  const notes = {
+    zh: brand.notes?.zh ?? "",
+    en: brand.notes?.en ?? "",
+  };
+  return { ...brand, mainName: mainName(brand), mainLanguage: mainLanguage(brand), display, intro, notes, guides, tokenFiles };
 }
 
 function flattenJsonTokens(obj: Record<string, any>, prefix = "", groupType?: string): Record<string, Token> {

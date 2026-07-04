@@ -47,6 +47,10 @@
       "business": {
         "zh": "智库协作、AI 工作流、品牌与设计系统。",
         "en": "Think tank collaboration, AI workflows, brand and design systems."
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
       }
     },
     "display": {
@@ -63,12 +67,16 @@
         "secondaryName": ""
       }
     },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
     "version": {
-      "hash": "50a423841491577f81a4f4d034726e7ca975cf48",
-      "shortHash": "50a4238",
-      "date": "2026-07-04T20:53:03+08:00",
-      "message": "Expose brand API schema and history endpoints",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/50a423841491577f81a4f4d034726e7ca975cf48"
+      "hash": "4beb0a3e3c4790c755d86491b959e40f7fb55674",
+      "shortHash": "4beb0a3",
+      "date": "2026-07-04T20:57:15+08:00",
+      "message": "Preserve brand history during shallow builds",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4beb0a3e3c4790c755d86491b959e40f7fb55674"
     },
     "historyUrl": "api/history/tableai.json",
     "url": "brand.html?brand=tableai",
@@ -135,6 +143,10 @@
       "business": {
         "zh": "酒店、旅居、康养与延展服务。",
         "en": "Hospitality, stay, wellbeing, and extended services."
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
       }
     },
     "display": {
@@ -151,12 +163,16 @@
         "secondaryName": "凡纳弘途"
       }
     },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
     "version": {
-      "hash": "50a423841491577f81a4f4d034726e7ca975cf48",
-      "shortHash": "50a4238",
-      "date": "2026-07-04T20:53:03+08:00",
-      "message": "Expose brand API schema and history endpoints",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/50a423841491577f81a4f4d034726e7ca975cf48"
+      "hash": "4beb0a3e3c4790c755d86491b959e40f7fb55674",
+      "shortHash": "4beb0a3",
+      "date": "2026-07-04T20:57:15+08:00",
+      "message": "Preserve brand history during shallow builds",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4beb0a3e3c4790c755d86491b959e40f7fb55674"
     },
     "historyUrl": "api/history/vanahom.json",
     "url": "brand.html?brand=vanahom",
@@ -223,6 +239,10 @@
       "business": {
         "zh": "AI 劳动力、智能体产品与企业自动化。",
         "en": "AI workforce, agent products, and enterprise automation."
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
       }
     },
     "display": {
@@ -239,12 +259,16 @@
         "secondaryName": "善渡科技"
       }
     },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
     "version": {
-      "hash": "50a423841491577f81a4f4d034726e7ca975cf48",
-      "shortHash": "50a4238",
-      "date": "2026-07-04T20:53:03+08:00",
-      "message": "Expose brand API schema and history endpoints",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/50a423841491577f81a4f4d034726e7ca975cf48"
+      "hash": "4beb0a3e3c4790c755d86491b959e40f7fb55674",
+      "shortHash": "4beb0a3",
+      "date": "2026-07-04T20:57:15+08:00",
+      "message": "Preserve brand history during shallow builds",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4beb0a3e3c4790c755d86491b959e40f7fb55674"
     },
     "historyUrl": "api/history/kind.json",
     "url": "brand.html?brand=kind",
@@ -313,6 +337,10 @@
       "business": {
         "zh": "艺术疗愈、教育、研究与联盟协作。",
         "en": "Healing arts, education, research, and alliance collaboration."
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
       }
     },
     "display": {
@@ -329,12 +357,16 @@
         "secondaryName": "亚太艺术疗愈联盟"
       }
     },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
     "version": {
-      "hash": "50a423841491577f81a4f4d034726e7ca975cf48",
-      "shortHash": "50a4238",
-      "date": "2026-07-04T20:53:03+08:00",
-      "message": "Expose brand API schema and history endpoints",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/50a423841491577f81a4f4d034726e7ca975cf48"
+      "hash": "4beb0a3e3c4790c755d86491b959e40f7fb55674",
+      "shortHash": "4beb0a3",
+      "date": "2026-07-04T20:57:15+08:00",
+      "message": "Preserve brand history during shallow builds",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4beb0a3e3c4790c755d86491b959e40f7fb55674"
     },
     "historyUrl": "api/history/apha.json",
     "url": "brand.html?brand=apha",
@@ -401,6 +433,10 @@
       "business": {
         "zh": "联盟、学习社区与协作实验。",
         "en": "Alliance, learning community, and collaboration experiments."
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
       }
     },
     "display": {
@@ -417,12 +453,16 @@
         "secondaryName": "无魔协会"
       }
     },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
     "version": {
-      "hash": "50a423841491577f81a4f4d034726e7ca975cf48",
-      "shortHash": "50a4238",
-      "date": "2026-07-04T20:53:03+08:00",
-      "message": "Expose brand API schema and history endpoints",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/50a423841491577f81a4f4d034726e7ca975cf48"
+      "hash": "4beb0a3e3c4790c755d86491b959e40f7fb55674",
+      "shortHash": "4beb0a3",
+      "date": "2026-07-04T20:57:15+08:00",
+      "message": "Preserve brand history during shallow builds",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4beb0a3e3c4790c755d86491b959e40f7fb55674"
     },
     "historyUrl": "api/history/manaendless.json",
     "url": "brand.html?brand=manaendless",
@@ -487,6 +527,10 @@
       "business": {
         "zh": "全球联盟、标准建设与跨区域协作。",
         "en": "Global alliance, standards, and cross-region collaboration."
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
       }
     },
     "display": {
@@ -503,12 +547,16 @@
         "secondaryName": "欧匹赛全球联盟"
       }
     },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
     "version": {
-      "hash": "50a423841491577f81a4f4d034726e7ca975cf48",
-      "shortHash": "50a4238",
-      "date": "2026-07-04T20:53:03+08:00",
-      "message": "Expose brand API schema and history endpoints",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/50a423841491577f81a4f4d034726e7ca975cf48"
+      "hash": "4beb0a3e3c4790c755d86491b959e40f7fb55674",
+      "shortHash": "4beb0a3",
+      "date": "2026-07-04T20:57:15+08:00",
+      "message": "Preserve brand history during shallow builds",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4beb0a3e3c4790c755d86491b959e40f7fb55674"
     },
     "historyUrl": "api/history/opcglobal.json",
     "url": "brand.html?brand=opcglobal",
@@ -573,6 +621,10 @@
       "business": {
         "zh": "IP 资产管理、信任索引与品牌源文件治理。",
         "en": "IP asset stewardship, trust indexing, and brand-source governance."
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
       }
     },
     "display": {
@@ -589,12 +641,16 @@
         "secondaryName": ""
       }
     },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
     "version": {
-      "hash": "50a423841491577f81a4f4d034726e7ca975cf48",
-      "shortHash": "50a4238",
-      "date": "2026-07-04T20:53:03+08:00",
-      "message": "Expose brand API schema and history endpoints",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/50a423841491577f81a4f4d034726e7ca975cf48"
+      "hash": "4beb0a3e3c4790c755d86491b959e40f7fb55674",
+      "shortHash": "4beb0a3",
+      "date": "2026-07-04T20:57:15+08:00",
+      "message": "Preserve brand history during shallow builds",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4beb0a3e3c4790c755d86491b959e40f7fb55674"
     },
     "historyUrl": "api/history/iptrust.json",
     "url": "brand.html?brand=iptrust",
@@ -659,6 +715,10 @@
       "business": {
         "zh": "组织转型、战略交付、AI 原生运营。",
         "en": "Transformation, strategic delivery, and AI-native operations."
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
       }
     },
     "display": {
@@ -675,12 +735,16 @@
         "secondaryName": "峰值永造局"
       }
     },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
     "version": {
-      "hash": "50a423841491577f81a4f4d034726e7ca975cf48",
-      "shortHash": "50a4238",
-      "date": "2026-07-04T20:53:03+08:00",
-      "message": "Expose brand API schema and history endpoints",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/50a423841491577f81a4f4d034726e7ca975cf48"
+      "hash": "4beb0a3e3c4790c755d86491b959e40f7fb55674",
+      "shortHash": "4beb0a3",
+      "date": "2026-07-04T20:57:15+08:00",
+      "message": "Preserve brand history during shallow builds",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4beb0a3e3c4790c755d86491b959e40f7fb55674"
     },
     "historyUrl": "api/history/fengzhi.json",
     "url": "brand.html?brand=fengzhi",
@@ -769,6 +833,10 @@
       "business": {
         "zh": "酒店营销、私域运营、收益管理。",
         "en": "Hotel marketing, private-domain operations, and revenue management."
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
       }
     },
     "display": {
@@ -785,12 +853,16 @@
         "secondaryName": "酒店盈利大师"
       }
     },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
     "version": {
-      "hash": "50a423841491577f81a4f4d034726e7ca975cf48",
-      "shortHash": "50a4238",
-      "date": "2026-07-04T20:53:03+08:00",
-      "message": "Expose brand API schema and history endpoints",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/50a423841491577f81a4f4d034726e7ca975cf48"
+      "hash": "4beb0a3e3c4790c755d86491b959e40f7fb55674",
+      "shortHash": "4beb0a3",
+      "date": "2026-07-04T20:57:15+08:00",
+      "message": "Preserve brand history during shallow builds",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4beb0a3e3c4790c755d86491b959e40f7fb55674"
     },
     "historyUrl": "api/history/axisee.json",
     "url": "brand.html?brand=axisee",
@@ -857,6 +929,10 @@
       "business": {
         "zh": "餐饮连锁、经营导航、品牌与服务系统。",
         "en": "F&B chains, operating navigation, brand and service systems."
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
       }
     },
     "display": {
@@ -873,12 +949,16 @@
         "secondaryName": "侍天"
       }
     },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
     "version": {
-      "hash": "50a423841491577f81a4f4d034726e7ca975cf48",
-      "shortHash": "50a4238",
-      "date": "2026-07-04T20:53:03+08:00",
-      "message": "Expose brand API schema and history endpoints",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/50a423841491577f81a4f4d034726e7ca975cf48"
+      "hash": "4beb0a3e3c4790c755d86491b959e40f7fb55674",
+      "shortHash": "4beb0a3",
+      "date": "2026-07-04T20:57:15+08:00",
+      "message": "Preserve brand history during shallow builds",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4beb0a3e3c4790c755d86491b959e40f7fb55674"
     },
     "historyUrl": "api/history/sidera.json",
     "url": "brand.html?brand=sidera",
@@ -945,6 +1025,10 @@
       "business": {
         "zh": "系统方法、决策工具与执行框架。",
         "en": "Systems methods, decision tools, and execution frameworks."
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
       }
     },
     "display": {
@@ -961,12 +1045,16 @@
         "secondaryName": "壹目贯维"
       }
     },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
     "version": {
-      "hash": "50a423841491577f81a4f4d034726e7ca975cf48",
-      "shortHash": "50a4238",
-      "date": "2026-07-04T20:53:03+08:00",
-      "message": "Expose brand API schema and history endpoints",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/50a423841491577f81a4f4d034726e7ca975cf48"
+      "hash": "4beb0a3e3c4790c755d86491b959e40f7fb55674",
+      "shortHash": "4beb0a3",
+      "date": "2026-07-04T20:57:15+08:00",
+      "message": "Preserve brand history during shallow builds",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4beb0a3e3c4790c755d86491b959e40f7fb55674"
     },
     "historyUrl": "api/history/1stepmore.json",
     "url": "brand.html?brand=1stepmore",
@@ -1033,6 +1121,10 @@
       "business": {
         "zh": "文化游历、体验设计、社区共创。",
         "en": "Cultural travel, experience design, and community co-creation."
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
       }
     },
     "display": {
@@ -1049,12 +1141,16 @@
         "secondaryName": "游赋社"
       }
     },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
     "version": {
-      "hash": "50a423841491577f81a4f4d034726e7ca975cf48",
-      "shortHash": "50a4238",
-      "date": "2026-07-04T20:53:03+08:00",
-      "message": "Expose brand API schema and history endpoints",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/50a423841491577f81a4f4d034726e7ca975cf48"
+      "hash": "4beb0a3e3c4790c755d86491b959e40f7fb55674",
+      "shortHash": "4beb0a3",
+      "date": "2026-07-04T20:57:15+08:00",
+      "message": "Preserve brand history during shallow builds",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4beb0a3e3c4790c755d86491b959e40f7fb55674"
     },
     "historyUrl": "api/history/agem.json",
     "url": "brand.html?brand=agem",
@@ -1121,6 +1217,10 @@
       "business": {
         "zh": "文化内容、仪式体验、手作与美学产品。",
         "en": "Cultural content, ritual experiences, craft, and aesthetic products."
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
       }
     },
     "display": {
@@ -1137,12 +1237,16 @@
         "secondaryName": "燃古豋"
       }
     },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
     "version": {
-      "hash": "50a423841491577f81a4f4d034726e7ca975cf48",
-      "shortHash": "50a4238",
-      "date": "2026-07-04T20:53:03+08:00",
-      "message": "Expose brand API schema and history endpoints",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/50a423841491577f81a4f4d034726e7ca975cf48"
+      "hash": "4beb0a3e3c4790c755d86491b959e40f7fb55674",
+      "shortHash": "4beb0a3",
+      "date": "2026-07-04T20:57:15+08:00",
+      "message": "Preserve brand history during shallow builds",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4beb0a3e3c4790c755d86491b959e40f7fb55674"
     },
     "historyUrl": "api/history/rgd.json",
     "url": "brand.html?brand=rgd",
@@ -1209,6 +1313,10 @@
       "business": {
         "zh": "生活方式、好物、身心友好产品。",
         "en": "Lifestyle, goods, and wellbeing-oriented products."
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
       }
     },
     "display": {
@@ -1225,12 +1333,16 @@
         "secondaryName": "常幸"
       }
     },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
     "version": {
-      "hash": "50a423841491577f81a4f4d034726e7ca975cf48",
-      "shortHash": "50a4238",
-      "date": "2026-07-04T20:53:03+08:00",
-      "message": "Expose brand API schema and history endpoints",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/50a423841491577f81a4f4d034726e7ca975cf48"
+      "hash": "4beb0a3e3c4790c755d86491b959e40f7fb55674",
+      "shortHash": "4beb0a3",
+      "date": "2026-07-04T20:57:15+08:00",
+      "message": "Preserve brand history during shallow builds",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4beb0a3e3c4790c755d86491b959e40f7fb55674"
     },
     "historyUrl": "api/history/changoods.json",
     "url": "brand.html?brand=changoods",
@@ -1297,6 +1409,10 @@
       "business": {
         "zh": "博雅教育、知识研究、书院课程与公共学习。",
         "en": "Liberal education, knowledge research, academy programs, and public learning."
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
       }
     },
     "display": {
@@ -1313,12 +1429,16 @@
         "secondaryName": "博雅问渠书院"
       }
     },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
     "version": {
-      "hash": "50a423841491577f81a4f4d034726e7ca975cf48",
-      "shortHash": "50a4238",
-      "date": "2026-07-04T20:53:03+08:00",
-      "message": "Expose brand API schema and history endpoints",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/50a423841491577f81a4f4d034726e7ca975cf48"
+      "hash": "4beb0a3e3c4790c755d86491b959e40f7fb55674",
+      "shortHash": "4beb0a3",
+      "date": "2026-07-04T20:57:15+08:00",
+      "message": "Preserve brand history during shallow builds",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4beb0a3e3c4790c755d86491b959e40f7fb55674"
     },
     "historyUrl": "api/history/boya.json",
     "url": "brand.html?brand=boya",
@@ -1385,6 +1505,10 @@
       "business": {
         "zh": "",
         "en": ""
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
       }
     },
     "display": {
@@ -1401,12 +1525,16 @@
         "secondaryName": ""
       }
     },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
     "version": {
-      "hash": "50a423841491577f81a4f4d034726e7ca975cf48",
-      "shortHash": "50a4238",
-      "date": "2026-07-04T20:53:03+08:00",
-      "message": "Expose brand API schema and history endpoints",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/50a423841491577f81a4f4d034726e7ca975cf48"
+      "hash": "4beb0a3e3c4790c755d86491b959e40f7fb55674",
+      "shortHash": "4beb0a3",
+      "date": "2026-07-04T20:57:15+08:00",
+      "message": "Preserve brand history during shallow builds",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4beb0a3e3c4790c755d86491b959e40f7fb55674"
     },
     "historyUrl": "api/history/apuch.json",
     "url": "brand.html?brand=apuch",

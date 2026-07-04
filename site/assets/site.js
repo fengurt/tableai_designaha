@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "50a4238";
+const BUILD_VERSION = "4beb0a3";
 
 const i18n = {
   cn: {
@@ -34,6 +34,7 @@ const i18n = {
     "brand.mainLanguage": "主语言",
     "brand.business": "业务",
     "brand.intro": "简介",
+    "brand.notes": "备注",
     "brand.blank": "未填写",
     "brand.editable": "可编辑源文件",
     "brand.tokens": "Token 文件",
@@ -109,6 +110,7 @@ const i18n = {
     "brand.mainLanguage": "Main language",
     "brand.business": "Business",
     "brand.intro": "Intro",
+    "brand.notes": "Notes",
     "brand.blank": "Blank",
     "brand.editable": "Editable source",
     "brand.tokens": "Token files",
@@ -402,11 +404,13 @@ function localizedBrand(brand = {}) {
   const display = brand.display?.[lang] || {};
   const hasIntro = Object.prototype.hasOwnProperty.call(brand.intro ?? {}, lang);
   const hasBusiness = Object.prototype.hasOwnProperty.call(brand.profile?.business ?? brand.business ?? {}, lang);
+  const hasNotes = Object.prototype.hasOwnProperty.call(brand.profile?.notes ?? brand.notes ?? {}, lang);
   return {
     name: display.name || brand.name || brand.slug,
     secondaryName: display.secondaryName || brand.nativeName || "",
     intro: hasIntro ? (brand.intro?.[lang] ?? "") : (brand.primaryExcerpt || brand.description || ""),
     business: hasBusiness ? ((brand.profile?.business ?? brand.business)?.[lang] ?? "") : "",
+    notes: hasNotes ? ((brand.profile?.notes ?? brand.notes)?.[lang] ?? "") : "",
   };
 }
 
@@ -434,6 +438,7 @@ function mainBrand(brand = {}) {
     secondaryLanguage: alternate.language,
     intro: brand.intro?.[lang] || fallback.intro || brand.description || "",
     business: brand.profile?.business?.[lang] || brand.business?.[lang] || "",
+    notes: brand.profile?.notes?.[lang] || brand.notes?.[lang] || "",
     language: lang,
   };
 }
@@ -490,7 +495,7 @@ function referenceText(brand = {}) {
     "",
     "[IP Identity]",
     `Name: ${localized.name}`,
-    localized.secondaryName ? `Other name: ${languageLabel(localized.secondaryLanguage)} · ${localized.secondaryName}` : "",
+    localized.secondaryName ? `Other name: ${localized.secondaryName}` : "",
     `Slug: ${brand.slug}`,
     `Main language: ${languageLabel(brand.mainLanguage || localized.language)}`,
     "",
@@ -728,7 +733,7 @@ async function renderHeroIndex() {
     return `
       <div class="hero-index-row" data-brand="${escapeHtml(brand.slug)}" style="${themeStyle(brand.theme)};--row-index:${idx}">
         <a class="hero-index-link" href="${brand.url}">
-          <span class="hero-index-title">${escapeHtml(localized.name)}${localized.secondaryName ? ` · ${escapeHtml(languageLabel(localized.secondaryLanguage))} ${escapeHtml(localized.secondaryName)}` : ""}</span>
+          <span class="hero-index-title">${escapeHtml(localized.name)}${localized.secondaryName ? ` · ${escapeHtml(localized.secondaryName)}` : ""}</span>
         </a>
         ${colorDots(brand.theme)}
         <button class="icon-copy" type="button" data-icon-only="true" data-copy-brand="${escapeHtml(brand.slug)}" aria-label="${escapeHtml(t("copy.reference"))} ${escapeHtml(localized.name)}">${copyIcon()}</button>
@@ -772,10 +777,13 @@ async function renderIndex() {
           brand.officialWebsite,
           brand.profile?.business?.zh,
           brand.profile?.business?.en,
+          brand.profile?.notes?.zh,
+          brand.profile?.notes?.en,
           localized.name,
           localized.secondaryName,
           localized.intro,
           localized.business,
+          localized.notes,
           brand.theme?.keywords?.join(" "),
         ].join(" ").toLowerCase().includes(currentQuery);
       })
@@ -800,7 +808,7 @@ async function renderIndex() {
           <p class="eyebrow">${escapeHtml(statusLabel(brand.status))}</p>
           <h2>${escapeHtml(localized.name)}</h2>
           ${miniPalette(brand.theme)}
-          <p class="muted alt-name">${localized.secondaryName ? `${escapeHtml(languageLabel(localized.secondaryLanguage))} · ${escapeHtml(localized.secondaryName)}` : ""}</p>
+          <p class="muted alt-name">${escapeHtml(localized.secondaryName || "")}</p>
           <p class="card-intro">${escapeHtml(localized.intro || "")}</p>
           <div class="card-profile">
             <span>${escapeHtml(t("brand.mainLanguage"))}: ${escapeHtml(languageLabel(brand.mainLanguage || localized.language))}</span>
@@ -834,7 +842,7 @@ async function renderBrand() {
         <div>
           <p class="eyebrow">${escapeHtml(statusLabel(brand.status))}</p>
           <h1>${escapeHtml(display.name)}</h1>
-          <p class="muted alt-name">${display.secondaryName ? `${escapeHtml(languageLabel(display.secondaryLanguage))} · ${escapeHtml(display.secondaryName)}` : ""}</p>
+          <p class="muted alt-name">${escapeHtml(display.secondaryName || "")}</p>
           <p>${escapeHtml(localized.intro)}</p>
           ${swatches(brand.theme, true)}
           <div class="actions">
@@ -850,6 +858,7 @@ async function renderBrand() {
           <div class="resource"><strong>${t("brand.mainLanguage")}</strong><br>${escapeHtml(languageLabel(brand.mainLanguage || brand.profile?.mainLanguage) || t("brand.blank"))}</div>
           <div class="resource"><strong>${t("brand.intro")}</strong><br>${escapeHtml(localized.intro || t("brand.blank"))}</div>
           <div class="resource"><strong>${t("brand.business")}</strong><br>${escapeHtml(localized.business || t("brand.blank"))}</div>
+          <div class="resource"><strong>${t("brand.notes")}</strong><br>${escapeHtml(localized.notes || t("brand.blank"))}</div>
         </div>
         <div class="resource"><strong>${t("brand.colors")}</strong><br>${escapeHtml(brand.theme?.keywords?.join(" · ") || "")}</div>
         <div class="resource"><strong>${t("brand.editable")}</strong><br>${brand.editablePaths?.map(escapeHtml).join("<br>") || t("brand.noneGuide")}</div>
