@@ -478,5 +478,39 @@
       "line": "rgba(20, 48, 74, 0.16)",
       "keywords": ["home", "belonging", "shelter", "threshold", "A Place U Called Home"]
     }
+  },
+  {
+    "slug": "pam",
+    "folder": "PAM",
+    "name": "帕姆建筑",
+    "nativeName": "PaM Design Office",
+    "description": "Young Beijing architecture office shaped by originality, local culture, restraint, and material feeling.",
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "帕姆建筑是成立于北京的年轻建筑师事务所，以原创力、人文艺术感受与在地材料叙事探索空间的新可能。",
+      "en": "PaM Design Office is a young Beijing architecture practice exploring new spatial possibilities through originality, local culture, restraint, and material feeling."
+    },
+    "business": {
+      "zh": "建筑设计、乡村文旅、民宿与私宅、艺术文化空间。",
+      "en": "Architecture, rural cultural tourism, boutique stays, private residences, and art-cultural spaces."
+    },
+    "notes": {
+      "zh": "品牌释义：Plus & Multiply。联系：miqiangqiang@pamdesignoffice.com",
+      "en": "Brand meaning: Plus & Multiply. Contact: miqiangqiang@pamdesignoffice.com"
+    },
+    "primaryGuide": "PAM/pm_design.md",
+    "theme": {
+      "mode": "light",
+      "primary": "#1F1D1A",
+      "accent": "#9A6B4A",
+      "secondary": "#5C5852",
+      "surface": "#F7F5F1",
+      "paper": "#FCFBF8",
+      "ink": "#1F1D1A",
+      "muted": "#5C5852",
+      "line": "rgba(31, 29, 26, 0.14)",
+      "keywords": ["paper white", "ink black", "warm grey", "ochre", "architecture", "locality", "restraint"]
+    }
   }
 ]

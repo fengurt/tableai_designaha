@@ -1,0 +1,179 @@
+{
+  "slug": "pam",
+  "folder": "PAM",
+  "name": "帕姆建筑",
+  "nativeName": "PaM Design Office",
+  "description": "Young Beijing architecture office shaped by originality, local culture, restraint, and material feeling.",
+  "officialWebsite": "",
+  "mainLanguage": "zh",
+  "intro": {
+    "zh": "帕姆建筑是成立于北京的年轻建筑师事务所，以原创力、人文艺术感受与在地材料叙事探索空间的新可能。",
+    "en": "PaM Design Office is a young Beijing architecture practice exploring new spatial possibilities through originality, local culture, restraint, and material feeling."
+  },
+  "business": {
+    "zh": "建筑设计、乡村文旅、民宿与私宅、艺术文化空间。",
+    "en": "Architecture, rural cultural tourism, boutique stays, private residences, and art-cultural spaces."
+  },
+  "notes": {
+    "zh": "品牌释义：Plus & Multiply。联系：miqiangqiang@pamdesignoffice.com",
+    "en": "Brand meaning: Plus & Multiply. Contact: miqiangqiang@pamdesignoffice.com"
+  },
+  "primaryGuide": "PAM/pm_design.md",
+  "theme": {
+    "mode": "light",
+    "primary": "#1F1D1A",
+    "accent": "#9A6B4A",
+    "secondary": "#5C5852",
+    "surface": "#F7F5F1",
+    "paper": "#FCFBF8",
+    "ink": "#1F1D1A",
+    "muted": "#5C5852",
+    "line": "rgba(31, 29, 26, 0.14)",
+    "keywords": [
+      "paper white",
+      "ink black",
+      "warm grey",
+      "ochre",
+      "architecture",
+      "locality",
+      "restraint"
+    ]
+  },
+  "mainName": "帕姆建筑",
+  "mainLocale": "CN",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "mainLocale": "CN",
+    "intro": {
+      "zh": "帕姆建筑是成立于北京的年轻建筑师事务所，以原创力、人文艺术感受与在地材料叙事探索空间的新可能。",
+      "en": "PaM Design Office is a young Beijing architecture practice exploring new spatial possibilities through originality, local culture, restraint, and material feeling."
+    },
+    "business": {
+      "zh": "建筑设计、乡村文旅、民宿与私宅、艺术文化空间。",
+      "en": "Architecture, rural cultural tourism, boutique stays, private residences, and art-cultural spaces."
+    },
+    "notes": {
+      "zh": "品牌释义：Plus & Multiply。联系：miqiangqiang@pamdesignoffice.com",
+      "en": "Brand meaning: Plus & Multiply. Contact: miqiangqiang@pamdesignoffice.com"
+    }
+  },
+  "display": {
+    "default": {
+      "language": "zh",
+      "name": "帕姆建筑"
+    },
+    "zh": {
+      "name": "帕姆建筑",
+      "secondaryName": "PaM Design Office"
+    },
+    "en": {
+      "name": "PaM Design Office",
+      "secondaryName": "帕姆建筑"
+    }
+  },
+  "version": {
+    "hash": "4a8c416b2ca504511003d35767d331e113811358",
+    "shortHash": "4a8c416",
+    "date": "2026-07-04T21:33:22+08:00",
+    "message": "Version site assets for Cloudflare cache",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4a8c416b2ca504511003d35767d331e113811358"
+  },
+  "historyUrl": "api/history/pam.json",
+  "history": [
+    {
+      "hash": "534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
+      "shortHash": "534c825",
+      "date": "2026-07-04T16:34:09+08:00",
+      "message": "Correct APUCH language and IPTrust naming",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
+      "sourcePaths": [
+        "config/brands.json",
+        "PAM",
+        "PAM/pm_design.md"
+      ]
+    },
+    {
+      "hash": "1f20db30a5e970cf81e24c76e4613bc7e0036f09",
+      "shortHash": "1f20db3",
+      "date": "2026-07-04T16:01:00+08:00",
+      "message": "Add IP profile fields and main language display",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/1f20db30a5e970cf81e24c76e4613bc7e0036f09",
+      "sourcePaths": [
+        "config/brands.json",
+        "PAM",
+        "PAM/pm_design.md"
+      ]
+    },
+    {
+      "hash": "088ab8909a2d4284cd64d7924cc60fa39b8eb206",
+      "shortHash": "088ab89",
+      "date": "2026-07-04T11:59:40+08:00",
+      "message": "Add APUCH IP to IPTrust",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/088ab8909a2d4284cd64d7924cc60fa39b8eb206",
+      "sourcePaths": [
+        "config/brands.json",
+        "PAM",
+        "PAM/pm_design.md"
+      ]
+    },
+    {
+      "hash": "c723f8453cb7795108b51880986e7d9a664da5b1",
+      "shortHash": "c723f84",
+      "date": "2026-07-04T10:52:32+08:00",
+      "message": "Add global search and version history",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/c723f8453cb7795108b51880986e7d9a664da5b1",
+      "sourcePaths": [
+        "config/brands.json",
+        "PAM",
+        "PAM/pm_design.md"
+      ]
+    },
+    {
+      "hash": "a550421605e0fadecfb30c3fd5066754feda54d7",
+      "shortHash": "a550421",
+      "date": "2026-07-04T07:52:24+08:00",
+      "message": "Add IPTrust brand systems",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a550421605e0fadecfb30c3fd5066754feda54d7",
+      "sourcePaths": [
+        "config/brands.json",
+        "PAM",
+        "PAM/pm_design.md"
+      ]
+    },
+    {
+      "hash": "e98dae7a98dfe32921ebc76e2783caeb85e64d61",
+      "shortHash": "e98dae7",
+      "date": "2026-07-03T21:55:07+08:00",
+      "message": "Add per-IP brand theming to design site",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/e98dae7a98dfe32921ebc76e2783caeb85e64d61",
+      "sourcePaths": [
+        "config/brands.json",
+        "PAM",
+        "PAM/pm_design.md"
+      ]
+    }
+  ],
+  "url": "brand.html?brand=pam",
+  "apiUrl": "api/brands/pam.json",
+  "status": "documented",
+  "guides": [
+    {
+      "path": "PAM/pm_design.md",
+      "title": "Pm Design",
+      "format": "md",
+      "primary": true,
+      "excerpt": "帕姆建筑 · 设计规范 design.md 依据《帕姆建筑 建筑作品选摘（总）》与《帕姆建筑民宿项目》两份资料分析整理。 用途：作为本项目所有设计产出（作品集、提案册、幻灯片、网页等）的统一设计语言。 1. 品牌分析 1.1 品牌事实 名称 ：帕姆建筑 / PaM Design Office 品牌释义 ：Plus & Multiply（加法与乘法） 成立 ：2016 年，北京 主创 ：米麒光（中央美术学院建筑学院，2008 2015；帕姆执行总监，2017 ） 联系 ：miqiangqiang@pamdesignoffice.com 1.2 定位与气质 年轻的建筑师事务所，坚持 原创力 ，融合 人文与艺术 的感受，挖掘文化与品牌价值诉求，探索空间新的可能性。 项目谱系横跨：乡村文旅（大理、延安梁家河、武夷山）、民宿与私宅（野三坡、海螺沟、青城山、金坛）、艺术文化空间（美术馆、书苑、茶空间）。 关键词： 在地性、克制、人文、材料感",
+      "text": "# 帕姆建筑 · 设计规范 design.md\n\n> 依据《帕姆建筑 建筑作品选摘（总）》与《帕姆建筑民宿项目》两份资料分析整理。\n> 用途：作为本项目所有设计产出（作品集、提案册、幻灯片、网页等）的统一设计语言。\n\n---\n\n## 1. 品牌分析\n\n### 1.1 品牌事实\n- **名称**：帕姆建筑 / PaM Design Office\n- **品牌释义**：Plus & Multiply（加法与乘法）\n- **成立**：2016 年，北京\n- **主创**：米麒光（中央美术学院建筑学院，2008-2015；帕姆执行总监，2017- ）\n- **联系**：miqiangqiang@pamdesignoffice.com\n\n### 1.2 定位与气质\n- 年轻的建筑师事务所，坚持**原创力**，融合**人文与艺术**的感受，挖掘文化与品牌价值诉求，探索空间新的可能性。\n- 项目谱系横跨：乡村文旅（大理、延安梁家河、武夷山）、民宿与私宅（野三坡、海螺沟、青城山、金坛）、艺术文化空间（美术馆、书苑、茶空间）。\n- 关键词：**在地性、克制、人文、材料感、小而美**。\n\n### 1.3 荣誉背书（用于选摘展示，勿堆砌）\nAMP 美国建筑大师奖、AD100 YOUNG、金腾奖年度私宅大奖、IIDA、FRAME《Learning from China》收录、Archdaily 年度建筑奖提名（2020-2022）、2024 巴黎 DNA 设计大奖等。\n\n### 1.4 代表项目（画册叙事顺序参考）\n1. 猫在大理餐厅（改造，已建，大理，220㎡）\n2. 大理龙龛码头商业综合体（改造，未建，2000㎡）\n3. 黄龙县金鱼馆（新建，在建，延安，3000㎡）\n4. 梁家河村窑洞民宿（改造+新建，延安，600㎡）\n5. 野三坡私人住宅+民宿（新建，已建，保定，500㎡）\n6. \"岩上\"会所+岩茶艺术馆（改造，在建，武夷山，2400㎡）\n7. 共青城艺术中心（新建，未建，广西，2000㎡）\n8. 海螺沟雪山宿集 一期/二期（四川，1200㎡ / 900㎡，Partner: ALITER LILI）\n9. 广东梅州私人住宅（新建，在建，800㎡）\n10. 南山书苑（新建，在建，北京密云，400㎡）\n11. 青城山民宿（在建，成都，500㎡）\n12. 先生的房子（改造，在建，江苏金坛，300㎡）\n\n---\n\n## 2. 设计原则\n\n1. **留白即态度** — 版面像建筑：大量呼吸空间，内容密度低，一页只讲一件事。\n2. **摄影主导** — 建筑摄影是第一语言；文字和图形退后，绝不与图像抢戏。\n3. **克制的信息层级** — 项目页固定四项元数据：Client / Area / Address / 状态（改造·新建 × 已建·在建·未建）。\n4. **在地与人文** — 用叙事性小标题与短文案，避免营销腔和形容词堆砌。\n5. **中西双语并置** — 中文为主，英文（PaM Design Office / Plus & Multiply）作为节奏点缀。\n\n## 3. 色彩\n\n以\"纸、混凝土、木、墨\"为意象的暖灰体系。仅在必要时用一个赭色点缀。\n\n- 纸白（背景）：`#F7F5F1`\n- 暖白（卡片/分层）：`#FCFBF8`\n- 墨黑（正文/标题）：`#1F1D1A`\n- 碳灰（次级文字）：`#5C5852`\n- 浅灰（分隔线/标注）：`#D8D3CB`\n- 赭石（唯一点缀色，慎用）：`oklch(0.58 0.09 55)` ≈ `#9A6B4A`\n\n禁止：高饱和色、渐变背景、多色并用。深色页（章节页/封面可选）用墨黑底 + 纸白字。\n\n## 4. 字体\n\n- **中文标题**：Noto Serif SC（思源宋体）— 体现人文与刊物感；字重 500-600。\n- **中文正文**：Noto Sans SC — 字重 300-400，行高 1.8-2.0。\n- **英文/数字/元数据**：等宽或窄无衬线（如 IBM Plex Mono / 用于 Client、Area、㎡ 等标注），小号、字距 +0.05em。\n- 标题可用大字距的横排单字排布（如封底\"帕 姆 建 筑\"），呼应品牌固有版式。\n\n层级（1920×1080 幻灯片基准）：\n- 封面标题 96-128px · 章节标题 64-80px · 页标题 40-48px · 正文 26-30px · 元数据标注 22-24px（不小于 24px 用于正文场景）。\n\n## 5. 版式系统\n\n- 网格：12 栏，页边距 ≥ 页宽 6%；图片可出血，文字永不贴边。\n- 项目页模板：\n  - A 型（形象页）：整页出血大图 + 左下角项目名（中文大字）+ 状态括注。\n  - B 型（信息页）：左 1/3 文字栏（项目名、四项元数据、短叙述），右 2/3 图片。\n  - C 型（组图页）：2-3 张图不等宽拼贴，留白分缝 8-16px。\n- 章节页：墨黑或纸白纯色底，仅章节名 + 细线。\n- 页码与页眉：极小号等宽字，置于外边距。\n\n## 6. 图像\n\n- 一律使用项目实景/效果图原图；**不得**用手绘 SVG 替代建筑摄影。\n- 缺图时使用细条纹占位块 + 等宽字说明（如 `建筑外观 · 黄龙金鱼馆`）。\n- 图片不加圆角、不加阴影、不加边框；如需分层用留白分缝。\n- 改造项目可用\"改造前 / 改造后\"并置对比（先生的房子已有此叙事）。\n\n## 7. 语言与文案\n\n- 中文为主，简洁陈述句；项目状态统一写法：`（改造，已建）`（新建/改造+新建 × 已建/在建/未建）。\n- 元数据固定格式：`Client：... / Area：...㎡ / Address：...`（合作方加 `Partner：...`）。\n- 英文仅用于品牌名、slogan 与标注，不做整段翻译。\n\n## 8. 禁忌清单\n\n- ✗ 圆角卡片 + 左边框强调色、图标堆砌、emoji\n- ✗ 渐变、彩色数据图表装饰\n- ✗ 每页塞满图文；✗ 奖项全量罗列（选 3-5 项即可）\n- ✗ 用 AI 生成图或手绘 SVG 冒充建筑作品\n\n---\n\n## 9. 首页设计指引（官网 Homepage）\n\n### 9.1 结构（自上而下，5 段，勿多）\n\n1. **导航栏** — 极简单行：左\"帕姆建筑 PaM Design Office\"文字标（宋体），右 4 项链接：项目 / 事务所 / 出版与奖项 / 联系。无下拉、无按钮底色；纸白底，滚动后加 1px 浅灰下边线。高约 88px。\n2. **开场（Hero）** — 整屏出血的一张代表作大图（首推：野三坡住宅或海螺沟雪山宿集）。左下角叠：一行 slogan「加法与乘法 Plus & Multiply」（宋体大字，96px+）+ 一行小字定位语。禁止轮播、禁止渐变遮罩——如需可读性，用图片底部一段极淡的墨黑到透明压暗（≤30%）。\n3. **精选项目** — 6 个项目，不等宽两栏拼贴（大小交错，参考 C 型组图页）：图 + 图下两行文字（项目名宋体 28px；下行等宽小字 `大理 · 220㎡ · 已建`）。悬停：图片 scale(1.03) + 项目名变赭石色，无阴影。区块标题只写「项目 Selected Works」+ 右侧「全部项目 →」文字链。\n4. **事务所一段话** — 纸白大留白区：3-4 行简介（成立时间、原创力、人文与艺术）+ 3-5 个奖项名单（等宽小字一行排开，用 `·` 分隔）。不放 logo 墙、不放数字统计。\n5. **页脚** — 墨黑底纸白字：左侧「帕 姆 建 筑」大字距排布，右侧邮箱 + 地址 + 微信/微博文字链。© 年份用等宽小字。\n\n### 9.2 行为与节奏\n\n- 单页纵向滚动，无锚点动画、无视差；图片进入视口时轻微淡入（opacity 0→1，600ms）即可，仅此一种动效。\n- 响应式：≥1440px 双栏拼贴；<900px 项目改单栏；导航折叠为「菜单」文字链。\n- 图片统一 3:2 或 4:3；同一屏内不混比例。\n- 首屏外图片懒加载；hero 图不占位闪烁（预留固定高度）。\n\n### 9.3 首页专属禁忌\n\n- ✗ 轮播 banner、✗ 数字滚动统计（\"12 个项目 8 项大奖\"）、✗ 客户 logo 墙\n- ✗ 卡片阴影与圆角、✗ 悬停弹出遮罩层文字\n- ✗ 首屏放奖项列表——奖项只出现在第 4 段，一行带过\n\n---\n\n## 附：资料缺口\n\n两份 PDF 的图像页无法在此环境高清提取。制作正式作品集/网页前，建议补充：\n1. 各项目高清摄影原图（JPG，长边 ≥ 2400px）\n2. 帕姆 logo 矢量文件\n3. 若有既定品牌字体/VI，请提供以替换上述建议\n"
+    }
+  ],
+  "tokens": [],
+  "images": [],
+  "editablePaths": [
+    "PAM/pm_design.md"
+  ],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/PAM",
+    "folder": "PAM"
+  }
+}

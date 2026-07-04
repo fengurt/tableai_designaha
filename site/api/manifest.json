@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-04T13:32:30.334Z",
+  "generatedAt": "2026-07-04T13:36:59.974Z",
   "version": {
-    "hash": "b675319d3b38f58fab70fb99c2506602019f771a",
-    "shortHash": "b675319",
-    "date": "2026-07-04T21:25:05+08:00",
-    "message": "Add IP notes and simplify name display",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/b675319d3b38f58fab70fb99c2506602019f771a"
+    "hash": "4a8c416b2ca504511003d35767d331e113811358",
+    "shortHash": "4a8c416",
+    "date": "2026-07-04T21:33:22+08:00",
+    "message": "Version site assets for Cloudflare cache",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4a8c416b2ca504511003d35767d331e113811358"
   },
   "brands": [
     {
@@ -163,6 +163,15 @@
       "apiUrl": "api/brands/apuch.json",
       "historyUrl": "api/history/apuch.json",
       "guideUrl": "brand.html?brand=apuch"
+    },
+    {
+      "slug": "pam",
+      "name": "帕姆建筑",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "apiUrl": "api/brands/pam.json",
+      "historyUrl": "api/history/pam.json",
+      "guideUrl": "brand.html?brand=pam"
     }
   ],
   "mcp": {
@@ -192,11 +201,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "b675319d3b38f58fab70fb99c2506602019f771a",
-      "shortHash": "b675319",
-      "date": "2026-07-04T21:25:05+08:00",
-      "message": "Add IP notes and simplify name display",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/b675319d3b38f58fab70fb99c2506602019f771a"
+      "hash": "4a8c416b2ca504511003d35767d331e113811358",
+      "shortHash": "4a8c416",
+      "date": "2026-07-04T21:33:22+08:00",
+      "message": "Version site assets for Cloudflare cache",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4a8c416b2ca504511003d35767d331e113811358"
     }
   },
   "sync": {

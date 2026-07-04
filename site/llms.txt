@@ -31,6 +31,7 @@ Brands:
 - 常幸 (changoods): /api/brands/changoods.json · mainLocale CN · palette #486B3F / #D2A94C
 - 博雅问渠书院 (boya): /api/brands/boya.json · mainLocale CN · palette #243B6B / #B89A5E
 - APUCH (apuch): /api/brands/apuch.json · mainLocale EN · palette #14304A / #A88B52
+- 帕姆建筑 (pam): /api/brands/pam.json · mainLocale CN · palette #1F1D1A / #9A6B4A
 
 Admin workflow:
 - /admin.html unlocks with the generated admin key.
