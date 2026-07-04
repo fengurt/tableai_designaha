@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brand Guidelines</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site.css?v=a659504">
+  <link rel="stylesheet" href="assets/site.css?v=2f8c635">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="./" data-i18n="hub.name">岁知社</a>
+    <div class="topbar-search" role="search">
+      <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
+      <div class="global-results" id="globalResults" aria-live="polite"></div>
+    </div>
     <nav>
       <a href="api/brands.json">API</a>
       <a href="admin.html" data-i18n="nav.admin">Admin</a>
@@ -17,6 +21,6 @@
     </nav>
   </header>
   <main id="brandPage" class="brand-page" aria-live="polite"></main>
-  <script src="assets/site.js?v=a659504" type="module"></script>
+  <script src="assets/site.js?v=2f8c635" type="module"></script>
 </body>
 </html>

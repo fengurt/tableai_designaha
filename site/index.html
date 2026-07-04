@@ -6,11 +6,15 @@
   <title>岁知社 IPTrust</title>
   <meta name="description" content="岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site.css?v=a659504">
+  <link rel="stylesheet" href="assets/site.css?v=2f8c635">
 </head>
 <body class="hub-home">
   <header class="topbar">
     <a class="brand" href="./" data-i18n="hub.name">岁知社</a>
+    <div class="topbar-search" role="search">
+      <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
+      <div class="global-results" id="globalResults" aria-live="polite"></div>
+    </div>
     <nav>
       <a href="#agent-entry" data-i18n="nav.agent">我是 Agent</a>
       <a href="#partner-entry" data-i18n="nav.partner">我是合伙人</a>
@@ -87,14 +91,10 @@
         <p class="eyebrow" data-i18n="home.systems">IP 系统</p>
         <h2 data-i18n="home.sectionTitle">直接进入 IP。</h2>
       </div>
-      <div class="home-tools">
-        <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
-        <span id="brandCount" class="count-pill"></span>
-        <div class="global-results" id="globalResults" aria-live="polite"></div>
-      </div>
+      <span id="brandCount" class="count-pill"></span>
     </section>
     <section class="ip-grid" id="brandGrid" aria-live="polite"></section>
   </main>
-  <script src="assets/site.js?v=a659504" type="module"></script>
+  <script src="assets/site.js?v=2f8c635" type="module"></script>
 </body>
 </html>

@@ -462,6 +462,10 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
 <body class="hub-home">
   <header class="topbar">
     <a class="brand" href="./" data-i18n="hub.name">${hubNameCn}</a>
+    <div class="topbar-search" role="search">
+      <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
+      <div class="global-results" id="globalResults" aria-live="polite"></div>
+    </div>
     <nav>
       <a href="#agent-entry" data-i18n="nav.agent">我是 Agent</a>
       <a href="#partner-entry" data-i18n="nav.partner">我是合伙人</a>
@@ -538,11 +542,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
         <p class="eyebrow" data-i18n="home.systems">IP 系统</p>
         <h2 data-i18n="home.sectionTitle">直接进入 IP。</h2>
       </div>
-      <div class="home-tools">
-        <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
-        <span id="brandCount" class="count-pill"></span>
-        <div class="global-results" id="globalResults" aria-live="polite"></div>
-      </div>
+      <span id="brandCount" class="count-pill"></span>
     </section>
     <section class="ip-grid" id="brandGrid" aria-live="polite"></section>
   </main>
@@ -562,6 +562,10 @@ await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
 <body>
   <header class="topbar">
     <a class="brand" href="./" data-i18n="hub.name">${hubNameCn}</a>
+    <div class="topbar-search" role="search">
+      <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
+      <div class="global-results" id="globalResults" aria-live="polite"></div>
+    </div>
     <nav>
       <a href="api/brands.json">API</a>
       <a href="admin.html" data-i18n="nav.admin">Admin</a>
@@ -667,7 +671,27 @@ a { color: inherit; }
   z-index: 10;
 }
 .brand { font-weight: 750; text-decoration: none; letter-spacing: 0; }
-nav { display: flex; gap: 18px; color: var(--muted); font-size: 14px; }
+.topbar-search {
+  flex: 1 1 420px;
+  max-width: 520px;
+  position: relative;
+}
+.topbar-search input {
+  width: 100%;
+  min-height: 38px;
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, rgba(255, 254, 250, .92), rgba(255, 254, 250, .72)),
+    var(--paper);
+  border-color: color-mix(in srgb, var(--line) 82%, var(--blue));
+  padding: 0 16px;
+  font-size: 14px;
+}
+.topbar-search input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 4px rgba(10, 22, 38, .08);
+}
+nav { display: flex; align-items: center; gap: 18px; color: var(--muted); font-size: 14px; }
 nav a { text-decoration: none; }
 nav a:hover { color: var(--ink); }
 .lang-toggle {
@@ -704,25 +728,32 @@ p { line-height: 1.65; }
 .hub-hero p:not(.eyebrow), .muted { color: var(--muted); font-size: 18px; max-width: 760px; }
 .hero-index {
   display: grid;
-  gap: 0;
+  gap: 8px;
   align-self: end;
-  border-top: 1px solid var(--line);
+  border-top: 0;
+  perspective: 1200px;
 }
 .hero-index-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto auto;
   align-items: center;
   gap: 12px;
-  border-bottom: 1px solid var(--line);
+  border: 1px solid color-mix(in srgb, var(--brand-primary, var(--blue)) 16%, transparent);
+  border-radius: 999px;
   color: var(--brand-primary);
-  padding: 8px 0;
+  padding: 8px 8px 8px 14px;
   font-size: 14px;
   font-weight: 760;
   text-decoration: none;
-  transform: translateY(8px);
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--brand-primary, var(--blue)) 7%, transparent), rgba(255, 254, 250, .42) 54%, transparent),
+    rgba(255, 254, 250, .32);
+  box-shadow: 0 10px 34px rgba(22, 20, 18, .045);
+  transform: translate3d(calc((var(--row-index, 0) % 2) * 10px), 10px, 0);
   opacity: 0;
-  animation: row-rise .54s cubic-bezier(.2,.8,.2,1) forwards;
+  animation: row-flow .64s cubic-bezier(.2,.8,.2,1) forwards;
   animation-delay: calc(var(--row-index, 0) * 32ms);
+  transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
 }
 .hero-index-link {
   color: inherit;
@@ -730,9 +761,11 @@ p { line-height: 1.65; }
   text-decoration: none;
 }
 .hero-index-row:hover {
-  background: color-mix(in srgb, var(--brand-primary) 7%, transparent);
-  padding-left: 8px;
-  padding-right: 8px;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--brand-primary, var(--blue)) 14%, transparent), rgba(255, 254, 250, .68) 62%, transparent),
+    rgba(255, 254, 250, .56);
+  box-shadow: 0 14px 42px rgba(22, 20, 18, .08);
+  transform: translate3d(6px, -1px, 0);
 }
 .hero-index-title {
   min-width: 0;
@@ -791,8 +824,14 @@ p { line-height: 1.65; }
 .icon-copy svg { width: 15px; height: 15px; stroke: currentColor; stroke-width: 2; fill: none; }
 .icon-copy:hover,
 .icon-copy.copied { background: var(--brand-primary, var(--blue)); color: var(--brand-button-text, white); }
+.icon-copy.copied {
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand-primary, var(--blue)) 16%, transparent);
+}
 @keyframes row-rise {
   to { opacity: 1; transform: translateY(0); }
+}
+@keyframes row-flow {
+  to { opacity: 1; transform: translate3d(calc((var(--row-index, 0) % 2) * 6px), 0, 0); }
 }
 .section-head {
   display: flex;
@@ -929,18 +968,6 @@ p { line-height: 1.65; }
   white-space: nowrap;
 }
 .section-head h2 { max-width: 560px; }
-.home-tools {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-width: min(360px, 100%);
-  position: relative;
-}
-.home-tools input {
-  min-height: 42px;
-  border-radius: 999px;
-  background: rgba(255, 254, 250, .78);
-}
 .count-pill {
   flex: 0 0 auto;
   border: 1px solid var(--line);
@@ -1222,6 +1249,38 @@ p { line-height: 1.65; }
   min-height: 34px;
   padding: 0;
 }
+.toast-stack {
+  position: fixed;
+  right: clamp(16px, 3vw, 32px);
+  bottom: clamp(16px, 3vw, 32px);
+  display: grid;
+  gap: 10px;
+  z-index: 50;
+  pointer-events: none;
+}
+.toast {
+  max-width: min(360px, calc(100vw - 32px));
+  padding: 11px 13px;
+  border: 1px solid rgba(255, 255, 255, .34);
+  border-radius: 8px;
+  background: rgba(10, 22, 38, .92);
+  color: white;
+  box-shadow: 0 16px 42px rgba(10, 22, 38, .22);
+  backdrop-filter: blur(14px);
+  font-size: 13px;
+  font-weight: 760;
+  line-height: 1.35;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: toast-in .18s ease forwards;
+}
+.toast.is-leaving { animation: toast-out .18s ease forwards; }
+@keyframes toast-in {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes toast-out {
+  to { opacity: 0; transform: translateY(8px); }
+}
 .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; color: var(--muted); font-size: 13px; }
 .pill {
   border: 1px solid var(--brand-line, var(--line));
@@ -1303,6 +1362,8 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
 .notice { color: var(--green); font-weight: 700; }
 @media (max-width: 760px) {
   .topbar { align-items: flex-start; flex-direction: column; }
+  .topbar-search { flex: 1 1 auto; width: 100%; max-width: none; order: 3; }
+  nav { width: 100%; justify-content: space-between; gap: 10px; }
   .hub-hero, .brand-hero, .form-grid { grid-template-columns: 1fr; }
   .resource-grid { grid-template-columns: 1fr; }
   .hub-hero { min-height: auto; padding-top: 36px; }
@@ -1315,7 +1376,6 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .version-item { grid-template-columns: 70px minmax(0, 1fr); }
   .version-item time { display: none; }
   .section-head { display: grid; align-items: start; }
-  .home-tools { width: 100%; }
   .ip-grid { grid-template-columns: 1fr; }
   .ip-card { min-height: 320px; }
   h1 { font-size: 40px; }
@@ -1351,8 +1411,11 @@ const i18n = {
     "meta.guides": "规范",
     "copy.reference": "复制",
     "copy.done": "已复制",
-    "copy.selected": "已选中",
+    "copy.selected": "已选中，请按 ⌘C / Ctrl+C 复制",
     "copy.fail": "复制失败",
+    "copy.referenceDone": "已复制 IP Agent Reference",
+    "copy.colorDone": "已复制色值",
+    "copy.pantoneDone": "已复制 Pantone 近似值",
     "brand.openJson": "打开 JSON",
     "brand.source": "源文件",
     "brand.colors": "品牌颜色",
@@ -1423,8 +1486,11 @@ const i18n = {
     "meta.guides": "guides",
     "copy.reference": "Copy",
     "copy.done": "Copied",
-    "copy.selected": "Selected",
+    "copy.selected": "Selected. Press Cmd/Ctrl+C to copy.",
     "copy.fail": "Failed",
+    "copy.referenceDone": "IP Agent Reference copied",
+    "copy.colorDone": "Color copied",
+    "copy.pantoneDone": "Pantone approximation copied",
     "brand.openJson": "Open JSON",
     "brand.source": "Source",
     "brand.colors": "Brand colors",
@@ -1555,7 +1621,25 @@ function setupSearch() {
   search.placeholder = t("home.searchPlaceholder");
   search.addEventListener("input", async () => {
     currentQuery = search.value.trim().toLowerCase();
-    await renderIndex();
+    if ($("#brandGrid")) {
+      await renderIndex();
+    } else {
+      await renderGlobalResults(currentQuery);
+    }
+  });
+  search.addEventListener("focus", async () => {
+    currentQuery = search.value.trim().toLowerCase();
+    if (currentQuery) await renderGlobalResults(currentQuery);
+  });
+  search.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    search.value = "";
+    currentQuery = "";
+    $("#globalResults")?.classList.remove("is-open");
+  });
+  document.addEventListener("click", (event) => {
+    if (event.target.closest(".topbar-search")) return;
+    $("#globalResults")?.classList.remove("is-open");
   });
 }
 
@@ -1852,6 +1936,33 @@ function showManualCopy(text) {
   textarea.select();
 }
 
+function toastStack() {
+  let stack = document.querySelector(".toast-stack");
+  if (stack) return stack;
+  stack = document.createElement("div");
+  stack.className = "toast-stack";
+  stack.setAttribute("aria-live", "polite");
+  stack.setAttribute("aria-atomic", "true");
+  document.body.appendChild(stack);
+  return stack;
+}
+
+function showToast(message) {
+  const stack = toastStack();
+  const toast = document.createElement("div");
+  toast.className = "toast";
+  toast.textContent = message;
+  stack.appendChild(toast);
+  setTimeout(() => {
+    toast.classList.add("is-leaving");
+    toast.addEventListener("animationend", () => toast.remove(), { once: true });
+  }, 1800);
+}
+
+function feedbackMessage(result, copiedKey) {
+  return result === "selected" ? t("copy.selected") : t(copiedKey);
+}
+
 async function writeClipboardText(text) {
   try {
     if (navigator.clipboard?.writeText) {
@@ -1876,11 +1987,15 @@ async function writeClipboardText(text) {
 async function copyReference(brand, button) {
   const result = await writeClipboardText(referenceText(brand));
   const previous = button.textContent;
-  if (!button.dataset.iconOnly) button.textContent = result === "selected" ? t("copy.selected") : t("copy.done");
+  const message = feedbackMessage(result, "copy.referenceDone");
+  if (!button.dataset.iconOnly) button.textContent = message;
+  button.dataset.feedback = message;
   button.classList.add("copied");
+  showToast(message);
   setTimeout(() => {
     if (!button.dataset.iconOnly) button.textContent = previous || t("copy.reference");
     button.classList.remove("copied");
+    delete button.dataset.feedback;
   }, 1200);
 }
 
@@ -1896,14 +2011,19 @@ function setupPortalActions() {
       try {
         if (action === "agent") {
           const text = cachedPortalSkillText || skillBaseText();
-          await writeClipboardText(text);
+          const result = await writeClipboardText(text);
+          const message = result === "selected" ? t("copy.selected") : t("portal.agentCopied");
           button.classList.add("copied");
-          if (statusNode) statusNode.textContent = t("portal.agentCopied");
+          if (statusNode) statusNode.textContent = message;
+          showToast(message);
           setTimeout(() => button.classList.remove("copied"), 1000);
           return;
         }
         if (action === "partner") {
           if (statusNode) statusNode.textContent = t("portal.partnerStatus");
+          button.classList.add("copied");
+          showToast(t("portal.partnerStatus"));
+          setTimeout(() => button.classList.remove("copied"), 1000);
         }
       } catch (error) {
         if (statusNode) statusNode.textContent = t("copy.fail");
@@ -1934,6 +2054,7 @@ function setupCopyButtons(brands) {
       event.preventDefault();
       event.stopPropagation();
       const result = await writeClipboardText(button.dataset.copyRgb);
+      showToast(feedbackMessage(result, "copy.colorDone"));
       button.classList.add("copied");
       button.title = result === "selected" ? t("copy.selected") : t("copy.done");
       setTimeout(() => button.classList.remove("copied"), 900);
@@ -1943,6 +2064,7 @@ function setupCopyButtons(brands) {
       event.preventDefault();
       event.stopPropagation();
       const result = await writeClipboardText(button.dataset.copyPantone);
+      showToast(feedbackMessage(result, "copy.pantoneDone"));
       button.classList.add("copied");
       button.title = result === "selected" ? t("copy.selected") : t("copy.done");
       setTimeout(() => button.classList.remove("copied"), 900);
@@ -1991,7 +2113,7 @@ async function renderHeroIndex() {
     return \`
       <div class="hero-index-row" data-brand="\${escapeHtml(brand.slug)}" style="\${themeStyle(brand.theme)};--row-index:\${idx}">
         <a class="hero-index-link" href="\${brand.url}">
-          <span class="hero-index-title">\${String(idx + 1).padStart(2, "0")} \${escapeHtml(localized.name)}\${localized.secondaryName ? \` · \${escapeHtml(languageLabel(localized.secondaryLanguage))} \${escapeHtml(localized.secondaryName)}\` : ""}</span>
+          <span class="hero-index-title">\${escapeHtml(localized.name)}\${localized.secondaryName ? \` · \${escapeHtml(languageLabel(localized.secondaryLanguage))} \${escapeHtml(localized.secondaryName)}\` : ""}</span>
         </a>
         \${colorDots(brand.theme)}
         <button class="icon-copy" type="button" data-icon-only="true" data-copy-brand="\${escapeHtml(brand.slug)}" aria-label="\${escapeHtml(t("copy.reference"))} \${escapeHtml(localized.name)}">\${copyIcon()}</button>

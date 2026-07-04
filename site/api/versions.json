@@ -1,5 +1,12 @@
 [
   {
+    "hash": "2f8c635bffb564e7f83477d5cd07b8367b1ff65d",
+    "shortHash": "2f8c635",
+    "date": "2026-07-04T20:31:09+08:00",
+    "message": "Expand IP copy agent handoff",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/2f8c635bffb564e7f83477d5cd07b8367b1ff65d"
+  },
+  {
     "hash": "a659504e4814895ee61f21397a435ebe074443b9",
     "shortHash": "a659504",
     "date": "2026-07-04T20:00:43+08:00",
@@ -75,12 +82,5 @@
     "date": "2026-07-04T16:34:09+08:00",
     "message": "Correct APUCH language and IPTrust naming",
     "url": "https://github.com/fengurt/tableai_designaha/commit/534c825eb34e08787dc724f7a1d1e19e1bafdfb3"
-  },
-  {
-    "hash": "e979ff5bf2ae516742ed5de22a5febebcdaea867",
-    "shortHash": "e979ff5",
-    "date": "2026-07-04T16:28:28+08:00",
-    "message": "Systematize CN EN language handling",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/e979ff5bf2ae516742ed5de22a5febebcdaea867"
   }
 ]
