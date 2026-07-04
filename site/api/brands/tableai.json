@@ -23,6 +23,20 @@
       "minimal"
     ]
   },
+  "display": {
+    "zh": {
+      "name": "Table AI Alliance",
+      "secondaryName": "Table AI"
+    },
+    "en": {
+      "name": "Table AI",
+      "secondaryName": "Table AI Alliance"
+    }
+  },
+  "intro": {
+    "zh": "本项目采用极简且富有启发性的视觉语言。设计应体现以下四个维度：",
+    "en": "Table AI brand system with live guidelines, colors, voice, assets, and agent-readable source files."
+  },
   "url": "brand.html?brand=tableai",
   "apiUrl": "api/brands/tableai.json",
   "status": "documented",

@@ -23,6 +23,20 @@
       "wisdom navigator"
     ]
   },
+  "display": {
+    "zh": {
+      "name": "侍天",
+      "secondaryName": "Sidera"
+    },
+    "en": {
+      "name": "Sidera",
+      "secondaryName": "侍天"
+    }
+  },
+  "intro": {
+    "zh": "Sidera 侍天 — Design System",
+    "en": "> Build-ready brand & visual spec for agents producing on-brand 侍天 work."
+  },
   "url": "brand.html?brand=sidera",
   "apiUrl": "api/brands/sidera.json",
   "status": "documented",

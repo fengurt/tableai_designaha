@@ -87,6 +87,27 @@ p { line-height: 1.65; }
   border-top: 1px solid var(--line);
 }
 .section-head h2 { max-width: 560px; }
+.home-tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: min(360px, 100%);
+}
+.home-tools input {
+  min-height: 42px;
+  border-radius: 999px;
+  background: rgba(255, 254, 250, .78);
+}
+.count-pill {
+  flex: 0 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 9px 11px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 760;
+  background: rgba(255, 254, 250, .72);
+}
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
 .button, button {
   appearance: none;
@@ -115,6 +136,12 @@ p { line-height: 1.65; }
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 10px;
   padding: 14px 0 88px;
+}
+.empty-state {
+  grid-column: 1 / -1;
+  padding: 34px 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
 }
 .card, .panel, .guide, .resource {
   background: var(--paper);
@@ -146,6 +173,13 @@ p { line-height: 1.65; }
 }
 .ip-card:hover { transform: translateY(-3px); border-color: var(--brand-primary, var(--line)); box-shadow: 0 16px 42px rgba(22, 20, 18, .08); }
 .ip-card.theme-dark { background: var(--brand-paper); color: var(--brand-ink); }
+.ip-card-link {
+  color: inherit;
+  display: flex;
+  flex: 1;
+  min-height: 100%;
+  text-decoration: none;
+}
 .ip-card[data-brand="sidera"],
 .ip-card[data-brand="manaendless"] { background: var(--brand-paper); }
 .ip-card[data-brand="fengzhi"] { border-radius: 0; }
@@ -168,7 +202,53 @@ p { line-height: 1.65; }
 .card-body { padding: 18px 18px 16px; display: flex; flex-direction: column; gap: 12px; min-height: 100%; }
 .card-body .eyebrow { color: var(--brand-primary, var(--accent)); }
 .card-body .muted, .card-body p { color: var(--brand-muted, var(--muted)); }
-.card-body h2 { color: var(--brand-ink, var(--ink)); font-size: 28px; line-height: 1.02; margin-top: auto; }
+.card-body h2 { color: var(--brand-ink, var(--ink)); font-size: 28px; line-height: 1.02; margin-top: auto; padding-right: 58px; }
+.copy-reference {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 3;
+  min-height: 32px;
+  max-width: 72px;
+  padding: 7px 9px;
+  border-radius: 999px;
+  border-color: var(--brand-line, var(--line));
+  background: color-mix(in srgb, var(--brand-paper, white) 86%, var(--brand-primary, var(--blue)));
+  color: var(--brand-ink, var(--ink));
+  font-size: 12px;
+  line-height: 1;
+}
+.copy-reference:hover,
+.copy-reference.copied {
+  background: var(--brand-primary, var(--blue));
+  border-color: var(--brand-primary, var(--blue));
+  color: var(--brand-button-text, white);
+}
+.copy-manual {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 40;
+  width: min(420px, calc(100vw - 36px));
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: 0 18px 60px rgba(22, 20, 18, .18);
+}
+.copy-manual textarea {
+  min-height: 120px;
+  margin: 0;
+  font-size: 12px;
+}
+.copy-manual button {
+  width: 34px;
+  min-height: 34px;
+  padding: 0;
+}
 .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; color: var(--muted); font-size: 13px; }
 .pill {
   border: 1px solid var(--brand-line, var(--line));
@@ -251,7 +331,8 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .topbar { align-items: flex-start; flex-direction: column; }
   .hub-hero, .brand-hero, .form-grid { grid-template-columns: 1fr; }
   .hub-hero { min-height: auto; padding-top: 36px; }
-  .section-head { display: block; }
+  .section-head { display: grid; align-items: start; }
+  .home-tools { width: 100%; }
   .ip-grid { grid-template-columns: 1fr 1fr; }
   .ip-card { min-height: 176px; }
   h1 { font-size: 40px; }

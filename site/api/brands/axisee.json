@@ -23,6 +23,20 @@
       "three agents"
     ]
   },
+  "display": {
+    "zh": {
+      "name": "酒店盈利大师",
+      "secondaryName": "Axisee"
+    },
+    "en": {
+      "name": "Axisee",
+      "secondaryName": "酒店盈利大师"
+    }
+  },
+  "intro": {
+    "zh": "> 单一可信来源 · Single Source of Truth for every Axisee UI (web, admin console, mobile member, 企微 sidebar tools).",
+    "en": "> **The canonical design guideline for all Axisee products.**"
+  },
   "url": "brand.html?brand=axisee",
   "apiUrl": "api/brands/axisee.json",
   "status": "documented",

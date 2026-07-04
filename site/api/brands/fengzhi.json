@@ -23,6 +23,20 @@
       "transformation"
     ]
   },
+  "display": {
+    "zh": {
+      "name": "峰值永造局",
+      "secondaryName": "The Transformation Company"
+    },
+    "en": {
+      "name": "The Transformation Company",
+      "secondaryName": "峰值永造局"
+    }
+  },
+  "intro": {
+    "zh": "峰值永造局 · 品牌设计系统（方向 A「界格」）",
+    "en": "The Transformation Company brand system with live guidelines, colors, voice, assets, and agent-readable source files."
+  },
   "url": "brand.html?brand=fengzhi",
   "apiUrl": "api/brands/fengzhi.json",
   "status": "documented",

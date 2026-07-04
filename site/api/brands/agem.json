@@ -23,6 +23,20 @@
       "creation"
     ]
   },
+  "display": {
+    "zh": {
+      "name": "游赋社",
+      "secondaryName": "AGEM"
+    },
+    "en": {
+      "name": "AGEM",
+      "secondaryName": "游赋社"
+    }
+  },
+  "intro": {
+    "zh": "游赋社的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
+    "en": "AGEM brand system with live guidelines, colors, voice, assets, and agent-readable source files."
+  },
   "url": "brand.html?brand=agem",
   "apiUrl": "api/brands/agem.json",
   "status": "documented",

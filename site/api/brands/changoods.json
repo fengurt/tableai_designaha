@@ -23,6 +23,20 @@
       "wellbeing"
     ]
   },
+  "display": {
+    "zh": {
+      "name": "常幸",
+      "secondaryName": "Changoods"
+    },
+    "en": {
+      "name": "Changoods",
+      "secondaryName": "常幸"
+    }
+  },
+  "intro": {
+    "zh": "常幸的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
+    "en": "Changoods brand system with live guidelines, colors, voice, assets, and agent-readable source files."
+  },
   "url": "brand.html?brand=changoods",
   "apiUrl": "api/brands/changoods.json",
   "status": "documented",

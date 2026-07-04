@@ -23,6 +23,20 @@
       "classical learning"
     ]
   },
+  "display": {
+    "zh": {
+      "name": "博雅问渠书院",
+      "secondaryName": "PKU BOYA Academy"
+    },
+    "en": {
+      "name": "PKU BOYA Academy",
+      "secondaryName": "博雅问渠书院"
+    }
+  },
+  "intro": {
+    "zh": "博雅问渠书院的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
+    "en": "PKU BOYA Academy is a learning and inquiry IP centered on liberal education, classical depth, and contemporary knowledge flow."
+  },
   "url": "brand.html?brand=boya",
   "apiUrl": "api/brands/boya.json",
   "status": "documented",

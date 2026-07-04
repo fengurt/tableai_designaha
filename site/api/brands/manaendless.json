@@ -23,6 +23,20 @@
       "continuous learning"
     ]
   },
+  "display": {
+    "zh": {
+      "name": "无魔协会",
+      "secondaryName": "MANA Endless"
+    },
+    "en": {
+      "name": "MANA Endless",
+      "secondaryName": "无魔协会"
+    }
+  },
+  "intro": {
+    "zh": "无魔协会的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
+    "en": "MANA Endless brand system with live guidelines, colors, voice, assets, and agent-readable source files."
+  },
   "url": "brand.html?brand=manaendless",
   "apiUrl": "api/brands/manaendless.json",
   "status": "placeholder",

@@ -23,6 +23,20 @@
       "fire"
     ]
   },
+  "display": {
+    "zh": {
+      "name": "燃古豋",
+      "secondaryName": "RGD"
+    },
+    "en": {
+      "name": "RGD",
+      "secondaryName": "燃古豋"
+    }
+  },
+  "intro": {
+    "zh": "燃古豋的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
+    "en": "RGD brand system with live guidelines, colors, voice, assets, and agent-readable source files."
+  },
   "url": "brand.html?brand=rgd",
   "apiUrl": "api/brands/rgd.json",
   "status": "documented",

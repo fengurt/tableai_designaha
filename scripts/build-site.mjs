@@ -66,6 +66,68 @@ function excerpt(text) {
     .slice(0, 420);
 }
 
+function hasCjk(text = "") {
+  return /[\u3400-\u9fff]/.test(text);
+}
+
+function zhName(brand) {
+  if (hasCjk(brand.name)) return brand.name;
+  if (brand.nativeName && hasCjk(brand.nativeName)) return brand.nativeName;
+  return brand.nativeName || brand.name;
+}
+
+function enName(brand) {
+  if (!hasCjk(brand.name)) return brand.name;
+  if (brand.nativeName && /[A-Za-z]/.test(brand.nativeName)) {
+    return brand.nativeName.replace(/\s*[·|｜/]\s*[\u3400-\u9fff].*$/, "").trim() || brand.nativeName;
+  }
+  return brand.name;
+}
+
+function introLines(text = "") {
+  return text
+    .replace(/^---[\s\S]*?---/, "")
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/<[^>]+>/g, " ")
+    .split(/\n+/)
+    .map((line) => line.replace(/^#+\s*/, "").replace(/^[-*]\s*/, "").trim())
+    .filter((line) => {
+      if (!line) return false;
+      if (/^(chinese name|english name|english descriptor):/i.test(line)) return false;
+      if (/^(brand role|visual direction|agent notes|overview|purpose)$/i.test(line)) return false;
+      if (/^use\s+/i.test(line)) return false;
+      if (/[`]|\/|\\/.test(line)) return false;
+      if (line.length < 18 && !/[。！？.!?]/.test(line)) return false;
+      return true;
+    });
+}
+
+function cjkRatio(text = "") {
+  if (!text.length) return 0;
+  return (text.match(/[\u3400-\u9fff]/g) || []).length / text.length;
+}
+
+function clipSentence(text = "", max = 170) {
+  const clean = text.trim();
+  if (clean.length <= max) return clean;
+  const boundary = clean.slice(0, max).search(/[。！？.!?](?!.*[。！？.!?])/);
+  if (boundary > 48) return clean.slice(0, boundary + 1);
+  return `${clean.slice(0, max - 1).trim()}…`;
+}
+
+function liveIntro(brand, guides, lang) {
+  const primary = guides.find((g) => g.primary) ?? guides[0];
+  const lines = introLines(primary?.text || "");
+  const fromGuide = lang === "zh"
+    ? lines.find((line) => hasCjk(line) && line.length >= 24)
+    : lines.find((line) => /[A-Za-z]/.test(line) && line.length >= 44 && cjkRatio(line) < 0.18);
+  if (fromGuide && !/placeholder/i.test(fromGuide)) return clipSentence(fromGuide);
+  if (lang === "zh") {
+    return `${zhName(brand)}的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。`;
+  }
+  return `${enName(brand)} brand system with live guidelines, colors, voice, assets, and agent-readable source files.`;
+}
+
 function html(strings, ...values) {
   return String.raw({ raw: strings }, ...values);
 }
@@ -73,6 +135,10 @@ function html(strings, ...values) {
 await rm(siteDir, { recursive: true, force: true });
 await mkdir(brandApiDir, { recursive: true });
 await mkdir(imageDir, { recursive: true });
+await mkdir(join(siteDir, "skills", "iptrust-live-update"), { recursive: true });
+if (existsSync(join(root, "skills/iptrust-live-update/SKILL.md"))) {
+  await copyFile(join(root, "skills/iptrust-live-update/SKILL.md"), join(siteDir, "skills/iptrust-live-update/SKILL.md"));
+}
 
 const brandPayloads = [];
 
@@ -119,8 +185,19 @@ for (const brand of brands) {
   tokens.sort((a, b) => a.path.localeCompare(b.path));
   images.sort((a, b) => a.path.localeCompare(b.path));
 
+  const display = {
+    zh: { name: zhName(brand), secondaryName: enName(brand) },
+    en: { name: enName(brand), secondaryName: zhName(brand) },
+  };
+  const intro = {
+    zh: liveIntro(brand, guides, "zh"),
+    en: liveIntro(brand, guides, "en"),
+  };
+
   const payload = {
     ...brand,
+    display,
+    intro,
     url: `brand.html?brand=${brand.slug}`,
     apiUrl: `api/brands/${brand.slug}.json`,
     status: guides.length ? "documented" : "placeholder",
@@ -163,6 +240,11 @@ await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
     resources: "api/brands/{slug}.json",
     tools: ["list_brands", "get_brand", "get_guideline", "list_tokens", "get_token"],
   },
+  skills: [{
+    name: "iptrust-live-update",
+    path: "skills/iptrust-live-update/SKILL.md",
+    description: "Agent workflow for refreshing IP introductions from the latest brand source files.",
+  }],
   sync: {
     sourceOfTruth: `https://github.com/${adminConfig.owner ?? "fengurt"}/${adminConfig.repo ?? "tableai_designaha"}`,
     githubToWebsite: "GitHub Pages rebuilds site/ on push to main.",
@@ -187,6 +269,7 @@ await writeFile(join(siteDir, "llms.txt"), [
   "- /api/manifest.json",
   "- /api/brands.json",
   "- /api/brands/{slug}.json",
+  "- /skills/iptrust-live-update/SKILL.md",
   "",
   "Brands:",
   ...indexPayload.map((brand) => `- ${brand.name} (${brand.slug}): /api/brands/${brand.slug}.json · palette ${brand.theme?.primary ?? "n/a"} / ${brand.theme?.accent ?? "n/a"}`),
@@ -239,8 +322,14 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       </div>
     </section>
     <section class="section-head">
-      <p class="eyebrow" data-i18n="home.systems">IP 系统</p>
-      <h2 data-i18n="home.sectionTitle">直接进入 IP。</h2>
+      <div>
+        <p class="eyebrow" data-i18n="home.systems">IP 系统</p>
+        <h2 data-i18n="home.sectionTitle">直接进入 IP。</h2>
+      </div>
+      <div class="home-tools">
+        <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
+        <span id="brandCount" class="count-pill"></span>
+      </div>
     </section>
     <section class="ip-grid" id="brandGrid" aria-live="polite"></section>
   </main>
@@ -410,6 +499,27 @@ p { line-height: 1.65; }
   border-top: 1px solid var(--line);
 }
 .section-head h2 { max-width: 560px; }
+.home-tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: min(360px, 100%);
+}
+.home-tools input {
+  min-height: 42px;
+  border-radius: 999px;
+  background: rgba(255, 254, 250, .78);
+}
+.count-pill {
+  flex: 0 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 9px 11px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 760;
+  background: rgba(255, 254, 250, .72);
+}
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
 .button, button {
   appearance: none;
@@ -438,6 +548,12 @@ p { line-height: 1.65; }
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 10px;
   padding: 14px 0 88px;
+}
+.empty-state {
+  grid-column: 1 / -1;
+  padding: 34px 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
 }
 .card, .panel, .guide, .resource {
   background: var(--paper);
@@ -469,6 +585,13 @@ p { line-height: 1.65; }
 }
 .ip-card:hover { transform: translateY(-3px); border-color: var(--brand-primary, var(--line)); box-shadow: 0 16px 42px rgba(22, 20, 18, .08); }
 .ip-card.theme-dark { background: var(--brand-paper); color: var(--brand-ink); }
+.ip-card-link {
+  color: inherit;
+  display: flex;
+  flex: 1;
+  min-height: 100%;
+  text-decoration: none;
+}
 .ip-card[data-brand="sidera"],
 .ip-card[data-brand="manaendless"] { background: var(--brand-paper); }
 .ip-card[data-brand="fengzhi"] { border-radius: 0; }
@@ -491,7 +614,53 @@ p { line-height: 1.65; }
 .card-body { padding: 18px 18px 16px; display: flex; flex-direction: column; gap: 12px; min-height: 100%; }
 .card-body .eyebrow { color: var(--brand-primary, var(--accent)); }
 .card-body .muted, .card-body p { color: var(--brand-muted, var(--muted)); }
-.card-body h2 { color: var(--brand-ink, var(--ink)); font-size: 28px; line-height: 1.02; margin-top: auto; }
+.card-body h2 { color: var(--brand-ink, var(--ink)); font-size: 28px; line-height: 1.02; margin-top: auto; padding-right: 58px; }
+.copy-reference {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 3;
+  min-height: 32px;
+  max-width: 72px;
+  padding: 7px 9px;
+  border-radius: 999px;
+  border-color: var(--brand-line, var(--line));
+  background: color-mix(in srgb, var(--brand-paper, white) 86%, var(--brand-primary, var(--blue)));
+  color: var(--brand-ink, var(--ink));
+  font-size: 12px;
+  line-height: 1;
+}
+.copy-reference:hover,
+.copy-reference.copied {
+  background: var(--brand-primary, var(--blue));
+  border-color: var(--brand-primary, var(--blue));
+  color: var(--brand-button-text, white);
+}
+.copy-manual {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 40;
+  width: min(420px, calc(100vw - 36px));
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: 0 18px 60px rgba(22, 20, 18, .18);
+}
+.copy-manual textarea {
+  min-height: 120px;
+  margin: 0;
+  font-size: 12px;
+}
+.copy-manual button {
+  width: 34px;
+  min-height: 34px;
+  padding: 0;
+}
 .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; color: var(--muted); font-size: 13px; }
 .pill {
   border: 1px solid var(--brand-line, var(--line));
@@ -574,7 +743,8 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .topbar { align-items: flex-start; flex-direction: column; }
   .hub-hero, .brand-hero, .form-grid { grid-template-columns: 1fr; }
   .hub-hero { min-height: auto; padding-top: 36px; }
-  .section-head { display: block; }
+  .section-head { display: grid; align-items: start; }
+  .home-tools { width: 100%; }
   .ip-grid { grid-template-columns: 1fr 1fr; }
   .ip-card { min-height: 176px; }
   h1 { font-size: 40px; }
@@ -598,9 +768,15 @@ const i18n = {
     "home.adminEdit": "管理编辑",
     "home.systems": "IP 系统",
     "home.sectionTitle": "直接进入 IP。",
+    "home.searchPlaceholder": "搜索 IP / slug",
+    "home.noResults": "没有匹配的 IP。",
     "status.documented": "已建档",
     "status.placeholder": "待建档",
     "meta.guides": "规范",
+    "copy.reference": "复制",
+    "copy.done": "已复制",
+    "copy.selected": "已选中",
+    "copy.fail": "复制失败",
     "brand.openJson": "打开 JSON",
     "brand.source": "源文件",
     "brand.colors": "品牌颜色",
@@ -631,9 +807,15 @@ const i18n = {
     "home.adminEdit": "Admin edit",
     "home.systems": "IP systems",
     "home.sectionTitle": "Enter the IP directly.",
+    "home.searchPlaceholder": "Search IP / slug",
+    "home.noResults": "No matching IP.",
     "status.documented": "Documented",
     "status.placeholder": "Pending",
     "meta.guides": "guides",
+    "copy.reference": "Copy",
+    "copy.done": "Copied",
+    "copy.selected": "Selected",
+    "copy.fail": "Failed",
     "brand.openJson": "Open JSON",
     "brand.source": "Source",
     "brand.colors": "Brand colors",
@@ -658,6 +840,8 @@ const i18n = {
 };
 
 let currentLang = localStorage.getItem("iptrust-lang") || "zh";
+let cachedBrands = null;
+let currentQuery = "";
 
 function t(key) {
   return i18n[currentLang]?.[key] || i18n.zh[key] || key;
@@ -670,6 +854,8 @@ function applyI18n() {
   });
   const toggle = $("#langToggle");
   if (toggle) toggle.textContent = currentLang === "zh" ? "EN" : "中";
+  const search = $("#brandSearch");
+  if (search) search.placeholder = t("home.searchPlaceholder");
 }
 
 function setupLanguageToggle() {
@@ -684,8 +870,21 @@ function setupLanguageToggle() {
   });
 }
 
+function setupSearch() {
+  const search = $("#brandSearch");
+  if (!search || search.dataset.ready) return;
+  search.dataset.ready = "true";
+  search.placeholder = t("home.searchPlaceholder");
+  search.addEventListener("input", async () => {
+    currentQuery = search.value.trim().toLowerCase();
+    await renderIndex();
+  });
+}
+
 async function loadJson(path) {
-  const res = await fetch(path);
+  const url = new URL(path, location.href);
+  url.searchParams.set("v", Date.now().toString());
+  const res = await fetch(url, { cache: "no-store" });
   if (!res.ok) throw new Error(\`Could not load \${path}\`);
   return res.json();
 }
@@ -755,24 +954,141 @@ function statusLabel(status) {
   return status === "documented" ? t("status.documented") : t("status.placeholder");
 }
 
+function localizedBrand(brand = {}) {
+  const display = brand.display?.[currentLang] || {};
+  return {
+    name: display.name || brand.name || brand.slug,
+    secondaryName: display.secondaryName || brand.nativeName || "",
+    intro: brand.intro?.[currentLang] || brand.primaryExcerpt || brand.description || "",
+  };
+}
+
+function referenceText(brand = {}) {
+  const localized = localizedBrand(brand);
+  const apiUrl = new URL(brand.apiUrl || \`api/brands/\${brand.slug}.json\`, location.href).href;
+  return [
+    \`IP: \${localized.name}\${localized.secondaryName ? \` / \${localized.secondaryName}\` : ""}\`,
+    \`Slug: \${brand.slug}\`,
+    \`Intro: \${localized.intro}\`,
+    \`Brand API: \${apiUrl}\`,
+  ].join("\\n");
+}
+
+function copyWithTextarea(text) {
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.setAttribute("readonly", "");
+  textarea.style.position = "fixed";
+  textarea.style.top = "-999px";
+  document.body.appendChild(textarea);
+  textarea.select();
+  const ok = document.execCommand("copy");
+  textarea.remove();
+  return ok;
+}
+
+function showManualCopy(text) {
+  document.querySelector(".copy-manual")?.remove();
+  const panel = document.createElement("div");
+  panel.className = "copy-manual";
+  panel.innerHTML = \`<textarea readonly></textarea><button type="button" aria-label="Close">×</button>\`;
+  const textarea = panel.querySelector("textarea");
+  textarea.value = text;
+  panel.querySelector("button").addEventListener("click", () => panel.remove());
+  document.body.appendChild(panel);
+  textarea.focus();
+  textarea.select();
+}
+
+async function writeClipboardText(text) {
+  if (copyWithTextarea(text)) return "copied";
+  try {
+    if (navigator.clipboard?.writeText) {
+      await Promise.race([
+        navigator.clipboard.writeText(text),
+        new Promise((_, reject) => setTimeout(() => reject(new Error("Clipboard timeout.")), 900)),
+      ]);
+      return "copied";
+    }
+  } catch (error) {
+    console.warn("Clipboard API unavailable, falling back to manual selection.", error);
+  }
+  showManualCopy(text);
+  return "selected";
+}
+
+async function copyReference(brand, button) {
+  const result = await writeClipboardText(referenceText(brand));
+  const previous = button.textContent;
+  button.textContent = result === "selected" ? t("copy.selected") : t("copy.done");
+  button.classList.add("copied");
+  setTimeout(() => {
+    button.textContent = previous || t("copy.reference");
+    button.classList.remove("copied");
+  }, 1200);
+}
+
+function setupCopyButtons(brands) {
+  const bySlug = new Map(brands.map((brand) => [brand.slug, brand]));
+  document.querySelectorAll("[data-copy-brand]").forEach((button) => {
+    button.addEventListener("click", async (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      try {
+        const brand = bySlug.get(button.dataset.copyBrand);
+        if (!brand) throw new Error(\`Unknown brand \${button.dataset.copyBrand}\`);
+        await copyReference(brand, button);
+      } catch (error) {
+        button.textContent = t("copy.fail");
+        console.error(error);
+      }
+    });
+  });
+}
+
 async function renderIndex() {
   const grid = $("#brandGrid");
   if (!grid) return;
-  const brands = await loadJson("api/brands.json");
-  grid.innerHTML = brands.map((brand) => \`
-    <a class="\${cardClass(brand)}" data-brand="\${escapeHtml(brand.slug)}" href="\${brand.url}" style="\${themeStyle(brand.theme)}">
-      <div class="card-body">
-        <span class="brand-sigil">\${escapeHtml(brandInitial(brand))}</span>
-        <p class="eyebrow">\${escapeHtml(statusLabel(brand.status))}</p>
-        <h2>\${escapeHtml(brand.name)}</h2>
-        <p class="muted">\${escapeHtml(brand.nativeName || "")}</p>
-        <div class="meta">
-          <span class="pill">\${brand.guideCount} \${t("meta.guides")}</span>
-          <span class="pill">API</span>
+  cachedBrands ??= await loadJson("api/brands.json");
+  const brands = cachedBrands;
+  const filtered = currentQuery
+    ? brands.filter((brand) => {
+        const localized = localizedBrand(brand);
+        return [
+          brand.slug,
+          brand.name,
+          brand.nativeName,
+          localized.name,
+          localized.secondaryName,
+          localized.intro,
+          brand.theme?.keywords?.join(" "),
+        ].join(" ").toLowerCase().includes(currentQuery);
+      })
+    : brands;
+  const count = $("#brandCount");
+  if (count) count.textContent = currentQuery ? \`\${filtered.length}/\${brands.length} IP\` : \`\${brands.length} IP\`;
+  if (!filtered.length) {
+    grid.innerHTML = \`<p class="empty-state">\${escapeHtml(t("home.noResults"))}</p>\`;
+    return;
+  }
+  grid.innerHTML = filtered.map((brand) => \`
+    <article class="\${cardClass(brand)}" data-brand="\${escapeHtml(brand.slug)}" style="\${themeStyle(brand.theme)}">
+      <a class="ip-card-link" href="\${brand.url}" aria-label="\${escapeHtml(localizedBrand(brand).name)}">
+        <div class="card-body">
+          <span class="brand-sigil">\${escapeHtml(brandInitial(brand))}</span>
+          <p class="eyebrow">\${escapeHtml(statusLabel(brand.status))}</p>
+          <h2>\${escapeHtml(localizedBrand(brand).name)}</h2>
+          <p class="muted">\${escapeHtml(localizedBrand(brand).secondaryName || "")}</p>
+          <div class="meta">
+            <span class="pill">\${brand.guideCount} \${t("meta.guides")}</span>
+            <span class="pill">API</span>
+          </div>
         </div>
-      </div>
-    </a>
+      </a>
+      <button class="copy-reference" type="button" data-copy-brand="\${escapeHtml(brand.slug)}" aria-label="\${escapeHtml(t("copy.reference"))} \${escapeHtml(localizedBrand(brand).name)}">\${t("copy.reference")}</button>
+    </article>
   \`).join("");
+  setupCopyButtons(filtered);
 }
 
 async function renderBrand() {
@@ -780,16 +1096,17 @@ async function renderBrand() {
   if (!page) return;
   const slug = new URLSearchParams(location.search).get("brand") || "tableai";
   const brand = await loadJson(\`api/brands/\${slug}.json\`);
-  document.title = \`\${brand.name} · Brand Guidelines\`;
+  const localized = localizedBrand(brand);
+  document.title = \`\${localized.name} · Brand Guidelines\`;
   const hero = brand.images?.[0]?.sitePath;
   page.innerHTML = \`
     <div class="brand-shell \${themeClass(brand.theme)}" style="\${themeStyle(brand.theme)}">
       <section class="brand-hero">
         <div>
-          <p class="eyebrow">\${escapeHtml(brand.status)}</p>
-          <h1>\${escapeHtml(brand.name)}</h1>
-          <p class="muted">\${escapeHtml(brand.nativeName || "")}</p>
-          <p>\${escapeHtml(brand.description)}</p>
+          <p class="eyebrow">\${escapeHtml(statusLabel(brand.status))}</p>
+          <h1>\${escapeHtml(localized.name)}</h1>
+          <p class="muted">\${escapeHtml(localized.secondaryName || "")}</p>
+          <p>\${escapeHtml(localized.intro)}</p>
           \${swatches(brand.theme, true)}
           <div class="actions">
             <a class="button" href="\${brand.apiUrl}">\${t("brand.openJson")}</a>
@@ -816,6 +1133,7 @@ async function renderBrand() {
 
 applyI18n();
 setupLanguageToggle();
+setupSearch();
 renderIndex().catch(console.error);
 renderBrand().catch(console.error);`);
 

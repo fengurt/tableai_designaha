@@ -24,6 +24,20 @@
         "minimal"
       ]
     },
+    "display": {
+      "zh": {
+        "name": "Table AI Alliance",
+        "secondaryName": "Table AI"
+      },
+      "en": {
+        "name": "Table AI",
+        "secondaryName": "Table AI Alliance"
+      }
+    },
+    "intro": {
+      "zh": "本项目采用极简且富有启发性的视觉语言。设计应体现以下四个维度：",
+      "en": "Table AI brand system with live guidelines, colors, voice, assets, and agent-readable source files."
+    },
     "url": "brand.html?brand=tableai",
     "apiUrl": "api/brands/tableai.json",
     "status": "documented",
@@ -65,6 +79,20 @@
         "wellbeing"
       ]
     },
+    "display": {
+      "zh": {
+        "name": "凡纳弘途",
+        "secondaryName": "VANAHOM"
+      },
+      "en": {
+        "name": "VANAHOM",
+        "secondaryName": "凡纳弘途"
+      }
+    },
+    "intro": {
+      "zh": "Building Tomorrow, Today — 为者常成，行者常至*",
+      "en": "> A Member of the Table AI Alliance — same think-tank register, its own ground."
+    },
     "url": "brand.html?brand=vanahom",
     "apiUrl": "api/brands/vanahom.json",
     "status": "documented",
@@ -105,6 +133,20 @@
         "kind workforce",
         "inclusive AI"
       ]
+    },
+    "display": {
+      "zh": {
+        "name": "善渡科技",
+        "secondaryName": "KiND"
+      },
+      "en": {
+        "name": "KiND",
+        "secondaryName": "善渡科技"
+      }
+    },
+    "intro": {
+      "zh": "*善渡科技 · Kind Technology**",
+      "en": "KiND turns AI into a **Kind Workforce** anyone can hire — *AI for all, not for few."
     },
     "url": "brand.html?brand=kind",
     "apiUrl": "api/brands/kind.json",
@@ -149,6 +191,20 @@
         "Asia-Pacific"
       ]
     },
+    "display": {
+      "zh": {
+        "name": "亚太艺术疗愈联盟",
+        "secondaryName": "APHA"
+      },
+      "en": {
+        "name": "APHA",
+        "secondaryName": "亚太艺术疗愈联盟"
+      }
+    },
+    "intro": {
+      "zh": "亚太艺术疗愈联盟的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
+      "en": "APHA is an Asia-Pacific arts and healing alliance IP for creative wellbeing, therapeutic arts, and cross-cultural care practices."
+    },
     "url": "brand.html?brand=apha",
     "apiUrl": "api/brands/apha.json",
     "status": "documented",
@@ -190,6 +246,20 @@
         "continuous learning"
       ]
     },
+    "display": {
+      "zh": {
+        "name": "无魔协会",
+        "secondaryName": "MANA Endless"
+      },
+      "en": {
+        "name": "MANA Endless",
+        "secondaryName": "无魔协会"
+      }
+    },
+    "intro": {
+      "zh": "无魔协会的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
+      "en": "MANA Endless brand system with live guidelines, colors, voice, assets, and agent-readable source files."
+    },
     "url": "brand.html?brand=manaendless",
     "apiUrl": "api/brands/manaendless.json",
     "status": "placeholder",
@@ -228,6 +298,20 @@
         "global alliance",
         "standards"
       ]
+    },
+    "display": {
+      "zh": {
+        "name": "欧匹赛全球联盟",
+        "secondaryName": "OPC Global"
+      },
+      "en": {
+        "name": "OPC Global",
+        "secondaryName": "欧匹赛全球联盟"
+      }
+    },
+    "intro": {
+      "zh": "欧匹赛全球联盟的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
+      "en": "OPC Global brand system with live guidelines, colors, voice, assets, and agent-readable source files."
     },
     "url": "brand.html?brand=opcglobal",
     "apiUrl": "api/brands/opcglobal.json",
@@ -268,6 +352,20 @@
         "trust"
       ]
     },
+    "display": {
+      "zh": {
+        "name": "IPTRUST",
+        "secondaryName": "IPTrustasset"
+      },
+      "en": {
+        "name": "IPTrustasset",
+        "secondaryName": "IPTRUST"
+      }
+    },
+    "intro": {
+      "zh": "IPTRUST的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
+      "en": "IPTrustasset brand system with live guidelines, colors, voice, assets, and agent-readable source files."
+    },
     "url": "brand.html?brand=iptrust",
     "apiUrl": "api/brands/iptrust.json",
     "status": "placeholder",
@@ -306,6 +404,20 @@
         "deep gold",
         "transformation"
       ]
+    },
+    "display": {
+      "zh": {
+        "name": "峰值永造局",
+        "secondaryName": "The Transformation Company"
+      },
+      "en": {
+        "name": "The Transformation Company",
+        "secondaryName": "峰值永造局"
+      }
+    },
+    "intro": {
+      "zh": "峰值永造局 · 品牌设计系统（方向 A「界格」）",
+      "en": "The Transformation Company brand system with live guidelines, colors, voice, assets, and agent-readable source files."
     },
     "url": "brand.html?brand=fengzhi",
     "apiUrl": "api/brands/fengzhi.json",
@@ -370,6 +482,20 @@
         "three agents"
       ]
     },
+    "display": {
+      "zh": {
+        "name": "酒店盈利大师",
+        "secondaryName": "Axisee"
+      },
+      "en": {
+        "name": "Axisee",
+        "secondaryName": "酒店盈利大师"
+      }
+    },
+    "intro": {
+      "zh": "> 单一可信来源 · Single Source of Truth for every Axisee UI (web, admin console, mobile member, 企微 sidebar tools).",
+      "en": "> **The canonical design guideline for all Axisee products.**"
+    },
     "url": "brand.html?brand=axisee",
     "apiUrl": "api/brands/axisee.json",
     "status": "documented",
@@ -410,6 +536,20 @@
         "vermillion",
         "wisdom navigator"
       ]
+    },
+    "display": {
+      "zh": {
+        "name": "侍天",
+        "secondaryName": "Sidera"
+      },
+      "en": {
+        "name": "Sidera",
+        "secondaryName": "侍天"
+      }
+    },
+    "intro": {
+      "zh": "Sidera 侍天 — Design System",
+      "en": "> Build-ready brand & visual spec for agents producing on-brand 侍天 work."
     },
     "url": "brand.html?brand=sidera",
     "apiUrl": "api/brands/sidera.json",
@@ -452,6 +592,20 @@
         "precision"
       ]
     },
+    "display": {
+      "zh": {
+        "name": "壹目贯维",
+        "secondaryName": "1stepmore"
+      },
+      "en": {
+        "name": "1stepmore",
+        "secondaryName": "壹目贯维"
+      }
+    },
+    "intro": {
+      "zh": "壹目贯维的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
+      "en": "1stepmore brand system with live guidelines, colors, voice, assets, and agent-readable source files."
+    },
     "url": "brand.html?brand=1stepmore",
     "apiUrl": "api/brands/1stepmore.json",
     "status": "documented",
@@ -492,6 +646,20 @@
         "community",
         "creation"
       ]
+    },
+    "display": {
+      "zh": {
+        "name": "游赋社",
+        "secondaryName": "AGEM"
+      },
+      "en": {
+        "name": "AGEM",
+        "secondaryName": "游赋社"
+      }
+    },
+    "intro": {
+      "zh": "游赋社的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
+      "en": "AGEM brand system with live guidelines, colors, voice, assets, and agent-readable source files."
     },
     "url": "brand.html?brand=agem",
     "apiUrl": "api/brands/agem.json",
@@ -534,6 +702,20 @@
         "fire"
       ]
     },
+    "display": {
+      "zh": {
+        "name": "燃古豋",
+        "secondaryName": "RGD"
+      },
+      "en": {
+        "name": "RGD",
+        "secondaryName": "燃古豋"
+      }
+    },
+    "intro": {
+      "zh": "燃古豋的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
+      "en": "RGD brand system with live guidelines, colors, voice, assets, and agent-readable source files."
+    },
     "url": "brand.html?brand=rgd",
     "apiUrl": "api/brands/rgd.json",
     "status": "documented",
@@ -575,6 +757,20 @@
         "wellbeing"
       ]
     },
+    "display": {
+      "zh": {
+        "name": "常幸",
+        "secondaryName": "Changoods"
+      },
+      "en": {
+        "name": "Changoods",
+        "secondaryName": "常幸"
+      }
+    },
+    "intro": {
+      "zh": "常幸的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
+      "en": "Changoods brand system with live guidelines, colors, voice, assets, and agent-readable source files."
+    },
     "url": "brand.html?brand=changoods",
     "apiUrl": "api/brands/changoods.json",
     "status": "documented",
@@ -615,6 +811,20 @@
         "inquiry",
         "classical learning"
       ]
+    },
+    "display": {
+      "zh": {
+        "name": "博雅问渠书院",
+        "secondaryName": "PKU BOYA Academy"
+      },
+      "en": {
+        "name": "PKU BOYA Academy",
+        "secondaryName": "博雅问渠书院"
+      }
+    },
+    "intro": {
+      "zh": "博雅问渠书院的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
+      "en": "PKU BOYA Academy is a learning and inquiry IP centered on liberal education, classical depth, and contemporary knowledge flow."
     },
     "url": "brand.html?brand=boya",
     "apiUrl": "api/brands/boya.json",

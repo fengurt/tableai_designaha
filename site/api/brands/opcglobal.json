@@ -23,6 +23,20 @@
       "standards"
     ]
   },
+  "display": {
+    "zh": {
+      "name": "欧匹赛全球联盟",
+      "secondaryName": "OPC Global"
+    },
+    "en": {
+      "name": "OPC Global",
+      "secondaryName": "欧匹赛全球联盟"
+    }
+  },
+  "intro": {
+    "zh": "欧匹赛全球联盟的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
+    "en": "OPC Global brand system with live guidelines, colors, voice, assets, and agent-readable source files."
+  },
   "url": "brand.html?brand=opcglobal",
   "apiUrl": "api/brands/opcglobal.json",
   "status": "placeholder",

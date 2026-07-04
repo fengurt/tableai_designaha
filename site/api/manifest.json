@@ -1,7 +1,7 @@
 {
   "name": "岁知社 IPTrust",
   "description": "岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。",
-  "generatedAt": "2026-07-03T23:51:16.601Z",
+  "generatedAt": "2026-07-04T01:33:52.840Z",
   "brands": [
     {
       "slug": "tableai",
@@ -105,6 +105,13 @@
       "get_token"
     ]
   },
+  "skills": [
+    {
+      "name": "iptrust-live-update",
+      "path": "skills/iptrust-live-update/SKILL.md",
+      "description": "Agent workflow for refreshing IP introductions from the latest brand source files."
+    }
+  ],
   "sync": {
     "sourceOfTruth": "https://github.com/fengurt/tableai_designaha",
     "githubToWebsite": "GitHub Pages rebuilds site/ on push to main.",

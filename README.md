@@ -21,6 +21,7 @@ KiND is the first brand wired up for AI agents. The pattern, cheapest → most c
 2. **Build pipeline** — [Style Dictionary](https://styledictionary.com/) turns tokens into CSS/JS: `npm run build:tokens` → `KiND/dist/`.
 3. **Skill** — `.cursor/skills/kind-design/` teaches agents the brand on demand (rules, voice, components). Loads automatically in Cursor/Claude Code when working on KiND.
 4. **MCP server** — `mcp/` exposes the tokens as live resources/tools (`get_token`, `validate_color`, …) for any MCP client. Scaffolded for later; reads the same token file.
+5. **IPTrust live-update skill** — `skills/iptrust-live-update/SKILL.md` teaches agents how to refresh bilingual IP intros from the latest source files; the website also publishes it at `/skills/iptrust-live-update/SKILL.md`.
 
 Replicate this structure per brand as each design system matures. `npm install` and the build require network access.
 
@@ -34,4 +35,3 @@ KiND ships as a **Cursor plugin** (`.cursor-plugin/plugin.json`) bundling the `k
 - **Test a plugin locally** — clone into `~/.cursor/plugins/local/kind-design`.
 
 The skill works standalone (it reads its bundled `tokens.json`). The MCP server is optional and needs its deps first: `cd mcp && npm install`. Keep the bundled snapshot current with `npm run sync:skill` after editing canonical tokens.
-

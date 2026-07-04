@@ -1,0 +1,4 @@
+interface:
+  display_name: "IPTrust Live Update"
+  short_description: "Refresh IP intros from latest brand sources"
+  default_prompt: "Use $iptrust-live-update to refresh IP introductions and agent references from the latest brand files."

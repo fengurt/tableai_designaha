@@ -17,6 +17,8 @@ type BrandConfig = {
   nativeName?: string;
   description: string;
   primaryGuide?: string;
+  display?: Record<string, { name: string; secondaryName?: string }>;
+  intro?: Record<string, string>;
 };
 
 type Guide = {
@@ -33,6 +35,66 @@ type BrandPayload = BrandConfig & {
   guides: Guide[];
   tokenFiles: string[];
 };
+
+function hasCjk(text = "") {
+  return /[\u3400-\u9fff]/.test(text);
+}
+
+function zhName(brand: BrandConfig) {
+  if (hasCjk(brand.name)) return brand.name;
+  if (brand.nativeName && hasCjk(brand.nativeName)) return brand.nativeName;
+  return brand.nativeName || brand.name;
+}
+
+function enName(brand: BrandConfig) {
+  if (!hasCjk(brand.name)) return brand.name;
+  if (brand.nativeName && /[A-Za-z]/.test(brand.nativeName)) {
+    return brand.nativeName.replace(/\s*[·|｜/]\s*[\u3400-\u9fff].*$/, "").trim() || brand.nativeName;
+  }
+  return brand.name;
+}
+
+function introLines(text = "") {
+  return text
+    .replace(/^---[\s\S]*?---/, "")
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/<[^>]+>/g, " ")
+    .split(/\n+/)
+    .map((line) => line.replace(/^#+\s*/, "").replace(/^[-*]\s*/, "").trim())
+    .filter((line) => {
+      if (!line) return false;
+      if (/^(chinese name|english name|english descriptor):/i.test(line)) return false;
+      if (/^(brand role|visual direction|agent notes|overview|purpose)$/i.test(line)) return false;
+      if (/^use\s+/i.test(line)) return false;
+      if (/[`]|\/|\\/.test(line)) return false;
+      if (line.length < 18 && !/[。！？.!?]/.test(line)) return false;
+      return true;
+    });
+}
+
+function cjkRatio(text = "") {
+  if (!text.length) return 0;
+  return (text.match(/[\u3400-\u9fff]/g) || []).length / text.length;
+}
+
+function clipSentence(text = "", max = 170) {
+  const clean = text.trim();
+  if (clean.length <= max) return clean;
+  const boundary = clean.slice(0, max).search(/[。！？.!?](?!.*[。！？.!?])/);
+  if (boundary > 48) return clean.slice(0, boundary + 1);
+  return `${clean.slice(0, max - 1).trim()}…`;
+}
+
+function liveIntro(brand: BrandConfig, guides: Guide[], lang: "zh" | "en") {
+  const primary = guides.find((g) => g.primary) ?? guides[0];
+  const lines = introLines(primary?.text || "");
+  const fromGuide = lang === "zh"
+    ? lines.find((line) => hasCjk(line) && line.length >= 24)
+    : lines.find((line) => /[A-Za-z]/.test(line) && line.length >= 44 && cjkRatio(line) < 0.18);
+  if (fromGuide && !/placeholder/i.test(fromGuide)) return clipSentence(fromGuide);
+  if (lang === "zh") return `${zhName(brand)}的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。`;
+  return `${enName(brand)} brand system with live guidelines, colors, voice, assets, and agent-readable source files.`;
+}
 
 async function walk(dir: string): Promise<string[]> {
   if (!existsSync(dir)) return [];
@@ -97,7 +159,15 @@ async function loadBrand(slug: string): Promise<BrandPayload> {
 
   guides.sort((a, b) => Number(b.primary) - Number(a.primary) || a.path.localeCompare(b.path));
   tokenFiles.sort((a, b) => a.localeCompare(b));
-  return { ...brand, guides, tokenFiles };
+  const display = {
+    zh: { name: zhName(brand), secondaryName: enName(brand) },
+    en: { name: enName(brand), secondaryName: zhName(brand) },
+  };
+  const intro = {
+    zh: liveIntro(brand, guides, "zh"),
+    en: liveIntro(brand, guides, "en"),
+  };
+  return { ...brand, display, intro, guides, tokenFiles };
 }
 
 function flattenJsonTokens(obj: Record<string, any>, prefix = "", groupType?: string): Record<string, Token> {
@@ -174,12 +244,15 @@ server.registerTool(
     description: "List available brand design systems and placeholder brand folders.",
     inputSchema: {},
   },
-  async () => ({
-    content: [{
-      type: "text",
-      text: brandConfigs.map((brand) => `${brand.slug}\t${brand.name}\t${brand.description}`).join("\n"),
-    }],
-  })
+  async () => {
+    const brands = await Promise.all(brandConfigs.map((brand) => loadBrand(brand.slug)));
+    return {
+      content: [{
+        type: "text",
+        text: brands.map((brand) => `${brand.slug}\t${brand.display?.en?.name ?? brand.name}\t${brand.display?.zh?.name ?? brand.nativeName ?? ""}\t${brand.intro?.en ?? brand.description}`).join("\n"),
+      }],
+    };
+  }
 );
 
 server.registerTool(

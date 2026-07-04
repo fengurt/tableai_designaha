@@ -10,9 +10,15 @@ const i18n = {
     "home.adminEdit": "管理编辑",
     "home.systems": "IP 系统",
     "home.sectionTitle": "直接进入 IP。",
+    "home.searchPlaceholder": "搜索 IP / slug",
+    "home.noResults": "没有匹配的 IP。",
     "status.documented": "已建档",
     "status.placeholder": "待建档",
     "meta.guides": "规范",
+    "copy.reference": "复制",
+    "copy.done": "已复制",
+    "copy.selected": "已选中",
+    "copy.fail": "复制失败",
     "brand.openJson": "打开 JSON",
     "brand.source": "源文件",
     "brand.colors": "品牌颜色",
@@ -43,9 +49,15 @@ const i18n = {
     "home.adminEdit": "Admin edit",
     "home.systems": "IP systems",
     "home.sectionTitle": "Enter the IP directly.",
+    "home.searchPlaceholder": "Search IP / slug",
+    "home.noResults": "No matching IP.",
     "status.documented": "Documented",
     "status.placeholder": "Pending",
     "meta.guides": "guides",
+    "copy.reference": "Copy",
+    "copy.done": "Copied",
+    "copy.selected": "Selected",
+    "copy.fail": "Failed",
     "brand.openJson": "Open JSON",
     "brand.source": "Source",
     "brand.colors": "Brand colors",
@@ -70,6 +82,8 @@ const i18n = {
 };
 
 let currentLang = localStorage.getItem("iptrust-lang") || "zh";
+let cachedBrands = null;
+let currentQuery = "";
 
 function t(key) {
   return i18n[currentLang]?.[key] || i18n.zh[key] || key;
@@ -82,6 +96,8 @@ function applyI18n() {
   });
   const toggle = $("#langToggle");
   if (toggle) toggle.textContent = currentLang === "zh" ? "EN" : "中";
+  const search = $("#brandSearch");
+  if (search) search.placeholder = t("home.searchPlaceholder");
 }
 
 function setupLanguageToggle() {
@@ -96,8 +112,21 @@ function setupLanguageToggle() {
   });
 }
 
+function setupSearch() {
+  const search = $("#brandSearch");
+  if (!search || search.dataset.ready) return;
+  search.dataset.ready = "true";
+  search.placeholder = t("home.searchPlaceholder");
+  search.addEventListener("input", async () => {
+    currentQuery = search.value.trim().toLowerCase();
+    await renderIndex();
+  });
+}
+
 async function loadJson(path) {
-  const res = await fetch(path);
+  const url = new URL(path, location.href);
+  url.searchParams.set("v", Date.now().toString());
+  const res = await fetch(url, { cache: "no-store" });
   if (!res.ok) throw new Error(`Could not load ${path}`);
   return res.json();
 }
@@ -167,24 +196,141 @@ function statusLabel(status) {
   return status === "documented" ? t("status.documented") : t("status.placeholder");
 }
 
+function localizedBrand(brand = {}) {
+  const display = brand.display?.[currentLang] || {};
+  return {
+    name: display.name || brand.name || brand.slug,
+    secondaryName: display.secondaryName || brand.nativeName || "",
+    intro: brand.intro?.[currentLang] || brand.primaryExcerpt || brand.description || "",
+  };
+}
+
+function referenceText(brand = {}) {
+  const localized = localizedBrand(brand);
+  const apiUrl = new URL(brand.apiUrl || `api/brands/${brand.slug}.json`, location.href).href;
+  return [
+    `IP: ${localized.name}${localized.secondaryName ? ` / ${localized.secondaryName}` : ""}`,
+    `Slug: ${brand.slug}`,
+    `Intro: ${localized.intro}`,
+    `Brand API: ${apiUrl}`,
+  ].join("\n");
+}
+
+function copyWithTextarea(text) {
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.setAttribute("readonly", "");
+  textarea.style.position = "fixed";
+  textarea.style.top = "-999px";
+  document.body.appendChild(textarea);
+  textarea.select();
+  const ok = document.execCommand("copy");
+  textarea.remove();
+  return ok;
+}
+
+function showManualCopy(text) {
+  document.querySelector(".copy-manual")?.remove();
+  const panel = document.createElement("div");
+  panel.className = "copy-manual";
+  panel.innerHTML = `<textarea readonly></textarea><button type="button" aria-label="Close">×</button>`;
+  const textarea = panel.querySelector("textarea");
+  textarea.value = text;
+  panel.querySelector("button").addEventListener("click", () => panel.remove());
+  document.body.appendChild(panel);
+  textarea.focus();
+  textarea.select();
+}
+
+async function writeClipboardText(text) {
+  if (copyWithTextarea(text)) return "copied";
+  try {
+    if (navigator.clipboard?.writeText) {
+      await Promise.race([
+        navigator.clipboard.writeText(text),
+        new Promise((_, reject) => setTimeout(() => reject(new Error("Clipboard timeout.")), 900)),
+      ]);
+      return "copied";
+    }
+  } catch (error) {
+    console.warn("Clipboard API unavailable, falling back to manual selection.", error);
+  }
+  showManualCopy(text);
+  return "selected";
+}
+
+async function copyReference(brand, button) {
+  const result = await writeClipboardText(referenceText(brand));
+  const previous = button.textContent;
+  button.textContent = result === "selected" ? t("copy.selected") : t("copy.done");
+  button.classList.add("copied");
+  setTimeout(() => {
+    button.textContent = previous || t("copy.reference");
+    button.classList.remove("copied");
+  }, 1200);
+}
+
+function setupCopyButtons(brands) {
+  const bySlug = new Map(brands.map((brand) => [brand.slug, brand]));
+  document.querySelectorAll("[data-copy-brand]").forEach((button) => {
+    button.addEventListener("click", async (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      try {
+        const brand = bySlug.get(button.dataset.copyBrand);
+        if (!brand) throw new Error(`Unknown brand ${button.dataset.copyBrand}`);
+        await copyReference(brand, button);
+      } catch (error) {
+        button.textContent = t("copy.fail");
+        console.error(error);
+      }
+    });
+  });
+}
+
 async function renderIndex() {
   const grid = $("#brandGrid");
   if (!grid) return;
-  const brands = await loadJson("api/brands.json");
-  grid.innerHTML = brands.map((brand) => `
-    <a class="${cardClass(brand)}" data-brand="${escapeHtml(brand.slug)}" href="${brand.url}" style="${themeStyle(brand.theme)}">
-      <div class="card-body">
-        <span class="brand-sigil">${escapeHtml(brandInitial(brand))}</span>
-        <p class="eyebrow">${escapeHtml(statusLabel(brand.status))}</p>
-        <h2>${escapeHtml(brand.name)}</h2>
-        <p class="muted">${escapeHtml(brand.nativeName || "")}</p>
-        <div class="meta">
-          <span class="pill">${brand.guideCount} ${t("meta.guides")}</span>
-          <span class="pill">API</span>
+  cachedBrands ??= await loadJson("api/brands.json");
+  const brands = cachedBrands;
+  const filtered = currentQuery
+    ? brands.filter((brand) => {
+        const localized = localizedBrand(brand);
+        return [
+          brand.slug,
+          brand.name,
+          brand.nativeName,
+          localized.name,
+          localized.secondaryName,
+          localized.intro,
+          brand.theme?.keywords?.join(" "),
+        ].join(" ").toLowerCase().includes(currentQuery);
+      })
+    : brands;
+  const count = $("#brandCount");
+  if (count) count.textContent = currentQuery ? `${filtered.length}/${brands.length} IP` : `${brands.length} IP`;
+  if (!filtered.length) {
+    grid.innerHTML = `<p class="empty-state">${escapeHtml(t("home.noResults"))}</p>`;
+    return;
+  }
+  grid.innerHTML = filtered.map((brand) => `
+    <article class="${cardClass(brand)}" data-brand="${escapeHtml(brand.slug)}" style="${themeStyle(brand.theme)}">
+      <a class="ip-card-link" href="${brand.url}" aria-label="${escapeHtml(localizedBrand(brand).name)}">
+        <div class="card-body">
+          <span class="brand-sigil">${escapeHtml(brandInitial(brand))}</span>
+          <p class="eyebrow">${escapeHtml(statusLabel(brand.status))}</p>
+          <h2>${escapeHtml(localizedBrand(brand).name)}</h2>
+          <p class="muted">${escapeHtml(localizedBrand(brand).secondaryName || "")}</p>
+          <div class="meta">
+            <span class="pill">${brand.guideCount} ${t("meta.guides")}</span>
+            <span class="pill">API</span>
+          </div>
         </div>
-      </div>
-    </a>
+      </a>
+      <button class="copy-reference" type="button" data-copy-brand="${escapeHtml(brand.slug)}" aria-label="${escapeHtml(t("copy.reference"))} ${escapeHtml(localizedBrand(brand).name)}">${t("copy.reference")}</button>
+    </article>
   `).join("");
+  setupCopyButtons(filtered);
 }
 
 async function renderBrand() {
@@ -192,16 +338,17 @@ async function renderBrand() {
   if (!page) return;
   const slug = new URLSearchParams(location.search).get("brand") || "tableai";
   const brand = await loadJson(`api/brands/${slug}.json`);
-  document.title = `${brand.name} · Brand Guidelines`;
+  const localized = localizedBrand(brand);
+  document.title = `${localized.name} · Brand Guidelines`;
   const hero = brand.images?.[0]?.sitePath;
   page.innerHTML = `
     <div class="brand-shell ${themeClass(brand.theme)}" style="${themeStyle(brand.theme)}">
       <section class="brand-hero">
         <div>
-          <p class="eyebrow">${escapeHtml(brand.status)}</p>
-          <h1>${escapeHtml(brand.name)}</h1>
-          <p class="muted">${escapeHtml(brand.nativeName || "")}</p>
-          <p>${escapeHtml(brand.description)}</p>
+          <p class="eyebrow">${escapeHtml(statusLabel(brand.status))}</p>
+          <h1>${escapeHtml(localized.name)}</h1>
+          <p class="muted">${escapeHtml(localized.secondaryName || "")}</p>
+          <p>${escapeHtml(localized.intro)}</p>
           ${swatches(brand.theme, true)}
           <div class="actions">
             <a class="button" href="${brand.apiUrl}">${t("brand.openJson")}</a>
@@ -228,5 +375,6 @@ async function renderBrand() {
 
 applyI18n();
 setupLanguageToggle();
+setupSearch();
 renderIndex().catch(console.error);
 renderBrand().catch(console.error);

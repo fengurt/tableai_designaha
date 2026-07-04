@@ -23,6 +23,20 @@
       "precision"
     ]
   },
+  "display": {
+    "zh": {
+      "name": "壹目贯维",
+      "secondaryName": "1stepmore"
+    },
+    "en": {
+      "name": "1stepmore",
+      "secondaryName": "壹目贯维"
+    }
+  },
+  "intro": {
+    "zh": "壹目贯维的 IP 品牌系统，实时汇总最新规范、颜色、语气、资产与 Agent 可读源文件。",
+    "en": "1stepmore brand system with live guidelines, colors, voice, assets, and agent-readable source files."
+  },
   "url": "brand.html?brand=1stepmore",
   "apiUrl": "api/brands/1stepmore.json",
   "status": "documented",
