@@ -1,5 +1,12 @@
 [
   {
+    "hash": "d7aa033c0b3df3034fb0233fc056384659d54d03",
+    "shortHash": "d7aa033",
+    "date": "2026-07-04T19:51:41+08:00",
+    "message": "Preload agent skill copy text",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/d7aa033c0b3df3034fb0233fc056384659d54d03"
+  },
+  {
     "hash": "0db166661358bccc3f124971e161e067a41dfad8",
     "shortHash": "0db1666",
     "date": "2026-07-04T19:46:22+08:00",
@@ -75,12 +82,5 @@
     "date": "2026-07-04T16:21:48+08:00",
     "message": "Simplify admin copy and align language toggle",
     "url": "https://github.com/fengurt/tableai_designaha/commit/74581d0117b9cb73e37d569f221acb4affc8ab87"
-  },
-  {
-    "hash": "1f20db30a5e970cf81e24c76e4613bc7e0036f09",
-    "shortHash": "1f20db3",
-    "date": "2026-07-04T16:01:00+08:00",
-    "message": "Add IP profile fields and main language display",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/1f20db30a5e970cf81e24c76e4613bc7e0036f09"
   }
 ]

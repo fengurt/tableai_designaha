@@ -57,11 +57,12 @@ function enName(brand: BrandConfig) {
 }
 
 function mainLanguage(brand: BrandConfig) {
+  if (brand.mainLanguage === "zh" || brand.mainLanguage === "en") return brand.mainLanguage;
   return hasCjk(brand.name) ? "zh" : "en";
 }
 
 function mainName(brand: BrandConfig) {
-  return brand.name;
+  return mainLanguage(brand) === "zh" ? zhName(brand) : enName(brand);
 }
 
 function secondaryName(primary: string, secondary: string) {

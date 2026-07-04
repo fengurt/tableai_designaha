@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "0db1666";
+const BUILD_VERSION = "d7aa033";
 
 const i18n = {
   cn: {
@@ -386,14 +386,28 @@ function localizedBrand(brand = {}) {
   };
 }
 
+function alternateBrandName(brand = {}, main = "") {
+  const mainLanguage = brand.display?.default?.language || brand.mainLanguage || contentLang();
+  const alternateLang = mainLanguage === "zh" || mainLanguage === "cn" ? "en" : "zh";
+  const alternate = brand.display?.[alternateLang]?.name
+    || (alternateLang === "zh" ? brand.nativeName : brand.name)
+    || "";
+  return {
+    language: alternateLang,
+    name: alternate && alternate !== main ? alternate : "",
+  };
+}
+
 function mainBrand(brand = {}) {
   const display = brand.display?.default || {};
   const lang = display.language || brand.mainLanguage || contentLang();
-  const localized = brand.display?.[lang] || {};
   const fallback = localizedBrand(brand);
+  const name = display.name || brand.mainName || brand.display?.[lang]?.name || fallback.name || brand.slug;
+  const alternate = alternateBrandName(brand, name);
   return {
-    name: display.name || brand.mainName || localized.name || fallback.name || brand.slug,
-    secondaryName: localized.secondaryName || fallback.secondaryName || "",
+    name,
+    secondaryName: alternate.name,
+    secondaryLanguage: alternate.language,
     intro: brand.intro?.[lang] || fallback.intro || brand.description || "",
     business: brand.profile?.business?.[lang] || brand.business?.[lang] || "",
     language: lang,
@@ -441,7 +455,7 @@ function referenceText(brand = {}) {
   const apiUrl = new URL(brand.apiUrl || `api/brands/${brand.slug}.json`, location.href).href;
   const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", location.href).href;
   return [
-    `IP: ${localized.name}${localized.secondaryName ? ` / ${localized.secondaryName}` : ""}`,
+    `IP: ${localized.name}${localized.secondaryName ? ` / ${languageLabel(localized.secondaryLanguage)} ${localized.secondaryName}` : ""}`,
     `Slug: ${brand.slug}`,
     `Main language: ${languageLabel(brand.mainLanguage || localized.language)}`,
     `Website: ${brand.officialWebsite || ""}`,
@@ -617,7 +631,7 @@ async function renderHeroIndex() {
     return `
       <div class="hero-index-row" data-brand="${escapeHtml(brand.slug)}" style="${themeStyle(brand.theme)};--row-index:${idx}">
         <a class="hero-index-link" href="${brand.url}">
-          <span class="hero-index-title">${String(idx + 1).padStart(2, "0")} ${escapeHtml(localized.name)}</span>
+          <span class="hero-index-title">${String(idx + 1).padStart(2, "0")} ${escapeHtml(localized.name)}${localized.secondaryName ? ` · ${escapeHtml(languageLabel(localized.secondaryLanguage))} ${escapeHtml(localized.secondaryName)}` : ""}</span>
         </a>
         ${colorDots(brand.theme)}
         <button class="icon-copy" type="button" data-icon-only="true" data-copy-brand="${escapeHtml(brand.slug)}" aria-label="${escapeHtml(t("copy.reference"))} ${escapeHtml(localized.name)}">${copyIcon()}</button>
@@ -689,7 +703,7 @@ async function renderIndex() {
           <p class="eyebrow">${escapeHtml(statusLabel(brand.status))}</p>
           <h2>${escapeHtml(localized.name)}</h2>
           ${miniPalette(brand.theme)}
-          <p class="muted">${escapeHtml(localized.secondaryName || "")}</p>
+          <p class="muted alt-name">${localized.secondaryName ? `${escapeHtml(languageLabel(localized.secondaryLanguage))} · ${escapeHtml(localized.secondaryName)}` : ""}</p>
           <p class="card-intro">${escapeHtml(localized.intro || "")}</p>
           <div class="card-profile">
             <span>${escapeHtml(t("brand.mainLanguage"))}: ${escapeHtml(languageLabel(brand.mainLanguage || localized.language))}</span>
@@ -713,16 +727,17 @@ async function renderBrand() {
   if (!page) return;
   const slug = new URLSearchParams(location.search).get("brand") || "tableai";
   const brand = await loadJson(`api/brands/${slug}.json`);
+  const display = mainBrand(brand);
   const localized = localizedBrand(brand);
-  document.title = `${localized.name} · Brand Guidelines`;
+  document.title = `${display.name} · Brand Guidelines`;
   const hero = brand.images?.[0]?.sitePath;
   page.innerHTML = `
     <div class="brand-shell ${themeClass(brand.theme)}" style="${themeStyle(brand.theme)}">
       <section class="brand-hero">
         <div>
           <p class="eyebrow">${escapeHtml(statusLabel(brand.status))}</p>
-          <h1>${escapeHtml(localized.name)}</h1>
-          <p class="muted">${escapeHtml(localized.secondaryName || "")}</p>
+          <h1>${escapeHtml(display.name)}</h1>
+          <p class="muted alt-name">${display.secondaryName ? `${escapeHtml(languageLabel(display.secondaryLanguage))} · ${escapeHtml(display.secondaryName)}` : ""}</p>
           <p>${escapeHtml(localized.intro)}</p>
           ${swatches(brand.theme, true)}
           <div class="actions">

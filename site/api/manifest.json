@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-04T11:50:00.079Z",
+  "generatedAt": "2026-07-04T11:58:26.985Z",
   "version": {
-    "hash": "0db166661358bccc3f124971e161e067a41dfad8",
-    "shortHash": "0db1666",
-    "date": "2026-07-04T19:46:22+08:00",
-    "message": "Add portal actions and admin TOTP login",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/0db166661358bccc3f124971e161e067a41dfad8"
+    "hash": "d7aa033c0b3df3034fb0233fc056384659d54d03",
+    "shortHash": "d7aa033",
+    "date": "2026-07-04T19:51:41+08:00",
+    "message": "Preload agent skill copy text",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/d7aa033c0b3df3034fb0233fc056384659d54d03"
   },
   "brands": [
     {
@@ -170,11 +170,11 @@
   "history": {
     "apiUrl": "api/versions.json",
     "latest": {
-      "hash": "0db166661358bccc3f124971e161e067a41dfad8",
-      "shortHash": "0db1666",
-      "date": "2026-07-04T19:46:22+08:00",
-      "message": "Add portal actions and admin TOTP login",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/0db166661358bccc3f124971e161e067a41dfad8"
+      "hash": "d7aa033c0b3df3034fb0233fc056384659d54d03",
+      "shortHash": "d7aa033",
+      "date": "2026-07-04T19:51:41+08:00",
+      "message": "Preload agent skill copy text",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/d7aa033c0b3df3034fb0233fc056384659d54d03"
     }
   },
   "sync": {

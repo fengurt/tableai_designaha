@@ -519,6 +519,11 @@ p { line-height: 1.65; }
 .card-body .eyebrow { color: var(--brand-primary, var(--accent)); }
 .card-body .muted, .card-body p { color: var(--brand-muted, var(--muted)); }
 .card-body h2 { color: var(--brand-ink, var(--ink)); font-size: 30px; line-height: 1.02; margin: 2px 0 0; padding-right: 48px; }
+.alt-name {
+  min-height: 20px;
+  font-size: 13px;
+  letter-spacing: .02em;
+}
 .card-intro {
   font-size: 13px;
   line-height: 1.45;
