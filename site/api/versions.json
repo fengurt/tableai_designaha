@@ -1,5 +1,12 @@
 [
   {
+    "hash": "c723f8453cb7795108b51880986e7d9a664da5b1",
+    "shortHash": "c723f84",
+    "date": "2026-07-04T10:52:32+08:00",
+    "message": "Add global search and version history",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/c723f8453cb7795108b51880986e7d9a664da5b1"
+  },
+  {
     "hash": "a0998f7e8a9aa8e198f1671ff03ed3cf2aaf4f8c",
     "shortHash": "a0998f7",
     "date": "2026-07-04T10:46:14+08:00",
@@ -75,12 +82,5 @@
     "date": "2026-06-18T23:18:04+08:00",
     "message": "Merge pull request #2 from fengurt/feat/kind-skill-md",
     "url": "https://github.com/fengurt/tableai_designaha/commit/d4e7b9a6009d588cfb4cb0be3db6156d3e27099b"
-  },
-  {
-    "hash": "163bc8fd2b671aaada1694df6096977a677808fd",
-    "shortHash": "163bc8f",
-    "date": "2026-06-18T23:17:23+08:00",
-    "message": "Add KiND skill markdown doc",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/163bc8fd2b671aaada1694df6096977a677808fd"
   }
 ]

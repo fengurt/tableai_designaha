@@ -1,13 +1,13 @@
 {
   "name": "岁知社 IPTrust",
   "description": "岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。",
-  "generatedAt": "2026-07-04T02:51:36.787Z",
+  "generatedAt": "2026-07-04T03:59:11.396Z",
   "version": {
-    "hash": "a0998f7e8a9aa8e198f1671ff03ed3cf2aaf4f8c",
-    "shortHash": "a0998f7",
-    "date": "2026-07-04T10:46:14+08:00",
-    "message": "Refine IPTrust public entry UX",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a0998f7e8a9aa8e198f1671ff03ed3cf2aaf4f8c"
+    "hash": "c723f8453cb7795108b51880986e7d9a664da5b1",
+    "shortHash": "c723f84",
+    "date": "2026-07-04T10:52:32+08:00",
+    "message": "Add global search and version history",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/c723f8453cb7795108b51880986e7d9a664da5b1"
   },
   "brands": [
     {
@@ -99,6 +99,12 @@
       "name": "PKU BOYA Academy",
       "apiUrl": "api/brands/boya.json",
       "guideUrl": "brand.html?brand=boya"
+    },
+    {
+      "slug": "apuch",
+      "name": "岁知社 APUCH",
+      "apiUrl": "api/brands/apuch.json",
+      "guideUrl": "brand.html?brand=apuch"
     }
   ],
   "mcp": {
@@ -122,11 +128,11 @@
   "history": {
     "apiUrl": "api/versions.json",
     "latest": {
-      "hash": "a0998f7e8a9aa8e198f1671ff03ed3cf2aaf4f8c",
-      "shortHash": "a0998f7",
-      "date": "2026-07-04T10:46:14+08:00",
-      "message": "Refine IPTrust public entry UX",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/a0998f7e8a9aa8e198f1671ff03ed3cf2aaf4f8c"
+      "hash": "c723f8453cb7795108b51880986e7d9a664da5b1",
+      "shortHash": "c723f84",
+      "date": "2026-07-04T10:52:32+08:00",
+      "message": "Add global search and version history",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/c723f8453cb7795108b51880986e7d9a664da5b1"
     }
   },
   "sync": {

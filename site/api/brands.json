@@ -931,5 +931,66 @@
     "imageCount": 0,
     "heroImage": "",
     "primaryExcerpt": "PKU BOYA Academy Chinese name: 博雅问渠书院 Brand Role PKU BOYA Academy is a learning and inquiry IP centered on liberal education, classical depth, and contemporary knowledge flow. Visual Direction Temperament: scholarly, clear, calm, rigorous, open. Color cues: academy blue, warm gold, paper white, soft stone grey. Imagery cues: reading rooms, flowing water, question marks, book margins, courtyards, knowledge maps. Agent"
+  },
+  {
+    "slug": "apuch",
+    "folder": "APUCH",
+    "name": "岁知社 APUCH",
+    "nativeName": "APUCH",
+    "description": "岁知社旗下的文化智能与公共知识 IP 系统。",
+    "primaryGuide": "APUCH/README.md",
+    "theme": {
+      "mode": "light",
+      "primary": "#14304A",
+      "accent": "#A88B52",
+      "secondary": "#42695A",
+      "surface": "#F4F1EA",
+      "paper": "#FFFEFA",
+      "ink": "#17212A",
+      "muted": "#5E6870",
+      "line": "rgba(20, 48, 74, 0.16)",
+      "keywords": [
+        "cultural intelligence",
+        "public knowledge",
+        "archive",
+        "agent-readable",
+        "IPTrust"
+      ]
+    },
+    "mainName": "岁知社 APUCH",
+    "mainLanguage": "zh",
+    "display": {
+      "default": {
+        "language": "zh",
+        "name": "岁知社 APUCH"
+      },
+      "zh": {
+        "name": "岁知社 APUCH",
+        "secondaryName": "APUCH"
+      },
+      "en": {
+        "name": "APUCH",
+        "secondaryName": "岁知社 APUCH"
+      }
+    },
+    "intro": {
+      "zh": "岁知社 APUCH 是面向文化智能、公共知识与 Agent 可读协作的 IP 系统。",
+      "en": "APUCH is an IP under 岁知社 for cultural intelligence, public knowledge, and agent-readable collaboration."
+    },
+    "url": "brand.html?brand=apuch",
+    "apiUrl": "api/brands/apuch.json",
+    "status": "documented",
+    "editablePaths": [
+      "APUCH/README.md"
+    ],
+    "source": {
+      "github": "https://github.com/fengurt/tableai_designaha/tree/main/APUCH",
+      "folder": "APUCH"
+    },
+    "guideCount": 1,
+    "tokenCount": 0,
+    "imageCount": 0,
+    "heroImage": "",
+    "primaryExcerpt": "岁知社 APUCH English name: APUCH Brand Role 岁知社 APUCH 是面向文化智能、公共知识与 Agent 可读协作的 IP 系统。 APUCH is an IP under 岁知社 for cultural intelligence, public knowledge, and agent readable collaboration. Visual Direction Temperament: concise, thoughtful, civic, archival, quietly contemporary. Color cues: deep ink blue, knowledge gold, soft paper, institutional green. Imagery cues: archive cards, daylight on paper, civic halls, knowl"
   }
 ]

@@ -27,6 +27,7 @@ Brands:
 - RGD (rgd): /api/brands/rgd.json · palette #E06B3A / #C8A15A
 - Changoods (changoods): /api/brands/changoods.json · palette #486B3F / #D2A94C
 - PKU BOYA Academy (boya): /api/brands/boya.json · palette #243B6B / #B89A5E
+- 岁知社 APUCH (apuch): /api/brands/apuch.json · palette #14304A / #A88B52
 
 Admin workflow:
 - /admin.html unlocks with the generated admin key.

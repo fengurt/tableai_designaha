@@ -298,5 +298,25 @@
       "line": "rgba(36, 59, 107, 0.16)",
       "keywords": ["academy", "boya", "knowledge", "inquiry", "classical learning"]
     }
+  },
+  {
+    "slug": "apuch",
+    "folder": "APUCH",
+    "name": "岁知社 APUCH",
+    "nativeName": "APUCH",
+    "description": "岁知社旗下的文化智能与公共知识 IP 系统。",
+    "primaryGuide": "APUCH/README.md",
+    "theme": {
+      "mode": "light",
+      "primary": "#14304A",
+      "accent": "#A88B52",
+      "secondary": "#42695A",
+      "surface": "#F4F1EA",
+      "paper": "#FFFEFA",
+      "ink": "#17212A",
+      "muted": "#5E6870",
+      "line": "rgba(20, 48, 74, 0.16)",
+      "keywords": ["cultural intelligence", "public knowledge", "archive", "agent-readable", "IPTrust"]
+    }
   }
 ]
