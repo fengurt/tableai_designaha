@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-05T22:13:26.925Z",
+  "generatedAt": "2026-07-05T22:20:53.543Z",
   "version": {
-    "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
-    "shortHash": "542890f",
-    "date": "2026-07-05T10:48:18+08:00",
-    "message": "Add transparent Table AI logo",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
+    "hash": "60db50ce358da3722f47e41ce55f5470fbb59b78",
+    "shortHash": "60db50c",
+    "date": "2026-07-06T06:14:20+08:00",
+    "message": "Add IP asset calls and mood boards",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/60db50ce358da3722f47e41ce55f5470fbb59b78"
   },
   "brands": [
     {
@@ -181,6 +181,15 @@
       "apiUrl": "api/brands/pam.json",
       "historyUrl": "api/history/pam.json",
       "guideUrl": "brand.html?brand=pam"
+    },
+    {
+      "slug": "ksamint",
+      "name": "ksamint",
+      "mainLanguage": "en",
+      "mainLocale": "EN",
+      "apiUrl": "api/brands/ksamint.json",
+      "historyUrl": "api/history/ksamint.json",
+      "guideUrl": "brand.html?brand=ksamint"
     }
   ],
   "mcp": {
@@ -210,11 +219,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
-      "shortHash": "542890f",
-      "date": "2026-07-05T10:48:18+08:00",
-      "message": "Add transparent Table AI logo",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
+      "hash": "60db50ce358da3722f47e41ce55f5470fbb59b78",
+      "shortHash": "60db50c",
+      "date": "2026-07-06T06:14:20+08:00",
+      "message": "Add IP asset calls and mood boards",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/60db50ce358da3722f47e41ce55f5470fbb59b78"
     }
   },
   "sync": {

@@ -546,5 +546,35 @@
       "line": "rgba(31, 29, 26, 0.14)",
       "keywords": ["paper white", "ink black", "warm grey", "ochre", "architecture", "locality", "restraint"]
     }
+  },
+  {
+    "slug": "ksamint",
+    "folder": "ksamint",
+    "name": "ksamint",
+    "nativeName": "查明",
+    "description": "Clarity-oriented IP system for inquiry, verification, and fresh intelligence.",
+    "officialWebsite": "",
+    "mainLanguage": "en",
+    "intro": {
+      "zh": "查明 ksamint 是面向清晰判断、信息核验与轻盈智能协作的 IP。",
+      "en": "ksamint is an IP for clear judgment, information verification, and lightweight intelligent collaboration."
+    },
+    "business": {
+      "zh": "信息核验、研究辅助、智能检索与清晰表达。",
+      "en": "Information verification, research assistance, intelligent search, and clear expression."
+    },
+    "primaryGuide": "ksamint/README.md",
+    "theme": {
+      "mode": "light",
+      "primary": "#0F4B42",
+      "accent": "#7EDBC6",
+      "secondary": "#8DAAA2",
+      "surface": "#F3FAF7",
+      "paper": "#FFFFFF",
+      "ink": "#12231F",
+      "muted": "#60756F",
+      "line": "rgba(15, 75, 66, 0.16)",
+      "keywords": ["mint", "clarity", "verification", "fresh intelligence", "clear judgment"]
+    }
   }
 ]

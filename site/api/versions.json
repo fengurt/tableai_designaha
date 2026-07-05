@@ -1,5 +1,12 @@
 [
   {
+    "hash": "60db50ce358da3722f47e41ce55f5470fbb59b78",
+    "shortHash": "60db50c",
+    "date": "2026-07-06T06:14:20+08:00",
+    "message": "Add IP asset calls and mood boards",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/60db50ce358da3722f47e41ce55f5470fbb59b78"
+  },
+  {
     "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
     "shortHash": "542890f",
     "date": "2026-07-05T10:48:18+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-07-04T19:51:41+08:00",
     "message": "Preload agent skill copy text",
     "url": "https://github.com/fengurt/tableai_designaha/commit/d7aa033c0b3df3034fb0233fc056384659d54d03"
-  },
-  {
-    "hash": "0db166661358bccc3f124971e161e067a41dfad8",
-    "shortHash": "0db1666",
-    "date": "2026-07-04T19:46:22+08:00",
-    "message": "Add portal actions and admin TOTP login",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/0db166661358bccc3f124971e161e067a41dfad8"
   }
 ]
