@@ -71,14 +71,26 @@
     "en": ""
   },
   "version": {
-    "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
-    "shortHash": "5d88cf8",
-    "date": "2026-07-04T22:48:29+08:00",
-    "message": "Refine system API connect panel",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
+    "hash": "067a47c76f1cb812b607335089911c282f4d8f78",
+    "shortHash": "067a47c",
+    "date": "2026-07-05T10:24:24+08:00",
+    "message": "Add Sanctem IP and brand logos",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/067a47c76f1cb812b607335089911c282f4d8f78"
   },
   "historyUrl": "api/history/apha.json",
   "history": [
+    {
+      "hash": "067a47c76f1cb812b607335089911c282f4d8f78",
+      "shortHash": "067a47c",
+      "date": "2026-07-05T10:24:24+08:00",
+      "message": "Add Sanctem IP and brand logos",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/067a47c76f1cb812b607335089911c282f4d8f78",
+      "sourcePaths": [
+        "config/brands.json",
+        "APHA",
+        "APHA/README.md"
+      ]
+    },
     {
       "hash": "a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
       "shortHash": "a0e6ecd",
@@ -133,18 +145,6 @@
       "date": "2026-07-04T11:59:40+08:00",
       "message": "Add APUCH IP to IPTrust",
       "url": "https://github.com/fengurt/tableai_designaha/commit/088ab8909a2d4284cd64d7924cc60fa39b8eb206",
-      "sourcePaths": [
-        "config/brands.json",
-        "APHA",
-        "APHA/README.md"
-      ]
-    },
-    {
-      "hash": "c723f8453cb7795108b51880986e7d9a664da5b1",
-      "shortHash": "c723f84",
-      "date": "2026-07-04T10:52:32+08:00",
-      "message": "Add global search and version history",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/c723f8453cb7795108b51880986e7d9a664da5b1",
       "sourcePaths": [
         "config/brands.json",
         "APHA",

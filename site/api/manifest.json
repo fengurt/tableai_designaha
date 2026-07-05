@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-05T02:22:35.590Z",
+  "generatedAt": "2026-07-05T02:34:19.431Z",
   "version": {
-    "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
-    "shortHash": "5d88cf8",
-    "date": "2026-07-04T22:48:29+08:00",
-    "message": "Refine system API connect panel",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
+    "hash": "067a47c76f1cb812b607335089911c282f4d8f78",
+    "shortHash": "067a47c",
+    "date": "2026-07-05T10:24:24+08:00",
+    "message": "Add Sanctem IP and brand logos",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/067a47c76f1cb812b607335089911c282f4d8f78"
   },
   "brands": [
     {
@@ -210,11 +210,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
-      "shortHash": "5d88cf8",
-      "date": "2026-07-04T22:48:29+08:00",
-      "message": "Refine system API connect panel",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
+      "hash": "067a47c76f1cb812b607335089911c282f4d8f78",
+      "shortHash": "067a47c",
+      "date": "2026-07-05T10:24:24+08:00",
+      "message": "Add Sanctem IP and brand logos",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/067a47c76f1cb812b607335089911c282f4d8f78"
     }
   },
   "sync": {

@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "5d88cf8-c2aa7f7f";
+const BUILD_VERSION = "067a47c-ab1b6e53";
 
 const i18n = {
   cn: {
@@ -867,6 +867,43 @@ function normalizeSearchText(value = "") {
   return String(value).toLowerCase();
 }
 
+function assetScore(image = {}) {
+  const text = [image.path, image.sitePath, image.title].filter(Boolean).join(" ").toLowerCase();
+  let score = 0;
+  if (text.includes("logo")) score += 60;
+  if (text.includes("a2a")) score += 35;
+  if (text.includes("wide") || text.includes("wordmark")) score += 25;
+  if (text.includes("color") || text.includes("red")) score += 32;
+  if (text.includes("black")) score += 10;
+  if (text.includes("white")) score -= 18;
+  if (String(image.sitePath || "").toLowerCase().endsWith(".png")) score += 10;
+  if (String(image.sitePath || "").toLowerCase().endsWith(".jpg")) score -= 4;
+  if (text.includes("brand-hero")) score -= 90;
+  return score;
+}
+
+function preferredBrandImage(images = []) {
+  if (!images.length) return null;
+  const candidates = [...images].sort((a, b) => assetScore(b) - assetScore(a));
+  return assetScore(candidates[0]) > 0 ? candidates[0] : images[0];
+}
+
+function brandAssetStrip(images = []) {
+  if (!images.length) return "";
+  return `
+    <section class="brand-assets" aria-label="Brand assets">
+      <p class="eyebrow">Logo / Assets</p>
+      <div class="brand-asset-strip">
+        ${images.map((image) => `
+          <a class="brand-asset" href="${escapeHtml(image.sitePath)}" title="${escapeHtml(image.title || image.path || "")}">
+            <img src="${escapeHtml(image.sitePath)}" alt="${escapeHtml(image.title || "")}" loading="lazy">
+          </a>
+        `).join("")}
+      </div>
+    </section>
+  `;
+}
+
 async function renderGlobalResults(query) {
   const panel = $("#globalResults");
   if (!panel) return;
@@ -1006,7 +1043,7 @@ async function renderBrand() {
   const display = mainBrand(brand);
   const localized = localizedBrand(brand);
   document.title = `${display.name} · Brand Guidelines`;
-  const hero = brand.images?.[0]?.sitePath;
+  const hero = preferredBrandImage(brand.images || []);
   page.innerHTML = `
     <div class="brand-shell ${themeClass(brand.theme)}" style="${themeStyle(brand.theme)}">
       <section class="brand-hero">
@@ -1021,8 +1058,9 @@ async function renderBrand() {
             <a class="button ghost" href="${brand.source.github}">${t("brand.source")}</a>
           </div>
         </div>
-        ${hero ? `<img src="${hero}" alt="">` : ""}
+        ${hero ? `<div class="brand-visual"><img src="${escapeHtml(hero.sitePath)}" alt="${escapeHtml(hero.title || display.name)}"></div>` : ""}
       </section>
+      ${brandAssetStrip(brand.images || [])}
       <section class="resource-list">
         <div class="resource-grid">
           <div class="resource"><strong>${t("brand.website")}</strong><br>${brand.officialWebsite ? `<a href="${escapeHtml(brand.officialWebsite)}">${escapeHtml(brand.officialWebsite)}</a>` : escapeHtml(t("brand.blank"))}</div>
