@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "067a47c-ab1b6e53";
+const BUILD_VERSION = "3bd27b3-9b61a04f";
 
 const i18n = {
   cn: {
@@ -872,6 +872,7 @@ function assetScore(image = {}) {
   let score = 0;
   if (text.includes("logo")) score += 60;
   if (text.includes("a2a")) score += 35;
+  if (text.includes("transparent") || text.includes("clear")) score += 42;
   if (text.includes("wide") || text.includes("wordmark")) score += 25;
   if (text.includes("color") || text.includes("red")) score += 32;
   if (text.includes("black")) score += 10;

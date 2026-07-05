@@ -2698,6 +2698,7 @@ function assetScore(image = {}) {
   let score = 0;
   if (text.includes("logo")) score += 60;
   if (text.includes("a2a")) score += 35;
+  if (text.includes("transparent") || text.includes("clear")) score += 42;
   if (text.includes("wide") || text.includes("wordmark")) score += 25;
   if (text.includes("color") || text.includes("red")) score += 32;
   if (text.includes("black")) score += 10;

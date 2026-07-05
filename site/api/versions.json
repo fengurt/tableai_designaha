@@ -1,5 +1,12 @@
 [
   {
+    "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
+    "shortHash": "3bd27b3",
+    "date": "2026-07-05T10:35:21+08:00",
+    "message": "Show logos on brand pages",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+  },
+  {
     "hash": "067a47c76f1cb812b607335089911c282f4d8f78",
     "shortHash": "067a47c",
     "date": "2026-07-05T10:24:24+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-07-04T19:25:10+08:00",
     "message": "Sync generated site metadata",
     "url": "https://github.com/fengurt/tableai_designaha/commit/7724d9475ca70a078be10921cce0b10757a05f9b"
-  },
-  {
-    "hash": "669e89697e3806042cb178b2808bf6e552281147",
-    "shortHash": "669e896",
-    "date": "2026-07-04T19:23:08+08:00",
-    "message": "Redirect www apuch to canonical domain",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/669e89697e3806042cb178b2808bf6e552281147"
   }
 ]

@@ -71,11 +71,11 @@
     "en": ""
   },
   "version": {
-    "hash": "067a47c76f1cb812b607335089911c282f4d8f78",
-    "shortHash": "067a47c",
-    "date": "2026-07-05T10:24:24+08:00",
-    "message": "Add Sanctem IP and brand logos",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/067a47c76f1cb812b607335089911c282f4d8f78"
+    "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
+    "shortHash": "3bd27b3",
+    "date": "2026-07-05T10:35:21+08:00",
+    "message": "Show logos on brand pages",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
   },
   "historyUrl": "api/history/changoods.json",
   "history": [
