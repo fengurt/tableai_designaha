@@ -60,6 +60,36 @@
     }
   },
   {
+    "slug": "sanctem",
+    "folder": "Sanctem",
+    "name": "Sanctem",
+    "nativeName": "东方康养疗愈品牌",
+    "description": "Oriental wellness and healing brand.",
+    "officialWebsite": "",
+    "mainLanguage": "en",
+    "intro": {
+      "zh": "Sanctem 是东方康养疗愈品牌，面向身心复原、旅居疗愈与克制的健康服务体验。",
+      "en": "Sanctem is an oriental wellness and healing brand for restorative care, healing stays, and restrained wellbeing services."
+    },
+    "business": {
+      "zh": "康养疗愈、东方身心护理、旅居疗愈体验与品牌化健康服务。",
+      "en": "Wellness healing, oriental body-mind care, restorative stays, and branded wellbeing services."
+    },
+    "primaryGuide": "Sanctem/README.md",
+    "theme": {
+      "mode": "light",
+      "primary": "#1D2A24",
+      "accent": "#B58A5F",
+      "secondary": "#7C9A87",
+      "surface": "#F6F1E8",
+      "paper": "#FFFDF8",
+      "ink": "#1E211C",
+      "muted": "#687267",
+      "line": "rgba(29, 42, 36, 0.16)",
+      "keywords": ["oriental wellness", "healing", "sage", "warm gold", "restorative care"]
+    }
+  },
+  {
     "slug": "kind",
     "folder": "KiND",
     "name": "KiND",

@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-04T14:46:57.945Z",
+  "generatedAt": "2026-07-05T02:22:35.590Z",
   "version": {
-    "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
-    "shortHash": "3d16dc3",
-    "date": "2026-07-04T22:34:53+08:00",
-    "message": "Simplify System API key connection",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3d16dc3a1bb17d2cf00a6096cf93652564b5edd8"
+    "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+    "shortHash": "5d88cf8",
+    "date": "2026-07-04T22:48:29+08:00",
+    "message": "Refine system API connect panel",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
   },
   "brands": [
     {
@@ -37,6 +37,15 @@
       "apiUrl": "api/brands/vanahom.json",
       "historyUrl": "api/history/vanahom.json",
       "guideUrl": "brand.html?brand=vanahom"
+    },
+    {
+      "slug": "sanctem",
+      "name": "Sanctem",
+      "mainLanguage": "en",
+      "mainLocale": "EN",
+      "apiUrl": "api/brands/sanctem.json",
+      "historyUrl": "api/history/sanctem.json",
+      "guideUrl": "brand.html?brand=sanctem"
     },
     {
       "slug": "kind",
@@ -201,11 +210,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
-      "shortHash": "3d16dc3",
-      "date": "2026-07-04T22:34:53+08:00",
-      "message": "Simplify System API key connection",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3d16dc3a1bb17d2cf00a6096cf93652564b5edd8"
+      "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+      "shortHash": "5d88cf8",
+      "date": "2026-07-04T22:48:29+08:00",
+      "message": "Refine system API connect panel",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
     }
   },
   "sync": {

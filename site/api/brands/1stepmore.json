@@ -71,11 +71,11 @@
     "en": ""
   },
   "version": {
-    "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
-    "shortHash": "3d16dc3",
-    "date": "2026-07-04T22:34:53+08:00",
-    "message": "Simplify System API key connection",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3d16dc3a1bb17d2cf00a6096cf93652564b5edd8"
+    "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+    "shortHash": "5d88cf8",
+    "date": "2026-07-04T22:48:29+08:00",
+    "message": "Refine system API connect panel",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
   },
   "historyUrl": "api/history/1stepmore.json",
   "history": [

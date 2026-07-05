@@ -72,11 +72,11 @@
       "en": ""
     },
     "version": {
-      "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
-      "shortHash": "3d16dc3",
-      "date": "2026-07-04T22:34:53+08:00",
-      "message": "Simplify System API key connection",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3d16dc3a1bb17d2cf00a6096cf93652564b5edd8"
+      "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+      "shortHash": "5d88cf8",
+      "date": "2026-07-04T22:48:29+08:00",
+      "message": "Refine system API connect panel",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
     },
     "historyUrl": "api/history/tableai.json",
     "url": "brand.html?brand=tableai",
@@ -91,7 +91,7 @@
     },
     "guideCount": 1,
     "tokenCount": 1,
-    "imageCount": 1,
+    "imageCount": 2,
     "heroImage": "assets/brand-images/tableai.png",
     "primaryExcerpt": "设计规范文件 (design.md) 1. 核心设计哲学 本项目采用极简且富有启发性的视觉语言。设计应体现以下四个维度： 利他 (Altruistic) ：界面直观，优先考虑用户价值与操作效率。 真实 (Authentic) ：拒绝过度装饰，展现材质与结构的自然美感。 艺术 (Artistic) ：强调比例、对齐与留白的艺术性平衡。 优雅 (Elegant) ：通过色彩与细节传递专业且高端的质感。 2. 色彩系统 (Color Palette) 严禁使用预设的基础色，必须严格执行以下色值： 底色 (Base) : White ( FFFFFF) 用途：背景、大面积留白、轻盈感来源。 主色 (Primary) : 寰宇深蓝 (Universe Deep Blue) 0A1626 用途：主要文字、结构线条、重要功能区块、品牌标识。 点缀色 (Accent) : 日晷暗金 (Sundial Dark Gold) A88B52 用途：行"
   },
@@ -168,11 +168,11 @@
       "en": ""
     },
     "version": {
-      "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
-      "shortHash": "3d16dc3",
-      "date": "2026-07-04T22:34:53+08:00",
-      "message": "Simplify System API key connection",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3d16dc3a1bb17d2cf00a6096cf93652564b5edd8"
+      "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+      "shortHash": "5d88cf8",
+      "date": "2026-07-04T22:48:29+08:00",
+      "message": "Refine system API connect panel",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
     },
     "historyUrl": "api/history/vanahom.json",
     "url": "brand.html?brand=vanahom",
@@ -187,9 +187,105 @@
     },
     "guideCount": 1,
     "tokenCount": 0,
-    "imageCount": 1,
+    "imageCount": 9,
     "heroImage": "assets/brand-images/vanahom.png",
     "primaryExcerpt": "VANAHOM — Design System 凡纳弘途 · VANAHOM Building Tomorrow, Today — 为者常成，行者常至 A single reference for anyone designing or building VANAHOM surfaces — decks, briefs, brand pages, the workspace. Pairs with vanahom deck.html (the living deck) and the logo set in vanahom logo/ . A Member of the Table AI Alliance — same think tank register, its own ground. 1. Brand in one breath VANAHOM is a mission driven company that rebui"
+  },
+  {
+    "slug": "sanctem",
+    "folder": "Sanctem",
+    "name": "Sanctem",
+    "nativeName": "东方康养疗愈品牌",
+    "description": "Oriental wellness and healing brand.",
+    "officialWebsite": "",
+    "mainLanguage": "en",
+    "intro": {
+      "zh": "Sanctem 是东方康养疗愈品牌，面向身心复原、旅居疗愈与克制的健康服务体验。",
+      "en": "Sanctem is an oriental wellness and healing brand for restorative care, healing stays, and restrained wellbeing services."
+    },
+    "business": {
+      "zh": "康养疗愈、东方身心护理、旅居疗愈体验与品牌化健康服务。",
+      "en": "Wellness healing, oriental body-mind care, restorative stays, and branded wellbeing services."
+    },
+    "primaryGuide": "Sanctem/README.md",
+    "theme": {
+      "mode": "light",
+      "primary": "#1D2A24",
+      "accent": "#B58A5F",
+      "secondary": "#7C9A87",
+      "surface": "#F6F1E8",
+      "paper": "#FFFDF8",
+      "ink": "#1E211C",
+      "muted": "#687267",
+      "line": "rgba(29, 42, 36, 0.16)",
+      "keywords": [
+        "oriental wellness",
+        "healing",
+        "sage",
+        "warm gold",
+        "restorative care"
+      ]
+    },
+    "mainName": "Sanctem",
+    "mainLocale": "EN",
+    "profile": {
+      "officialWebsite": "",
+      "mainLanguage": "en",
+      "mainLocale": "EN",
+      "intro": {
+        "zh": "Sanctem 是东方康养疗愈品牌，面向身心复原、旅居疗愈与克制的健康服务体验。",
+        "en": "Sanctem is an oriental wellness and healing brand for restorative care, healing stays, and restrained wellbeing services."
+      },
+      "business": {
+        "zh": "康养疗愈、东方身心护理、旅居疗愈体验与品牌化健康服务。",
+        "en": "Wellness healing, oriental body-mind care, restorative stays, and branded wellbeing services."
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
+      }
+    },
+    "display": {
+      "default": {
+        "language": "en",
+        "name": "Sanctem"
+      },
+      "zh": {
+        "name": "东方康养疗愈品牌",
+        "secondaryName": "Sanctem"
+      },
+      "en": {
+        "name": "Sanctem",
+        "secondaryName": "东方康养疗愈品牌"
+      }
+    },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
+    "version": {
+      "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+      "shortHash": "5d88cf8",
+      "date": "2026-07-04T22:48:29+08:00",
+      "message": "Refine system API connect panel",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
+    },
+    "historyUrl": "api/history/sanctem.json",
+    "url": "brand.html?brand=sanctem",
+    "apiUrl": "api/brands/sanctem.json",
+    "status": "documented",
+    "editablePaths": [
+      "Sanctem/README.md"
+    ],
+    "source": {
+      "github": "https://github.com/fengurt/tableai_designaha/tree/main/Sanctem",
+      "folder": "Sanctem"
+    },
+    "guideCount": 1,
+    "tokenCount": 0,
+    "imageCount": 8,
+    "heroImage": "assets/brand-images/sanctem.png",
+    "primaryExcerpt": "Sanctem Sanctem is an oriental wellness and healing brand. 中文定位：东方康养疗愈品牌。 Brand Main IP name: Sanctem Chinese description: 东方康养疗愈品牌 Main language: English System role: wellness, healing, hospitality, and restorative living under an oriental care sensibility. Business 康养疗愈 东方身心护理 旅居疗愈体验 品牌化健康服务 Voice Calm, precise, and restorative. Speak with quiet confidence. Avoid medical overclaims, heavy mysticism, and decorative "
   },
   {
     "slug": "kind",
@@ -264,11 +360,11 @@
       "en": ""
     },
     "version": {
-      "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
-      "shortHash": "3d16dc3",
-      "date": "2026-07-04T22:34:53+08:00",
-      "message": "Simplify System API key connection",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3d16dc3a1bb17d2cf00a6096cf93652564b5edd8"
+      "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+      "shortHash": "5d88cf8",
+      "date": "2026-07-04T22:48:29+08:00",
+      "message": "Refine system API connect panel",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
     },
     "historyUrl": "api/history/kind.json",
     "url": "brand.html?brand=kind",
@@ -362,11 +458,11 @@
       "en": ""
     },
     "version": {
-      "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
-      "shortHash": "3d16dc3",
-      "date": "2026-07-04T22:34:53+08:00",
-      "message": "Simplify System API key connection",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3d16dc3a1bb17d2cf00a6096cf93652564b5edd8"
+      "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+      "shortHash": "5d88cf8",
+      "date": "2026-07-04T22:48:29+08:00",
+      "message": "Refine system API connect panel",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
     },
     "historyUrl": "api/history/apha.json",
     "url": "brand.html?brand=apha",
@@ -458,11 +554,11 @@
       "en": ""
     },
     "version": {
-      "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
-      "shortHash": "3d16dc3",
-      "date": "2026-07-04T22:34:53+08:00",
-      "message": "Simplify System API key connection",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3d16dc3a1bb17d2cf00a6096cf93652564b5edd8"
+      "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+      "shortHash": "5d88cf8",
+      "date": "2026-07-04T22:48:29+08:00",
+      "message": "Refine system API connect panel",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
     },
     "historyUrl": "api/history/manaendless.json",
     "url": "brand.html?brand=manaendless",
@@ -552,11 +648,11 @@
       "en": ""
     },
     "version": {
-      "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
-      "shortHash": "3d16dc3",
-      "date": "2026-07-04T22:34:53+08:00",
-      "message": "Simplify System API key connection",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3d16dc3a1bb17d2cf00a6096cf93652564b5edd8"
+      "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+      "shortHash": "5d88cf8",
+      "date": "2026-07-04T22:48:29+08:00",
+      "message": "Refine system API connect panel",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
     },
     "historyUrl": "api/history/opcglobal.json",
     "url": "brand.html?brand=opcglobal",
@@ -646,11 +742,11 @@
       "en": ""
     },
     "version": {
-      "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
-      "shortHash": "3d16dc3",
-      "date": "2026-07-04T22:34:53+08:00",
-      "message": "Simplify System API key connection",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3d16dc3a1bb17d2cf00a6096cf93652564b5edd8"
+      "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+      "shortHash": "5d88cf8",
+      "date": "2026-07-04T22:48:29+08:00",
+      "message": "Refine system API connect panel",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
     },
     "historyUrl": "api/history/iptrust.json",
     "url": "brand.html?brand=iptrust",
@@ -663,7 +759,7 @@
     },
     "guideCount": 0,
     "tokenCount": 0,
-    "imageCount": 1,
+    "imageCount": 3,
     "heroImage": "assets/brand-images/iptrust.png",
     "primaryExcerpt": "Trusted intellectual-property asset stewardship brand placeholder."
   },
@@ -740,11 +836,11 @@
       "en": ""
     },
     "version": {
-      "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
-      "shortHash": "3d16dc3",
-      "date": "2026-07-04T22:34:53+08:00",
-      "message": "Simplify System API key connection",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3d16dc3a1bb17d2cf00a6096cf93652564b5edd8"
+      "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+      "shortHash": "5d88cf8",
+      "date": "2026-07-04T22:48:29+08:00",
+      "message": "Refine system API connect panel",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
     },
     "historyUrl": "api/history/fengzhi.json",
     "url": "brand.html?brand=fengzhi",
@@ -858,11 +954,11 @@
       "en": ""
     },
     "version": {
-      "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
-      "shortHash": "3d16dc3",
-      "date": "2026-07-04T22:34:53+08:00",
-      "message": "Simplify System API key connection",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3d16dc3a1bb17d2cf00a6096cf93652564b5edd8"
+      "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+      "shortHash": "5d88cf8",
+      "date": "2026-07-04T22:48:29+08:00",
+      "message": "Refine system API connect panel",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
     },
     "historyUrl": "api/history/axisee.json",
     "url": "brand.html?brand=axisee",
@@ -877,7 +973,7 @@
     },
     "guideCount": 1,
     "tokenCount": 0,
-    "imageCount": 1,
+    "imageCount": 2,
     "heroImage": "assets/brand-images/axisee.png",
     "primaryExcerpt": "Axisee Design System The canonical design guideline for all Axisee products. 单一可信来源 · Single Source of Truth for every Axisee UI (web, admin console, mobile member, 企微 sidebar tools). Axisee（酒店盈利大师 / Hotel Revenue Master ）is a centralized AI General Manager for hotel AI marketing, 私域营销 (private domain marketing) and profit optimization. The product is organized around three intelligent Agents , and the entire visual "
   },
@@ -954,11 +1050,11 @@
       }
     },
     "version": {
-      "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
-      "shortHash": "3d16dc3",
-      "date": "2026-07-04T22:34:53+08:00",
-      "message": "Simplify System API key connection",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3d16dc3a1bb17d2cf00a6096cf93652564b5edd8"
+      "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+      "shortHash": "5d88cf8",
+      "date": "2026-07-04T22:48:29+08:00",
+      "message": "Refine system API connect panel",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
     },
     "historyUrl": "api/history/sidera.json",
     "url": "brand.html?brand=sidera",
@@ -1050,11 +1146,11 @@
       "en": ""
     },
     "version": {
-      "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
-      "shortHash": "3d16dc3",
-      "date": "2026-07-04T22:34:53+08:00",
-      "message": "Simplify System API key connection",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3d16dc3a1bb17d2cf00a6096cf93652564b5edd8"
+      "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+      "shortHash": "5d88cf8",
+      "date": "2026-07-04T22:48:29+08:00",
+      "message": "Refine system API connect panel",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
     },
     "historyUrl": "api/history/1stepmore.json",
     "url": "brand.html?brand=1stepmore",
@@ -1146,11 +1242,11 @@
       "en": ""
     },
     "version": {
-      "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
-      "shortHash": "3d16dc3",
-      "date": "2026-07-04T22:34:53+08:00",
-      "message": "Simplify System API key connection",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3d16dc3a1bb17d2cf00a6096cf93652564b5edd8"
+      "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+      "shortHash": "5d88cf8",
+      "date": "2026-07-04T22:48:29+08:00",
+      "message": "Refine system API connect panel",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
     },
     "historyUrl": "api/history/agem.json",
     "url": "brand.html?brand=agem",
@@ -1242,11 +1338,11 @@
       "en": ""
     },
     "version": {
-      "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
-      "shortHash": "3d16dc3",
-      "date": "2026-07-04T22:34:53+08:00",
-      "message": "Simplify System API key connection",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3d16dc3a1bb17d2cf00a6096cf93652564b5edd8"
+      "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+      "shortHash": "5d88cf8",
+      "date": "2026-07-04T22:48:29+08:00",
+      "message": "Refine system API connect panel",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
     },
     "historyUrl": "api/history/rgd.json",
     "url": "brand.html?brand=rgd",
@@ -1338,11 +1434,11 @@
       "en": ""
     },
     "version": {
-      "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
-      "shortHash": "3d16dc3",
-      "date": "2026-07-04T22:34:53+08:00",
-      "message": "Simplify System API key connection",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3d16dc3a1bb17d2cf00a6096cf93652564b5edd8"
+      "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+      "shortHash": "5d88cf8",
+      "date": "2026-07-04T22:48:29+08:00",
+      "message": "Refine system API connect panel",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
     },
     "historyUrl": "api/history/changoods.json",
     "url": "brand.html?brand=changoods",
@@ -1434,11 +1530,11 @@
       "en": ""
     },
     "version": {
-      "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
-      "shortHash": "3d16dc3",
-      "date": "2026-07-04T22:34:53+08:00",
-      "message": "Simplify System API key connection",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3d16dc3a1bb17d2cf00a6096cf93652564b5edd8"
+      "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+      "shortHash": "5d88cf8",
+      "date": "2026-07-04T22:48:29+08:00",
+      "message": "Refine system API connect panel",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
     },
     "historyUrl": "api/history/boya.json",
     "url": "brand.html?brand=boya",
@@ -1530,11 +1626,11 @@
       "en": ""
     },
     "version": {
-      "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
-      "shortHash": "3d16dc3",
-      "date": "2026-07-04T22:34:53+08:00",
-      "message": "Simplify System API key connection",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3d16dc3a1bb17d2cf00a6096cf93652564b5edd8"
+      "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+      "shortHash": "5d88cf8",
+      "date": "2026-07-04T22:48:29+08:00",
+      "message": "Refine system API connect panel",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
     },
     "historyUrl": "api/history/apuch.json",
     "url": "brand.html?brand=apuch",
@@ -1628,11 +1724,11 @@
       }
     },
     "version": {
-      "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
-      "shortHash": "3d16dc3",
-      "date": "2026-07-04T22:34:53+08:00",
-      "message": "Simplify System API key connection",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3d16dc3a1bb17d2cf00a6096cf93652564b5edd8"
+      "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+      "shortHash": "5d88cf8",
+      "date": "2026-07-04T22:48:29+08:00",
+      "message": "Refine system API connect panel",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
     },
     "historyUrl": "api/history/pam.json",
     "url": "brand.html?brand=pam",

@@ -1,5 +1,12 @@
 [
   {
+    "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+    "shortHash": "5d88cf8",
+    "date": "2026-07-04T22:48:29+08:00",
+    "message": "Refine system API connect panel",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
+  },
+  {
     "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
     "shortHash": "3d16dc3",
     "date": "2026-07-04T22:34:53+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-07-04T19:21:39+08:00",
     "message": "Canonicalize apuch domain and sync site",
     "url": "https://github.com/fengurt/tableai_designaha/commit/1d5ea4d5ecda9bbc650819819c83970dd21c4b08"
-  },
-  {
-    "hash": "3b76a2c57d94dc9aa144f54f84b84ded524cc16b",
-    "shortHash": "3b76a2c",
-    "date": "2026-07-04T18:33:47+08:00",
-    "message": "Bind Cloudflare R2 media bucket",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3b76a2c57d94dc9aa144f54f84b84ded524cc16b"
   }
 ]

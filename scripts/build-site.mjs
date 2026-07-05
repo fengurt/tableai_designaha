@@ -54,6 +54,36 @@ function isBrandImage(path) {
   return path.includes("/assets/brand-images/") && [".png", ".jpg", ".jpeg", ".webp"].includes(extname(path).toLowerCase());
 }
 
+function safeAssetStem(value) {
+  const safe = value
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  return safe || "image";
+}
+
+function brandImageOutputName(brand, rel, usedNames) {
+  const ext = extname(rel).toLowerCase();
+  const parts = rel.split("/");
+  const filename = parts.at(-1) ?? "image";
+  const stem = filename.replace(/\.[^.]+$/, "");
+  if (stem === `${brand.slug}-brand-hero` || stem.endsWith("-brand-hero")) {
+    return `${brand.slug}${ext}`;
+  }
+  const parent = parts.at(-2) ?? "";
+  const rawStem = parent === "brand-images" ? stem : `${parent}-${stem}`;
+  const base = `${brand.slug}-${safeAssetStem(rawStem)}`;
+  let candidate = `${base}${ext}`;
+  let index = 2;
+  while (usedNames.has(candidate)) {
+    candidate = `${base}-${index}${ext}`;
+    index += 1;
+  }
+  usedNames.add(candidate);
+  return candidate;
+}
+
 function titleFromPath(path) {
   return path
     .split("/")
@@ -351,6 +381,7 @@ for (const brand of brands) {
   const guides = [];
   const tokens = [];
   const images = [];
+  const usedImageNames = new Set();
 
   for (const full of files) {
     const rel = relative(root, full).replaceAll("\\", "/");
@@ -374,7 +405,7 @@ for (const brand of brands) {
       });
     }
     if (isBrandImage(rel)) {
-      const outputName = `${brand.slug}${extname(rel).toLowerCase()}`;
+      const outputName = brandImageOutputName(brand, rel, usedImageNames);
       await copyFile(full, join(imageDir, outputName));
       images.push({
         path: rel,
@@ -386,7 +417,7 @@ for (const brand of brands) {
 
   guides.sort((a, b) => Number(b.primary) - Number(a.primary) || a.path.localeCompare(b.path));
   tokens.sort((a, b) => a.path.localeCompare(b.path));
-  images.sort((a, b) => a.path.localeCompare(b.path));
+  images.sort((a, b) => Number(b.path.includes("brand-hero")) - Number(a.path.includes("brand-hero")) || a.path.localeCompare(b.path));
   const history = mergeVersionHistory(loadBrandVersions(brand), previousHistoryBySlug.get(brand.slug), 20, {
     preferPreviousWhenShallow: true,
   });

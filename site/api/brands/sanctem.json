@@ -1,0 +1,218 @@
+{
+  "slug": "sanctem",
+  "folder": "Sanctem",
+  "name": "Sanctem",
+  "nativeName": "东方康养疗愈品牌",
+  "description": "Oriental wellness and healing brand.",
+  "officialWebsite": "",
+  "mainLanguage": "en",
+  "intro": {
+    "zh": "Sanctem 是东方康养疗愈品牌，面向身心复原、旅居疗愈与克制的健康服务体验。",
+    "en": "Sanctem is an oriental wellness and healing brand for restorative care, healing stays, and restrained wellbeing services."
+  },
+  "business": {
+    "zh": "康养疗愈、东方身心护理、旅居疗愈体验与品牌化健康服务。",
+    "en": "Wellness healing, oriental body-mind care, restorative stays, and branded wellbeing services."
+  },
+  "primaryGuide": "Sanctem/README.md",
+  "theme": {
+    "mode": "light",
+    "primary": "#1D2A24",
+    "accent": "#B58A5F",
+    "secondary": "#7C9A87",
+    "surface": "#F6F1E8",
+    "paper": "#FFFDF8",
+    "ink": "#1E211C",
+    "muted": "#687267",
+    "line": "rgba(29, 42, 36, 0.16)",
+    "keywords": [
+      "oriental wellness",
+      "healing",
+      "sage",
+      "warm gold",
+      "restorative care"
+    ]
+  },
+  "mainName": "Sanctem",
+  "mainLocale": "EN",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "en",
+    "mainLocale": "EN",
+    "intro": {
+      "zh": "Sanctem 是东方康养疗愈品牌，面向身心复原、旅居疗愈与克制的健康服务体验。",
+      "en": "Sanctem is an oriental wellness and healing brand for restorative care, healing stays, and restrained wellbeing services."
+    },
+    "business": {
+      "zh": "康养疗愈、东方身心护理、旅居疗愈体验与品牌化健康服务。",
+      "en": "Wellness healing, oriental body-mind care, restorative stays, and branded wellbeing services."
+    },
+    "notes": {
+      "zh": "",
+      "en": ""
+    }
+  },
+  "display": {
+    "default": {
+      "language": "en",
+      "name": "Sanctem"
+    },
+    "zh": {
+      "name": "东方康养疗愈品牌",
+      "secondaryName": "Sanctem"
+    },
+    "en": {
+      "name": "Sanctem",
+      "secondaryName": "东方康养疗愈品牌"
+    }
+  },
+  "notes": {
+    "zh": "",
+    "en": ""
+  },
+  "version": {
+    "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
+    "shortHash": "5d88cf8",
+    "date": "2026-07-04T22:48:29+08:00",
+    "message": "Refine system API connect panel",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
+  },
+  "historyUrl": "api/history/sanctem.json",
+  "history": [
+    {
+      "hash": "a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
+      "shortHash": "a0e6ecd",
+      "date": "2026-07-04T22:02:17+08:00",
+      "message": "Add Sidera reference notes",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
+      "sourcePaths": [
+        "config/brands.json",
+        "Sanctem",
+        "Sanctem/README.md"
+      ]
+    },
+    {
+      "hash": "0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
+      "shortHash": "0e3d71b",
+      "date": "2026-07-04T21:38:07+08:00",
+      "message": "Add PaM Design Office IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
+      "sourcePaths": [
+        "config/brands.json",
+        "Sanctem",
+        "Sanctem/README.md"
+      ]
+    },
+    {
+      "hash": "534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
+      "shortHash": "534c825",
+      "date": "2026-07-04T16:34:09+08:00",
+      "message": "Correct APUCH language and IPTrust naming",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
+      "sourcePaths": [
+        "config/brands.json",
+        "Sanctem",
+        "Sanctem/README.md"
+      ]
+    },
+    {
+      "hash": "1f20db30a5e970cf81e24c76e4613bc7e0036f09",
+      "shortHash": "1f20db3",
+      "date": "2026-07-04T16:01:00+08:00",
+      "message": "Add IP profile fields and main language display",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/1f20db30a5e970cf81e24c76e4613bc7e0036f09",
+      "sourcePaths": [
+        "config/brands.json",
+        "Sanctem",
+        "Sanctem/README.md"
+      ]
+    },
+    {
+      "hash": "088ab8909a2d4284cd64d7924cc60fa39b8eb206",
+      "shortHash": "088ab89",
+      "date": "2026-07-04T11:59:40+08:00",
+      "message": "Add APUCH IP to IPTrust",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/088ab8909a2d4284cd64d7924cc60fa39b8eb206",
+      "sourcePaths": [
+        "config/brands.json",
+        "Sanctem",
+        "Sanctem/README.md"
+      ]
+    },
+    {
+      "hash": "c723f8453cb7795108b51880986e7d9a664da5b1",
+      "shortHash": "c723f84",
+      "date": "2026-07-04T10:52:32+08:00",
+      "message": "Add global search and version history",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/c723f8453cb7795108b51880986e7d9a664da5b1",
+      "sourcePaths": [
+        "config/brands.json",
+        "Sanctem",
+        "Sanctem/README.md"
+      ]
+    }
+  ],
+  "url": "brand.html?brand=sanctem",
+  "apiUrl": "api/brands/sanctem.json",
+  "status": "documented",
+  "guides": [
+    {
+      "path": "Sanctem/README.md",
+      "title": "README",
+      "format": "md",
+      "primary": true,
+      "excerpt": "Sanctem Sanctem is an oriental wellness and healing brand. 中文定位：东方康养疗愈品牌。 Brand Main IP name: Sanctem Chinese description: 东方康养疗愈品牌 Main language: English System role: wellness, healing, hospitality, and restorative living under an oriental care sensibility. Business 康养疗愈 东方身心护理 旅居疗愈体验 品牌化健康服务 Voice Calm, precise, and restorative. Speak with quiet confidence. Avoid medical overclaims, heavy mysticism, and decorative ",
+      "text": "# Sanctem\n\nSanctem is an oriental wellness and healing brand.\n\n中文定位：东方康养疗愈品牌。\n\n## Brand\n\n- Main IP name: Sanctem\n- Chinese description: 东方康养疗愈品牌\n- Main language: English\n- System role: wellness, healing, hospitality, and restorative living under an oriental care sensibility.\n\n## Business\n\n- 康养疗愈\n- 东方身心护理\n- 旅居疗愈体验\n- 品牌化健康服务\n\n## Voice\n\nCalm, precise, and restorative. Speak with quiet confidence. Avoid medical overclaims, heavy mysticism, and decorative wellness cliches.\n\n## Asset Structure\n\n- `assets/brand-images/` — public logo images exposed through the website/API build.\n- `assets/logos/` — original logo source files.\n\n"
+    }
+  ],
+  "tokens": [],
+  "images": [
+    {
+      "path": "Sanctem/assets/brand-images/sanctem-brand-hero.png",
+      "sitePath": "assets/brand-images/sanctem.png",
+      "title": "Sanctem Brand Hero"
+    },
+    {
+      "path": "Sanctem/assets/brand-images/sanctem-logo-black-alt.jpg",
+      "sitePath": "assets/brand-images/sanctem-sanctem-logo-black-alt.jpg",
+      "title": "Sanctem Logo Black Alt"
+    },
+    {
+      "path": "Sanctem/assets/brand-images/sanctem-logo-black.png",
+      "sitePath": "assets/brand-images/sanctem-sanctem-logo-black.png",
+      "title": "Sanctem Logo Black"
+    },
+    {
+      "path": "Sanctem/assets/brand-images/sanctem-logo-color.jpg",
+      "sitePath": "assets/brand-images/sanctem-sanctem-logo-color.jpg",
+      "title": "Sanctem Logo Color"
+    },
+    {
+      "path": "Sanctem/assets/brand-images/sanctem-logo-color.png",
+      "sitePath": "assets/brand-images/sanctem-sanctem-logo-color.png",
+      "title": "Sanctem Logo Color"
+    },
+    {
+      "path": "Sanctem/assets/brand-images/sanctem-logo-white-black-alt.jpg",
+      "sitePath": "assets/brand-images/sanctem-sanctem-logo-white-black-alt.jpg",
+      "title": "Sanctem Logo White Black Alt"
+    },
+    {
+      "path": "Sanctem/assets/brand-images/sanctem-logo-white-black.jpg",
+      "sitePath": "assets/brand-images/sanctem-sanctem-logo-white-black.jpg",
+      "title": "Sanctem Logo White Black"
+    },
+    {
+      "path": "Sanctem/assets/brand-images/sanctem-logo-white.png",
+      "sitePath": "assets/brand-images/sanctem-sanctem-logo-white.png",
+      "title": "Sanctem Logo White"
+    }
+  ],
+  "editablePaths": [
+    "Sanctem/README.md"
+  ],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/Sanctem",
+    "folder": "Sanctem"
+  }
+}
