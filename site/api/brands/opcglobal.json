@@ -33,6 +33,7 @@
       "standards"
     ]
   },
+  "assetKey": "opcglobal",
   "mainName": "欧匹赛全球联盟",
   "mainLocale": "CN",
   "profile": {
@@ -71,11 +72,11 @@
     "en": ""
   },
   "version": {
-    "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-    "shortHash": "3bd27b3",
-    "date": "2026-07-05T10:35:21+08:00",
-    "message": "Show logos on brand pages",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+    "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+    "shortHash": "542890f",
+    "date": "2026-07-05T10:48:18+08:00",
+    "message": "Add transparent Table AI logo",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
   },
   "historyUrl": "api/history/opcglobal.json",
   "history": [
@@ -158,6 +159,107 @@
       "title": "Opcglobal Brand Hero"
     }
   ],
+  "assetKit": {
+    "assetKey": "opcglobal",
+    "endpoints": {
+      "brand": "api/brands/opcglobal.json",
+      "images": "api/brands/opcglobal.json#images",
+      "tokens": "api/brands/opcglobal.json#tokens",
+      "history": "api/history/opcglobal.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#1D3557"
+        },
+        {
+          "key": "accent",
+          "value": "#B79B63"
+        },
+        {
+          "key": "secondary",
+          "value": "#A23E3E"
+        },
+        {
+          "key": "surface",
+          "value": "#F3F5F6"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFFFF"
+        },
+        {
+          "key": "ink",
+          "value": "#162130"
+        },
+        {
+          "key": "muted",
+          "value": "#596776"
+        }
+      ],
+      "keywords": [
+        "deep blue",
+        "graphite",
+        "gold",
+        "global alliance",
+        "standards"
+      ],
+      "images": [
+        {
+          "path": "OPCGLOBAL/assets/brand-images/opcglobal-brand-hero.png",
+          "sitePath": "assets/brand-images/opcglobal.png",
+          "title": "Opcglobal Brand Hero"
+        }
+      ]
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#1D3557"
+      },
+      {
+        "key": "accent",
+        "value": "#B79B63"
+      },
+      {
+        "key": "secondary",
+        "value": "#A23E3E"
+      },
+      {
+        "key": "surface",
+        "value": "#F3F5F6"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFFFF"
+      },
+      {
+        "key": "ink",
+        "value": "#162130"
+      },
+      {
+        "key": "muted",
+        "value": "#596776"
+      }
+    ],
+    "keywords": [
+      "deep blue",
+      "graphite",
+      "gold",
+      "global alliance",
+      "standards"
+    ],
+    "images": [
+      {
+        "path": "OPCGLOBAL/assets/brand-images/opcglobal-brand-hero.png",
+        "sitePath": "assets/brand-images/opcglobal.png",
+        "title": "Opcglobal Brand Hero"
+      }
+    ]
+  },
   "editablePaths": [],
   "source": {
     "github": "https://github.com/fengurt/tableai_designaha/tree/main/OPCGLOBAL",

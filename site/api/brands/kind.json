@@ -33,6 +33,7 @@
       "inclusive AI"
     ]
   },
+  "assetKey": "kind",
   "mainName": "KiND",
   "mainLocale": "EN",
   "profile": {
@@ -71,11 +72,11 @@
     "en": ""
   },
   "version": {
-    "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-    "shortHash": "3bd27b3",
-    "date": "2026-07-05T10:35:21+08:00",
-    "message": "Show logos on brand pages",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+    "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+    "shortHash": "542890f",
+    "date": "2026-07-05T10:48:18+08:00",
+    "message": "Add transparent Table AI logo",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
   },
   "historyUrl": "api/history/kind.json",
   "history": [
@@ -196,6 +197,107 @@
       "title": "Kind Brand Hero"
     }
   ],
+  "assetKit": {
+    "assetKey": "kind",
+    "endpoints": {
+      "brand": "api/brands/kind.json",
+      "images": "api/brands/kind.json#images",
+      "tokens": "api/brands/kind.json#tokens",
+      "history": "api/history/kind.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#0E8C7B"
+        },
+        {
+          "key": "accent",
+          "value": "#E8765A"
+        },
+        {
+          "key": "secondary",
+          "value": "#2FD0B2"
+        },
+        {
+          "key": "surface",
+          "value": "#F8FBF9"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFFFF"
+        },
+        {
+          "key": "ink",
+          "value": "#052E28"
+        },
+        {
+          "key": "muted",
+          "value": "#52746C"
+        }
+      ],
+      "keywords": [
+        "teal",
+        "mint",
+        "coral",
+        "kind workforce",
+        "inclusive AI"
+      ],
+      "images": [
+        {
+          "path": "KiND/assets/brand-images/kind-brand-hero.png",
+          "sitePath": "assets/brand-images/kind.png",
+          "title": "Kind Brand Hero"
+        }
+      ]
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#0E8C7B"
+      },
+      {
+        "key": "accent",
+        "value": "#E8765A"
+      },
+      {
+        "key": "secondary",
+        "value": "#2FD0B2"
+      },
+      {
+        "key": "surface",
+        "value": "#F8FBF9"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFFFF"
+      },
+      {
+        "key": "ink",
+        "value": "#052E28"
+      },
+      {
+        "key": "muted",
+        "value": "#52746C"
+      }
+    ],
+    "keywords": [
+      "teal",
+      "mint",
+      "coral",
+      "kind workforce",
+      "inclusive AI"
+    ],
+    "images": [
+      {
+        "path": "KiND/assets/brand-images/kind-brand-hero.png",
+        "sitePath": "assets/brand-images/kind.png",
+        "title": "Kind Brand Hero"
+      }
+    ]
+  },
   "editablePaths": [
     "KiND/KiND Design.md",
     "KiND/kind-skill-md.md",

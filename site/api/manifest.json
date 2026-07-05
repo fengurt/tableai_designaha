@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-05T02:47:50.555Z",
+  "generatedAt": "2026-07-05T22:13:26.925Z",
   "version": {
-    "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-    "shortHash": "3bd27b3",
-    "date": "2026-07-05T10:35:21+08:00",
-    "message": "Show logos on brand pages",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+    "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+    "shortHash": "542890f",
+    "date": "2026-07-05T10:48:18+08:00",
+    "message": "Add transparent Table AI logo",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
   },
   "brands": [
     {
@@ -210,11 +210,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-      "shortHash": "3bd27b3",
-      "date": "2026-07-05T10:35:21+08:00",
-      "message": "Show logos on brand pages",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+      "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+      "shortHash": "542890f",
+      "date": "2026-07-05T10:48:18+08:00",
+      "message": "Add transparent Table AI logo",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
     }
   },
   "sync": {

@@ -34,6 +34,7 @@
         "minimal"
       ]
     },
+    "assetKey": "tableai",
     "mainName": "Table AI",
     "mainLocale": "EN",
     "profile": {
@@ -72,16 +73,137 @@
       "en": ""
     },
     "version": {
-      "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-      "shortHash": "3bd27b3",
-      "date": "2026-07-05T10:35:21+08:00",
-      "message": "Show logos on brand pages",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+      "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+      "shortHash": "542890f",
+      "date": "2026-07-05T10:48:18+08:00",
+      "message": "Add transparent Table AI logo",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
     },
     "historyUrl": "api/history/tableai.json",
     "url": "brand.html?brand=tableai",
     "apiUrl": "api/brands/tableai.json",
     "status": "documented",
+    "assetKit": {
+      "assetKey": "tableai",
+      "endpoints": {
+        "brand": "api/brands/tableai.json",
+        "images": "api/brands/tableai.json#images",
+        "tokens": "api/brands/tableai.json#tokens",
+        "history": "api/history/tableai.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#0A1626"
+          },
+          {
+            "key": "accent",
+            "value": "#A88B52"
+          },
+          {
+            "key": "secondary",
+            "value": "#545F72"
+          },
+          {
+            "key": "surface",
+            "value": "#FBF9FA"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFFFF"
+          },
+          {
+            "key": "ink",
+            "value": "#1B1B1D"
+          },
+          {
+            "key": "muted",
+            "value": "#44474C"
+          }
+        ],
+        "keywords": [
+          "white",
+          "deep blue",
+          "dark gold",
+          "think tank",
+          "minimal"
+        ],
+        "images": [
+          {
+            "path": "TABLEAI/assets/brand-images/tableai-brand-hero.png",
+            "sitePath": "assets/brand-images/tableai.png",
+            "title": "Tableai Brand Hero"
+          },
+          {
+            "path": "TABLEAI/assets/brand-images/tableai-a2a-logo-transparent.png",
+            "sitePath": "assets/brand-images/tableai-tableai-a2a-logo-transparent.png",
+            "title": "Tableai A2a Logo Transparent"
+          },
+          {
+            "path": "TABLEAI/assets/brand-images/tableai-a2a-logo.png",
+            "sitePath": "assets/brand-images/tableai-tableai-a2a-logo.png",
+            "title": "Tableai A2a Logo"
+          }
+        ]
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#0A1626"
+        },
+        {
+          "key": "accent",
+          "value": "#A88B52"
+        },
+        {
+          "key": "secondary",
+          "value": "#545F72"
+        },
+        {
+          "key": "surface",
+          "value": "#FBF9FA"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFFFF"
+        },
+        {
+          "key": "ink",
+          "value": "#1B1B1D"
+        },
+        {
+          "key": "muted",
+          "value": "#44474C"
+        }
+      ],
+      "keywords": [
+        "white",
+        "deep blue",
+        "dark gold",
+        "think tank",
+        "minimal"
+      ],
+      "images": [
+        {
+          "path": "TABLEAI/assets/brand-images/tableai-brand-hero.png",
+          "sitePath": "assets/brand-images/tableai.png",
+          "title": "Tableai Brand Hero"
+        },
+        {
+          "path": "TABLEAI/assets/brand-images/tableai-a2a-logo-transparent.png",
+          "sitePath": "assets/brand-images/tableai-tableai-a2a-logo-transparent.png",
+          "title": "Tableai A2a Logo Transparent"
+        },
+        {
+          "path": "TABLEAI/assets/brand-images/tableai-a2a-logo.png",
+          "sitePath": "assets/brand-images/tableai-tableai-a2a-logo.png",
+          "title": "Tableai A2a Logo"
+        }
+      ]
+    },
     "editablePaths": [
       "TABLEAI/TableAI_DESIGN.md"
     ],
@@ -130,6 +252,7 @@
         "wellbeing"
       ]
     },
+    "assetKey": "vanahom",
     "mainName": "凡纳弘途",
     "mainLocale": "CN",
     "profile": {
@@ -168,16 +291,197 @@
       "en": ""
     },
     "version": {
-      "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-      "shortHash": "3bd27b3",
-      "date": "2026-07-05T10:35:21+08:00",
-      "message": "Show logos on brand pages",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+      "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+      "shortHash": "542890f",
+      "date": "2026-07-05T10:48:18+08:00",
+      "message": "Add transparent Table AI logo",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
     },
     "historyUrl": "api/history/vanahom.json",
     "url": "brand.html?brand=vanahom",
     "apiUrl": "api/brands/vanahom.json",
     "status": "documented",
+    "assetKit": {
+      "assetKey": "vanahom",
+      "endpoints": {
+        "brand": "api/brands/vanahom.json",
+        "images": "api/brands/vanahom.json#images",
+        "tokens": "api/brands/vanahom.json#tokens",
+        "history": "api/history/vanahom.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#B12137"
+          },
+          {
+            "key": "accent",
+            "value": "#A8ADAD"
+          },
+          {
+            "key": "secondary",
+            "value": "#8E1A2C"
+          },
+          {
+            "key": "surface",
+            "value": "#F6F4F2"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFFFF"
+          },
+          {
+            "key": "ink",
+            "value": "#211B1C"
+          },
+          {
+            "key": "muted",
+            "value": "#6E7475"
+          }
+        ],
+        "keywords": [
+          "Hongtu red",
+          "Cangling grey",
+          "white space",
+          "hospitality",
+          "wellbeing"
+        ],
+        "images": [
+          {
+            "path": "VANAHOM/assets/brand-images/vanahom-brand-hero.png",
+            "sitePath": "assets/brand-images/vanahom.png",
+            "title": "Vanahom Brand Hero"
+          },
+          {
+            "path": "VANAHOM/assets/brand-images/vanahom-logo-black.jpg",
+            "sitePath": "assets/brand-images/vanahom-vanahom-logo-black.jpg",
+            "title": "Vanahom Logo Black"
+          },
+          {
+            "path": "VANAHOM/assets/brand-images/vanahom-logo-black.png",
+            "sitePath": "assets/brand-images/vanahom-vanahom-logo-black.png",
+            "title": "Vanahom Logo Black"
+          },
+          {
+            "path": "VANAHOM/assets/brand-images/vanahom-logo-grey.jpg",
+            "sitePath": "assets/brand-images/vanahom-vanahom-logo-grey.jpg",
+            "title": "Vanahom Logo Grey"
+          },
+          {
+            "path": "VANAHOM/assets/brand-images/vanahom-logo-grey.png",
+            "sitePath": "assets/brand-images/vanahom-vanahom-logo-grey.png",
+            "title": "Vanahom Logo Grey"
+          },
+          {
+            "path": "VANAHOM/assets/brand-images/vanahom-logo-red.jpg",
+            "sitePath": "assets/brand-images/vanahom-vanahom-logo-red.jpg",
+            "title": "Vanahom Logo Red"
+          },
+          {
+            "path": "VANAHOM/assets/brand-images/vanahom-logo-red.png",
+            "sitePath": "assets/brand-images/vanahom-vanahom-logo-red.png",
+            "title": "Vanahom Logo Red"
+          },
+          {
+            "path": "VANAHOM/assets/brand-images/vanahom-logo-white.jpg",
+            "sitePath": "assets/brand-images/vanahom-vanahom-logo-white.jpg",
+            "title": "Vanahom Logo White"
+          },
+          {
+            "path": "VANAHOM/assets/brand-images/vanahom-logo-white.png",
+            "sitePath": "assets/brand-images/vanahom-vanahom-logo-white.png",
+            "title": "Vanahom Logo White"
+          }
+        ]
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#B12137"
+        },
+        {
+          "key": "accent",
+          "value": "#A8ADAD"
+        },
+        {
+          "key": "secondary",
+          "value": "#8E1A2C"
+        },
+        {
+          "key": "surface",
+          "value": "#F6F4F2"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFFFF"
+        },
+        {
+          "key": "ink",
+          "value": "#211B1C"
+        },
+        {
+          "key": "muted",
+          "value": "#6E7475"
+        }
+      ],
+      "keywords": [
+        "Hongtu red",
+        "Cangling grey",
+        "white space",
+        "hospitality",
+        "wellbeing"
+      ],
+      "images": [
+        {
+          "path": "VANAHOM/assets/brand-images/vanahom-brand-hero.png",
+          "sitePath": "assets/brand-images/vanahom.png",
+          "title": "Vanahom Brand Hero"
+        },
+        {
+          "path": "VANAHOM/assets/brand-images/vanahom-logo-black.jpg",
+          "sitePath": "assets/brand-images/vanahom-vanahom-logo-black.jpg",
+          "title": "Vanahom Logo Black"
+        },
+        {
+          "path": "VANAHOM/assets/brand-images/vanahom-logo-black.png",
+          "sitePath": "assets/brand-images/vanahom-vanahom-logo-black.png",
+          "title": "Vanahom Logo Black"
+        },
+        {
+          "path": "VANAHOM/assets/brand-images/vanahom-logo-grey.jpg",
+          "sitePath": "assets/brand-images/vanahom-vanahom-logo-grey.jpg",
+          "title": "Vanahom Logo Grey"
+        },
+        {
+          "path": "VANAHOM/assets/brand-images/vanahom-logo-grey.png",
+          "sitePath": "assets/brand-images/vanahom-vanahom-logo-grey.png",
+          "title": "Vanahom Logo Grey"
+        },
+        {
+          "path": "VANAHOM/assets/brand-images/vanahom-logo-red.jpg",
+          "sitePath": "assets/brand-images/vanahom-vanahom-logo-red.jpg",
+          "title": "Vanahom Logo Red"
+        },
+        {
+          "path": "VANAHOM/assets/brand-images/vanahom-logo-red.png",
+          "sitePath": "assets/brand-images/vanahom-vanahom-logo-red.png",
+          "title": "Vanahom Logo Red"
+        },
+        {
+          "path": "VANAHOM/assets/brand-images/vanahom-logo-white.jpg",
+          "sitePath": "assets/brand-images/vanahom-vanahom-logo-white.jpg",
+          "title": "Vanahom Logo White"
+        },
+        {
+          "path": "VANAHOM/assets/brand-images/vanahom-logo-white.png",
+          "sitePath": "assets/brand-images/vanahom-vanahom-logo-white.png",
+          "title": "Vanahom Logo White"
+        }
+      ]
+    },
     "editablePaths": [
       "VANAHOM/vanahom_design.md"
     ],
@@ -226,6 +530,7 @@
         "restorative care"
       ]
     },
+    "assetKey": "sanctem",
     "mainName": "Sanctem",
     "mainLocale": "EN",
     "profile": {
@@ -264,16 +569,187 @@
       "en": ""
     },
     "version": {
-      "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-      "shortHash": "3bd27b3",
-      "date": "2026-07-05T10:35:21+08:00",
-      "message": "Show logos on brand pages",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+      "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+      "shortHash": "542890f",
+      "date": "2026-07-05T10:48:18+08:00",
+      "message": "Add transparent Table AI logo",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
     },
     "historyUrl": "api/history/sanctem.json",
     "url": "brand.html?brand=sanctem",
     "apiUrl": "api/brands/sanctem.json",
     "status": "documented",
+    "assetKit": {
+      "assetKey": "sanctem",
+      "endpoints": {
+        "brand": "api/brands/sanctem.json",
+        "images": "api/brands/sanctem.json#images",
+        "tokens": "api/brands/sanctem.json#tokens",
+        "history": "api/history/sanctem.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#1D2A24"
+          },
+          {
+            "key": "accent",
+            "value": "#B58A5F"
+          },
+          {
+            "key": "secondary",
+            "value": "#7C9A87"
+          },
+          {
+            "key": "surface",
+            "value": "#F6F1E8"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFDF8"
+          },
+          {
+            "key": "ink",
+            "value": "#1E211C"
+          },
+          {
+            "key": "muted",
+            "value": "#687267"
+          }
+        ],
+        "keywords": [
+          "oriental wellness",
+          "healing",
+          "sage",
+          "warm gold",
+          "restorative care"
+        ],
+        "images": [
+          {
+            "path": "Sanctem/assets/brand-images/sanctem-brand-hero.png",
+            "sitePath": "assets/brand-images/sanctem.png",
+            "title": "Sanctem Brand Hero"
+          },
+          {
+            "path": "Sanctem/assets/brand-images/sanctem-logo-black-alt.jpg",
+            "sitePath": "assets/brand-images/sanctem-sanctem-logo-black-alt.jpg",
+            "title": "Sanctem Logo Black Alt"
+          },
+          {
+            "path": "Sanctem/assets/brand-images/sanctem-logo-black.png",
+            "sitePath": "assets/brand-images/sanctem-sanctem-logo-black.png",
+            "title": "Sanctem Logo Black"
+          },
+          {
+            "path": "Sanctem/assets/brand-images/sanctem-logo-color.jpg",
+            "sitePath": "assets/brand-images/sanctem-sanctem-logo-color.jpg",
+            "title": "Sanctem Logo Color"
+          },
+          {
+            "path": "Sanctem/assets/brand-images/sanctem-logo-color.png",
+            "sitePath": "assets/brand-images/sanctem-sanctem-logo-color.png",
+            "title": "Sanctem Logo Color"
+          },
+          {
+            "path": "Sanctem/assets/brand-images/sanctem-logo-white-black-alt.jpg",
+            "sitePath": "assets/brand-images/sanctem-sanctem-logo-white-black-alt.jpg",
+            "title": "Sanctem Logo White Black Alt"
+          },
+          {
+            "path": "Sanctem/assets/brand-images/sanctem-logo-white-black.jpg",
+            "sitePath": "assets/brand-images/sanctem-sanctem-logo-white-black.jpg",
+            "title": "Sanctem Logo White Black"
+          },
+          {
+            "path": "Sanctem/assets/brand-images/sanctem-logo-white.png",
+            "sitePath": "assets/brand-images/sanctem-sanctem-logo-white.png",
+            "title": "Sanctem Logo White"
+          }
+        ]
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#1D2A24"
+        },
+        {
+          "key": "accent",
+          "value": "#B58A5F"
+        },
+        {
+          "key": "secondary",
+          "value": "#7C9A87"
+        },
+        {
+          "key": "surface",
+          "value": "#F6F1E8"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFDF8"
+        },
+        {
+          "key": "ink",
+          "value": "#1E211C"
+        },
+        {
+          "key": "muted",
+          "value": "#687267"
+        }
+      ],
+      "keywords": [
+        "oriental wellness",
+        "healing",
+        "sage",
+        "warm gold",
+        "restorative care"
+      ],
+      "images": [
+        {
+          "path": "Sanctem/assets/brand-images/sanctem-brand-hero.png",
+          "sitePath": "assets/brand-images/sanctem.png",
+          "title": "Sanctem Brand Hero"
+        },
+        {
+          "path": "Sanctem/assets/brand-images/sanctem-logo-black-alt.jpg",
+          "sitePath": "assets/brand-images/sanctem-sanctem-logo-black-alt.jpg",
+          "title": "Sanctem Logo Black Alt"
+        },
+        {
+          "path": "Sanctem/assets/brand-images/sanctem-logo-black.png",
+          "sitePath": "assets/brand-images/sanctem-sanctem-logo-black.png",
+          "title": "Sanctem Logo Black"
+        },
+        {
+          "path": "Sanctem/assets/brand-images/sanctem-logo-color.jpg",
+          "sitePath": "assets/brand-images/sanctem-sanctem-logo-color.jpg",
+          "title": "Sanctem Logo Color"
+        },
+        {
+          "path": "Sanctem/assets/brand-images/sanctem-logo-color.png",
+          "sitePath": "assets/brand-images/sanctem-sanctem-logo-color.png",
+          "title": "Sanctem Logo Color"
+        },
+        {
+          "path": "Sanctem/assets/brand-images/sanctem-logo-white-black-alt.jpg",
+          "sitePath": "assets/brand-images/sanctem-sanctem-logo-white-black-alt.jpg",
+          "title": "Sanctem Logo White Black Alt"
+        },
+        {
+          "path": "Sanctem/assets/brand-images/sanctem-logo-white-black.jpg",
+          "sitePath": "assets/brand-images/sanctem-sanctem-logo-white-black.jpg",
+          "title": "Sanctem Logo White Black"
+        },
+        {
+          "path": "Sanctem/assets/brand-images/sanctem-logo-white.png",
+          "sitePath": "assets/brand-images/sanctem-sanctem-logo-white.png",
+          "title": "Sanctem Logo White"
+        }
+      ]
+    },
     "editablePaths": [
       "Sanctem/README.md"
     ],
@@ -322,6 +798,7 @@
         "inclusive AI"
       ]
     },
+    "assetKey": "kind",
     "mainName": "KiND",
     "mainLocale": "EN",
     "profile": {
@@ -360,16 +837,117 @@
       "en": ""
     },
     "version": {
-      "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-      "shortHash": "3bd27b3",
-      "date": "2026-07-05T10:35:21+08:00",
-      "message": "Show logos on brand pages",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+      "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+      "shortHash": "542890f",
+      "date": "2026-07-05T10:48:18+08:00",
+      "message": "Add transparent Table AI logo",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
     },
     "historyUrl": "api/history/kind.json",
     "url": "brand.html?brand=kind",
     "apiUrl": "api/brands/kind.json",
     "status": "documented",
+    "assetKit": {
+      "assetKey": "kind",
+      "endpoints": {
+        "brand": "api/brands/kind.json",
+        "images": "api/brands/kind.json#images",
+        "tokens": "api/brands/kind.json#tokens",
+        "history": "api/history/kind.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#0E8C7B"
+          },
+          {
+            "key": "accent",
+            "value": "#E8765A"
+          },
+          {
+            "key": "secondary",
+            "value": "#2FD0B2"
+          },
+          {
+            "key": "surface",
+            "value": "#F8FBF9"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFFFF"
+          },
+          {
+            "key": "ink",
+            "value": "#052E28"
+          },
+          {
+            "key": "muted",
+            "value": "#52746C"
+          }
+        ],
+        "keywords": [
+          "teal",
+          "mint",
+          "coral",
+          "kind workforce",
+          "inclusive AI"
+        ],
+        "images": [
+          {
+            "path": "KiND/assets/brand-images/kind-brand-hero.png",
+            "sitePath": "assets/brand-images/kind.png",
+            "title": "Kind Brand Hero"
+          }
+        ]
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#0E8C7B"
+        },
+        {
+          "key": "accent",
+          "value": "#E8765A"
+        },
+        {
+          "key": "secondary",
+          "value": "#2FD0B2"
+        },
+        {
+          "key": "surface",
+          "value": "#F8FBF9"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFFFF"
+        },
+        {
+          "key": "ink",
+          "value": "#052E28"
+        },
+        {
+          "key": "muted",
+          "value": "#52746C"
+        }
+      ],
+      "keywords": [
+        "teal",
+        "mint",
+        "coral",
+        "kind workforce",
+        "inclusive AI"
+      ],
+      "images": [
+        {
+          "path": "KiND/assets/brand-images/kind-brand-hero.png",
+          "sitePath": "assets/brand-images/kind.png",
+          "title": "Kind Brand Hero"
+        }
+      ]
+    },
     "editablePaths": [
       "KiND/KiND Design.md",
       "KiND/kind-skill-md.md",
@@ -420,6 +998,7 @@
         "Asia-Pacific"
       ]
     },
+    "assetKey": "apha",
     "mainName": "亚太艺术疗愈联盟",
     "mainLocale": "CN",
     "profile": {
@@ -458,16 +1037,117 @@
       "en": ""
     },
     "version": {
-      "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-      "shortHash": "3bd27b3",
-      "date": "2026-07-05T10:35:21+08:00",
-      "message": "Show logos on brand pages",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+      "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+      "shortHash": "542890f",
+      "date": "2026-07-05T10:48:18+08:00",
+      "message": "Add transparent Table AI logo",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
     },
     "historyUrl": "api/history/apha.json",
     "url": "brand.html?brand=apha",
     "apiUrl": "api/brands/apha.json",
     "status": "documented",
+    "assetKit": {
+      "assetKey": "apha",
+      "endpoints": {
+        "brand": "api/brands/apha.json",
+        "images": "api/brands/apha.json#images",
+        "tokens": "api/brands/apha.json#tokens",
+        "history": "api/history/apha.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#557F8F"
+          },
+          {
+            "key": "accent",
+            "value": "#8FAF83"
+          },
+          {
+            "key": "secondary",
+            "value": "#C49B72"
+          },
+          {
+            "key": "surface",
+            "value": "#F8F3EA"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFDF7"
+          },
+          {
+            "key": "ink",
+            "value": "#233033"
+          },
+          {
+            "key": "muted",
+            "value": "#66736D"
+          }
+        ],
+        "keywords": [
+          "mineral blue",
+          "sage",
+          "clay",
+          "healing arts",
+          "Asia-Pacific"
+        ],
+        "images": [
+          {
+            "path": "APHA/assets/brand-images/apha-brand-hero.png",
+            "sitePath": "assets/brand-images/apha.png",
+            "title": "Apha Brand Hero"
+          }
+        ]
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#557F8F"
+        },
+        {
+          "key": "accent",
+          "value": "#8FAF83"
+        },
+        {
+          "key": "secondary",
+          "value": "#C49B72"
+        },
+        {
+          "key": "surface",
+          "value": "#F8F3EA"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFDF7"
+        },
+        {
+          "key": "ink",
+          "value": "#233033"
+        },
+        {
+          "key": "muted",
+          "value": "#66736D"
+        }
+      ],
+      "keywords": [
+        "mineral blue",
+        "sage",
+        "clay",
+        "healing arts",
+        "Asia-Pacific"
+      ],
+      "images": [
+        {
+          "path": "APHA/assets/brand-images/apha-brand-hero.png",
+          "sitePath": "assets/brand-images/apha.png",
+          "title": "Apha Brand Hero"
+        }
+      ]
+    },
     "editablePaths": [
       "APHA/README.md"
     ],
@@ -516,6 +1196,7 @@
         "continuous learning"
       ]
     },
+    "assetKey": "manaendless",
     "mainName": "无魔协会",
     "mainLocale": "CN",
     "profile": {
@@ -554,16 +1235,117 @@
       "en": ""
     },
     "version": {
-      "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-      "shortHash": "3bd27b3",
-      "date": "2026-07-05T10:35:21+08:00",
-      "message": "Show logos on brand pages",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+      "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+      "shortHash": "542890f",
+      "date": "2026-07-05T10:48:18+08:00",
+      "message": "Add transparent Table AI logo",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
     },
     "historyUrl": "api/history/manaendless.json",
     "url": "brand.html?brand=manaendless",
     "apiUrl": "api/brands/manaendless.json",
     "status": "placeholder",
+    "assetKit": {
+      "assetKey": "manaendless",
+      "endpoints": {
+        "brand": "api/brands/manaendless.json",
+        "images": "api/brands/manaendless.json#images",
+        "tokens": "api/brands/manaendless.json#tokens",
+        "history": "api/history/manaendless.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#7BC8C4"
+          },
+          {
+            "key": "accent",
+            "value": "#B7A7D8"
+          },
+          {
+            "key": "secondary",
+            "value": "#5E6877"
+          },
+          {
+            "key": "surface",
+            "value": "#15171C"
+          },
+          {
+            "key": "paper",
+            "value": "#20232B"
+          },
+          {
+            "key": "ink",
+            "value": "#F2F0E8"
+          },
+          {
+            "key": "muted",
+            "value": "#B8BDC7"
+          }
+        ],
+        "keywords": [
+          "charcoal",
+          "silver",
+          "violet grey",
+          "clarity",
+          "continuous learning"
+        ],
+        "images": [
+          {
+            "path": "MANAENDLESS/assets/brand-images/manaendless-brand-hero.png",
+            "sitePath": "assets/brand-images/manaendless.png",
+            "title": "Manaendless Brand Hero"
+          }
+        ]
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#7BC8C4"
+        },
+        {
+          "key": "accent",
+          "value": "#B7A7D8"
+        },
+        {
+          "key": "secondary",
+          "value": "#5E6877"
+        },
+        {
+          "key": "surface",
+          "value": "#15171C"
+        },
+        {
+          "key": "paper",
+          "value": "#20232B"
+        },
+        {
+          "key": "ink",
+          "value": "#F2F0E8"
+        },
+        {
+          "key": "muted",
+          "value": "#B8BDC7"
+        }
+      ],
+      "keywords": [
+        "charcoal",
+        "silver",
+        "violet grey",
+        "clarity",
+        "continuous learning"
+      ],
+      "images": [
+        {
+          "path": "MANAENDLESS/assets/brand-images/manaendless-brand-hero.png",
+          "sitePath": "assets/brand-images/manaendless.png",
+          "title": "Manaendless Brand Hero"
+        }
+      ]
+    },
     "editablePaths": [],
     "source": {
       "github": "https://github.com/fengurt/tableai_designaha/tree/main/MANAENDLESS",
@@ -610,6 +1392,7 @@
         "standards"
       ]
     },
+    "assetKey": "opcglobal",
     "mainName": "欧匹赛全球联盟",
     "mainLocale": "CN",
     "profile": {
@@ -648,16 +1431,117 @@
       "en": ""
     },
     "version": {
-      "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-      "shortHash": "3bd27b3",
-      "date": "2026-07-05T10:35:21+08:00",
-      "message": "Show logos on brand pages",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+      "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+      "shortHash": "542890f",
+      "date": "2026-07-05T10:48:18+08:00",
+      "message": "Add transparent Table AI logo",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
     },
     "historyUrl": "api/history/opcglobal.json",
     "url": "brand.html?brand=opcglobal",
     "apiUrl": "api/brands/opcglobal.json",
     "status": "placeholder",
+    "assetKit": {
+      "assetKey": "opcglobal",
+      "endpoints": {
+        "brand": "api/brands/opcglobal.json",
+        "images": "api/brands/opcglobal.json#images",
+        "tokens": "api/brands/opcglobal.json#tokens",
+        "history": "api/history/opcglobal.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#1D3557"
+          },
+          {
+            "key": "accent",
+            "value": "#B79B63"
+          },
+          {
+            "key": "secondary",
+            "value": "#A23E3E"
+          },
+          {
+            "key": "surface",
+            "value": "#F3F5F6"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFFFF"
+          },
+          {
+            "key": "ink",
+            "value": "#162130"
+          },
+          {
+            "key": "muted",
+            "value": "#596776"
+          }
+        ],
+        "keywords": [
+          "deep blue",
+          "graphite",
+          "gold",
+          "global alliance",
+          "standards"
+        ],
+        "images": [
+          {
+            "path": "OPCGLOBAL/assets/brand-images/opcglobal-brand-hero.png",
+            "sitePath": "assets/brand-images/opcglobal.png",
+            "title": "Opcglobal Brand Hero"
+          }
+        ]
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#1D3557"
+        },
+        {
+          "key": "accent",
+          "value": "#B79B63"
+        },
+        {
+          "key": "secondary",
+          "value": "#A23E3E"
+        },
+        {
+          "key": "surface",
+          "value": "#F3F5F6"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFFFF"
+        },
+        {
+          "key": "ink",
+          "value": "#162130"
+        },
+        {
+          "key": "muted",
+          "value": "#596776"
+        }
+      ],
+      "keywords": [
+        "deep blue",
+        "graphite",
+        "gold",
+        "global alliance",
+        "standards"
+      ],
+      "images": [
+        {
+          "path": "OPCGLOBAL/assets/brand-images/opcglobal-brand-hero.png",
+          "sitePath": "assets/brand-images/opcglobal.png",
+          "title": "Opcglobal Brand Hero"
+        }
+      ]
+    },
     "editablePaths": [],
     "source": {
       "github": "https://github.com/fengurt/tableai_designaha/tree/main/OPCGLOBAL",
@@ -704,6 +1588,7 @@
         "trust"
       ]
     },
+    "assetKey": "iptrust",
     "mainName": "IPTrustasset",
     "mainLocale": "EN",
     "profile": {
@@ -742,16 +1627,137 @@
       "en": ""
     },
     "version": {
-      "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-      "shortHash": "3bd27b3",
-      "date": "2026-07-05T10:35:21+08:00",
-      "message": "Show logos on brand pages",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+      "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+      "shortHash": "542890f",
+      "date": "2026-07-05T10:48:18+08:00",
+      "message": "Add transparent Table AI logo",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
     },
     "historyUrl": "api/history/iptrust.json",
     "url": "brand.html?brand=iptrust",
     "apiUrl": "api/brands/iptrust.json",
     "status": "placeholder",
+    "assetKit": {
+      "assetKey": "iptrust",
+      "endpoints": {
+        "brand": "api/brands/iptrust.json",
+        "images": "api/brands/iptrust.json#images",
+        "tokens": "api/brands/iptrust.json#tokens",
+        "history": "api/history/iptrust.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#10263D"
+          },
+          {
+            "key": "accent",
+            "value": "#B99B5B"
+          },
+          {
+            "key": "secondary",
+            "value": "#C7CCD1"
+          },
+          {
+            "key": "surface",
+            "value": "#F5F2EA"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFFFF"
+          },
+          {
+            "key": "ink",
+            "value": "#17202A"
+          },
+          {
+            "key": "muted",
+            "value": "#5C6570"
+          }
+        ],
+        "keywords": [
+          "navy",
+          "platinum",
+          "dark gold",
+          "IP assets",
+          "trust"
+        ],
+        "images": [
+          {
+            "path": "IPTRUST/assets/brand-images/iptrust-brand-hero.png",
+            "sitePath": "assets/brand-images/iptrust.png",
+            "title": "Iptrust Brand Hero"
+          },
+          {
+            "path": "IPTRUST/assets/brand-images/iptrust-wide-black.png",
+            "sitePath": "assets/brand-images/iptrust-iptrust-wide-black.png",
+            "title": "Iptrust Wide Black"
+          },
+          {
+            "path": "IPTRUST/assets/brand-images/iptrust-wide-white.png",
+            "sitePath": "assets/brand-images/iptrust-iptrust-wide-white.png",
+            "title": "Iptrust Wide White"
+          }
+        ]
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#10263D"
+        },
+        {
+          "key": "accent",
+          "value": "#B99B5B"
+        },
+        {
+          "key": "secondary",
+          "value": "#C7CCD1"
+        },
+        {
+          "key": "surface",
+          "value": "#F5F2EA"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFFFF"
+        },
+        {
+          "key": "ink",
+          "value": "#17202A"
+        },
+        {
+          "key": "muted",
+          "value": "#5C6570"
+        }
+      ],
+      "keywords": [
+        "navy",
+        "platinum",
+        "dark gold",
+        "IP assets",
+        "trust"
+      ],
+      "images": [
+        {
+          "path": "IPTRUST/assets/brand-images/iptrust-brand-hero.png",
+          "sitePath": "assets/brand-images/iptrust.png",
+          "title": "Iptrust Brand Hero"
+        },
+        {
+          "path": "IPTRUST/assets/brand-images/iptrust-wide-black.png",
+          "sitePath": "assets/brand-images/iptrust-iptrust-wide-black.png",
+          "title": "Iptrust Wide Black"
+        },
+        {
+          "path": "IPTRUST/assets/brand-images/iptrust-wide-white.png",
+          "sitePath": "assets/brand-images/iptrust-iptrust-wide-white.png",
+          "title": "Iptrust Wide White"
+        }
+      ]
+    },
     "editablePaths": [],
     "source": {
       "github": "https://github.com/fengurt/tableai_designaha/tree/main/IPTRUST",
@@ -798,6 +1804,7 @@
         "transformation"
       ]
     },
+    "assetKey": "fengzhi",
     "mainName": "峰值永造局",
     "mainLocale": "CN",
     "profile": {
@@ -836,16 +1843,117 @@
       "en": ""
     },
     "version": {
-      "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-      "shortHash": "3bd27b3",
-      "date": "2026-07-05T10:35:21+08:00",
-      "message": "Show logos on brand pages",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+      "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+      "shortHash": "542890f",
+      "date": "2026-07-05T10:48:18+08:00",
+      "message": "Add transparent Table AI logo",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
     },
     "historyUrl": "api/history/fengzhi.json",
     "url": "brand.html?brand=fengzhi",
     "apiUrl": "api/brands/fengzhi.json",
     "status": "documented",
+    "assetKit": {
+      "assetKey": "fengzhi",
+      "endpoints": {
+        "brand": "api/brands/fengzhi.json",
+        "images": "api/brands/fengzhi.json#images",
+        "tokens": "api/brands/fengzhi.json#tokens",
+        "history": "api/history/fengzhi.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#1A1714"
+          },
+          {
+            "key": "accent",
+            "value": "#A47B36"
+          },
+          {
+            "key": "secondary",
+            "value": "#8C857A"
+          },
+          {
+            "key": "surface",
+            "value": "#FAF7F2"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFFFF"
+          },
+          {
+            "key": "ink",
+            "value": "#1A1714"
+          },
+          {
+            "key": "muted",
+            "value": "#6F685F"
+          }
+        ],
+        "keywords": [
+          "paper white",
+          "ink black",
+          "stone grey",
+          "deep gold",
+          "transformation"
+        ],
+        "images": [
+          {
+            "path": "FENGZHI/assets/brand-images/fengzhi-brand-hero.png",
+            "sitePath": "assets/brand-images/fengzhi.png",
+            "title": "Fengzhi Brand Hero"
+          }
+        ]
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#1A1714"
+        },
+        {
+          "key": "accent",
+          "value": "#A47B36"
+        },
+        {
+          "key": "secondary",
+          "value": "#8C857A"
+        },
+        {
+          "key": "surface",
+          "value": "#FAF7F2"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFFFF"
+        },
+        {
+          "key": "ink",
+          "value": "#1A1714"
+        },
+        {
+          "key": "muted",
+          "value": "#6F685F"
+        }
+      ],
+      "keywords": [
+        "paper white",
+        "ink black",
+        "stone grey",
+        "deep gold",
+        "transformation"
+      ],
+      "images": [
+        {
+          "path": "FENGZHI/assets/brand-images/fengzhi-brand-hero.png",
+          "sitePath": "assets/brand-images/fengzhi.png",
+          "title": "Fengzhi Brand Hero"
+        }
+      ]
+    },
     "editablePaths": [
       "FENGZHI/readme.md",
       "FENGZHI/components/core/core.card.html",
@@ -916,6 +2024,7 @@
         "three agents"
       ]
     },
+    "assetKey": "axisee",
     "mainName": "Axisee",
     "mainLocale": "EN",
     "profile": {
@@ -954,16 +2063,127 @@
       "en": ""
     },
     "version": {
-      "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-      "shortHash": "3bd27b3",
-      "date": "2026-07-05T10:35:21+08:00",
-      "message": "Show logos on brand pages",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+      "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+      "shortHash": "542890f",
+      "date": "2026-07-05T10:48:18+08:00",
+      "message": "Add transparent Table AI logo",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
     },
     "historyUrl": "api/history/axisee.json",
     "url": "brand.html?brand=axisee",
     "apiUrl": "api/brands/axisee.json",
     "status": "documented",
+    "assetKit": {
+      "assetKey": "axisee",
+      "endpoints": {
+        "brand": "api/brands/axisee.json",
+        "images": "api/brands/axisee.json#images",
+        "tokens": "api/brands/axisee.json#tokens",
+        "history": "api/history/axisee.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#1A2B4A"
+          },
+          {
+            "key": "accent",
+            "value": "#B12137"
+          },
+          {
+            "key": "secondary",
+            "value": "#D4AF37"
+          },
+          {
+            "key": "surface",
+            "value": "#F9FAFB"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFFFF"
+          },
+          {
+            "key": "ink",
+            "value": "#2C2C2C"
+          },
+          {
+            "key": "muted",
+            "value": "#555555"
+          }
+        ],
+        "keywords": [
+          "universe blue",
+          "Vanahom red",
+          "promising gold",
+          "hotel AI",
+          "three agents"
+        ],
+        "images": [
+          {
+            "path": "Axisee/assets/brand-images/axisee-brand-hero.png",
+            "sitePath": "assets/brand-images/axisee.png",
+            "title": "Axisee Brand Hero"
+          },
+          {
+            "path": "Axisee/assets/brand-images/axisee-logo.png",
+            "sitePath": "assets/brand-images/axisee-axisee-logo.png",
+            "title": "Axisee Logo"
+          }
+        ]
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#1A2B4A"
+        },
+        {
+          "key": "accent",
+          "value": "#B12137"
+        },
+        {
+          "key": "secondary",
+          "value": "#D4AF37"
+        },
+        {
+          "key": "surface",
+          "value": "#F9FAFB"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFFFF"
+        },
+        {
+          "key": "ink",
+          "value": "#2C2C2C"
+        },
+        {
+          "key": "muted",
+          "value": "#555555"
+        }
+      ],
+      "keywords": [
+        "universe blue",
+        "Vanahom red",
+        "promising gold",
+        "hotel AI",
+        "three agents"
+      ],
+      "images": [
+        {
+          "path": "Axisee/assets/brand-images/axisee-brand-hero.png",
+          "sitePath": "assets/brand-images/axisee.png",
+          "title": "Axisee Brand Hero"
+        },
+        {
+          "path": "Axisee/assets/brand-images/axisee-logo.png",
+          "sitePath": "assets/brand-images/axisee-axisee-logo.png",
+          "title": "Axisee Logo"
+        }
+      ]
+    },
     "editablePaths": [
       "Axisee/axisee_design.md"
     ],
@@ -1016,6 +2236,7 @@
         "wisdom navigator"
       ]
     },
+    "assetKey": "sidera",
     "mainName": "Sidera",
     "mainLocale": "EN",
     "profile": {
@@ -1050,16 +2271,117 @@
       }
     },
     "version": {
-      "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-      "shortHash": "3bd27b3",
-      "date": "2026-07-05T10:35:21+08:00",
-      "message": "Show logos on brand pages",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+      "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+      "shortHash": "542890f",
+      "date": "2026-07-05T10:48:18+08:00",
+      "message": "Add transparent Table AI logo",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
     },
     "historyUrl": "api/history/sidera.json",
     "url": "brand.html?brand=sidera",
     "apiUrl": "api/brands/sidera.json",
     "status": "documented",
+    "assetKit": {
+      "assetKey": "sidera",
+      "endpoints": {
+        "brand": "api/brands/sidera.json",
+        "images": "api/brands/sidera.json#images",
+        "tokens": "api/brands/sidera.json#tokens",
+        "history": "api/history/sidera.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#B58B4C"
+          },
+          {
+            "key": "accent",
+            "value": "#D4A862"
+          },
+          {
+            "key": "secondary",
+            "value": "#9E3B2E"
+          },
+          {
+            "key": "surface",
+            "value": "#14100A"
+          },
+          {
+            "key": "paper",
+            "value": "#18130B"
+          },
+          {
+            "key": "ink",
+            "value": "#EFE6D2"
+          },
+          {
+            "key": "muted",
+            "value": "#A99B7E"
+          }
+        ],
+        "keywords": [
+          "ink",
+          "earth gold",
+          "cream",
+          "vermillion",
+          "wisdom navigator"
+        ],
+        "images": [
+          {
+            "path": "Sidera/assets/brand-images/sidera-brand-hero.png",
+            "sitePath": "assets/brand-images/sidera.png",
+            "title": "Sidera Brand Hero"
+          }
+        ]
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#B58B4C"
+        },
+        {
+          "key": "accent",
+          "value": "#D4A862"
+        },
+        {
+          "key": "secondary",
+          "value": "#9E3B2E"
+        },
+        {
+          "key": "surface",
+          "value": "#14100A"
+        },
+        {
+          "key": "paper",
+          "value": "#18130B"
+        },
+        {
+          "key": "ink",
+          "value": "#EFE6D2"
+        },
+        {
+          "key": "muted",
+          "value": "#A99B7E"
+        }
+      ],
+      "keywords": [
+        "ink",
+        "earth gold",
+        "cream",
+        "vermillion",
+        "wisdom navigator"
+      ],
+      "images": [
+        {
+          "path": "Sidera/assets/brand-images/sidera-brand-hero.png",
+          "sitePath": "assets/brand-images/sidera.png",
+          "title": "Sidera Brand Hero"
+        }
+      ]
+    },
     "editablePaths": [
       "Sidera/sidera_design.md"
     ],
@@ -1108,6 +2430,7 @@
         "precision"
       ]
     },
+    "assetKey": "1stepmore",
     "mainName": "1stepmore",
     "mainLocale": "EN",
     "profile": {
@@ -1146,16 +2469,105 @@
       "en": ""
     },
     "version": {
-      "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-      "shortHash": "3bd27b3",
-      "date": "2026-07-05T10:35:21+08:00",
-      "message": "Show logos on brand pages",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+      "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+      "shortHash": "542890f",
+      "date": "2026-07-05T10:48:18+08:00",
+      "message": "Add transparent Table AI logo",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
     },
     "historyUrl": "api/history/1stepmore.json",
     "url": "brand.html?brand=1stepmore",
     "apiUrl": "api/brands/1stepmore.json",
     "status": "documented",
+    "assetKit": {
+      "assetKey": "1stepmore",
+      "endpoints": {
+        "brand": "api/brands/1stepmore.json",
+        "images": "api/brands/1stepmore.json#images",
+        "tokens": "api/brands/1stepmore.json#tokens",
+        "history": "api/history/1stepmore.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#123047"
+          },
+          {
+            "key": "accent",
+            "value": "#C89B3C"
+          },
+          {
+            "key": "secondary",
+            "value": "#5A7184"
+          },
+          {
+            "key": "surface",
+            "value": "#F4F1EA"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFFFF"
+          },
+          {
+            "key": "ink",
+            "value": "#17212A"
+          },
+          {
+            "key": "muted",
+            "value": "#62707A"
+          }
+        ],
+        "keywords": [
+          "one step",
+          "clarity",
+          "continuity",
+          "systems",
+          "precision"
+        ],
+        "images": []
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#123047"
+        },
+        {
+          "key": "accent",
+          "value": "#C89B3C"
+        },
+        {
+          "key": "secondary",
+          "value": "#5A7184"
+        },
+        {
+          "key": "surface",
+          "value": "#F4F1EA"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFFFF"
+        },
+        {
+          "key": "ink",
+          "value": "#17212A"
+        },
+        {
+          "key": "muted",
+          "value": "#62707A"
+        }
+      ],
+      "keywords": [
+        "one step",
+        "clarity",
+        "continuity",
+        "systems",
+        "precision"
+      ],
+      "images": []
+    },
     "editablePaths": [
       "1stepmore/README.md"
     ],
@@ -1204,6 +2616,7 @@
         "creation"
       ]
     },
+    "assetKey": "agem",
     "mainName": "游赋社",
     "mainLocale": "CN",
     "profile": {
@@ -1242,16 +2655,105 @@
       "en": ""
     },
     "version": {
-      "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-      "shortHash": "3bd27b3",
-      "date": "2026-07-05T10:35:21+08:00",
-      "message": "Show logos on brand pages",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+      "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+      "shortHash": "542890f",
+      "date": "2026-07-05T10:48:18+08:00",
+      "message": "Add transparent Table AI logo",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
     },
     "historyUrl": "api/history/agem.json",
     "url": "brand.html?brand=agem",
     "apiUrl": "api/brands/agem.json",
     "status": "documented",
+    "assetKit": {
+      "assetKey": "agem",
+      "endpoints": {
+        "brand": "api/brands/agem.json",
+        "images": "api/brands/agem.json#images",
+        "tokens": "api/brands/agem.json#tokens",
+        "history": "api/history/agem.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#155E75"
+          },
+          {
+            "key": "accent",
+            "value": "#D9823B"
+          },
+          {
+            "key": "secondary",
+            "value": "#7AA6A1"
+          },
+          {
+            "key": "surface",
+            "value": "#F5F7F2"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFFFF"
+          },
+          {
+            "key": "ink",
+            "value": "#173036"
+          },
+          {
+            "key": "muted",
+            "value": "#5B6F70"
+          }
+        ],
+        "keywords": [
+          "travel",
+          "play",
+          "culture",
+          "community",
+          "creation"
+        ],
+        "images": []
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#155E75"
+        },
+        {
+          "key": "accent",
+          "value": "#D9823B"
+        },
+        {
+          "key": "secondary",
+          "value": "#7AA6A1"
+        },
+        {
+          "key": "surface",
+          "value": "#F5F7F2"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFFFF"
+        },
+        {
+          "key": "ink",
+          "value": "#173036"
+        },
+        {
+          "key": "muted",
+          "value": "#5B6F70"
+        }
+      ],
+      "keywords": [
+        "travel",
+        "play",
+        "culture",
+        "community",
+        "creation"
+      ],
+      "images": []
+    },
     "editablePaths": [
       "AGEM/README.md"
     ],
@@ -1300,6 +2802,7 @@
         "fire"
       ]
     },
+    "assetKey": "rgd",
     "mainName": "燃古豋",
     "mainLocale": "CN",
     "profile": {
@@ -1338,16 +2841,105 @@
       "en": ""
     },
     "version": {
-      "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-      "shortHash": "3bd27b3",
-      "date": "2026-07-05T10:35:21+08:00",
-      "message": "Show logos on brand pages",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+      "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+      "shortHash": "542890f",
+      "date": "2026-07-05T10:48:18+08:00",
+      "message": "Add transparent Table AI logo",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
     },
     "historyUrl": "api/history/rgd.json",
     "url": "brand.html?brand=rgd",
     "apiUrl": "api/brands/rgd.json",
     "status": "documented",
+    "assetKit": {
+      "assetKey": "rgd",
+      "endpoints": {
+        "brand": "api/brands/rgd.json",
+        "images": "api/brands/rgd.json#images",
+        "tokens": "api/brands/rgd.json#tokens",
+        "history": "api/history/rgd.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#E06B3A"
+          },
+          {
+            "key": "accent",
+            "value": "#C8A15A"
+          },
+          {
+            "key": "secondary",
+            "value": "#8D3326"
+          },
+          {
+            "key": "surface",
+            "value": "#17110D"
+          },
+          {
+            "key": "paper",
+            "value": "#211711"
+          },
+          {
+            "key": "ink",
+            "value": "#F5E9D5"
+          },
+          {
+            "key": "muted",
+            "value": "#C6A989"
+          }
+        ],
+        "keywords": [
+          "ember",
+          "ancient",
+          "ritual",
+          "craft",
+          "fire"
+        ],
+        "images": []
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#E06B3A"
+        },
+        {
+          "key": "accent",
+          "value": "#C8A15A"
+        },
+        {
+          "key": "secondary",
+          "value": "#8D3326"
+        },
+        {
+          "key": "surface",
+          "value": "#17110D"
+        },
+        {
+          "key": "paper",
+          "value": "#211711"
+        },
+        {
+          "key": "ink",
+          "value": "#F5E9D5"
+        },
+        {
+          "key": "muted",
+          "value": "#C6A989"
+        }
+      ],
+      "keywords": [
+        "ember",
+        "ancient",
+        "ritual",
+        "craft",
+        "fire"
+      ],
+      "images": []
+    },
     "editablePaths": [
       "RGD/README.md"
     ],
@@ -1396,6 +2988,7 @@
         "wellbeing"
       ]
     },
+    "assetKey": "changoods",
     "mainName": "常幸",
     "mainLocale": "CN",
     "profile": {
@@ -1434,16 +3027,105 @@
       "en": ""
     },
     "version": {
-      "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-      "shortHash": "3bd27b3",
-      "date": "2026-07-05T10:35:21+08:00",
-      "message": "Show logos on brand pages",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+      "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+      "shortHash": "542890f",
+      "date": "2026-07-05T10:48:18+08:00",
+      "message": "Add transparent Table AI logo",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
     },
     "historyUrl": "api/history/changoods.json",
     "url": "brand.html?brand=changoods",
     "apiUrl": "api/brands/changoods.json",
     "status": "documented",
+    "assetKit": {
+      "assetKey": "changoods",
+      "endpoints": {
+        "brand": "api/brands/changoods.json",
+        "images": "api/brands/changoods.json#images",
+        "tokens": "api/brands/changoods.json#tokens",
+        "history": "api/history/changoods.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#486B3F"
+          },
+          {
+            "key": "accent",
+            "value": "#D2A94C"
+          },
+          {
+            "key": "secondary",
+            "value": "#A7B98F"
+          },
+          {
+            "key": "surface",
+            "value": "#F7F5EC"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFFFF"
+          },
+          {
+            "key": "ink",
+            "value": "#243222"
+          },
+          {
+            "key": "muted",
+            "value": "#65725F"
+          }
+        ],
+        "keywords": [
+          "good fortune",
+          "everyday",
+          "warmth",
+          "goods",
+          "wellbeing"
+        ],
+        "images": []
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#486B3F"
+        },
+        {
+          "key": "accent",
+          "value": "#D2A94C"
+        },
+        {
+          "key": "secondary",
+          "value": "#A7B98F"
+        },
+        {
+          "key": "surface",
+          "value": "#F7F5EC"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFFFF"
+        },
+        {
+          "key": "ink",
+          "value": "#243222"
+        },
+        {
+          "key": "muted",
+          "value": "#65725F"
+        }
+      ],
+      "keywords": [
+        "good fortune",
+        "everyday",
+        "warmth",
+        "goods",
+        "wellbeing"
+      ],
+      "images": []
+    },
     "editablePaths": [
       "Changoods/README.md"
     ],
@@ -1492,6 +3174,7 @@
         "classical learning"
       ]
     },
+    "assetKey": "boya",
     "mainName": "博雅问渠书院",
     "mainLocale": "CN",
     "profile": {
@@ -1530,16 +3213,105 @@
       "en": ""
     },
     "version": {
-      "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-      "shortHash": "3bd27b3",
-      "date": "2026-07-05T10:35:21+08:00",
-      "message": "Show logos on brand pages",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+      "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+      "shortHash": "542890f",
+      "date": "2026-07-05T10:48:18+08:00",
+      "message": "Add transparent Table AI logo",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
     },
     "historyUrl": "api/history/boya.json",
     "url": "brand.html?brand=boya",
     "apiUrl": "api/brands/boya.json",
     "status": "documented",
+    "assetKit": {
+      "assetKey": "boya",
+      "endpoints": {
+        "brand": "api/brands/boya.json",
+        "images": "api/brands/boya.json#images",
+        "tokens": "api/brands/boya.json#tokens",
+        "history": "api/history/boya.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#243B6B"
+          },
+          {
+            "key": "accent",
+            "value": "#B89A5E"
+          },
+          {
+            "key": "secondary",
+            "value": "#7F8EA8"
+          },
+          {
+            "key": "surface",
+            "value": "#F6F4EE"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFFFF"
+          },
+          {
+            "key": "ink",
+            "value": "#1E2738"
+          },
+          {
+            "key": "muted",
+            "value": "#657086"
+          }
+        ],
+        "keywords": [
+          "academy",
+          "boya",
+          "knowledge",
+          "inquiry",
+          "classical learning"
+        ],
+        "images": []
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#243B6B"
+        },
+        {
+          "key": "accent",
+          "value": "#B89A5E"
+        },
+        {
+          "key": "secondary",
+          "value": "#7F8EA8"
+        },
+        {
+          "key": "surface",
+          "value": "#F6F4EE"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFFFF"
+        },
+        {
+          "key": "ink",
+          "value": "#1E2738"
+        },
+        {
+          "key": "muted",
+          "value": "#657086"
+        }
+      ],
+      "keywords": [
+        "academy",
+        "boya",
+        "knowledge",
+        "inquiry",
+        "classical learning"
+      ],
+      "images": []
+    },
     "editablePaths": [
       "BOYA/README.md"
     ],
@@ -1588,6 +3360,7 @@
         "A Place U Called Home"
       ]
     },
+    "assetKey": "apuch",
     "mainName": "APUCH",
     "mainLocale": "EN",
     "profile": {
@@ -1626,16 +3399,105 @@
       "en": ""
     },
     "version": {
-      "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-      "shortHash": "3bd27b3",
-      "date": "2026-07-05T10:35:21+08:00",
-      "message": "Show logos on brand pages",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+      "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+      "shortHash": "542890f",
+      "date": "2026-07-05T10:48:18+08:00",
+      "message": "Add transparent Table AI logo",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
     },
     "historyUrl": "api/history/apuch.json",
     "url": "brand.html?brand=apuch",
     "apiUrl": "api/brands/apuch.json",
     "status": "documented",
+    "assetKit": {
+      "assetKey": "apuch",
+      "endpoints": {
+        "brand": "api/brands/apuch.json",
+        "images": "api/brands/apuch.json#images",
+        "tokens": "api/brands/apuch.json#tokens",
+        "history": "api/history/apuch.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#14304A"
+          },
+          {
+            "key": "accent",
+            "value": "#A88B52"
+          },
+          {
+            "key": "secondary",
+            "value": "#42695A"
+          },
+          {
+            "key": "surface",
+            "value": "#F4F1EA"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFEFA"
+          },
+          {
+            "key": "ink",
+            "value": "#17212A"
+          },
+          {
+            "key": "muted",
+            "value": "#5E6870"
+          }
+        ],
+        "keywords": [
+          "home",
+          "belonging",
+          "shelter",
+          "threshold",
+          "A Place U Called Home"
+        ],
+        "images": []
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#14304A"
+        },
+        {
+          "key": "accent",
+          "value": "#A88B52"
+        },
+        {
+          "key": "secondary",
+          "value": "#42695A"
+        },
+        {
+          "key": "surface",
+          "value": "#F4F1EA"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFEFA"
+        },
+        {
+          "key": "ink",
+          "value": "#17212A"
+        },
+        {
+          "key": "muted",
+          "value": "#5E6870"
+        }
+      ],
+      "keywords": [
+        "home",
+        "belonging",
+        "shelter",
+        "threshold",
+        "A Place U Called Home"
+      ],
+      "images": []
+    },
     "editablePaths": [
       "APUCH/README.md"
     ],
@@ -1690,6 +3552,7 @@
         "restraint"
       ]
     },
+    "assetKey": "pam",
     "mainName": "帕姆建筑",
     "mainLocale": "CN",
     "profile": {
@@ -1724,16 +3587,109 @@
       }
     },
     "version": {
-      "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-      "shortHash": "3bd27b3",
-      "date": "2026-07-05T10:35:21+08:00",
-      "message": "Show logos on brand pages",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+      "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+      "shortHash": "542890f",
+      "date": "2026-07-05T10:48:18+08:00",
+      "message": "Add transparent Table AI logo",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
     },
     "historyUrl": "api/history/pam.json",
     "url": "brand.html?brand=pam",
     "apiUrl": "api/brands/pam.json",
     "status": "documented",
+    "assetKit": {
+      "assetKey": "pam",
+      "endpoints": {
+        "brand": "api/brands/pam.json",
+        "images": "api/brands/pam.json#images",
+        "tokens": "api/brands/pam.json#tokens",
+        "history": "api/history/pam.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#1F1D1A"
+          },
+          {
+            "key": "accent",
+            "value": "#9A6B4A"
+          },
+          {
+            "key": "secondary",
+            "value": "#5C5852"
+          },
+          {
+            "key": "surface",
+            "value": "#F7F5F1"
+          },
+          {
+            "key": "paper",
+            "value": "#FCFBF8"
+          },
+          {
+            "key": "ink",
+            "value": "#1F1D1A"
+          },
+          {
+            "key": "muted",
+            "value": "#5C5852"
+          }
+        ],
+        "keywords": [
+          "paper white",
+          "ink black",
+          "warm grey",
+          "ochre",
+          "architecture",
+          "locality",
+          "restraint"
+        ],
+        "images": []
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#1F1D1A"
+        },
+        {
+          "key": "accent",
+          "value": "#9A6B4A"
+        },
+        {
+          "key": "secondary",
+          "value": "#5C5852"
+        },
+        {
+          "key": "surface",
+          "value": "#F7F5F1"
+        },
+        {
+          "key": "paper",
+          "value": "#FCFBF8"
+        },
+        {
+          "key": "ink",
+          "value": "#1F1D1A"
+        },
+        {
+          "key": "muted",
+          "value": "#5C5852"
+        }
+      ],
+      "keywords": [
+        "paper white",
+        "ink black",
+        "warm grey",
+        "ochre",
+        "architecture",
+        "locality",
+        "restraint"
+      ],
+      "images": []
+    },
     "editablePaths": [
       "PAM/pm_design.md"
     ],

@@ -33,6 +33,7 @@
       "fire"
     ]
   },
+  "assetKey": "rgd",
   "mainName": "燃古豋",
   "mainLocale": "CN",
   "profile": {
@@ -71,11 +72,11 @@
     "en": ""
   },
   "version": {
-    "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-    "shortHash": "3bd27b3",
-    "date": "2026-07-05T10:35:21+08:00",
-    "message": "Show logos on brand pages",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+    "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+    "shortHash": "542890f",
+    "date": "2026-07-05T10:48:18+08:00",
+    "message": "Add transparent Table AI logo",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
   },
   "historyUrl": "api/history/rgd.json",
   "history": [
@@ -167,6 +168,95 @@
   ],
   "tokens": [],
   "images": [],
+  "assetKit": {
+    "assetKey": "rgd",
+    "endpoints": {
+      "brand": "api/brands/rgd.json",
+      "images": "api/brands/rgd.json#images",
+      "tokens": "api/brands/rgd.json#tokens",
+      "history": "api/history/rgd.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#E06B3A"
+        },
+        {
+          "key": "accent",
+          "value": "#C8A15A"
+        },
+        {
+          "key": "secondary",
+          "value": "#8D3326"
+        },
+        {
+          "key": "surface",
+          "value": "#17110D"
+        },
+        {
+          "key": "paper",
+          "value": "#211711"
+        },
+        {
+          "key": "ink",
+          "value": "#F5E9D5"
+        },
+        {
+          "key": "muted",
+          "value": "#C6A989"
+        }
+      ],
+      "keywords": [
+        "ember",
+        "ancient",
+        "ritual",
+        "craft",
+        "fire"
+      ],
+      "images": []
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#E06B3A"
+      },
+      {
+        "key": "accent",
+        "value": "#C8A15A"
+      },
+      {
+        "key": "secondary",
+        "value": "#8D3326"
+      },
+      {
+        "key": "surface",
+        "value": "#17110D"
+      },
+      {
+        "key": "paper",
+        "value": "#211711"
+      },
+      {
+        "key": "ink",
+        "value": "#F5E9D5"
+      },
+      {
+        "key": "muted",
+        "value": "#C6A989"
+      }
+    ],
+    "keywords": [
+      "ember",
+      "ancient",
+      "ritual",
+      "craft",
+      "fire"
+    ],
+    "images": []
+  },
   "editablePaths": [
     "RGD/README.md"
   ],

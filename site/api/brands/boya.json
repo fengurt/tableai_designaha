@@ -33,6 +33,7 @@
       "classical learning"
     ]
   },
+  "assetKey": "boya",
   "mainName": "博雅问渠书院",
   "mainLocale": "CN",
   "profile": {
@@ -71,11 +72,11 @@
     "en": ""
   },
   "version": {
-    "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-    "shortHash": "3bd27b3",
-    "date": "2026-07-05T10:35:21+08:00",
-    "message": "Show logos on brand pages",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+    "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+    "shortHash": "542890f",
+    "date": "2026-07-05T10:48:18+08:00",
+    "message": "Add transparent Table AI logo",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
   },
   "historyUrl": "api/history/boya.json",
   "history": [
@@ -167,6 +168,95 @@
   ],
   "tokens": [],
   "images": [],
+  "assetKit": {
+    "assetKey": "boya",
+    "endpoints": {
+      "brand": "api/brands/boya.json",
+      "images": "api/brands/boya.json#images",
+      "tokens": "api/brands/boya.json#tokens",
+      "history": "api/history/boya.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#243B6B"
+        },
+        {
+          "key": "accent",
+          "value": "#B89A5E"
+        },
+        {
+          "key": "secondary",
+          "value": "#7F8EA8"
+        },
+        {
+          "key": "surface",
+          "value": "#F6F4EE"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFFFF"
+        },
+        {
+          "key": "ink",
+          "value": "#1E2738"
+        },
+        {
+          "key": "muted",
+          "value": "#657086"
+        }
+      ],
+      "keywords": [
+        "academy",
+        "boya",
+        "knowledge",
+        "inquiry",
+        "classical learning"
+      ],
+      "images": []
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#243B6B"
+      },
+      {
+        "key": "accent",
+        "value": "#B89A5E"
+      },
+      {
+        "key": "secondary",
+        "value": "#7F8EA8"
+      },
+      {
+        "key": "surface",
+        "value": "#F6F4EE"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFFFF"
+      },
+      {
+        "key": "ink",
+        "value": "#1E2738"
+      },
+      {
+        "key": "muted",
+        "value": "#657086"
+      }
+    ],
+    "keywords": [
+      "academy",
+      "boya",
+      "knowledge",
+      "inquiry",
+      "classical learning"
+    ],
+    "images": []
+  },
   "editablePaths": [
     "BOYA/README.md"
   ],

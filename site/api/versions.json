@@ -1,5 +1,12 @@
 [
   {
+    "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+    "shortHash": "542890f",
+    "date": "2026-07-05T10:48:18+08:00",
+    "message": "Add transparent Table AI logo",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
+  },
+  {
     "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
     "shortHash": "3bd27b3",
     "date": "2026-07-05T10:35:21+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-07-04T19:46:22+08:00",
     "message": "Add portal actions and admin TOTP login",
     "url": "https://github.com/fengurt/tableai_designaha/commit/0db166661358bccc3f124971e161e067a41dfad8"
-  },
-  {
-    "hash": "7724d9475ca70a078be10921cce0b10757a05f9b",
-    "shortHash": "7724d94",
-    "date": "2026-07-04T19:25:10+08:00",
-    "message": "Sync generated site metadata",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/7724d9475ca70a078be10921cce0b10757a05f9b"
   }
 ]

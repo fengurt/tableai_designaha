@@ -33,6 +33,7 @@
       "minimal"
     ]
   },
+  "assetKey": "tableai",
   "mainName": "Table AI",
   "mainLocale": "EN",
   "profile": {
@@ -71,14 +72,26 @@
     "en": ""
   },
   "version": {
-    "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-    "shortHash": "3bd27b3",
-    "date": "2026-07-05T10:35:21+08:00",
-    "message": "Show logos on brand pages",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+    "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+    "shortHash": "542890f",
+    "date": "2026-07-05T10:48:18+08:00",
+    "message": "Add transparent Table AI logo",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
   },
   "historyUrl": "api/history/tableai.json",
   "history": [
+    {
+      "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+      "shortHash": "542890f",
+      "date": "2026-07-05T10:48:18+08:00",
+      "message": "Add transparent Table AI logo",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+      "sourcePaths": [
+        "config/brands.json",
+        "TABLEAI",
+        "TABLEAI/TableAI_DESIGN.md"
+      ]
+    },
     {
       "hash": "067a47c76f1cb812b607335089911c282f4d8f78",
       "shortHash": "067a47c",
@@ -138,18 +151,6 @@
         "TABLEAI",
         "TABLEAI/TableAI_DESIGN.md"
       ]
-    },
-    {
-      "hash": "088ab8909a2d4284cd64d7924cc60fa39b8eb206",
-      "shortHash": "088ab89",
-      "date": "2026-07-04T11:59:40+08:00",
-      "message": "Add APUCH IP to IPTrust",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/088ab8909a2d4284cd64d7924cc60fa39b8eb206",
-      "sourcePaths": [
-        "config/brands.json",
-        "TABLEAI",
-        "TABLEAI/TableAI_DESIGN.md"
-      ]
     }
   ],
   "url": "brand.html?brand=tableai",
@@ -190,6 +191,127 @@
       "title": "Tableai A2a Logo"
     }
   ],
+  "assetKit": {
+    "assetKey": "tableai",
+    "endpoints": {
+      "brand": "api/brands/tableai.json",
+      "images": "api/brands/tableai.json#images",
+      "tokens": "api/brands/tableai.json#tokens",
+      "history": "api/history/tableai.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#0A1626"
+        },
+        {
+          "key": "accent",
+          "value": "#A88B52"
+        },
+        {
+          "key": "secondary",
+          "value": "#545F72"
+        },
+        {
+          "key": "surface",
+          "value": "#FBF9FA"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFFFF"
+        },
+        {
+          "key": "ink",
+          "value": "#1B1B1D"
+        },
+        {
+          "key": "muted",
+          "value": "#44474C"
+        }
+      ],
+      "keywords": [
+        "white",
+        "deep blue",
+        "dark gold",
+        "think tank",
+        "minimal"
+      ],
+      "images": [
+        {
+          "path": "TABLEAI/assets/brand-images/tableai-brand-hero.png",
+          "sitePath": "assets/brand-images/tableai.png",
+          "title": "Tableai Brand Hero"
+        },
+        {
+          "path": "TABLEAI/assets/brand-images/tableai-a2a-logo-transparent.png",
+          "sitePath": "assets/brand-images/tableai-tableai-a2a-logo-transparent.png",
+          "title": "Tableai A2a Logo Transparent"
+        },
+        {
+          "path": "TABLEAI/assets/brand-images/tableai-a2a-logo.png",
+          "sitePath": "assets/brand-images/tableai-tableai-a2a-logo.png",
+          "title": "Tableai A2a Logo"
+        }
+      ]
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#0A1626"
+      },
+      {
+        "key": "accent",
+        "value": "#A88B52"
+      },
+      {
+        "key": "secondary",
+        "value": "#545F72"
+      },
+      {
+        "key": "surface",
+        "value": "#FBF9FA"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFFFF"
+      },
+      {
+        "key": "ink",
+        "value": "#1B1B1D"
+      },
+      {
+        "key": "muted",
+        "value": "#44474C"
+      }
+    ],
+    "keywords": [
+      "white",
+      "deep blue",
+      "dark gold",
+      "think tank",
+      "minimal"
+    ],
+    "images": [
+      {
+        "path": "TABLEAI/assets/brand-images/tableai-brand-hero.png",
+        "sitePath": "assets/brand-images/tableai.png",
+        "title": "Tableai Brand Hero"
+      },
+      {
+        "path": "TABLEAI/assets/brand-images/tableai-a2a-logo-transparent.png",
+        "sitePath": "assets/brand-images/tableai-tableai-a2a-logo-transparent.png",
+        "title": "Tableai A2a Logo Transparent"
+      },
+      {
+        "path": "TABLEAI/assets/brand-images/tableai-a2a-logo.png",
+        "sitePath": "assets/brand-images/tableai-tableai-a2a-logo.png",
+        "title": "Tableai A2a Logo"
+      }
+    ]
+  },
   "editablePaths": [
     "TABLEAI/TableAI_DESIGN.md"
   ],

@@ -33,6 +33,7 @@
       "continuous learning"
     ]
   },
+  "assetKey": "manaendless",
   "mainName": "无魔协会",
   "mainLocale": "CN",
   "profile": {
@@ -71,11 +72,11 @@
     "en": ""
   },
   "version": {
-    "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-    "shortHash": "3bd27b3",
-    "date": "2026-07-05T10:35:21+08:00",
-    "message": "Show logos on brand pages",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+    "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+    "shortHash": "542890f",
+    "date": "2026-07-05T10:48:18+08:00",
+    "message": "Add transparent Table AI logo",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
   },
   "historyUrl": "api/history/manaendless.json",
   "history": [
@@ -158,6 +159,107 @@
       "title": "Manaendless Brand Hero"
     }
   ],
+  "assetKit": {
+    "assetKey": "manaendless",
+    "endpoints": {
+      "brand": "api/brands/manaendless.json",
+      "images": "api/brands/manaendless.json#images",
+      "tokens": "api/brands/manaendless.json#tokens",
+      "history": "api/history/manaendless.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#7BC8C4"
+        },
+        {
+          "key": "accent",
+          "value": "#B7A7D8"
+        },
+        {
+          "key": "secondary",
+          "value": "#5E6877"
+        },
+        {
+          "key": "surface",
+          "value": "#15171C"
+        },
+        {
+          "key": "paper",
+          "value": "#20232B"
+        },
+        {
+          "key": "ink",
+          "value": "#F2F0E8"
+        },
+        {
+          "key": "muted",
+          "value": "#B8BDC7"
+        }
+      ],
+      "keywords": [
+        "charcoal",
+        "silver",
+        "violet grey",
+        "clarity",
+        "continuous learning"
+      ],
+      "images": [
+        {
+          "path": "MANAENDLESS/assets/brand-images/manaendless-brand-hero.png",
+          "sitePath": "assets/brand-images/manaendless.png",
+          "title": "Manaendless Brand Hero"
+        }
+      ]
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#7BC8C4"
+      },
+      {
+        "key": "accent",
+        "value": "#B7A7D8"
+      },
+      {
+        "key": "secondary",
+        "value": "#5E6877"
+      },
+      {
+        "key": "surface",
+        "value": "#15171C"
+      },
+      {
+        "key": "paper",
+        "value": "#20232B"
+      },
+      {
+        "key": "ink",
+        "value": "#F2F0E8"
+      },
+      {
+        "key": "muted",
+        "value": "#B8BDC7"
+      }
+    ],
+    "keywords": [
+      "charcoal",
+      "silver",
+      "violet grey",
+      "clarity",
+      "continuous learning"
+    ],
+    "images": [
+      {
+        "path": "MANAENDLESS/assets/brand-images/manaendless-brand-hero.png",
+        "sitePath": "assets/brand-images/manaendless.png",
+        "title": "Manaendless Brand Hero"
+      }
+    ]
+  },
   "editablePaths": [],
   "source": {
     "github": "https://github.com/fengurt/tableai_designaha/tree/main/MANAENDLESS",

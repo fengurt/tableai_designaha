@@ -37,6 +37,7 @@
       "wisdom navigator"
     ]
   },
+  "assetKey": "sidera",
   "mainName": "Sidera",
   "mainLocale": "EN",
   "profile": {
@@ -71,11 +72,11 @@
     }
   },
   "version": {
-    "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-    "shortHash": "3bd27b3",
-    "date": "2026-07-05T10:35:21+08:00",
-    "message": "Show logos on brand pages",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+    "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+    "shortHash": "542890f",
+    "date": "2026-07-05T10:48:18+08:00",
+    "message": "Add transparent Table AI logo",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
   },
   "historyUrl": "api/history/sidera.json",
   "history": [
@@ -173,6 +174,107 @@
       "title": "Sidera Brand Hero"
     }
   ],
+  "assetKit": {
+    "assetKey": "sidera",
+    "endpoints": {
+      "brand": "api/brands/sidera.json",
+      "images": "api/brands/sidera.json#images",
+      "tokens": "api/brands/sidera.json#tokens",
+      "history": "api/history/sidera.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#B58B4C"
+        },
+        {
+          "key": "accent",
+          "value": "#D4A862"
+        },
+        {
+          "key": "secondary",
+          "value": "#9E3B2E"
+        },
+        {
+          "key": "surface",
+          "value": "#14100A"
+        },
+        {
+          "key": "paper",
+          "value": "#18130B"
+        },
+        {
+          "key": "ink",
+          "value": "#EFE6D2"
+        },
+        {
+          "key": "muted",
+          "value": "#A99B7E"
+        }
+      ],
+      "keywords": [
+        "ink",
+        "earth gold",
+        "cream",
+        "vermillion",
+        "wisdom navigator"
+      ],
+      "images": [
+        {
+          "path": "Sidera/assets/brand-images/sidera-brand-hero.png",
+          "sitePath": "assets/brand-images/sidera.png",
+          "title": "Sidera Brand Hero"
+        }
+      ]
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#B58B4C"
+      },
+      {
+        "key": "accent",
+        "value": "#D4A862"
+      },
+      {
+        "key": "secondary",
+        "value": "#9E3B2E"
+      },
+      {
+        "key": "surface",
+        "value": "#14100A"
+      },
+      {
+        "key": "paper",
+        "value": "#18130B"
+      },
+      {
+        "key": "ink",
+        "value": "#EFE6D2"
+      },
+      {
+        "key": "muted",
+        "value": "#A99B7E"
+      }
+    ],
+    "keywords": [
+      "ink",
+      "earth gold",
+      "cream",
+      "vermillion",
+      "wisdom navigator"
+    ],
+    "images": [
+      {
+        "path": "Sidera/assets/brand-images/sidera-brand-hero.png",
+        "sitePath": "assets/brand-images/sidera.png",
+        "title": "Sidera Brand Hero"
+      }
+    ]
+  },
   "editablePaths": [
     "Sidera/sidera_design.md"
   ],

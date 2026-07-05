@@ -39,6 +39,7 @@
       "restraint"
     ]
   },
+  "assetKey": "pam",
   "mainName": "帕姆建筑",
   "mainLocale": "CN",
   "profile": {
@@ -73,11 +74,11 @@
     }
   },
   "version": {
-    "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-    "shortHash": "3bd27b3",
-    "date": "2026-07-05T10:35:21+08:00",
-    "message": "Show logos on brand pages",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+    "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+    "shortHash": "542890f",
+    "date": "2026-07-05T10:48:18+08:00",
+    "message": "Add transparent Table AI logo",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
   },
   "historyUrl": "api/history/pam.json",
   "history": [
@@ -169,6 +170,99 @@
   ],
   "tokens": [],
   "images": [],
+  "assetKit": {
+    "assetKey": "pam",
+    "endpoints": {
+      "brand": "api/brands/pam.json",
+      "images": "api/brands/pam.json#images",
+      "tokens": "api/brands/pam.json#tokens",
+      "history": "api/history/pam.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#1F1D1A"
+        },
+        {
+          "key": "accent",
+          "value": "#9A6B4A"
+        },
+        {
+          "key": "secondary",
+          "value": "#5C5852"
+        },
+        {
+          "key": "surface",
+          "value": "#F7F5F1"
+        },
+        {
+          "key": "paper",
+          "value": "#FCFBF8"
+        },
+        {
+          "key": "ink",
+          "value": "#1F1D1A"
+        },
+        {
+          "key": "muted",
+          "value": "#5C5852"
+        }
+      ],
+      "keywords": [
+        "paper white",
+        "ink black",
+        "warm grey",
+        "ochre",
+        "architecture",
+        "locality",
+        "restraint"
+      ],
+      "images": []
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#1F1D1A"
+      },
+      {
+        "key": "accent",
+        "value": "#9A6B4A"
+      },
+      {
+        "key": "secondary",
+        "value": "#5C5852"
+      },
+      {
+        "key": "surface",
+        "value": "#F7F5F1"
+      },
+      {
+        "key": "paper",
+        "value": "#FCFBF8"
+      },
+      {
+        "key": "ink",
+        "value": "#1F1D1A"
+      },
+      {
+        "key": "muted",
+        "value": "#5C5852"
+      }
+    ],
+    "keywords": [
+      "paper white",
+      "ink black",
+      "warm grey",
+      "ochre",
+      "architecture",
+      "locality",
+      "restraint"
+    ],
+    "images": []
+  },
   "editablePaths": [
     "PAM/pm_design.md"
   ],

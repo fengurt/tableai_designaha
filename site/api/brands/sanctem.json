@@ -33,6 +33,7 @@
       "restorative care"
     ]
   },
+  "assetKey": "sanctem",
   "mainName": "Sanctem",
   "mainLocale": "EN",
   "profile": {
@@ -71,11 +72,11 @@
     "en": ""
   },
   "version": {
-    "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-    "shortHash": "3bd27b3",
-    "date": "2026-07-05T10:35:21+08:00",
-    "message": "Show logos on brand pages",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+    "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+    "shortHash": "542890f",
+    "date": "2026-07-05T10:48:18+08:00",
+    "message": "Add transparent Table AI logo",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
   },
   "historyUrl": "api/history/sanctem.json",
   "history": [
@@ -208,6 +209,177 @@
       "title": "Sanctem Logo White"
     }
   ],
+  "assetKit": {
+    "assetKey": "sanctem",
+    "endpoints": {
+      "brand": "api/brands/sanctem.json",
+      "images": "api/brands/sanctem.json#images",
+      "tokens": "api/brands/sanctem.json#tokens",
+      "history": "api/history/sanctem.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#1D2A24"
+        },
+        {
+          "key": "accent",
+          "value": "#B58A5F"
+        },
+        {
+          "key": "secondary",
+          "value": "#7C9A87"
+        },
+        {
+          "key": "surface",
+          "value": "#F6F1E8"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFDF8"
+        },
+        {
+          "key": "ink",
+          "value": "#1E211C"
+        },
+        {
+          "key": "muted",
+          "value": "#687267"
+        }
+      ],
+      "keywords": [
+        "oriental wellness",
+        "healing",
+        "sage",
+        "warm gold",
+        "restorative care"
+      ],
+      "images": [
+        {
+          "path": "Sanctem/assets/brand-images/sanctem-brand-hero.png",
+          "sitePath": "assets/brand-images/sanctem.png",
+          "title": "Sanctem Brand Hero"
+        },
+        {
+          "path": "Sanctem/assets/brand-images/sanctem-logo-black-alt.jpg",
+          "sitePath": "assets/brand-images/sanctem-sanctem-logo-black-alt.jpg",
+          "title": "Sanctem Logo Black Alt"
+        },
+        {
+          "path": "Sanctem/assets/brand-images/sanctem-logo-black.png",
+          "sitePath": "assets/brand-images/sanctem-sanctem-logo-black.png",
+          "title": "Sanctem Logo Black"
+        },
+        {
+          "path": "Sanctem/assets/brand-images/sanctem-logo-color.jpg",
+          "sitePath": "assets/brand-images/sanctem-sanctem-logo-color.jpg",
+          "title": "Sanctem Logo Color"
+        },
+        {
+          "path": "Sanctem/assets/brand-images/sanctem-logo-color.png",
+          "sitePath": "assets/brand-images/sanctem-sanctem-logo-color.png",
+          "title": "Sanctem Logo Color"
+        },
+        {
+          "path": "Sanctem/assets/brand-images/sanctem-logo-white-black-alt.jpg",
+          "sitePath": "assets/brand-images/sanctem-sanctem-logo-white-black-alt.jpg",
+          "title": "Sanctem Logo White Black Alt"
+        },
+        {
+          "path": "Sanctem/assets/brand-images/sanctem-logo-white-black.jpg",
+          "sitePath": "assets/brand-images/sanctem-sanctem-logo-white-black.jpg",
+          "title": "Sanctem Logo White Black"
+        },
+        {
+          "path": "Sanctem/assets/brand-images/sanctem-logo-white.png",
+          "sitePath": "assets/brand-images/sanctem-sanctem-logo-white.png",
+          "title": "Sanctem Logo White"
+        }
+      ]
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#1D2A24"
+      },
+      {
+        "key": "accent",
+        "value": "#B58A5F"
+      },
+      {
+        "key": "secondary",
+        "value": "#7C9A87"
+      },
+      {
+        "key": "surface",
+        "value": "#F6F1E8"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFDF8"
+      },
+      {
+        "key": "ink",
+        "value": "#1E211C"
+      },
+      {
+        "key": "muted",
+        "value": "#687267"
+      }
+    ],
+    "keywords": [
+      "oriental wellness",
+      "healing",
+      "sage",
+      "warm gold",
+      "restorative care"
+    ],
+    "images": [
+      {
+        "path": "Sanctem/assets/brand-images/sanctem-brand-hero.png",
+        "sitePath": "assets/brand-images/sanctem.png",
+        "title": "Sanctem Brand Hero"
+      },
+      {
+        "path": "Sanctem/assets/brand-images/sanctem-logo-black-alt.jpg",
+        "sitePath": "assets/brand-images/sanctem-sanctem-logo-black-alt.jpg",
+        "title": "Sanctem Logo Black Alt"
+      },
+      {
+        "path": "Sanctem/assets/brand-images/sanctem-logo-black.png",
+        "sitePath": "assets/brand-images/sanctem-sanctem-logo-black.png",
+        "title": "Sanctem Logo Black"
+      },
+      {
+        "path": "Sanctem/assets/brand-images/sanctem-logo-color.jpg",
+        "sitePath": "assets/brand-images/sanctem-sanctem-logo-color.jpg",
+        "title": "Sanctem Logo Color"
+      },
+      {
+        "path": "Sanctem/assets/brand-images/sanctem-logo-color.png",
+        "sitePath": "assets/brand-images/sanctem-sanctem-logo-color.png",
+        "title": "Sanctem Logo Color"
+      },
+      {
+        "path": "Sanctem/assets/brand-images/sanctem-logo-white-black-alt.jpg",
+        "sitePath": "assets/brand-images/sanctem-sanctem-logo-white-black-alt.jpg",
+        "title": "Sanctem Logo White Black Alt"
+      },
+      {
+        "path": "Sanctem/assets/brand-images/sanctem-logo-white-black.jpg",
+        "sitePath": "assets/brand-images/sanctem-sanctem-logo-white-black.jpg",
+        "title": "Sanctem Logo White Black"
+      },
+      {
+        "path": "Sanctem/assets/brand-images/sanctem-logo-white.png",
+        "sitePath": "assets/brand-images/sanctem-sanctem-logo-white.png",
+        "title": "Sanctem Logo White"
+      }
+    ]
+  },
   "editablePaths": [
     "Sanctem/README.md"
   ],

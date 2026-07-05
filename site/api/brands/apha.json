@@ -33,6 +33,7 @@
       "Asia-Pacific"
     ]
   },
+  "assetKey": "apha",
   "mainName": "亚太艺术疗愈联盟",
   "mainLocale": "CN",
   "profile": {
@@ -71,11 +72,11 @@
     "en": ""
   },
   "version": {
-    "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-    "shortHash": "3bd27b3",
-    "date": "2026-07-05T10:35:21+08:00",
-    "message": "Show logos on brand pages",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+    "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+    "shortHash": "542890f",
+    "date": "2026-07-05T10:48:18+08:00",
+    "message": "Add transparent Table AI logo",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
   },
   "historyUrl": "api/history/apha.json",
   "history": [
@@ -173,6 +174,107 @@
       "title": "Apha Brand Hero"
     }
   ],
+  "assetKit": {
+    "assetKey": "apha",
+    "endpoints": {
+      "brand": "api/brands/apha.json",
+      "images": "api/brands/apha.json#images",
+      "tokens": "api/brands/apha.json#tokens",
+      "history": "api/history/apha.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#557F8F"
+        },
+        {
+          "key": "accent",
+          "value": "#8FAF83"
+        },
+        {
+          "key": "secondary",
+          "value": "#C49B72"
+        },
+        {
+          "key": "surface",
+          "value": "#F8F3EA"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFDF7"
+        },
+        {
+          "key": "ink",
+          "value": "#233033"
+        },
+        {
+          "key": "muted",
+          "value": "#66736D"
+        }
+      ],
+      "keywords": [
+        "mineral blue",
+        "sage",
+        "clay",
+        "healing arts",
+        "Asia-Pacific"
+      ],
+      "images": [
+        {
+          "path": "APHA/assets/brand-images/apha-brand-hero.png",
+          "sitePath": "assets/brand-images/apha.png",
+          "title": "Apha Brand Hero"
+        }
+      ]
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#557F8F"
+      },
+      {
+        "key": "accent",
+        "value": "#8FAF83"
+      },
+      {
+        "key": "secondary",
+        "value": "#C49B72"
+      },
+      {
+        "key": "surface",
+        "value": "#F8F3EA"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFDF7"
+      },
+      {
+        "key": "ink",
+        "value": "#233033"
+      },
+      {
+        "key": "muted",
+        "value": "#66736D"
+      }
+    ],
+    "keywords": [
+      "mineral blue",
+      "sage",
+      "clay",
+      "healing arts",
+      "Asia-Pacific"
+    ],
+    "images": [
+      {
+        "path": "APHA/assets/brand-images/apha-brand-hero.png",
+        "sitePath": "assets/brand-images/apha.png",
+        "title": "Apha Brand Hero"
+      }
+    ]
+  },
   "editablePaths": [
     "APHA/README.md"
   ],

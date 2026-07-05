@@ -33,6 +33,7 @@
       "wellbeing"
     ]
   },
+  "assetKey": "vanahom",
   "mainName": "凡纳弘途",
   "mainLocale": "CN",
   "profile": {
@@ -71,11 +72,11 @@
     "en": ""
   },
   "version": {
-    "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-    "shortHash": "3bd27b3",
-    "date": "2026-07-05T10:35:21+08:00",
-    "message": "Show logos on brand pages",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+    "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+    "shortHash": "542890f",
+    "date": "2026-07-05T10:48:18+08:00",
+    "message": "Add transparent Table AI logo",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
   },
   "historyUrl": "api/history/vanahom.json",
   "history": [
@@ -213,6 +214,187 @@
       "title": "Vanahom Logo White"
     }
   ],
+  "assetKit": {
+    "assetKey": "vanahom",
+    "endpoints": {
+      "brand": "api/brands/vanahom.json",
+      "images": "api/brands/vanahom.json#images",
+      "tokens": "api/brands/vanahom.json#tokens",
+      "history": "api/history/vanahom.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#B12137"
+        },
+        {
+          "key": "accent",
+          "value": "#A8ADAD"
+        },
+        {
+          "key": "secondary",
+          "value": "#8E1A2C"
+        },
+        {
+          "key": "surface",
+          "value": "#F6F4F2"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFFFF"
+        },
+        {
+          "key": "ink",
+          "value": "#211B1C"
+        },
+        {
+          "key": "muted",
+          "value": "#6E7475"
+        }
+      ],
+      "keywords": [
+        "Hongtu red",
+        "Cangling grey",
+        "white space",
+        "hospitality",
+        "wellbeing"
+      ],
+      "images": [
+        {
+          "path": "VANAHOM/assets/brand-images/vanahom-brand-hero.png",
+          "sitePath": "assets/brand-images/vanahom.png",
+          "title": "Vanahom Brand Hero"
+        },
+        {
+          "path": "VANAHOM/assets/brand-images/vanahom-logo-black.jpg",
+          "sitePath": "assets/brand-images/vanahom-vanahom-logo-black.jpg",
+          "title": "Vanahom Logo Black"
+        },
+        {
+          "path": "VANAHOM/assets/brand-images/vanahom-logo-black.png",
+          "sitePath": "assets/brand-images/vanahom-vanahom-logo-black.png",
+          "title": "Vanahom Logo Black"
+        },
+        {
+          "path": "VANAHOM/assets/brand-images/vanahom-logo-grey.jpg",
+          "sitePath": "assets/brand-images/vanahom-vanahom-logo-grey.jpg",
+          "title": "Vanahom Logo Grey"
+        },
+        {
+          "path": "VANAHOM/assets/brand-images/vanahom-logo-grey.png",
+          "sitePath": "assets/brand-images/vanahom-vanahom-logo-grey.png",
+          "title": "Vanahom Logo Grey"
+        },
+        {
+          "path": "VANAHOM/assets/brand-images/vanahom-logo-red.jpg",
+          "sitePath": "assets/brand-images/vanahom-vanahom-logo-red.jpg",
+          "title": "Vanahom Logo Red"
+        },
+        {
+          "path": "VANAHOM/assets/brand-images/vanahom-logo-red.png",
+          "sitePath": "assets/brand-images/vanahom-vanahom-logo-red.png",
+          "title": "Vanahom Logo Red"
+        },
+        {
+          "path": "VANAHOM/assets/brand-images/vanahom-logo-white.jpg",
+          "sitePath": "assets/brand-images/vanahom-vanahom-logo-white.jpg",
+          "title": "Vanahom Logo White"
+        },
+        {
+          "path": "VANAHOM/assets/brand-images/vanahom-logo-white.png",
+          "sitePath": "assets/brand-images/vanahom-vanahom-logo-white.png",
+          "title": "Vanahom Logo White"
+        }
+      ]
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#B12137"
+      },
+      {
+        "key": "accent",
+        "value": "#A8ADAD"
+      },
+      {
+        "key": "secondary",
+        "value": "#8E1A2C"
+      },
+      {
+        "key": "surface",
+        "value": "#F6F4F2"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFFFF"
+      },
+      {
+        "key": "ink",
+        "value": "#211B1C"
+      },
+      {
+        "key": "muted",
+        "value": "#6E7475"
+      }
+    ],
+    "keywords": [
+      "Hongtu red",
+      "Cangling grey",
+      "white space",
+      "hospitality",
+      "wellbeing"
+    ],
+    "images": [
+      {
+        "path": "VANAHOM/assets/brand-images/vanahom-brand-hero.png",
+        "sitePath": "assets/brand-images/vanahom.png",
+        "title": "Vanahom Brand Hero"
+      },
+      {
+        "path": "VANAHOM/assets/brand-images/vanahom-logo-black.jpg",
+        "sitePath": "assets/brand-images/vanahom-vanahom-logo-black.jpg",
+        "title": "Vanahom Logo Black"
+      },
+      {
+        "path": "VANAHOM/assets/brand-images/vanahom-logo-black.png",
+        "sitePath": "assets/brand-images/vanahom-vanahom-logo-black.png",
+        "title": "Vanahom Logo Black"
+      },
+      {
+        "path": "VANAHOM/assets/brand-images/vanahom-logo-grey.jpg",
+        "sitePath": "assets/brand-images/vanahom-vanahom-logo-grey.jpg",
+        "title": "Vanahom Logo Grey"
+      },
+      {
+        "path": "VANAHOM/assets/brand-images/vanahom-logo-grey.png",
+        "sitePath": "assets/brand-images/vanahom-vanahom-logo-grey.png",
+        "title": "Vanahom Logo Grey"
+      },
+      {
+        "path": "VANAHOM/assets/brand-images/vanahom-logo-red.jpg",
+        "sitePath": "assets/brand-images/vanahom-vanahom-logo-red.jpg",
+        "title": "Vanahom Logo Red"
+      },
+      {
+        "path": "VANAHOM/assets/brand-images/vanahom-logo-red.png",
+        "sitePath": "assets/brand-images/vanahom-vanahom-logo-red.png",
+        "title": "Vanahom Logo Red"
+      },
+      {
+        "path": "VANAHOM/assets/brand-images/vanahom-logo-white.jpg",
+        "sitePath": "assets/brand-images/vanahom-vanahom-logo-white.jpg",
+        "title": "Vanahom Logo White"
+      },
+      {
+        "path": "VANAHOM/assets/brand-images/vanahom-logo-white.png",
+        "sitePath": "assets/brand-images/vanahom-vanahom-logo-white.png",
+        "title": "Vanahom Logo White"
+      }
+    ]
+  },
   "editablePaths": [
     "VANAHOM/vanahom_design.md"
   ],

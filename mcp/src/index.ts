@@ -37,9 +37,26 @@ type Guide = {
 type Token = { $value?: unknown; $type?: string; $description?: string; [k: string]: unknown };
 
 type BrandPayload = BrandConfig & {
+  assetKey: string;
   guides: Guide[];
   tokenFiles: string[];
 };
+
+type BrandKeyInput = {
+  assetKey?: string;
+  slug?: string;
+};
+
+const brandKeyInputSchema = {
+  assetKey: z.string().optional().describe("IP ID / asset key, e.g. kind, tableai, vanahom"),
+  slug: z.string().optional().describe("Deprecated alias for assetKey."),
+};
+
+function resolveBrandKey(input: BrandKeyInput) {
+  const key = input.assetKey || input.slug;
+  if (!key) throw new Error("Missing IP ID / asset key.");
+  return key;
+}
 
 function hasCjk(text = "") {
   return /[\u3400-\u9fff]/.test(text);
@@ -190,7 +207,7 @@ async function loadBrand(slug: string): Promise<BrandPayload> {
     zh: brand.notes?.zh ?? "",
     en: brand.notes?.en ?? "",
   };
-  return { ...brand, mainName: mainName(brand), mainLanguage: mainLanguage(brand), display, intro, notes, guides, tokenFiles };
+  return { ...brand, assetKey: brand.slug, mainName: mainName(brand), mainLanguage: mainLanguage(brand), display, intro, notes, guides, tokenFiles };
 }
 
 function flattenJsonTokens(obj: Record<string, any>, prefix = "", groupType?: string): Record<string, Token> {
@@ -272,7 +289,7 @@ server.registerTool(
     return {
       content: [{
         type: "text",
-        text: brands.map((brand) => `${brand.slug}\t${brand.display?.en?.name ?? brand.name}\t${brand.display?.zh?.name ?? brand.nativeName ?? ""}\t${brand.intro?.en ?? brand.description}`).join("\n"),
+        text: brands.map((brand) => `${brand.assetKey}\t${brand.display?.en?.name ?? brand.name}\t${brand.display?.zh?.name ?? brand.nativeName ?? ""}\t${brand.intro?.en ?? brand.description}`).join("\n"),
       }],
     };
   }
@@ -283,10 +300,11 @@ server.registerTool(
   {
     title: "Get a brand design system",
     description: "Return a brand summary, guideline paths, and token file paths.",
-    inputSchema: { slug: z.string().describe("Brand slug, e.g. kind, tableai, vanahom") },
+    inputSchema: brandKeyInputSchema,
   },
-  async ({ slug }) => {
-    const brand = await loadBrand(slug);
+  async (input) => {
+    const assetKey = resolveBrandKey(input);
+    const brand = await loadBrand(assetKey);
     return {
       content: [{ type: "text", text: JSON.stringify({ ...brand, guides: brand.guides.map(({ text, ...g }) => g) }, null, 2) }],
     };
@@ -299,15 +317,17 @@ server.registerTool(
     title: "Get brand guideline text",
     description: "Return the primary guideline or a specific guideline path for a brand.",
     inputSchema: {
-      slug: z.string().describe("Brand slug"),
+      ...brandKeyInputSchema,
       path: z.string().optional().describe("Optional exact guideline path"),
     },
   },
-  async ({ slug, path }) => {
-    const brand = await loadBrand(slug);
+  async (input) => {
+    const assetKey = resolveBrandKey(input);
+    const { path } = input;
+    const brand = await loadBrand(assetKey);
     const guide = path ? brand.guides.find((item) => item.path === path) : brand.guides[0];
     if (!guide) {
-      return { content: [{ type: "text", text: `No guideline found for ${slug}${path ? ` at ${path}` : ""}.` }], isError: true };
+      return { content: [{ type: "text", text: `No guideline found for ${assetKey}${path ? ` at ${path}` : ""}.` }], isError: true };
     }
     return { content: [{ type: "text", text: guide.text }] };
   }
@@ -319,14 +339,16 @@ server.registerTool(
     title: "List brand tokens",
     description: "List token names for a brand, optionally filtered by dotted group prefix.",
     inputSchema: {
-      slug: z.string().describe("Brand slug"),
+      ...brandKeyInputSchema,
       group: z.string().optional().describe("Optional token prefix"),
     },
   },
-  async ({ slug, group }) => {
-    const flat = await loadTokens(slug);
+  async (input) => {
+    const assetKey = resolveBrandKey(input);
+    const { group } = input;
+    const flat = await loadTokens(assetKey);
     const names = Object.keys(flat).filter((name) => !group || name.startsWith(group));
-    return { content: [{ type: "text", text: names.join("\n") || `No tokens found for ${slug}.` }] };
+    return { content: [{ type: "text", text: names.join("\n") || `No tokens found for ${assetKey}.` }] };
   }
 );
 
@@ -336,21 +358,23 @@ server.registerTool(
     title: "Get a brand token",
     description: "Resolve a token by dotted name for a brand.",
     inputSchema: {
-      slug: z.string().describe("Brand slug"),
+      ...brandKeyInputSchema,
       name: z.string().describe("Dotted token name, e.g. color.teal"),
     },
   },
-  async ({ slug, name }) => {
-    const flat = await loadTokens(slug);
+  async (input) => {
+    const assetKey = resolveBrandKey(input);
+    const { name } = input;
+    const flat = await loadTokens(assetKey);
     const token = flat[name];
     if (!token) {
       const suggestions = Object.keys(flat).filter((key) => key.includes(name.split(".").pop() ?? "")).slice(0, 8);
       return {
-        content: [{ type: "text", text: `Token "${name}" not found for ${slug}.${suggestions.length ? ` Did you mean: ${suggestions.join(", ")}?` : ""}` }],
+        content: [{ type: "text", text: `Token "${name}" not found for ${assetKey}.${suggestions.length ? ` Did you mean: ${suggestions.join(", ")}?` : ""}` }],
         isError: true,
       };
     }
-    return { content: [{ type: "text", text: JSON.stringify({ slug, name, ...token }, null, 2) }] };
+    return { content: [{ type: "text", text: JSON.stringify({ assetKey, name, ...token }, null, 2) }] };
   }
 );
 
@@ -360,20 +384,22 @@ server.registerTool(
     title: "Validate a color against a brand palette",
     description: "Check whether a hex color is an exact brand token color.",
     inputSchema: {
-      slug: z.string().describe("Brand slug"),
+      ...brandKeyInputSchema,
       hex: z.string().describe("Hex color, e.g. #0E8C7B"),
     },
   },
-  async ({ slug, hex }) => {
-    const flat = await loadTokens(slug);
+  async (input) => {
+    const assetKey = resolveBrandKey(input);
+    const { hex } = input;
+    const flat = await loadTokens(assetKey);
     const target = hex.trim().toLowerCase();
     const colors = Object.entries(flat).filter(([, token]) => token.$type === "color" && typeof token.$value === "string");
     const match = colors.find(([, token]) => String(token.$value).toLowerCase() === target);
     if (match) {
-      return { content: [{ type: "text", text: `${hex} is on-brand for ${slug}: ${match[0]} (${match[1].$description ?? ""})` }] };
+      return { content: [{ type: "text", text: `${hex} is on-brand for ${assetKey}: ${match[0]} (${match[1].$description ?? ""})` }] };
     }
     const palette = colors.map(([name, token]) => `${name}: ${token.$value}`).join("\n");
-    return { content: [{ type: "text", text: `${hex} is not an exact ${slug} brand color.${palette ? ` Use one of:\n${palette}` : " No palette tokens are available yet."}` }] };
+    return { content: [{ type: "text", text: `${hex} is not an exact ${assetKey} brand color.${palette ? ` Use one of:\n${palette}` : " No palette tokens are available yet."}` }] };
   }
 );
 

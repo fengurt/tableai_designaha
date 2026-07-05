@@ -27,9 +27,9 @@ When an agent needs to quote an IP, use the same compact block copied by the web
 
 ```text
 IP: <localized name> / <secondary name>
-Slug: <slug>
+IP ID / Asset Key: <stable id>
 Intro: <live intro from latest guideline>
-Brand API: <absolute /api/brands/{slug}.json URL>
+Brand API: <absolute /api/brands/{assetKey}.json URL>
 ```
 
 Prefer the API JSON over stale memory. If the website is open, use the copy button on the IP card to capture the current reference.

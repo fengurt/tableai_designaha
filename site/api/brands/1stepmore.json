@@ -33,6 +33,7 @@
       "precision"
     ]
   },
+  "assetKey": "1stepmore",
   "mainName": "1stepmore",
   "mainLocale": "EN",
   "profile": {
@@ -71,11 +72,11 @@
     "en": ""
   },
   "version": {
-    "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-    "shortHash": "3bd27b3",
-    "date": "2026-07-05T10:35:21+08:00",
-    "message": "Show logos on brand pages",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+    "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+    "shortHash": "542890f",
+    "date": "2026-07-05T10:48:18+08:00",
+    "message": "Add transparent Table AI logo",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
   },
   "historyUrl": "api/history/1stepmore.json",
   "history": [
@@ -167,6 +168,95 @@
   ],
   "tokens": [],
   "images": [],
+  "assetKit": {
+    "assetKey": "1stepmore",
+    "endpoints": {
+      "brand": "api/brands/1stepmore.json",
+      "images": "api/brands/1stepmore.json#images",
+      "tokens": "api/brands/1stepmore.json#tokens",
+      "history": "api/history/1stepmore.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#123047"
+        },
+        {
+          "key": "accent",
+          "value": "#C89B3C"
+        },
+        {
+          "key": "secondary",
+          "value": "#5A7184"
+        },
+        {
+          "key": "surface",
+          "value": "#F4F1EA"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFFFF"
+        },
+        {
+          "key": "ink",
+          "value": "#17212A"
+        },
+        {
+          "key": "muted",
+          "value": "#62707A"
+        }
+      ],
+      "keywords": [
+        "one step",
+        "clarity",
+        "continuity",
+        "systems",
+        "precision"
+      ],
+      "images": []
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#123047"
+      },
+      {
+        "key": "accent",
+        "value": "#C89B3C"
+      },
+      {
+        "key": "secondary",
+        "value": "#5A7184"
+      },
+      {
+        "key": "surface",
+        "value": "#F4F1EA"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFFFF"
+      },
+      {
+        "key": "ink",
+        "value": "#17212A"
+      },
+      {
+        "key": "muted",
+        "value": "#62707A"
+      }
+    ],
+    "keywords": [
+      "one step",
+      "clarity",
+      "continuity",
+      "systems",
+      "precision"
+    ],
+    "images": []
+  },
   "editablePaths": [
     "1stepmore/README.md"
   ],

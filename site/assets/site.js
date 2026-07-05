@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "3bd27b3-9b61a04f";
+const BUILD_VERSION = "542890f-c3a821c1";
 
 const i18n = {
   cn: {
@@ -15,7 +15,7 @@ const i18n = {
     "home.adminEdit": "管理编辑",
     "home.systems": "IP 系统",
     "home.sectionTitle": "IP",
-    "home.searchPlaceholder": "搜索 IP / slug",
+    "home.searchPlaceholder": "搜索 IP / Asset Key",
     "home.noResults": "没有匹配的 IP。",
     "status.documented": "已建档",
     "status.placeholder": "待建档",
@@ -40,6 +40,15 @@ const i18n = {
     "brand.tokens": "Token 文件",
     "brand.noneGuide": "暂无规范文件",
     "brand.noneTokens": "暂无 token 文件",
+    "brand.assetHub": "IP 资产调用",
+    "brand.assetKey": "IP ID",
+    "brand.brandJson": "品牌 JSON",
+    "brand.imageAssets": "图片资产",
+    "brand.historyApi": "历史版本",
+    "brand.agentUse": "Agent 调用",
+    "brand.moodBoard": "Mood Board",
+    "brand.visualAssets": "视觉资产",
+    "brand.keywords": "关键词",
     "portal.agentTitle": "我是 Agent",
     "portal.agentBody": "复制 Skill。",
     "portal.agentAction": "Skill",
@@ -107,7 +116,7 @@ const i18n = {
     "home.adminEdit": "Admin edit",
     "home.systems": "IP systems",
     "home.sectionTitle": "IP",
-    "home.searchPlaceholder": "Search IP / slug",
+    "home.searchPlaceholder": "Search IP / Asset Key",
     "home.noResults": "No matching IP.",
     "status.documented": "Documented",
     "status.placeholder": "Pending",
@@ -132,6 +141,15 @@ const i18n = {
     "brand.tokens": "Token files",
     "brand.noneGuide": "No guideline files yet",
     "brand.noneTokens": "No token files yet",
+    "brand.assetHub": "IP Asset Calls",
+    "brand.assetKey": "IP ID",
+    "brand.brandJson": "Brand JSON",
+    "brand.imageAssets": "Image assets",
+    "brand.historyApi": "History",
+    "brand.agentUse": "Agent call",
+    "brand.moodBoard": "Mood Board",
+    "brand.visualAssets": "Visual assets",
+    "brand.keywords": "Keywords",
     "portal.agentTitle": "I am an Agent",
     "portal.agentBody": "Copy Skill.",
     "portal.agentAction": "Skill",
@@ -531,7 +549,7 @@ function referenceText(brand = {}) {
     "[IP Identity]",
     `Name: ${localized.name}`,
     localized.secondaryName ? `Other name: ${localized.secondaryName}` : "",
-    `Slug: ${brand.slug}`,
+    `IP ID / Asset Key: ${brand.assetKey || brand.slug}`,
     `Main language: ${languageLabel(brand.mainLanguage || localized.language)}`,
     "",
     "[Links]",
@@ -558,10 +576,10 @@ function referenceText(brand = {}) {
     "",
     "[MCP Calls]",
     `list_brands({})`,
-    `get_brand({ "slug": "${brand.slug}" })`,
-    `get_guideline({ "slug": "${brand.slug}" })`,
-    `list_tokens({ "slug": "${brand.slug}" })`,
-    `validate_color({ "slug": "${brand.slug}", "hex": "${brand.theme?.primary || "#000000"}" })`,
+    `get_brand({ "assetKey": "${brand.assetKey || brand.slug}" })`,
+    `get_guideline({ "assetKey": "${brand.assetKey || brand.slug}" })`,
+    `list_tokens({ "assetKey": "${brand.assetKey || brand.slug}" })`,
+    `validate_color({ "assetKey": "${brand.assetKey || brand.slug}", "hex": "${brand.theme?.primary || "#000000"}" })`,
   ].join("\n");
 }
 
@@ -892,14 +910,93 @@ function preferredBrandImage(images = []) {
 function brandAssetStrip(images = []) {
   if (!images.length) return "";
   return `
-    <section class="brand-assets" aria-label="Brand assets">
-      <p class="eyebrow">Logo / Assets</p>
+    <section class="brand-assets" aria-label="Brand visual assets">
+      <p class="eyebrow">${escapeHtml(t("brand.visualAssets"))}</p>
       <div class="brand-asset-strip">
         ${images.map((image) => `
           <a class="brand-asset" href="${escapeHtml(image.sitePath)}" title="${escapeHtml(image.title || image.path || "")}">
             <img src="${escapeHtml(image.sitePath)}" alt="${escapeHtml(image.title || "")}" loading="lazy">
           </a>
         `).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function endpointCard(label, href, code) {
+  return `
+    <a class="endpoint-card" href="${escapeHtml(href)}">
+      <span>${escapeHtml(label)}</span>
+      <strong>${escapeHtml(code)}</strong>
+      <code>${escapeHtml(href)}</code>
+    </a>
+  `;
+}
+
+function brandAssetHub(brand = {}) {
+  const key = brand.assetKey || brand.slug;
+  const endpoints = brand.assetKit?.endpoints || {};
+  return `
+    <section class="asset-hub" aria-label="IP asset calls">
+      <div class="asset-hub-head">
+        <div>
+          <p class="eyebrow">${escapeHtml(t("brand.assetHub"))}</p>
+          <h2>${escapeHtml(t("brand.assetHub"))}</h2>
+        </div>
+        <div class="asset-key">${escapeHtml(t("brand.assetKey"))}: <code>${escapeHtml(key)}</code></div>
+      </div>
+      <div class="endpoint-grid">
+        ${endpointCard(t("brand.brandJson"), endpoints.brand || brand.apiUrl, `get_brand`)}
+        ${endpointCard(t("brand.imageAssets"), endpoints.images || brand.apiUrl, `images[]`)}
+        ${endpointCard(t("brand.historyApi"), endpoints.history || brand.historyUrl, `versions[]`)}
+        ${endpointCard(t("brand.agentUse"), brand.apiUrl, `get_brand({ "assetKey": "${key}" })`)}
+      </div>
+    </section>
+  `;
+}
+
+function moodColorStyle(value = "") {
+  const hex = String(value).trim();
+  let ink = "var(--brand-ink, var(--ink))";
+  if (/^#[0-9a-f]{6}$/i.test(hex)) {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    const luminance = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
+    ink = luminance < .52 ? "#fff" : "#111";
+  }
+  return `--mood-color:${escapeHtml(value)};--mood-ink:${ink}`;
+}
+
+function moodBoard(brand = {}) {
+  const colors = palette(brand.theme).slice(0, 7);
+  const keywords = brand.moodboard?.keywords?.length ? brand.moodboard.keywords : brand.theme?.keywords || [];
+  return `
+    <section class="mood-board" aria-label="Mood board">
+      <div class="mood-head">
+        <div>
+          <p class="eyebrow">${escapeHtml(t("brand.moodBoard"))}</p>
+          <h2>${escapeHtml(t("brand.moodBoard"))}</h2>
+        </div>
+        <div class="asset-key">${escapeHtml(t("brand.assetKey"))}: <code>${escapeHtml(brand.assetKey || brand.slug)}</code></div>
+      </div>
+      <div class="mood-grid">
+        <div>
+          <div class="mood-colors">
+            ${colors.map(([label, value]) => `
+              <div class="mood-color" style="${moodColorStyle(value)}">
+                <strong>${escapeHtml(label)}</strong>
+                <code>${escapeHtml(value)}</code>
+              </div>
+            `).join("")}
+          </div>
+          <div class="mood-keywords" aria-label="${escapeHtml(t("brand.keywords"))}">
+            ${keywords.map((keyword) => `<span>${escapeHtml(keyword)}</span>`).join("")}
+          </div>
+        </div>
+        <div>
+          ${brandAssetStrip(brand.images || []) || `<p class="muted">${escapeHtml(t("brand.blank"))}</p>`}
+        </div>
       </div>
     </section>
   `;
@@ -926,7 +1023,7 @@ async function renderGlobalResults(query) {
   panel.classList.add("is-open");
   panel.innerHTML = results.map((item) => `
     <a class="global-result" href="${escapeHtml(item.url)}">
-      <small>${escapeHtml(item.type)} · ${escapeHtml(item.slug)}</small>
+      <small>${escapeHtml(item.type)} · IP ID ${escapeHtml(item.slug)}</small>
       <strong>${escapeHtml(item.title)}</strong>
       <span>${escapeHtml(item.subtitle || item.text || "")}</span>
     </a>
@@ -1011,7 +1108,7 @@ async function renderIndex() {
       <a class="ip-card-link" href="${brand.url}" aria-label="${escapeHtml(localized.name)}">
         <div class="card-body">
           <div class="card-art">
-            <span class="art-code">${escapeHtml(brand.slug)}</span>
+            <span class="art-code">ID · ${escapeHtml(brand.assetKey || brand.slug)}</span>
             <span class="art-metric">${brand.guideCount}G · ${brand.tokenCount}T</span>
           </div>
           <p class="eyebrow">${escapeHtml(statusLabel(brand.status))}</p>
@@ -1061,7 +1158,8 @@ async function renderBrand() {
         </div>
         ${hero ? `<div class="brand-visual"><img src="${escapeHtml(hero.sitePath)}" alt="${escapeHtml(hero.title || display.name)}"></div>` : ""}
       </section>
-      ${brandAssetStrip(brand.images || [])}
+      ${brandAssetHub(brand)}
+      ${moodBoard(brand)}
       <section class="resource-list">
         <div class="resource-grid">
           <div class="resource"><strong>${t("brand.website")}</strong><br>${brand.officialWebsite ? `<a href="${escapeHtml(brand.officialWebsite)}">${escapeHtml(brand.officialWebsite)}</a>` : escapeHtml(t("brand.blank"))}</div>

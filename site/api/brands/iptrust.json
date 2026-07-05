@@ -33,6 +33,7 @@
       "trust"
     ]
   },
+  "assetKey": "iptrust",
   "mainName": "IPTrustasset",
   "mainLocale": "EN",
   "profile": {
@@ -71,11 +72,11 @@
     "en": ""
   },
   "version": {
-    "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-    "shortHash": "3bd27b3",
-    "date": "2026-07-05T10:35:21+08:00",
-    "message": "Show logos on brand pages",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+    "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+    "shortHash": "542890f",
+    "date": "2026-07-05T10:48:18+08:00",
+    "message": "Add transparent Table AI logo",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
   },
   "historyUrl": "api/history/iptrust.json",
   "history": [
@@ -168,6 +169,127 @@
       "title": "Iptrust Wide White"
     }
   ],
+  "assetKit": {
+    "assetKey": "iptrust",
+    "endpoints": {
+      "brand": "api/brands/iptrust.json",
+      "images": "api/brands/iptrust.json#images",
+      "tokens": "api/brands/iptrust.json#tokens",
+      "history": "api/history/iptrust.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#10263D"
+        },
+        {
+          "key": "accent",
+          "value": "#B99B5B"
+        },
+        {
+          "key": "secondary",
+          "value": "#C7CCD1"
+        },
+        {
+          "key": "surface",
+          "value": "#F5F2EA"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFFFF"
+        },
+        {
+          "key": "ink",
+          "value": "#17202A"
+        },
+        {
+          "key": "muted",
+          "value": "#5C6570"
+        }
+      ],
+      "keywords": [
+        "navy",
+        "platinum",
+        "dark gold",
+        "IP assets",
+        "trust"
+      ],
+      "images": [
+        {
+          "path": "IPTRUST/assets/brand-images/iptrust-brand-hero.png",
+          "sitePath": "assets/brand-images/iptrust.png",
+          "title": "Iptrust Brand Hero"
+        },
+        {
+          "path": "IPTRUST/assets/brand-images/iptrust-wide-black.png",
+          "sitePath": "assets/brand-images/iptrust-iptrust-wide-black.png",
+          "title": "Iptrust Wide Black"
+        },
+        {
+          "path": "IPTRUST/assets/brand-images/iptrust-wide-white.png",
+          "sitePath": "assets/brand-images/iptrust-iptrust-wide-white.png",
+          "title": "Iptrust Wide White"
+        }
+      ]
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#10263D"
+      },
+      {
+        "key": "accent",
+        "value": "#B99B5B"
+      },
+      {
+        "key": "secondary",
+        "value": "#C7CCD1"
+      },
+      {
+        "key": "surface",
+        "value": "#F5F2EA"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFFFF"
+      },
+      {
+        "key": "ink",
+        "value": "#17202A"
+      },
+      {
+        "key": "muted",
+        "value": "#5C6570"
+      }
+    ],
+    "keywords": [
+      "navy",
+      "platinum",
+      "dark gold",
+      "IP assets",
+      "trust"
+    ],
+    "images": [
+      {
+        "path": "IPTRUST/assets/brand-images/iptrust-brand-hero.png",
+        "sitePath": "assets/brand-images/iptrust.png",
+        "title": "Iptrust Brand Hero"
+      },
+      {
+        "path": "IPTRUST/assets/brand-images/iptrust-wide-black.png",
+        "sitePath": "assets/brand-images/iptrust-iptrust-wide-black.png",
+        "title": "Iptrust Wide Black"
+      },
+      {
+        "path": "IPTRUST/assets/brand-images/iptrust-wide-white.png",
+        "sitePath": "assets/brand-images/iptrust-iptrust-wide-white.png",
+        "title": "Iptrust Wide White"
+      }
+    ]
+  },
   "editablePaths": [],
   "source": {
     "github": "https://github.com/fengurt/tableai_designaha/tree/main/IPTRUST",

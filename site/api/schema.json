@@ -13,7 +13,8 @@
     "llms": "llms.txt"
   },
   "brandFields": {
-    "slug": "Stable IP identifier.",
+    "slug": "Stable IP ID / asset key used by URLs and agent calls.",
+    "assetKey": "Human-readable alias for slug in asset and agent contexts.",
     "folder": "Local source folder.",
     "name": "Configured public/English name.",
     "nativeName": "Configured native/Chinese or alternate name.",
@@ -35,6 +36,8 @@
     "guides": "Guideline metadata and text.",
     "tokens": "Token file metadata and text.",
     "images": "Image asset metadata and public site paths.",
+    "assetKit": "Unified callable IP asset endpoints, colors, images, and moodboard source.",
+    "moodboard": "Derived colors, keywords, and image assets for visual direction.",
     "editablePaths": "Source files editable from admin flow.",
     "source": "GitHub source folder and local folder.",
     "version": "Latest build/global version object.",

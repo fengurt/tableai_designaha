@@ -33,6 +33,7 @@
       "three agents"
     ]
   },
+  "assetKey": "axisee",
   "mainName": "Axisee",
   "mainLocale": "EN",
   "profile": {
@@ -71,11 +72,11 @@
     "en": ""
   },
   "version": {
-    "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-    "shortHash": "3bd27b3",
-    "date": "2026-07-05T10:35:21+08:00",
-    "message": "Show logos on brand pages",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+    "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+    "shortHash": "542890f",
+    "date": "2026-07-05T10:48:18+08:00",
+    "message": "Add transparent Table AI logo",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
   },
   "historyUrl": "api/history/axisee.json",
   "history": [
@@ -178,6 +179,117 @@
       "title": "Axisee Logo"
     }
   ],
+  "assetKit": {
+    "assetKey": "axisee",
+    "endpoints": {
+      "brand": "api/brands/axisee.json",
+      "images": "api/brands/axisee.json#images",
+      "tokens": "api/brands/axisee.json#tokens",
+      "history": "api/history/axisee.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#1A2B4A"
+        },
+        {
+          "key": "accent",
+          "value": "#B12137"
+        },
+        {
+          "key": "secondary",
+          "value": "#D4AF37"
+        },
+        {
+          "key": "surface",
+          "value": "#F9FAFB"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFFFF"
+        },
+        {
+          "key": "ink",
+          "value": "#2C2C2C"
+        },
+        {
+          "key": "muted",
+          "value": "#555555"
+        }
+      ],
+      "keywords": [
+        "universe blue",
+        "Vanahom red",
+        "promising gold",
+        "hotel AI",
+        "three agents"
+      ],
+      "images": [
+        {
+          "path": "Axisee/assets/brand-images/axisee-brand-hero.png",
+          "sitePath": "assets/brand-images/axisee.png",
+          "title": "Axisee Brand Hero"
+        },
+        {
+          "path": "Axisee/assets/brand-images/axisee-logo.png",
+          "sitePath": "assets/brand-images/axisee-axisee-logo.png",
+          "title": "Axisee Logo"
+        }
+      ]
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#1A2B4A"
+      },
+      {
+        "key": "accent",
+        "value": "#B12137"
+      },
+      {
+        "key": "secondary",
+        "value": "#D4AF37"
+      },
+      {
+        "key": "surface",
+        "value": "#F9FAFB"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFFFF"
+      },
+      {
+        "key": "ink",
+        "value": "#2C2C2C"
+      },
+      {
+        "key": "muted",
+        "value": "#555555"
+      }
+    ],
+    "keywords": [
+      "universe blue",
+      "Vanahom red",
+      "promising gold",
+      "hotel AI",
+      "three agents"
+    ],
+    "images": [
+      {
+        "path": "Axisee/assets/brand-images/axisee-brand-hero.png",
+        "sitePath": "assets/brand-images/axisee.png",
+        "title": "Axisee Brand Hero"
+      },
+      {
+        "path": "Axisee/assets/brand-images/axisee-logo.png",
+        "sitePath": "assets/brand-images/axisee-axisee-logo.png",
+        "title": "Axisee Logo"
+      }
+    ]
+  },
   "editablePaths": [
     "Axisee/axisee_design.md"
   ],

@@ -33,6 +33,7 @@
       "A Place U Called Home"
     ]
   },
+  "assetKey": "apuch",
   "mainName": "APUCH",
   "mainLocale": "EN",
   "profile": {
@@ -71,11 +72,11 @@
     "en": ""
   },
   "version": {
-    "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-    "shortHash": "3bd27b3",
-    "date": "2026-07-05T10:35:21+08:00",
-    "message": "Show logos on brand pages",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+    "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+    "shortHash": "542890f",
+    "date": "2026-07-05T10:48:18+08:00",
+    "message": "Add transparent Table AI logo",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
   },
   "historyUrl": "api/history/apuch.json",
   "history": [
@@ -167,6 +168,95 @@
   ],
   "tokens": [],
   "images": [],
+  "assetKit": {
+    "assetKey": "apuch",
+    "endpoints": {
+      "brand": "api/brands/apuch.json",
+      "images": "api/brands/apuch.json#images",
+      "tokens": "api/brands/apuch.json#tokens",
+      "history": "api/history/apuch.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#14304A"
+        },
+        {
+          "key": "accent",
+          "value": "#A88B52"
+        },
+        {
+          "key": "secondary",
+          "value": "#42695A"
+        },
+        {
+          "key": "surface",
+          "value": "#F4F1EA"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFEFA"
+        },
+        {
+          "key": "ink",
+          "value": "#17212A"
+        },
+        {
+          "key": "muted",
+          "value": "#5E6870"
+        }
+      ],
+      "keywords": [
+        "home",
+        "belonging",
+        "shelter",
+        "threshold",
+        "A Place U Called Home"
+      ],
+      "images": []
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#14304A"
+      },
+      {
+        "key": "accent",
+        "value": "#A88B52"
+      },
+      {
+        "key": "secondary",
+        "value": "#42695A"
+      },
+      {
+        "key": "surface",
+        "value": "#F4F1EA"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFEFA"
+      },
+      {
+        "key": "ink",
+        "value": "#17212A"
+      },
+      {
+        "key": "muted",
+        "value": "#5E6870"
+      }
+    ],
+    "keywords": [
+      "home",
+      "belonging",
+      "shelter",
+      "threshold",
+      "A Place U Called Home"
+    ],
+    "images": []
+  },
   "editablePaths": [
     "APUCH/README.md"
   ],

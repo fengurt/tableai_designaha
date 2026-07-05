@@ -903,6 +903,96 @@ p { line-height: 1.65; }
   gap: 10px;
   margin: 0 0 30px;
 }
+.asset-hub,
+.mood-board {
+  margin: 0 0 28px;
+  padding: 18px;
+  border: 1px solid var(--brand-line, var(--line));
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--brand-paper, white) 82%, transparent);
+}
+.asset-hub-head,
+.mood-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+.asset-key {
+  font-size: 12px;
+  color: var(--brand-muted, var(--muted));
+}
+.asset-key code,
+.endpoint-card code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+.endpoint-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+.endpoint-card {
+  min-height: 86px;
+  display: grid;
+  align-content: space-between;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid var(--brand-line, var(--line));
+  border-radius: 8px;
+  background: var(--brand-paper, white);
+  color: var(--brand-ink, var(--ink));
+  text-decoration: none;
+}
+.endpoint-card span,
+.mood-keywords span {
+  color: var(--brand-muted, var(--muted));
+  font-size: 12px;
+}
+.endpoint-card strong { font-size: 13px; }
+.endpoint-card code {
+  color: var(--brand-primary, var(--blue));
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+.mood-grid {
+  display: grid;
+  grid-template-columns: minmax(220px, .9fr) minmax(0, 1.1fr);
+  gap: 18px;
+}
+.mood-colors {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.mood-color {
+  min-height: 72px;
+  display: grid;
+  align-content: end;
+  gap: 3px;
+  padding: 10px;
+  border: 1px solid var(--brand-line, var(--line));
+  border-radius: 8px;
+  background: var(--mood-color);
+  color: var(--mood-ink, var(--brand-ink, var(--ink)));
+}
+.mood-color strong,
+.mood-color code {
+  font-size: 11px;
+  line-height: 1;
+}
+.mood-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.mood-keywords span {
+  border: 1px solid var(--brand-line, var(--line));
+  border-radius: 999px;
+  padding: 6px 9px;
+  background: var(--brand-paper, white);
+}
 .brand-asset-strip {
   display: flex;
   gap: 10px;
@@ -970,6 +1060,7 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   nav { width: 100%; justify-content: space-between; gap: 10px; }
   .hub-hero, .brand-hero, .form-grid { grid-template-columns: 1fr; }
   .resource-grid { grid-template-columns: 1fr; }
+  .endpoint-grid, .mood-grid { grid-template-columns: 1fr; }
   .hub-hero { min-height: auto; padding-top: 36px; }
   .hero-index { align-self: stretch; }
   .hero-index-row { grid-template-columns: minmax(0, 1fr) auto; }

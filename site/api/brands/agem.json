@@ -33,6 +33,7 @@
       "creation"
     ]
   },
+  "assetKey": "agem",
   "mainName": "游赋社",
   "mainLocale": "CN",
   "profile": {
@@ -71,11 +72,11 @@
     "en": ""
   },
   "version": {
-    "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-    "shortHash": "3bd27b3",
-    "date": "2026-07-05T10:35:21+08:00",
-    "message": "Show logos on brand pages",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
+    "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+    "shortHash": "542890f",
+    "date": "2026-07-05T10:48:18+08:00",
+    "message": "Add transparent Table AI logo",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
   },
   "historyUrl": "api/history/agem.json",
   "history": [
@@ -167,6 +168,95 @@
   ],
   "tokens": [],
   "images": [],
+  "assetKit": {
+    "assetKey": "agem",
+    "endpoints": {
+      "brand": "api/brands/agem.json",
+      "images": "api/brands/agem.json#images",
+      "tokens": "api/brands/agem.json#tokens",
+      "history": "api/history/agem.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#155E75"
+        },
+        {
+          "key": "accent",
+          "value": "#D9823B"
+        },
+        {
+          "key": "secondary",
+          "value": "#7AA6A1"
+        },
+        {
+          "key": "surface",
+          "value": "#F5F7F2"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFFFF"
+        },
+        {
+          "key": "ink",
+          "value": "#173036"
+        },
+        {
+          "key": "muted",
+          "value": "#5B6F70"
+        }
+      ],
+      "keywords": [
+        "travel",
+        "play",
+        "culture",
+        "community",
+        "creation"
+      ],
+      "images": []
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#155E75"
+      },
+      {
+        "key": "accent",
+        "value": "#D9823B"
+      },
+      {
+        "key": "secondary",
+        "value": "#7AA6A1"
+      },
+      {
+        "key": "surface",
+        "value": "#F5F7F2"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFFFF"
+      },
+      {
+        "key": "ink",
+        "value": "#173036"
+      },
+      {
+        "key": "muted",
+        "value": "#5B6F70"
+      }
+    ],
+    "keywords": [
+      "travel",
+      "play",
+      "culture",
+      "community",
+      "creation"
+    ],
+    "images": []
+  },
   "editablePaths": [
     "AGEM/README.md"
   ],
