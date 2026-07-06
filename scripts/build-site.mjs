@@ -797,11 +797,39 @@ await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
       <div class="global-results" id="globalResults" aria-live="polite"></div>
     </div>
     <nav>
-      <a href="api/brands.json">API</a>
+      <button class="api-link" type="button" id="apiConnectButton" aria-label="API connect"><span class="api-dot"></span>API</button>
       <a href="admin.html" data-i18n="nav.admin">Admin</a>
       <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language"><span class="is-active">CN</span><span class="lang-divider">/</span><span>EN</span></button>
     </nav>
   </header>
+  <section class="api-connect-panel hidden" id="apiConnectPanel" aria-live="polite">
+    <div class="api-connect-head">
+      <div>
+        <p class="eyebrow">API</p>
+        <h2 data-i18n="api.title">连接 System API</h2>
+      </div>
+      <button class="icon-copy" type="button" id="apiConnectClose" data-icon-only="true" aria-label="Close">×</button>
+    </div>
+    <div class="api-connect-form" id="apiConnectForm">
+      <label><span data-i18n="api.key">System API Key</span><input id="apiAdminKey" type="password" autocomplete="current-password"></label>
+      <button class="portal-action" type="button" id="apiConnectSubmit" data-i18n="api.connect">Connect</button>
+    </div>
+    <p class="portal-status" id="apiConnectStatus"></p>
+    <div class="api-ops hidden" id="apiConnectedOps">
+      <strong class="connected-pill" data-i18n="api.connected">Connected</strong>
+      <p class="muted" id="apiScopeText"></p>
+      <div class="portal-links">
+        <a href="admin.html" data-i18n="api.openAdmin">Admin</a>
+        <a href="api/manifest.json">Manifest</a>
+        <a href="api/brands.json">Brands</a>
+        <a href="api/search.json">Search</a>
+        <a href="api/media/">Media</a>
+        <button class="api-copy" type="button" id="apiResourcesButton" data-i18n="api.resources">Resources</button>
+        <button class="api-copy" type="button" data-api-copy="manifest" data-i18n="api.copyCurl">Copy cURL</button>
+      </div>
+      <pre class="api-resource-summary hidden" id="apiResourceSummary"></pre>
+    </div>
+  </section>
   <main id="brandPage" class="brand-page" aria-live="polite"></main>
   <script src="${siteJsPath}" type="module"></script>
 </body>
@@ -1743,7 +1771,8 @@ p { line-height: 1.65; }
   margin: 0 0 30px;
 }
 .asset-hub,
-.mood-board {
+.mood-board,
+.profile-editor {
   margin: 0 0 28px;
   padding: 18px;
   border: 1px solid var(--brand-line, var(--line));
@@ -1751,12 +1780,56 @@ p { line-height: 1.65; }
   background: color-mix(in srgb, var(--brand-paper, white) 82%, transparent);
 }
 .asset-hub-head,
-.mood-head {
+.mood-head,
+.profile-editor-head {
   display: flex;
   align-items: end;
   justify-content: space-between;
   gap: 16px;
   margin-bottom: 14px;
+}
+.profile-editor[data-locked="true"] {
+  opacity: .78;
+}
+.profile-editor[data-locked="true"] #profileEditButton {
+  cursor: not-allowed;
+}
+.profile-edit-form {
+  display: grid;
+  gap: 14px;
+}
+.profile-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.profile-form-grid .span-2 { grid-column: 1 / -1; }
+.profile-form-grid label {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+}
+.profile-form-grid label span {
+  color: var(--brand-muted, var(--muted));
+  font-size: 11px;
+  font-weight: 780;
+  text-transform: uppercase;
+}
+.profile-form-grid input,
+.profile-form-grid select,
+.profile-form-grid textarea {
+  width: 100%;
+  border: 1px solid var(--brand-line, var(--line));
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--brand-paper, white) 86%, transparent);
+  color: var(--brand-ink, var(--ink));
+  padding: 10px 11px;
+  font: inherit;
+  font-size: 13px;
+}
+.profile-form-grid textarea {
+  resize: vertical;
+  line-height: 1.55;
 }
 .asset-key {
   font-size: 12px;
@@ -1900,6 +1973,7 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .hub-hero, .brand-hero, .form-grid { grid-template-columns: 1fr; }
   .resource-grid { grid-template-columns: 1fr; }
   .endpoint-grid, .mood-grid { grid-template-columns: 1fr; }
+  .profile-form-grid { grid-template-columns: 1fr; }
   .hub-hero { min-height: auto; padding-top: 36px; }
   .hero-index { align-self: stretch; }
   .hero-index-row { grid-template-columns: minmax(0, 1fr) auto; }
@@ -1973,6 +2047,19 @@ const i18n = {
     "brand.moodBoard": "Mood Board",
     "brand.visualAssets": "视觉资产",
     "brand.keywords": "关键词",
+    "brand.editProfile": "编辑资料",
+    "brand.edit": "编辑",
+    "brand.name": "IP 名称",
+    "brand.nativeName": "对照名称",
+    "brand.description": "描述",
+    "brand.saveProfile": "保存",
+    "brand.cancelEdit": "取消",
+    "brand.apiFirst": "连接 API 后编辑。",
+    "brand.editReady": "已连接，可编辑。",
+    "brand.editing": "编辑中。",
+    "brand.saving": "保存中...",
+    "brand.savedProfile": "已保存，等待部署。",
+    "brand.saveFailed": "保存失败。",
     "portal.agentTitle": "我是 Agent",
     "portal.agentBody": "复制 Skill。",
     "portal.agentAction": "Skill",
@@ -2080,6 +2167,19 @@ const i18n = {
     "brand.moodBoard": "Mood Board",
     "brand.visualAssets": "Visual assets",
     "brand.keywords": "Keywords",
+    "brand.editProfile": "Edit profile",
+    "brand.edit": "Edit",
+    "brand.name": "IP name",
+    "brand.nativeName": "Alternate name",
+    "brand.description": "Description",
+    "brand.saveProfile": "Save",
+    "brand.cancelEdit": "Cancel",
+    "brand.apiFirst": "Connect API to edit.",
+    "brand.editReady": "Connected. Ready.",
+    "brand.editing": "Editing.",
+    "brand.saving": "Saving...",
+    "brand.savedProfile": "Saved. Deploying.",
+    "brand.saveFailed": "Save failed.",
     "portal.agentTitle": "I am an Agent",
     "portal.agentBody": "Copy Skill.",
     "portal.agentAction": "Skill",
@@ -2715,6 +2815,7 @@ function renderApiConnected(scopes = ["*"]) {
     scopeText.textContent = scopes.includes("*") ? t("api.allAccess") : \`\${t("api.scopesGranted")}\${scopes.join(", ")}\`;
   }
   apiStatus(t("api.connected"));
+  window.dispatchEvent(new CustomEvent("iptrust:api-connected", { detail: { scopes } }));
 }
 
 async function loadProtectedResources() {
@@ -2800,6 +2901,177 @@ function setupApiConnect() {
       ops?.classList.add("hidden");
       apiStatus(error.message || t("api.failed"), true);
       showToast(error.message || t("api.failed"));
+    }
+  });
+}
+
+function apiKeyForWrite() {
+  return sessionStorage.getItem(API_KEY_SESSION) || "";
+}
+
+function apiScopesForWrite() {
+  const saved = readApiCookie();
+  return saved?.scopes?.length ? saved.scopes : [];
+}
+
+function canManageBrand(slug) {
+  const scopes = apiScopesForWrite();
+  return Boolean(apiKeyForWrite()) && (scopes.includes("*") || scopes.includes(slug));
+}
+
+function setProfileStatus(message, isError = false) {
+  const node = $("#profileEditStatus");
+  if (!node) return;
+  node.textContent = message;
+  node.style.color = isError ? "#b12137" : "#0e8c7b";
+}
+
+function setProfileEditorAccess(slug) {
+  const editor = $("#profileEditor");
+  const button = $("#profileEditButton");
+  if (!editor || !button) return;
+  const unlocked = canManageBrand(slug);
+  editor.dataset.locked = unlocked ? "false" : "true";
+  button.disabled = !unlocked;
+  if (!unlocked) setProfileStatus(t("brand.apiFirst"), false);
+  else setProfileStatus(t("brand.editReady"), false);
+}
+
+function fieldPatchValue(form, name) {
+  const node = form.querySelector(\`[data-profile-field="\${name}"]\`);
+  return node ? node.value : "";
+}
+
+function profilePatchFromForm(form) {
+  const keywords = fieldPatchValue(form, "theme.keywords")
+    .split(/[,\\n·]+/)
+    .map((item) => item.trim())
+    .filter(Boolean);
+  return {
+    name: fieldPatchValue(form, "name"),
+    nativeName: fieldPatchValue(form, "nativeName"),
+    description: fieldPatchValue(form, "description"),
+    officialWebsite: fieldPatchValue(form, "officialWebsite"),
+    mainLanguage: fieldPatchValue(form, "mainLanguage"),
+    intro: {
+      zh: fieldPatchValue(form, "intro.zh"),
+      en: fieldPatchValue(form, "intro.en"),
+    },
+    business: {
+      zh: fieldPatchValue(form, "business.zh"),
+      en: fieldPatchValue(form, "business.en"),
+    },
+    notes: {
+      zh: fieldPatchValue(form, "notes.zh"),
+      en: fieldPatchValue(form, "notes.en"),
+    },
+    theme: {
+      primary: fieldPatchValue(form, "theme.primary"),
+      accent: fieldPatchValue(form, "theme.accent"),
+      secondary: fieldPatchValue(form, "theme.secondary"),
+      keywords,
+    },
+  };
+}
+
+function profileEditor(brand = {}) {
+  const profile = brand.profile || {};
+  const intro = brand.intro || profile.intro || {};
+  const business = brand.business || profile.business || {};
+  const notes = brand.notes || profile.notes || {};
+  const theme = brand.theme || {};
+  return \`
+    <section class="profile-editor" id="profileEditor" data-brand="\${escapeHtml(brand.slug)}" data-locked="true">
+      <div class="profile-editor-head">
+        <div>
+          <p class="eyebrow">API</p>
+          <h2>\${escapeHtml(t("brand.editProfile"))}</h2>
+        </div>
+        <button class="button ghost" type="button" id="profileEditButton">\${escapeHtml(t("brand.edit"))}</button>
+      </div>
+      <form class="profile-edit-form hidden" id="profileEditForm">
+        <div class="profile-form-grid">
+          <label><span>\${escapeHtml(t("brand.name"))}</span><input data-profile-field="name" value="\${escapeHtml(brand.name || "")}"></label>
+          <label><span>\${escapeHtml(t("brand.nativeName"))}</span><input data-profile-field="nativeName" value="\${escapeHtml(brand.nativeName || "")}"></label>
+          <label><span>\${escapeHtml(t("brand.website"))}</span><input data-profile-field="officialWebsite" value="\${escapeHtml(brand.officialWebsite || "")}"></label>
+          <label><span>\${escapeHtml(t("brand.mainLanguage"))}</span><select data-profile-field="mainLanguage">
+            <option value="zh" \${(brand.mainLanguage || profile.mainLanguage) === "zh" ? "selected" : ""}>CN</option>
+            <option value="en" \${(brand.mainLanguage || profile.mainLanguage) === "en" ? "selected" : ""}>EN</option>
+          </select></label>
+          <label class="span-2"><span>\${escapeHtml(t("brand.description"))}</span><textarea data-profile-field="description" rows="2">\${escapeHtml(brand.description || "")}</textarea></label>
+          <label><span>\${escapeHtml(t("brand.intro"))} · CN</span><textarea data-profile-field="intro.zh" rows="4">\${escapeHtml(intro.zh || "")}</textarea></label>
+          <label><span>\${escapeHtml(t("brand.intro"))} · EN</span><textarea data-profile-field="intro.en" rows="4">\${escapeHtml(intro.en || "")}</textarea></label>
+          <label><span>\${escapeHtml(t("brand.business"))} · CN</span><textarea data-profile-field="business.zh" rows="3">\${escapeHtml(business.zh || "")}</textarea></label>
+          <label><span>\${escapeHtml(t("brand.business"))} · EN</span><textarea data-profile-field="business.en" rows="3">\${escapeHtml(business.en || "")}</textarea></label>
+          <label><span>\${escapeHtml(t("brand.notes"))} · CN</span><textarea data-profile-field="notes.zh" rows="3">\${escapeHtml(notes.zh || "")}</textarea></label>
+          <label><span>\${escapeHtml(t("brand.notes"))} · EN</span><textarea data-profile-field="notes.en" rows="3">\${escapeHtml(notes.en || "")}</textarea></label>
+          <label><span>Primary</span><input data-profile-field="theme.primary" value="\${escapeHtml(theme.primary || "")}"></label>
+          <label><span>Accent</span><input data-profile-field="theme.accent" value="\${escapeHtml(theme.accent || "")}"></label>
+          <label><span>Secondary</span><input data-profile-field="theme.secondary" value="\${escapeHtml(theme.secondary || "")}"></label>
+          <label class="span-2"><span>\${escapeHtml(t("brand.keywords"))}</span><textarea data-profile-field="theme.keywords" rows="2">\${escapeHtml((theme.keywords || []).join(" · "))}</textarea></label>
+        </div>
+        <div class="actions">
+          <button class="button" type="submit" id="profileSaveButton">\${escapeHtml(t("brand.saveProfile"))}</button>
+          <button class="button ghost" type="button" id="profileCancelButton">\${escapeHtml(t("brand.cancelEdit"))}</button>
+        </div>
+      </form>
+      <p class="notice" id="profileEditStatus" aria-live="polite"></p>
+    </section>
+  \`;
+}
+
+function setupProfileEditor(brand = {}) {
+  const editor = $("#profileEditor");
+  const form = $("#profileEditForm");
+  const editButton = $("#profileEditButton");
+  const cancelButton = $("#profileCancelButton");
+  if (!editor || !form || !editButton || editor.dataset.ready) return;
+  editor.dataset.ready = "true";
+  setProfileEditorAccess(brand.slug);
+  window.addEventListener("iptrust:api-connected", () => setProfileEditorAccess(brand.slug));
+
+  editButton.addEventListener("click", () => {
+    if (!canManageBrand(brand.slug)) {
+      setProfileStatus(t("brand.apiFirst"), true);
+      $("#apiConnectPanel")?.classList.remove("hidden");
+      $("#apiAdminKey")?.focus();
+      return;
+    }
+    form.classList.remove("hidden");
+    setProfileStatus(t("brand.editing"));
+  });
+  cancelButton?.addEventListener("click", () => {
+    form.classList.add("hidden");
+    setProfileStatus(t("brand.editReady"));
+  });
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const key = apiKeyForWrite();
+    if (!key) {
+      setProfileStatus(t("brand.apiFirst"), true);
+      return;
+    }
+    setProfileStatus(t("brand.saving"));
+    try {
+      const res = await fetch(\`api/manage/brands/\${encodeURIComponent(brand.slug)}\`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Admin-Key": key,
+        },
+        body: JSON.stringify({
+          message: \`Update \${brand.slug} profile from IPTrust API\`,
+          patch: profilePatchFromForm(form),
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.hint || data.error || t("brand.saveFailed"));
+      form.classList.add("hidden");
+      setProfileStatus(t("brand.savedProfile"));
+      showToast(t("brand.savedProfile"));
+    } catch (error) {
+      setProfileStatus(error.message || t("brand.saveFailed"), true);
+      showToast(error.message || t("brand.saveFailed"));
     }
   });
 }
@@ -3120,6 +3392,7 @@ async function renderBrand() {
         </div>
         \${hero ? \`<div class="brand-visual"><img src="\${escapeHtml(hero.sitePath)}" alt="\${escapeHtml(hero.title || display.name)}"></div>\` : ""}
       </section>
+      \${profileEditor(brand)}
       \${brandAssetHub(brand)}
       \${moodBoard(brand)}
       <section class="resource-list">
@@ -3143,6 +3416,7 @@ async function renderBrand() {
       \`).join("") || ""}
     </div>
   \`;
+  setupProfileEditor(brand);
 }
 
 applyI18n();

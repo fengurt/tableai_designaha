@@ -878,7 +878,8 @@ p { line-height: 1.65; }
   margin: 0 0 30px;
 }
 .asset-hub,
-.mood-board {
+.mood-board,
+.profile-editor {
   margin: 0 0 28px;
   padding: 18px;
   border: 1px solid var(--brand-line, var(--line));
@@ -886,12 +887,56 @@ p { line-height: 1.65; }
   background: color-mix(in srgb, var(--brand-paper, white) 82%, transparent);
 }
 .asset-hub-head,
-.mood-head {
+.mood-head,
+.profile-editor-head {
   display: flex;
   align-items: end;
   justify-content: space-between;
   gap: 16px;
   margin-bottom: 14px;
+}
+.profile-editor[data-locked="true"] {
+  opacity: .78;
+}
+.profile-editor[data-locked="true"] #profileEditButton {
+  cursor: not-allowed;
+}
+.profile-edit-form {
+  display: grid;
+  gap: 14px;
+}
+.profile-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.profile-form-grid .span-2 { grid-column: 1 / -1; }
+.profile-form-grid label {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+}
+.profile-form-grid label span {
+  color: var(--brand-muted, var(--muted));
+  font-size: 11px;
+  font-weight: 780;
+  text-transform: uppercase;
+}
+.profile-form-grid input,
+.profile-form-grid select,
+.profile-form-grid textarea {
+  width: 100%;
+  border: 1px solid var(--brand-line, var(--line));
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--brand-paper, white) 86%, transparent);
+  color: var(--brand-ink, var(--ink));
+  padding: 10px 11px;
+  font: inherit;
+  font-size: 13px;
+}
+.profile-form-grid textarea {
+  resize: vertical;
+  line-height: 1.55;
 }
 .asset-key {
   font-size: 12px;
@@ -1035,6 +1080,7 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .hub-hero, .brand-hero, .form-grid { grid-template-columns: 1fr; }
   .resource-grid { grid-template-columns: 1fr; }
   .endpoint-grid, .mood-grid { grid-template-columns: 1fr; }
+  .profile-form-grid { grid-template-columns: 1fr; }
   .hub-hero { min-height: auto; padding-top: 36px; }
   .hero-index { align-self: stretch; }
   .hero-index-row { grid-template-columns: minmax(0, 1fr) auto; }

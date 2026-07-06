@@ -23,3 +23,7 @@ MCP tools:
 
 - `list_private_skills`: lists protected ksamint skill metadata only.
 - `get_private_skill`: decrypts and returns one protected skill by id.
+
+## Direct IP Profile Editing
+
+Brand profile edits use `PATCH /api/manage/brands/<slug>` with `X-Admin-Key`. Cloudflare Pages must have `ADMIN_API_KEY` plus `GITHUB_ADMIN_TOKEN` or `GITHUB_TOKEN` so the API can commit `config/brands.json` back to GitHub.

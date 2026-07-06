@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-06T02:16:44.951Z",
+  "generatedAt": "2026-07-06T04:04:59.829Z",
   "version": {
-    "hash": "079dbb39ab5ed6359187796516d01f2807c3e267",
-    "shortHash": "079dbb3",
-    "date": "2026-07-06T08:56:58+08:00",
-    "message": "Refine homepage API navigation",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/079dbb39ab5ed6359187796516d01f2807c3e267"
+    "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
+    "shortHash": "4f7db01",
+    "date": "2026-07-06T10:17:49+08:00",
+    "message": "Add encrypted ksamint private skills service",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
   },
   "brands": [
     {
@@ -219,11 +219,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "079dbb39ab5ed6359187796516d01f2807c3e267",
-      "shortHash": "079dbb3",
-      "date": "2026-07-06T08:56:58+08:00",
-      "message": "Refine homepage API navigation",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/079dbb39ab5ed6359187796516d01f2807c3e267"
+      "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
+      "shortHash": "4f7db01",
+      "date": "2026-07-06T10:17:49+08:00",
+      "message": "Add encrypted ksamint private skills service",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
     }
   },
   "sync": {

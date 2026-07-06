@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brand Guidelines</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site-079dbb3-a09caca7.css">
+  <link rel="stylesheet" href="assets/site-4f7db01-5c7352cc.css">
 </head>
 <body>
   <header class="topbar">
@@ -15,12 +15,40 @@
       <div class="global-results" id="globalResults" aria-live="polite"></div>
     </div>
     <nav>
-      <a href="api/brands.json">API</a>
+      <button class="api-link" type="button" id="apiConnectButton" aria-label="API connect"><span class="api-dot"></span>API</button>
       <a href="admin.html" data-i18n="nav.admin">Admin</a>
       <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language"><span class="is-active">CN</span><span class="lang-divider">/</span><span>EN</span></button>
     </nav>
   </header>
+  <section class="api-connect-panel hidden" id="apiConnectPanel" aria-live="polite">
+    <div class="api-connect-head">
+      <div>
+        <p class="eyebrow">API</p>
+        <h2 data-i18n="api.title">连接 System API</h2>
+      </div>
+      <button class="icon-copy" type="button" id="apiConnectClose" data-icon-only="true" aria-label="Close">×</button>
+    </div>
+    <div class="api-connect-form" id="apiConnectForm">
+      <label><span data-i18n="api.key">System API Key</span><input id="apiAdminKey" type="password" autocomplete="current-password"></label>
+      <button class="portal-action" type="button" id="apiConnectSubmit" data-i18n="api.connect">Connect</button>
+    </div>
+    <p class="portal-status" id="apiConnectStatus"></p>
+    <div class="api-ops hidden" id="apiConnectedOps">
+      <strong class="connected-pill" data-i18n="api.connected">Connected</strong>
+      <p class="muted" id="apiScopeText"></p>
+      <div class="portal-links">
+        <a href="admin.html" data-i18n="api.openAdmin">Admin</a>
+        <a href="api/manifest.json">Manifest</a>
+        <a href="api/brands.json">Brands</a>
+        <a href="api/search.json">Search</a>
+        <a href="api/media/">Media</a>
+        <button class="api-copy" type="button" id="apiResourcesButton" data-i18n="api.resources">Resources</button>
+        <button class="api-copy" type="button" data-api-copy="manifest" data-i18n="api.copyCurl">Copy cURL</button>
+      </div>
+      <pre class="api-resource-summary hidden" id="apiResourceSummary"></pre>
+    </div>
+  </section>
   <main id="brandPage" class="brand-page" aria-live="polite"></main>
-  <script src="assets/site-079dbb3-a09caca7.js" type="module"></script>
+  <script src="assets/site-4f7db01-5c7352cc.js" type="module"></script>
 </body>
 </html>

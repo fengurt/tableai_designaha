@@ -13,11 +13,11 @@
     "ksamint/README.md"
   ],
   "latest": {
-    "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
-    "shortHash": "b0269d2",
-    "date": "2026-07-06T06:21:22+08:00",
-    "message": "Add ksamint IP",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+    "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
+    "shortHash": "4f7db01",
+    "date": "2026-07-06T10:17:49+08:00",
+    "message": "Add encrypted ksamint private skills service",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5",
     "sourcePaths": [
       "config/brands.json",
       "ksamint",
@@ -25,6 +25,18 @@
     ]
   },
   "versions": [
+    {
+      "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
+      "shortHash": "4f7db01",
+      "date": "2026-07-06T10:17:49+08:00",
+      "message": "Add encrypted ksamint private skills service",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5",
+      "sourcePaths": [
+        "config/brands.json",
+        "ksamint",
+        "ksamint/README.md"
+      ]
+    },
     {
       "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
       "shortHash": "b0269d2",

@@ -1,5 +1,12 @@
 [
   {
+    "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
+    "shortHash": "4f7db01",
+    "date": "2026-07-06T10:17:49+08:00",
+    "message": "Add encrypted ksamint private skills service",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+  },
+  {
     "hash": "079dbb39ab5ed6359187796516d01f2807c3e267",
     "shortHash": "079dbb3",
     "date": "2026-07-06T08:56:58+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-07-04T20:53:03+08:00",
     "message": "Expose brand API schema and history endpoints",
     "url": "https://github.com/fengurt/tableai_designaha/commit/50a423841491577f81a4f4d034726e7ca975cf48"
-  },
-  {
-    "hash": "757d234f9731715e50bf6f416f2d9b5f3e4d9a22",
-    "shortHash": "757d234",
-    "date": "2026-07-04T20:46:39+08:00",
-    "message": "Refine IPTrust search and copy feedback UX",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/757d234f9731715e50bf6f416f2d9b5f3e4d9a22"
   }
 ]
