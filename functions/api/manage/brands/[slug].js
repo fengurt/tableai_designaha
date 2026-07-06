@@ -8,6 +8,7 @@ const CORS_HEADERS = {
 const CONFIG_PATH = "config/brands.json";
 const STRING_FIELDS = ["name", "nativeName", "description", "officialWebsite"];
 const LOCALE_FIELDS = ["intro", "business", "notes"];
+const CLASSIFICATION_FIELDS = ["tracks", "audiences", "tags"];
 const THEME_FIELDS = ["primary", "accent", "secondary", "surface", "paper", "ink", "muted", "line"];
 
 function json(data, init = {}) {
@@ -115,12 +116,39 @@ function cleanText(value, max = 1200) {
   return String(value).replace(/\r\n/g, "\n").slice(0, max);
 }
 
+function cleanList(value, maxItems = 16) {
+  if (Array.isArray(value)) {
+    return value.map((item) => cleanText(item, 120)).filter(Boolean).slice(0, maxItems);
+  }
+  return cleanText(value, 1200)
+    .split(/[,\n·]+/)
+    .map((item) => item.trim())
+    .filter(Boolean)
+    .slice(0, maxItems);
+}
+
 function applyLocalePatch(target, patch, key) {
   if (!patch[key] || typeof patch[key] !== "object") return;
   target[key] = target[key] && typeof target[key] === "object" ? { ...target[key] } : {};
   for (const lang of ["zh", "en"]) {
     if (Object.prototype.hasOwnProperty.call(patch[key], lang)) {
       target[key][lang] = cleanText(patch[key][lang], 2400);
+    }
+  }
+}
+
+function applyClassificationPatch(target, patch) {
+  if (!patch.classification || typeof patch.classification !== "object") return;
+  target.classification = target.classification && typeof target.classification === "object" ? { ...target.classification } : {};
+  for (const field of CLASSIFICATION_FIELDS) {
+    if (!patch.classification[field] || typeof patch.classification[field] !== "object") continue;
+    target.classification[field] = target.classification[field] && typeof target.classification[field] === "object"
+      ? { ...target.classification[field] }
+      : {};
+    for (const lang of ["zh", "en"]) {
+      if (Object.prototype.hasOwnProperty.call(patch.classification[field], lang)) {
+        target.classification[field][lang] = cleanList(patch.classification[field][lang]);
+      }
     }
   }
 }
@@ -136,6 +164,7 @@ function updateBrand(brand, patch) {
     next.mainLanguage = lang;
   }
   for (const field of LOCALE_FIELDS) applyLocalePatch(next, patch, field);
+  applyClassificationPatch(next, patch);
   if (patch.theme && typeof patch.theme === "object") {
     next.theme = next.theme && typeof next.theme === "object" ? { ...next.theme } : {};
     for (const field of THEME_FIELDS) {

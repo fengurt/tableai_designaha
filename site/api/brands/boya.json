@@ -33,6 +33,46 @@
       "classical learning"
     ]
   },
+  "classification": {
+    "tracks": {
+      "zh": [
+        "博雅教育",
+        "书院体系",
+        "知识共同体"
+      ],
+      "en": [
+        "Liberal arts education",
+        "Academy system",
+        "Knowledge community"
+      ]
+    },
+    "audiences": {
+      "zh": [
+        "学生",
+        "教育者",
+        "终身学习者"
+      ],
+      "en": [
+        "Students",
+        "Educators",
+        "Lifelong learners"
+      ]
+    },
+    "tags": {
+      "zh": [
+        "博雅",
+        "教育",
+        "书院",
+        "知识"
+      ],
+      "en": [
+        "Liberal arts",
+        "Education",
+        "Academy",
+        "Knowledge"
+      ]
+    }
+  },
   "assetKey": "boya",
   "mainName": "博雅问渠书院",
   "mainLocale": "CN",
@@ -51,6 +91,46 @@
     "notes": {
       "zh": "",
       "en": ""
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "博雅教育",
+          "书院体系",
+          "知识共同体"
+        ],
+        "en": [
+          "Liberal arts education",
+          "Academy system",
+          "Knowledge community"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "学生",
+          "教育者",
+          "终身学习者"
+        ],
+        "en": [
+          "Students",
+          "Educators",
+          "Lifelong learners"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "博雅",
+          "教育",
+          "书院",
+          "知识"
+        ],
+        "en": [
+          "Liberal arts",
+          "Education",
+          "Academy",
+          "Knowledge"
+        ]
+      }
     }
   },
   "display": {
@@ -72,11 +152,11 @@
     "en": ""
   },
   "version": {
-    "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-    "shortHash": "4f7db01",
-    "date": "2026-07-06T10:17:49+08:00",
-    "message": "Add encrypted ksamint private skills service",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+    "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+    "shortHash": "a469733",
+    "date": "2026-07-06T12:06:43+08:00",
+    "message": "Add direct brand profile editing API",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
   },
   "historyUrl": "api/history/boya.json",
   "history": [

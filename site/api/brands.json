@@ -34,6 +34,46 @@
         "minimal"
       ]
     },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "AI 原生智库",
+          "Agent 工作流",
+          "联盟协作"
+        ],
+        "en": [
+          "AI-native think tank",
+          "Agent workflow",
+          "Alliance collaboration"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "国际智库",
+          "联盟组织",
+          "AI 产品团队"
+        ],
+        "en": [
+          "International think tanks",
+          "Alliance operators",
+          "AI product teams"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "AI",
+          "智库",
+          "Agent",
+          "设计系统"
+        ],
+        "en": [
+          "AI",
+          "Think tank",
+          "Agent",
+          "Design system"
+        ]
+      }
+    },
     "assetKey": "tableai",
     "mainName": "Table AI",
     "mainLocale": "EN",
@@ -52,6 +92,46 @@
       "notes": {
         "zh": "",
         "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "AI 原生智库",
+            "Agent 工作流",
+            "联盟协作"
+          ],
+          "en": [
+            "AI-native think tank",
+            "Agent workflow",
+            "Alliance collaboration"
+          ]
+        },
+        "audiences": {
+          "zh": [
+            "国际智库",
+            "联盟组织",
+            "AI 产品团队"
+          ],
+          "en": [
+            "International think tanks",
+            "Alliance operators",
+            "AI product teams"
+          ]
+        },
+        "tags": {
+          "zh": [
+            "AI",
+            "智库",
+            "Agent",
+            "设计系统"
+          ],
+          "en": [
+            "AI",
+            "Think tank",
+            "Agent",
+            "Design system"
+          ]
+        }
       }
     },
     "display": {
@@ -73,11 +153,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-      "shortHash": "4f7db01",
-      "date": "2026-07-06T10:17:49+08:00",
-      "message": "Add encrypted ksamint private skills service",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+      "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+      "shortHash": "a469733",
+      "date": "2026-07-06T12:06:43+08:00",
+      "message": "Add direct brand profile editing API",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
     },
     "historyUrl": "api/history/tableai.json",
     "url": "brand.html?brand=tableai",
@@ -252,6 +332,46 @@
         "wellbeing"
       ]
     },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "酒店旅居",
+          "康养服务",
+          "企业构建"
+        ],
+        "en": [
+          "Hospitality",
+          "Wellbeing stays",
+          "Venture building"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "酒店业主",
+          "旅居运营方",
+          "康养品牌"
+        ],
+        "en": [
+          "Hotel owners",
+          "Stay operators",
+          "Wellbeing brands"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "酒店",
+          "旅居",
+          "康养",
+          "服务延展"
+        ],
+        "en": [
+          "Hospitality",
+          "Stay",
+          "Wellbeing",
+          "Extended services"
+        ]
+      }
+    },
     "assetKey": "vanahom",
     "mainName": "凡纳弘途",
     "mainLocale": "CN",
@@ -270,6 +390,46 @@
       "notes": {
         "zh": "",
         "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "酒店旅居",
+            "康养服务",
+            "企业构建"
+          ],
+          "en": [
+            "Hospitality",
+            "Wellbeing stays",
+            "Venture building"
+          ]
+        },
+        "audiences": {
+          "zh": [
+            "酒店业主",
+            "旅居运营方",
+            "康养品牌"
+          ],
+          "en": [
+            "Hotel owners",
+            "Stay operators",
+            "Wellbeing brands"
+          ]
+        },
+        "tags": {
+          "zh": [
+            "酒店",
+            "旅居",
+            "康养",
+            "服务延展"
+          ],
+          "en": [
+            "Hospitality",
+            "Stay",
+            "Wellbeing",
+            "Extended services"
+          ]
+        }
       }
     },
     "display": {
@@ -291,11 +451,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-      "shortHash": "4f7db01",
-      "date": "2026-07-06T10:17:49+08:00",
-      "message": "Add encrypted ksamint private skills service",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+      "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+      "shortHash": "a469733",
+      "date": "2026-07-06T12:06:43+08:00",
+      "message": "Add direct brand profile editing API",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
     },
     "historyUrl": "api/history/vanahom.json",
     "url": "brand.html?brand=vanahom",
@@ -530,6 +690,46 @@
         "restorative care"
       ]
     },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "东方康养",
+          "疗愈服务",
+          "身心复原"
+        ],
+        "en": [
+          "Oriental wellbeing",
+          "Healing service",
+          "Restorative care"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "疗愈体验用户",
+          "康养空间",
+          "服务设计团队"
+        ],
+        "en": [
+          "Healing guests",
+          "Wellbeing spaces",
+          "Service design teams"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "康养",
+          "疗愈",
+          "东方",
+          "复原"
+        ],
+        "en": [
+          "Wellbeing",
+          "Healing",
+          "Oriental",
+          "Restorative"
+        ]
+      }
+    },
     "assetKey": "sanctem",
     "mainName": "Sanctem",
     "mainLocale": "EN",
@@ -548,6 +748,46 @@
       "notes": {
         "zh": "",
         "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "东方康养",
+            "疗愈服务",
+            "身心复原"
+          ],
+          "en": [
+            "Oriental wellbeing",
+            "Healing service",
+            "Restorative care"
+          ]
+        },
+        "audiences": {
+          "zh": [
+            "疗愈体验用户",
+            "康养空间",
+            "服务设计团队"
+          ],
+          "en": [
+            "Healing guests",
+            "Wellbeing spaces",
+            "Service design teams"
+          ]
+        },
+        "tags": {
+          "zh": [
+            "康养",
+            "疗愈",
+            "东方",
+            "复原"
+          ],
+          "en": [
+            "Wellbeing",
+            "Healing",
+            "Oriental",
+            "Restorative"
+          ]
+        }
       }
     },
     "display": {
@@ -569,11 +809,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-      "shortHash": "4f7db01",
-      "date": "2026-07-06T10:17:49+08:00",
-      "message": "Add encrypted ksamint private skills service",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+      "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+      "shortHash": "a469733",
+      "date": "2026-07-06T12:06:43+08:00",
+      "message": "Add direct brand profile editing API",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
     },
     "historyUrl": "api/history/sanctem.json",
     "url": "brand.html?brand=sanctem",
@@ -798,6 +1038,46 @@
         "inclusive AI"
       ]
     },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "AI 劳动力",
+          "企业自动化",
+          "智能体产品"
+        ],
+        "en": [
+          "AI workforce",
+          "Enterprise automation",
+          "Agent products"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "企业团队",
+          "运营人员",
+          "AI 服务商"
+        ],
+        "en": [
+          "Enterprise teams",
+          "Operations teams",
+          "AI service providers"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "AI",
+          "劳动力",
+          "自动化",
+          "善意科技"
+        ],
+        "en": [
+          "AI",
+          "Workforce",
+          "Automation",
+          "Human-first"
+        ]
+      }
+    },
     "assetKey": "kind",
     "mainName": "KiND",
     "mainLocale": "EN",
@@ -816,6 +1096,46 @@
       "notes": {
         "zh": "",
         "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "AI 劳动力",
+            "企业自动化",
+            "智能体产品"
+          ],
+          "en": [
+            "AI workforce",
+            "Enterprise automation",
+            "Agent products"
+          ]
+        },
+        "audiences": {
+          "zh": [
+            "企业团队",
+            "运营人员",
+            "AI 服务商"
+          ],
+          "en": [
+            "Enterprise teams",
+            "Operations teams",
+            "AI service providers"
+          ]
+        },
+        "tags": {
+          "zh": [
+            "AI",
+            "劳动力",
+            "自动化",
+            "善意科技"
+          ],
+          "en": [
+            "AI",
+            "Workforce",
+            "Automation",
+            "Human-first"
+          ]
+        }
       }
     },
     "display": {
@@ -837,11 +1157,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-      "shortHash": "4f7db01",
-      "date": "2026-07-06T10:17:49+08:00",
-      "message": "Add encrypted ksamint private skills service",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+      "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+      "shortHash": "a469733",
+      "date": "2026-07-06T12:06:43+08:00",
+      "message": "Add direct brand profile editing API",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
     },
     "historyUrl": "api/history/kind.json",
     "url": "brand.html?brand=kind",
@@ -998,6 +1318,46 @@
         "Asia-Pacific"
       ]
     },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "艺术疗愈",
+          "身心教育",
+          "亚太联盟"
+        ],
+        "en": [
+          "Healing arts",
+          "Wellbeing education",
+          "Asia-Pacific alliance"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "疗愈师",
+          "艺术教育者",
+          "研究机构"
+        ],
+        "en": [
+          "Healing practitioners",
+          "Art educators",
+          "Research institutions"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "艺术",
+          "疗愈",
+          "教育",
+          "联盟"
+        ],
+        "en": [
+          "Art",
+          "Healing",
+          "Education",
+          "Alliance"
+        ]
+      }
+    },
     "assetKey": "apha",
     "mainName": "亚太艺术疗愈联盟",
     "mainLocale": "CN",
@@ -1016,6 +1376,46 @@
       "notes": {
         "zh": "",
         "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "艺术疗愈",
+            "身心教育",
+            "亚太联盟"
+          ],
+          "en": [
+            "Healing arts",
+            "Wellbeing education",
+            "Asia-Pacific alliance"
+          ]
+        },
+        "audiences": {
+          "zh": [
+            "疗愈师",
+            "艺术教育者",
+            "研究机构"
+          ],
+          "en": [
+            "Healing practitioners",
+            "Art educators",
+            "Research institutions"
+          ]
+        },
+        "tags": {
+          "zh": [
+            "艺术",
+            "疗愈",
+            "教育",
+            "联盟"
+          ],
+          "en": [
+            "Art",
+            "Healing",
+            "Education",
+            "Alliance"
+          ]
+        }
       }
     },
     "display": {
@@ -1037,11 +1437,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-      "shortHash": "4f7db01",
-      "date": "2026-07-06T10:17:49+08:00",
-      "message": "Add encrypted ksamint private skills service",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+      "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+      "shortHash": "a469733",
+      "date": "2026-07-06T12:06:43+08:00",
+      "message": "Add direct brand profile editing API",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
     },
     "historyUrl": "api/history/apha.json",
     "url": "brand.html?brand=apha",
@@ -1196,6 +1596,46 @@
         "continuous learning"
       ]
     },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "学习社区",
+          "清明协作",
+          "联盟实验"
+        ],
+        "en": [
+          "Learning community",
+          "Clear collaboration",
+          "Alliance experiments"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "终身学习者",
+          "协作者",
+          "社群组织者"
+        ],
+        "en": [
+          "Lifelong learners",
+          "Collaborators",
+          "Community organizers"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "学习",
+          "社区",
+          "协作",
+          "实验"
+        ],
+        "en": [
+          "Learning",
+          "Community",
+          "Collaboration",
+          "Experiment"
+        ]
+      }
+    },
     "assetKey": "manaendless",
     "mainName": "无魔协会",
     "mainLocale": "CN",
@@ -1214,6 +1654,46 @@
       "notes": {
         "zh": "",
         "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "学习社区",
+            "清明协作",
+            "联盟实验"
+          ],
+          "en": [
+            "Learning community",
+            "Clear collaboration",
+            "Alliance experiments"
+          ]
+        },
+        "audiences": {
+          "zh": [
+            "终身学习者",
+            "协作者",
+            "社群组织者"
+          ],
+          "en": [
+            "Lifelong learners",
+            "Collaborators",
+            "Community organizers"
+          ]
+        },
+        "tags": {
+          "zh": [
+            "学习",
+            "社区",
+            "协作",
+            "实验"
+          ],
+          "en": [
+            "Learning",
+            "Community",
+            "Collaboration",
+            "Experiment"
+          ]
+        }
       }
     },
     "display": {
@@ -1235,11 +1715,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-      "shortHash": "4f7db01",
-      "date": "2026-07-06T10:17:49+08:00",
-      "message": "Add encrypted ksamint private skills service",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+      "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+      "shortHash": "a469733",
+      "date": "2026-07-06T12:06:43+08:00",
+      "message": "Add direct brand profile editing API",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
     },
     "historyUrl": "api/history/manaendless.json",
     "url": "brand.html?brand=manaendless",
@@ -1392,6 +1872,46 @@
         "standards"
       ]
     },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "全球联盟",
+          "标准建设",
+          "跨区域协作"
+        ],
+        "en": [
+          "Global alliance",
+          "Standards",
+          "Cross-region collaboration"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "国际伙伴",
+          "联盟机构",
+          "标准制定团队"
+        ],
+        "en": [
+          "International partners",
+          "Alliance institutions",
+          "Standards teams"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "全球",
+          "联盟",
+          "标准",
+          "协作"
+        ],
+        "en": [
+          "Global",
+          "Alliance",
+          "Standards",
+          "Collaboration"
+        ]
+      }
+    },
     "assetKey": "opcglobal",
     "mainName": "欧匹赛全球联盟",
     "mainLocale": "CN",
@@ -1410,6 +1930,46 @@
       "notes": {
         "zh": "",
         "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "全球联盟",
+            "标准建设",
+            "跨区域协作"
+          ],
+          "en": [
+            "Global alliance",
+            "Standards",
+            "Cross-region collaboration"
+          ]
+        },
+        "audiences": {
+          "zh": [
+            "国际伙伴",
+            "联盟机构",
+            "标准制定团队"
+          ],
+          "en": [
+            "International partners",
+            "Alliance institutions",
+            "Standards teams"
+          ]
+        },
+        "tags": {
+          "zh": [
+            "全球",
+            "联盟",
+            "标准",
+            "协作"
+          ],
+          "en": [
+            "Global",
+            "Alliance",
+            "Standards",
+            "Collaboration"
+          ]
+        }
       }
     },
     "display": {
@@ -1431,11 +1991,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-      "shortHash": "4f7db01",
-      "date": "2026-07-06T10:17:49+08:00",
-      "message": "Add encrypted ksamint private skills service",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+      "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+      "shortHash": "a469733",
+      "date": "2026-07-06T12:06:43+08:00",
+      "message": "Add direct brand profile editing API",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
     },
     "historyUrl": "api/history/opcglobal.json",
     "url": "brand.html?brand=opcglobal",
@@ -1588,6 +2148,46 @@
         "trust"
       ]
     },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "IP 资产治理",
+          "信任索引",
+          "品牌源文件"
+        ],
+        "en": [
+          "IP asset governance",
+          "Trust indexing",
+          "Brand source files"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "IP 持有人",
+          "品牌管理者",
+          "Agent 团队"
+        ],
+        "en": [
+          "IP owners",
+          "Brand stewards",
+          "Agent teams"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "IP",
+          "信任",
+          "资产",
+          "治理"
+        ],
+        "en": [
+          "IP",
+          "Trust",
+          "Asset",
+          "Governance"
+        ]
+      }
+    },
     "assetKey": "iptrust",
     "mainName": "IPTrustasset",
     "mainLocale": "EN",
@@ -1606,6 +2206,46 @@
       "notes": {
         "zh": "",
         "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "IP 资产治理",
+            "信任索引",
+            "品牌源文件"
+          ],
+          "en": [
+            "IP asset governance",
+            "Trust indexing",
+            "Brand source files"
+          ]
+        },
+        "audiences": {
+          "zh": [
+            "IP 持有人",
+            "品牌管理者",
+            "Agent 团队"
+          ],
+          "en": [
+            "IP owners",
+            "Brand stewards",
+            "Agent teams"
+          ]
+        },
+        "tags": {
+          "zh": [
+            "IP",
+            "信任",
+            "资产",
+            "治理"
+          ],
+          "en": [
+            "IP",
+            "Trust",
+            "Asset",
+            "Governance"
+          ]
+        }
       }
     },
     "display": {
@@ -1627,11 +2267,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-      "shortHash": "4f7db01",
-      "date": "2026-07-06T10:17:49+08:00",
-      "message": "Add encrypted ksamint private skills service",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+      "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+      "shortHash": "a469733",
+      "date": "2026-07-06T12:06:43+08:00",
+      "message": "Add direct brand profile editing API",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
     },
     "historyUrl": "api/history/iptrust.json",
     "url": "brand.html?brand=iptrust",
@@ -1804,6 +2444,46 @@
         "transformation"
       ]
     },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "组织转型",
+          "战略交付",
+          "AI 原生运营"
+        ],
+        "en": [
+          "Transformation",
+          "Strategic delivery",
+          "AI-native operations"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "创始人",
+          "管理层",
+          "转型团队"
+        ],
+        "en": [
+          "Founders",
+          "Executives",
+          "Transformation teams"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "转型",
+          "交付",
+          "战略",
+          "AI 运营"
+        ],
+        "en": [
+          "Transformation",
+          "Delivery",
+          "Strategy",
+          "AI operations"
+        ]
+      }
+    },
     "assetKey": "fengzhi",
     "mainName": "峰值永造局",
     "mainLocale": "CN",
@@ -1822,6 +2502,46 @@
       "notes": {
         "zh": "",
         "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "组织转型",
+            "战略交付",
+            "AI 原生运营"
+          ],
+          "en": [
+            "Transformation",
+            "Strategic delivery",
+            "AI-native operations"
+          ]
+        },
+        "audiences": {
+          "zh": [
+            "创始人",
+            "管理层",
+            "转型团队"
+          ],
+          "en": [
+            "Founders",
+            "Executives",
+            "Transformation teams"
+          ]
+        },
+        "tags": {
+          "zh": [
+            "转型",
+            "交付",
+            "战略",
+            "AI 运营"
+          ],
+          "en": [
+            "Transformation",
+            "Delivery",
+            "Strategy",
+            "AI operations"
+          ]
+        }
       }
     },
     "display": {
@@ -1843,11 +2563,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-      "shortHash": "4f7db01",
-      "date": "2026-07-06T10:17:49+08:00",
-      "message": "Add encrypted ksamint private skills service",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+      "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+      "shortHash": "a469733",
+      "date": "2026-07-06T12:06:43+08:00",
+      "message": "Add direct brand profile editing API",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
     },
     "historyUrl": "api/history/fengzhi.json",
     "url": "brand.html?brand=fengzhi",
@@ -2024,6 +2744,46 @@
         "three agents"
       ]
     },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "酒店盈利",
+          "收益管理",
+          "经营增长"
+        ],
+        "en": [
+          "Hotel profitability",
+          "Revenue management",
+          "Operating growth"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "酒店业主",
+          "总经理",
+          "收益团队"
+        ],
+        "en": [
+          "Hotel owners",
+          "General managers",
+          "Revenue teams"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "酒店",
+          "盈利",
+          "收益",
+          "增长"
+        ],
+        "en": [
+          "Hotel",
+          "Profitability",
+          "Revenue",
+          "Growth"
+        ]
+      }
+    },
     "assetKey": "axisee",
     "mainName": "Axisee",
     "mainLocale": "EN",
@@ -2042,6 +2802,46 @@
       "notes": {
         "zh": "",
         "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "酒店盈利",
+            "收益管理",
+            "经营增长"
+          ],
+          "en": [
+            "Hotel profitability",
+            "Revenue management",
+            "Operating growth"
+          ]
+        },
+        "audiences": {
+          "zh": [
+            "酒店业主",
+            "总经理",
+            "收益团队"
+          ],
+          "en": [
+            "Hotel owners",
+            "General managers",
+            "Revenue teams"
+          ]
+        },
+        "tags": {
+          "zh": [
+            "酒店",
+            "盈利",
+            "收益",
+            "增长"
+          ],
+          "en": [
+            "Hotel",
+            "Profitability",
+            "Revenue",
+            "Growth"
+          ]
+        }
       }
     },
     "display": {
@@ -2063,11 +2863,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-      "shortHash": "4f7db01",
-      "date": "2026-07-06T10:17:49+08:00",
-      "message": "Add encrypted ksamint private skills service",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+      "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+      "shortHash": "a469733",
+      "date": "2026-07-06T12:06:43+08:00",
+      "message": "Add direct brand profile editing API",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
     },
     "historyUrl": "api/history/axisee.json",
     "url": "brand.html?brand=axisee",
@@ -2236,6 +3036,46 @@
         "wisdom navigator"
       ]
     },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "饮食知识",
+          "料理内容",
+          "美食体验"
+        ],
+        "en": [
+          "Food knowledge",
+          "Culinary content",
+          "Dining experience"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "料理创作者",
+          "餐饮品牌",
+          "美食学习者"
+        ],
+        "en": [
+          "Culinary creators",
+          "Food brands",
+          "Food learners"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "料理",
+          "饮食",
+          "内容",
+          "体验"
+        ],
+        "en": [
+          "Culinary",
+          "Food",
+          "Content",
+          "Experience"
+        ]
+      }
+    },
     "assetKey": "sidera",
     "mainName": "Sidera",
     "mainLocale": "EN",
@@ -2254,6 +3094,46 @@
       "notes": {
         "zh": "参考链接：https://frienji.kenjilopezalt.com/；https://www.seriouseats.com/",
         "en": "Reference links: https://frienji.kenjilopezalt.com/; https://www.seriouseats.com/"
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "饮食知识",
+            "料理内容",
+            "美食体验"
+          ],
+          "en": [
+            "Food knowledge",
+            "Culinary content",
+            "Dining experience"
+          ]
+        },
+        "audiences": {
+          "zh": [
+            "料理创作者",
+            "餐饮品牌",
+            "美食学习者"
+          ],
+          "en": [
+            "Culinary creators",
+            "Food brands",
+            "Food learners"
+          ]
+        },
+        "tags": {
+          "zh": [
+            "料理",
+            "饮食",
+            "内容",
+            "体验"
+          ],
+          "en": [
+            "Culinary",
+            "Food",
+            "Content",
+            "Experience"
+          ]
+        }
       }
     },
     "display": {
@@ -2271,11 +3151,11 @@
       }
     },
     "version": {
-      "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-      "shortHash": "4f7db01",
-      "date": "2026-07-06T10:17:49+08:00",
-      "message": "Add encrypted ksamint private skills service",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+      "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+      "shortHash": "a469733",
+      "date": "2026-07-06T12:06:43+08:00",
+      "message": "Add direct brand profile editing API",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
     },
     "historyUrl": "api/history/sidera.json",
     "url": "brand.html?brand=sidera",
@@ -2430,6 +3310,46 @@
         "precision"
       ]
     },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "系统思维",
+          "战略结构",
+          "持续进化"
+        ],
+        "en": [
+          "Systems thinking",
+          "Strategic structure",
+          "Continuous evolution"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "创始人",
+          "项目负责人",
+          "知识工作者"
+        ],
+        "en": [
+          "Founders",
+          "Project owners",
+          "Knowledge workers"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "系统",
+          "战略",
+          "进化",
+          "结构"
+        ],
+        "en": [
+          "Systems",
+          "Strategy",
+          "Evolution",
+          "Structure"
+        ]
+      }
+    },
     "assetKey": "1stepmore",
     "mainName": "1stepmore",
     "mainLocale": "EN",
@@ -2448,6 +3368,46 @@
       "notes": {
         "zh": "",
         "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "系统思维",
+            "战略结构",
+            "持续进化"
+          ],
+          "en": [
+            "Systems thinking",
+            "Strategic structure",
+            "Continuous evolution"
+          ]
+        },
+        "audiences": {
+          "zh": [
+            "创始人",
+            "项目负责人",
+            "知识工作者"
+          ],
+          "en": [
+            "Founders",
+            "Project owners",
+            "Knowledge workers"
+          ]
+        },
+        "tags": {
+          "zh": [
+            "系统",
+            "战略",
+            "进化",
+            "结构"
+          ],
+          "en": [
+            "Systems",
+            "Strategy",
+            "Evolution",
+            "Structure"
+          ]
+        }
       }
     },
     "display": {
@@ -2469,11 +3429,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-      "shortHash": "4f7db01",
-      "date": "2026-07-06T10:17:49+08:00",
-      "message": "Add encrypted ksamint private skills service",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+      "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+      "shortHash": "a469733",
+      "date": "2026-07-06T12:06:43+08:00",
+      "message": "Add direct brand profile editing API",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
     },
     "historyUrl": "api/history/1stepmore.json",
     "url": "brand.html?brand=1stepmore",
@@ -2616,6 +3576,46 @@
         "creation"
       ]
     },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "游学体验",
+          "文化赋能",
+          "社群旅行"
+        ],
+        "en": [
+          "Learning journeys",
+          "Cultural empowerment",
+          "Community travel"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "体验策划者",
+          "文化机构",
+          "社群用户"
+        ],
+        "en": [
+          "Experience designers",
+          "Cultural institutions",
+          "Community members"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "游学",
+          "文化",
+          "体验",
+          "社群"
+        ],
+        "en": [
+          "Journey",
+          "Culture",
+          "Experience",
+          "Community"
+        ]
+      }
+    },
     "assetKey": "agem",
     "mainName": "游赋社",
     "mainLocale": "CN",
@@ -2634,6 +3634,46 @@
       "notes": {
         "zh": "",
         "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "游学体验",
+            "文化赋能",
+            "社群旅行"
+          ],
+          "en": [
+            "Learning journeys",
+            "Cultural empowerment",
+            "Community travel"
+          ]
+        },
+        "audiences": {
+          "zh": [
+            "体验策划者",
+            "文化机构",
+            "社群用户"
+          ],
+          "en": [
+            "Experience designers",
+            "Cultural institutions",
+            "Community members"
+          ]
+        },
+        "tags": {
+          "zh": [
+            "游学",
+            "文化",
+            "体验",
+            "社群"
+          ],
+          "en": [
+            "Journey",
+            "Culture",
+            "Experience",
+            "Community"
+          ]
+        }
       }
     },
     "display": {
@@ -2655,11 +3695,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-      "shortHash": "4f7db01",
-      "date": "2026-07-06T10:17:49+08:00",
-      "message": "Add encrypted ksamint private skills service",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+      "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+      "shortHash": "a469733",
+      "date": "2026-07-06T12:06:43+08:00",
+      "message": "Add direct brand profile editing API",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
     },
     "historyUrl": "api/history/agem.json",
     "url": "brand.html?brand=agem",
@@ -2802,6 +3842,46 @@
         "fire"
       ]
     },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "传统文化转译",
+          "品牌叙事",
+          "东方美学"
+        ],
+        "en": [
+          "Heritage translation",
+          "Brand narrative",
+          "Eastern aesthetics"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "文化品牌",
+          "内容团队",
+          "美学项目"
+        ],
+        "en": [
+          "Cultural brands",
+          "Content teams",
+          "Aesthetic projects"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "传统",
+          "文化",
+          "叙事",
+          "美学"
+        ],
+        "en": [
+          "Heritage",
+          "Culture",
+          "Narrative",
+          "Aesthetics"
+        ]
+      }
+    },
     "assetKey": "rgd",
     "mainName": "燃古豋",
     "mainLocale": "CN",
@@ -2820,6 +3900,46 @@
       "notes": {
         "zh": "",
         "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "传统文化转译",
+            "品牌叙事",
+            "东方美学"
+          ],
+          "en": [
+            "Heritage translation",
+            "Brand narrative",
+            "Eastern aesthetics"
+          ]
+        },
+        "audiences": {
+          "zh": [
+            "文化品牌",
+            "内容团队",
+            "美学项目"
+          ],
+          "en": [
+            "Cultural brands",
+            "Content teams",
+            "Aesthetic projects"
+          ]
+        },
+        "tags": {
+          "zh": [
+            "传统",
+            "文化",
+            "叙事",
+            "美学"
+          ],
+          "en": [
+            "Heritage",
+            "Culture",
+            "Narrative",
+            "Aesthetics"
+          ]
+        }
       }
     },
     "display": {
@@ -2841,11 +3961,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-      "shortHash": "4f7db01",
-      "date": "2026-07-06T10:17:49+08:00",
-      "message": "Add encrypted ksamint private skills service",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+      "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+      "shortHash": "a469733",
+      "date": "2026-07-06T12:06:43+08:00",
+      "message": "Add direct brand profile editing API",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
     },
     "historyUrl": "api/history/rgd.json",
     "url": "brand.html?brand=rgd",
@@ -2988,6 +4108,46 @@
         "wellbeing"
       ]
     },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "生活方式",
+          "日常幸福",
+          "品牌商品"
+        ],
+        "en": [
+          "Lifestyle",
+          "Everyday wellbeing",
+          "Branded goods"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "生活方式用户",
+          "消费品牌",
+          "社群零售"
+        ],
+        "en": [
+          "Lifestyle consumers",
+          "Consumer brands",
+          "Community retail"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "生活",
+          "常幸",
+          "商品",
+          "幸福"
+        ],
+        "en": [
+          "Lifestyle",
+          "Goodness",
+          "Goods",
+          "Wellbeing"
+        ]
+      }
+    },
     "assetKey": "changoods",
     "mainName": "常幸",
     "mainLocale": "CN",
@@ -3006,6 +4166,46 @@
       "notes": {
         "zh": "",
         "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "生活方式",
+            "日常幸福",
+            "品牌商品"
+          ],
+          "en": [
+            "Lifestyle",
+            "Everyday wellbeing",
+            "Branded goods"
+          ]
+        },
+        "audiences": {
+          "zh": [
+            "生活方式用户",
+            "消费品牌",
+            "社群零售"
+          ],
+          "en": [
+            "Lifestyle consumers",
+            "Consumer brands",
+            "Community retail"
+          ]
+        },
+        "tags": {
+          "zh": [
+            "生活",
+            "常幸",
+            "商品",
+            "幸福"
+          ],
+          "en": [
+            "Lifestyle",
+            "Goodness",
+            "Goods",
+            "Wellbeing"
+          ]
+        }
       }
     },
     "display": {
@@ -3027,11 +4227,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-      "shortHash": "4f7db01",
-      "date": "2026-07-06T10:17:49+08:00",
-      "message": "Add encrypted ksamint private skills service",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+      "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+      "shortHash": "a469733",
+      "date": "2026-07-06T12:06:43+08:00",
+      "message": "Add direct brand profile editing API",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
     },
     "historyUrl": "api/history/changoods.json",
     "url": "brand.html?brand=changoods",
@@ -3174,6 +4374,46 @@
         "classical learning"
       ]
     },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "博雅教育",
+          "书院体系",
+          "知识共同体"
+        ],
+        "en": [
+          "Liberal arts education",
+          "Academy system",
+          "Knowledge community"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "学生",
+          "教育者",
+          "终身学习者"
+        ],
+        "en": [
+          "Students",
+          "Educators",
+          "Lifelong learners"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "博雅",
+          "教育",
+          "书院",
+          "知识"
+        ],
+        "en": [
+          "Liberal arts",
+          "Education",
+          "Academy",
+          "Knowledge"
+        ]
+      }
+    },
     "assetKey": "boya",
     "mainName": "博雅问渠书院",
     "mainLocale": "CN",
@@ -3192,6 +4432,46 @@
       "notes": {
         "zh": "",
         "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "博雅教育",
+            "书院体系",
+            "知识共同体"
+          ],
+          "en": [
+            "Liberal arts education",
+            "Academy system",
+            "Knowledge community"
+          ]
+        },
+        "audiences": {
+          "zh": [
+            "学生",
+            "教育者",
+            "终身学习者"
+          ],
+          "en": [
+            "Students",
+            "Educators",
+            "Lifelong learners"
+          ]
+        },
+        "tags": {
+          "zh": [
+            "博雅",
+            "教育",
+            "书院",
+            "知识"
+          ],
+          "en": [
+            "Liberal arts",
+            "Education",
+            "Academy",
+            "Knowledge"
+          ]
+        }
       }
     },
     "display": {
@@ -3213,11 +4493,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-      "shortHash": "4f7db01",
-      "date": "2026-07-06T10:17:49+08:00",
-      "message": "Add encrypted ksamint private skills service",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+      "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+      "shortHash": "a469733",
+      "date": "2026-07-06T12:06:43+08:00",
+      "message": "Add direct brand profile editing API",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
     },
     "historyUrl": "api/history/boya.json",
     "url": "brand.html?brand=boya",
@@ -3360,6 +4640,46 @@
         "A Place U Called Home"
       ]
     },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "家园叙事",
+          "生活空间",
+          "社区连接"
+        ],
+        "en": [
+          "Home narrative",
+          "Living spaces",
+          "Community connection"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "国际居住者",
+          "社区伙伴",
+          "空间运营方"
+        ],
+        "en": [
+          "Global residents",
+          "Community partners",
+          "Space operators"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "家",
+          "空间",
+          "社区",
+          "连接"
+        ],
+        "en": [
+          "Home",
+          "Place",
+          "Community",
+          "Connection"
+        ]
+      }
+    },
     "assetKey": "apuch",
     "mainName": "APUCH",
     "mainLocale": "EN",
@@ -3378,6 +4698,46 @@
       "notes": {
         "zh": "",
         "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "家园叙事",
+            "生活空间",
+            "社区连接"
+          ],
+          "en": [
+            "Home narrative",
+            "Living spaces",
+            "Community connection"
+          ]
+        },
+        "audiences": {
+          "zh": [
+            "国际居住者",
+            "社区伙伴",
+            "空间运营方"
+          ],
+          "en": [
+            "Global residents",
+            "Community partners",
+            "Space operators"
+          ]
+        },
+        "tags": {
+          "zh": [
+            "家",
+            "空间",
+            "社区",
+            "连接"
+          ],
+          "en": [
+            "Home",
+            "Place",
+            "Community",
+            "Connection"
+          ]
+        }
       }
     },
     "display": {
@@ -3399,11 +4759,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-      "shortHash": "4f7db01",
-      "date": "2026-07-06T10:17:49+08:00",
-      "message": "Add encrypted ksamint private skills service",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+      "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+      "shortHash": "a469733",
+      "date": "2026-07-06T12:06:43+08:00",
+      "message": "Add direct brand profile editing API",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
     },
     "historyUrl": "api/history/apuch.json",
     "url": "brand.html?brand=apuch",
@@ -3552,6 +4912,46 @@
         "restraint"
       ]
     },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "建筑设计",
+          "民宿文旅",
+          "空间改造"
+        ],
+        "en": [
+          "Architecture",
+          "Boutique hospitality",
+          "Spatial renovation"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "业主",
+          "文旅项目",
+          "空间品牌"
+        ],
+        "en": [
+          "Owners",
+          "Cultural tourism projects",
+          "Spatial brands"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "建筑",
+          "空间",
+          "民宿",
+          "在地性"
+        ],
+        "en": [
+          "Architecture",
+          "Space",
+          "Hospitality",
+          "Locality"
+        ]
+      }
+    },
     "assetKey": "pam",
     "mainName": "帕姆建筑",
     "mainLocale": "CN",
@@ -3570,6 +4970,46 @@
       "notes": {
         "zh": "品牌释义：Plus & Multiply。联系：miqiangqiang@pamdesignoffice.com",
         "en": "Brand meaning: Plus & Multiply. Contact: miqiangqiang@pamdesignoffice.com"
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "建筑设计",
+            "民宿文旅",
+            "空间改造"
+          ],
+          "en": [
+            "Architecture",
+            "Boutique hospitality",
+            "Spatial renovation"
+          ]
+        },
+        "audiences": {
+          "zh": [
+            "业主",
+            "文旅项目",
+            "空间品牌"
+          ],
+          "en": [
+            "Owners",
+            "Cultural tourism projects",
+            "Spatial brands"
+          ]
+        },
+        "tags": {
+          "zh": [
+            "建筑",
+            "空间",
+            "民宿",
+            "在地性"
+          ],
+          "en": [
+            "Architecture",
+            "Space",
+            "Hospitality",
+            "Locality"
+          ]
+        }
       }
     },
     "display": {
@@ -3587,11 +5027,11 @@
       }
     },
     "version": {
-      "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-      "shortHash": "4f7db01",
-      "date": "2026-07-06T10:17:49+08:00",
-      "message": "Add encrypted ksamint private skills service",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+      "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+      "shortHash": "a469733",
+      "date": "2026-07-06T12:06:43+08:00",
+      "message": "Add direct brand profile editing API",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
     },
     "historyUrl": "api/history/pam.json",
     "url": "brand.html?brand=pam",
@@ -3738,6 +5178,46 @@
         "clear judgment"
       ]
     },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "知识判断",
+          "创作文风",
+          "私密技能"
+        ],
+        "en": [
+          "Knowledge judgment",
+          "Creative voice",
+          "Private skills"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "创作者",
+          "顾问",
+          "Agent 操盘者"
+        ],
+        "en": [
+          "Creators",
+          "Advisors",
+          "Agent operators"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "查明",
+          "判断",
+          "写作",
+          "Skill"
+        ],
+        "en": [
+          "Clarity",
+          "Judgment",
+          "Writing",
+          "Skill"
+        ]
+      }
+    },
     "assetKey": "ksamint",
     "mainName": "ksamint",
     "mainLocale": "EN",
@@ -3756,6 +5236,46 @@
       "notes": {
         "zh": "",
         "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "知识判断",
+            "创作文风",
+            "私密技能"
+          ],
+          "en": [
+            "Knowledge judgment",
+            "Creative voice",
+            "Private skills"
+          ]
+        },
+        "audiences": {
+          "zh": [
+            "创作者",
+            "顾问",
+            "Agent 操盘者"
+          ],
+          "en": [
+            "Creators",
+            "Advisors",
+            "Agent operators"
+          ]
+        },
+        "tags": {
+          "zh": [
+            "查明",
+            "判断",
+            "写作",
+            "Skill"
+          ],
+          "en": [
+            "Clarity",
+            "Judgment",
+            "Writing",
+            "Skill"
+          ]
+        }
       }
     },
     "display": {
@@ -3777,11 +5297,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-      "shortHash": "4f7db01",
-      "date": "2026-07-06T10:17:49+08:00",
-      "message": "Add encrypted ksamint private skills service",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+      "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+      "shortHash": "a469733",
+      "date": "2026-07-06T12:06:43+08:00",
+      "message": "Add direct brand profile editing API",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
     },
     "historyUrl": "api/history/ksamint.json",
     "url": "brand.html?brand=ksamint",
@@ -3889,5 +5409,247 @@
     "imageCount": 0,
     "heroImage": "",
     "primaryExcerpt": "ksamint / 查明 Overview ksamint 是面向清晰判断、信息核验与轻盈智能协作的 IP。它帮助用户把混杂信息查清、讲明、沉淀为可复用的知识与行动依据。 ksamint is an IP for clear judgment, information verification, and lightweight intelligent collaboration. It turns mixed signals into checked context, concise explanation, and reusable knowledge. Brand Role English name: ksamint Chinese name: 查明 Main language: English Role: clarity oriented inquiry and verification IP Visual Directi"
+  },
+  {
+    "slug": "inucleus",
+    "folder": "iNucleus",
+    "name": "iNucleus",
+    "nativeName": "",
+    "description": "AI-native operating nucleus for knowledge systems, agent coordination, and IP evolution.",
+    "officialWebsite": "",
+    "mainLanguage": "en",
+    "intro": {
+      "zh": "",
+      "en": "iNucleus is an AI-native operating nucleus for knowledge systems, agent coordination, and IP evolution."
+    },
+    "business": {
+      "zh": "",
+      "en": "Knowledge systems, agent coordination, AI-native operations, and IP evolution infrastructure."
+    },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
+    "classification": {
+      "tracks": {
+        "zh": [],
+        "en": [
+          "AI-native operations",
+          "Knowledge systems",
+          "Agent coordination"
+        ]
+      },
+      "audiences": {
+        "zh": [],
+        "en": [
+          "Founders",
+          "Agent builders",
+          "Knowledge system teams"
+        ]
+      },
+      "tags": {
+        "zh": [],
+        "en": [
+          "AI",
+          "Nucleus",
+          "Knowledge",
+          "Agents",
+          "Operations"
+        ]
+      }
+    },
+    "primaryGuide": "iNucleus/README.md",
+    "theme": {
+      "mode": "dark",
+      "primary": "#111827",
+      "accent": "#7DD3FC",
+      "secondary": "#A78BFA",
+      "surface": "#0B1020",
+      "paper": "#151B2E",
+      "ink": "#F8FAFC",
+      "muted": "#A8B3C7",
+      "line": "rgba(248, 250, 252, 0.16)",
+      "keywords": [
+        "AI nucleus",
+        "knowledge systems",
+        "agent coordination",
+        "dark core",
+        "electric blue"
+      ]
+    },
+    "assetKey": "inucleus",
+    "mainName": "iNucleus",
+    "mainLocale": "EN",
+    "profile": {
+      "officialWebsite": "",
+      "mainLanguage": "en",
+      "mainLocale": "EN",
+      "intro": {
+        "zh": "",
+        "en": "iNucleus is an AI-native operating nucleus for knowledge systems, agent coordination, and IP evolution."
+      },
+      "business": {
+        "zh": "",
+        "en": "Knowledge systems, agent coordination, AI-native operations, and IP evolution infrastructure."
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [],
+          "en": [
+            "AI-native operations",
+            "Knowledge systems",
+            "Agent coordination"
+          ]
+        },
+        "audiences": {
+          "zh": [],
+          "en": [
+            "Founders",
+            "Agent builders",
+            "Knowledge system teams"
+          ]
+        },
+        "tags": {
+          "zh": [],
+          "en": [
+            "AI",
+            "Nucleus",
+            "Knowledge",
+            "Agents",
+            "Operations"
+          ]
+        }
+      }
+    },
+    "display": {
+      "default": {
+        "language": "en",
+        "name": "iNucleus"
+      },
+      "zh": {
+        "name": "iNucleus",
+        "secondaryName": ""
+      },
+      "en": {
+        "name": "iNucleus",
+        "secondaryName": ""
+      }
+    },
+    "version": {
+      "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+      "shortHash": "a469733",
+      "date": "2026-07-06T12:06:43+08:00",
+      "message": "Add direct brand profile editing API",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
+    },
+    "historyUrl": "api/history/inucleus.json",
+    "url": "brand.html?brand=inucleus",
+    "apiUrl": "api/brands/inucleus.json",
+    "status": "documented",
+    "assetKit": {
+      "assetKey": "inucleus",
+      "endpoints": {
+        "brand": "api/brands/inucleus.json",
+        "images": "api/brands/inucleus.json#images",
+        "tokens": "api/brands/inucleus.json#tokens",
+        "history": "api/history/inucleus.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#111827"
+          },
+          {
+            "key": "accent",
+            "value": "#7DD3FC"
+          },
+          {
+            "key": "secondary",
+            "value": "#A78BFA"
+          },
+          {
+            "key": "surface",
+            "value": "#0B1020"
+          },
+          {
+            "key": "paper",
+            "value": "#151B2E"
+          },
+          {
+            "key": "ink",
+            "value": "#F8FAFC"
+          },
+          {
+            "key": "muted",
+            "value": "#A8B3C7"
+          }
+        ],
+        "keywords": [
+          "AI nucleus",
+          "knowledge systems",
+          "agent coordination",
+          "dark core",
+          "electric blue"
+        ],
+        "images": []
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#111827"
+        },
+        {
+          "key": "accent",
+          "value": "#7DD3FC"
+        },
+        {
+          "key": "secondary",
+          "value": "#A78BFA"
+        },
+        {
+          "key": "surface",
+          "value": "#0B1020"
+        },
+        {
+          "key": "paper",
+          "value": "#151B2E"
+        },
+        {
+          "key": "ink",
+          "value": "#F8FAFC"
+        },
+        {
+          "key": "muted",
+          "value": "#A8B3C7"
+        }
+      ],
+      "keywords": [
+        "AI nucleus",
+        "knowledge systems",
+        "agent coordination",
+        "dark core",
+        "electric blue"
+      ],
+      "images": []
+    },
+    "editablePaths": [
+      "iNucleus/README.md"
+    ],
+    "source": {
+      "github": "https://github.com/fengurt/tableai_designaha/tree/main/iNucleus",
+      "folder": "iNucleus"
+    },
+    "guideCount": 1,
+    "tokenCount": 0,
+    "imageCount": 0,
+    "heroImage": "",
+    "primaryExcerpt": "iNucleus iNucleus is an AI native operating nucleus for knowledge systems, agent coordination, and IP evolution. Brand Role Primary language : English Track : AI native operations / knowledge systems / agent coordination Audience : founders, agent builders, knowledge system teams Operating idea : a compact core where knowledge, decisions, agents, and evolving IP assets stay aligned. Voice Precise, calm, systemic, and"
   }
 ]

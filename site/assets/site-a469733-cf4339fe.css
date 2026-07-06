@@ -733,6 +733,24 @@ p { line-height: 1.65; }
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 14px 0 4px;
+}
+.profile-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  border: 1px solid var(--brand-line, var(--line));
+  border-radius: 999px;
+  padding: 4px 8px;
+  color: var(--brand-primary, var(--blue));
+  background: color-mix(in srgb, var(--brand-paper, white) 78%, transparent);
+  font-size: 12px;
+  font-weight: 720;
+}
 .copy-reference {
   position: absolute;
   right: 14px;

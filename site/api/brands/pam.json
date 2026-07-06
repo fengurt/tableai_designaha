@@ -39,6 +39,46 @@
       "restraint"
     ]
   },
+  "classification": {
+    "tracks": {
+      "zh": [
+        "建筑设计",
+        "民宿文旅",
+        "空间改造"
+      ],
+      "en": [
+        "Architecture",
+        "Boutique hospitality",
+        "Spatial renovation"
+      ]
+    },
+    "audiences": {
+      "zh": [
+        "业主",
+        "文旅项目",
+        "空间品牌"
+      ],
+      "en": [
+        "Owners",
+        "Cultural tourism projects",
+        "Spatial brands"
+      ]
+    },
+    "tags": {
+      "zh": [
+        "建筑",
+        "空间",
+        "民宿",
+        "在地性"
+      ],
+      "en": [
+        "Architecture",
+        "Space",
+        "Hospitality",
+        "Locality"
+      ]
+    }
+  },
   "assetKey": "pam",
   "mainName": "帕姆建筑",
   "mainLocale": "CN",
@@ -57,6 +97,46 @@
     "notes": {
       "zh": "品牌释义：Plus & Multiply。联系：miqiangqiang@pamdesignoffice.com",
       "en": "Brand meaning: Plus & Multiply. Contact: miqiangqiang@pamdesignoffice.com"
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "建筑设计",
+          "民宿文旅",
+          "空间改造"
+        ],
+        "en": [
+          "Architecture",
+          "Boutique hospitality",
+          "Spatial renovation"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "业主",
+          "文旅项目",
+          "空间品牌"
+        ],
+        "en": [
+          "Owners",
+          "Cultural tourism projects",
+          "Spatial brands"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "建筑",
+          "空间",
+          "民宿",
+          "在地性"
+        ],
+        "en": [
+          "Architecture",
+          "Space",
+          "Hospitality",
+          "Locality"
+        ]
+      }
     }
   },
   "display": {
@@ -74,11 +154,11 @@
     }
   },
   "version": {
-    "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-    "shortHash": "4f7db01",
-    "date": "2026-07-06T10:17:49+08:00",
-    "message": "Add encrypted ksamint private skills service",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+    "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+    "shortHash": "a469733",
+    "date": "2026-07-06T12:06:43+08:00",
+    "message": "Add direct brand profile editing API",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
   },
   "historyUrl": "api/history/pam.json",
   "history": [

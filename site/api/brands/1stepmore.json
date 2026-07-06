@@ -33,6 +33,46 @@
       "precision"
     ]
   },
+  "classification": {
+    "tracks": {
+      "zh": [
+        "系统思维",
+        "战略结构",
+        "持续进化"
+      ],
+      "en": [
+        "Systems thinking",
+        "Strategic structure",
+        "Continuous evolution"
+      ]
+    },
+    "audiences": {
+      "zh": [
+        "创始人",
+        "项目负责人",
+        "知识工作者"
+      ],
+      "en": [
+        "Founders",
+        "Project owners",
+        "Knowledge workers"
+      ]
+    },
+    "tags": {
+      "zh": [
+        "系统",
+        "战略",
+        "进化",
+        "结构"
+      ],
+      "en": [
+        "Systems",
+        "Strategy",
+        "Evolution",
+        "Structure"
+      ]
+    }
+  },
   "assetKey": "1stepmore",
   "mainName": "1stepmore",
   "mainLocale": "EN",
@@ -51,6 +91,46 @@
     "notes": {
       "zh": "",
       "en": ""
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "系统思维",
+          "战略结构",
+          "持续进化"
+        ],
+        "en": [
+          "Systems thinking",
+          "Strategic structure",
+          "Continuous evolution"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "创始人",
+          "项目负责人",
+          "知识工作者"
+        ],
+        "en": [
+          "Founders",
+          "Project owners",
+          "Knowledge workers"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "系统",
+          "战略",
+          "进化",
+          "结构"
+        ],
+        "en": [
+          "Systems",
+          "Strategy",
+          "Evolution",
+          "Structure"
+        ]
+      }
     }
   },
   "display": {
@@ -72,11 +152,11 @@
     "en": ""
   },
   "version": {
-    "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-    "shortHash": "4f7db01",
-    "date": "2026-07-06T10:17:49+08:00",
-    "message": "Add encrypted ksamint private skills service",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+    "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+    "shortHash": "a469733",
+    "date": "2026-07-06T12:06:43+08:00",
+    "message": "Add direct brand profile editing API",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
   },
   "historyUrl": "api/history/1stepmore.json",
   "history": [

@@ -1,80 +1,72 @@
 {
-  "slug": "apuch",
-  "folder": "APUCH",
-  "name": "APUCH",
+  "slug": "inucleus",
+  "folder": "iNucleus",
+  "name": "iNucleus",
   "nativeName": "",
-  "description": "A Place U Called Home.",
+  "description": "AI-native operating nucleus for knowledge systems, agent coordination, and IP evolution.",
   "officialWebsite": "",
   "mainLanguage": "en",
   "intro": {
     "zh": "",
-    "en": "APUCH means A Place U Called Home."
+    "en": "iNucleus is an AI-native operating nucleus for knowledge systems, agent coordination, and IP evolution."
   },
   "business": {
     "zh": "",
-    "en": ""
+    "en": "Knowledge systems, agent coordination, AI-native operations, and IP evolution infrastructure."
   },
-  "primaryGuide": "APUCH/README.md",
-  "theme": {
-    "mode": "light",
-    "primary": "#14304A",
-    "accent": "#A88B52",
-    "secondary": "#42695A",
-    "surface": "#F4F1EA",
-    "paper": "#FFFEFA",
-    "ink": "#17212A",
-    "muted": "#5E6870",
-    "line": "rgba(20, 48, 74, 0.16)",
-    "keywords": [
-      "home",
-      "belonging",
-      "shelter",
-      "threshold",
-      "A Place U Called Home"
-    ]
+  "notes": {
+    "zh": "",
+    "en": ""
   },
   "classification": {
     "tracks": {
-      "zh": [
-        "家园叙事",
-        "生活空间",
-        "社区连接"
-      ],
+      "zh": [],
       "en": [
-        "Home narrative",
-        "Living spaces",
-        "Community connection"
+        "AI-native operations",
+        "Knowledge systems",
+        "Agent coordination"
       ]
     },
     "audiences": {
-      "zh": [
-        "国际居住者",
-        "社区伙伴",
-        "空间运营方"
-      ],
+      "zh": [],
       "en": [
-        "Global residents",
-        "Community partners",
-        "Space operators"
+        "Founders",
+        "Agent builders",
+        "Knowledge system teams"
       ]
     },
     "tags": {
-      "zh": [
-        "家",
-        "空间",
-        "社区",
-        "连接"
-      ],
+      "zh": [],
       "en": [
-        "Home",
-        "Place",
-        "Community",
-        "Connection"
+        "AI",
+        "Nucleus",
+        "Knowledge",
+        "Agents",
+        "Operations"
       ]
     }
   },
-  "assetKey": "apuch",
-  "mainName": "APUCH",
+  "primaryGuide": "iNucleus/README.md",
+  "theme": {
+    "mode": "dark",
+    "primary": "#111827",
+    "accent": "#7DD3FC",
+    "secondary": "#A78BFA",
+    "surface": "#0B1020",
+    "paper": "#151B2E",
+    "ink": "#F8FAFC",
+    "muted": "#A8B3C7",
+    "line": "rgba(248, 250, 252, 0.16)",
+    "keywords": [
+      "AI nucleus",
+      "knowledge systems",
+      "agent coordination",
+      "dark core",
+      "electric blue"
+    ]
+  },
+  "assetKey": "inucleus",
+  "mainName": "iNucleus",
   "mainLocale": "EN",
   "profile": {
     "officialWebsite": "",
@@ -82,11 +74,11 @@
     "mainLocale": "EN",
     "intro": {
       "zh": "",
-      "en": "APUCH means A Place U Called Home."
+      "en": "iNucleus is an AI-native operating nucleus for knowledge systems, agent coordination, and IP evolution."
     },
     "business": {
       "zh": "",
-      "en": ""
+      "en": "Knowledge systems, agent coordination, AI-native operations, and IP evolution infrastructure."
     },
     "notes": {
       "zh": "",
@@ -94,41 +86,29 @@
     },
     "classification": {
       "tracks": {
-        "zh": [
-          "家园叙事",
-          "生活空间",
-          "社区连接"
-        ],
+        "zh": [],
         "en": [
-          "Home narrative",
-          "Living spaces",
-          "Community connection"
+          "AI-native operations",
+          "Knowledge systems",
+          "Agent coordination"
         ]
       },
       "audiences": {
-        "zh": [
-          "国际居住者",
-          "社区伙伴",
-          "空间运营方"
-        ],
+        "zh": [],
         "en": [
-          "Global residents",
-          "Community partners",
-          "Space operators"
+          "Founders",
+          "Agent builders",
+          "Knowledge system teams"
         ]
       },
       "tags": {
-        "zh": [
-          "家",
-          "空间",
-          "社区",
-          "连接"
-        ],
+        "zh": [],
         "en": [
-          "Home",
-          "Place",
-          "Community",
-          "Connection"
+          "AI",
+          "Nucleus",
+          "Knowledge",
+          "Agents",
+          "Operations"
         ]
       }
     }
@@ -136,20 +116,16 @@
   "display": {
     "default": {
       "language": "en",
-      "name": "APUCH"
+      "name": "iNucleus"
     },
     "zh": {
-      "name": "APUCH",
+      "name": "iNucleus",
       "secondaryName": ""
     },
     "en": {
-      "name": "APUCH",
+      "name": "iNucleus",
       "secondaryName": ""
     }
-  },
-  "notes": {
-    "zh": "",
-    "en": ""
   },
   "version": {
     "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
@@ -158,7 +134,7 @@
     "message": "Add direct brand profile editing API",
     "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
   },
-  "historyUrl": "api/history/apuch.json",
+  "historyUrl": "api/history/inucleus.json",
   "history": [
     {
       "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
@@ -168,8 +144,8 @@
       "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34",
       "sourcePaths": [
         "config/brands.json",
-        "APUCH",
-        "APUCH/README.md"
+        "iNucleus",
+        "iNucleus/README.md"
       ]
     },
     {
@@ -180,8 +156,8 @@
       "url": "https://github.com/fengurt/tableai_designaha/commit/067a47c76f1cb812b607335089911c282f4d8f78",
       "sourcePaths": [
         "config/brands.json",
-        "APUCH",
-        "APUCH/README.md"
+        "iNucleus",
+        "iNucleus/README.md"
       ]
     },
     {
@@ -192,8 +168,8 @@
       "url": "https://github.com/fengurt/tableai_designaha/commit/a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
       "sourcePaths": [
         "config/brands.json",
-        "APUCH",
-        "APUCH/README.md"
+        "iNucleus",
+        "iNucleus/README.md"
       ]
     },
     {
@@ -204,8 +180,8 @@
       "url": "https://github.com/fengurt/tableai_designaha/commit/0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
       "sourcePaths": [
         "config/brands.json",
-        "APUCH",
-        "APUCH/README.md"
+        "iNucleus",
+        "iNucleus/README.md"
       ]
     },
     {
@@ -216,8 +192,8 @@
       "url": "https://github.com/fengurt/tableai_designaha/commit/534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
       "sourcePaths": [
         "config/brands.json",
-        "APUCH",
-        "APUCH/README.md"
+        "iNucleus",
+        "iNucleus/README.md"
       ]
     },
     {
@@ -228,71 +204,71 @@
       "url": "https://github.com/fengurt/tableai_designaha/commit/1f20db30a5e970cf81e24c76e4613bc7e0036f09",
       "sourcePaths": [
         "config/brands.json",
-        "APUCH",
-        "APUCH/README.md"
+        "iNucleus",
+        "iNucleus/README.md"
       ]
     }
   ],
-  "url": "brand.html?brand=apuch",
-  "apiUrl": "api/brands/apuch.json",
+  "url": "brand.html?brand=inucleus",
+  "apiUrl": "api/brands/inucleus.json",
   "status": "documented",
   "guides": [
     {
-      "path": "APUCH/README.md",
+      "path": "iNucleus/README.md",
       "title": "README",
       "format": "md",
       "primary": true,
-      "excerpt": "APUCH Meaning: A Place U Called Home Chinese name: Brand Role APUCH means A Place U Called Home. Visual Direction Temperament: warm, safe, intimate, open, home like. Color cues: deep ink blue, knowledge gold, soft paper, institutional green. Imagery cues: threshold, home light, table, doorway, belonging, shelter, warm civic space. Agent Notes Use APUCH as the public IP name. Expand APUCH as A Place U Called Home . Ch",
-      "text": "# APUCH\n\nMeaning: A Place U Called Home\n\nChinese name: \n\n## Brand Role\n\nAPUCH means A Place U Called Home.\n\n## Visual Direction\n\n- Temperament: warm, safe, intimate, open, home-like.\n- Color cues: deep ink blue, knowledge gold, soft paper, institutional green.\n- Imagery cues: threshold, home light, table, doorway, belonging, shelter, warm civic space.\n\n## Agent Notes\n\n- Use `APUCH` as the public IP name.\n- Expand `APUCH` as `A Place U Called Home`.\n- Chinese name is currently blank.\n"
+      "excerpt": "iNucleus iNucleus is an AI native operating nucleus for knowledge systems, agent coordination, and IP evolution. Brand Role Primary language : English Track : AI native operations / knowledge systems / agent coordination Audience : founders, agent builders, knowledge system teams Operating idea : a compact core where knowledge, decisions, agents, and evolving IP assets stay aligned. Voice Precise, calm, systemic, and",
+      "text": "# iNucleus\n\niNucleus is an AI-native operating nucleus for knowledge systems, agent coordination, and IP evolution.\n\n## Brand Role\n\n- **Primary language**: English\n- **Track**: AI-native operations / knowledge systems / agent coordination\n- **Audience**: founders, agent builders, knowledge system teams\n- **Operating idea**: a compact core where knowledge, decisions, agents, and evolving IP assets stay aligned.\n\n## Voice\n\nPrecise, calm, systemic, and high-signal. Use fewer words than expected, but keep the architecture visible.\n\n## Visual Direction\n\nDark core, electric clarity, and minimal structural rhythm. Use deep ink surfaces, blue signal lines, and restrained violet accents.\n\n"
     }
   ],
   "tokens": [],
   "images": [],
   "assetKit": {
-    "assetKey": "apuch",
+    "assetKey": "inucleus",
     "endpoints": {
-      "brand": "api/brands/apuch.json",
-      "images": "api/brands/apuch.json#images",
-      "tokens": "api/brands/apuch.json#tokens",
-      "history": "api/history/apuch.json"
+      "brand": "api/brands/inucleus.json",
+      "images": "api/brands/inucleus.json#images",
+      "tokens": "api/brands/inucleus.json#tokens",
+      "history": "api/history/inucleus.json"
     },
     "moodboard": {
       "colors": [
         {
           "key": "primary",
-          "value": "#14304A"
+          "value": "#111827"
         },
         {
           "key": "accent",
-          "value": "#A88B52"
+          "value": "#7DD3FC"
         },
         {
           "key": "secondary",
-          "value": "#42695A"
+          "value": "#A78BFA"
         },
         {
           "key": "surface",
-          "value": "#F4F1EA"
+          "value": "#0B1020"
         },
         {
           "key": "paper",
-          "value": "#FFFEFA"
+          "value": "#151B2E"
         },
         {
           "key": "ink",
-          "value": "#17212A"
+          "value": "#F8FAFC"
         },
         {
           "key": "muted",
-          "value": "#5E6870"
+          "value": "#A8B3C7"
         }
       ],
       "keywords": [
-        "home",
-        "belonging",
-        "shelter",
-        "threshold",
-        "A Place U Called Home"
+        "AI nucleus",
+        "knowledge systems",
+        "agent coordination",
+        "dark core",
+        "electric blue"
       ],
       "images": []
     }
@@ -301,47 +277,47 @@
     "colors": [
       {
         "key": "primary",
-        "value": "#14304A"
+        "value": "#111827"
       },
       {
         "key": "accent",
-        "value": "#A88B52"
+        "value": "#7DD3FC"
       },
       {
         "key": "secondary",
-        "value": "#42695A"
+        "value": "#A78BFA"
       },
       {
         "key": "surface",
-        "value": "#F4F1EA"
+        "value": "#0B1020"
       },
       {
         "key": "paper",
-        "value": "#FFFEFA"
+        "value": "#151B2E"
       },
       {
         "key": "ink",
-        "value": "#17212A"
+        "value": "#F8FAFC"
       },
       {
         "key": "muted",
-        "value": "#5E6870"
+        "value": "#A8B3C7"
       }
     ],
     "keywords": [
-      "home",
-      "belonging",
-      "shelter",
-      "threshold",
-      "A Place U Called Home"
+      "AI nucleus",
+      "knowledge systems",
+      "agent coordination",
+      "dark core",
+      "electric blue"
     ],
     "images": []
   },
   "editablePaths": [
-    "APUCH/README.md"
+    "iNucleus/README.md"
   ],
   "source": {
-    "github": "https://github.com/fengurt/tableai_designaha/tree/main/APUCH",
-    "folder": "APUCH"
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/iNucleus",
+    "folder": "iNucleus"
   }
 }

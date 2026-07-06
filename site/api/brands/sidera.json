@@ -37,6 +37,46 @@
       "wisdom navigator"
     ]
   },
+  "classification": {
+    "tracks": {
+      "zh": [
+        "饮食知识",
+        "料理内容",
+        "美食体验"
+      ],
+      "en": [
+        "Food knowledge",
+        "Culinary content",
+        "Dining experience"
+      ]
+    },
+    "audiences": {
+      "zh": [
+        "料理创作者",
+        "餐饮品牌",
+        "美食学习者"
+      ],
+      "en": [
+        "Culinary creators",
+        "Food brands",
+        "Food learners"
+      ]
+    },
+    "tags": {
+      "zh": [
+        "料理",
+        "饮食",
+        "内容",
+        "体验"
+      ],
+      "en": [
+        "Culinary",
+        "Food",
+        "Content",
+        "Experience"
+      ]
+    }
+  },
   "assetKey": "sidera",
   "mainName": "Sidera",
   "mainLocale": "EN",
@@ -55,6 +95,46 @@
     "notes": {
       "zh": "参考链接：https://frienji.kenjilopezalt.com/；https://www.seriouseats.com/",
       "en": "Reference links: https://frienji.kenjilopezalt.com/; https://www.seriouseats.com/"
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "饮食知识",
+          "料理内容",
+          "美食体验"
+        ],
+        "en": [
+          "Food knowledge",
+          "Culinary content",
+          "Dining experience"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "料理创作者",
+          "餐饮品牌",
+          "美食学习者"
+        ],
+        "en": [
+          "Culinary creators",
+          "Food brands",
+          "Food learners"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "料理",
+          "饮食",
+          "内容",
+          "体验"
+        ],
+        "en": [
+          "Culinary",
+          "Food",
+          "Content",
+          "Experience"
+        ]
+      }
     }
   },
   "display": {
@@ -72,11 +152,11 @@
     }
   },
   "version": {
-    "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-    "shortHash": "4f7db01",
-    "date": "2026-07-06T10:17:49+08:00",
-    "message": "Add encrypted ksamint private skills service",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+    "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+    "shortHash": "a469733",
+    "date": "2026-07-06T12:06:43+08:00",
+    "message": "Add direct brand profile editing API",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
   },
   "historyUrl": "api/history/sidera.json",
   "history": [

@@ -26,7 +26,53 @@
       "ink": "#1B1B1D",
       "muted": "#44474C",
       "line": "rgba(10, 22, 38, 0.16)",
-      "keywords": ["white", "deep blue", "dark gold", "think tank", "minimal"]
+      "keywords": [
+        "white",
+        "deep blue",
+        "dark gold",
+        "think tank",
+        "minimal"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "AI 原生智库",
+          "Agent 工作流",
+          "联盟协作"
+        ],
+        "en": [
+          "AI-native think tank",
+          "Agent workflow",
+          "Alliance collaboration"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "国际智库",
+          "联盟组织",
+          "AI 产品团队"
+        ],
+        "en": [
+          "International think tanks",
+          "Alliance operators",
+          "AI product teams"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "AI",
+          "智库",
+          "Agent",
+          "设计系统"
+        ],
+        "en": [
+          "AI",
+          "Think tank",
+          "Agent",
+          "Design system"
+        ]
+      }
     }
   },
   {
@@ -56,7 +102,53 @@
       "ink": "#211B1C",
       "muted": "#6E7475",
       "line": "rgba(33, 27, 28, 0.14)",
-      "keywords": ["Hongtu red", "Cangling grey", "white space", "hospitality", "wellbeing"]
+      "keywords": [
+        "Hongtu red",
+        "Cangling grey",
+        "white space",
+        "hospitality",
+        "wellbeing"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "酒店旅居",
+          "康养服务",
+          "企业构建"
+        ],
+        "en": [
+          "Hospitality",
+          "Wellbeing stays",
+          "Venture building"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "酒店业主",
+          "旅居运营方",
+          "康养品牌"
+        ],
+        "en": [
+          "Hotel owners",
+          "Stay operators",
+          "Wellbeing brands"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "酒店",
+          "旅居",
+          "康养",
+          "服务延展"
+        ],
+        "en": [
+          "Hospitality",
+          "Stay",
+          "Wellbeing",
+          "Extended services"
+        ]
+      }
     }
   },
   {
@@ -86,7 +178,53 @@
       "ink": "#1E211C",
       "muted": "#687267",
       "line": "rgba(29, 42, 36, 0.16)",
-      "keywords": ["oriental wellness", "healing", "sage", "warm gold", "restorative care"]
+      "keywords": [
+        "oriental wellness",
+        "healing",
+        "sage",
+        "warm gold",
+        "restorative care"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "东方康养",
+          "疗愈服务",
+          "身心复原"
+        ],
+        "en": [
+          "Oriental wellbeing",
+          "Healing service",
+          "Restorative care"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "疗愈体验用户",
+          "康养空间",
+          "服务设计团队"
+        ],
+        "en": [
+          "Healing guests",
+          "Wellbeing spaces",
+          "Service design teams"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "康养",
+          "疗愈",
+          "东方",
+          "复原"
+        ],
+        "en": [
+          "Wellbeing",
+          "Healing",
+          "Oriental",
+          "Restorative"
+        ]
+      }
     }
   },
   {
@@ -116,7 +254,53 @@
       "ink": "#052E28",
       "muted": "#52746C",
       "line": "rgba(6, 59, 51, 0.14)",
-      "keywords": ["teal", "mint", "coral", "kind workforce", "inclusive AI"]
+      "keywords": [
+        "teal",
+        "mint",
+        "coral",
+        "kind workforce",
+        "inclusive AI"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "AI 劳动力",
+          "企业自动化",
+          "智能体产品"
+        ],
+        "en": [
+          "AI workforce",
+          "Enterprise automation",
+          "Agent products"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "企业团队",
+          "运营人员",
+          "AI 服务商"
+        ],
+        "en": [
+          "Enterprise teams",
+          "Operations teams",
+          "AI service providers"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "AI",
+          "劳动力",
+          "自动化",
+          "善意科技"
+        ],
+        "en": [
+          "AI",
+          "Workforce",
+          "Automation",
+          "Human-first"
+        ]
+      }
     }
   },
   {
@@ -146,7 +330,53 @@
       "ink": "#233033",
       "muted": "#66736D",
       "line": "rgba(85, 127, 143, 0.18)",
-      "keywords": ["mineral blue", "sage", "clay", "healing arts", "Asia-Pacific"]
+      "keywords": [
+        "mineral blue",
+        "sage",
+        "clay",
+        "healing arts",
+        "Asia-Pacific"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "艺术疗愈",
+          "身心教育",
+          "亚太联盟"
+        ],
+        "en": [
+          "Healing arts",
+          "Wellbeing education",
+          "Asia-Pacific alliance"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "疗愈师",
+          "艺术教育者",
+          "研究机构"
+        ],
+        "en": [
+          "Healing practitioners",
+          "Art educators",
+          "Research institutions"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "艺术",
+          "疗愈",
+          "教育",
+          "联盟"
+        ],
+        "en": [
+          "Art",
+          "Healing",
+          "Education",
+          "Alliance"
+        ]
+      }
     }
   },
   {
@@ -176,7 +406,53 @@
       "ink": "#F2F0E8",
       "muted": "#B8BDC7",
       "line": "rgba(242, 240, 232, 0.16)",
-      "keywords": ["charcoal", "silver", "violet grey", "clarity", "continuous learning"]
+      "keywords": [
+        "charcoal",
+        "silver",
+        "violet grey",
+        "clarity",
+        "continuous learning"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "学习社区",
+          "清明协作",
+          "联盟实验"
+        ],
+        "en": [
+          "Learning community",
+          "Clear collaboration",
+          "Alliance experiments"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "终身学习者",
+          "协作者",
+          "社群组织者"
+        ],
+        "en": [
+          "Lifelong learners",
+          "Collaborators",
+          "Community organizers"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "学习",
+          "社区",
+          "协作",
+          "实验"
+        ],
+        "en": [
+          "Learning",
+          "Community",
+          "Collaboration",
+          "Experiment"
+        ]
+      }
     }
   },
   {
@@ -206,7 +482,53 @@
       "ink": "#162130",
       "muted": "#596776",
       "line": "rgba(29, 53, 87, 0.16)",
-      "keywords": ["deep blue", "graphite", "gold", "global alliance", "standards"]
+      "keywords": [
+        "deep blue",
+        "graphite",
+        "gold",
+        "global alliance",
+        "standards"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "全球联盟",
+          "标准建设",
+          "跨区域协作"
+        ],
+        "en": [
+          "Global alliance",
+          "Standards",
+          "Cross-region collaboration"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "国际伙伴",
+          "联盟机构",
+          "标准制定团队"
+        ],
+        "en": [
+          "International partners",
+          "Alliance institutions",
+          "Standards teams"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "全球",
+          "联盟",
+          "标准",
+          "协作"
+        ],
+        "en": [
+          "Global",
+          "Alliance",
+          "Standards",
+          "Collaboration"
+        ]
+      }
     }
   },
   {
@@ -236,7 +558,53 @@
       "ink": "#17202A",
       "muted": "#5C6570",
       "line": "rgba(16, 38, 61, 0.16)",
-      "keywords": ["navy", "platinum", "dark gold", "IP assets", "trust"]
+      "keywords": [
+        "navy",
+        "platinum",
+        "dark gold",
+        "IP assets",
+        "trust"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "IP 资产治理",
+          "信任索引",
+          "品牌源文件"
+        ],
+        "en": [
+          "IP asset governance",
+          "Trust indexing",
+          "Brand source files"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "IP 持有人",
+          "品牌管理者",
+          "Agent 团队"
+        ],
+        "en": [
+          "IP owners",
+          "Brand stewards",
+          "Agent teams"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "IP",
+          "信任",
+          "资产",
+          "治理"
+        ],
+        "en": [
+          "IP",
+          "Trust",
+          "Asset",
+          "Governance"
+        ]
+      }
     }
   },
   {
@@ -266,7 +634,53 @@
       "ink": "#1A1714",
       "muted": "#6F685F",
       "line": "rgba(26, 23, 20, 0.16)",
-      "keywords": ["paper white", "ink black", "stone grey", "deep gold", "transformation"]
+      "keywords": [
+        "paper white",
+        "ink black",
+        "stone grey",
+        "deep gold",
+        "transformation"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "组织转型",
+          "战略交付",
+          "AI 原生运营"
+        ],
+        "en": [
+          "Transformation",
+          "Strategic delivery",
+          "AI-native operations"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "创始人",
+          "管理层",
+          "转型团队"
+        ],
+        "en": [
+          "Founders",
+          "Executives",
+          "Transformation teams"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "转型",
+          "交付",
+          "战略",
+          "AI 运营"
+        ],
+        "en": [
+          "Transformation",
+          "Delivery",
+          "Strategy",
+          "AI operations"
+        ]
+      }
     }
   },
   {
@@ -296,7 +710,53 @@
       "ink": "#2C2C2C",
       "muted": "#555555",
       "line": "rgba(26, 43, 74, 0.16)",
-      "keywords": ["universe blue", "Vanahom red", "promising gold", "hotel AI", "three agents"]
+      "keywords": [
+        "universe blue",
+        "Vanahom red",
+        "promising gold",
+        "hotel AI",
+        "three agents"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "酒店盈利",
+          "收益管理",
+          "经营增长"
+        ],
+        "en": [
+          "Hotel profitability",
+          "Revenue management",
+          "Operating growth"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "酒店业主",
+          "总经理",
+          "收益团队"
+        ],
+        "en": [
+          "Hotel owners",
+          "General managers",
+          "Revenue teams"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "酒店",
+          "盈利",
+          "收益",
+          "增长"
+        ],
+        "en": [
+          "Hotel",
+          "Profitability",
+          "Revenue",
+          "Growth"
+        ]
+      }
     }
   },
   {
@@ -330,7 +790,53 @@
       "ink": "#EFE6D2",
       "muted": "#A99B7E",
       "line": "rgba(181, 139, 76, 0.32)",
-      "keywords": ["ink", "earth gold", "cream", "vermillion", "wisdom navigator"]
+      "keywords": [
+        "ink",
+        "earth gold",
+        "cream",
+        "vermillion",
+        "wisdom navigator"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "饮食知识",
+          "料理内容",
+          "美食体验"
+        ],
+        "en": [
+          "Food knowledge",
+          "Culinary content",
+          "Dining experience"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "料理创作者",
+          "餐饮品牌",
+          "美食学习者"
+        ],
+        "en": [
+          "Culinary creators",
+          "Food brands",
+          "Food learners"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "料理",
+          "饮食",
+          "内容",
+          "体验"
+        ],
+        "en": [
+          "Culinary",
+          "Food",
+          "Content",
+          "Experience"
+        ]
+      }
     }
   },
   {
@@ -360,7 +866,53 @@
       "ink": "#17212A",
       "muted": "#62707A",
       "line": "rgba(18, 48, 71, 0.16)",
-      "keywords": ["one step", "clarity", "continuity", "systems", "precision"]
+      "keywords": [
+        "one step",
+        "clarity",
+        "continuity",
+        "systems",
+        "precision"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "系统思维",
+          "战略结构",
+          "持续进化"
+        ],
+        "en": [
+          "Systems thinking",
+          "Strategic structure",
+          "Continuous evolution"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "创始人",
+          "项目负责人",
+          "知识工作者"
+        ],
+        "en": [
+          "Founders",
+          "Project owners",
+          "Knowledge workers"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "系统",
+          "战略",
+          "进化",
+          "结构"
+        ],
+        "en": [
+          "Systems",
+          "Strategy",
+          "Evolution",
+          "Structure"
+        ]
+      }
     }
   },
   {
@@ -390,7 +942,53 @@
       "ink": "#173036",
       "muted": "#5B6F70",
       "line": "rgba(21, 94, 117, 0.16)",
-      "keywords": ["travel", "play", "culture", "community", "creation"]
+      "keywords": [
+        "travel",
+        "play",
+        "culture",
+        "community",
+        "creation"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "游学体验",
+          "文化赋能",
+          "社群旅行"
+        ],
+        "en": [
+          "Learning journeys",
+          "Cultural empowerment",
+          "Community travel"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "体验策划者",
+          "文化机构",
+          "社群用户"
+        ],
+        "en": [
+          "Experience designers",
+          "Cultural institutions",
+          "Community members"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "游学",
+          "文化",
+          "体验",
+          "社群"
+        ],
+        "en": [
+          "Journey",
+          "Culture",
+          "Experience",
+          "Community"
+        ]
+      }
     }
   },
   {
@@ -420,7 +1018,53 @@
       "ink": "#F5E9D5",
       "muted": "#C6A989",
       "line": "rgba(224, 107, 58, 0.28)",
-      "keywords": ["ember", "ancient", "ritual", "craft", "fire"]
+      "keywords": [
+        "ember",
+        "ancient",
+        "ritual",
+        "craft",
+        "fire"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "传统文化转译",
+          "品牌叙事",
+          "东方美学"
+        ],
+        "en": [
+          "Heritage translation",
+          "Brand narrative",
+          "Eastern aesthetics"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "文化品牌",
+          "内容团队",
+          "美学项目"
+        ],
+        "en": [
+          "Cultural brands",
+          "Content teams",
+          "Aesthetic projects"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "传统",
+          "文化",
+          "叙事",
+          "美学"
+        ],
+        "en": [
+          "Heritage",
+          "Culture",
+          "Narrative",
+          "Aesthetics"
+        ]
+      }
     }
   },
   {
@@ -450,7 +1094,53 @@
       "ink": "#243222",
       "muted": "#65725F",
       "line": "rgba(72, 107, 63, 0.16)",
-      "keywords": ["good fortune", "everyday", "warmth", "goods", "wellbeing"]
+      "keywords": [
+        "good fortune",
+        "everyday",
+        "warmth",
+        "goods",
+        "wellbeing"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "生活方式",
+          "日常幸福",
+          "品牌商品"
+        ],
+        "en": [
+          "Lifestyle",
+          "Everyday wellbeing",
+          "Branded goods"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "生活方式用户",
+          "消费品牌",
+          "社群零售"
+        ],
+        "en": [
+          "Lifestyle consumers",
+          "Consumer brands",
+          "Community retail"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "生活",
+          "常幸",
+          "商品",
+          "幸福"
+        ],
+        "en": [
+          "Lifestyle",
+          "Goodness",
+          "Goods",
+          "Wellbeing"
+        ]
+      }
     }
   },
   {
@@ -480,7 +1170,53 @@
       "ink": "#1E2738",
       "muted": "#657086",
       "line": "rgba(36, 59, 107, 0.16)",
-      "keywords": ["academy", "boya", "knowledge", "inquiry", "classical learning"]
+      "keywords": [
+        "academy",
+        "boya",
+        "knowledge",
+        "inquiry",
+        "classical learning"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "博雅教育",
+          "书院体系",
+          "知识共同体"
+        ],
+        "en": [
+          "Liberal arts education",
+          "Academy system",
+          "Knowledge community"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "学生",
+          "教育者",
+          "终身学习者"
+        ],
+        "en": [
+          "Students",
+          "Educators",
+          "Lifelong learners"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "博雅",
+          "教育",
+          "书院",
+          "知识"
+        ],
+        "en": [
+          "Liberal arts",
+          "Education",
+          "Academy",
+          "Knowledge"
+        ]
+      }
     }
   },
   {
@@ -510,7 +1246,53 @@
       "ink": "#17212A",
       "muted": "#5E6870",
       "line": "rgba(20, 48, 74, 0.16)",
-      "keywords": ["home", "belonging", "shelter", "threshold", "A Place U Called Home"]
+      "keywords": [
+        "home",
+        "belonging",
+        "shelter",
+        "threshold",
+        "A Place U Called Home"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "家园叙事",
+          "生活空间",
+          "社区连接"
+        ],
+        "en": [
+          "Home narrative",
+          "Living spaces",
+          "Community connection"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "国际居住者",
+          "社区伙伴",
+          "空间运营方"
+        ],
+        "en": [
+          "Global residents",
+          "Community partners",
+          "Space operators"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "家",
+          "空间",
+          "社区",
+          "连接"
+        ],
+        "en": [
+          "Home",
+          "Place",
+          "Community",
+          "Connection"
+        ]
+      }
     }
   },
   {
@@ -544,7 +1326,55 @@
       "ink": "#1F1D1A",
       "muted": "#5C5852",
       "line": "rgba(31, 29, 26, 0.14)",
-      "keywords": ["paper white", "ink black", "warm grey", "ochre", "architecture", "locality", "restraint"]
+      "keywords": [
+        "paper white",
+        "ink black",
+        "warm grey",
+        "ochre",
+        "architecture",
+        "locality",
+        "restraint"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "建筑设计",
+          "民宿文旅",
+          "空间改造"
+        ],
+        "en": [
+          "Architecture",
+          "Boutique hospitality",
+          "Spatial renovation"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "业主",
+          "文旅项目",
+          "空间品牌"
+        ],
+        "en": [
+          "Owners",
+          "Cultural tourism projects",
+          "Spatial brands"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "建筑",
+          "空间",
+          "民宿",
+          "在地性"
+        ],
+        "en": [
+          "Architecture",
+          "Space",
+          "Hospitality",
+          "Locality"
+        ]
+      }
     }
   },
   {
@@ -574,7 +1404,121 @@
       "ink": "#12231F",
       "muted": "#60756F",
       "line": "rgba(15, 75, 66, 0.16)",
-      "keywords": ["mint", "clarity", "verification", "fresh intelligence", "clear judgment"]
+      "keywords": [
+        "mint",
+        "clarity",
+        "verification",
+        "fresh intelligence",
+        "clear judgment"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "知识判断",
+          "创作文风",
+          "私密技能"
+        ],
+        "en": [
+          "Knowledge judgment",
+          "Creative voice",
+          "Private skills"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "创作者",
+          "顾问",
+          "Agent 操盘者"
+        ],
+        "en": [
+          "Creators",
+          "Advisors",
+          "Agent operators"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "查明",
+          "判断",
+          "写作",
+          "Skill"
+        ],
+        "en": [
+          "Clarity",
+          "Judgment",
+          "Writing",
+          "Skill"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "inucleus",
+    "folder": "iNucleus",
+    "name": "iNucleus",
+    "nativeName": "",
+    "description": "AI-native operating nucleus for knowledge systems, agent coordination, and IP evolution.",
+    "officialWebsite": "",
+    "mainLanguage": "en",
+    "intro": {
+      "zh": "",
+      "en": "iNucleus is an AI-native operating nucleus for knowledge systems, agent coordination, and IP evolution."
+    },
+    "business": {
+      "zh": "",
+      "en": "Knowledge systems, agent coordination, AI-native operations, and IP evolution infrastructure."
+    },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
+    "classification": {
+      "tracks": {
+        "zh": [],
+        "en": [
+          "AI-native operations",
+          "Knowledge systems",
+          "Agent coordination"
+        ]
+      },
+      "audiences": {
+        "zh": [],
+        "en": [
+          "Founders",
+          "Agent builders",
+          "Knowledge system teams"
+        ]
+      },
+      "tags": {
+        "zh": [],
+        "en": [
+          "AI",
+          "Nucleus",
+          "Knowledge",
+          "Agents",
+          "Operations"
+        ]
+      }
+    },
+    "primaryGuide": "iNucleus/README.md",
+    "theme": {
+      "mode": "dark",
+      "primary": "#111827",
+      "accent": "#7DD3FC",
+      "secondary": "#A78BFA",
+      "surface": "#0B1020",
+      "paper": "#151B2E",
+      "ink": "#F8FAFC",
+      "muted": "#A8B3C7",
+      "line": "rgba(248, 250, 252, 0.16)",
+      "keywords": [
+        "AI nucleus",
+        "knowledge systems",
+        "agent coordination",
+        "dark core",
+        "electric blue"
+      ]
     }
   }
 ]

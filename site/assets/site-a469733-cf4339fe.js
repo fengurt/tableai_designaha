@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "4f7db01-5c7352cc";
+const BUILD_VERSION = "a469733-cf4339fe";
 
 const i18n = {
   cn: {
@@ -35,6 +35,9 @@ const i18n = {
     "brand.business": "业务",
     "brand.intro": "简介",
     "brand.notes": "备注",
+    "brand.tracks": "赛道",
+    "brand.audiences": "人群",
+    "brand.tags": "标签",
     "brand.blank": "未填写",
     "brand.editable": "可编辑源文件",
     "brand.tokens": "Token 文件",
@@ -155,6 +158,9 @@ const i18n = {
     "brand.business": "Business",
     "brand.intro": "Intro",
     "brand.notes": "Notes",
+    "brand.tracks": "Tracks",
+    "brand.audiences": "Audiences",
+    "brand.tags": "Tags",
     "brand.blank": "Blank",
     "brand.editable": "Editable source",
     "brand.tokens": "Token files",
@@ -501,6 +507,25 @@ function localizedBrand(brand = {}) {
   };
 }
 
+function localizedClassification(brand = {}, lang = contentLang()) {
+  const source = brand.profile?.classification || brand.classification || {};
+  const fallbackLang = lang === "zh" ? "en" : "zh";
+  const get = (field) => {
+    const primary = source[field]?.[lang];
+    const fallback = source[field]?.[fallbackLang];
+    return Array.isArray(primary) && primary.length ? primary : (Array.isArray(fallback) ? fallback : []);
+  };
+  return {
+    tracks: get("tracks"),
+    audiences: get("audiences"),
+    tags: get("tags"),
+  };
+}
+
+function listText(values = []) {
+  return values.filter(Boolean).join(" · ");
+}
+
 function alternateBrandName(brand = {}, main = "") {
   const mainLanguage = brand.display?.default?.language || brand.mainLanguage || contentLang();
   const alternateLang = mainLanguage === "zh" || mainLanguage === "cn" ? "en" : "zh";
@@ -519,6 +544,7 @@ function mainBrand(brand = {}) {
   const fallback = localizedBrand(brand);
   const name = display.name || brand.mainName || brand.display?.[lang]?.name || fallback.name || brand.slug;
   const alternate = alternateBrandName(brand, name);
+  const classification = localizedClassification(brand, lang);
   return {
     name,
     secondaryName: alternate.name,
@@ -526,6 +552,7 @@ function mainBrand(brand = {}) {
     intro: brand.intro?.[lang] || fallback.intro || brand.description || "",
     business: brand.profile?.business?.[lang] || brand.business?.[lang] || "",
     notes: brand.profile?.notes?.[lang] || brand.notes?.[lang] || "",
+    classification,
     language: lang,
   };
 }
@@ -598,6 +625,9 @@ function referenceText(brand = {}) {
     "[Core]",
     `Intro: ${localized.intro || "TBD"}`,
     `Business: ${localized.business || "TBD"}`,
+    `Tracks: ${listText(localized.classification.tracks) || "TBD"}`,
+    `Audiences: ${listText(localized.classification.audiences) || "TBD"}`,
+    `Tags: ${listText(localized.classification.tags) || "TBD"}`,
     "",
     "[Palette]",
     colors || "TBD",
@@ -944,6 +974,13 @@ function fieldPatchValue(form, name) {
   return node ? node.value : "";
 }
 
+function fieldListValue(form, name) {
+  return fieldPatchValue(form, name)
+    .split(/[,\n·]+/)
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
 function profilePatchFromForm(form) {
   const keywords = fieldPatchValue(form, "theme.keywords")
     .split(/[,\n·]+/)
@@ -967,6 +1004,20 @@ function profilePatchFromForm(form) {
       zh: fieldPatchValue(form, "notes.zh"),
       en: fieldPatchValue(form, "notes.en"),
     },
+    classification: {
+      tracks: {
+        zh: fieldListValue(form, "classification.tracks.zh"),
+        en: fieldListValue(form, "classification.tracks.en"),
+      },
+      audiences: {
+        zh: fieldListValue(form, "classification.audiences.zh"),
+        en: fieldListValue(form, "classification.audiences.en"),
+      },
+      tags: {
+        zh: fieldListValue(form, "classification.tags.zh"),
+        en: fieldListValue(form, "classification.tags.en"),
+      },
+    },
     theme: {
       primary: fieldPatchValue(form, "theme.primary"),
       accent: fieldPatchValue(form, "theme.accent"),
@@ -981,6 +1032,7 @@ function profileEditor(brand = {}) {
   const intro = brand.intro || profile.intro || {};
   const business = brand.business || profile.business || {};
   const notes = brand.notes || profile.notes || {};
+  const classification = brand.classification || profile.classification || {};
   const theme = brand.theme || {};
   return `
     <section class="profile-editor" id="profileEditor" data-brand="${escapeHtml(brand.slug)}" data-locked="true">
@@ -1007,6 +1059,12 @@ function profileEditor(brand = {}) {
           <label><span>${escapeHtml(t("brand.business"))} · EN</span><textarea data-profile-field="business.en" rows="3">${escapeHtml(business.en || "")}</textarea></label>
           <label><span>${escapeHtml(t("brand.notes"))} · CN</span><textarea data-profile-field="notes.zh" rows="3">${escapeHtml(notes.zh || "")}</textarea></label>
           <label><span>${escapeHtml(t("brand.notes"))} · EN</span><textarea data-profile-field="notes.en" rows="3">${escapeHtml(notes.en || "")}</textarea></label>
+          <label><span>${escapeHtml(t("brand.tracks"))} · CN</span><textarea data-profile-field="classification.tracks.zh" rows="2">${escapeHtml((classification.tracks?.zh || []).join(" · "))}</textarea></label>
+          <label><span>${escapeHtml(t("brand.tracks"))} · EN</span><textarea data-profile-field="classification.tracks.en" rows="2">${escapeHtml((classification.tracks?.en || []).join(" · "))}</textarea></label>
+          <label><span>${escapeHtml(t("brand.audiences"))} · CN</span><textarea data-profile-field="classification.audiences.zh" rows="2">${escapeHtml((classification.audiences?.zh || []).join(" · "))}</textarea></label>
+          <label><span>${escapeHtml(t("brand.audiences"))} · EN</span><textarea data-profile-field="classification.audiences.en" rows="2">${escapeHtml((classification.audiences?.en || []).join(" · "))}</textarea></label>
+          <label><span>${escapeHtml(t("brand.tags"))} · CN</span><textarea data-profile-field="classification.tags.zh" rows="2">${escapeHtml((classification.tags?.zh || []).join(" · "))}</textarea></label>
+          <label><span>${escapeHtml(t("brand.tags"))} · EN</span><textarea data-profile-field="classification.tags.en" rows="2">${escapeHtml((classification.tags?.en || []).join(" · "))}</textarea></label>
           <label><span>Primary</span><input data-profile-field="theme.primary" value="${escapeHtml(theme.primary || "")}"></label>
           <label><span>Accent</span><input data-profile-field="theme.accent" value="${escapeHtml(theme.accent || "")}"></label>
           <label><span>Secondary</span><input data-profile-field="theme.secondary" value="${escapeHtml(theme.secondary || "")}"></label>
@@ -1321,6 +1379,12 @@ async function renderIndex() {
           brand.profile?.business?.en,
           brand.profile?.notes?.zh,
           brand.profile?.notes?.en,
+          brand.profile?.classification?.tracks?.zh?.join(" "),
+          brand.profile?.classification?.tracks?.en?.join(" "),
+          brand.profile?.classification?.audiences?.zh?.join(" "),
+          brand.profile?.classification?.audiences?.en?.join(" "),
+          brand.profile?.classification?.tags?.zh?.join(" "),
+          brand.profile?.classification?.tags?.en?.join(" "),
           localized.name,
           localized.secondaryName,
           localized.intro,
@@ -1354,6 +1418,8 @@ async function renderIndex() {
           <p class="card-intro">${escapeHtml(localized.intro || "")}</p>
           <div class="card-profile">
             <span>${escapeHtml(t("brand.mainLanguage"))}: ${escapeHtml(languageLabel(brand.mainLanguage || localized.language))}</span>
+            <span>${escapeHtml(t("brand.tracks"))}: ${escapeHtml(listText(localized.classification.tracks))}</span>
+            <span>${escapeHtml(t("brand.audiences"))}: ${escapeHtml(listText(localized.classification.audiences))}</span>
             <span>${escapeHtml(t("brand.business"))}: ${escapeHtml(localized.business || "")}</span>
           </div>
           <div class="meta">
@@ -1386,6 +1452,10 @@ async function renderBrand() {
           <h1>${escapeHtml(display.name)}</h1>
           <p class="muted alt-name">${escapeHtml(display.secondaryName || "")}</p>
           <p>${escapeHtml(localized.intro)}</p>
+          <div class="profile-tags">
+            ${display.classification.tracks.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}
+            ${display.classification.audiences.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}
+          </div>
           ${swatches(brand.theme, true)}
           <div class="actions">
             <a class="button" href="${brand.apiUrl}">${t("brand.openJson")}</a>
@@ -1404,6 +1474,9 @@ async function renderBrand() {
           <div class="resource"><strong>${t("brand.intro")}</strong><br>${escapeHtml(localized.intro || t("brand.blank"))}</div>
           <div class="resource"><strong>${t("brand.business")}</strong><br>${escapeHtml(localized.business || t("brand.blank"))}</div>
           <div class="resource"><strong>${t("brand.notes")}</strong><br>${escapeHtml(localized.notes || t("brand.blank"))}</div>
+          <div class="resource"><strong>${t("brand.tracks")}</strong><br>${escapeHtml(listText(display.classification.tracks) || t("brand.blank"))}</div>
+          <div class="resource"><strong>${t("brand.audiences")}</strong><br>${escapeHtml(listText(display.classification.audiences) || t("brand.blank"))}</div>
+          <div class="resource"><strong>${t("brand.tags")}</strong><br>${escapeHtml(listText(display.classification.tags) || t("brand.blank"))}</div>
         </div>
         <div class="resource"><strong>${t("brand.colors")}</strong><br>${escapeHtml(brand.theme?.keywords?.join(" · ") || "")}</div>
         <div class="resource"><strong>${t("brand.editable")}</strong><br>${brand.editablePaths?.map(escapeHtml).join("<br>") || t("brand.noneGuide")}</div>

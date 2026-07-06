@@ -33,6 +33,46 @@
       "inclusive AI"
     ]
   },
+  "classification": {
+    "tracks": {
+      "zh": [
+        "AI 劳动力",
+        "企业自动化",
+        "智能体产品"
+      ],
+      "en": [
+        "AI workforce",
+        "Enterprise automation",
+        "Agent products"
+      ]
+    },
+    "audiences": {
+      "zh": [
+        "企业团队",
+        "运营人员",
+        "AI 服务商"
+      ],
+      "en": [
+        "Enterprise teams",
+        "Operations teams",
+        "AI service providers"
+      ]
+    },
+    "tags": {
+      "zh": [
+        "AI",
+        "劳动力",
+        "自动化",
+        "善意科技"
+      ],
+      "en": [
+        "AI",
+        "Workforce",
+        "Automation",
+        "Human-first"
+      ]
+    }
+  },
   "assetKey": "kind",
   "mainName": "KiND",
   "mainLocale": "EN",
@@ -51,6 +91,46 @@
     "notes": {
       "zh": "",
       "en": ""
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "AI 劳动力",
+          "企业自动化",
+          "智能体产品"
+        ],
+        "en": [
+          "AI workforce",
+          "Enterprise automation",
+          "Agent products"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "企业团队",
+          "运营人员",
+          "AI 服务商"
+        ],
+        "en": [
+          "Enterprise teams",
+          "Operations teams",
+          "AI service providers"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "AI",
+          "劳动力",
+          "自动化",
+          "善意科技"
+        ],
+        "en": [
+          "AI",
+          "Workforce",
+          "Automation",
+          "Human-first"
+        ]
+      }
     }
   },
   "display": {
@@ -72,11 +152,11 @@
     "en": ""
   },
   "version": {
-    "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-    "shortHash": "4f7db01",
-    "date": "2026-07-06T10:17:49+08:00",
-    "message": "Add encrypted ksamint private skills service",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+    "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+    "shortHash": "a469733",
+    "date": "2026-07-06T12:06:43+08:00",
+    "message": "Add direct brand profile editing API",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
   },
   "historyUrl": "api/history/kind.json",
   "history": [

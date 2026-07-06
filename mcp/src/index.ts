@@ -29,6 +29,7 @@ type BrandConfig = {
   intro?: Record<string, string>;
   business?: Record<string, string>;
   notes?: Record<string, string>;
+  classification?: Record<string, Record<string, string[]>>;
 };
 
 type Guide = {

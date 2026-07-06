@@ -33,6 +33,46 @@
       "clear judgment"
     ]
   },
+  "classification": {
+    "tracks": {
+      "zh": [
+        "知识判断",
+        "创作文风",
+        "私密技能"
+      ],
+      "en": [
+        "Knowledge judgment",
+        "Creative voice",
+        "Private skills"
+      ]
+    },
+    "audiences": {
+      "zh": [
+        "创作者",
+        "顾问",
+        "Agent 操盘者"
+      ],
+      "en": [
+        "Creators",
+        "Advisors",
+        "Agent operators"
+      ]
+    },
+    "tags": {
+      "zh": [
+        "查明",
+        "判断",
+        "写作",
+        "Skill"
+      ],
+      "en": [
+        "Clarity",
+        "Judgment",
+        "Writing",
+        "Skill"
+      ]
+    }
+  },
   "assetKey": "ksamint",
   "mainName": "ksamint",
   "mainLocale": "EN",
@@ -51,6 +91,46 @@
     "notes": {
       "zh": "",
       "en": ""
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "知识判断",
+          "创作文风",
+          "私密技能"
+        ],
+        "en": [
+          "Knowledge judgment",
+          "Creative voice",
+          "Private skills"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "创作者",
+          "顾问",
+          "Agent 操盘者"
+        ],
+        "en": [
+          "Creators",
+          "Advisors",
+          "Agent operators"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "查明",
+          "判断",
+          "写作",
+          "Skill"
+        ],
+        "en": [
+          "Clarity",
+          "Judgment",
+          "Writing",
+          "Skill"
+        ]
+      }
     }
   },
   "display": {
@@ -72,11 +152,11 @@
     "en": ""
   },
   "version": {
-    "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-    "shortHash": "4f7db01",
-    "date": "2026-07-06T10:17:49+08:00",
-    "message": "Add encrypted ksamint private skills service",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+    "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+    "shortHash": "a469733",
+    "date": "2026-07-06T12:06:43+08:00",
+    "message": "Add direct brand profile editing API",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
   },
   "historyUrl": "api/history/ksamint.json",
   "history": [

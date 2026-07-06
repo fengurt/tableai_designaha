@@ -33,6 +33,46 @@
       "creation"
     ]
   },
+  "classification": {
+    "tracks": {
+      "zh": [
+        "游学体验",
+        "文化赋能",
+        "社群旅行"
+      ],
+      "en": [
+        "Learning journeys",
+        "Cultural empowerment",
+        "Community travel"
+      ]
+    },
+    "audiences": {
+      "zh": [
+        "体验策划者",
+        "文化机构",
+        "社群用户"
+      ],
+      "en": [
+        "Experience designers",
+        "Cultural institutions",
+        "Community members"
+      ]
+    },
+    "tags": {
+      "zh": [
+        "游学",
+        "文化",
+        "体验",
+        "社群"
+      ],
+      "en": [
+        "Journey",
+        "Culture",
+        "Experience",
+        "Community"
+      ]
+    }
+  },
   "assetKey": "agem",
   "mainName": "游赋社",
   "mainLocale": "CN",
@@ -51,6 +91,46 @@
     "notes": {
       "zh": "",
       "en": ""
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "游学体验",
+          "文化赋能",
+          "社群旅行"
+        ],
+        "en": [
+          "Learning journeys",
+          "Cultural empowerment",
+          "Community travel"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "体验策划者",
+          "文化机构",
+          "社群用户"
+        ],
+        "en": [
+          "Experience designers",
+          "Cultural institutions",
+          "Community members"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "游学",
+          "文化",
+          "体验",
+          "社群"
+        ],
+        "en": [
+          "Journey",
+          "Culture",
+          "Experience",
+          "Community"
+        ]
+      }
     }
   },
   "display": {
@@ -72,11 +152,11 @@
     "en": ""
   },
   "version": {
-    "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-    "shortHash": "4f7db01",
-    "date": "2026-07-06T10:17:49+08:00",
-    "message": "Add encrypted ksamint private skills service",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
+    "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
+    "shortHash": "a469733",
+    "date": "2026-07-06T12:06:43+08:00",
+    "message": "Add direct brand profile editing API",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
   },
   "historyUrl": "api/history/agem.json",
   "history": [
