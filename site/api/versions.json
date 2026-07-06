@@ -1,5 +1,12 @@
 [
   {
+    "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+    "shortHash": "b0269d2",
+    "date": "2026-07-06T06:21:22+08:00",
+    "message": "Add ksamint IP",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34"
+  },
+  {
     "hash": "60db50ce358da3722f47e41ce55f5470fbb59b78",
     "shortHash": "60db50c",
     "date": "2026-07-06T06:14:20+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-07-04T20:00:43+08:00",
     "message": "Honor IP main language display",
     "url": "https://github.com/fengurt/tableai_designaha/commit/a659504e4814895ee61f21397a435ebe074443b9"
-  },
-  {
-    "hash": "d7aa033c0b3df3034fb0233fc056384659d54d03",
-    "shortHash": "d7aa033",
-    "date": "2026-07-04T19:51:41+08:00",
-    "message": "Preload agent skill copy text",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/d7aa033c0b3df3034fb0233fc056384659d54d03"
   }
 ]

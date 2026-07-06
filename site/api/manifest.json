@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-05T22:20:53.543Z",
+  "generatedAt": "2026-07-06T00:10:24.395Z",
   "version": {
-    "hash": "60db50ce358da3722f47e41ce55f5470fbb59b78",
-    "shortHash": "60db50c",
-    "date": "2026-07-06T06:14:20+08:00",
-    "message": "Add IP asset calls and mood boards",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/60db50ce358da3722f47e41ce55f5470fbb59b78"
+    "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+    "shortHash": "b0269d2",
+    "date": "2026-07-06T06:21:22+08:00",
+    "message": "Add ksamint IP",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34"
   },
   "brands": [
     {
@@ -219,11 +219,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "60db50ce358da3722f47e41ce55f5470fbb59b78",
-      "shortHash": "60db50c",
-      "date": "2026-07-06T06:14:20+08:00",
-      "message": "Add IP asset calls and mood boards",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/60db50ce358da3722f47e41ce55f5470fbb59b78"
+      "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+      "shortHash": "b0269d2",
+      "date": "2026-07-06T06:21:22+08:00",
+      "message": "Add ksamint IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34"
     }
   },
   "sync": {

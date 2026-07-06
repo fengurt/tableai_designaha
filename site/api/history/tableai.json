@@ -13,11 +13,11 @@
     "TABLEAI/TableAI_DESIGN.md"
   ],
   "latest": {
-    "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
-    "shortHash": "542890f",
-    "date": "2026-07-05T10:48:18+08:00",
-    "message": "Add transparent Table AI logo",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf",
+    "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+    "shortHash": "b0269d2",
+    "date": "2026-07-06T06:21:22+08:00",
+    "message": "Add ksamint IP",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34",
     "sourcePaths": [
       "config/brands.json",
       "TABLEAI",
@@ -25,6 +25,18 @@
     ]
   },
   "versions": [
+    {
+      "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+      "shortHash": "b0269d2",
+      "date": "2026-07-06T06:21:22+08:00",
+      "message": "Add ksamint IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+      "sourcePaths": [
+        "config/brands.json",
+        "TABLEAI",
+        "TABLEAI/TableAI_DESIGN.md"
+      ]
+    },
     {
       "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
       "shortHash": "542890f",

@@ -13,11 +13,11 @@
     "PAM/pm_design.md"
   ],
   "latest": {
-    "hash": "067a47c76f1cb812b607335089911c282f4d8f78",
-    "shortHash": "067a47c",
-    "date": "2026-07-05T10:24:24+08:00",
-    "message": "Add Sanctem IP and brand logos",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/067a47c76f1cb812b607335089911c282f4d8f78",
+    "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+    "shortHash": "b0269d2",
+    "date": "2026-07-06T06:21:22+08:00",
+    "message": "Add ksamint IP",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34",
     "sourcePaths": [
       "config/brands.json",
       "PAM",
@@ -25,6 +25,18 @@
     ]
   },
   "versions": [
+    {
+      "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+      "shortHash": "b0269d2",
+      "date": "2026-07-06T06:21:22+08:00",
+      "message": "Add ksamint IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+      "sourcePaths": [
+        "config/brands.json",
+        "PAM",
+        "PAM/pm_design.md"
+      ]
+    },
     {
       "hash": "067a47c76f1cb812b607335089911c282f4d8f78",
       "shortHash": "067a47c",

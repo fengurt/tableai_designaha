@@ -253,6 +253,17 @@ nav a:hover { color: var(--ink); }
   background: rgba(255, 254, 250, .7);
 }
 .api-copy:hover { border-color: var(--green); color: var(--green); }
+.api-resource-summary {
+  max-height: 260px;
+  overflow: auto;
+  margin: 12px 0 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255,255,255,.74);
+  font-size: 12px;
+  white-space: pre-wrap;
+}
 main { width: min(1180px, calc(100vw - 36px)); margin: 0 auto; }
 .hub-hero {
   min-height: 54vh;

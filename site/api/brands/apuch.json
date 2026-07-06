@@ -72,14 +72,26 @@
     "en": ""
   },
   "version": {
-    "hash": "60db50ce358da3722f47e41ce55f5470fbb59b78",
-    "shortHash": "60db50c",
-    "date": "2026-07-06T06:14:20+08:00",
-    "message": "Add IP asset calls and mood boards",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/60db50ce358da3722f47e41ce55f5470fbb59b78"
+    "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+    "shortHash": "b0269d2",
+    "date": "2026-07-06T06:21:22+08:00",
+    "message": "Add ksamint IP",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34"
   },
   "historyUrl": "api/history/apuch.json",
   "history": [
+    {
+      "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+      "shortHash": "b0269d2",
+      "date": "2026-07-06T06:21:22+08:00",
+      "message": "Add ksamint IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+      "sourcePaths": [
+        "config/brands.json",
+        "APUCH",
+        "APUCH/README.md"
+      ]
+    },
     {
       "hash": "067a47c76f1cb812b607335089911c282f4d8f78",
       "shortHash": "067a47c",
@@ -134,18 +146,6 @@
       "date": "2026-07-04T16:01:00+08:00",
       "message": "Add IP profile fields and main language display",
       "url": "https://github.com/fengurt/tableai_designaha/commit/1f20db30a5e970cf81e24c76e4613bc7e0036f09",
-      "sourcePaths": [
-        "config/brands.json",
-        "APUCH",
-        "APUCH/README.md"
-      ]
-    },
-    {
-      "hash": "088ab8909a2d4284cd64d7924cc60fa39b8eb206",
-      "shortHash": "088ab89",
-      "date": "2026-07-04T11:59:40+08:00",
-      "message": "Add APUCH IP to IPTrust",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/088ab8909a2d4284cd64d7924cc60fa39b8eb206",
       "sourcePaths": [
         "config/brands.json",
         "APUCH",

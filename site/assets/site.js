@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "60db50c-8fe60f69";
+const BUILD_VERSION = "b0269d2-6319d869";
 
 const i18n = {
   cn: {
@@ -80,6 +80,9 @@ const i18n = {
     "api.scopesGranted": "Access: ",
     "api.allAccess": "全部 IP",
     "api.openAdmin": "Admin",
+    "api.resources": "Resources",
+    "api.loadingResources": "读取资源中...",
+    "api.reconnectForResources": "请重新输入 System API Key 后读取资源。",
     "api.copyCurl": "Copy cURL",
     "api.copiedCurl": "已复制 cURL 模板。",
     "history.title": "历史版本",
@@ -181,6 +184,9 @@ const i18n = {
     "api.scopesGranted": "Access: ",
     "api.allAccess": "All IP",
     "api.openAdmin": "Admin",
+    "api.resources": "Resources",
+    "api.loadingResources": "Loading resources...",
+    "api.reconnectForResources": "Reconnect with the System API Key to read resources.",
     "api.copyCurl": "Copy cURL",
     "api.copiedCurl": "cURL template copied.",
     "history.title": "Version history",
@@ -747,6 +753,7 @@ function apiCurlTemplate() {
 }
 
 const API_CONNECT_COOKIE = "iptrust_api_connected";
+const API_KEY_SESSION = "iptrust_api_key";
 
 function setApiCookie(scopes = ["*"]) {
   const value = JSON.stringify({ connected: true, scopes, at: Date.now() });
@@ -757,6 +764,7 @@ function setApiCookie(scopes = ["*"]) {
 function clearApiCookie() {
   const secure = location.protocol === "https:" ? "; Secure" : "";
   document.cookie = API_CONNECT_COOKIE + "=; path=/; max-age=0; SameSite=Lax" + secure;
+  sessionStorage.removeItem(API_KEY_SESSION);
 }
 
 function readApiCookie() {
@@ -781,6 +789,32 @@ function renderApiConnected(scopes = ["*"]) {
     scopeText.textContent = scopes.includes("*") ? t("api.allAccess") : `${t("api.scopesGranted")}${scopes.join(", ")}`;
   }
   apiStatus(t("api.connected"));
+}
+
+async function loadProtectedResources() {
+  const key = sessionStorage.getItem(API_KEY_SESSION) || $("#apiAdminKey")?.value || "";
+  const summary = $("#apiResourceSummary");
+  if (!summary) return;
+  if (!key) {
+    summary.classList.remove("hidden");
+    summary.textContent = t("api.reconnectForResources");
+    return;
+  }
+  summary.classList.remove("hidden");
+  summary.textContent = t("api.loadingResources");
+  try {
+    const res = await fetch("api/resources", { headers: { "X-Admin-Key": key } });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.hint || data.error || t("api.failed"));
+    summary.textContent = JSON.stringify({
+      updatedAt: data.updatedAt,
+      summary: data.summary,
+      providers: data.providers,
+      ipDomainCandidates: data.ipDomainCandidates?.length || 0,
+    }, null, 2);
+  } catch (error) {
+    summary.textContent = error.message || t("api.failed");
+  }
 }
 
 function setupApiConnect() {
@@ -811,6 +845,7 @@ function setupApiConnect() {
       showToast(message);
     });
   });
+  $("#apiResourcesButton")?.addEventListener("click", loadProtectedResources);
 
   submit?.addEventListener("click", async () => {
     const adminKey = $("#apiAdminKey")?.value || "";
@@ -827,6 +862,7 @@ function setupApiConnect() {
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(apiErrorMessage(data.error));
       const scopes = data.scopes?.length ? data.scopes : data.allowedScopes || ["*"];
+      sessionStorage.setItem(API_KEY_SESSION, adminKey);
       setApiCookie(scopes);
       renderApiConnected(scopes);
       showToast(t("api.connected"));
