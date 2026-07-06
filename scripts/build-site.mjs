@@ -698,12 +698,12 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
       <div class="global-results" id="globalResults" aria-live="polite"></div>
     </div>
-    <nav class="icon-nav" aria-label="Primary actions">
-      <button class="nav-icon" type="button" id="apiConnectButton" aria-label="API connect" title="API connect" data-tip="API">${topbarIcon.api}<span class="api-pulse"></span></button>
-      <a class="nav-icon" href="#agent-entry" aria-label="我是 Agent" title="我是 Agent" data-tip="Agent">${topbarIcon.agent}</a>
-      <a class="nav-icon" href="#partner-entry" aria-label="我是合伙人" title="我是合伙人" data-tip="Partner">${topbarIcon.partner}</a>
-      <a class="nav-icon" href="#collab-entry" aria-label="我想合作" title="我想合作" data-tip="Collab">${topbarIcon.collab}</a>
-      <button class="lang-toggle nav-icon" type="button" id="langToggle" aria-label="Switch language" title="Switch language" data-tip="Language">${topbarIcon.globe}</button>
+    <nav class="top-actions" aria-label="Primary actions">
+      <button class="api-link" type="button" id="apiConnectButton" aria-label="API connect"><span class="api-dot"></span>API</button>
+      <a href="#agent-entry" data-i18n="portal.agentNav">Agent</a>
+      <a href="#partner-entry" data-i18n="portal.partnerNav">Partner</a>
+      <a href="#collab-entry" data-i18n="portal.collabNav">Collab</a>
+      <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language"><span class="is-active">CN</span><span class="lang-divider">/</span><span>EN</span></button>
     </nav>
   </header>
   <section class="api-connect-panel hidden" id="apiConnectPanel" aria-live="polite">
@@ -921,87 +921,50 @@ a { color: inherit; }
 nav { display: flex; align-items: center; gap: 18px; color: var(--muted); font-size: 14px; }
 nav a { text-decoration: none; }
 nav a:hover { color: var(--ink); }
-.hub-home .icon-nav {
-  gap: 8px;
-  padding: 3px;
-  border: 1px solid color-mix(in srgb, var(--ink) 9%, transparent);
-  border-radius: 999px;
-  background: rgba(255, 254, 250, .64);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .82);
-}
-.nav-icon {
-  width: 36px;
-  height: 36px;
-  min-height: 36px;
-  padding: 0;
-  border: 1px solid transparent;
-  border-radius: 999px;
-  background: transparent;
-  color: color-mix(in srgb, var(--ink) 70%, var(--muted));
-  display: inline-grid;
-  place-items: center;
-  position: relative;
-  transition: background .16s ease, border-color .16s ease, color .16s ease, transform .16s ease;
-}
-.nav-icon svg {
-  width: 18px;
-  height: 18px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.85;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-.nav-icon:hover,
-.nav-icon:focus-visible {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: var(--paper);
-  transform: translateY(-1px);
-}
-.nav-icon::after {
-  content: attr(data-tip);
-  position: absolute;
-  right: 50%;
-  top: calc(100% + 9px);
-  transform: translateX(50%);
-  padding: 5px 7px;
-  border-radius: 6px;
-  background: var(--ink);
-  color: var(--paper);
-  font-size: 11px;
-  font-weight: 760;
-  line-height: 1;
+.top-actions {
+  gap: 16px;
+  flex: 0 0 auto;
   white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .14s ease;
-  z-index: 40;
 }
-.nav-icon:hover::after,
-.nav-icon:focus-visible::after { opacity: 1; }
-.nav-icon#apiConnectButton {
-  color: #0E8C7B;
-  background: rgba(14, 140, 123, .08);
-  border-color: rgba(14, 140, 123, .18);
+.top-actions a,
+.top-actions button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  padding: 0;
+  font: inherit;
+  font-weight: 640;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color .16s ease;
 }
-.nav-icon#apiConnectButton:hover,
-.nav-icon#apiConnectButton:focus-visible,
-.nav-icon#apiConnectButton.api-connected {
-  background: #0E8C7B;
-  border-color: #0E8C7B;
-  color: white;
+.top-actions a:hover,
+.top-actions a:focus-visible,
+.top-actions button:hover,
+.top-actions button:focus-visible { color: var(--ink); }
+.api-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
 }
-.api-pulse {
-  position: absolute;
-  right: 6px;
-  top: 6px;
+.api-dot {
   width: 7px;
   height: 7px;
   border-radius: 999px;
-  background: #0E8C7B;
-  box-shadow: 0 0 0 4px rgba(14, 140, 123, .13);
+  background: var(--muted);
+  opacity: .56;
+  box-shadow: 0 0 0 3px transparent;
+  transition: background .16s ease, opacity .16s ease, box-shadow .16s ease;
 }
+.api-link:hover .api-dot,
+.api-link:focus-visible .api-dot,
+.api-link.api-connected .api-dot {
+  background: #0E8C7B;
+  opacity: 1;
+  box-shadow: 0 0 0 3px rgba(14, 140, 123, .12);
+}
+.api-link.api-connected { color: #0E8C7B; }
 .lang-toggle {
   min-height: 0;
   font: inherit;
@@ -2026,6 +1989,9 @@ const i18n = {
     "portal.github": "发起合作",
     "portal.explore": "先看 IP",
     "portal.searchApi": "搜索 API",
+    "portal.agentNav": "Agent",
+    "portal.partnerNav": "合伙人",
+    "portal.collabNav": "合作",
     "api.title": "System API",
     "api.key": "System API Key",
     "api.connect": "Connect",
@@ -2130,6 +2096,9 @@ const i18n = {
     "portal.github": "Start on GitHub",
     "portal.explore": "Explore first",
     "portal.searchApi": "Search API",
+    "portal.agentNav": "Agent",
+    "portal.partnerNav": "Partner",
+    "portal.collabNav": "Collab",
     "api.title": "System API",
     "api.key": "System API Key",
     "api.connect": "Connect",
@@ -2200,10 +2169,6 @@ function renderLanguageToggle() {
   const toggle = $("#langToggle");
   if (!toggle) return;
   toggle.setAttribute("aria-label", \`Language: \${localeMeta[currentLocale].label}\`);
-  if (toggle.classList.contains("nav-icon")) {
-    toggle.dataset.tip = localeMeta[currentLocale].label;
-    return;
-  }
   toggle.innerHTML = \`
     <span class="\${currentLocale === "cn" ? "is-active" : ""}">CN</span>
     <span class="lang-divider">/</span>

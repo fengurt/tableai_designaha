@@ -72,11 +72,11 @@
     "en": ""
   },
   "version": {
-    "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
-    "shortHash": "b0269d2",
-    "date": "2026-07-06T06:21:22+08:00",
-    "message": "Add ksamint IP",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34"
+    "hash": "1daf4e6c3e8413ad270ce449d013215945098a85",
+    "shortHash": "1daf4e6",
+    "date": "2026-07-06T08:11:57+08:00",
+    "message": "Add protected cloud resource inventory",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/1daf4e6c3e8413ad270ce449d013215945098a85"
   },
   "historyUrl": "api/history/1stepmore.json",
   "history": [

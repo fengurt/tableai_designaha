@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "b0269d2-6319d869";
+const BUILD_VERSION = "1daf4e6-58a90235";
 
 const i18n = {
   cn: {
@@ -68,6 +68,9 @@ const i18n = {
     "portal.github": "发起合作",
     "portal.explore": "先看 IP",
     "portal.searchApi": "搜索 API",
+    "portal.agentNav": "Agent",
+    "portal.partnerNav": "合伙人",
+    "portal.collabNav": "合作",
     "api.title": "System API",
     "api.key": "System API Key",
     "api.connect": "Connect",
@@ -172,6 +175,9 @@ const i18n = {
     "portal.github": "Start on GitHub",
     "portal.explore": "Explore first",
     "portal.searchApi": "Search API",
+    "portal.agentNav": "Agent",
+    "portal.partnerNav": "Partner",
+    "portal.collabNav": "Collab",
     "api.title": "System API",
     "api.key": "System API Key",
     "api.connect": "Connect",
@@ -242,10 +248,6 @@ function renderLanguageToggle() {
   const toggle = $("#langToggle");
   if (!toggle) return;
   toggle.setAttribute("aria-label", `Language: ${localeMeta[currentLocale].label}`);
-  if (toggle.classList.contains("nav-icon")) {
-    toggle.dataset.tip = localeMeta[currentLocale].label;
-    return;
-  }
   toggle.innerHTML = `
     <span class="${currentLocale === "cn" ? "is-active" : ""}">CN</span>
     <span class="lang-divider">/</span>
