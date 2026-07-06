@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-06T04:48:34.385Z",
+  "generatedAt": "2026-07-06T23:08:17.699Z",
   "version": {
-    "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
-    "shortHash": "a469733",
-    "date": "2026-07-06T12:06:43+08:00",
-    "message": "Add direct brand profile editing API",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
+    "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
+    "shortHash": "3e24857",
+    "date": "2026-07-06T12:50:10+08:00",
+    "message": "Add IP classifications and iNucleus",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a"
   },
   "brands": [
     {
@@ -217,6 +217,11 @@
     "allFieldsCallable": true,
     "perBrandHistory": "api/history/{slug}.json"
   },
+  "ipSystem": {
+    "name": "Brand IP System v2",
+    "path": "ip_sys.md",
+    "description": "Universal closed-loop framework for defining and governing any organization or brand IP."
+  },
   "skills": [
     {
       "name": "iptrust-live-update",
@@ -228,11 +233,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
-      "shortHash": "a469733",
-      "date": "2026-07-06T12:06:43+08:00",
-      "message": "Add direct brand profile editing API",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
+      "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
+      "shortHash": "3e24857",
+      "date": "2026-07-06T12:50:10+08:00",
+      "message": "Add IP classifications and iNucleus",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a"
     }
   },
   "sync": {

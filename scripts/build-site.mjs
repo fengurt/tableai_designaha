@@ -319,6 +319,7 @@ function apiSchemaPayload() {
       allVersions: "api/versions.json",
       brand: "api/brands/{slug}.json",
       brandHistory: "api/history/{slug}.json",
+      ipSystem: "ip_sys.md",
       skill: "skills/iptrust-live-update/SKILL.md",
       llms: "llms.txt",
     },
@@ -378,7 +379,7 @@ const previousHistoryBySlug = new Map(await Promise.all(brands.map(async (brand)
 })));
 const versions = mergeVersionHistory(loadVersions(), previousVersions, 20);
 const buildFingerprint = createHash("sha256");
-for (const inputPath of ["scripts/build-site.mjs", "config/brands.json", "package.json"]) {
+for (const inputPath of ["scripts/build-site.mjs", "config/brands.json", "package.json", "IP-System/ip_sys.md"]) {
   buildFingerprint.update(await readFile(join(root, inputPath)));
 }
 const buildVersion = `${versions[0]?.shortHash ?? "dev"}-${buildFingerprint.digest("hex").slice(0, 8)}`;
@@ -393,6 +394,9 @@ await mkdir(contactDir, { recursive: true });
 await mkdir(join(siteDir, "skills", "iptrust-live-update"), { recursive: true });
 if (existsSync(join(root, "skills/iptrust-live-update/SKILL.md"))) {
   await copyFile(join(root, "skills/iptrust-live-update/SKILL.md"), join(siteDir, "skills/iptrust-live-update/SKILL.md"));
+}
+if (existsSync(join(root, "IP-System/ip_sys.md"))) {
+  await copyFile(join(root, "IP-System/ip_sys.md"), join(siteDir, "ip_sys.md"));
 }
 if (existsSync(join(root, "assets/contact/wecom-qr.png"))) {
   await copyFile(join(root, "assets/contact/wecom-qr.png"), join(contactDir, "wecom-qr.png"));
@@ -590,6 +594,11 @@ await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
     allFieldsCallable: true,
     perBrandHistory: "api/history/{slug}.json",
   },
+  ipSystem: {
+    name: "Brand IP System v2",
+    path: "ip_sys.md",
+    description: "Universal closed-loop framework for defining and governing any organization or brand IP.",
+  },
   skills: [{
     name: "iptrust-live-update",
     path: "skills/iptrust-live-update/SKILL.md",
@@ -662,6 +671,7 @@ await writeFile(join(siteDir, "_redirects"), [
   "/manifest  /api/manifest.json  200",
   "/schema  /api/schema.json  200",
   "/brands  /api/brands.json  200",
+  "/ip-system  /ip_sys.md  200",
   "",
 ].join("\n"));
 
@@ -680,6 +690,7 @@ await writeFile(join(siteDir, "llms.txt"), [
   "- /api/history/{slug}.json",
   "- /api/search.json",
   "- /api/versions.json",
+  "- /ip_sys.md",
   "- /skills/iptrust-live-update/SKILL.md",
   "",
   "Brands:",
@@ -1811,7 +1822,8 @@ p { line-height: 1.65; }
 }
 .asset-hub,
 .mood-board,
-.profile-editor {
+.profile-editor,
+.ip-system-panel {
   margin: 0 0 28px;
   padding: 18px;
   border: 1px solid var(--brand-line, var(--line));
@@ -1820,12 +1832,17 @@ p { line-height: 1.65; }
 }
 .asset-hub-head,
 .mood-head,
-.profile-editor-head {
+.profile-editor-head,
+.ip-system-head {
   display: flex;
   align-items: end;
   justify-content: space-between;
   gap: 16px;
   margin-bottom: 14px;
+}
+.ip-system-panel p {
+  margin: 0;
+  color: var(--brand-muted, var(--muted));
 }
 .profile-editor[data-locked="true"] {
   opacity: .78;
@@ -1880,7 +1897,7 @@ p { line-height: 1.65; }
 }
 .endpoint-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 10px;
 }
 .endpoint-card {
@@ -2086,6 +2103,11 @@ const i18n = {
     "brand.imageAssets": "图片资产",
     "brand.historyApi": "历史版本",
     "brand.agentUse": "Agent 调用",
+    "brand.ipSystem": "IP System",
+    "brand.ipSystemBody": "把品牌 IP 系统 v2 套用到当前 IP。",
+    "brand.openIpSystem": "打开框架",
+    "brand.copyIpSystem": "复制 Apply Brief",
+    "brand.ipSystemCopied": "已复制 IP System Apply Brief",
     "brand.moodBoard": "Mood Board",
     "brand.visualAssets": "视觉资产",
     "brand.keywords": "关键词",
@@ -2209,6 +2231,11 @@ const i18n = {
     "brand.imageAssets": "Image assets",
     "brand.historyApi": "History",
     "brand.agentUse": "Agent call",
+    "brand.ipSystem": "IP System",
+    "brand.ipSystemBody": "Apply Brand IP System v2 to this IP.",
+    "brand.openIpSystem": "Open framework",
+    "brand.copyIpSystem": "Copy apply brief",
+    "brand.ipSystemCopied": "IP System apply brief copied",
     "brand.moodBoard": "Mood Board",
     "brand.visualAssets": "Visual assets",
     "brand.keywords": "Keywords",
@@ -2681,6 +2708,30 @@ function referenceText(brand = {}) {
     \`get_guideline({ "assetKey": "\${brand.assetKey || brand.slug}" })\`,
     \`list_tokens({ "assetKey": "\${brand.assetKey || brand.slug}" })\`,
     \`validate_color({ "assetKey": "\${brand.assetKey || brand.slug}", "hex": "\${brand.theme?.primary || "#000000"}" })\`,
+  ].join("\\n");
+}
+
+function ipSystemApplyText(brand = {}) {
+  const localized = mainBrand(brand);
+  const brandUrl = new URL(brand.url || \`brand.html?brand=\${brand.slug}\`, location.href).href;
+  const brandApi = new URL(brand.apiUrl || \`api/brands/\${brand.slug}.json\`, location.href).href;
+  const framework = new URL("ip_sys.md", location.href).href;
+  return [
+    "Apply Brand IP System v2",
+    "",
+    \`IP: \${localized.name}\`,
+    \`IP ID: \${brand.assetKey || brand.slug}\`,
+    \`Main language: \${languageLabel(brand.mainLanguage || localized.language)}\`,
+    \`Tracks: \${listText(localized.classification.tracks) || "TBD"}\`,
+    \`Audiences: \${listText(localized.classification.audiences) || "TBD"}\`,
+    \`Tags: \${listText(localized.classification.tags) || "TBD"}\`,
+    "",
+    \`Framework: \${framework}\`,
+    \`Brand page: \${brandUrl}\`,
+    \`Brand API: \${brandApi}\`,
+    "",
+    "Instruction:",
+    "Use Brand IP System v2 as the universal operating framework. Apply it to this IP's latest API fields, then produce: 0) brand architecture judgment, 1) IP core, 2) expression system, 3) asset ladder, 4) governance and measurement loop. Keep all recommendations aligned with the IP's main language, tracks, audiences, tags, colors, intro, business, and notes.",
   ].join("\\n");
 }
 
@@ -3280,10 +3331,43 @@ function brandAssetHub(brand = {}) {
         \${endpointCard(t("brand.brandJson"), endpoints.brand || brand.apiUrl, \`get_brand\`)}
         \${endpointCard(t("brand.imageAssets"), endpoints.images || brand.apiUrl, \`images[]\`)}
         \${endpointCard(t("brand.historyApi"), endpoints.history || brand.historyUrl, \`versions[]\`)}
+        \${endpointCard(t("brand.ipSystem"), "ip_sys.md", \`apply_ip_system\`)}
         \${endpointCard(t("brand.agentUse"), brand.apiUrl, \`get_brand({ "assetKey": "\${key}" })\`)}
       </div>
     </section>
   \`;
+}
+
+function ipSystemPanel(brand = {}) {
+  return \`
+    <section class="ip-system-panel" aria-label="IP System">
+      <div class="ip-system-head">
+        <div>
+          <p class="eyebrow">\${escapeHtml(t("brand.ipSystem"))}</p>
+          <h2>\${escapeHtml(t("brand.ipSystem"))}</h2>
+        </div>
+        <div class="actions">
+          <a class="button ghost" href="ip_sys.md">\${escapeHtml(t("brand.openIpSystem"))}</a>
+          <button class="button" type="button" data-apply-ip-system="\${escapeHtml(brand.slug)}">\${escapeHtml(t("brand.copyIpSystem"))}</button>
+        </div>
+      </div>
+      <p>\${escapeHtml(t("brand.ipSystemBody"))}</p>
+    </section>
+  \`;
+}
+
+function setupIpSystemPanel(brand = {}) {
+  document.querySelectorAll("[data-apply-ip-system]").forEach((button) => {
+    if (button.dataset.ready) return;
+    button.dataset.ready = "true";
+    button.addEventListener("click", async () => {
+      const result = await writeClipboardText(ipSystemApplyText(brand));
+      const message = result === "selected" ? t("copy.selected") : t("brand.ipSystemCopied");
+      showToast(message);
+      button.classList.add("copied");
+      setTimeout(() => button.classList.remove("copied"), 1000);
+    });
+  });
 }
 
 function moodColorStyle(value = "") {
@@ -3502,6 +3586,7 @@ async function renderBrand() {
         \${hero ? \`<div class="brand-visual"><img src="\${escapeHtml(hero.sitePath)}" alt="\${escapeHtml(hero.title || display.name)}"></div>\` : ""}
       </section>
       \${profileEditor(brand)}
+      \${ipSystemPanel(brand)}
       \${brandAssetHub(brand)}
       \${moodBoard(brand)}
       <section class="resource-list">
@@ -3529,6 +3614,7 @@ async function renderBrand() {
     </div>
   \`;
   setupProfileEditor(brand);
+  setupIpSystemPanel(brand);
 }
 
 applyI18n();

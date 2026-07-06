@@ -128,14 +128,26 @@
     }
   },
   "version": {
-    "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
-    "shortHash": "a469733",
-    "date": "2026-07-06T12:06:43+08:00",
-    "message": "Add direct brand profile editing API",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
+    "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
+    "shortHash": "3e24857",
+    "date": "2026-07-06T12:50:10+08:00",
+    "message": "Add IP classifications and iNucleus",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a"
   },
   "historyUrl": "api/history/inucleus.json",
   "history": [
+    {
+      "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
+      "shortHash": "3e24857",
+      "date": "2026-07-06T12:50:10+08:00",
+      "message": "Add IP classifications and iNucleus",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a",
+      "sourcePaths": [
+        "config/brands.json",
+        "iNucleus",
+        "iNucleus/README.md"
+      ]
+    },
     {
       "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
       "shortHash": "b0269d2",
@@ -195,18 +207,6 @@
         "iNucleus",
         "iNucleus/README.md"
       ]
-    },
-    {
-      "hash": "1f20db30a5e970cf81e24c76e4613bc7e0036f09",
-      "shortHash": "1f20db3",
-      "date": "2026-07-04T16:01:00+08:00",
-      "message": "Add IP profile fields and main language display",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/1f20db30a5e970cf81e24c76e4613bc7e0036f09",
-      "sourcePaths": [
-        "config/brands.json",
-        "iNucleus",
-        "iNucleus/README.md"
-      ]
     }
   ],
   "url": "brand.html?brand=inucleus",
@@ -219,7 +219,7 @@
       "format": "md",
       "primary": true,
       "excerpt": "iNucleus iNucleus is an AI native operating nucleus for knowledge systems, agent coordination, and IP evolution. Brand Role Primary language : English Track : AI native operations / knowledge systems / agent coordination Audience : founders, agent builders, knowledge system teams Operating idea : a compact core where knowledge, decisions, agents, and evolving IP assets stay aligned. Voice Precise, calm, systemic, and",
-      "text": "# iNucleus\n\niNucleus is an AI-native operating nucleus for knowledge systems, agent coordination, and IP evolution.\n\n## Brand Role\n\n- **Primary language**: English\n- **Track**: AI-native operations / knowledge systems / agent coordination\n- **Audience**: founders, agent builders, knowledge system teams\n- **Operating idea**: a compact core where knowledge, decisions, agents, and evolving IP assets stay aligned.\n\n## Voice\n\nPrecise, calm, systemic, and high-signal. Use fewer words than expected, but keep the architecture visible.\n\n## Visual Direction\n\nDark core, electric clarity, and minimal structural rhythm. Use deep ink surfaces, blue signal lines, and restrained violet accents.\n\n"
+      "text": "# iNucleus\n\niNucleus is an AI-native operating nucleus for knowledge systems, agent coordination, and IP evolution.\n\n## Brand Role\n\n- **Primary language**: English\n- **Track**: AI-native operations / knowledge systems / agent coordination\n- **Audience**: founders, agent builders, knowledge system teams\n- **Operating idea**: a compact core where knowledge, decisions, agents, and evolving IP assets stay aligned.\n\n## Voice\n\nPrecise, calm, systemic, and high-signal. Use fewer words than expected, but keep the architecture visible.\n\n## Visual Direction\n\nDark core, electric clarity, and minimal structural rhythm. Use deep ink surfaces, blue signal lines, and restrained violet accents.\n"
     }
   ],
   "tokens": [],

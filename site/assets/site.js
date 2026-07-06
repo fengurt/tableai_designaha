@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "a469733-cf4339fe";
+const BUILD_VERSION = "3e24857-54fa9ec1";
 
 const i18n = {
   cn: {
@@ -49,6 +49,11 @@ const i18n = {
     "brand.imageAssets": "图片资产",
     "brand.historyApi": "历史版本",
     "brand.agentUse": "Agent 调用",
+    "brand.ipSystem": "IP System",
+    "brand.ipSystemBody": "把品牌 IP 系统 v2 套用到当前 IP。",
+    "brand.openIpSystem": "打开框架",
+    "brand.copyIpSystem": "复制 Apply Brief",
+    "brand.ipSystemCopied": "已复制 IP System Apply Brief",
     "brand.moodBoard": "Mood Board",
     "brand.visualAssets": "视觉资产",
     "brand.keywords": "关键词",
@@ -172,6 +177,11 @@ const i18n = {
     "brand.imageAssets": "Image assets",
     "brand.historyApi": "History",
     "brand.agentUse": "Agent call",
+    "brand.ipSystem": "IP System",
+    "brand.ipSystemBody": "Apply Brand IP System v2 to this IP.",
+    "brand.openIpSystem": "Open framework",
+    "brand.copyIpSystem": "Copy apply brief",
+    "brand.ipSystemCopied": "IP System apply brief copied",
     "brand.moodBoard": "Mood Board",
     "brand.visualAssets": "Visual assets",
     "brand.keywords": "Keywords",
@@ -644,6 +654,30 @@ function referenceText(brand = {}) {
     `get_guideline({ "assetKey": "${brand.assetKey || brand.slug}" })`,
     `list_tokens({ "assetKey": "${brand.assetKey || brand.slug}" })`,
     `validate_color({ "assetKey": "${brand.assetKey || brand.slug}", "hex": "${brand.theme?.primary || "#000000"}" })`,
+  ].join("\n");
+}
+
+function ipSystemApplyText(brand = {}) {
+  const localized = mainBrand(brand);
+  const brandUrl = new URL(brand.url || `brand.html?brand=${brand.slug}`, location.href).href;
+  const brandApi = new URL(brand.apiUrl || `api/brands/${brand.slug}.json`, location.href).href;
+  const framework = new URL("ip_sys.md", location.href).href;
+  return [
+    "Apply Brand IP System v2",
+    "",
+    `IP: ${localized.name}`,
+    `IP ID: ${brand.assetKey || brand.slug}`,
+    `Main language: ${languageLabel(brand.mainLanguage || localized.language)}`,
+    `Tracks: ${listText(localized.classification.tracks) || "TBD"}`,
+    `Audiences: ${listText(localized.classification.audiences) || "TBD"}`,
+    `Tags: ${listText(localized.classification.tags) || "TBD"}`,
+    "",
+    `Framework: ${framework}`,
+    `Brand page: ${brandUrl}`,
+    `Brand API: ${brandApi}`,
+    "",
+    "Instruction:",
+    "Use Brand IP System v2 as the universal operating framework. Apply it to this IP's latest API fields, then produce: 0) brand architecture judgment, 1) IP core, 2) expression system, 3) asset ladder, 4) governance and measurement loop. Keep all recommendations aligned with the IP's main language, tracks, audiences, tags, colors, intro, business, and notes.",
   ].join("\n");
 }
 
@@ -1243,10 +1277,43 @@ function brandAssetHub(brand = {}) {
         ${endpointCard(t("brand.brandJson"), endpoints.brand || brand.apiUrl, `get_brand`)}
         ${endpointCard(t("brand.imageAssets"), endpoints.images || brand.apiUrl, `images[]`)}
         ${endpointCard(t("brand.historyApi"), endpoints.history || brand.historyUrl, `versions[]`)}
+        ${endpointCard(t("brand.ipSystem"), "ip_sys.md", `apply_ip_system`)}
         ${endpointCard(t("brand.agentUse"), brand.apiUrl, `get_brand({ "assetKey": "${key}" })`)}
       </div>
     </section>
   `;
+}
+
+function ipSystemPanel(brand = {}) {
+  return `
+    <section class="ip-system-panel" aria-label="IP System">
+      <div class="ip-system-head">
+        <div>
+          <p class="eyebrow">${escapeHtml(t("brand.ipSystem"))}</p>
+          <h2>${escapeHtml(t("brand.ipSystem"))}</h2>
+        </div>
+        <div class="actions">
+          <a class="button ghost" href="ip_sys.md">${escapeHtml(t("brand.openIpSystem"))}</a>
+          <button class="button" type="button" data-apply-ip-system="${escapeHtml(brand.slug)}">${escapeHtml(t("brand.copyIpSystem"))}</button>
+        </div>
+      </div>
+      <p>${escapeHtml(t("brand.ipSystemBody"))}</p>
+    </section>
+  `;
+}
+
+function setupIpSystemPanel(brand = {}) {
+  document.querySelectorAll("[data-apply-ip-system]").forEach((button) => {
+    if (button.dataset.ready) return;
+    button.dataset.ready = "true";
+    button.addEventListener("click", async () => {
+      const result = await writeClipboardText(ipSystemApplyText(brand));
+      const message = result === "selected" ? t("copy.selected") : t("brand.ipSystemCopied");
+      showToast(message);
+      button.classList.add("copied");
+      setTimeout(() => button.classList.remove("copied"), 1000);
+    });
+  });
 }
 
 function moodColorStyle(value = "") {
@@ -1465,6 +1532,7 @@ async function renderBrand() {
         ${hero ? `<div class="brand-visual"><img src="${escapeHtml(hero.sitePath)}" alt="${escapeHtml(hero.title || display.name)}"></div>` : ""}
       </section>
       ${profileEditor(brand)}
+      ${ipSystemPanel(brand)}
       ${brandAssetHub(brand)}
       ${moodBoard(brand)}
       <section class="resource-list">
@@ -1492,6 +1560,7 @@ async function renderBrand() {
     </div>
   `;
   setupProfileEditor(brand);
+  setupIpSystemPanel(brand);
 }
 
 applyI18n();

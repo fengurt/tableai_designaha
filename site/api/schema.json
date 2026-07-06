@@ -9,6 +9,7 @@
     "allVersions": "api/versions.json",
     "brand": "api/brands/{slug}.json",
     "brandHistory": "api/history/{slug}.json",
+    "ipSystem": "ip_sys.md",
     "skill": "skills/iptrust-live-update/SKILL.md",
     "llms": "llms.txt"
   },

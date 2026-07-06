@@ -12,6 +12,7 @@ Machine-readable entry points:
 - /api/history/{slug}.json
 - /api/search.json
 - /api/versions.json
+- /ip_sys.md
 - /skills/iptrust-live-update/SKILL.md
 
 Brands:

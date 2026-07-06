@@ -152,14 +152,26 @@
     "en": ""
   },
   "version": {
-    "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
-    "shortHash": "a469733",
-    "date": "2026-07-06T12:06:43+08:00",
-    "message": "Add direct brand profile editing API",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
+    "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
+    "shortHash": "3e24857",
+    "date": "2026-07-06T12:50:10+08:00",
+    "message": "Add IP classifications and iNucleus",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a"
   },
   "historyUrl": "api/history/axisee.json",
   "history": [
+    {
+      "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
+      "shortHash": "3e24857",
+      "date": "2026-07-06T12:50:10+08:00",
+      "message": "Add IP classifications and iNucleus",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a",
+      "sourcePaths": [
+        "config/brands.json",
+        "Axisee",
+        "Axisee/axisee_design.md"
+      ]
+    },
     {
       "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
       "shortHash": "b0269d2",
@@ -214,18 +226,6 @@
       "date": "2026-07-04T16:34:09+08:00",
       "message": "Correct APUCH language and IPTrust naming",
       "url": "https://github.com/fengurt/tableai_designaha/commit/534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
-      "sourcePaths": [
-        "config/brands.json",
-        "Axisee",
-        "Axisee/axisee_design.md"
-      ]
-    },
-    {
-      "hash": "1f20db30a5e970cf81e24c76e4613bc7e0036f09",
-      "shortHash": "1f20db3",
-      "date": "2026-07-04T16:01:00+08:00",
-      "message": "Add IP profile fields and main language display",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/1f20db30a5e970cf81e24c76e4613bc7e0036f09",
       "sourcePaths": [
         "config/brands.json",
         "Axisee",

@@ -10,6 +10,7 @@ import { dirname, extname, relative, resolve } from "node:path";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = resolve(__dirname, "../..");
 const BRANDS_PATH = resolve(REPO_ROOT, "config/brands.json");
+const IP_SYSTEM_PATH = resolve(REPO_ROOT, "IP-System/ip_sys.md");
 const PRIVATE_SKILL_PATHS = [
   resolve(REPO_ROOT, "site/api/private/ksamint-skills.enc.json"),
   resolve(REPO_ROOT, "ksamint/private/guofeng-writing-style.enc.json"),
@@ -313,6 +314,19 @@ async function loadPrivateSkills(assetKey = "ksamint") {
 
 const brandConfigs = await loadBrandConfigs();
 const server = new McpServer({ name: "tableai-designaha", version: "0.2.0" });
+
+server.registerResource(
+  "ip-system",
+  "framework://ip-system-v2",
+  {
+    title: "Brand IP System v2",
+    description: "Universal closed-loop framework for defining and governing organization or brand IP systems.",
+    mimeType: "text/markdown",
+  },
+  async (uri) => ({
+    contents: [{ uri: uri.href, mimeType: "text/markdown", text: await readFile(IP_SYSTEM_PATH, "utf8") }],
+  })
+);
 
 for (const brand of brandConfigs) {
   server.registerResource(
