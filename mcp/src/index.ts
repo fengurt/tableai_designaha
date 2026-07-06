@@ -1,6 +1,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
+import { createDecipheriv, createHash } from "node:crypto";
 import { readFile, readdir, stat } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -9,6 +10,10 @@ import { dirname, extname, relative, resolve } from "node:path";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = resolve(__dirname, "../..");
 const BRANDS_PATH = resolve(REPO_ROOT, "config/brands.json");
+const PRIVATE_SKILL_PATHS = [
+  resolve(REPO_ROOT, "site/api/private/ksamint-skills.enc.json"),
+  resolve(REPO_ROOT, "ksamint/private/guofeng-writing-style.enc.json"),
+];
 
 type BrandConfig = {
   slug: string;
@@ -45,6 +50,29 @@ type BrandPayload = BrandConfig & {
 type BrandKeyInput = {
   assetKey?: string;
   slug?: string;
+};
+
+type PrivateSkill = {
+  id: string;
+  title: string;
+  order: number;
+  format: string;
+  content: string;
+};
+
+type PrivateSkillPayload = {
+  assetKey: string;
+  source: string;
+  updatedAt: string;
+  skills: PrivateSkill[];
+};
+
+type EncryptedPrivateSkills = {
+  version: number;
+  algorithm: "AES-256-GCM-SHA256";
+  iv: string;
+  tag: string;
+  ciphertext: string;
 };
 
 const brandKeyInputSchema = {
@@ -256,6 +284,32 @@ async function loadTokens(slug: string): Promise<Record<string, Token>> {
   return out;
 }
 
+function privateSkillSecret() {
+  return process.env.KSAMINT_SKILL_KEY || process.env.RESOURCE_ENCRYPTION_KEY || process.env.ADMIN_API_KEY;
+}
+
+function decryptPrivateSkills(payload: EncryptedPrivateSkills, secret: string): PrivateSkillPayload {
+  if (payload.algorithm !== "AES-256-GCM-SHA256") throw new Error("Unsupported private skill cipher.");
+  const key = createHash("sha256").update(secret).digest();
+  const decipher = createDecipheriv("aes-256-gcm", key, Buffer.from(payload.iv, "base64"));
+  decipher.setAuthTag(Buffer.from(payload.tag, "base64"));
+  const text = Buffer.concat([
+    decipher.update(Buffer.from(payload.ciphertext, "base64")),
+    decipher.final(),
+  ]).toString("utf8");
+  return JSON.parse(text) as PrivateSkillPayload;
+}
+
+async function loadPrivateSkills(assetKey = "ksamint") {
+  if (assetKey !== "ksamint") throw new Error(`Private skills are not configured for "${assetKey}".`);
+  const secret = privateSkillSecret();
+  if (!secret) throw new Error("Private skill access requires KSAMINT_SKILL_KEY, RESOURCE_ENCRYPTION_KEY, or ADMIN_API_KEY.");
+  const path = PRIVATE_SKILL_PATHS.find((candidate) => existsSync(candidate));
+  if (!path) throw new Error("Encrypted ksamint skill payload is not present in this checkout.");
+  const encrypted = JSON.parse(await readFile(path, "utf8")) as EncryptedPrivateSkills;
+  return decryptPrivateSkills(encrypted, secret);
+}
+
 const brandConfigs = await loadBrandConfigs();
 const server = new McpServer({ name: "tableai-designaha", version: "0.2.0" });
 
@@ -400,6 +454,50 @@ server.registerTool(
     }
     const palette = colors.map(([name, token]) => `${name}: ${token.$value}`).join("\n");
     return { content: [{ type: "text", text: `${hex} is not an exact ${assetKey} brand color.${palette ? ` Use one of:\n${palette}` : " No palette tokens are available yet."}` }] };
+  }
+);
+
+server.registerTool(
+  "list_private_skills",
+  {
+    title: "List protected ksamint skills",
+    description: "List encrypted private skill metadata. Content is only available through get_private_skill.",
+    inputSchema: {
+      assetKey: z.literal("ksamint").optional().describe("Protected IP ID. Currently only ksamint is supported."),
+    },
+  },
+  async (input) => {
+    try {
+      const payload = await loadPrivateSkills(input.assetKey ?? "ksamint");
+      const skills = payload.skills.map(({ content, ...skill }) => skill);
+      return { content: [{ type: "text", text: JSON.stringify({ ...payload, skills }, null, 2) }] };
+    } catch (error) {
+      return { content: [{ type: "text", text: error instanceof Error ? error.message : "Private skills are unavailable." }], isError: true };
+    }
+  }
+);
+
+server.registerTool(
+  "get_private_skill",
+  {
+    title: "Get a protected ksamint skill",
+    description: "Decrypt and return one private skill by id. Requires a local private skill secret.",
+    inputSchema: {
+      assetKey: z.literal("ksamint").optional().describe("Protected IP ID. Currently only ksamint is supported."),
+      id: z.string().describe("Private skill id from list_private_skills."),
+    },
+  },
+  async (input) => {
+    try {
+      const payload = await loadPrivateSkills(input.assetKey ?? "ksamint");
+      const skill = payload.skills.find((item) => item.id === input.id);
+      if (!skill) {
+        return { content: [{ type: "text", text: `Private skill "${input.id}" was not found.` }], isError: true };
+      }
+      return { content: [{ type: "text", text: JSON.stringify({ assetKey: payload.assetKey, ...skill }, null, 2) }] };
+    } catch (error) {
+      return { content: [{ type: "text", text: error instanceof Error ? error.message : "Private skill is unavailable." }], isError: true };
+    }
   }
 );
 

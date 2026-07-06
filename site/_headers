@@ -21,6 +21,9 @@
 /assets/brand-images/*
   Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
+/api/private/*
+  Cache-Control: no-store
+
 /api/*
   Cache-Control: public, max-age=300, stale-while-revalidate=86400
 
