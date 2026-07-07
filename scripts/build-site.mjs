@@ -749,10 +749,10 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       </div>
       <button class="icon-copy" type="button" id="apiConnectClose" data-icon-only="true" aria-label="Close">×</button>
     </div>
-    <div class="api-connect-form" id="apiConnectForm">
-      <label><span data-i18n="api.key">System API Key</span><input id="apiAdminKey" type="password" autocomplete="current-password"></label>
-      <button class="portal-action" type="button" id="apiConnectSubmit" data-i18n="api.connect">Connect</button>
-    </div>
+    <form class="api-connect-form" id="apiConnectForm" autocomplete="on">
+      <label><span data-i18n="api.key">System API Key</span><input id="apiAdminKey" name="admin_api_key" type="password" autocomplete="current-password" placeholder="System API Key" spellcheck="false"></label>
+      <button class="portal-action" type="submit" id="apiConnectSubmit" data-i18n="api.connect">Connect</button>
+    </form>
     <p class="portal-status" id="apiConnectStatus"></p>
     <div class="api-ops hidden" id="apiConnectedOps">
       <strong class="connected-pill" data-i18n="api.connected">Connected</strong>
@@ -844,10 +844,10 @@ await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
       </div>
       <button class="icon-copy" type="button" id="apiConnectClose" data-icon-only="true" aria-label="Close">×</button>
     </div>
-    <div class="api-connect-form" id="apiConnectForm">
-      <label><span data-i18n="api.key">System API Key</span><input id="apiAdminKey" type="password" autocomplete="current-password"></label>
-      <button class="portal-action" type="button" id="apiConnectSubmit" data-i18n="api.connect">Connect</button>
-    </div>
+    <form class="api-connect-form" id="apiConnectForm" autocomplete="on">
+      <label><span data-i18n="api.key">System API Key</span><input id="apiAdminKey" name="admin_api_key" type="password" autocomplete="current-password" placeholder="System API Key" spellcheck="false"></label>
+      <button class="portal-action" type="submit" id="apiConnectSubmit" data-i18n="api.connect">Connect</button>
+    </form>
     <p class="portal-status" id="apiConnectStatus"></p>
     <div class="api-ops hidden" id="apiConnectedOps">
       <strong class="connected-pill" data-i18n="api.connected">Connected</strong>
@@ -902,10 +902,10 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
       </div>
       <button class="icon-copy" type="button" id="apiConnectClose" data-icon-only="true" aria-label="Close">×</button>
     </div>
-    <div class="api-connect-form" id="apiConnectForm">
-      <label><span data-i18n="api.key">System API Key</span><input id="apiAdminKey" type="password" autocomplete="current-password"></label>
-      <button class="portal-action" type="button" id="apiConnectSubmit" data-i18n="api.connect">Connect</button>
-    </div>
+    <form class="api-connect-form" id="apiConnectForm" autocomplete="on">
+      <label><span data-i18n="api.key">System API Key</span><input id="apiAdminKey" name="admin_api_key" type="password" autocomplete="current-password" placeholder="System API Key" spellcheck="false"></label>
+      <button class="portal-action" type="submit" id="apiConnectSubmit" data-i18n="api.connect">Connect</button>
+    </form>
     <p class="portal-status" id="apiConnectStatus"></p>
     <div class="api-ops hidden" id="apiConnectedOps">
       <strong class="connected-pill" data-i18n="api.connected">Connected</strong>
@@ -3083,7 +3083,7 @@ function setupApiConnect() {
   });
   $("#apiResourcesButton")?.addEventListener("click", loadProtectedResources);
 
-  submit?.addEventListener("click", async () => {
+  const connectApi = async () => {
     const adminKey = $("#apiAdminKey")?.value || "";
     apiStatus(t("api.connecting"));
     try {
@@ -3111,6 +3111,11 @@ function setupApiConnect() {
       apiStatus(error.message || t("api.failed"), true);
       showToast(error.message || t("api.failed"));
     }
+  };
+  submit?.addEventListener("click", () => connectApi());
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    void connectApi();
   });
 }
 

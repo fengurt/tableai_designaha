@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "a38ea80-554acaca";
+const BUILD_VERSION = "cd0ea58-47b26521";
 
 const i18n = {
   cn: {
@@ -940,7 +940,7 @@ function setupApiConnect() {
   });
   $("#apiResourcesButton")?.addEventListener("click", loadProtectedResources);
 
-  submit?.addEventListener("click", async () => {
+  const connectApi = async () => {
     const adminKey = $("#apiAdminKey")?.value || "";
     apiStatus(t("api.connecting"));
     try {
@@ -968,6 +968,11 @@ function setupApiConnect() {
       apiStatus(error.message || t("api.failed"), true);
       showToast(error.message || t("api.failed"));
     }
+  };
+  submit?.addEventListener("click", () => connectApi());
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    void connectApi();
   });
 }
 
