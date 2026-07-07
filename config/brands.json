@@ -611,13 +611,13 @@
     "slug": "fengzhi",
     "folder": "FENGZHI",
     "name": "峰值永造局",
-    "nativeName": "The Transformation Company · 界格",
+    "nativeName": "Fengzhi Yongzaoju",
     "description": "AI-native transformation delivery brand system.",
     "officialWebsite": "",
     "mainLanguage": "zh",
     "intro": {
       "zh": "峰值永造局是 AI 原生的组织转型与交付系统品牌。",
-      "en": "The Transformation Company is an AI-native transformation and delivery brand system."
+      "en": "Fengzhi Yongzaoju is an AI-native transformation and delivery brand system."
     },
     "business": {
       "zh": "组织转型、战略交付、AI 原生运营。",
@@ -762,18 +762,18 @@
   {
     "slug": "sidera",
     "folder": "Sidera",
-    "name": "Sidera",
-    "nativeName": "侍天",
-    "description": "Wisdom Navigator design system for premium F&B chains.",
+    "name": "侍天",
+    "nativeName": "Sidera",
+    "description": "面向饮食知识、料理内容与美食体验的中文优先 IP。",
     "officialWebsite": "",
-    "mainLanguage": "en",
+    "mainLanguage": "zh",
     "intro": {
-      "zh": "Sidera 是面向高端餐饮连锁的 Wisdom Navigator 设计系统。",
-      "en": "Sidera is a Wisdom Navigator design system for premium F&B chains."
+      "zh": "侍天是面向饮食知识、料理内容与美食体验的中文优先 IP。",
+      "en": "Sidera is a Chinese-first IP for food knowledge, culinary content, and dining experience."
     },
     "business": {
-      "zh": "餐饮连锁、经营导航、品牌与服务系统。",
-      "en": "F&B chains, operating navigation, brand and service systems."
+      "zh": "饮食知识、料理内容、美食体验与餐饮品牌内容系统。",
+      "en": "Food knowledge, culinary content, dining experience, and food brand content systems."
     },
     "notes": {
       "zh": "参考链接：https://frienji.kenjilopezalt.com/；https://www.seriouseats.com/",
@@ -1601,6 +1601,88 @@
         "travel",
         "local experience"
       ]
+    }
+  },
+  {
+    "slug": "zhongzhiyou",
+    "folder": "ZhongzhiyouGroup",
+    "name": "中智游集团",
+    "nativeName": "Zhongzhiyou Group",
+    "description": "中文优先的智慧文旅与目的地运营集团 IP。",
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "中智游集团是面向智慧文旅、目的地运营与文化旅游服务协作的集团 IP。",
+      "en": "Zhongzhiyou Group is a Chinese-first group IP for smart cultural tourism, destination operations, and travel service collaboration."
+    },
+    "business": {
+      "zh": "智慧文旅、目的地运营、旅游服务协作、文化路线与项目孵化。",
+      "en": "Smart cultural tourism, destination operations, travel service collaboration, cultural routes, and project incubation."
+    },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
+    "primaryGuide": "ZhongzhiyouGroup/README.md",
+    "theme": {
+      "mode": "light",
+      "primary": "#1F5F57",
+      "accent": "#C7A25A",
+      "secondary": "#3A6F8F",
+      "surface": "#F4F7F4",
+      "paper": "#FFFDF8",
+      "ink": "#14231F",
+      "muted": "#60706B",
+      "line": "rgba(31, 95, 87, 0.16)",
+      "keywords": [
+        "smart tourism",
+        "cultural travel",
+        "destination green",
+        "route gold",
+        "group operation"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "智慧文旅",
+          "目的地运营",
+          "文化旅游"
+        ],
+        "en": [
+          "Smart cultural tourism",
+          "Destination operations",
+          "Cultural travel"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "文旅集团",
+          "目的地伙伴",
+          "旅游服务团队"
+        ],
+        "en": [
+          "Cultural tourism groups",
+          "Destination partners",
+          "Travel service teams"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "文旅",
+          "智慧旅游",
+          "目的地",
+          "集团",
+          "运营"
+        ],
+        "en": [
+          "Cultural tourism",
+          "Smart travel",
+          "Destination",
+          "Group",
+          "Operations"
+        ]
+      }
     }
   }
 ]

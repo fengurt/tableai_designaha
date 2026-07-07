@@ -1,0 +1,351 @@
+{
+  "slug": "zhongzhiyou",
+  "folder": "ZhongzhiyouGroup",
+  "name": "中智游集团",
+  "nativeName": "Zhongzhiyou Group",
+  "description": "中文优先的智慧文旅与目的地运营集团 IP。",
+  "officialWebsite": "",
+  "mainLanguage": "zh",
+  "intro": {
+    "zh": "中智游集团是面向智慧文旅、目的地运营与文化旅游服务协作的集团 IP。",
+    "en": "Zhongzhiyou Group is a Chinese-first group IP for smart cultural tourism, destination operations, and travel service collaboration."
+  },
+  "business": {
+    "zh": "智慧文旅、目的地运营、旅游服务协作、文化路线与项目孵化。",
+    "en": "Smart cultural tourism, destination operations, travel service collaboration, cultural routes, and project incubation."
+  },
+  "notes": {
+    "zh": "",
+    "en": ""
+  },
+  "primaryGuide": "ZhongzhiyouGroup/README.md",
+  "theme": {
+    "mode": "light",
+    "primary": "#1F5F57",
+    "accent": "#C7A25A",
+    "secondary": "#3A6F8F",
+    "surface": "#F4F7F4",
+    "paper": "#FFFDF8",
+    "ink": "#14231F",
+    "muted": "#60706B",
+    "line": "rgba(31, 95, 87, 0.16)",
+    "keywords": [
+      "smart tourism",
+      "cultural travel",
+      "destination green",
+      "route gold",
+      "group operation"
+    ]
+  },
+  "classification": {
+    "tracks": {
+      "zh": [
+        "智慧文旅",
+        "目的地运营",
+        "文化旅游"
+      ],
+      "en": [
+        "Smart cultural tourism",
+        "Destination operations",
+        "Cultural travel"
+      ]
+    },
+    "audiences": {
+      "zh": [
+        "文旅集团",
+        "目的地伙伴",
+        "旅游服务团队"
+      ],
+      "en": [
+        "Cultural tourism groups",
+        "Destination partners",
+        "Travel service teams"
+      ]
+    },
+    "tags": {
+      "zh": [
+        "文旅",
+        "智慧旅游",
+        "目的地",
+        "集团",
+        "运营"
+      ],
+      "en": [
+        "Cultural tourism",
+        "Smart travel",
+        "Destination",
+        "Group",
+        "Operations"
+      ]
+    }
+  },
+  "assetKey": "zhongzhiyou",
+  "mainName": "中智游集团",
+  "mainLocale": "CN",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "mainLocale": "CN",
+    "intro": {
+      "zh": "中智游集团是面向智慧文旅、目的地运营与文化旅游服务协作的集团 IP。",
+      "en": "Zhongzhiyou Group is a Chinese-first group IP for smart cultural tourism, destination operations, and travel service collaboration."
+    },
+    "business": {
+      "zh": "智慧文旅、目的地运营、旅游服务协作、文化路线与项目孵化。",
+      "en": "Smart cultural tourism, destination operations, travel service collaboration, cultural routes, and project incubation."
+    },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "智慧文旅",
+          "目的地运营",
+          "文化旅游"
+        ],
+        "en": [
+          "Smart cultural tourism",
+          "Destination operations",
+          "Cultural travel"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "文旅集团",
+          "目的地伙伴",
+          "旅游服务团队"
+        ],
+        "en": [
+          "Cultural tourism groups",
+          "Destination partners",
+          "Travel service teams"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "文旅",
+          "智慧旅游",
+          "目的地",
+          "集团",
+          "运营"
+        ],
+        "en": [
+          "Cultural tourism",
+          "Smart travel",
+          "Destination",
+          "Group",
+          "Operations"
+        ]
+      }
+    }
+  },
+  "display": {
+    "default": {
+      "language": "zh",
+      "name": "中智游集团"
+    },
+    "zh": {
+      "name": "中智游集团",
+      "secondaryName": "Zhongzhiyou Group"
+    },
+    "en": {
+      "name": "Zhongzhiyou Group",
+      "secondaryName": "中智游集团"
+    }
+  },
+  "version": {
+    "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
+    "shortHash": "5a93d2b",
+    "date": "2026-07-08T03:19:10+08:00",
+    "message": "Add Xinzhi Travel IP",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14"
+  },
+  "historyUrl": "api/history/zhongzhiyou.json",
+  "history": [
+    {
+      "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
+      "shortHash": "5a93d2b",
+      "date": "2026-07-08T03:19:10+08:00",
+      "message": "Add Xinzhi Travel IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
+      "sourcePaths": [
+        "config/brands.json",
+        "ZhongzhiyouGroup",
+        "ZhongzhiyouGroup/README.md"
+      ]
+    },
+    {
+      "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
+      "shortHash": "3e24857",
+      "date": "2026-07-06T12:50:10+08:00",
+      "message": "Add IP classifications and iNucleus",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a",
+      "sourcePaths": [
+        "config/brands.json",
+        "ZhongzhiyouGroup",
+        "ZhongzhiyouGroup/README.md"
+      ]
+    },
+    {
+      "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+      "shortHash": "b0269d2",
+      "date": "2026-07-06T06:21:22+08:00",
+      "message": "Add ksamint IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+      "sourcePaths": [
+        "config/brands.json",
+        "ZhongzhiyouGroup",
+        "ZhongzhiyouGroup/README.md"
+      ]
+    },
+    {
+      "hash": "067a47c76f1cb812b607335089911c282f4d8f78",
+      "shortHash": "067a47c",
+      "date": "2026-07-05T10:24:24+08:00",
+      "message": "Add Sanctem IP and brand logos",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/067a47c76f1cb812b607335089911c282f4d8f78",
+      "sourcePaths": [
+        "config/brands.json",
+        "ZhongzhiyouGroup",
+        "ZhongzhiyouGroup/README.md"
+      ]
+    },
+    {
+      "hash": "a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
+      "shortHash": "a0e6ecd",
+      "date": "2026-07-04T22:02:17+08:00",
+      "message": "Add Sidera reference notes",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
+      "sourcePaths": [
+        "config/brands.json",
+        "ZhongzhiyouGroup",
+        "ZhongzhiyouGroup/README.md"
+      ]
+    },
+    {
+      "hash": "0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
+      "shortHash": "0e3d71b",
+      "date": "2026-07-04T21:38:07+08:00",
+      "message": "Add PaM Design Office IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
+      "sourcePaths": [
+        "config/brands.json",
+        "ZhongzhiyouGroup",
+        "ZhongzhiyouGroup/README.md"
+      ]
+    }
+  ],
+  "url": "brand.html?brand=zhongzhiyou",
+  "apiUrl": "api/brands/zhongzhiyou.json",
+  "status": "documented",
+  "guides": [
+    {
+      "path": "ZhongzhiyouGroup/README.md",
+      "title": "README",
+      "format": "md",
+      "primary": true,
+      "excerpt": "中智游集团 · Zhongzhiyou Group 中智游集团是中文优先的智慧文旅与目的地运营集团 IP。 Brand Role 主语言 ：中文 英文对照 ：Zhongzhiyou Group 赛道 ：智慧文旅 / 目的地运营 / 文化旅游 人群 ：文旅集团、目的地伙伴、旅游服务团队 业务 ：智慧文旅、目的地运营、旅游服务协作、文化路线与项目孵化 Voice 可信、清晰、有组织感。表达要优先使用中文，并把复杂的文旅业务拆成可执行的路线、服务、资源与协作关系。 Visual Direction 以目的地绿、路线金、湖蓝为基础，整体应有集团级可信度、文旅温度和智慧运营感。避免廉价旅行促销视觉和过度科技感。 Agent Notes 在生成中智游集团相关内容时，默认使用中文主名称。英文仅作为对照、URL、文件名或国际化字段使用。内容重点放在智慧文旅、目的地运营、文化路线、服务协作与项目孵化。",
+      "text": "# 中智游集团 · Zhongzhiyou Group\n\n中智游集团是中文优先的智慧文旅与目的地运营集团 IP。\n\n## Brand Role\n\n- **主语言**：中文\n- **英文对照**：Zhongzhiyou Group\n- **赛道**：智慧文旅 / 目的地运营 / 文化旅游\n- **人群**：文旅集团、目的地伙伴、旅游服务团队\n- **业务**：智慧文旅、目的地运营、旅游服务协作、文化路线与项目孵化\n\n## Voice\n\n可信、清晰、有组织感。表达要优先使用中文，并把复杂的文旅业务拆成可执行的路线、服务、资源与协作关系。\n\n## Visual Direction\n\n以目的地绿、路线金、湖蓝为基础，整体应有集团级可信度、文旅温度和智慧运营感。避免廉价旅行促销视觉和过度科技感。\n\n## Agent Notes\n\n在生成中智游集团相关内容时，默认使用中文主名称。英文仅作为对照、URL、文件名或国际化字段使用。内容重点放在智慧文旅、目的地运营、文化路线、服务协作与项目孵化。\n"
+    }
+  ],
+  "tokens": [],
+  "images": [],
+  "assetKit": {
+    "assetKey": "zhongzhiyou",
+    "endpoints": {
+      "brand": "api/brands/zhongzhiyou.json",
+      "images": "api/brands/zhongzhiyou.json#images",
+      "tokens": "api/brands/zhongzhiyou.json#tokens",
+      "history": "api/history/zhongzhiyou.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#1F5F57"
+        },
+        {
+          "key": "accent",
+          "value": "#C7A25A"
+        },
+        {
+          "key": "secondary",
+          "value": "#3A6F8F"
+        },
+        {
+          "key": "surface",
+          "value": "#F4F7F4"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFDF8"
+        },
+        {
+          "key": "ink",
+          "value": "#14231F"
+        },
+        {
+          "key": "muted",
+          "value": "#60706B"
+        }
+      ],
+      "keywords": [
+        "smart tourism",
+        "cultural travel",
+        "destination green",
+        "route gold",
+        "group operation"
+      ],
+      "images": []
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#1F5F57"
+      },
+      {
+        "key": "accent",
+        "value": "#C7A25A"
+      },
+      {
+        "key": "secondary",
+        "value": "#3A6F8F"
+      },
+      {
+        "key": "surface",
+        "value": "#F4F7F4"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFDF8"
+      },
+      {
+        "key": "ink",
+        "value": "#14231F"
+      },
+      {
+        "key": "muted",
+        "value": "#60706B"
+      }
+    ],
+    "keywords": [
+      "smart tourism",
+      "cultural travel",
+      "destination green",
+      "route gold",
+      "group operation"
+    ],
+    "images": []
+  },
+  "editablePaths": [
+    "ZhongzhiyouGroup/README.md"
+  ],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/ZhongzhiyouGroup",
+    "folder": "ZhongzhiyouGroup"
+  }
+}

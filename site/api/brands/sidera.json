@@ -1,18 +1,18 @@
 {
   "slug": "sidera",
   "folder": "Sidera",
-  "name": "Sidera",
-  "nativeName": "侍天",
-  "description": "Wisdom Navigator design system for premium F&B chains.",
+  "name": "侍天",
+  "nativeName": "Sidera",
+  "description": "面向饮食知识、料理内容与美食体验的中文优先 IP。",
   "officialWebsite": "",
-  "mainLanguage": "en",
+  "mainLanguage": "zh",
   "intro": {
-    "zh": "Sidera 是面向高端餐饮连锁的 Wisdom Navigator 设计系统。",
-    "en": "Sidera is a Wisdom Navigator design system for premium F&B chains."
+    "zh": "侍天是面向饮食知识、料理内容与美食体验的中文优先 IP。",
+    "en": "Sidera is a Chinese-first IP for food knowledge, culinary content, and dining experience."
   },
   "business": {
-    "zh": "餐饮连锁、经营导航、品牌与服务系统。",
-    "en": "F&B chains, operating navigation, brand and service systems."
+    "zh": "饮食知识、料理内容、美食体验与餐饮品牌内容系统。",
+    "en": "Food knowledge, culinary content, dining experience, and food brand content systems."
   },
   "notes": {
     "zh": "参考链接：https://frienji.kenjilopezalt.com/；https://www.seriouseats.com/",
@@ -78,19 +78,19 @@
     }
   },
   "assetKey": "sidera",
-  "mainName": "Sidera",
-  "mainLocale": "EN",
+  "mainName": "侍天",
+  "mainLocale": "CN",
   "profile": {
     "officialWebsite": "",
-    "mainLanguage": "en",
-    "mainLocale": "EN",
+    "mainLanguage": "zh",
+    "mainLocale": "CN",
     "intro": {
-      "zh": "Sidera 是面向高端餐饮连锁的 Wisdom Navigator 设计系统。",
-      "en": "Sidera is a Wisdom Navigator design system for premium F&B chains."
+      "zh": "侍天是面向饮食知识、料理内容与美食体验的中文优先 IP。",
+      "en": "Sidera is a Chinese-first IP for food knowledge, culinary content, and dining experience."
     },
     "business": {
-      "zh": "餐饮连锁、经营导航、品牌与服务系统。",
-      "en": "F&B chains, operating navigation, brand and service systems."
+      "zh": "饮食知识、料理内容、美食体验与餐饮品牌内容系统。",
+      "en": "Food knowledge, culinary content, dining experience, and food brand content systems."
     },
     "notes": {
       "zh": "参考链接：https://frienji.kenjilopezalt.com/；https://www.seriouseats.com/",
@@ -139,8 +139,8 @@
   },
   "display": {
     "default": {
-      "language": "en",
-      "name": "Sidera"
+      "language": "zh",
+      "name": "侍天"
     },
     "zh": {
       "name": "侍天",
@@ -152,14 +152,26 @@
     }
   },
   "version": {
-    "hash": "8f21723e87dc35342ed79de59a0648a1a363e833",
-    "shortHash": "8f21723",
-    "date": "2026-07-07T07:09:51+08:00",
-    "message": "Add universal IP system framework",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/8f21723e87dc35342ed79de59a0648a1a363e833"
+    "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
+    "shortHash": "5a93d2b",
+    "date": "2026-07-08T03:19:10+08:00",
+    "message": "Add Xinzhi Travel IP",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14"
   },
   "historyUrl": "api/history/sidera.json",
   "history": [
+    {
+      "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
+      "shortHash": "5a93d2b",
+      "date": "2026-07-08T03:19:10+08:00",
+      "message": "Add Xinzhi Travel IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
+      "sourcePaths": [
+        "config/brands.json",
+        "Sidera",
+        "Sidera/sidera_design.md"
+      ]
+    },
     {
       "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
       "shortHash": "3e24857",
@@ -214,18 +226,6 @@
       "date": "2026-07-04T21:38:07+08:00",
       "message": "Add PaM Design Office IP",
       "url": "https://github.com/fengurt/tableai_designaha/commit/0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
-      "sourcePaths": [
-        "config/brands.json",
-        "Sidera",
-        "Sidera/sidera_design.md"
-      ]
-    },
-    {
-      "hash": "534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
-      "shortHash": "534c825",
-      "date": "2026-07-04T16:34:09+08:00",
-      "message": "Correct APUCH language and IPTrust naming",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
       "sourcePaths": [
         "config/brands.json",
         "Sidera",

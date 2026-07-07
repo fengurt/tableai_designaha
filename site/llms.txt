@@ -26,7 +26,7 @@ Brands:
 - IPTrustasset (iptrust): /api/brands/iptrust.json · mainLocale EN · palette #10263D / #B99B5B
 - 峰值永造局 (fengzhi): /api/brands/fengzhi.json · mainLocale CN · palette #1A1714 / #A47B36
 - Axisee (axisee): /api/brands/axisee.json · mainLocale EN · palette #1A2B4A / #B12137
-- Sidera (sidera): /api/brands/sidera.json · mainLocale EN · palette #B58B4C / #D4A862
+- 侍天 (sidera): /api/brands/sidera.json · mainLocale CN · palette #B58B4C / #D4A862
 - 1stepmore (1stepmore): /api/brands/1stepmore.json · mainLocale EN · palette #123047 / #C89B3C
 - 游赋社 (agem): /api/brands/agem.json · mainLocale CN · palette #155E75 / #D9823B
 - 燃古豋 (rgd): /api/brands/rgd.json · mainLocale CN · palette #E06B3A / #C8A15A
@@ -37,6 +37,7 @@ Brands:
 - ksamint (ksamint): /api/brands/ksamint.json · mainLocale EN · palette #0F4B42 / #7EDBC6
 - iNucleus (inucleus): /api/brands/inucleus.json · mainLocale EN · palette #111827 / #7DD3FC
 - 信致旅游 (xinzhi-travel): /api/brands/xinzhi-travel.json · mainLocale CN · palette #245C4B / #D3A84F
+- 中智游集团 (zhongzhiyou): /api/brands/zhongzhiyou.json · mainLocale CN · palette #1F5F57 / #C7A25A
 
 Admin workflow:
 - /admin.html unlocks with the generated admin key.

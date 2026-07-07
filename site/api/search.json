@@ -123,8 +123,8 @@
     "type": "ip",
     "slug": "fengzhi",
     "title": "峰值永造局",
-    "subtitle": "峰值永造局 · The Transformation Company · The Transformation Company · 界格",
-    "text": "峰值永造局是 AI 原生的组织转型与交付系统品牌。 The Transformation Company is an AI-native transformation and delivery brand system. 组织转型、战略交付、AI 原生运营。 Transformation, strategic delivery, and AI-native operations. 组织转型 战略交付 AI 原生运营 Transformation Strategic delivery AI-native operations 创始人 管理层 转型团队 Founders Executives Transformation teams 转型 交付 战略 AI 运营 Transformation Delivery Strategy AI operations AI-native transformation delivery brand system. paper white ink black stone grey deep gold transformation",
+    "subtitle": "峰值永造局 · Fengzhi Yongzaoju",
+    "text": "峰值永造局是 AI 原生的组织转型与交付系统品牌。 Fengzhi Yongzaoju is an AI-native transformation and delivery brand system. 组织转型、战略交付、AI 原生运营。 Transformation, strategic delivery, and AI-native operations. 组织转型 战略交付 AI 原生运营 Transformation Strategic delivery AI-native operations 创始人 管理层 转型团队 Founders Executives Transformation teams 转型 交付 战略 AI 运营 Transformation Delivery Strategy AI operations AI-native transformation delivery brand system. paper white ink black stone grey deep gold transformation",
     "url": "brand.html?brand=fengzhi"
   },
   {
@@ -330,16 +330,16 @@
   {
     "type": "ip",
     "slug": "sidera",
-    "title": "Sidera",
+    "title": "侍天",
     "subtitle": "侍天 · Sidera",
-    "text": "Sidera 是面向高端餐饮连锁的 Wisdom Navigator 设计系统。 Sidera is a Wisdom Navigator design system for premium F&B chains. 餐饮连锁、经营导航、品牌与服务系统。 F&B chains, operating navigation, brand and service systems. 参考链接：https://frienji.kenjilopezalt.com/；https://www.seriouseats.com/ Reference links: https://frienji.kenjilopezalt.com/; https://www.seriouseats.com/ 饮食知识 料理内容 美食体验 Food knowledge Culinary content Dining experience 料理创作者 餐饮品牌 美食学习者 Culinary creators Food brands Food learners 料理 饮食 内容 体验 Culinary Food Content Experience Wisdom Navigator design system for premium F&B chains. ink earth gold cream vermillion wisdom navigator",
+    "text": "侍天是面向饮食知识、料理内容与美食体验的中文优先 IP。 Sidera is a Chinese-first IP for food knowledge, culinary content, and dining experience. 饮食知识、料理内容、美食体验与餐饮品牌内容系统。 Food knowledge, culinary content, dining experience, and food brand content systems. 参考链接：https://frienji.kenjilopezalt.com/；https://www.seriouseats.com/ Reference links: https://frienji.kenjilopezalt.com/; https://www.seriouseats.com/ 饮食知识 料理内容 美食体验 Food knowledge Culinary content Dining experience 料理创作者 餐饮品牌 美食学习者 Culinary creators Food brands Food learners 料理 饮食 内容 体验 Culinary Food Content Experience 面向饮食知识、料理内容与美食体验的中文优先 IP。 ink earth gold cream vermillion wisdom navigator",
     "url": "brand.html?brand=sidera"
   },
   {
     "type": "guide",
     "slug": "sidera",
     "title": "Sidera Design",
-    "subtitle": "Sidera · Sidera/sidera_design.md",
+    "subtitle": "侍天 · Sidera/sidera_design.md",
     "text": "Sidera 侍天 — Design System Build ready brand & visual spec for agents producing on brand 侍天 work. 一句话： 土金为骨、玄墨为底、思源宋体为肉；沉稳敢言、有据可依。 Gold is the bones, ink is the ground, serif is the flesh — composed, forthright, evidence based. Sidera 侍天 — 智慧领航者 · Wisdom Navigator for premium F&B chains. We equip every valuable mid to high end F&B chain with a \"see clearly, move betably, compound easily\" smart navigation system: 海图 Ch",
     "url": "brand.html?brand=sidera"
   },
@@ -510,5 +510,21 @@
     "subtitle": "信致旅游 · XinzhiTravel/README.md",
     "text": "信致旅游 · Xinzhi Travel 信致旅游是面向目的地体验、文化路线与可信服务的旅游 IP。 Brand Role 主语言 ：中文 英文对照 ：Xinzhi Travel 赛道 ：目的地旅游 / 文化路线 / 在地体验 人群 ：旅行者、目的地伙伴、文旅运营方 业务 ：目的地旅游、文化路线、定制旅行、在地体验与旅游服务协作 Voice 真诚、清晰、有抵达感。语言要像一条可靠路线：不过度煽情，也不把旅行降格为消费清单。 Visual Direction 目的地绿、路线金、雾蓝为基础。整体应有可信服务感和轻微的文化温度，避免廉价旅行社式高饱和促销视觉。 Agent Notes 在生成信致旅游相关内容时，优先表达“可信、在地、路线、体验、文化理解”。面向用户时减少抽象口号，多给具体路线、场景、服务承诺与目的地细节。",
     "url": "brand.html?brand=xinzhi-travel"
+  },
+  {
+    "type": "ip",
+    "slug": "zhongzhiyou",
+    "title": "中智游集团",
+    "subtitle": "中智游集团 · Zhongzhiyou Group",
+    "text": "中智游集团是面向智慧文旅、目的地运营与文化旅游服务协作的集团 IP。 Zhongzhiyou Group is a Chinese-first group IP for smart cultural tourism, destination operations, and travel service collaboration. 智慧文旅、目的地运营、旅游服务协作、文化路线与项目孵化。 Smart cultural tourism, destination operations, travel service collaboration, cultural routes, and project incubation. 智慧文旅 目的地运营 文化旅游 Smart cultural tourism Destination operations Cultural travel 文旅集团 目的地伙伴 旅游服务团队 Cultural tourism groups Destination partners Travel service teams 文旅 智慧旅游 目的地 集团 运营 Cultural tourism Smart travel Destination Group Operations 中文优先的智慧文旅与目的地运营集团 IP。 smart tourism cultural travel destination green route gold group operation",
+    "url": "brand.html?brand=zhongzhiyou"
+  },
+  {
+    "type": "guide",
+    "slug": "zhongzhiyou",
+    "title": "README",
+    "subtitle": "中智游集团 · ZhongzhiyouGroup/README.md",
+    "text": "中智游集团 · Zhongzhiyou Group 中智游集团是中文优先的智慧文旅与目的地运营集团 IP。 Brand Role 主语言 ：中文 英文对照 ：Zhongzhiyou Group 赛道 ：智慧文旅 / 目的地运营 / 文化旅游 人群 ：文旅集团、目的地伙伴、旅游服务团队 业务 ：智慧文旅、目的地运营、旅游服务协作、文化路线与项目孵化 Voice 可信、清晰、有组织感。表达要优先使用中文，并把复杂的文旅业务拆成可执行的路线、服务、资源与协作关系。 Visual Direction 以目的地绿、路线金、湖蓝为基础，整体应有集团级可信度、文旅温度和智慧运营感。避免廉价旅行促销视觉和过度科技感。 Agent Notes 在生成中智游集团相关内容时，默认使用中文主名称。英文仅作为对照、URL、文件名或国际化字段使用。内容重点放在智慧文旅、目的地运营、文化路线、服务协作与项目孵化。",
+    "url": "brand.html?brand=zhongzhiyou"
   }
 ]

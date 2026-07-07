@@ -2,13 +2,13 @@
   "slug": "fengzhi",
   "folder": "FENGZHI",
   "name": "峰值永造局",
-  "nativeName": "The Transformation Company · 界格",
+  "nativeName": "Fengzhi Yongzaoju",
   "description": "AI-native transformation delivery brand system.",
   "officialWebsite": "",
   "mainLanguage": "zh",
   "intro": {
     "zh": "峰值永造局是 AI 原生的组织转型与交付系统品牌。",
-    "en": "The Transformation Company is an AI-native transformation and delivery brand system."
+    "en": "Fengzhi Yongzaoju is an AI-native transformation and delivery brand system."
   },
   "business": {
     "zh": "组织转型、战略交付、AI 原生运营。",
@@ -82,7 +82,7 @@
     "mainLocale": "CN",
     "intro": {
       "zh": "峰值永造局是 AI 原生的组织转型与交付系统品牌。",
-      "en": "The Transformation Company is an AI-native transformation and delivery brand system."
+      "en": "Fengzhi Yongzaoju is an AI-native transformation and delivery brand system."
     },
     "business": {
       "zh": "组织转型、战略交付、AI 原生运营。",
@@ -140,10 +140,10 @@
     },
     "zh": {
       "name": "峰值永造局",
-      "secondaryName": "The Transformation Company"
+      "secondaryName": "Fengzhi Yongzaoju"
     },
     "en": {
-      "name": "The Transformation Company",
+      "name": "Fengzhi Yongzaoju",
       "secondaryName": "峰值永造局"
     }
   },
@@ -152,14 +152,26 @@
     "en": ""
   },
   "version": {
-    "hash": "8f21723e87dc35342ed79de59a0648a1a363e833",
-    "shortHash": "8f21723",
-    "date": "2026-07-07T07:09:51+08:00",
-    "message": "Add universal IP system framework",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/8f21723e87dc35342ed79de59a0648a1a363e833"
+    "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
+    "shortHash": "5a93d2b",
+    "date": "2026-07-08T03:19:10+08:00",
+    "message": "Add Xinzhi Travel IP",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14"
   },
   "historyUrl": "api/history/fengzhi.json",
   "history": [
+    {
+      "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
+      "shortHash": "5a93d2b",
+      "date": "2026-07-08T03:19:10+08:00",
+      "message": "Add Xinzhi Travel IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
+      "sourcePaths": [
+        "config/brands.json",
+        "FENGZHI",
+        "FENGZHI/readme.md"
+      ]
+    },
     {
       "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
       "shortHash": "3e24857",
@@ -214,18 +226,6 @@
       "date": "2026-07-04T21:38:07+08:00",
       "message": "Add PaM Design Office IP",
       "url": "https://github.com/fengurt/tableai_designaha/commit/0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
-      "sourcePaths": [
-        "config/brands.json",
-        "FENGZHI",
-        "FENGZHI/readme.md"
-      ]
-    },
-    {
-      "hash": "534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
-      "shortHash": "534c825",
-      "date": "2026-07-04T16:34:09+08:00",
-      "message": "Correct APUCH language and IPTrust naming",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
       "sourcePaths": [
         "config/brands.json",
         "FENGZHI",

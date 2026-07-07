@@ -152,14 +152,25 @@
     "en": ""
   },
   "version": {
-    "hash": "8f21723e87dc35342ed79de59a0648a1a363e833",
-    "shortHash": "8f21723",
-    "date": "2026-07-07T07:09:51+08:00",
-    "message": "Add universal IP system framework",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/8f21723e87dc35342ed79de59a0648a1a363e833"
+    "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
+    "shortHash": "5a93d2b",
+    "date": "2026-07-08T03:19:10+08:00",
+    "message": "Add Xinzhi Travel IP",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14"
   },
   "historyUrl": "api/history/opcglobal.json",
   "history": [
+    {
+      "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
+      "shortHash": "5a93d2b",
+      "date": "2026-07-08T03:19:10+08:00",
+      "message": "Add Xinzhi Travel IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
+      "sourcePaths": [
+        "config/brands.json",
+        "OPCGLOBAL"
+      ]
+    },
     {
       "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
       "shortHash": "3e24857",
@@ -210,17 +221,6 @@
       "date": "2026-07-04T21:38:07+08:00",
       "message": "Add PaM Design Office IP",
       "url": "https://github.com/fengurt/tableai_designaha/commit/0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
-      "sourcePaths": [
-        "config/brands.json",
-        "OPCGLOBAL"
-      ]
-    },
-    {
-      "hash": "534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
-      "shortHash": "534c825",
-      "date": "2026-07-04T16:34:09+08:00",
-      "message": "Correct APUCH language and IPTrust naming",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
       "sourcePaths": [
         "config/brands.json",
         "OPCGLOBAL"
