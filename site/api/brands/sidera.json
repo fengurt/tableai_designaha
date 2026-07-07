@@ -1,18 +1,18 @@
 {
   "slug": "sidera",
   "folder": "Sidera",
-  "name": "侍天",
+  "name": "侍天 - 智慧餐饮",
   "nativeName": "Sidera",
-  "description": "面向饮食知识、料理内容与美食体验的中文优先 IP。",
+  "description": "侍天是面向智慧餐饮、饮食知识与餐饮品牌内容系统的中文优先 IP。",
   "officialWebsite": "",
   "mainLanguage": "zh",
   "intro": {
-    "zh": "侍天是面向饮食知识、料理内容与美食体验的中文优先 IP。",
-    "en": "Sidera is a Chinese-first IP for food knowledge, culinary content, and dining experience."
+    "zh": "侍天是面向智慧餐饮、饮食知识与餐饮品牌内容系统的中文优先 IP。",
+    "en": "Sidera is a Chinese-first IP for smart dining, food knowledge, and food brand content systems."
   },
   "business": {
-    "zh": "饮食知识、料理内容、美食体验与餐饮品牌内容系统。",
-    "en": "Food knowledge, culinary content, dining experience, and food brand content systems."
+    "zh": "智慧餐饮、饮食知识、料理内容、美食体验与餐饮品牌内容系统。",
+    "en": "Smart dining, food knowledge, culinary content, dining experience, and food brand content systems."
   },
   "notes": {
     "zh": "参考链接：https://frienji.kenjilopezalt.com/；https://www.seriouseats.com/",
@@ -40,14 +40,14 @@
   "classification": {
     "tracks": {
       "zh": [
+        "智慧餐饮",
         "饮食知识",
-        "料理内容",
-        "美食体验"
+        "料理内容"
       ],
       "en": [
+        "Smart dining",
         "Food knowledge",
-        "Culinary content",
-        "Dining experience"
+        "Culinary content"
       ]
     },
     "audiences": {
@@ -64,12 +64,14 @@
     },
     "tags": {
       "zh": [
+        "智慧餐饮",
         "料理",
         "饮食",
         "内容",
         "体验"
       ],
       "en": [
+        "Smart dining",
         "Culinary",
         "Food",
         "Content",
@@ -78,19 +80,19 @@
     }
   },
   "assetKey": "sidera",
-  "mainName": "侍天",
+  "mainName": "侍天 - 智慧餐饮",
   "mainLocale": "CN",
   "profile": {
     "officialWebsite": "",
     "mainLanguage": "zh",
     "mainLocale": "CN",
     "intro": {
-      "zh": "侍天是面向饮食知识、料理内容与美食体验的中文优先 IP。",
-      "en": "Sidera is a Chinese-first IP for food knowledge, culinary content, and dining experience."
+      "zh": "侍天是面向智慧餐饮、饮食知识与餐饮品牌内容系统的中文优先 IP。",
+      "en": "Sidera is a Chinese-first IP for smart dining, food knowledge, and food brand content systems."
     },
     "business": {
-      "zh": "饮食知识、料理内容、美食体验与餐饮品牌内容系统。",
-      "en": "Food knowledge, culinary content, dining experience, and food brand content systems."
+      "zh": "智慧餐饮、饮食知识、料理内容、美食体验与餐饮品牌内容系统。",
+      "en": "Smart dining, food knowledge, culinary content, dining experience, and food brand content systems."
     },
     "notes": {
       "zh": "参考链接：https://frienji.kenjilopezalt.com/；https://www.seriouseats.com/",
@@ -99,14 +101,14 @@
     "classification": {
       "tracks": {
         "zh": [
+          "智慧餐饮",
           "饮食知识",
-          "料理内容",
-          "美食体验"
+          "料理内容"
         ],
         "en": [
+          "Smart dining",
           "Food knowledge",
-          "Culinary content",
-          "Dining experience"
+          "Culinary content"
         ]
       },
       "audiences": {
@@ -123,12 +125,14 @@
       },
       "tags": {
         "zh": [
+          "智慧餐饮",
           "料理",
           "饮食",
           "内容",
           "体验"
         ],
         "en": [
+          "Smart dining",
           "Culinary",
           "Food",
           "Content",
@@ -140,23 +144,23 @@
   "display": {
     "default": {
       "language": "zh",
-      "name": "侍天"
+      "name": "侍天 - 智慧餐饮"
     },
     "zh": {
-      "name": "侍天",
+      "name": "侍天 - 智慧餐饮",
       "secondaryName": "Sidera"
     },
     "en": {
       "name": "Sidera",
-      "secondaryName": "侍天"
+      "secondaryName": "侍天 - 智慧餐饮"
     }
   },
   "version": {
-    "hash": "9e33619ad95856c977f8803517f325304d678821",
-    "shortHash": "9e33619",
-    "date": "2026-07-08T03:55:08+08:00",
-    "message": "Add Nibiru and Shenzhen Microsoft Global Center IPs",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/9e33619ad95856c977f8803517f325304d678821"
+    "hash": "a38ea80a8099966615f752f445f5520d7a515a9b",
+    "shortHash": "a38ea80",
+    "date": "2026-07-08T04:07:21+08:00",
+    "message": "Unify topbar and refine admin unlock UI",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a38ea80a8099966615f752f445f5520d7a515a9b"
   },
   "historyUrl": "api/history/sidera.json",
   "history": [

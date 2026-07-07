@@ -1,7 +1,7 @@
 {
   "slug": "iptrust",
-  "name": "IPTrustasset",
-  "mainLanguage": "en",
+  "name": "岁知社",
+  "mainLanguage": "zh",
   "apiUrl": "api/brands/iptrust.json",
   "source": {
     "github": "https://github.com/fengurt/tableai_designaha/tree/main/IPTRUST",

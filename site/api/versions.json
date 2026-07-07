@@ -1,5 +1,12 @@
 [
   {
+    "hash": "a38ea80a8099966615f752f445f5520d7a515a9b",
+    "shortHash": "a38ea80",
+    "date": "2026-07-08T04:07:21+08:00",
+    "message": "Unify topbar and refine admin unlock UI",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a38ea80a8099966615f752f445f5520d7a515a9b"
+  },
+  {
     "hash": "9e33619ad95856c977f8803517f325304d678821",
     "shortHash": "9e33619",
     "date": "2026-07-08T03:55:08+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-07-04T22:12:02+08:00",
     "message": "Make homepage toolbar fully icon based",
     "url": "https://github.com/fengurt/tableai_designaha/commit/df0202da7b5426135d2010d61f72e04189d1b276"
-  },
-  {
-    "hash": "0f2e2d97870af52bc066ed485e15cb42b064eae3",
-    "shortHash": "0f2e2d9",
-    "date": "2026-07-04T22:10:20+08:00",
-    "message": "Convert homepage nav to icon toolbar",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/0f2e2d97870af52bc066ed485e15cb42b064eae3"
   }
 ]

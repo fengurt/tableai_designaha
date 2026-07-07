@@ -534,18 +534,18 @@
   {
     "slug": "iptrust",
     "folder": "IPTRUST",
-    "name": "IPTrustasset",
-    "nativeName": "IPTRUST",
-    "description": "Trusted intellectual-property asset stewardship brand placeholder.",
+    "name": "岁知社",
+    "nativeName": "IPTrust",
+    "description": "岁知社 IPTrust 是面向 IP 资产可信管理、品牌源文件与 Agent 协作的中文优先 IP。",
     "officialWebsite": "",
-    "mainLanguage": "en",
+    "mainLanguage": "zh",
     "intro": {
-      "zh": "IPTrustasset 是面向知识产权资产可信管理与协作的 IP。",
-      "en": "IPTrustasset is an IP for trusted intellectual-property asset stewardship and collaboration."
+      "zh": "岁知社 IPTrust 是面向 IP 资产可信管理、品牌源文件与 Agent 协作的中文优先 IP。",
+      "en": "IPTrust is a Chinese-first IP for trusted IP asset stewardship, brand source files, and agent collaboration."
     },
     "business": {
-      "zh": "IP 资产管理、信任索引与品牌源文件治理。",
-      "en": "IP asset stewardship, trust indexing, and brand-source governance."
+      "zh": "IP 资产管理、信任索引、品牌源文件治理与 Agent 可读协作。",
+      "en": "IP asset stewardship, trust indexing, brand-source governance, and agent-readable collaboration."
     },
     "primaryGuide": "",
     "theme": {
@@ -762,18 +762,18 @@
   {
     "slug": "sidera",
     "folder": "Sidera",
-    "name": "侍天",
+    "name": "侍天 - 智慧餐饮",
     "nativeName": "Sidera",
-    "description": "面向饮食知识、料理内容与美食体验的中文优先 IP。",
+    "description": "侍天是面向智慧餐饮、饮食知识与餐饮品牌内容系统的中文优先 IP。",
     "officialWebsite": "",
     "mainLanguage": "zh",
     "intro": {
-      "zh": "侍天是面向饮食知识、料理内容与美食体验的中文优先 IP。",
-      "en": "Sidera is a Chinese-first IP for food knowledge, culinary content, and dining experience."
+      "zh": "侍天是面向智慧餐饮、饮食知识与餐饮品牌内容系统的中文优先 IP。",
+      "en": "Sidera is a Chinese-first IP for smart dining, food knowledge, and food brand content systems."
     },
     "business": {
-      "zh": "饮食知识、料理内容、美食体验与餐饮品牌内容系统。",
-      "en": "Food knowledge, culinary content, dining experience, and food brand content systems."
+      "zh": "智慧餐饮、饮食知识、料理内容、美食体验与餐饮品牌内容系统。",
+      "en": "Smart dining, food knowledge, culinary content, dining experience, and food brand content systems."
     },
     "notes": {
       "zh": "参考链接：https://frienji.kenjilopezalt.com/；https://www.seriouseats.com/",
@@ -801,14 +801,14 @@
     "classification": {
       "tracks": {
         "zh": [
+          "智慧餐饮",
           "饮食知识",
-          "料理内容",
-          "美食体验"
+          "料理内容"
         ],
         "en": [
+          "Smart dining",
           "Food knowledge",
-          "Culinary content",
-          "Dining experience"
+          "Culinary content"
         ]
       },
       "audiences": {
@@ -825,12 +825,14 @@
       },
       "tags": {
         "zh": [
+          "智慧餐饮",
           "料理",
           "饮食",
           "内容",
           "体验"
         ],
         "en": [
+          "Smart dining",
           "Culinary",
           "Food",
           "Content",

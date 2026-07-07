@@ -1219,7 +1219,7 @@ p { line-height: 1.65; }
 .hero-index::-webkit-scrollbar { display: none; }
 .hero-index-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto auto;
+  grid-template-columns: minmax(0, 1fr) max-content max-content;
   align-items: center;
   gap: 12px;
   border: 1px solid color-mix(in srgb, var(--brand-primary, var(--blue)) 16%, transparent);
@@ -1240,8 +1240,10 @@ p { line-height: 1.65; }
   transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
 }
 .hero-index-link {
+  display: block;
   color: inherit;
   min-width: 0;
+  overflow: hidden;
   text-decoration: none;
 }
 .hero-index-row:hover {
@@ -1252,12 +1254,23 @@ p { line-height: 1.65; }
   transform: translate3d(6px, -1px, 0);
 }
 .hero-index-title {
+  display: block;
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.hero-index-colors { display: flex; gap: 5px; }
+.hero-index-secondary {
+  color: color-mix(in srgb, currentColor 68%, var(--muted));
+  font-size: 12px;
+  font-weight: 690;
+}
+.hero-index-colors {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 5px;
+}
+.hero-index-row .icon-copy { flex: 0 0 auto; }
 .color-dot {
   width: 18px;
   height: 18px;
@@ -3530,7 +3543,7 @@ async function renderHeroIndex() {
     return \`
       <div class="hero-index-row" data-brand="\${escapeHtml(brand.slug)}" style="\${themeStyle(brand.theme)};--row-index:\${idx}">
         <a class="hero-index-link" href="\${brand.url}">
-          <span class="hero-index-title">\${escapeHtml(localized.name)}\${localized.secondaryName ? \` · \${escapeHtml(localized.secondaryName)}\` : ""}</span>
+          <span class="hero-index-title">\${escapeHtml(localized.name)}\${localized.secondaryName ? \` <span class="hero-index-secondary">· \${escapeHtml(localized.secondaryName)}</span>\` : ""}</span>
         </a>
         \${colorDots(brand.theme)}
         <button class="icon-copy" type="button" data-icon-only="true" data-copy-brand="\${escapeHtml(brand.slug)}" aria-label="\${escapeHtml(t("copy.reference"))} \${escapeHtml(localized.name)}">\${copyIcon()}</button>

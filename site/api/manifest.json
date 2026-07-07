@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-07T20:06:28.212Z",
+  "generatedAt": "2026-07-07T20:10:43.632Z",
   "version": {
-    "hash": "9e33619ad95856c977f8803517f325304d678821",
-    "shortHash": "9e33619",
-    "date": "2026-07-08T03:55:08+08:00",
-    "message": "Add Nibiru and Shenzhen Microsoft Global Center IPs",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/9e33619ad95856c977f8803517f325304d678821"
+    "hash": "a38ea80a8099966615f752f445f5520d7a515a9b",
+    "shortHash": "a38ea80",
+    "date": "2026-07-08T04:07:21+08:00",
+    "message": "Unify topbar and refine admin unlock UI",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a38ea80a8099966615f752f445f5520d7a515a9b"
   },
   "brands": [
     {
@@ -85,9 +85,9 @@
     },
     {
       "slug": "iptrust",
-      "name": "IPTrustasset",
-      "mainLanguage": "en",
-      "mainLocale": "EN",
+      "name": "岁知社",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
       "apiUrl": "api/brands/iptrust.json",
       "historyUrl": "api/history/iptrust.json",
       "guideUrl": "brand.html?brand=iptrust"
@@ -112,7 +112,7 @@
     },
     {
       "slug": "sidera",
-      "name": "侍天",
+      "name": "侍天 - 智慧餐饮",
       "mainLanguage": "zh",
       "mainLocale": "CN",
       "apiUrl": "api/brands/sidera.json",
@@ -269,11 +269,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "9e33619ad95856c977f8803517f325304d678821",
-      "shortHash": "9e33619",
-      "date": "2026-07-08T03:55:08+08:00",
-      "message": "Add Nibiru and Shenzhen Microsoft Global Center IPs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/9e33619ad95856c977f8803517f325304d678821"
+      "hash": "a38ea80a8099966615f752f445f5520d7a515a9b",
+      "shortHash": "a38ea80",
+      "date": "2026-07-08T04:07:21+08:00",
+      "message": "Unify topbar and refine admin unlock UI",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a38ea80a8099966615f752f445f5520d7a515a9b"
     }
   },
   "sync": {

@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "9e33619-026edc4d";
+const BUILD_VERSION = "a38ea80-554acaca";
 
 const i18n = {
   cn: {
@@ -1400,7 +1400,7 @@ async function renderHeroIndex() {
     return `
       <div class="hero-index-row" data-brand="${escapeHtml(brand.slug)}" style="${themeStyle(brand.theme)};--row-index:${idx}">
         <a class="hero-index-link" href="${brand.url}">
-          <span class="hero-index-title">${escapeHtml(localized.name)}${localized.secondaryName ? ` · ${escapeHtml(localized.secondaryName)}` : ""}</span>
+          <span class="hero-index-title">${escapeHtml(localized.name)}${localized.secondaryName ? ` <span class="hero-index-secondary">· ${escapeHtml(localized.secondaryName)}</span>` : ""}</span>
         </a>
         ${colorDots(brand.theme)}
         <button class="icon-copy" type="button" data-icon-only="true" data-copy-brand="${escapeHtml(brand.slug)}" aria-label="${escapeHtml(t("copy.reference"))} ${escapeHtml(localized.name)}">${copyIcon()}</button>

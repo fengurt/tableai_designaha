@@ -152,11 +152,11 @@
     "en": ""
   },
   "version": {
-    "hash": "9e33619ad95856c977f8803517f325304d678821",
-    "shortHash": "9e33619",
-    "date": "2026-07-08T03:55:08+08:00",
-    "message": "Add Nibiru and Shenzhen Microsoft Global Center IPs",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/9e33619ad95856c977f8803517f325304d678821"
+    "hash": "a38ea80a8099966615f752f445f5520d7a515a9b",
+    "shortHash": "a38ea80",
+    "date": "2026-07-08T04:07:21+08:00",
+    "message": "Unify topbar and refine admin unlock UI",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a38ea80a8099966615f752f445f5520d7a515a9b"
   },
   "historyUrl": "api/history/opcglobal.json",
   "history": [

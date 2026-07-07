@@ -23,10 +23,10 @@ Brands:
 - 亚太艺术疗愈联盟 (apha): /api/brands/apha.json · mainLocale CN · palette #557F8F / #8FAF83
 - 无魔协会 (manaendless): /api/brands/manaendless.json · mainLocale CN · palette #7BC8C4 / #B7A7D8
 - OPC Global (opcglobal): /api/brands/opcglobal.json · mainLocale EN · palette #1D3557 / #B79B63
-- IPTrustasset (iptrust): /api/brands/iptrust.json · mainLocale EN · palette #10263D / #B99B5B
+- 岁知社 (iptrust): /api/brands/iptrust.json · mainLocale CN · palette #10263D / #B99B5B
 - 峰值永造局 (fengzhi): /api/brands/fengzhi.json · mainLocale CN · palette #1A1714 / #A47B36
 - Axisee (axisee): /api/brands/axisee.json · mainLocale EN · palette #1A2B4A / #B12137
-- 侍天 (sidera): /api/brands/sidera.json · mainLocale CN · palette #B58B4C / #D4A862
+- 侍天 - 智慧餐饮 (sidera): /api/brands/sidera.json · mainLocale CN · palette #B58B4C / #D4A862
 - 1stepmore (1stepmore): /api/brands/1stepmore.json · mainLocale EN · palette #123047 / #C89B3C
 - 游赋社 (agem): /api/brands/agem.json · mainLocale CN · palette #155E75 / #D9823B
 - 燃古豋 (rgd): /api/brands/rgd.json · mainLocale CN · palette #E06B3A / #C8A15A
