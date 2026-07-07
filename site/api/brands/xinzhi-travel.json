@@ -1,0 +1,351 @@
+{
+  "slug": "xinzhi-travel",
+  "folder": "XinzhiTravel",
+  "name": "信致旅游",
+  "nativeName": "Xinzhi Travel",
+  "description": "Destination travel and cultural journey IP for thoughtful routes, local hospitality, and trusted travel experiences.",
+  "officialWebsite": "",
+  "mainLanguage": "zh",
+  "intro": {
+    "zh": "信致旅游是面向目的地体验、文化路线与可信服务的旅游 IP。",
+    "en": "Xinzhi Travel is a travel IP for destination experiences, cultural routes, and trusted hospitality services."
+  },
+  "business": {
+    "zh": "目的地旅游、文化路线、定制旅行、在地体验与旅游服务协作。",
+    "en": "Destination travel, cultural routes, bespoke journeys, local experiences, and travel-service collaboration."
+  },
+  "notes": {
+    "zh": "",
+    "en": ""
+  },
+  "classification": {
+    "tracks": {
+      "zh": [
+        "目的地旅游",
+        "文化路线",
+        "在地体验"
+      ],
+      "en": [
+        "Destination travel",
+        "Cultural routes",
+        "Local experiences"
+      ]
+    },
+    "audiences": {
+      "zh": [
+        "旅行者",
+        "目的地伙伴",
+        "文旅运营方"
+      ],
+      "en": [
+        "Travelers",
+        "Destination partners",
+        "Cultural tourism operators"
+      ]
+    },
+    "tags": {
+      "zh": [
+        "旅游",
+        "文旅",
+        "路线",
+        "体验",
+        "在地"
+      ],
+      "en": [
+        "Travel",
+        "Cultural tourism",
+        "Routes",
+        "Experience",
+        "Locality"
+      ]
+    }
+  },
+  "primaryGuide": "XinzhiTravel/README.md",
+  "theme": {
+    "mode": "light",
+    "primary": "#245C4B",
+    "accent": "#D3A84F",
+    "secondary": "#6E8FA3",
+    "surface": "#F5F7F2",
+    "paper": "#FFFDF8",
+    "ink": "#15211D",
+    "muted": "#63706A",
+    "line": "rgba(36, 92, 75, 0.16)",
+    "keywords": [
+      "destination green",
+      "route gold",
+      "mist blue",
+      "travel",
+      "local experience"
+    ]
+  },
+  "assetKey": "xinzhi-travel",
+  "mainName": "信致旅游",
+  "mainLocale": "CN",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "mainLocale": "CN",
+    "intro": {
+      "zh": "信致旅游是面向目的地体验、文化路线与可信服务的旅游 IP。",
+      "en": "Xinzhi Travel is a travel IP for destination experiences, cultural routes, and trusted hospitality services."
+    },
+    "business": {
+      "zh": "目的地旅游、文化路线、定制旅行、在地体验与旅游服务协作。",
+      "en": "Destination travel, cultural routes, bespoke journeys, local experiences, and travel-service collaboration."
+    },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "目的地旅游",
+          "文化路线",
+          "在地体验"
+        ],
+        "en": [
+          "Destination travel",
+          "Cultural routes",
+          "Local experiences"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "旅行者",
+          "目的地伙伴",
+          "文旅运营方"
+        ],
+        "en": [
+          "Travelers",
+          "Destination partners",
+          "Cultural tourism operators"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "旅游",
+          "文旅",
+          "路线",
+          "体验",
+          "在地"
+        ],
+        "en": [
+          "Travel",
+          "Cultural tourism",
+          "Routes",
+          "Experience",
+          "Locality"
+        ]
+      }
+    }
+  },
+  "display": {
+    "default": {
+      "language": "zh",
+      "name": "信致旅游"
+    },
+    "zh": {
+      "name": "信致旅游",
+      "secondaryName": "Xinzhi Travel"
+    },
+    "en": {
+      "name": "Xinzhi Travel",
+      "secondaryName": "信致旅游"
+    }
+  },
+  "version": {
+    "hash": "8f21723e87dc35342ed79de59a0648a1a363e833",
+    "shortHash": "8f21723",
+    "date": "2026-07-07T07:09:51+08:00",
+    "message": "Add universal IP system framework",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/8f21723e87dc35342ed79de59a0648a1a363e833"
+  },
+  "historyUrl": "api/history/xinzhi-travel.json",
+  "history": [
+    {
+      "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
+      "shortHash": "3e24857",
+      "date": "2026-07-06T12:50:10+08:00",
+      "message": "Add IP classifications and iNucleus",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a",
+      "sourcePaths": [
+        "config/brands.json",
+        "XinzhiTravel",
+        "XinzhiTravel/README.md"
+      ]
+    },
+    {
+      "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+      "shortHash": "b0269d2",
+      "date": "2026-07-06T06:21:22+08:00",
+      "message": "Add ksamint IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+      "sourcePaths": [
+        "config/brands.json",
+        "XinzhiTravel",
+        "XinzhiTravel/README.md"
+      ]
+    },
+    {
+      "hash": "067a47c76f1cb812b607335089911c282f4d8f78",
+      "shortHash": "067a47c",
+      "date": "2026-07-05T10:24:24+08:00",
+      "message": "Add Sanctem IP and brand logos",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/067a47c76f1cb812b607335089911c282f4d8f78",
+      "sourcePaths": [
+        "config/brands.json",
+        "XinzhiTravel",
+        "XinzhiTravel/README.md"
+      ]
+    },
+    {
+      "hash": "a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
+      "shortHash": "a0e6ecd",
+      "date": "2026-07-04T22:02:17+08:00",
+      "message": "Add Sidera reference notes",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
+      "sourcePaths": [
+        "config/brands.json",
+        "XinzhiTravel",
+        "XinzhiTravel/README.md"
+      ]
+    },
+    {
+      "hash": "0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
+      "shortHash": "0e3d71b",
+      "date": "2026-07-04T21:38:07+08:00",
+      "message": "Add PaM Design Office IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
+      "sourcePaths": [
+        "config/brands.json",
+        "XinzhiTravel",
+        "XinzhiTravel/README.md"
+      ]
+    },
+    {
+      "hash": "534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
+      "shortHash": "534c825",
+      "date": "2026-07-04T16:34:09+08:00",
+      "message": "Correct APUCH language and IPTrust naming",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
+      "sourcePaths": [
+        "config/brands.json",
+        "XinzhiTravel",
+        "XinzhiTravel/README.md"
+      ]
+    }
+  ],
+  "url": "brand.html?brand=xinzhi-travel",
+  "apiUrl": "api/brands/xinzhi-travel.json",
+  "status": "documented",
+  "guides": [
+    {
+      "path": "XinzhiTravel/README.md",
+      "title": "README",
+      "format": "md",
+      "primary": true,
+      "excerpt": "信致旅游 · Xinzhi Travel 信致旅游是面向目的地体验、文化路线与可信服务的旅游 IP。 Brand Role 主语言 ：中文 英文对照 ：Xinzhi Travel 赛道 ：目的地旅游 / 文化路线 / 在地体验 人群 ：旅行者、目的地伙伴、文旅运营方 业务 ：目的地旅游、文化路线、定制旅行、在地体验与旅游服务协作 Voice 真诚、清晰、有抵达感。语言要像一条可靠路线：不过度煽情，也不把旅行降格为消费清单。 Visual Direction 目的地绿、路线金、雾蓝为基础。整体应有可信服务感和轻微的文化温度，避免廉价旅行社式高饱和促销视觉。 Agent Notes 在生成信致旅游相关内容时，优先表达“可信、在地、路线、体验、文化理解”。面向用户时减少抽象口号，多给具体路线、场景、服务承诺与目的地细节。",
+      "text": "# 信致旅游 · Xinzhi Travel\n\n信致旅游是面向目的地体验、文化路线与可信服务的旅游 IP。\n\n## Brand Role\n\n- **主语言**：中文\n- **英文对照**：Xinzhi Travel\n- **赛道**：目的地旅游 / 文化路线 / 在地体验\n- **人群**：旅行者、目的地伙伴、文旅运营方\n- **业务**：目的地旅游、文化路线、定制旅行、在地体验与旅游服务协作\n\n## Voice\n\n真诚、清晰、有抵达感。语言要像一条可靠路线：不过度煽情，也不把旅行降格为消费清单。\n\n## Visual Direction\n\n目的地绿、路线金、雾蓝为基础。整体应有可信服务感和轻微的文化温度，避免廉价旅行社式高饱和促销视觉。\n\n## Agent Notes\n\n在生成信致旅游相关内容时，优先表达“可信、在地、路线、体验、文化理解”。面向用户时减少抽象口号，多给具体路线、场景、服务承诺与目的地细节。\n"
+    }
+  ],
+  "tokens": [],
+  "images": [],
+  "assetKit": {
+    "assetKey": "xinzhi-travel",
+    "endpoints": {
+      "brand": "api/brands/xinzhi-travel.json",
+      "images": "api/brands/xinzhi-travel.json#images",
+      "tokens": "api/brands/xinzhi-travel.json#tokens",
+      "history": "api/history/xinzhi-travel.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#245C4B"
+        },
+        {
+          "key": "accent",
+          "value": "#D3A84F"
+        },
+        {
+          "key": "secondary",
+          "value": "#6E8FA3"
+        },
+        {
+          "key": "surface",
+          "value": "#F5F7F2"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFDF8"
+        },
+        {
+          "key": "ink",
+          "value": "#15211D"
+        },
+        {
+          "key": "muted",
+          "value": "#63706A"
+        }
+      ],
+      "keywords": [
+        "destination green",
+        "route gold",
+        "mist blue",
+        "travel",
+        "local experience"
+      ],
+      "images": []
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#245C4B"
+      },
+      {
+        "key": "accent",
+        "value": "#D3A84F"
+      },
+      {
+        "key": "secondary",
+        "value": "#6E8FA3"
+      },
+      {
+        "key": "surface",
+        "value": "#F5F7F2"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFDF8"
+      },
+      {
+        "key": "ink",
+        "value": "#15211D"
+      },
+      {
+        "key": "muted",
+        "value": "#63706A"
+      }
+    ],
+    "keywords": [
+      "destination green",
+      "route gold",
+      "mist blue",
+      "travel",
+      "local experience"
+    ],
+    "images": []
+  },
+  "editablePaths": [
+    "XinzhiTravel/README.md"
+  ],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/XinzhiTravel",
+    "folder": "XinzhiTravel"
+  }
+}

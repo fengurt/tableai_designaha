@@ -152,11 +152,11 @@
     "en": ""
   },
   "version": {
-    "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
-    "shortHash": "3e24857",
-    "date": "2026-07-06T12:50:10+08:00",
-    "message": "Add IP classifications and iNucleus",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a"
+    "hash": "8f21723e87dc35342ed79de59a0648a1a363e833",
+    "shortHash": "8f21723",
+    "date": "2026-07-07T07:09:51+08:00",
+    "message": "Add universal IP system framework",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/8f21723e87dc35342ed79de59a0648a1a363e833"
   },
   "historyUrl": "api/history/iptrust.json",
   "history": [

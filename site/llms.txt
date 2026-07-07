@@ -36,6 +36,7 @@ Brands:
 - 帕姆建筑 (pam): /api/brands/pam.json · mainLocale CN · palette #1F1D1A / #9A6B4A
 - ksamint (ksamint): /api/brands/ksamint.json · mainLocale EN · palette #0F4B42 / #7EDBC6
 - iNucleus (inucleus): /api/brands/inucleus.json · mainLocale EN · palette #111827 / #7DD3FC
+- 信致旅游 (xinzhi-travel): /api/brands/xinzhi-travel.json · mainLocale CN · palette #245C4B / #D3A84F
 
 Admin workflow:
 - /admin.html unlocks with the generated admin key.

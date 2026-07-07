@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-06T23:08:17.699Z",
+  "generatedAt": "2026-07-07T19:17:08.956Z",
   "version": {
-    "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
-    "shortHash": "3e24857",
-    "date": "2026-07-06T12:50:10+08:00",
-    "message": "Add IP classifications and iNucleus",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a"
+    "hash": "8f21723e87dc35342ed79de59a0648a1a363e833",
+    "shortHash": "8f21723",
+    "date": "2026-07-07T07:09:51+08:00",
+    "message": "Add universal IP system framework",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/8f21723e87dc35342ed79de59a0648a1a363e833"
   },
   "brands": [
     {
@@ -199,6 +199,15 @@
       "apiUrl": "api/brands/inucleus.json",
       "historyUrl": "api/history/inucleus.json",
       "guideUrl": "brand.html?brand=inucleus"
+    },
+    {
+      "slug": "xinzhi-travel",
+      "name": "信致旅游",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "apiUrl": "api/brands/xinzhi-travel.json",
+      "historyUrl": "api/history/xinzhi-travel.json",
+      "guideUrl": "brand.html?brand=xinzhi-travel"
     }
   ],
   "mcp": {
@@ -233,11 +242,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
-      "shortHash": "3e24857",
-      "date": "2026-07-06T12:50:10+08:00",
-      "message": "Add IP classifications and iNucleus",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a"
+      "hash": "8f21723e87dc35342ed79de59a0648a1a363e833",
+      "shortHash": "8f21723",
+      "date": "2026-07-07T07:09:51+08:00",
+      "message": "Add universal IP system framework",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/8f21723e87dc35342ed79de59a0648a1a363e833"
     }
   },
   "sync": {

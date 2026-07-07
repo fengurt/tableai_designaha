@@ -1520,5 +1520,87 @@
         "electric blue"
       ]
     }
+  },
+  {
+    "slug": "xinzhi-travel",
+    "folder": "XinzhiTravel",
+    "name": "信致旅游",
+    "nativeName": "Xinzhi Travel",
+    "description": "Destination travel and cultural journey IP for thoughtful routes, local hospitality, and trusted travel experiences.",
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "信致旅游是面向目的地体验、文化路线与可信服务的旅游 IP。",
+      "en": "Xinzhi Travel is a travel IP for destination experiences, cultural routes, and trusted hospitality services."
+    },
+    "business": {
+      "zh": "目的地旅游、文化路线、定制旅行、在地体验与旅游服务协作。",
+      "en": "Destination travel, cultural routes, bespoke journeys, local experiences, and travel-service collaboration."
+    },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "目的地旅游",
+          "文化路线",
+          "在地体验"
+        ],
+        "en": [
+          "Destination travel",
+          "Cultural routes",
+          "Local experiences"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "旅行者",
+          "目的地伙伴",
+          "文旅运营方"
+        ],
+        "en": [
+          "Travelers",
+          "Destination partners",
+          "Cultural tourism operators"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "旅游",
+          "文旅",
+          "路线",
+          "体验",
+          "在地"
+        ],
+        "en": [
+          "Travel",
+          "Cultural tourism",
+          "Routes",
+          "Experience",
+          "Locality"
+        ]
+      }
+    },
+    "primaryGuide": "XinzhiTravel/README.md",
+    "theme": {
+      "mode": "light",
+      "primary": "#245C4B",
+      "accent": "#D3A84F",
+      "secondary": "#6E8FA3",
+      "surface": "#F5F7F2",
+      "paper": "#FFFDF8",
+      "ink": "#15211D",
+      "muted": "#63706A",
+      "line": "rgba(36, 92, 75, 0.16)",
+      "keywords": [
+        "destination green",
+        "route gold",
+        "mist blue",
+        "travel",
+        "local experience"
+      ]
+    }
   }
 ]
