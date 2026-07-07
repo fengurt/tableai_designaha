@@ -13,11 +13,11 @@
     "Sidera/sidera_design.md"
   ],
   "latest": {
-    "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
-    "shortHash": "5a93d2b",
-    "date": "2026-07-08T03:19:10+08:00",
-    "message": "Add Xinzhi Travel IP",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
+    "hash": "4efc463d2f51813f4aae7c47083471b15ca8d1bf",
+    "shortHash": "4efc463",
+    "date": "2026-07-08T03:23:22+08:00",
+    "message": "Add Zhongzhiyou Group IP",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4efc463d2f51813f4aae7c47083471b15ca8d1bf",
     "sourcePaths": [
       "config/brands.json",
       "Sidera",
@@ -25,6 +25,18 @@
     ]
   },
   "versions": [
+    {
+      "hash": "4efc463d2f51813f4aae7c47083471b15ca8d1bf",
+      "shortHash": "4efc463",
+      "date": "2026-07-08T03:23:22+08:00",
+      "message": "Add Zhongzhiyou Group IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4efc463d2f51813f4aae7c47083471b15ca8d1bf",
+      "sourcePaths": [
+        "config/brands.json",
+        "Sidera",
+        "Sidera/sidera_design.md"
+      ]
+    },
     {
       "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
       "shortHash": "5a93d2b",

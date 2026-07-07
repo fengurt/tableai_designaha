@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-07T19:22:51.882Z",
+  "generatedAt": "2026-07-07T19:27:36.833Z",
   "version": {
-    "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
-    "shortHash": "5a93d2b",
-    "date": "2026-07-08T03:19:10+08:00",
-    "message": "Add Xinzhi Travel IP",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14"
+    "hash": "4efc463d2f51813f4aae7c47083471b15ca8d1bf",
+    "shortHash": "4efc463",
+    "date": "2026-07-08T03:23:22+08:00",
+    "message": "Add Zhongzhiyou Group IP",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4efc463d2f51813f4aae7c47083471b15ca8d1bf"
   },
   "brands": [
     {
@@ -76,9 +76,9 @@
     },
     {
       "slug": "opcglobal",
-      "name": "欧匹赛全球联盟",
-      "mainLanguage": "zh",
-      "mainLocale": "CN",
+      "name": "OPC Global",
+      "mainLanguage": "en",
+      "mainLocale": "EN",
       "apiUrl": "api/brands/opcglobal.json",
       "historyUrl": "api/history/opcglobal.json",
       "guideUrl": "brand.html?brand=opcglobal"
@@ -251,11 +251,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
-      "shortHash": "5a93d2b",
-      "date": "2026-07-08T03:19:10+08:00",
-      "message": "Add Xinzhi Travel IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14"
+      "hash": "4efc463d2f51813f4aae7c47083471b15ca8d1bf",
+      "shortHash": "4efc463",
+      "date": "2026-07-08T03:23:22+08:00",
+      "message": "Add Zhongzhiyou Group IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4efc463d2f51813f4aae7c47083471b15ca8d1bf"
     }
   },
   "sync": {

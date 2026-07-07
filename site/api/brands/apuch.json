@@ -152,14 +152,26 @@
     "en": ""
   },
   "version": {
-    "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
-    "shortHash": "5a93d2b",
-    "date": "2026-07-08T03:19:10+08:00",
-    "message": "Add Xinzhi Travel IP",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14"
+    "hash": "4efc463d2f51813f4aae7c47083471b15ca8d1bf",
+    "shortHash": "4efc463",
+    "date": "2026-07-08T03:23:22+08:00",
+    "message": "Add Zhongzhiyou Group IP",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4efc463d2f51813f4aae7c47083471b15ca8d1bf"
   },
   "historyUrl": "api/history/apuch.json",
   "history": [
+    {
+      "hash": "4efc463d2f51813f4aae7c47083471b15ca8d1bf",
+      "shortHash": "4efc463",
+      "date": "2026-07-08T03:23:22+08:00",
+      "message": "Add Zhongzhiyou Group IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4efc463d2f51813f4aae7c47083471b15ca8d1bf",
+      "sourcePaths": [
+        "config/brands.json",
+        "APUCH",
+        "APUCH/README.md"
+      ]
+    },
     {
       "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
       "shortHash": "5a93d2b",
@@ -214,18 +226,6 @@
       "date": "2026-07-04T22:02:17+08:00",
       "message": "Add Sidera reference notes",
       "url": "https://github.com/fengurt/tableai_designaha/commit/a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
-      "sourcePaths": [
-        "config/brands.json",
-        "APUCH",
-        "APUCH/README.md"
-      ]
-    },
-    {
-      "hash": "0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
-      "shortHash": "0e3d71b",
-      "date": "2026-07-04T21:38:07+08:00",
-      "message": "Add PaM Design Office IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
       "sourcePaths": [
         "config/brands.json",
         "APUCH",

@@ -22,7 +22,7 @@ Brands:
 - KiND (kind): /api/brands/kind.json · mainLocale EN · palette #0E8C7B / #E8765A
 - 亚太艺术疗愈联盟 (apha): /api/brands/apha.json · mainLocale CN · palette #557F8F / #8FAF83
 - 无魔协会 (manaendless): /api/brands/manaendless.json · mainLocale CN · palette #7BC8C4 / #B7A7D8
-- 欧匹赛全球联盟 (opcglobal): /api/brands/opcglobal.json · mainLocale CN · palette #1D3557 / #B79B63
+- OPC Global (opcglobal): /api/brands/opcglobal.json · mainLocale EN · palette #1D3557 / #B79B63
 - IPTrustasset (iptrust): /api/brands/iptrust.json · mainLocale EN · palette #10263D / #B99B5B
 - 峰值永造局 (fengzhi): /api/brands/fengzhi.json · mainLocale CN · palette #1A1714 / #A47B36
 - Axisee (axisee): /api/brands/axisee.json · mainLocale EN · palette #1A2B4A / #B12137
