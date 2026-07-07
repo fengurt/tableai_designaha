@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "4c1ae93-0e6187bc";
+const BUILD_VERSION = "9e33619-026edc4d";
 
 const i18n = {
   cn: {
@@ -112,8 +112,8 @@ const i18n = {
     "history.title": "历史版本",
     "history.empty": "暂无版本记录",
     "search.global": "全局搜索",
-    "admin.unlockTitle": "先输入 Key",
-    "admin.unlockBody": "解锁，再编辑。",
+    "admin.unlockTitle": "AI 原生管理",
+    "admin.unlockBody": "通过 AI 原生的方式，一站式管理你的品牌和 IP。",
     "admin.keyLabel": "Key",
     "admin.totpLabel": "Google Authenticator",
     "admin.scopeLabel": "IP 权限范围",
@@ -240,8 +240,8 @@ const i18n = {
     "history.title": "Version history",
     "history.empty": "No version records yet",
     "search.global": "Global search",
-    "admin.unlockTitle": "Key first",
-    "admin.unlockBody": "Unlock. Then edit.",
+    "admin.unlockTitle": "AI-native management",
+    "admin.unlockBody": "Manage your brands and IPs in one AI-native workspace.",
     "admin.keyLabel": "Key",
     "admin.totpLabel": "Google Authenticator",
     "admin.scopeLabel": "IP scope",

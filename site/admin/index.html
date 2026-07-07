@@ -6,22 +6,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin · 岁知社 IPTrust</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site-4c1ae93-0e6187bc.css">
+  <link rel="stylesheet" href="assets/site-9e33619-026edc4d.css">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="./" data-i18n="hub.name">岁知社</a>
-    <nav>
-      <a href="api/manifest.json" data-i18n="nav.manifest">Manifest</a>
-      <a href="https://github.com/fengurt/tableai_designaha">GitHub</a>
+    <div class="topbar-search" role="search">
+      <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
+      <div class="global-results" id="globalResults" aria-live="polite"></div>
+    </div>
+    <nav class="top-actions" aria-label="Primary actions">
+      <button class="api-link" type="button" id="apiConnectButton" aria-label="API connect"><span class="api-dot"></span>API</button>
+      <a href="./#agent-entry" data-i18n="portal.agentNav">Agent</a>
+      <a href="./#partner-entry" data-i18n="portal.partnerNav">Partner</a>
+      <a href="./#collab-entry" data-i18n="portal.collabNav">Collab</a>
       <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language"><span class="is-active">CN</span><span class="lang-divider">/</span><span>EN</span></button>
     </nav>
   </header>
+  <section class="api-connect-panel hidden" id="apiConnectPanel" aria-live="polite">
+    <div class="api-connect-head">
+      <div>
+        <p class="eyebrow">API</p>
+        <h2 data-i18n="api.title">连接 System API</h2>
+      </div>
+      <button class="icon-copy" type="button" id="apiConnectClose" data-icon-only="true" aria-label="Close">×</button>
+    </div>
+    <div class="api-connect-form" id="apiConnectForm">
+      <label><span data-i18n="api.key">System API Key</span><input id="apiAdminKey" type="password" autocomplete="current-password"></label>
+      <button class="portal-action" type="button" id="apiConnectSubmit" data-i18n="api.connect">Connect</button>
+    </div>
+    <p class="portal-status" id="apiConnectStatus"></p>
+    <div class="api-ops hidden" id="apiConnectedOps">
+      <strong class="connected-pill" data-i18n="api.connected">Connected</strong>
+      <p class="muted" id="apiScopeText"></p>
+      <div class="portal-links">
+        <a href="admin.html" data-i18n="api.openAdmin">Admin</a>
+        <a href="api/manifest.json">Manifest</a>
+        <a href="api/brands.json">Brands</a>
+        <a href="api/search.json">Search</a>
+        <a href="api/media/">Media</a>
+        <button class="api-copy" type="button" id="apiResourcesButton" data-i18n="api.resources">Resources</button>
+        <button class="api-copy" type="button" data-api-copy="manifest" data-i18n="api.copyCurl">Copy cURL</button>
+      </div>
+      <pre class="api-resource-summary hidden" id="apiResourceSummary"></pre>
+    </div>
+  </section>
   <main class="admin">
     <section class="panel" id="unlockPanel">
       <p class="eyebrow" data-i18n="nav.admin">管理</p>
-      <h1 data-i18n="admin.unlockTitle">先输入 Key</h1>
-      <p class="muted" data-i18n="admin.unlockBody">使用 API Key + Google Authenticator 登录；可按单个或多个 IP 授权。</p>
+      <h1 data-i18n="admin.unlockTitle">AI 原生管理</h1>
+      <p class="muted admin-lead" data-i18n="admin.unlockBody">通过 AI 原生的方式，一站式管理你的品牌和 IP。</p>
       <label><span data-i18n="admin.keyLabel">Key</span><input id="adminKey" type="password" autocomplete="current-password"></label>
       <label><span data-i18n="admin.totpLabel">Google Authenticator</span><input id="totpCode" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" maxlength="8" placeholder="000000"></label>
       <label><span data-i18n="admin.scopeLabel">IP 权限范围</span><select id="adminScopes" multiple size="4"></select></label>
@@ -46,7 +80,7 @@
       <p class="notice" id="editorStatus"></p>
     </section>
   </main>
-  <script src="assets/site-4c1ae93-0e6187bc.js" type="module"></script>
+  <script src="assets/site-9e33619-026edc4d.js" type="module"></script>
   <script src="assets/admin.js" type="module"></script>
 </body>
 </html>

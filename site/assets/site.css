@@ -1082,6 +1082,45 @@ pre {
   overflow: auto;
 }
 .admin { max-width: 980px; padding: 42px 0 90px; }
+.admin #unlockPanel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 16px;
+  max-width: 760px;
+  margin: clamp(24px, 7vw, 72px) auto 18px;
+  padding: clamp(22px, 4vw, 38px);
+}
+.admin #unlockPanel .eyebrow,
+.admin #unlockPanel h1,
+.admin #unlockPanel .admin-lead,
+.admin #unlockPanel label:nth-of-type(3),
+.admin #unlockPanel button,
+.admin #unlockPanel .notice {
+  grid-column: 1 / -1;
+}
+.admin #unlockPanel h1 {
+  font-size: clamp(36px, 5vw, 54px);
+  margin: 4px 0 8px;
+  line-height: 1;
+  max-width: 680px;
+}
+.admin-lead {
+  font-size: clamp(16px, 1.7vw, 18px);
+  line-height: 1.5;
+  max-width: 520px;
+  margin: 0 0 14px;
+}
+.admin #unlockPanel label {
+  max-width: none;
+  margin: 8px 0;
+}
+.admin #unlockPanel select {
+  min-height: 78px;
+}
+.admin #unlockPanel button {
+  justify-self: start;
+  margin-top: 2px;
+}
 .panel { padding: 24px; margin-bottom: 18px; }
 .hidden { display: none; }
 label { display: grid; gap: 8px; font-size: 14px; font-weight: 700; margin: 12px 0; }
@@ -1101,6 +1140,7 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .topbar { align-items: flex-start; flex-direction: column; }
   .topbar-search { flex: 1 1 auto; width: 100%; max-width: none; order: 3; }
   nav { width: 100%; justify-content: space-between; gap: 10px; }
+  .admin #unlockPanel { grid-template-columns: 1fr; }
   .hub-hero, .brand-hero, .form-grid { grid-template-columns: 1fr; }
   .resource-grid { grid-template-columns: 1fr; }
   .endpoint-grid, .mood-grid { grid-template-columns: 1fr; }

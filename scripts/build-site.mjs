@@ -735,9 +735,9 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
     </div>
     <nav class="top-actions" aria-label="Primary actions">
       <button class="api-link" type="button" id="apiConnectButton" aria-label="API connect"><span class="api-dot"></span>API</button>
-      <a href="#agent-entry" data-i18n="portal.agentNav">Agent</a>
-      <a href="#partner-entry" data-i18n="portal.partnerNav">Partner</a>
-      <a href="#collab-entry" data-i18n="portal.collabNav">Collab</a>
+      <a href="./#agent-entry" data-i18n="portal.agentNav">Agent</a>
+      <a href="./#partner-entry" data-i18n="portal.partnerNav">Partner</a>
+      <a href="./#collab-entry" data-i18n="portal.collabNav">Collab</a>
       <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language"><span class="is-active">CN</span><span class="lang-divider">/</span><span>EN</span></button>
     </nav>
   </header>
@@ -828,9 +828,11 @@ await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
       <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
       <div class="global-results" id="globalResults" aria-live="polite"></div>
     </div>
-    <nav>
+    <nav class="top-actions" aria-label="Primary actions">
       <button class="api-link" type="button" id="apiConnectButton" aria-label="API connect"><span class="api-dot"></span>API</button>
-      <a href="admin.html" data-i18n="nav.admin">Admin</a>
+      <a href="./#agent-entry" data-i18n="portal.agentNav">Agent</a>
+      <a href="./#partner-entry" data-i18n="portal.partnerNav">Partner</a>
+      <a href="./#collab-entry" data-i18n="portal.collabNav">Collab</a>
       <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language"><span class="is-active">CN</span><span class="lang-divider">/</span><span>EN</span></button>
     </nav>
   </header>
@@ -880,17 +882,51 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
 <body>
   <header class="topbar">
     <a class="brand" href="./" data-i18n="hub.name">${hubNameCn}</a>
-    <nav>
-      <a href="api/manifest.json" data-i18n="nav.manifest">Manifest</a>
-      <a href="https://github.com/${adminConfig.owner ?? "fengurt"}/${adminConfig.repo ?? "tableai_designaha"}">GitHub</a>
+    <div class="topbar-search" role="search">
+      <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
+      <div class="global-results" id="globalResults" aria-live="polite"></div>
+    </div>
+    <nav class="top-actions" aria-label="Primary actions">
+      <button class="api-link" type="button" id="apiConnectButton" aria-label="API connect"><span class="api-dot"></span>API</button>
+      <a href="./#agent-entry" data-i18n="portal.agentNav">Agent</a>
+      <a href="./#partner-entry" data-i18n="portal.partnerNav">Partner</a>
+      <a href="./#collab-entry" data-i18n="portal.collabNav">Collab</a>
       <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language"><span class="is-active">CN</span><span class="lang-divider">/</span><span>EN</span></button>
     </nav>
   </header>
+  <section class="api-connect-panel hidden" id="apiConnectPanel" aria-live="polite">
+    <div class="api-connect-head">
+      <div>
+        <p class="eyebrow">API</p>
+        <h2 data-i18n="api.title">连接 System API</h2>
+      </div>
+      <button class="icon-copy" type="button" id="apiConnectClose" data-icon-only="true" aria-label="Close">×</button>
+    </div>
+    <div class="api-connect-form" id="apiConnectForm">
+      <label><span data-i18n="api.key">System API Key</span><input id="apiAdminKey" type="password" autocomplete="current-password"></label>
+      <button class="portal-action" type="button" id="apiConnectSubmit" data-i18n="api.connect">Connect</button>
+    </div>
+    <p class="portal-status" id="apiConnectStatus"></p>
+    <div class="api-ops hidden" id="apiConnectedOps">
+      <strong class="connected-pill" data-i18n="api.connected">Connected</strong>
+      <p class="muted" id="apiScopeText"></p>
+      <div class="portal-links">
+        <a href="admin.html" data-i18n="api.openAdmin">Admin</a>
+        <a href="api/manifest.json">Manifest</a>
+        <a href="api/brands.json">Brands</a>
+        <a href="api/search.json">Search</a>
+        <a href="api/media/">Media</a>
+        <button class="api-copy" type="button" id="apiResourcesButton" data-i18n="api.resources">Resources</button>
+        <button class="api-copy" type="button" data-api-copy="manifest" data-i18n="api.copyCurl">Copy cURL</button>
+      </div>
+      <pre class="api-resource-summary hidden" id="apiResourceSummary"></pre>
+    </div>
+  </section>
   <main class="admin">
     <section class="panel" id="unlockPanel">
       <p class="eyebrow" data-i18n="nav.admin">管理</p>
-      <h1 data-i18n="admin.unlockTitle">先输入 Key</h1>
-      <p class="muted" data-i18n="admin.unlockBody">使用 API Key + Google Authenticator 登录；可按单个或多个 IP 授权。</p>
+      <h1 data-i18n="admin.unlockTitle">AI 原生管理</h1>
+      <p class="muted admin-lead" data-i18n="admin.unlockBody">通过 AI 原生的方式，一站式管理你的品牌和 IP。</p>
       <label><span data-i18n="admin.keyLabel">Key</span><input id="adminKey" type="password" autocomplete="current-password"></label>
       <label><span data-i18n="admin.totpLabel">Google Authenticator</span><input id="totpCode" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" maxlength="8" placeholder="000000"></label>
       <label><span data-i18n="admin.scopeLabel">IP 权限范围</span><select id="adminScopes" multiple size="4"></select></label>
@@ -2007,6 +2043,45 @@ pre {
   overflow: auto;
 }
 .admin { max-width: 980px; padding: 42px 0 90px; }
+.admin #unlockPanel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 16px;
+  max-width: 760px;
+  margin: clamp(24px, 7vw, 72px) auto 18px;
+  padding: clamp(22px, 4vw, 38px);
+}
+.admin #unlockPanel .eyebrow,
+.admin #unlockPanel h1,
+.admin #unlockPanel .admin-lead,
+.admin #unlockPanel label:nth-of-type(3),
+.admin #unlockPanel button,
+.admin #unlockPanel .notice {
+  grid-column: 1 / -1;
+}
+.admin #unlockPanel h1 {
+  font-size: clamp(36px, 5vw, 54px);
+  margin: 4px 0 8px;
+  line-height: 1;
+  max-width: 680px;
+}
+.admin-lead {
+  font-size: clamp(16px, 1.7vw, 18px);
+  line-height: 1.5;
+  max-width: 520px;
+  margin: 0 0 14px;
+}
+.admin #unlockPanel label {
+  max-width: none;
+  margin: 8px 0;
+}
+.admin #unlockPanel select {
+  min-height: 78px;
+}
+.admin #unlockPanel button {
+  justify-self: start;
+  margin-top: 2px;
+}
 .panel { padding: 24px; margin-bottom: 18px; }
 .hidden { display: none; }
 label { display: grid; gap: 8px; font-size: 14px; font-weight: 700; margin: 12px 0; }
@@ -2026,6 +2101,7 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .topbar { align-items: flex-start; flex-direction: column; }
   .topbar-search { flex: 1 1 auto; width: 100%; max-width: none; order: 3; }
   nav { width: 100%; justify-content: space-between; gap: 10px; }
+  .admin #unlockPanel { grid-template-columns: 1fr; }
   .hub-hero, .brand-hero, .form-grid { grid-template-columns: 1fr; }
   .resource-grid { grid-template-columns: 1fr; }
   .endpoint-grid, .mood-grid { grid-template-columns: 1fr; }
@@ -2166,8 +2242,8 @@ const i18n = {
     "history.title": "历史版本",
     "history.empty": "暂无版本记录",
     "search.global": "全局搜索",
-    "admin.unlockTitle": "先输入 Key",
-    "admin.unlockBody": "解锁，再编辑。",
+    "admin.unlockTitle": "AI 原生管理",
+    "admin.unlockBody": "通过 AI 原生的方式，一站式管理你的品牌和 IP。",
     "admin.keyLabel": "Key",
     "admin.totpLabel": "Google Authenticator",
     "admin.scopeLabel": "IP 权限范围",
@@ -2294,8 +2370,8 @@ const i18n = {
     "history.title": "Version history",
     "history.empty": "No version records yet",
     "search.global": "Global search",
-    "admin.unlockTitle": "Key first",
-    "admin.unlockBody": "Unlock. Then edit.",
+    "admin.unlockTitle": "AI-native management",
+    "admin.unlockBody": "Manage your brands and IPs in one AI-native workspace.",
     "admin.keyLabel": "Key",
     "admin.totpLabel": "Google Authenticator",
     "admin.scopeLabel": "IP scope",

@@ -1,5 +1,12 @@
 [
   {
+    "hash": "9e33619ad95856c977f8803517f325304d678821",
+    "shortHash": "9e33619",
+    "date": "2026-07-08T03:55:08+08:00",
+    "message": "Add Nibiru and Shenzhen Microsoft Global Center IPs",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/9e33619ad95856c977f8803517f325304d678821"
+  },
+  {
     "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
     "shortHash": "4c1ae93",
     "date": "2026-07-08T03:28:03+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-07-04T22:10:20+08:00",
     "message": "Convert homepage nav to icon toolbar",
     "url": "https://github.com/fengurt/tableai_designaha/commit/0f2e2d97870af52bc066ed485e15cb42b064eae3"
-  },
-  {
-    "hash": "a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
-    "shortHash": "a0e6ecd",
-    "date": "2026-07-04T22:02:17+08:00",
-    "message": "Add Sidera reference notes",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a0e6ecdeb7c9f436d1fc0081c43299056e0601ce"
   }
 ]

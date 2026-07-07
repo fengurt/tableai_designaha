@@ -152,14 +152,26 @@
     "en": ""
   },
   "version": {
-    "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
-    "shortHash": "4c1ae93",
-    "date": "2026-07-08T03:28:03+08:00",
-    "message": "Update OPC Global primary language",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb"
+    "hash": "9e33619ad95856c977f8803517f325304d678821",
+    "shortHash": "9e33619",
+    "date": "2026-07-08T03:55:08+08:00",
+    "message": "Add Nibiru and Shenzhen Microsoft Global Center IPs",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/9e33619ad95856c977f8803517f325304d678821"
   },
   "historyUrl": "api/history/agem.json",
   "history": [
+    {
+      "hash": "9e33619ad95856c977f8803517f325304d678821",
+      "shortHash": "9e33619",
+      "date": "2026-07-08T03:55:08+08:00",
+      "message": "Add Nibiru and Shenzhen Microsoft Global Center IPs",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/9e33619ad95856c977f8803517f325304d678821",
+      "sourcePaths": [
+        "config/brands.json",
+        "AGEM",
+        "AGEM/README.md"
+      ]
+    },
     {
       "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
       "shortHash": "4c1ae93",
@@ -214,18 +226,6 @@
       "date": "2026-07-06T06:21:22+08:00",
       "message": "Add ksamint IP",
       "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34",
-      "sourcePaths": [
-        "config/brands.json",
-        "AGEM",
-        "AGEM/README.md"
-      ]
-    },
-    {
-      "hash": "067a47c76f1cb812b607335089911c282f4d8f78",
-      "shortHash": "067a47c",
-      "date": "2026-07-05T10:24:24+08:00",
-      "message": "Add Sanctem IP and brand logos",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/067a47c76f1cb812b607335089911c282f4d8f78",
       "sourcePaths": [
         "config/brands.json",
         "AGEM",

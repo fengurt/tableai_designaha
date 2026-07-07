@@ -13,11 +13,11 @@
     "TABLEAI/TableAI_DESIGN.md"
   ],
   "latest": {
-    "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
-    "shortHash": "4c1ae93",
-    "date": "2026-07-08T03:28:03+08:00",
-    "message": "Update OPC Global primary language",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb",
+    "hash": "9e33619ad95856c977f8803517f325304d678821",
+    "shortHash": "9e33619",
+    "date": "2026-07-08T03:55:08+08:00",
+    "message": "Add Nibiru and Shenzhen Microsoft Global Center IPs",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/9e33619ad95856c977f8803517f325304d678821",
     "sourcePaths": [
       "config/brands.json",
       "TABLEAI",
@@ -25,6 +25,18 @@
     ]
   },
   "versions": [
+    {
+      "hash": "9e33619ad95856c977f8803517f325304d678821",
+      "shortHash": "9e33619",
+      "date": "2026-07-08T03:55:08+08:00",
+      "message": "Add Nibiru and Shenzhen Microsoft Global Center IPs",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/9e33619ad95856c977f8803517f325304d678821",
+      "sourcePaths": [
+        "config/brands.json",
+        "TABLEAI",
+        "TABLEAI/TableAI_DESIGN.md"
+      ]
+    },
     {
       "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
       "shortHash": "4c1ae93",
