@@ -526,5 +526,37 @@
     "subtitle": "中智游集团 · ZhongzhiyouGroup/README.md",
     "text": "中智游集团 · Zhongzhiyou Group 中智游集团是中文优先的智慧文旅与目的地运营集团 IP。 Brand Role 主语言 ：中文 英文对照 ：Zhongzhiyou Group 赛道 ：智慧文旅 / 目的地运营 / 文化旅游 人群 ：文旅集团、目的地伙伴、旅游服务团队 业务 ：智慧文旅、目的地运营、旅游服务协作、文化路线与项目孵化 Voice 可信、清晰、有组织感。表达要优先使用中文，并把复杂的文旅业务拆成可执行的路线、服务、资源与协作关系。 Visual Direction 以目的地绿、路线金、湖蓝为基础，整体应有集团级可信度、文旅温度和智慧运营感。避免廉价旅行促销视觉和过度科技感。 Agent Notes 在生成中智游集团相关内容时，默认使用中文主名称。英文仅作为对照、URL、文件名或国际化字段使用。内容重点放在智慧文旅、目的地运营、文化路线、服务协作与项目孵化。",
     "url": "brand.html?brand=zhongzhiyou"
+  },
+  {
+    "type": "ip",
+    "slug": "nibiru",
+    "title": "Nibiru",
+    "subtitle": "睿悦科技 · Nibiru",
+    "text": "睿悦科技 Nibiru 是面向空间计算、智能体验与产品创新的科技 IP。 Nibiru is an English-first technology IP for spatial computing, intelligent experiences, and product innovation. 空间计算、智能硬件、沉浸式体验、产品创新与技术服务。 Spatial computing, intelligent hardware, immersive experiences, product innovation, and technology services. 空间计算 智能体验 科技产品 Spatial computing Intelligent experiences Technology products 科技伙伴 产品团队 空间计算开发者 Technology partners Product teams Spatial computing developers 科技 空间计算 智能硬件 沉浸式体验 Technology Spatial computing Intelligent hardware Immersive experience Nibiru is an English-first technology IP for spatial computing, intelligent experiences, and product innovation. deep space blue aurora mint violet signal spatial computing intelligent experience",
+    "url": "brand.html?brand=nibiru"
+  },
+  {
+    "type": "guide",
+    "slug": "nibiru",
+    "title": "README",
+    "subtitle": "Nibiru · Nibiru/README.md",
+    "text": "Nibiru · 睿悦科技 Nibiru is an English first technology IP for spatial computing, intelligent experiences, and product innovation. Brand Role Main language : English Chinese name : 睿悦科技 Tracks : Spatial computing / Intelligent experiences / Technology products Audiences : Technology partners, product teams, spatial computing developers Business : Spatial computing, intelligent hardware, immersive experiences, product inn",
+    "url": "brand.html?brand=nibiru"
+  },
+  {
+    "type": "ip",
+    "slug": "shenzhen-microsoft-global-center",
+    "title": "深圳微软出海中心",
+    "subtitle": "深圳微软出海中心 · Shenzhen Microsoft Global Center",
+    "text": "深圳微软出海中心是面向企业出海、技术生态与国际化增长服务的中文优先 IP。 Shenzhen Microsoft Global Center is a Chinese-first IP for company globalization, technology ecosystems, and international growth services. 企业出海、云与 AI 技术生态、国际化增长、伙伴连接与项目服务。 Company globalization, cloud and AI technology ecosystems, international growth, partner connection, and project services. 企业出海 技术生态 国际化增长 Company globalization Technology ecosystem International growth 出海企业 技术伙伴 生态服务团队 Globalizing companies Technology partners Ecosystem service teams 出海 微软生态 云与 AI 国际化 深圳 Going global Microsoft ecosystem Cloud and AI Internationalization Shenzhen 中文优先的企业出海、技术生态与国际化增长服务 IP。 globalization blue cloud cyan ecosystem green enterprise going global",
+    "url": "brand.html?brand=shenzhen-microsoft-global-center"
+  },
+  {
+    "type": "guide",
+    "slug": "shenzhen-microsoft-global-center",
+    "title": "README",
+    "subtitle": "深圳微软出海中心 · ShenzhenMicrosoftGlobalCenter/README.md",
+    "text": "深圳微软出海中心 · Shenzhen Microsoft Global Center 深圳微软出海中心是中文优先的企业出海、技术生态与国际化增长服务 IP。 Brand Role 主语言 ：中文 英文对照 ：Shenzhen Microsoft Global Center 赛道 ：企业出海 / 技术生态 / 国际化增长 人群 ：出海企业、技术伙伴、生态服务团队 业务 ：企业出海、云与 AI 技术生态、国际化增长、伙伴连接与项目服务 Voice 清晰、可信、面向企业决策。表达要优先使用中文，强调技术生态、国际化路径、伙伴连接和可落地的出海服务。 Visual Direction 以全球化蓝、云青、生态绿为基础，整体应有企业级可信度、技术生态感和深圳速度。避免过度营销化和廉价科技炫光。 Agent Notes 在生成深圳微软出海中心相关内容时，默认使用中文主名称。英文仅作为对照、URL、文件名或国际化字段使用。内容重点放在企业出海",
+    "url": "brand.html?brand=shenzhen-microsoft-global-center"
   }
 ]

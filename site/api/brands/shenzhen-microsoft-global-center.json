@@ -1,0 +1,351 @@
+{
+  "slug": "shenzhen-microsoft-global-center",
+  "folder": "ShenzhenMicrosoftGlobalCenter",
+  "name": "深圳微软出海中心",
+  "nativeName": "Shenzhen Microsoft Global Center",
+  "description": "中文优先的企业出海、技术生态与国际化增长服务 IP。",
+  "officialWebsite": "",
+  "mainLanguage": "zh",
+  "intro": {
+    "zh": "深圳微软出海中心是面向企业出海、技术生态与国际化增长服务的中文优先 IP。",
+    "en": "Shenzhen Microsoft Global Center is a Chinese-first IP for company globalization, technology ecosystems, and international growth services."
+  },
+  "business": {
+    "zh": "企业出海、云与 AI 技术生态、国际化增长、伙伴连接与项目服务。",
+    "en": "Company globalization, cloud and AI technology ecosystems, international growth, partner connection, and project services."
+  },
+  "notes": {
+    "zh": "",
+    "en": ""
+  },
+  "primaryGuide": "ShenzhenMicrosoftGlobalCenter/README.md",
+  "theme": {
+    "mode": "light",
+    "primary": "#2563EB",
+    "accent": "#00A4EF",
+    "secondary": "#7FBA00",
+    "surface": "#F5F8FC",
+    "paper": "#FFFFFF",
+    "ink": "#142033",
+    "muted": "#5D6B7D",
+    "line": "rgba(37, 99, 235, 0.16)",
+    "keywords": [
+      "globalization blue",
+      "cloud cyan",
+      "ecosystem green",
+      "enterprise",
+      "going global"
+    ]
+  },
+  "classification": {
+    "tracks": {
+      "zh": [
+        "企业出海",
+        "技术生态",
+        "国际化增长"
+      ],
+      "en": [
+        "Company globalization",
+        "Technology ecosystem",
+        "International growth"
+      ]
+    },
+    "audiences": {
+      "zh": [
+        "出海企业",
+        "技术伙伴",
+        "生态服务团队"
+      ],
+      "en": [
+        "Globalizing companies",
+        "Technology partners",
+        "Ecosystem service teams"
+      ]
+    },
+    "tags": {
+      "zh": [
+        "出海",
+        "微软生态",
+        "云与 AI",
+        "国际化",
+        "深圳"
+      ],
+      "en": [
+        "Going global",
+        "Microsoft ecosystem",
+        "Cloud and AI",
+        "Internationalization",
+        "Shenzhen"
+      ]
+    }
+  },
+  "assetKey": "shenzhen-microsoft-global-center",
+  "mainName": "深圳微软出海中心",
+  "mainLocale": "CN",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "mainLocale": "CN",
+    "intro": {
+      "zh": "深圳微软出海中心是面向企业出海、技术生态与国际化增长服务的中文优先 IP。",
+      "en": "Shenzhen Microsoft Global Center is a Chinese-first IP for company globalization, technology ecosystems, and international growth services."
+    },
+    "business": {
+      "zh": "企业出海、云与 AI 技术生态、国际化增长、伙伴连接与项目服务。",
+      "en": "Company globalization, cloud and AI technology ecosystems, international growth, partner connection, and project services."
+    },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "企业出海",
+          "技术生态",
+          "国际化增长"
+        ],
+        "en": [
+          "Company globalization",
+          "Technology ecosystem",
+          "International growth"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "出海企业",
+          "技术伙伴",
+          "生态服务团队"
+        ],
+        "en": [
+          "Globalizing companies",
+          "Technology partners",
+          "Ecosystem service teams"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "出海",
+          "微软生态",
+          "云与 AI",
+          "国际化",
+          "深圳"
+        ],
+        "en": [
+          "Going global",
+          "Microsoft ecosystem",
+          "Cloud and AI",
+          "Internationalization",
+          "Shenzhen"
+        ]
+      }
+    }
+  },
+  "display": {
+    "default": {
+      "language": "zh",
+      "name": "深圳微软出海中心"
+    },
+    "zh": {
+      "name": "深圳微软出海中心",
+      "secondaryName": "Shenzhen Microsoft Global Center"
+    },
+    "en": {
+      "name": "Shenzhen Microsoft Global Center",
+      "secondaryName": "深圳微软出海中心"
+    }
+  },
+  "version": {
+    "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
+    "shortHash": "4c1ae93",
+    "date": "2026-07-08T03:28:03+08:00",
+    "message": "Update OPC Global primary language",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb"
+  },
+  "historyUrl": "api/history/shenzhen-microsoft-global-center.json",
+  "history": [
+    {
+      "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
+      "shortHash": "4c1ae93",
+      "date": "2026-07-08T03:28:03+08:00",
+      "message": "Update OPC Global primary language",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb",
+      "sourcePaths": [
+        "config/brands.json",
+        "ShenzhenMicrosoftGlobalCenter",
+        "ShenzhenMicrosoftGlobalCenter/README.md"
+      ]
+    },
+    {
+      "hash": "4efc463d2f51813f4aae7c47083471b15ca8d1bf",
+      "shortHash": "4efc463",
+      "date": "2026-07-08T03:23:22+08:00",
+      "message": "Add Zhongzhiyou Group IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4efc463d2f51813f4aae7c47083471b15ca8d1bf",
+      "sourcePaths": [
+        "config/brands.json",
+        "ShenzhenMicrosoftGlobalCenter",
+        "ShenzhenMicrosoftGlobalCenter/README.md"
+      ]
+    },
+    {
+      "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
+      "shortHash": "5a93d2b",
+      "date": "2026-07-08T03:19:10+08:00",
+      "message": "Add Xinzhi Travel IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
+      "sourcePaths": [
+        "config/brands.json",
+        "ShenzhenMicrosoftGlobalCenter",
+        "ShenzhenMicrosoftGlobalCenter/README.md"
+      ]
+    },
+    {
+      "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
+      "shortHash": "3e24857",
+      "date": "2026-07-06T12:50:10+08:00",
+      "message": "Add IP classifications and iNucleus",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a",
+      "sourcePaths": [
+        "config/brands.json",
+        "ShenzhenMicrosoftGlobalCenter",
+        "ShenzhenMicrosoftGlobalCenter/README.md"
+      ]
+    },
+    {
+      "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+      "shortHash": "b0269d2",
+      "date": "2026-07-06T06:21:22+08:00",
+      "message": "Add ksamint IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+      "sourcePaths": [
+        "config/brands.json",
+        "ShenzhenMicrosoftGlobalCenter",
+        "ShenzhenMicrosoftGlobalCenter/README.md"
+      ]
+    },
+    {
+      "hash": "067a47c76f1cb812b607335089911c282f4d8f78",
+      "shortHash": "067a47c",
+      "date": "2026-07-05T10:24:24+08:00",
+      "message": "Add Sanctem IP and brand logos",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/067a47c76f1cb812b607335089911c282f4d8f78",
+      "sourcePaths": [
+        "config/brands.json",
+        "ShenzhenMicrosoftGlobalCenter",
+        "ShenzhenMicrosoftGlobalCenter/README.md"
+      ]
+    }
+  ],
+  "url": "brand.html?brand=shenzhen-microsoft-global-center",
+  "apiUrl": "api/brands/shenzhen-microsoft-global-center.json",
+  "status": "documented",
+  "guides": [
+    {
+      "path": "ShenzhenMicrosoftGlobalCenter/README.md",
+      "title": "README",
+      "format": "md",
+      "primary": true,
+      "excerpt": "深圳微软出海中心 · Shenzhen Microsoft Global Center 深圳微软出海中心是中文优先的企业出海、技术生态与国际化增长服务 IP。 Brand Role 主语言 ：中文 英文对照 ：Shenzhen Microsoft Global Center 赛道 ：企业出海 / 技术生态 / 国际化增长 人群 ：出海企业、技术伙伴、生态服务团队 业务 ：企业出海、云与 AI 技术生态、国际化增长、伙伴连接与项目服务 Voice 清晰、可信、面向企业决策。表达要优先使用中文，强调技术生态、国际化路径、伙伴连接和可落地的出海服务。 Visual Direction 以全球化蓝、云青、生态绿为基础，整体应有企业级可信度、技术生态感和深圳速度。避免过度营销化和廉价科技炫光。 Agent Notes 在生成深圳微软出海中心相关内容时，默认使用中文主名称。英文仅作为对照、URL、文件名或国际化字段使用。内容重点放在企业出海",
+      "text": "# 深圳微软出海中心 · Shenzhen Microsoft Global Center\n\n深圳微软出海中心是中文优先的企业出海、技术生态与国际化增长服务 IP。\n\n## Brand Role\n\n- **主语言**：中文\n- **英文对照**：Shenzhen Microsoft Global Center\n- **赛道**：企业出海 / 技术生态 / 国际化增长\n- **人群**：出海企业、技术伙伴、生态服务团队\n- **业务**：企业出海、云与 AI 技术生态、国际化增长、伙伴连接与项目服务\n\n## Voice\n\n清晰、可信、面向企业决策。表达要优先使用中文，强调技术生态、国际化路径、伙伴连接和可落地的出海服务。\n\n## Visual Direction\n\n以全球化蓝、云青、生态绿为基础，整体应有企业级可信度、技术生态感和深圳速度。避免过度营销化和廉价科技炫光。\n\n## Agent Notes\n\n在生成深圳微软出海中心相关内容时，默认使用中文主名称。英文仅作为对照、URL、文件名或国际化字段使用。内容重点放在企业出海、云与 AI、技术生态、国际化增长、伙伴连接与项目服务。\n"
+    }
+  ],
+  "tokens": [],
+  "images": [],
+  "assetKit": {
+    "assetKey": "shenzhen-microsoft-global-center",
+    "endpoints": {
+      "brand": "api/brands/shenzhen-microsoft-global-center.json",
+      "images": "api/brands/shenzhen-microsoft-global-center.json#images",
+      "tokens": "api/brands/shenzhen-microsoft-global-center.json#tokens",
+      "history": "api/history/shenzhen-microsoft-global-center.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#2563EB"
+        },
+        {
+          "key": "accent",
+          "value": "#00A4EF"
+        },
+        {
+          "key": "secondary",
+          "value": "#7FBA00"
+        },
+        {
+          "key": "surface",
+          "value": "#F5F8FC"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFFFF"
+        },
+        {
+          "key": "ink",
+          "value": "#142033"
+        },
+        {
+          "key": "muted",
+          "value": "#5D6B7D"
+        }
+      ],
+      "keywords": [
+        "globalization blue",
+        "cloud cyan",
+        "ecosystem green",
+        "enterprise",
+        "going global"
+      ],
+      "images": []
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#2563EB"
+      },
+      {
+        "key": "accent",
+        "value": "#00A4EF"
+      },
+      {
+        "key": "secondary",
+        "value": "#7FBA00"
+      },
+      {
+        "key": "surface",
+        "value": "#F5F8FC"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFFFF"
+      },
+      {
+        "key": "ink",
+        "value": "#142033"
+      },
+      {
+        "key": "muted",
+        "value": "#5D6B7D"
+      }
+    ],
+    "keywords": [
+      "globalization blue",
+      "cloud cyan",
+      "ecosystem green",
+      "enterprise",
+      "going global"
+    ],
+    "images": []
+  },
+  "editablePaths": [
+    "ShenzhenMicrosoftGlobalCenter/README.md"
+  ],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/ShenzhenMicrosoftGlobalCenter",
+    "folder": "ShenzhenMicrosoftGlobalCenter"
+  }
+}

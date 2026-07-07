@@ -1684,5 +1684,167 @@
         ]
       }
     }
+  },
+  {
+    "slug": "nibiru",
+    "folder": "Nibiru",
+    "name": "Nibiru",
+    "nativeName": "睿悦科技",
+    "description": "Nibiru is an English-first technology IP for spatial computing, intelligent experiences, and product innovation.",
+    "officialWebsite": "",
+    "mainLanguage": "en",
+    "intro": {
+      "zh": "睿悦科技 Nibiru 是面向空间计算、智能体验与产品创新的科技 IP。",
+      "en": "Nibiru is an English-first technology IP for spatial computing, intelligent experiences, and product innovation."
+    },
+    "business": {
+      "zh": "空间计算、智能硬件、沉浸式体验、产品创新与技术服务。",
+      "en": "Spatial computing, intelligent hardware, immersive experiences, product innovation, and technology services."
+    },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
+    "primaryGuide": "Nibiru/README.md",
+    "theme": {
+      "mode": "dark",
+      "primary": "#1D2BFF",
+      "accent": "#7CF7D4",
+      "secondary": "#8B5CF6",
+      "surface": "#080B16",
+      "paper": "#11172A",
+      "ink": "#F5F8FF",
+      "muted": "#9AA7C7",
+      "line": "rgba(124, 247, 212, 0.22)",
+      "keywords": [
+        "deep space blue",
+        "aurora mint",
+        "violet signal",
+        "spatial computing",
+        "intelligent experience"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "空间计算",
+          "智能体验",
+          "科技产品"
+        ],
+        "en": [
+          "Spatial computing",
+          "Intelligent experiences",
+          "Technology products"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "科技伙伴",
+          "产品团队",
+          "空间计算开发者"
+        ],
+        "en": [
+          "Technology partners",
+          "Product teams",
+          "Spatial computing developers"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "科技",
+          "空间计算",
+          "智能硬件",
+          "沉浸式体验"
+        ],
+        "en": [
+          "Technology",
+          "Spatial computing",
+          "Intelligent hardware",
+          "Immersive experience"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "shenzhen-microsoft-global-center",
+    "folder": "ShenzhenMicrosoftGlobalCenter",
+    "name": "深圳微软出海中心",
+    "nativeName": "Shenzhen Microsoft Global Center",
+    "description": "中文优先的企业出海、技术生态与国际化增长服务 IP。",
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "深圳微软出海中心是面向企业出海、技术生态与国际化增长服务的中文优先 IP。",
+      "en": "Shenzhen Microsoft Global Center is a Chinese-first IP for company globalization, technology ecosystems, and international growth services."
+    },
+    "business": {
+      "zh": "企业出海、云与 AI 技术生态、国际化增长、伙伴连接与项目服务。",
+      "en": "Company globalization, cloud and AI technology ecosystems, international growth, partner connection, and project services."
+    },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
+    "primaryGuide": "ShenzhenMicrosoftGlobalCenter/README.md",
+    "theme": {
+      "mode": "light",
+      "primary": "#2563EB",
+      "accent": "#00A4EF",
+      "secondary": "#7FBA00",
+      "surface": "#F5F8FC",
+      "paper": "#FFFFFF",
+      "ink": "#142033",
+      "muted": "#5D6B7D",
+      "line": "rgba(37, 99, 235, 0.16)",
+      "keywords": [
+        "globalization blue",
+        "cloud cyan",
+        "ecosystem green",
+        "enterprise",
+        "going global"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "企业出海",
+          "技术生态",
+          "国际化增长"
+        ],
+        "en": [
+          "Company globalization",
+          "Technology ecosystem",
+          "International growth"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "出海企业",
+          "技术伙伴",
+          "生态服务团队"
+        ],
+        "en": [
+          "Globalizing companies",
+          "Technology partners",
+          "Ecosystem service teams"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "出海",
+          "微软生态",
+          "云与 AI",
+          "国际化",
+          "深圳"
+        ],
+        "en": [
+          "Going global",
+          "Microsoft ecosystem",
+          "Cloud and AI",
+          "Internationalization",
+          "Shenzhen"
+        ]
+      }
+    }
   }
 ]

@@ -1,16 +1,16 @@
 {
-  "slug": "rgd",
-  "name": "燃古豋",
-  "mainLanguage": "zh",
-  "apiUrl": "api/brands/rgd.json",
+  "slug": "nibiru",
+  "name": "Nibiru",
+  "mainLanguage": "en",
+  "apiUrl": "api/brands/nibiru.json",
   "source": {
-    "github": "https://github.com/fengurt/tableai_designaha/tree/main/RGD",
-    "folder": "RGD"
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/Nibiru",
+    "folder": "Nibiru"
   },
   "trackedPaths": [
     "config/brands.json",
-    "RGD",
-    "RGD/README.md"
+    "Nibiru",
+    "Nibiru/README.md"
   ],
   "latest": {
     "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
@@ -20,8 +20,8 @@
     "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb",
     "sourcePaths": [
       "config/brands.json",
-      "RGD",
-      "RGD/README.md"
+      "Nibiru",
+      "Nibiru/README.md"
     ]
   },
   "versions": [
@@ -33,8 +33,8 @@
       "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb",
       "sourcePaths": [
         "config/brands.json",
-        "RGD",
-        "RGD/README.md"
+        "Nibiru",
+        "Nibiru/README.md"
       ]
     },
     {
@@ -45,8 +45,8 @@
       "url": "https://github.com/fengurt/tableai_designaha/commit/4efc463d2f51813f4aae7c47083471b15ca8d1bf",
       "sourcePaths": [
         "config/brands.json",
-        "RGD",
-        "RGD/README.md"
+        "Nibiru",
+        "Nibiru/README.md"
       ]
     },
     {
@@ -57,8 +57,8 @@
       "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
       "sourcePaths": [
         "config/brands.json",
-        "RGD",
-        "RGD/README.md"
+        "Nibiru",
+        "Nibiru/README.md"
       ]
     },
     {
@@ -69,8 +69,8 @@
       "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a",
       "sourcePaths": [
         "config/brands.json",
-        "RGD",
-        "RGD/README.md"
+        "Nibiru",
+        "Nibiru/README.md"
       ]
     },
     {
@@ -81,8 +81,8 @@
       "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34",
       "sourcePaths": [
         "config/brands.json",
-        "RGD",
-        "RGD/README.md"
+        "Nibiru",
+        "Nibiru/README.md"
       ]
     },
     {
@@ -93,8 +93,8 @@
       "url": "https://github.com/fengurt/tableai_designaha/commit/067a47c76f1cb812b607335089911c282f4d8f78",
       "sourcePaths": [
         "config/brands.json",
-        "RGD",
-        "RGD/README.md"
+        "Nibiru",
+        "Nibiru/README.md"
       ]
     },
     {
@@ -105,8 +105,8 @@
       "url": "https://github.com/fengurt/tableai_designaha/commit/a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
       "sourcePaths": [
         "config/brands.json",
-        "RGD",
-        "RGD/README.md"
+        "Nibiru",
+        "Nibiru/README.md"
       ]
     },
     {
@@ -117,8 +117,8 @@
       "url": "https://github.com/fengurt/tableai_designaha/commit/0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
       "sourcePaths": [
         "config/brands.json",
-        "RGD",
-        "RGD/README.md"
+        "Nibiru",
+        "Nibiru/README.md"
       ]
     },
     {
@@ -129,8 +129,8 @@
       "url": "https://github.com/fengurt/tableai_designaha/commit/534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
       "sourcePaths": [
         "config/brands.json",
-        "RGD",
-        "RGD/README.md"
+        "Nibiru",
+        "Nibiru/README.md"
       ]
     },
     {
@@ -141,8 +141,8 @@
       "url": "https://github.com/fengurt/tableai_designaha/commit/1f20db30a5e970cf81e24c76e4613bc7e0036f09",
       "sourcePaths": [
         "config/brands.json",
-        "RGD",
-        "RGD/README.md"
+        "Nibiru",
+        "Nibiru/README.md"
       ]
     },
     {
@@ -153,8 +153,8 @@
       "url": "https://github.com/fengurt/tableai_designaha/commit/088ab8909a2d4284cd64d7924cc60fa39b8eb206",
       "sourcePaths": [
         "config/brands.json",
-        "RGD",
-        "RGD/README.md"
+        "Nibiru",
+        "Nibiru/README.md"
       ]
     },
     {
@@ -165,8 +165,8 @@
       "url": "https://github.com/fengurt/tableai_designaha/commit/c723f8453cb7795108b51880986e7d9a664da5b1",
       "sourcePaths": [
         "config/brands.json",
-        "RGD",
-        "RGD/README.md"
+        "Nibiru",
+        "Nibiru/README.md"
       ]
     },
     {
@@ -177,8 +177,8 @@
       "url": "https://github.com/fengurt/tableai_designaha/commit/a550421605e0fadecfb30c3fd5066754feda54d7",
       "sourcePaths": [
         "config/brands.json",
-        "RGD",
-        "RGD/README.md"
+        "Nibiru",
+        "Nibiru/README.md"
       ]
     },
     {
@@ -189,8 +189,8 @@
       "url": "https://github.com/fengurt/tableai_designaha/commit/e98dae7a98dfe32921ebc76e2783caeb85e64d61",
       "sourcePaths": [
         "config/brands.json",
-        "RGD",
-        "RGD/README.md"
+        "Nibiru",
+        "Nibiru/README.md"
       ]
     },
     {
@@ -201,8 +201,8 @@
       "url": "https://github.com/fengurt/tableai_designaha/commit/99b7f2d15f0ea20e6e9f92f124d0a0b3ff9c47b9",
       "sourcePaths": [
         "config/brands.json",
-        "RGD",
-        "RGD/README.md"
+        "Nibiru",
+        "Nibiru/README.md"
       ]
     }
   ]

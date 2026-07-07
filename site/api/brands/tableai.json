@@ -152,14 +152,26 @@
     "en": ""
   },
   "version": {
-    "hash": "4efc463d2f51813f4aae7c47083471b15ca8d1bf",
-    "shortHash": "4efc463",
-    "date": "2026-07-08T03:23:22+08:00",
-    "message": "Add Zhongzhiyou Group IP",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4efc463d2f51813f4aae7c47083471b15ca8d1bf"
+    "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
+    "shortHash": "4c1ae93",
+    "date": "2026-07-08T03:28:03+08:00",
+    "message": "Update OPC Global primary language",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb"
   },
   "historyUrl": "api/history/tableai.json",
   "history": [
+    {
+      "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
+      "shortHash": "4c1ae93",
+      "date": "2026-07-08T03:28:03+08:00",
+      "message": "Update OPC Global primary language",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb",
+      "sourcePaths": [
+        "config/brands.json",
+        "TABLEAI",
+        "TABLEAI/TableAI_DESIGN.md"
+      ]
+    },
     {
       "hash": "4efc463d2f51813f4aae7c47083471b15ca8d1bf",
       "shortHash": "4efc463",
@@ -214,18 +226,6 @@
       "date": "2026-07-05T10:48:18+08:00",
       "message": "Add transparent Table AI logo",
       "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf",
-      "sourcePaths": [
-        "config/brands.json",
-        "TABLEAI",
-        "TABLEAI/TableAI_DESIGN.md"
-      ]
-    },
-    {
-      "hash": "067a47c76f1cb812b607335089911c282f4d8f78",
-      "shortHash": "067a47c",
-      "date": "2026-07-05T10:24:24+08:00",
-      "message": "Add Sanctem IP and brand logos",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/067a47c76f1cb812b607335089911c282f4d8f78",
       "sourcePaths": [
         "config/brands.json",
         "TABLEAI",

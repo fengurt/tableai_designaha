@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-07T19:27:36.833Z",
+  "generatedAt": "2026-07-07T19:54:37.872Z",
   "version": {
-    "hash": "4efc463d2f51813f4aae7c47083471b15ca8d1bf",
-    "shortHash": "4efc463",
-    "date": "2026-07-08T03:23:22+08:00",
-    "message": "Add Zhongzhiyou Group IP",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4efc463d2f51813f4aae7c47083471b15ca8d1bf"
+    "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
+    "shortHash": "4c1ae93",
+    "date": "2026-07-08T03:28:03+08:00",
+    "message": "Update OPC Global primary language",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb"
   },
   "brands": [
     {
@@ -217,6 +217,24 @@
       "apiUrl": "api/brands/zhongzhiyou.json",
       "historyUrl": "api/history/zhongzhiyou.json",
       "guideUrl": "brand.html?brand=zhongzhiyou"
+    },
+    {
+      "slug": "nibiru",
+      "name": "Nibiru",
+      "mainLanguage": "en",
+      "mainLocale": "EN",
+      "apiUrl": "api/brands/nibiru.json",
+      "historyUrl": "api/history/nibiru.json",
+      "guideUrl": "brand.html?brand=nibiru"
+    },
+    {
+      "slug": "shenzhen-microsoft-global-center",
+      "name": "深圳微软出海中心",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "apiUrl": "api/brands/shenzhen-microsoft-global-center.json",
+      "historyUrl": "api/history/shenzhen-microsoft-global-center.json",
+      "guideUrl": "brand.html?brand=shenzhen-microsoft-global-center"
     }
   ],
   "mcp": {
@@ -251,11 +269,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "4efc463d2f51813f4aae7c47083471b15ca8d1bf",
-      "shortHash": "4efc463",
-      "date": "2026-07-08T03:23:22+08:00",
-      "message": "Add Zhongzhiyou Group IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4efc463d2f51813f4aae7c47083471b15ca8d1bf"
+      "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
+      "shortHash": "4c1ae93",
+      "date": "2026-07-08T03:28:03+08:00",
+      "message": "Update OPC Global primary language",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb"
     }
   },
   "sync": {

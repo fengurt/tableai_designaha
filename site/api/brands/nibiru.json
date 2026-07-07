@@ -1,0 +1,347 @@
+{
+  "slug": "nibiru",
+  "folder": "Nibiru",
+  "name": "Nibiru",
+  "nativeName": "睿悦科技",
+  "description": "Nibiru is an English-first technology IP for spatial computing, intelligent experiences, and product innovation.",
+  "officialWebsite": "",
+  "mainLanguage": "en",
+  "intro": {
+    "zh": "睿悦科技 Nibiru 是面向空间计算、智能体验与产品创新的科技 IP。",
+    "en": "Nibiru is an English-first technology IP for spatial computing, intelligent experiences, and product innovation."
+  },
+  "business": {
+    "zh": "空间计算、智能硬件、沉浸式体验、产品创新与技术服务。",
+    "en": "Spatial computing, intelligent hardware, immersive experiences, product innovation, and technology services."
+  },
+  "notes": {
+    "zh": "",
+    "en": ""
+  },
+  "primaryGuide": "Nibiru/README.md",
+  "theme": {
+    "mode": "dark",
+    "primary": "#1D2BFF",
+    "accent": "#7CF7D4",
+    "secondary": "#8B5CF6",
+    "surface": "#080B16",
+    "paper": "#11172A",
+    "ink": "#F5F8FF",
+    "muted": "#9AA7C7",
+    "line": "rgba(124, 247, 212, 0.22)",
+    "keywords": [
+      "deep space blue",
+      "aurora mint",
+      "violet signal",
+      "spatial computing",
+      "intelligent experience"
+    ]
+  },
+  "classification": {
+    "tracks": {
+      "zh": [
+        "空间计算",
+        "智能体验",
+        "科技产品"
+      ],
+      "en": [
+        "Spatial computing",
+        "Intelligent experiences",
+        "Technology products"
+      ]
+    },
+    "audiences": {
+      "zh": [
+        "科技伙伴",
+        "产品团队",
+        "空间计算开发者"
+      ],
+      "en": [
+        "Technology partners",
+        "Product teams",
+        "Spatial computing developers"
+      ]
+    },
+    "tags": {
+      "zh": [
+        "科技",
+        "空间计算",
+        "智能硬件",
+        "沉浸式体验"
+      ],
+      "en": [
+        "Technology",
+        "Spatial computing",
+        "Intelligent hardware",
+        "Immersive experience"
+      ]
+    }
+  },
+  "assetKey": "nibiru",
+  "mainName": "Nibiru",
+  "mainLocale": "EN",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "en",
+    "mainLocale": "EN",
+    "intro": {
+      "zh": "睿悦科技 Nibiru 是面向空间计算、智能体验与产品创新的科技 IP。",
+      "en": "Nibiru is an English-first technology IP for spatial computing, intelligent experiences, and product innovation."
+    },
+    "business": {
+      "zh": "空间计算、智能硬件、沉浸式体验、产品创新与技术服务。",
+      "en": "Spatial computing, intelligent hardware, immersive experiences, product innovation, and technology services."
+    },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "空间计算",
+          "智能体验",
+          "科技产品"
+        ],
+        "en": [
+          "Spatial computing",
+          "Intelligent experiences",
+          "Technology products"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "科技伙伴",
+          "产品团队",
+          "空间计算开发者"
+        ],
+        "en": [
+          "Technology partners",
+          "Product teams",
+          "Spatial computing developers"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "科技",
+          "空间计算",
+          "智能硬件",
+          "沉浸式体验"
+        ],
+        "en": [
+          "Technology",
+          "Spatial computing",
+          "Intelligent hardware",
+          "Immersive experience"
+        ]
+      }
+    }
+  },
+  "display": {
+    "default": {
+      "language": "en",
+      "name": "Nibiru"
+    },
+    "zh": {
+      "name": "睿悦科技",
+      "secondaryName": "Nibiru"
+    },
+    "en": {
+      "name": "Nibiru",
+      "secondaryName": "睿悦科技"
+    }
+  },
+  "version": {
+    "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
+    "shortHash": "4c1ae93",
+    "date": "2026-07-08T03:28:03+08:00",
+    "message": "Update OPC Global primary language",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb"
+  },
+  "historyUrl": "api/history/nibiru.json",
+  "history": [
+    {
+      "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
+      "shortHash": "4c1ae93",
+      "date": "2026-07-08T03:28:03+08:00",
+      "message": "Update OPC Global primary language",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb",
+      "sourcePaths": [
+        "config/brands.json",
+        "Nibiru",
+        "Nibiru/README.md"
+      ]
+    },
+    {
+      "hash": "4efc463d2f51813f4aae7c47083471b15ca8d1bf",
+      "shortHash": "4efc463",
+      "date": "2026-07-08T03:23:22+08:00",
+      "message": "Add Zhongzhiyou Group IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4efc463d2f51813f4aae7c47083471b15ca8d1bf",
+      "sourcePaths": [
+        "config/brands.json",
+        "Nibiru",
+        "Nibiru/README.md"
+      ]
+    },
+    {
+      "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
+      "shortHash": "5a93d2b",
+      "date": "2026-07-08T03:19:10+08:00",
+      "message": "Add Xinzhi Travel IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
+      "sourcePaths": [
+        "config/brands.json",
+        "Nibiru",
+        "Nibiru/README.md"
+      ]
+    },
+    {
+      "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
+      "shortHash": "3e24857",
+      "date": "2026-07-06T12:50:10+08:00",
+      "message": "Add IP classifications and iNucleus",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a",
+      "sourcePaths": [
+        "config/brands.json",
+        "Nibiru",
+        "Nibiru/README.md"
+      ]
+    },
+    {
+      "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+      "shortHash": "b0269d2",
+      "date": "2026-07-06T06:21:22+08:00",
+      "message": "Add ksamint IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+      "sourcePaths": [
+        "config/brands.json",
+        "Nibiru",
+        "Nibiru/README.md"
+      ]
+    },
+    {
+      "hash": "067a47c76f1cb812b607335089911c282f4d8f78",
+      "shortHash": "067a47c",
+      "date": "2026-07-05T10:24:24+08:00",
+      "message": "Add Sanctem IP and brand logos",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/067a47c76f1cb812b607335089911c282f4d8f78",
+      "sourcePaths": [
+        "config/brands.json",
+        "Nibiru",
+        "Nibiru/README.md"
+      ]
+    }
+  ],
+  "url": "brand.html?brand=nibiru",
+  "apiUrl": "api/brands/nibiru.json",
+  "status": "documented",
+  "guides": [
+    {
+      "path": "Nibiru/README.md",
+      "title": "README",
+      "format": "md",
+      "primary": true,
+      "excerpt": "Nibiru · 睿悦科技 Nibiru is an English first technology IP for spatial computing, intelligent experiences, and product innovation. Brand Role Main language : English Chinese name : 睿悦科技 Tracks : Spatial computing / Intelligent experiences / Technology products Audiences : Technology partners, product teams, spatial computing developers Business : Spatial computing, intelligent hardware, immersive experiences, product inn",
+      "text": "# Nibiru · 睿悦科技\n\nNibiru is an English-first technology IP for spatial computing, intelligent experiences, and product innovation.\n\n## Brand Role\n\n- **Main language**: English\n- **Chinese name**: 睿悦科技\n- **Tracks**: Spatial computing / Intelligent experiences / Technology products\n- **Audiences**: Technology partners, product teams, spatial computing developers\n- **Business**: Spatial computing, intelligent hardware, immersive experiences, product innovation, and technology services\n\n## Voice\n\nPrecise, future-facing, and product-minded. Nibiru should sound like a technology team with real hardware, systems, and experience design discipline, not like generic futurism.\n\n## Visual Direction\n\nUse deep space blue, aurora mint, and violet signal. The visual language should feel intelligent, spatial, and high-contrast, with careful restraint around neon effects.\n\n## Agent Notes\n\nWhen generating Nibiru content, default to the English name `Nibiru`. Use `睿悦科技` as the Chinese alternate name. Prioritize concrete product scenarios, spatial interfaces, intelligent hardware, developer ecosystems, and immersive experience use cases.\n"
+    }
+  ],
+  "tokens": [],
+  "images": [],
+  "assetKit": {
+    "assetKey": "nibiru",
+    "endpoints": {
+      "brand": "api/brands/nibiru.json",
+      "images": "api/brands/nibiru.json#images",
+      "tokens": "api/brands/nibiru.json#tokens",
+      "history": "api/history/nibiru.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#1D2BFF"
+        },
+        {
+          "key": "accent",
+          "value": "#7CF7D4"
+        },
+        {
+          "key": "secondary",
+          "value": "#8B5CF6"
+        },
+        {
+          "key": "surface",
+          "value": "#080B16"
+        },
+        {
+          "key": "paper",
+          "value": "#11172A"
+        },
+        {
+          "key": "ink",
+          "value": "#F5F8FF"
+        },
+        {
+          "key": "muted",
+          "value": "#9AA7C7"
+        }
+      ],
+      "keywords": [
+        "deep space blue",
+        "aurora mint",
+        "violet signal",
+        "spatial computing",
+        "intelligent experience"
+      ],
+      "images": []
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#1D2BFF"
+      },
+      {
+        "key": "accent",
+        "value": "#7CF7D4"
+      },
+      {
+        "key": "secondary",
+        "value": "#8B5CF6"
+      },
+      {
+        "key": "surface",
+        "value": "#080B16"
+      },
+      {
+        "key": "paper",
+        "value": "#11172A"
+      },
+      {
+        "key": "ink",
+        "value": "#F5F8FF"
+      },
+      {
+        "key": "muted",
+        "value": "#9AA7C7"
+      }
+    ],
+    "keywords": [
+      "deep space blue",
+      "aurora mint",
+      "violet signal",
+      "spatial computing",
+      "intelligent experience"
+    ],
+    "images": []
+  },
+  "editablePaths": [
+    "Nibiru/README.md"
+  ],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/Nibiru",
+    "folder": "Nibiru"
+  }
+}

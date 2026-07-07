@@ -152,14 +152,25 @@
     "en": ""
   },
   "version": {
-    "hash": "4efc463d2f51813f4aae7c47083471b15ca8d1bf",
-    "shortHash": "4efc463",
-    "date": "2026-07-08T03:23:22+08:00",
-    "message": "Add Zhongzhiyou Group IP",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4efc463d2f51813f4aae7c47083471b15ca8d1bf"
+    "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
+    "shortHash": "4c1ae93",
+    "date": "2026-07-08T03:28:03+08:00",
+    "message": "Update OPC Global primary language",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb"
   },
   "historyUrl": "api/history/manaendless.json",
   "history": [
+    {
+      "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
+      "shortHash": "4c1ae93",
+      "date": "2026-07-08T03:28:03+08:00",
+      "message": "Update OPC Global primary language",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb",
+      "sourcePaths": [
+        "config/brands.json",
+        "MANAENDLESS"
+      ]
+    },
     {
       "hash": "4efc463d2f51813f4aae7c47083471b15ca8d1bf",
       "shortHash": "4efc463",
@@ -210,17 +221,6 @@
       "date": "2026-07-05T10:24:24+08:00",
       "message": "Add Sanctem IP and brand logos",
       "url": "https://github.com/fengurt/tableai_designaha/commit/067a47c76f1cb812b607335089911c282f4d8f78",
-      "sourcePaths": [
-        "config/brands.json",
-        "MANAENDLESS"
-      ]
-    },
-    {
-      "hash": "a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
-      "shortHash": "a0e6ecd",
-      "date": "2026-07-04T22:02:17+08:00",
-      "message": "Add Sidera reference notes",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
       "sourcePaths": [
         "config/brands.json",
         "MANAENDLESS"
