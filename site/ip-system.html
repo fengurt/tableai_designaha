@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Brand Guidelines</title>
+  <title>IP进化论 | 岁知社 IPTrust</title>
+  <meta name="description" content="IP进化论把品牌架构、内核、表达、资产与治理连接成可持续更新的系统。">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site-25149f2-be7ea76b.css">
 </head>
-<body>
+<body class="ip-system-page">
   <header class="topbar">
     <a class="brand" href="./" data-i18n="hub.name">岁知社</a>
     <div class="topbar-search" role="search">
@@ -24,10 +25,7 @@
   </header>
   <section class="api-connect-panel hidden" id="apiConnectPanel" aria-live="polite">
     <div class="api-connect-head">
-      <div>
-        <p class="eyebrow">API</p>
-        <h2 data-i18n="api.title">连接 System API</h2>
-      </div>
+      <div><p class="eyebrow">API</p><h2 data-i18n="api.title">连接 System API</h2></div>
       <button class="icon-copy" type="button" id="apiConnectClose" data-icon-only="true" aria-label="Close">×</button>
     </div>
     <form class="api-connect-form" id="apiConnectForm" autocomplete="on">
@@ -50,7 +48,27 @@
       <pre class="api-resource-summary hidden" id="apiResourceSummary"></pre>
     </div>
   </section>
-  <main id="brandPage" class="brand-page" aria-live="polite"></main>
+  <main class="ip-system-main">
+    <section class="ip-system-hero">
+      <p class="eyebrow" data-i18n="evolution.label">IP进化论</p>
+      <h1 data-i18n="evolution.pageTitle">品牌不是一套静态规范。</h1>
+      <p data-i18n="evolution.pageLead">它是一个可管理、可调用、可持续更新的系统。</p>
+      <div class="ip-system-actions">
+        <a class="button" href="ip_sys.md" data-i18n="evolution.readFramework">读取完整框架</a>
+        <a class="button ghost" href="./#brandGrid" data-i18n="evolution.applyToIp">选择一个 IP</a>
+      </div>
+    </section>
+    <section class="ip-system-layers" aria-label="IP Evolution layers">
+      <article><strong data-i18n="evolution.architecture">架构</strong><p data-i18n="evolution.architectureBody">先判断品牌关系与命名层级。</p></article>
+      <article><strong data-i18n="evolution.core">内核</strong><p data-i18n="evolution.coreBody">明确使命、受众、定位与主张。</p></article>
+      <article><strong data-i18n="evolution.expression">表达</strong><p data-i18n="evolution.expressionBody">统一语言、视觉、声音与行为。</p></article>
+      <article><strong data-i18n="evolution.assets">资产</strong><p data-i18n="evolution.assetsBody">把系统转化为人和 Agent 可调用的资产。</p></article>
+      <article><strong data-i18n="evolution.governance">治理</strong><p data-i18n="evolution.governanceBody">记录版本、衡量偏差并持续回修。</p></article>
+    </section>
+    <section class="ip-system-loop">
+      <p data-i18n="evolution.loop">识别品牌，建立系统，生成资产，回收反馈，再次进化。</p>
+    </section>
+  </main>
   <script src="assets/site-25149f2-be7ea76b.js" type="module"></script>
 </body>
 </html>

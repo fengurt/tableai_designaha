@@ -777,6 +777,22 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       </div>
       <div class="hero-index" id="heroIndex" aria-live="polite"></div>
     </section>
+    <section class="evolution-entry" id="ip-evolution" aria-labelledby="evolutionTitle">
+      <a href="ip-system.html" class="evolution-link">
+        <div class="evolution-copy">
+          <p class="eyebrow" data-i18n="evolution.label">IP进化论</p>
+          <h2 id="evolutionTitle" data-i18n="evolution.title">让品牌成为可管理的系统。</h2>
+        </div>
+        <div class="evolution-path" aria-label="IP Evolution framework">
+          <span data-i18n="evolution.architecture">架构</span>
+          <span data-i18n="evolution.core">内核</span>
+          <span data-i18n="evolution.expression">表达</span>
+          <span data-i18n="evolution.assets">资产</span>
+          <span data-i18n="evolution.governance">治理</span>
+        </div>
+        <span class="evolution-open" aria-hidden="true">&#8599;</span>
+      </a>
+    </section>
     <section class="entry-portals" aria-label="IPTrust entries">
       <article class="portal" id="agent-entry">
         <p class="eyebrow">Agent</p>
@@ -807,6 +823,81 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       <span id="brandCount" class="count-pill"></span>
     </section>
     <section class="ip-grid" id="brandGrid" aria-live="polite"></section>
+  </main>
+  <script src="${siteJsPath}" type="module"></script>
+</body>
+</html>`);
+
+await writeFile(join(siteDir, "ip-system.html"), html`<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IP进化论 | ${hubName}</title>
+  <meta name="description" content="IP进化论把品牌架构、内核、表达、资产与治理连接成可持续更新的系统。">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="${siteCssPath}">
+</head>
+<body class="ip-system-page">
+  <header class="topbar">
+    <a class="brand" href="./" data-i18n="hub.name">${hubNameCn}</a>
+    <div class="topbar-search" role="search">
+      <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
+      <div class="global-results" id="globalResults" aria-live="polite"></div>
+    </div>
+    <nav class="top-actions" aria-label="Primary actions">
+      <button class="api-link" type="button" id="apiConnectButton" aria-label="API connect"><span class="api-dot"></span>API</button>
+      <a href="./#agent-entry" data-i18n="portal.agentNav">Agent</a>
+      <a href="./#partner-entry" data-i18n="portal.partnerNav">Partner</a>
+      <a href="./#collab-entry" data-i18n="portal.collabNav">Collab</a>
+      <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language"><span class="is-active">CN</span><span class="lang-divider">/</span><span>EN</span></button>
+    </nav>
+  </header>
+  <section class="api-connect-panel hidden" id="apiConnectPanel" aria-live="polite">
+    <div class="api-connect-head">
+      <div><p class="eyebrow">API</p><h2 data-i18n="api.title">连接 System API</h2></div>
+      <button class="icon-copy" type="button" id="apiConnectClose" data-icon-only="true" aria-label="Close">×</button>
+    </div>
+    <form class="api-connect-form" id="apiConnectForm" autocomplete="on">
+      <label><span data-i18n="api.key">System API Key</span><input id="apiAdminKey" name="admin_api_key" type="password" autocomplete="current-password" placeholder="System API Key" spellcheck="false"></label>
+      <button class="portal-action" type="submit" id="apiConnectSubmit" data-i18n="api.connect">Connect</button>
+    </form>
+    <p class="portal-status" id="apiConnectStatus"></p>
+    <div class="api-ops hidden" id="apiConnectedOps">
+      <strong class="connected-pill" data-i18n="api.connected">Connected</strong>
+      <p class="muted" id="apiScopeText"></p>
+      <div class="portal-links">
+        <a href="admin.html" data-i18n="api.openAdmin">Admin</a>
+        <a href="api/manifest.json">Manifest</a>
+        <a href="api/brands.json">Brands</a>
+        <a href="api/search.json">Search</a>
+        <a href="api/media/">Media</a>
+        <button class="api-copy" type="button" id="apiResourcesButton" data-i18n="api.resources">Resources</button>
+        <button class="api-copy" type="button" data-api-copy="manifest" data-i18n="api.copyCurl">Copy cURL</button>
+      </div>
+      <pre class="api-resource-summary hidden" id="apiResourceSummary"></pre>
+    </div>
+  </section>
+  <main class="ip-system-main">
+    <section class="ip-system-hero">
+      <p class="eyebrow" data-i18n="evolution.label">IP进化论</p>
+      <h1 data-i18n="evolution.pageTitle">品牌不是一套静态规范。</h1>
+      <p data-i18n="evolution.pageLead">它是一个可管理、可调用、可持续更新的系统。</p>
+      <div class="ip-system-actions">
+        <a class="button" href="ip_sys.md" data-i18n="evolution.readFramework">读取完整框架</a>
+        <a class="button ghost" href="./#brandGrid" data-i18n="evolution.applyToIp">选择一个 IP</a>
+      </div>
+    </section>
+    <section class="ip-system-layers" aria-label="IP Evolution layers">
+      <article><strong data-i18n="evolution.architecture">架构</strong><p data-i18n="evolution.architectureBody">先判断品牌关系与命名层级。</p></article>
+      <article><strong data-i18n="evolution.core">内核</strong><p data-i18n="evolution.coreBody">明确使命、受众、定位与主张。</p></article>
+      <article><strong data-i18n="evolution.expression">表达</strong><p data-i18n="evolution.expressionBody">统一语言、视觉、声音与行为。</p></article>
+      <article><strong data-i18n="evolution.assets">资产</strong><p data-i18n="evolution.assetsBody">把系统转化为人和 Agent 可调用的资产。</p></article>
+      <article><strong data-i18n="evolution.governance">治理</strong><p data-i18n="evolution.governanceBody">记录版本、衡量偏差并持续回修。</p></article>
+    </section>
+    <section class="ip-system-loop">
+      <p data-i18n="evolution.loop">识别品牌，建立系统，生成资产，回收反馈，再次进化。</p>
+    </section>
   </main>
   <script src="${siteJsPath}" type="module"></script>
 </body>
@@ -1338,6 +1429,70 @@ p { line-height: 1.65; }
   padding: 10px 0 18px;
   border-top: 1px solid var(--line);
 }
+.evolution-entry {
+  padding: 6px 0 34px;
+}
+.evolution-link {
+  display: grid;
+  grid-template-columns: minmax(220px, .9fr) minmax(360px, 1.1fr) auto;
+  align-items: center;
+  gap: clamp(22px, 4vw, 58px);
+  min-height: 124px;
+  padding: 22px 0;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+  transition: color .2s ease, padding .28s cubic-bezier(.2,.8,.2,1);
+}
+.evolution-link:hover,
+.evolution-link:focus-visible {
+  color: var(--blue);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.evolution-copy h2 {
+  max-width: 440px;
+  margin: 7px 0 0;
+  font-size: clamp(26px, 3vw, 38px);
+}
+.evolution-copy .eyebrow { margin: 0; }
+.evolution-path {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: center;
+  gap: 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 720;
+}
+.evolution-path span {
+  position: relative;
+  padding-right: 18px;
+  white-space: nowrap;
+}
+.evolution-path span:not(:last-child)::after {
+  content: "/";
+  position: absolute;
+  right: 7px;
+  color: var(--line);
+}
+.evolution-open {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 20px;
+  transition: transform .2s ease, background .2s ease, color .2s ease;
+}
+.evolution-link:hover .evolution-open,
+.evolution-link:focus-visible .evolution-open {
+  transform: translate(2px, -2px);
+  background: var(--blue);
+  color: var(--paper);
+}
 .entry-portals {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1442,6 +1597,52 @@ p { line-height: 1.65; }
   background: rgba(255, 254, 250, .7);
 }
 .portal-links a:hover { border-color: var(--blue); }
+.ip-system-main { padding-bottom: 90px; }
+.ip-system-hero {
+  min-height: 58vh;
+  display: grid;
+  align-content: end;
+  padding: clamp(64px, 10vw, 128px) 0 clamp(36px, 6vw, 72px);
+  border-bottom: 1px solid var(--ink);
+}
+.ip-system-hero h1 {
+  max-width: 1050px;
+  margin: 12px 0 18px;
+  font-size: clamp(48px, 6.2vw, 78px);
+}
+.ip-system-hero > p:not(.eyebrow) {
+  max-width: 620px;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(18px, 2vw, 24px);
+}
+.ip-system-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.ip-system-layers { display: grid; }
+.ip-system-layers article {
+  display: grid;
+  grid-template-columns: minmax(150px, .35fr) minmax(0, 1fr);
+  gap: 30px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+.ip-system-layers strong { font-size: clamp(23px, 3vw, 34px); }
+.ip-system-layers p {
+  align-self: center;
+  max-width: 620px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+.ip-system-loop {
+  padding: clamp(54px, 8vw, 100px) 0 0 clamp(0px, 14vw, 170px);
+}
+.ip-system-loop p {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 760;
+  line-height: 1.15;
+}
 .history-panel {
   display: grid;
   grid-template-columns: minmax(220px, .44fr) minmax(0, 1fr);
@@ -2124,6 +2325,12 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .hero-index-row { grid-template-columns: minmax(0, 1fr) auto; }
   .hero-index-colors { display: none; }
   .entry-portals { grid-template-columns: 1fr; }
+  .evolution-link { grid-template-columns: 1fr auto; gap: 18px; }
+  .evolution-path { grid-column: 1 / -1; grid-row: 2; grid-template-columns: repeat(5, auto); justify-content: space-between; }
+  .evolution-open { grid-column: 2; grid-row: 1; }
+  .ip-system-hero { min-height: auto; }
+  .ip-system-layers article { grid-template-columns: 1fr; gap: 8px; }
+  .ip-system-loop { padding-left: 0; }
   .collab-card { grid-template-columns: 1fr; align-items: start; }
   .history-panel { grid-template-columns: 1fr; }
   .version-item { grid-template-columns: 70px minmax(0, 1fr); }
@@ -2235,6 +2442,23 @@ const i18n = {
     "portal.agentNav": "Agent",
     "portal.partnerNav": "合伙人",
     "portal.collabNav": "合作",
+    "evolution.label": "IP进化论",
+    "evolution.title": "让品牌成为可管理的系统。",
+    "evolution.pageTitle": "品牌不是一套静态规范。",
+    "evolution.pageLead": "它是一个可管理、可调用、可持续更新的系统。",
+    "evolution.architecture": "架构",
+    "evolution.core": "内核",
+    "evolution.expression": "表达",
+    "evolution.assets": "资产",
+    "evolution.governance": "治理",
+    "evolution.architectureBody": "先判断品牌关系与命名层级。",
+    "evolution.coreBody": "明确使命、受众、定位与主张。",
+    "evolution.expressionBody": "统一语言、视觉、声音与行为。",
+    "evolution.assetsBody": "把系统转化为人和 Agent 可调用的资产。",
+    "evolution.governanceBody": "记录版本、衡量偏差并持续回修。",
+    "evolution.readFramework": "读取完整框架",
+    "evolution.applyToIp": "选择一个 IP",
+    "evolution.loop": "识别品牌，建立系统，生成资产，回收反馈，再次进化。",
     "api.title": "System API",
     "api.key": "System API Key",
     "api.connect": "Connect",
@@ -2363,6 +2587,23 @@ const i18n = {
     "portal.agentNav": "Agent",
     "portal.partnerNav": "Partner",
     "portal.collabNav": "Collab",
+    "evolution.label": "IP Evolution",
+    "evolution.title": "Turn a brand into a managed system.",
+    "evolution.pageTitle": "A brand is not a static guideline.",
+    "evolution.pageLead": "It is a system that can be managed, called, and continuously updated.",
+    "evolution.architecture": "Architecture",
+    "evolution.core": "Core",
+    "evolution.expression": "Expression",
+    "evolution.assets": "Assets",
+    "evolution.governance": "Governance",
+    "evolution.architectureBody": "Define brand relationships and naming hierarchy.",
+    "evolution.coreBody": "Clarify mission, audience, positioning, and proposition.",
+    "evolution.expressionBody": "Align language, visual, sound, and behavior.",
+    "evolution.assetsBody": "Create assets that people and agents can call.",
+    "evolution.governanceBody": "Track versions, measure gaps, and keep improving.",
+    "evolution.readFramework": "Read the framework",
+    "evolution.applyToIp": "Choose an IP",
+    "evolution.loop": "Identify the brand. Build the system. Create assets. Learn from feedback. Evolve again.",
     "api.title": "System API",
     "api.key": "System API Key",
     "api.connect": "Connect",
