@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "4e6ab2e-877e5164";
+const BUILD_VERSION = "ed33a8b-7f718a6e";
 
 const i18n = {
   cn: {
@@ -94,8 +94,8 @@ const i18n = {
     "portal.collabNav": "合作",
     "evolution.label": "IP进化论",
     "evolution.title": "让品牌成为可管理的系统。",
-    "evolution.pageTitle": "品牌不是一套静态规范。",
-    "evolution.pageLead": "它是一个可管理、可调用、可持续更新的系统。",
+    "evolution.pageTitle": "让品牌持续进化。",
+    "evolution.pageLead": "架构、内核、表达、资产与治理，构成可管理、可调用、可持续更新的闭环。",
     "evolution.architecture": "架构",
     "evolution.core": "内核",
     "evolution.expression": "表达",
@@ -239,8 +239,8 @@ const i18n = {
     "portal.collabNav": "Collab",
     "evolution.label": "IP Evolution",
     "evolution.title": "Turn a brand into a managed system.",
-    "evolution.pageTitle": "A brand is not a static guideline.",
-    "evolution.pageLead": "It is a system that can be managed, called, and continuously updated.",
+    "evolution.pageTitle": "Build a brand that keeps evolving.",
+    "evolution.pageLead": "Architecture, core, expression, assets, and governance form a managed, callable, continuously updated loop.",
     "evolution.architecture": "Architecture",
     "evolution.core": "Core",
     "evolution.expression": "Expression",

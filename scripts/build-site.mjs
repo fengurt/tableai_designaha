@@ -886,8 +886,8 @@ await writeFile(join(siteDir, "ip-evolution"), html`<!doctype html>
   <main class="ip-system-main">
     <section class="ip-system-hero">
       <p class="eyebrow" data-i18n="evolution.label">IP进化论</p>
-      <h1 data-i18n="evolution.pageTitle">品牌不是一套静态规范。</h1>
-      <p data-i18n="evolution.pageLead">它是一个可管理、可调用、可持续更新的系统。</p>
+      <h1 data-i18n="evolution.pageTitle">让品牌持续进化。</h1>
+      <p data-i18n="evolution.pageLead">架构、内核、表达、资产与治理，构成可管理、可调用、可持续更新的闭环。</p>
       <div class="ip-system-actions">
         <a class="button" href="ip_sys.md" data-i18n="evolution.readFramework">读取完整框架</a>
         <a class="button ghost" href="./#brandGrid" data-i18n="evolution.applyToIp">选择一个 IP</a>
@@ -2457,8 +2457,8 @@ const i18n = {
     "portal.collabNav": "合作",
     "evolution.label": "IP进化论",
     "evolution.title": "让品牌成为可管理的系统。",
-    "evolution.pageTitle": "品牌不是一套静态规范。",
-    "evolution.pageLead": "它是一个可管理、可调用、可持续更新的系统。",
+    "evolution.pageTitle": "让品牌持续进化。",
+    "evolution.pageLead": "架构、内核、表达、资产与治理，构成可管理、可调用、可持续更新的闭环。",
     "evolution.architecture": "架构",
     "evolution.core": "内核",
     "evolution.expression": "表达",
@@ -2602,8 +2602,8 @@ const i18n = {
     "portal.collabNav": "Collab",
     "evolution.label": "IP Evolution",
     "evolution.title": "Turn a brand into a managed system.",
-    "evolution.pageTitle": "A brand is not a static guideline.",
-    "evolution.pageLead": "It is a system that can be managed, called, and continuously updated.",
+    "evolution.pageTitle": "Build a brand that keeps evolving.",
+    "evolution.pageLead": "Architecture, core, expression, assets, and governance form a managed, callable, continuously updated loop.",
     "evolution.architecture": "Architecture",
     "evolution.core": "Core",
     "evolution.expression": "Expression",

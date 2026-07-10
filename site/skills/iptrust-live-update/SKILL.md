@@ -40,6 +40,7 @@ Prefer the API JSON over stale memory. If the website is open, use the copy butt
 - Keep card labels short: IP name, secondary name, status, guide count, API, copy.
 - Do not expose prompt text on homepage cards.
 - Avoid placeholder copy in public intros. If a guide has no useful intro, write a concise bilingual README first, then rebuild.
+- State positioning, capabilities, value, and boundaries directly. Avoid formulaic contrast copy that negates one framing before asserting another.
 
 ## Checks
 

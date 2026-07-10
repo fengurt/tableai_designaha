@@ -13,11 +13,11 @@
     "KiND/KiND Design.md"
   ],
   "latest": {
-    "hash": "9e33619ad95856c977f8803517f325304d678821",
-    "shortHash": "9e33619",
-    "date": "2026-07-08T03:55:08+08:00",
-    "message": "Add Nibiru and Shenzhen Microsoft Global Center IPs",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/9e33619ad95856c977f8803517f325304d678821",
+    "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+    "shortHash": "ed33a8b",
+    "date": "2026-07-10T18:44:20+08:00",
+    "message": "Add Shanrenjing journey safety IP",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
     "sourcePaths": [
       "config/brands.json",
       "KiND",
@@ -25,6 +25,30 @@
     ]
   },
   "versions": [
+    {
+      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "shortHash": "ed33a8b",
+      "date": "2026-07-10T18:44:20+08:00",
+      "message": "Add Shanrenjing journey safety IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "sourcePaths": [
+        "config/brands.json",
+        "KiND",
+        "KiND/KiND Design.md"
+      ]
+    },
+    {
+      "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "shortHash": "cd0ea58",
+      "date": "2026-07-08T04:12:48+08:00",
+      "message": "Refine hero index labels",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "sourcePaths": [
+        "config/brands.json",
+        "KiND",
+        "KiND/KiND Design.md"
+      ]
+    },
     {
       "hash": "9e33619ad95856c977f8803517f325304d678821",
       "shortHash": "9e33619",
@@ -235,30 +259,6 @@
       "date": "2026-06-07T07:07:20+08:00",
       "message": "KiND: add semantic token layer, full dark mode, and Tailwind preset",
       "url": "https://github.com/fengurt/tableai_designaha/commit/b8f0d645ad66c1de2416787e22f9ae178a249cc2",
-      "sourcePaths": [
-        "config/brands.json",
-        "KiND",
-        "KiND/KiND Design.md"
-      ]
-    },
-    {
-      "hash": "c36a5d620901d32a7740f66cc6c3c86d5ff2cd49",
-      "shortHash": "c36a5d6",
-      "date": "2026-06-07T06:42:32+08:00",
-      "message": "Normalize brand folder names; add KiND component CSS and preview",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/c36a5d620901d32a7740f66cc6c3c86d5ff2cd49",
-      "sourcePaths": [
-        "config/brands.json",
-        "KiND",
-        "KiND/KiND Design.md"
-      ]
-    },
-    {
-      "hash": "962102876c663969b06adbbc32f7bd4694df6dc8",
-      "shortHash": "9621028",
-      "date": "2026-06-07T06:33:23+08:00",
-      "message": "Add agent integration for KiND: DTCG tokens, Skill, and MCP scaffold",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/962102876c663969b06adbbc32f7bd4694df6dc8",
       "sourcePaths": [
         "config/brands.json",
         "KiND",

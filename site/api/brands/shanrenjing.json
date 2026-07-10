@@ -15,8 +15,8 @@
     "en": "Personnel positioning, risk alerts, emergency rescue, journey safety cloud, smart terminals, coverage extension, insurance risk control, regulatory dashboards, and expert-led operations."
   },
   "notes": {
-    "zh": "品牌定位不是普通定位手环，也不是单一景区小程序。手环是入口，平台是产品本体，救援协同与责任闭环是核心价值。对外避免使用“监控”“管控游客”“实时盯人”，统一使用守护、保障、安全协同、应急响应、行程保障、风险预警、救援闭环与保险保障。",
-    "en": "This is not a basic tracking wristband or a single scenic-area app. The wearable is the entry point, the platform is the product, and rescue coordination plus an accountable response loop form the core value. Public language should emphasize protection, safety coordination, emergency response, risk alerts, and rescue assurance rather than surveillance."
+    "zh": "山人境定位为行程级人员安全基础设施。手环承担行程入口，平台连接定位、预警、调度、救援、留痕与理赔，救援协同和责任闭环构成核心价值。对外统一使用守护、保障、安全协同、应急响应、行程保障、风险预警、救援闭环与保险保障，避免使用“监控”“管控游客”“实时盯人”。",
+    "en": "Shanrenjing is journey-level personnel safety infrastructure. The wearable opens each journey, while the platform connects positioning, alerts, dispatch, rescue, records, and claims into an accountable response loop. Public language emphasizes protection, safety coordination, emergency response, risk alerts, and rescue assurance while avoiding surveillance framing."
   },
   "primaryGuide": "Shanrenjing/README.md",
   "theme": {
@@ -107,8 +107,8 @@
       "en": "Personnel positioning, risk alerts, emergency rescue, journey safety cloud, smart terminals, coverage extension, insurance risk control, regulatory dashboards, and expert-led operations."
     },
     "notes": {
-      "zh": "品牌定位不是普通定位手环，也不是单一景区小程序。手环是入口，平台是产品本体，救援协同与责任闭环是核心价值。对外避免使用“监控”“管控游客”“实时盯人”，统一使用守护、保障、安全协同、应急响应、行程保障、风险预警、救援闭环与保险保障。",
-      "en": "This is not a basic tracking wristband or a single scenic-area app. The wearable is the entry point, the platform is the product, and rescue coordination plus an accountable response loop form the core value. Public language should emphasize protection, safety coordination, emergency response, risk alerts, and rescue assurance rather than surveillance."
+      "zh": "山人境定位为行程级人员安全基础设施。手环承担行程入口，平台连接定位、预警、调度、救援、留痕与理赔，救援协同和责任闭环构成核心价值。对外统一使用守护、保障、安全协同、应急响应、行程保障、风险预警、救援闭环与保险保障，避免使用“监控”“管控游客”“实时盯人”。",
+      "en": "Shanrenjing is journey-level personnel safety infrastructure. The wearable opens each journey, while the platform connects positioning, alerts, dispatch, rescue, records, and claims into an accountable response loop. Public language emphasizes protection, safety coordination, emergency response, risk alerts, and rescue assurance while avoiding surveillance framing."
     },
     "classification": {
       "tracks": {
@@ -180,14 +180,26 @@
     }
   },
   "version": {
-    "hash": "4e6ab2e053120e68f126313d2086b9b75778e321",
-    "shortHash": "4e6ab2e",
-    "date": "2026-07-10T18:11:43+08:00",
-    "message": "Serve IP Evolution as an extensionless page",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4e6ab2e053120e68f126313d2086b9b75778e321"
+    "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+    "shortHash": "ed33a8b",
+    "date": "2026-07-10T18:44:20+08:00",
+    "message": "Add Shanrenjing journey safety IP",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c"
   },
   "historyUrl": "api/history/shanrenjing.json",
   "history": [
+    {
+      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "shortHash": "ed33a8b",
+      "date": "2026-07-10T18:44:20+08:00",
+      "message": "Add Shanrenjing journey safety IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "sourcePaths": [
+        "config/brands.json",
+        "Shanrenjing",
+        "Shanrenjing/README.md"
+      ]
+    },
     {
       "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
       "shortHash": "cd0ea58",
@@ -247,18 +259,6 @@
         "Shanrenjing",
         "Shanrenjing/README.md"
       ]
-    },
-    {
-      "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
-      "shortHash": "3e24857",
-      "date": "2026-07-06T12:50:10+08:00",
-      "message": "Add IP classifications and iNucleus",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a",
-      "sourcePaths": [
-        "config/brands.json",
-        "Shanrenjing",
-        "Shanrenjing/README.md"
-      ]
     }
   ],
   "url": "brand.html?brand=shanrenjing",
@@ -270,8 +270,8 @@
       "title": "README",
       "format": "md",
       "primary": true,
-      "excerpt": "山人境 山人境是中文优先的行程级人员安全基础设施 IP。 它面向景区、户外活动、研学营地、大型赛事、企业团建、边境巡护与低信号区域作业场景，将人员定位、风险预警、快速救援、保险风控、政府监管与专家带队连接成一个可验证、可复盘的安全闭环。 核心定位 山人境不是普通定位手环，也不是单一景区小程序。 手环只是入口，平台才是产品本体。定位是基础能力，救援协同与责任闭环是商业护城河。 核心价值： 可定位 可预警 可调度 可救援 可留痕 可理赔 可监管 可复盘 品牌主张 每一次出发，都应该被星空守护。 政企表达：以北斗为核心的位置安全基础设施，提升文旅、研学、户外活动与大型活动的人员安全治理能力。 用户表达：扫码戴上，出发有人看得见；遇险一键呼救，救援知道你在哪。 保险表达：把行程轨迹、设备状态、报警记录、救援响应和事故复盘转化为可核验的风险与理赔证据链。 专家带队表达：专家不只带路，还能看队伍、看风险、看体力、看偏离、看失联，把经验转化为",
-      "text": "# 山人境\n\n山人境是中文优先的行程级人员安全基础设施 IP。\n\n它面向景区、户外活动、研学营地、大型赛事、企业团建、边境巡护与低信号区域作业场景，将人员定位、风险预警、快速救援、保险风控、政府监管与专家带队连接成一个可验证、可复盘的安全闭环。\n\n## 核心定位\n\n山人境不是普通定位手环，也不是单一景区小程序。\n\n手环只是入口，平台才是产品本体。定位是基础能力，救援协同与责任闭环是商业护城河。\n\n核心价值：\n\n- 可定位\n- 可预警\n- 可调度\n- 可救援\n- 可留痕\n- 可理赔\n- 可监管\n- 可复盘\n\n## 品牌主张\n\n每一次出发，都应该被星空守护。\n\n政企表达：以北斗为核心的位置安全基础设施，提升文旅、研学、户外活动与大型活动的人员安全治理能力。\n\n用户表达：扫码戴上，出发有人看得见；遇险一键呼救，救援知道你在哪。\n\n保险表达：把行程轨迹、设备状态、报警记录、救援响应和事故复盘转化为可核验的风险与理赔证据链。\n\n专家带队表达：专家不只带路，还能看队伍、看风险、看体力、看偏离、看失联，把经验转化为流程。\n\n## 产品系统\n\n| 层级 | 山人境产品名 | 作用 |\n|---|---|---|\n| 平台系统 | 山人境安全云 | 监管、运营、救援、保险与专家协同 |\n| 手环终端 | 山人境护腕 H 系列 | 游客、学员、队员与工作人员的行程绑定终端 |\n| 救援信标 | 山人境信标 R 系列 | 专家、救援队与无网区域巡护人员使用 |\n| 补盲基站 | 山人境星台 G 系列 | 景区、营地、山地路线与赛事路线通信补盲 |\n| 专家系统 | 山人境专家套件 | 领队、教练与研学导师的队伍安全工具 |\n| 保险模块 | 山人境风险与理赔套件 | 风险证据、事故复盘与理赔协同 |\n\n## 技术原则\n\n- 每次扫码绑定一次行程，设备、人员与责任关系随行程建立和结束。\n- 中国场景采用北斗优先、多星座兼容的定位路线。\n- 蜂窝网络承担常规通信，LoRa 或 Mesh 补盲，北斗短报文或卫星通信补充无地面网络救援链路。\n- 后台统一连接运营、监管、救援、保险与专家带队流程。\n- 所有报警、响应、调度与复盘形成可核验的事件时间线。\n\n## 品牌语气\n\n推荐使用：\n\n- 守护\n- 保障\n- 安全协同\n- 应急响应\n- 行程保障\n- 风险预警\n- 救援闭环\n- 保险保障\n\n避免使用：\n\n- 监控\n- 管控游客\n- 实时盯人\n\n山人境应被理解为行程安全保障，而不是对人的监视。\n\n## 视觉方向\n\n- 山林绿 `#173F38`：稳定、环境与长期守护\n- 星芒金 `#D5A53B`：求救、坐标与关键提醒\n- 信号蓝 `#3E7890`：定位、通信与基础设施\n- 雾白 `#FBFCF9`：清晰、可信与公共服务界面\n\n视觉表达应克制、可靠、户外但不探险化，具有基础设施与应急系统的专业感。避免军事化、监视器意象和高饱和警报色滥用。\n\n## 主语言\n\n中文优先。主名称始终显示为「山人境」，英文对照为 `Shanrenjing`。\n"
+      "excerpt": "山人境 山人境是中文优先的行程级人员安全基础设施 IP。 它面向景区、户外活动、研学营地、大型赛事、企业团建、边境巡护与低信号区域作业场景，将人员定位、风险预警、快速救援、保险风控、政府监管与专家带队连接成一个可验证、可复盘的安全闭环。 核心定位 山人境以行程级人员安全基础设施为核心定位，覆盖智能终端、通信链路、运营平台与救援协同。 手环承担行程入口，平台连接完整安全流程。定位提供基础能力，救援协同与责任闭环构成商业护城河。 核心价值： 可定位 可预警 可调度 可救援 可留痕 可理赔 可监管 可复盘 品牌主张 每一次出发，都应该被星空守护。 政企表达：以北斗为核心的位置安全基础设施，提升文旅、研学、户外活动与大型活动的人员安全治理能力。 用户表达：扫码戴上，出发有人看得见；遇险一键呼救，救援知道你在哪。 保险表达：把行程轨迹、设备状态、报警记录、救援响应和事故复盘转化为可核验的风险与理赔证据链。 专家带队表达：专家带队覆盖路线、",
+      "text": "# 山人境\n\n山人境是中文优先的行程级人员安全基础设施 IP。\n\n它面向景区、户外活动、研学营地、大型赛事、企业团建、边境巡护与低信号区域作业场景，将人员定位、风险预警、快速救援、保险风控、政府监管与专家带队连接成一个可验证、可复盘的安全闭环。\n\n## 核心定位\n\n山人境以行程级人员安全基础设施为核心定位，覆盖智能终端、通信链路、运营平台与救援协同。\n\n手环承担行程入口，平台连接完整安全流程。定位提供基础能力，救援协同与责任闭环构成商业护城河。\n\n核心价值：\n\n- 可定位\n- 可预警\n- 可调度\n- 可救援\n- 可留痕\n- 可理赔\n- 可监管\n- 可复盘\n\n## 品牌主张\n\n每一次出发，都应该被星空守护。\n\n政企表达：以北斗为核心的位置安全基础设施，提升文旅、研学、户外活动与大型活动的人员安全治理能力。\n\n用户表达：扫码戴上，出发有人看得见；遇险一键呼救，救援知道你在哪。\n\n保险表达：把行程轨迹、设备状态、报警记录、救援响应和事故复盘转化为可核验的风险与理赔证据链。\n\n专家带队表达：专家带队覆盖路线、队伍、风险、体力、偏离与失联状态，把经验转化为流程。\n\n## 产品系统\n\n| 层级 | 山人境产品名 | 作用 |\n|---|---|---|\n| 平台系统 | 山人境安全云 | 监管、运营、救援、保险与专家协同 |\n| 手环终端 | 山人境护腕 H 系列 | 游客、学员、队员与工作人员的行程绑定终端 |\n| 救援信标 | 山人境信标 R 系列 | 专家、救援队与无网区域巡护人员使用 |\n| 补盲基站 | 山人境星台 G 系列 | 景区、营地、山地路线与赛事路线通信补盲 |\n| 专家系统 | 山人境专家套件 | 领队、教练与研学导师的队伍安全工具 |\n| 保险模块 | 山人境风险与理赔套件 | 风险证据、事故复盘与理赔协同 |\n\n## 技术原则\n\n- 每次扫码绑定一次行程，设备、人员与责任关系随行程建立和结束。\n- 中国场景采用北斗优先、多星座兼容的定位路线。\n- 蜂窝网络承担常规通信，LoRa 或 Mesh 补盲，北斗短报文或卫星通信补充无地面网络救援链路。\n- 后台统一连接运营、监管、救援、保险与专家带队流程。\n- 所有报警、响应、调度与复盘形成可核验的事件时间线。\n\n## 品牌语气\n\n推荐使用：\n\n- 守护\n- 保障\n- 安全协同\n- 应急响应\n- 行程保障\n- 风险预警\n- 救援闭环\n- 保险保障\n\n避免使用：\n\n- 监控\n- 管控游客\n- 实时盯人\n\n山人境的公众认知应聚焦行程安全保障，避免任何监视感。\n\n## 视觉方向\n\n- 山林绿 `#173F38`：稳定、环境与长期守护\n- 星芒金 `#D5A53B`：求救、坐标与关键提醒\n- 信号蓝 `#3E7890`：定位、通信与基础设施\n- 雾白 `#FBFCF9`：清晰、可信与公共服务界面\n\n视觉表达应克制、可靠、户外但不探险化，具有基础设施与应急系统的专业感。避免军事化、监视器意象和高饱和警报色滥用。\n\n## 主语言\n\n中文优先。主名称始终显示为「山人境」，英文对照为 `Shanrenjing`。\n"
     }
   ],
   "tokens": [],

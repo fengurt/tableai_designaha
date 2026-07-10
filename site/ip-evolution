@@ -7,7 +7,7 @@
   <title>IP进化论 | 岁知社 IPTrust</title>
   <meta name="description" content="IP进化论把品牌架构、内核、表达、资产与治理连接成可持续更新的系统。">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site-4e6ab2e-877e5164.css">
+  <link rel="stylesheet" href="assets/site-ed33a8b-7f718a6e.css">
 </head>
 <body class="ip-system-page">
   <header class="topbar">
@@ -52,8 +52,8 @@
   <main class="ip-system-main">
     <section class="ip-system-hero">
       <p class="eyebrow" data-i18n="evolution.label">IP进化论</p>
-      <h1 data-i18n="evolution.pageTitle">品牌不是一套静态规范。</h1>
-      <p data-i18n="evolution.pageLead">它是一个可管理、可调用、可持续更新的系统。</p>
+      <h1 data-i18n="evolution.pageTitle">让品牌持续进化。</h1>
+      <p data-i18n="evolution.pageLead">架构、内核、表达、资产与治理，构成可管理、可调用、可持续更新的闭环。</p>
       <div class="ip-system-actions">
         <a class="button" href="ip_sys.md" data-i18n="evolution.readFramework">读取完整框架</a>
         <a class="button ghost" href="./#brandGrid" data-i18n="evolution.applyToIp">选择一个 IP</a>
@@ -70,6 +70,6 @@
       <p data-i18n="evolution.loop">识别品牌，建立系统，生成资产，回收反馈，再次进化。</p>
     </section>
   </main>
-  <script src="assets/site-4e6ab2e-877e5164.js" type="module"></script>
+  <script src="assets/site-ed33a8b-7f718a6e.js" type="module"></script>
 </body>
 </html>

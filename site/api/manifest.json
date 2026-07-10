@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-10T10:42:07.859Z",
+  "generatedAt": "2026-07-10T12:20:20.179Z",
   "version": {
-    "hash": "4e6ab2e053120e68f126313d2086b9b75778e321",
-    "shortHash": "4e6ab2e",
-    "date": "2026-07-10T18:11:43+08:00",
-    "message": "Serve IP Evolution as an extensionless page",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4e6ab2e053120e68f126313d2086b9b75778e321"
+    "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+    "shortHash": "ed33a8b",
+    "date": "2026-07-10T18:44:20+08:00",
+    "message": "Add Shanrenjing journey safety IP",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c"
   },
   "brands": [
     {
@@ -278,11 +278,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "4e6ab2e053120e68f126313d2086b9b75778e321",
-      "shortHash": "4e6ab2e",
-      "date": "2026-07-10T18:11:43+08:00",
-      "message": "Serve IP Evolution as an extensionless page",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4e6ab2e053120e68f126313d2086b9b75778e321"
+      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "shortHash": "ed33a8b",
+      "date": "2026-07-10T18:44:20+08:00",
+      "message": "Add Shanrenjing journey safety IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c"
     }
   },
   "sync": {

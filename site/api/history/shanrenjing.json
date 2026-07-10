@@ -13,11 +13,11 @@
     "Shanrenjing/README.md"
   ],
   "latest": {
-    "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
-    "shortHash": "cd0ea58",
-    "date": "2026-07-08T04:12:48+08:00",
-    "message": "Refine hero index labels",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+    "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+    "shortHash": "ed33a8b",
+    "date": "2026-07-10T18:44:20+08:00",
+    "message": "Add Shanrenjing journey safety IP",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
     "sourcePaths": [
       "config/brands.json",
       "Shanrenjing",
@@ -25,6 +25,18 @@
     ]
   },
   "versions": [
+    {
+      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "shortHash": "ed33a8b",
+      "date": "2026-07-10T18:44:20+08:00",
+      "message": "Add Shanrenjing journey safety IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "sourcePaths": [
+        "config/brands.json",
+        "Shanrenjing",
+        "Shanrenjing/README.md"
+      ]
+    },
     {
       "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
       "shortHash": "cd0ea58",
