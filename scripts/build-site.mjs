@@ -422,7 +422,7 @@ const previousHistoryBySlug = new Map(await Promise.all(brands.map(async (brand)
 })));
 const versions = mergeVersionHistory(loadVersions(), previousVersions, 20);
 const buildFingerprint = createHash("sha256");
-for (const inputPath of ["scripts/build-site.mjs", "config/brands.json", "package.json", "IP-System/ip_sys.md"]) {
+for (const inputPath of ["scripts/build-site.mjs", "styles/editorial.css", "config/brands.json", "package.json", "IP-System/ip_sys.md"]) {
   buildFingerprint.update(await readFile(join(root, inputPath)));
 }
 const buildVersion = `${versions[0]?.shortHash ?? "dev"}-${buildFingerprint.digest("hex").slice(0, 8)}`;
@@ -782,7 +782,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
   <meta name="description" content="${hubDescription}">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${siteCssPath}">
-  <link rel="stylesheet" href="assets/editorial.css">
+  <link rel="stylesheet" href="assets/editorial.css?v=${buildVersion}">
 </head>
 <body class="hub-home">
   <header class="topbar">
@@ -896,7 +896,7 @@ await writeFile(join(siteDir, "ip-evolution"), html`<!doctype html>
   <meta name="description" content="IP进化论把品牌架构、内核、表达、资产与治理连接成可持续更新的系统。">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${siteCssPath}">
-  <link rel="stylesheet" href="assets/editorial.css">
+  <link rel="stylesheet" href="assets/editorial.css?v=${buildVersion}">
 </head>
 <body class="ip-system-page">
   <header class="topbar">
@@ -980,7 +980,7 @@ await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
   <title>Brand Guidelines</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${siteCssPath}">
-  <link rel="stylesheet" href="assets/editorial.css">
+  <link rel="stylesheet" href="assets/editorial.css?v=${buildVersion}">
 </head>
 <body>
   <header class="topbar">
@@ -1039,7 +1039,7 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
   <title>Admin · ${hubName}</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${siteCssPath}">
-  <link rel="stylesheet" href="assets/editorial.css">
+  <link rel="stylesheet" href="assets/editorial.css?v=${buildVersion}">
 </head>
 <body>
   <header class="topbar">
