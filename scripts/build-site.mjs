@@ -671,6 +671,7 @@ await writeFile(join(siteDir, "_redirects"), [
   "/manifest  /api/manifest.json  200",
   "/schema  /api/schema.json  200",
   "/brands  /api/brands.json  200",
+  "/ip-evolution  /ip-evolution.html  200",
   "/ip-system  /ip_sys.md  200",
   "",
 ].join("\n"));
