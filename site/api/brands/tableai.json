@@ -152,14 +152,50 @@
     "en": ""
   },
   "version": {
-    "hash": "a38ea80a8099966615f752f445f5520d7a515a9b",
-    "shortHash": "a38ea80",
-    "date": "2026-07-08T04:07:21+08:00",
-    "message": "Unify topbar and refine admin unlock UI",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a38ea80a8099966615f752f445f5520d7a515a9b"
+    "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+    "shortHash": "a5bf7cf",
+    "date": "2026-07-10T20:21:24+08:00",
+    "message": "Replace contrast-template brand copy",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9"
   },
   "historyUrl": "api/history/tableai.json",
   "history": [
+    {
+      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "shortHash": "a5bf7cf",
+      "date": "2026-07-10T20:21:24+08:00",
+      "message": "Replace contrast-template brand copy",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "sourcePaths": [
+        "config/brands.json",
+        "TABLEAI",
+        "TABLEAI/TableAI_DESIGN.md"
+      ]
+    },
+    {
+      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "shortHash": "ed33a8b",
+      "date": "2026-07-10T18:44:20+08:00",
+      "message": "Add Shanrenjing journey safety IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "sourcePaths": [
+        "config/brands.json",
+        "TABLEAI",
+        "TABLEAI/TableAI_DESIGN.md"
+      ]
+    },
+    {
+      "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "shortHash": "cd0ea58",
+      "date": "2026-07-08T04:12:48+08:00",
+      "message": "Refine hero index labels",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "sourcePaths": [
+        "config/brands.json",
+        "TABLEAI",
+        "TABLEAI/TableAI_DESIGN.md"
+      ]
+    },
     {
       "hash": "9e33619ad95856c977f8803517f325304d678821",
       "shortHash": "9e33619",
@@ -195,42 +231,6 @@
         "TABLEAI",
         "TABLEAI/TableAI_DESIGN.md"
       ]
-    },
-    {
-      "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
-      "shortHash": "5a93d2b",
-      "date": "2026-07-08T03:19:10+08:00",
-      "message": "Add Xinzhi Travel IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
-      "sourcePaths": [
-        "config/brands.json",
-        "TABLEAI",
-        "TABLEAI/TableAI_DESIGN.md"
-      ]
-    },
-    {
-      "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
-      "shortHash": "3e24857",
-      "date": "2026-07-06T12:50:10+08:00",
-      "message": "Add IP classifications and iNucleus",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a",
-      "sourcePaths": [
-        "config/brands.json",
-        "TABLEAI",
-        "TABLEAI/TableAI_DESIGN.md"
-      ]
-    },
-    {
-      "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
-      "shortHash": "b0269d2",
-      "date": "2026-07-06T06:21:22+08:00",
-      "message": "Add ksamint IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34",
-      "sourcePaths": [
-        "config/brands.json",
-        "TABLEAI",
-        "TABLEAI/TableAI_DESIGN.md"
-      ]
     }
   ],
   "url": "brand.html?brand=tableai",
@@ -243,7 +243,8 @@
       "format": "md",
       "primary": true,
       "excerpt": "设计规范文件 (design.md) 1. 核心设计哲学 本项目采用极简且富有启发性的视觉语言。设计应体现以下四个维度： 利他 (Altruistic) ：界面直观，优先考虑用户价值与操作效率。 真实 (Authentic) ：拒绝过度装饰，展现材质与结构的自然美感。 艺术 (Artistic) ：强调比例、对齐与留白的艺术性平衡。 优雅 (Elegant) ：通过色彩与细节传递专业且高端的质感。 2. 色彩系统 (Color Palette) 严禁使用预设的基础色，必须严格执行以下色值： 底色 (Base) : White ( FFFFFF) 用途：背景、大面积留白、轻盈感来源。 主色 (Primary) : 寰宇深蓝 (Universe Deep Blue) 0A1626 用途：主要文字、结构线条、重要功能区块、品牌标识。 点缀色 (Accent) : 日晷暗金 (Sundial Dark Gold) A88B52 用途：行",
-      "text": "---\nname: Table AI Design System\ncolors:\n  surface: '#fbf9fa'\n  surface-dim: '#dcd9db'\n  surface-bright: '#fbf9fa'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f4'\n  surface-container: '#f0edef'\n  surface-container-high: '#eae7e9'\n  surface-container-highest: '#e4e2e3'\n  on-surface: '#1b1b1d'\n  on-surface-variant: '#44474c'\n  inverse-surface: '#303032'\n  inverse-on-surface: '#f3f0f1'\n  outline: '#75777d'\n  outline-variant: '#c5c6cd'\n  surface-tint: '#545f72'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#101c2c'\n  on-primary-container: '#798499'\n  inverse-primary: '#bbc7dd'\n  secondary: '#745b27'\n  on-secondary: '#ffffff'\n  secondary-container: '#fedb9b'\n  on-secondary-container: '#785f2a'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#2a1705'\n  on-tertiary-container: '#9d7e64'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d7e3fa'\n  primary-fixed-dim: '#bbc7dd'\n  on-primary-fixed: '#101c2c'\n  on-primary-fixed-variant: '#3c4759'\n  secondary-fixed: '#ffdea2'\n  secondary-fixed-dim: '#e3c284'\n  on-secondary-fixed: '#261900'\n  on-secondary-fixed-variant: '#5a4311'\n  tertiary-fixed: '#ffdcc1'\n  tertiary-fixed-dim: '#e4c0a3'\n  on-tertiary-fixed: '#2a1705'\n  on-tertiary-fixed-variant: '#5b422c'\n  background: '#fbf9fa'\n  on-background: '#1b1b1d'\n  surface-variant: '#e4e2e3'\n  universe-deep-blue: '#0A1626'\n  sundial-dark-gold: '#A88B52'\n  pure-white: '#FFFFFF'\n  subtle-gold-mist: rgba(168, 139, 82, 0.08)\ntypography:\n  headline-xl:\n    fontFamily: Manrope\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Manrope\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.25'\n  headline-md:\n    fontFamily: Manrope\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Manrope\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Manrope\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-sm:\n    fontFamily: Manrope\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.05em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  xs: 4px\n  sm: 8px\n  md: 16px\n  lg: 24px\n  xl: 40px\n  xxl: 80px\n  container-max: 1200px\n---\n\n# 设计规范文件 (design.md)\n\n## 1. 核心设计哲学\n本项目采用极简且富有启发性的视觉语言。设计应体现以下四个维度：\n- **利他 (Altruistic)**：界面直观，优先考虑用户价值与操作效率。\n- **真实 (Authentic)**：拒绝过度装饰，展现材质与结构的自然美感。\n- **艺术 (Artistic)**：强调比例、对齐与留白的艺术性平衡。\n- **优雅 (Elegant)**：通过色彩与细节传递专业且高端的质感。\n\n## 2. 色彩系统 (Color Palette)\n严禁使用预设的基础色，必须严格执行以下色值：\n- **底色 (Base)**: `White (#FFFFFF)`\n  - 用途：背景、大面积留白、轻盈感来源。\n- **主色 (Primary)**: **寰宇深蓝 (Universe Deep Blue)** `#0A1626`\n  - 用途：主要文字、结构线条、重要功能区块、品牌标识。\n- **点缀色 (Accent)**: **日晷暗金 (Sundial Dark Gold)** `#A88B52`\n  - 用途：行动导向按钮 (CTA)、交互状态反馈、核心关键数据、精细装饰元素。\n\n## 3. 视觉与布局准则 (Layout & Aesthetics)\n- **风格偏好**：斯堪的纳维亚极简主义，强调功能性。\n- **间距系统**：基于 8px 的网格系统，确保空间比例严谨。\n- **留白策略**：增加负空间比例，营造呼吸感与启发感。\n- **圆角处理**：微圆角 (2px - 4px) 或直角，保持稳重感与投资级（Investor-grade）的严谨。\n\n## 4. 组件状态 (Component States)\n- **常规 (Default)**：深蓝边框或文字，背景保持纯白。\n- **悬停 (Hover)**：文字或边框色深度微调，或出现极细的暗金装饰线。\n- **激活 (Active)**：边框切换为日晷暗金，或背景出现浅金色微光（Opacity 5-10%）。\n- **加载/空状态 (Loading)**：采用极简的深蓝骨架屏，避免复杂的动画。\n\n## 5. 针对各工具的实施指令\n\n### Figma\n- 将上述色值存为 Local Styles (Global Colors)。\n- 建立以功能命名的组件库，确保所有组件符合利他原则。\n\n### Stitch (数据与逻辑层)\n- 遵循 Result-as-a-Service (RaaS) 理念，数据返回必须清晰直接。\n- 确保所有交互逻辑优先反馈成功或结果，减少不必要的中间步骤。\n\n### Cursor (代码执行层)\n- **CSS 指令**：优先使用 Tailwind CSS。强制使用自定义配置文件中的颜色映射。\n- **布局指令**：使用 Flexbox 和 Grid 维护严谨的对称性或有目的性的非对称布局。\n- **Prompt 示例**：请参考此 design.md 文件，使用寰宇深蓝作为主文字色，仅在关键转化按钮上使用日晷暗金，背景必须保持纯白。\n"
+      "text": "---\nname: Table AI Design System\ncolors:\n  surface: '#fbf9fa'\n  surface-dim: '#dcd9db'\n  surface-bright: '#fbf9fa'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f4'\n  surface-container: '#f0edef'\n  surface-container-high: '#eae7e9'\n  surface-container-highest: '#e4e2e3'\n  on-surface: '#1b1b1d'\n  on-surface-variant: '#44474c'\n  inverse-surface: '#303032'\n  inverse-on-surface: '#f3f0f1'\n  outline: '#75777d'\n  outline-variant: '#c5c6cd'\n  surface-tint: '#545f72'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#101c2c'\n  on-primary-container: '#798499'\n  inverse-primary: '#bbc7dd'\n  secondary: '#745b27'\n  on-secondary: '#ffffff'\n  secondary-container: '#fedb9b'\n  on-secondary-container: '#785f2a'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#2a1705'\n  on-tertiary-container: '#9d7e64'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d7e3fa'\n  primary-fixed-dim: '#bbc7dd'\n  on-primary-fixed: '#101c2c'\n  on-primary-fixed-variant: '#3c4759'\n  secondary-fixed: '#ffdea2'\n  secondary-fixed-dim: '#e3c284'\n  on-secondary-fixed: '#261900'\n  on-secondary-fixed-variant: '#5a4311'\n  tertiary-fixed: '#ffdcc1'\n  tertiary-fixed-dim: '#e4c0a3'\n  on-tertiary-fixed: '#2a1705'\n  on-tertiary-fixed-variant: '#5b422c'\n  background: '#fbf9fa'\n  on-background: '#1b1b1d'\n  surface-variant: '#e4e2e3'\n  universe-deep-blue: '#0A1626'\n  sundial-dark-gold: '#A88B52'\n  pure-white: '#FFFFFF'\n  subtle-gold-mist: rgba(168, 139, 82, 0.08)\ntypography:\n  headline-xl:\n    fontFamily: Manrope\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Manrope\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.25'\n  headline-md:\n    fontFamily: Manrope\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Manrope\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Manrope\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-sm:\n    fontFamily: Manrope\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.05em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  xs: 4px\n  sm: 8px\n  md: 16px\n  lg: 24px\n  xl: 40px\n  xxl: 80px\n  container-max: 1200px\n---\n\n# 设计规范文件 (design.md)\n\n## 1. 核心设计哲学\n本项目采用极简且富有启发性的视觉语言。设计应体现以下四个维度：\n- **利他 (Altruistic)**：界面直观，优先考虑用户价值与操作效率。\n- **真实 (Authentic)**：拒绝过度装饰，展现材质与结构的自然美感。\n- **艺术 (Artistic)**：强调比例、对齐与留白的艺术性平衡。\n- **优雅 (Elegant)**：通过色彩与细节传递专业且高端的质感。\n\n## 2. 色彩系统 (Color Palette)\n严禁使用预设的基础色，必须严格执行以下色值：\n- **底色 (Base)**: `White (#FFFFFF)`\n  - 用途：背景、大面积留白、轻盈感来源。\n- **主色 (Primary)**: **寰宇深蓝 (Universe Deep Blue)** `#0A1626`\n  - 用途：主要文字、结构线条、重要功能区块、品牌标识。\n- **点缀色 (Accent)**: **日晷暗金 (Sundial Dark Gold)** `#A88B52`\n  - 用途：行动导向按钮 (CTA)、交互状态反馈、核心关键数据、精细装饰元素。\n\n## 3. 视觉与布局准则 (Layout & Aesthetics)\n- **风格偏好**：斯堪的纳维亚极简主义，强调功能性。\n- **间距系统**：基于 8px 的网格系统，确保空间比例严谨。\n- **留白策略**：增加负空间比例，营造呼吸感与启发感。\n- **圆角处理**：微圆角 (2px - 4px) 或直角，保持稳重感与投资级（Investor-grade）的严谨。\n\n## 4. 组件状态 (Component States)\n- **常规 (Default)**：深蓝边框或文字，背景保持纯白。\n- **悬停 (Hover)**：文字或边框色深度微调，或出现极细的暗金装饰线。\n- **激活 (Active)**：边框切换为日晷暗金，或背景出现浅金色微光（Opacity 5-10%）。\n- **加载/空状态 (Loading)**：采用极简的深蓝骨架屏，避免复杂的动画。\n\n## 5. 针对各工具的实施指令\n\n### Figma\n- 将上述色值存为 Local Styles (Global Colors)。\n- 建立以功能命名的组件库，确保所有组件符合利他原则。\n\n### Stitch (数据与逻辑层)\n- 遵循 Result-as-a-Service (RaaS) 理念，数据返回必须清晰直接。\n- 确保所有交互逻辑优先反馈成功或结果，减少不必要的中间步骤。\n\n### Cursor (代码执行层)\n- **CSS 指令**：优先使用 Tailwind CSS。强制使用自定义配置文件中的颜色映射。\n- **布局指令**：使用 Flexbox 和 Grid 维护严谨的对称性或有目的性的非对称布局。\n- **Prompt 示例**：请参考此 design.md 文件，使用寰宇深蓝作为主文字色，仅在关键转化按钮上使用日晷暗金，背景必须保持纯白。\n",
+      "html": "<hr>\n<p>name: Table AI Design System\ncolors:\n  surface: &#39;#fbf9fa&#39;\n  surface-dim: &#39;#dcd9db&#39;\n  surface-bright: &#39;#fbf9fa&#39;\n  surface-container-lowest: &#39;#ffffff&#39;\n  surface-container-low: &#39;#f5f3f4&#39;\n  surface-container: &#39;#f0edef&#39;\n  surface-container-high: &#39;#eae7e9&#39;\n  surface-container-highest: &#39;#e4e2e3&#39;\n  on-surface: &#39;#1b1b1d&#39;\n  on-surface-variant: &#39;#44474c&#39;\n  inverse-surface: &#39;#303032&#39;\n  inverse-on-surface: &#39;#f3f0f1&#39;\n  outline: &#39;#75777d&#39;\n  outline-variant: &#39;#c5c6cd&#39;\n  surface-tint: &#39;#545f72&#39;\n  primary: &#39;#000000&#39;\n  on-primary: &#39;#ffffff&#39;\n  primary-container: &#39;#101c2c&#39;\n  on-primary-container: &#39;#798499&#39;\n  inverse-primary: &#39;#bbc7dd&#39;\n  secondary: &#39;#745b27&#39;\n  on-secondary: &#39;#ffffff&#39;\n  secondary-container: &#39;#fedb9b&#39;\n  on-secondary-container: &#39;#785f2a&#39;\n  tertiary: &#39;#000000&#39;\n  on-tertiary: &#39;#ffffff&#39;\n  tertiary-container: &#39;#2a1705&#39;\n  on-tertiary-container: &#39;#9d7e64&#39;\n  error: &#39;#ba1a1a&#39;\n  on-error: &#39;#ffffff&#39;\n  error-container: &#39;#ffdad6&#39;\n  on-error-container: &#39;#93000a&#39;\n  primary-fixed: &#39;#d7e3fa&#39;\n  primary-fixed-dim: &#39;#bbc7dd&#39;\n  on-primary-fixed: &#39;#101c2c&#39;\n  on-primary-fixed-variant: &#39;#3c4759&#39;\n  secondary-fixed: &#39;#ffdea2&#39;\n  secondary-fixed-dim: &#39;#e3c284&#39;\n  on-secondary-fixed: &#39;#261900&#39;\n  on-secondary-fixed-variant: &#39;#5a4311&#39;\n  tertiary-fixed: &#39;#ffdcc1&#39;\n  tertiary-fixed-dim: &#39;#e4c0a3&#39;\n  on-tertiary-fixed: &#39;#2a1705&#39;\n  on-tertiary-fixed-variant: &#39;#5b422c&#39;\n  background: &#39;#fbf9fa&#39;\n  on-background: &#39;#1b1b1d&#39;\n  surface-variant: &#39;#e4e2e3&#39;\n  universe-deep-blue: &#39;#0A1626&#39;\n  sundial-dark-gold: &#39;#A88B52&#39;\n  pure-white: &#39;#FFFFFF&#39;\n  subtle-gold-mist: rgba(168, 139, 82, 0.08)\ntypography:\n  headline-xl:\n    fontFamily: Manrope\n    fontSize: 40px\n    fontWeight: &#39;700&#39;\n    lineHeight: &#39;1.2&#39;\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Manrope\n    fontSize: 32px\n    fontWeight: &#39;600&#39;\n    lineHeight: &#39;1.25&#39;\n  headline-md:\n    fontFamily: Manrope\n    fontSize: 24px\n    fontWeight: &#39;600&#39;\n    lineHeight: &#39;1.3&#39;\n  body-lg:\n    fontFamily: Manrope\n    fontSize: 18px\n    fontWeight: &#39;400&#39;\n    lineHeight: &#39;1.6&#39;\n  body-md:\n    fontFamily: Manrope\n    fontSize: 16px\n    fontWeight: &#39;400&#39;\n    lineHeight: &#39;1.6&#39;\n  label-sm:\n    fontFamily: Manrope\n    fontSize: 12px\n    fontWeight: &#39;600&#39;\n    lineHeight: &#39;1&#39;\n    letterSpacing: 0.05em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  xs: 4px\n  sm: 8px\n  md: 16px\n  lg: 24px\n  xl: 40px\n  xxl: 80px</p>\n<h2 id=\"tableai-guide-1-container-max-1200px\">container-max: 1200px</h2>\n<h1 id=\"tableai-guide-1-设计规范文件-design-md\">设计规范文件 (design.md)</h1>\n<h2 id=\"tableai-guide-1-1-核心设计哲学\">1. 核心设计哲学</h2>\n<p>本项目采用极简且富有启发性的视觉语言。设计应体现以下四个维度：</p>\n<ul>\n<li><strong>利他 (Altruistic)</strong>：界面直观，优先考虑用户价值与操作效率。</li>\n<li><strong>真实 (Authentic)</strong>：拒绝过度装饰，展现材质与结构的自然美感。</li>\n<li><strong>艺术 (Artistic)</strong>：强调比例、对齐与留白的艺术性平衡。</li>\n<li><strong>优雅 (Elegant)</strong>：通过色彩与细节传递专业且高端的质感。</li>\n</ul>\n<h2 id=\"tableai-guide-1-2-色彩系统-color-palette\">2. 色彩系统 (Color Palette)</h2>\n<p>严禁使用预设的基础色，必须严格执行以下色值：</p>\n<ul>\n<li><strong>底色 (Base)</strong>: <code>White (#FFFFFF)</code><ul>\n<li>用途：背景、大面积留白、轻盈感来源。</li>\n</ul>\n</li>\n<li><strong>主色 (Primary)</strong>: <strong>寰宇深蓝 (Universe Deep Blue)</strong> <code>#0A1626</code><ul>\n<li>用途：主要文字、结构线条、重要功能区块、品牌标识。</li>\n</ul>\n</li>\n<li><strong>点缀色 (Accent)</strong>: <strong>日晷暗金 (Sundial Dark Gold)</strong> <code>#A88B52</code><ul>\n<li>用途：行动导向按钮 (CTA)、交互状态反馈、核心关键数据、精细装饰元素。</li>\n</ul>\n</li>\n</ul>\n<h2 id=\"tableai-guide-1-3-视觉与布局准则-layout-aesthetics\">3. 视觉与布局准则 (Layout &amp; Aesthetics)</h2>\n<ul>\n<li><strong>风格偏好</strong>：斯堪的纳维亚极简主义，强调功能性。</li>\n<li><strong>间距系统</strong>：基于 8px 的网格系统，确保空间比例严谨。</li>\n<li><strong>留白策略</strong>：增加负空间比例，营造呼吸感与启发感。</li>\n<li><strong>圆角处理</strong>：微圆角 (2px - 4px) 或直角，保持稳重感与投资级（Investor-grade）的严谨。</li>\n</ul>\n<h2 id=\"tableai-guide-1-4-组件状态-component-states\">4. 组件状态 (Component States)</h2>\n<ul>\n<li><strong>常规 (Default)</strong>：深蓝边框或文字，背景保持纯白。</li>\n<li><strong>悬停 (Hover)</strong>：文字或边框色深度微调，或出现极细的暗金装饰线。</li>\n<li><strong>激活 (Active)</strong>：边框切换为日晷暗金，或背景出现浅金色微光（Opacity 5-10%）。</li>\n<li><strong>加载/空状态 (Loading)</strong>：采用极简的深蓝骨架屏，避免复杂的动画。</li>\n</ul>\n<h2 id=\"tableai-guide-1-5-针对各工具的实施指令\">5. 针对各工具的实施指令</h2>\n<h3 id=\"tableai-guide-1-figma\">Figma</h3>\n<ul>\n<li>将上述色值存为 Local Styles (Global Colors)。</li>\n<li>建立以功能命名的组件库，确保所有组件符合利他原则。</li>\n</ul>\n<h3 id=\"tableai-guide-1-stitch-数据与逻辑层\">Stitch (数据与逻辑层)</h3>\n<ul>\n<li>遵循 Result-as-a-Service (RaaS) 理念，数据返回必须清晰直接。</li>\n<li>确保所有交互逻辑优先反馈成功或结果，减少不必要的中间步骤。</li>\n</ul>\n<h3 id=\"tableai-guide-1-cursor-代码执行层\">Cursor (代码执行层)</h3>\n<ul>\n<li><strong>CSS 指令</strong>：优先使用 Tailwind CSS。强制使用自定义配置文件中的颜色映射。</li>\n<li><strong>布局指令</strong>：使用 Flexbox 和 Grid 维护严谨的对称性或有目的性的非对称布局。</li>\n<li><strong>Prompt 示例</strong>：请参考此 design.md 文件，使用寰宇深蓝作为主文字色，仅在关键转化按钮上使用日晷暗金，背景必须保持纯白。</li>\n</ul>\n"
     }
   ],
   "tokens": [

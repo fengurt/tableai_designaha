@@ -152,14 +152,50 @@
     "en": ""
   },
   "version": {
-    "hash": "a38ea80a8099966615f752f445f5520d7a515a9b",
-    "shortHash": "a38ea80",
-    "date": "2026-07-08T04:07:21+08:00",
-    "message": "Unify topbar and refine admin unlock UI",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a38ea80a8099966615f752f445f5520d7a515a9b"
+    "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+    "shortHash": "a5bf7cf",
+    "date": "2026-07-10T20:21:24+08:00",
+    "message": "Replace contrast-template brand copy",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9"
   },
   "historyUrl": "api/history/apha.json",
   "history": [
+    {
+      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "shortHash": "a5bf7cf",
+      "date": "2026-07-10T20:21:24+08:00",
+      "message": "Replace contrast-template brand copy",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "sourcePaths": [
+        "config/brands.json",
+        "APHA",
+        "APHA/README.md"
+      ]
+    },
+    {
+      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "shortHash": "ed33a8b",
+      "date": "2026-07-10T18:44:20+08:00",
+      "message": "Add Shanrenjing journey safety IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "sourcePaths": [
+        "config/brands.json",
+        "APHA",
+        "APHA/README.md"
+      ]
+    },
+    {
+      "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "shortHash": "cd0ea58",
+      "date": "2026-07-08T04:12:48+08:00",
+      "message": "Refine hero index labels",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "sourcePaths": [
+        "config/brands.json",
+        "APHA",
+        "APHA/README.md"
+      ]
+    },
     {
       "hash": "9e33619ad95856c977f8803517f325304d678821",
       "shortHash": "9e33619",
@@ -195,42 +231,6 @@
         "APHA",
         "APHA/README.md"
       ]
-    },
-    {
-      "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
-      "shortHash": "5a93d2b",
-      "date": "2026-07-08T03:19:10+08:00",
-      "message": "Add Xinzhi Travel IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
-      "sourcePaths": [
-        "config/brands.json",
-        "APHA",
-        "APHA/README.md"
-      ]
-    },
-    {
-      "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
-      "shortHash": "3e24857",
-      "date": "2026-07-06T12:50:10+08:00",
-      "message": "Add IP classifications and iNucleus",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a",
-      "sourcePaths": [
-        "config/brands.json",
-        "APHA",
-        "APHA/README.md"
-      ]
-    },
-    {
-      "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
-      "shortHash": "b0269d2",
-      "date": "2026-07-06T06:21:22+08:00",
-      "message": "Add ksamint IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34",
-      "sourcePaths": [
-        "config/brands.json",
-        "APHA",
-        "APHA/README.md"
-      ]
     }
   ],
   "url": "brand.html?brand=apha",
@@ -243,7 +243,8 @@
       "format": "md",
       "primary": true,
       "excerpt": "APHA Chinese name: 亚太艺术疗愈联盟 English descriptor: Asia Pacific Healing Arts Alliance Brand Role APHA is an Asia Pacific arts and healing alliance IP for creative wellbeing, therapeutic arts, and cross cultural care practices. Visual Direction Temperament: restorative, humane, professional, warm, spacious. Color cues: mineral blue, sage green, clay, warm ivory. Imagery cues: gentle movement, art practice, natural textur",
-      "text": "# APHA\n\nChinese name: 亚太艺术疗愈联盟\n\nEnglish descriptor: Asia-Pacific Healing Arts Alliance\n\n## Brand Role\n\nAPHA is an Asia-Pacific arts and healing alliance IP for creative wellbeing, therapeutic arts, and cross-cultural care practices.\n\n## Visual Direction\n\n- Temperament: restorative, humane, professional, warm, spacious.\n- Color cues: mineral blue, sage green, clay, warm ivory.\n- Imagery cues: gentle movement, art practice, natural textures, care circles, regional cultural exchange.\n\n## Agent Notes\n\n- Use `亚太艺术疗愈联盟` as the Chinese IP name.\n- Use `APHA` as the public IP shorthand.\n- Keep the visual system calm and trustworthy, with enough warmth to avoid clinical coldness.\n"
+      "text": "# APHA\n\nChinese name: 亚太艺术疗愈联盟\n\nEnglish descriptor: Asia-Pacific Healing Arts Alliance\n\n## Brand Role\n\nAPHA is an Asia-Pacific arts and healing alliance IP for creative wellbeing, therapeutic arts, and cross-cultural care practices.\n\n## Visual Direction\n\n- Temperament: restorative, humane, professional, warm, spacious.\n- Color cues: mineral blue, sage green, clay, warm ivory.\n- Imagery cues: gentle movement, art practice, natural textures, care circles, regional cultural exchange.\n\n## Agent Notes\n\n- Use `亚太艺术疗愈联盟` as the Chinese IP name.\n- Use `APHA` as the public IP shorthand.\n- Keep the visual system calm and trustworthy, with enough warmth to avoid clinical coldness.\n",
+      "html": "<h1 id=\"apha-guide-1-apha\">APHA</h1>\n<p>Chinese name: 亚太艺术疗愈联盟</p>\n<p>English descriptor: Asia-Pacific Healing Arts Alliance</p>\n<h2 id=\"apha-guide-1-brand-role\">Brand Role</h2>\n<p>APHA is an Asia-Pacific arts and healing alliance IP for creative wellbeing, therapeutic arts, and cross-cultural care practices.</p>\n<h2 id=\"apha-guide-1-visual-direction\">Visual Direction</h2>\n<ul>\n<li>Temperament: restorative, humane, professional, warm, spacious.</li>\n<li>Color cues: mineral blue, sage green, clay, warm ivory.</li>\n<li>Imagery cues: gentle movement, art practice, natural textures, care circles, regional cultural exchange.</li>\n</ul>\n<h2 id=\"apha-guide-1-agent-notes\">Agent Notes</h2>\n<ul>\n<li>Use <code>亚太艺术疗愈联盟</code> as the Chinese IP name.</li>\n<li>Use <code>APHA</code> as the public IP shorthand.</li>\n<li>Keep the visual system calm and trustworthy, with enough warmth to avoid clinical coldness.</li>\n</ul>\n"
     }
   ],
   "tokens": [],

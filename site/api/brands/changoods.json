@@ -152,14 +152,50 @@
     "en": ""
   },
   "version": {
-    "hash": "a38ea80a8099966615f752f445f5520d7a515a9b",
-    "shortHash": "a38ea80",
-    "date": "2026-07-08T04:07:21+08:00",
-    "message": "Unify topbar and refine admin unlock UI",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a38ea80a8099966615f752f445f5520d7a515a9b"
+    "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+    "shortHash": "a5bf7cf",
+    "date": "2026-07-10T20:21:24+08:00",
+    "message": "Replace contrast-template brand copy",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9"
   },
   "historyUrl": "api/history/changoods.json",
   "history": [
+    {
+      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "shortHash": "a5bf7cf",
+      "date": "2026-07-10T20:21:24+08:00",
+      "message": "Replace contrast-template brand copy",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "sourcePaths": [
+        "config/brands.json",
+        "Changoods",
+        "Changoods/README.md"
+      ]
+    },
+    {
+      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "shortHash": "ed33a8b",
+      "date": "2026-07-10T18:44:20+08:00",
+      "message": "Add Shanrenjing journey safety IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "sourcePaths": [
+        "config/brands.json",
+        "Changoods",
+        "Changoods/README.md"
+      ]
+    },
+    {
+      "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "shortHash": "cd0ea58",
+      "date": "2026-07-08T04:12:48+08:00",
+      "message": "Refine hero index labels",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "sourcePaths": [
+        "config/brands.json",
+        "Changoods",
+        "Changoods/README.md"
+      ]
+    },
     {
       "hash": "9e33619ad95856c977f8803517f325304d678821",
       "shortHash": "9e33619",
@@ -195,42 +231,6 @@
         "Changoods",
         "Changoods/README.md"
       ]
-    },
-    {
-      "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
-      "shortHash": "5a93d2b",
-      "date": "2026-07-08T03:19:10+08:00",
-      "message": "Add Xinzhi Travel IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
-      "sourcePaths": [
-        "config/brands.json",
-        "Changoods",
-        "Changoods/README.md"
-      ]
-    },
-    {
-      "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
-      "shortHash": "3e24857",
-      "date": "2026-07-06T12:50:10+08:00",
-      "message": "Add IP classifications and iNucleus",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a",
-      "sourcePaths": [
-        "config/brands.json",
-        "Changoods",
-        "Changoods/README.md"
-      ]
-    },
-    {
-      "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
-      "shortHash": "b0269d2",
-      "date": "2026-07-06T06:21:22+08:00",
-      "message": "Add ksamint IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34",
-      "sourcePaths": [
-        "config/brands.json",
-        "Changoods",
-        "Changoods/README.md"
-      ]
     }
   ],
   "url": "brand.html?brand=changoods",
@@ -243,7 +243,8 @@
       "format": "md",
       "primary": true,
       "excerpt": "常幸 · Changoods 主 IP： 常幸 英文名： Changoods Status Placeholder brand folder. Add design guidelines, tokens, assets, and voice rules here as the IP system matures. Local Structure assets/brand images/ — brand visuals and generated hero images tokens/ — machine readable design tokens",
-      "text": "# 常幸 · Changoods\n\n主 IP：**常幸**  \n英文名：**Changoods**\n\n## Status\n\nPlaceholder brand folder. Add design guidelines, tokens, assets, and voice rules here as the IP system matures.\n\n## Local Structure\n\n- `assets/brand-images/` — brand visuals and generated hero images\n- `tokens/` — machine-readable design tokens\n\n"
+      "text": "# 常幸 · Changoods\n\n主 IP：**常幸**  \n英文名：**Changoods**\n\n## Status\n\nPlaceholder brand folder. Add design guidelines, tokens, assets, and voice rules here as the IP system matures.\n\n## Local Structure\n\n- `assets/brand-images/` — brand visuals and generated hero images\n- `tokens/` — machine-readable design tokens\n\n",
+      "html": "<h1 id=\"changoods-guide-1-常幸-changoods\">常幸 · Changoods</h1>\n<p>主 IP：<strong>常幸</strong><br>英文名：<strong>Changoods</strong></p>\n<h2 id=\"changoods-guide-1-status\">Status</h2>\n<p>Placeholder brand folder. Add design guidelines, tokens, assets, and voice rules here as the IP system matures.</p>\n<h2 id=\"changoods-guide-1-local-structure\">Local Structure</h2>\n<ul>\n<li><code>assets/brand-images/</code> — brand visuals and generated hero images</li>\n<li><code>tokens/</code> — machine-readable design tokens</li>\n</ul>\n"
     }
   ],
   "tokens": [],

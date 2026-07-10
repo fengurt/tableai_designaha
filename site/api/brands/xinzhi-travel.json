@@ -156,14 +156,50 @@
     }
   },
   "version": {
-    "hash": "a38ea80a8099966615f752f445f5520d7a515a9b",
-    "shortHash": "a38ea80",
-    "date": "2026-07-08T04:07:21+08:00",
-    "message": "Unify topbar and refine admin unlock UI",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a38ea80a8099966615f752f445f5520d7a515a9b"
+    "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+    "shortHash": "a5bf7cf",
+    "date": "2026-07-10T20:21:24+08:00",
+    "message": "Replace contrast-template brand copy",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9"
   },
   "historyUrl": "api/history/xinzhi-travel.json",
   "history": [
+    {
+      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "shortHash": "a5bf7cf",
+      "date": "2026-07-10T20:21:24+08:00",
+      "message": "Replace contrast-template brand copy",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "sourcePaths": [
+        "config/brands.json",
+        "XinzhiTravel",
+        "XinzhiTravel/README.md"
+      ]
+    },
+    {
+      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "shortHash": "ed33a8b",
+      "date": "2026-07-10T18:44:20+08:00",
+      "message": "Add Shanrenjing journey safety IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "sourcePaths": [
+        "config/brands.json",
+        "XinzhiTravel",
+        "XinzhiTravel/README.md"
+      ]
+    },
+    {
+      "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "shortHash": "cd0ea58",
+      "date": "2026-07-08T04:12:48+08:00",
+      "message": "Refine hero index labels",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "sourcePaths": [
+        "config/brands.json",
+        "XinzhiTravel",
+        "XinzhiTravel/README.md"
+      ]
+    },
     {
       "hash": "9e33619ad95856c977f8803517f325304d678821",
       "shortHash": "9e33619",
@@ -199,42 +235,6 @@
         "XinzhiTravel",
         "XinzhiTravel/README.md"
       ]
-    },
-    {
-      "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
-      "shortHash": "5a93d2b",
-      "date": "2026-07-08T03:19:10+08:00",
-      "message": "Add Xinzhi Travel IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
-      "sourcePaths": [
-        "config/brands.json",
-        "XinzhiTravel",
-        "XinzhiTravel/README.md"
-      ]
-    },
-    {
-      "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
-      "shortHash": "3e24857",
-      "date": "2026-07-06T12:50:10+08:00",
-      "message": "Add IP classifications and iNucleus",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a",
-      "sourcePaths": [
-        "config/brands.json",
-        "XinzhiTravel",
-        "XinzhiTravel/README.md"
-      ]
-    },
-    {
-      "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
-      "shortHash": "b0269d2",
-      "date": "2026-07-06T06:21:22+08:00",
-      "message": "Add ksamint IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34",
-      "sourcePaths": [
-        "config/brands.json",
-        "XinzhiTravel",
-        "XinzhiTravel/README.md"
-      ]
     }
   ],
   "url": "brand.html?brand=xinzhi-travel",
@@ -247,7 +247,8 @@
       "format": "md",
       "primary": true,
       "excerpt": "信致旅游 · Xinzhi Travel 信致旅游是面向目的地体验、文化路线与可信服务的旅游 IP。 Brand Role 主语言 ：中文 英文对照 ：Xinzhi Travel 赛道 ：目的地旅游 / 文化路线 / 在地体验 人群 ：旅行者、目的地伙伴、文旅运营方 业务 ：目的地旅游、文化路线、定制旅行、在地体验与旅游服务协作 Voice 真诚、清晰、有抵达感。语言要像一条可靠路线：不过度煽情，也不把旅行降格为消费清单。 Visual Direction 目的地绿、路线金、雾蓝为基础。整体应有可信服务感和轻微的文化温度，避免廉价旅行社式高饱和促销视觉。 Agent Notes 在生成信致旅游相关内容时，优先表达“可信、在地、路线、体验、文化理解”。面向用户时减少抽象口号，多给具体路线、场景、服务承诺与目的地细节。",
-      "text": "# 信致旅游 · Xinzhi Travel\n\n信致旅游是面向目的地体验、文化路线与可信服务的旅游 IP。\n\n## Brand Role\n\n- **主语言**：中文\n- **英文对照**：Xinzhi Travel\n- **赛道**：目的地旅游 / 文化路线 / 在地体验\n- **人群**：旅行者、目的地伙伴、文旅运营方\n- **业务**：目的地旅游、文化路线、定制旅行、在地体验与旅游服务协作\n\n## Voice\n\n真诚、清晰、有抵达感。语言要像一条可靠路线：不过度煽情，也不把旅行降格为消费清单。\n\n## Visual Direction\n\n目的地绿、路线金、雾蓝为基础。整体应有可信服务感和轻微的文化温度，避免廉价旅行社式高饱和促销视觉。\n\n## Agent Notes\n\n在生成信致旅游相关内容时，优先表达“可信、在地、路线、体验、文化理解”。面向用户时减少抽象口号，多给具体路线、场景、服务承诺与目的地细节。\n"
+      "text": "# 信致旅游 · Xinzhi Travel\n\n信致旅游是面向目的地体验、文化路线与可信服务的旅游 IP。\n\n## Brand Role\n\n- **主语言**：中文\n- **英文对照**：Xinzhi Travel\n- **赛道**：目的地旅游 / 文化路线 / 在地体验\n- **人群**：旅行者、目的地伙伴、文旅运营方\n- **业务**：目的地旅游、文化路线、定制旅行、在地体验与旅游服务协作\n\n## Voice\n\n真诚、清晰、有抵达感。语言要像一条可靠路线：不过度煽情，也不把旅行降格为消费清单。\n\n## Visual Direction\n\n目的地绿、路线金、雾蓝为基础。整体应有可信服务感和轻微的文化温度，避免廉价旅行社式高饱和促销视觉。\n\n## Agent Notes\n\n在生成信致旅游相关内容时，优先表达“可信、在地、路线、体验、文化理解”。面向用户时减少抽象口号，多给具体路线、场景、服务承诺与目的地细节。\n",
+      "html": "<h1 id=\"xinzhi-travel-guide-1-信致旅游-xinzhi-travel\">信致旅游 · Xinzhi Travel</h1>\n<p>信致旅游是面向目的地体验、文化路线与可信服务的旅游 IP。</p>\n<h2 id=\"xinzhi-travel-guide-1-brand-role\">Brand Role</h2>\n<ul>\n<li><strong>主语言</strong>：中文</li>\n<li><strong>英文对照</strong>：Xinzhi Travel</li>\n<li><strong>赛道</strong>：目的地旅游 / 文化路线 / 在地体验</li>\n<li><strong>人群</strong>：旅行者、目的地伙伴、文旅运营方</li>\n<li><strong>业务</strong>：目的地旅游、文化路线、定制旅行、在地体验与旅游服务协作</li>\n</ul>\n<h2 id=\"xinzhi-travel-guide-1-voice\">Voice</h2>\n<p>真诚、清晰、有抵达感。语言要像一条可靠路线：不过度煽情，也不把旅行降格为消费清单。</p>\n<h2 id=\"xinzhi-travel-guide-1-visual-direction\">Visual Direction</h2>\n<p>目的地绿、路线金、雾蓝为基础。整体应有可信服务感和轻微的文化温度，避免廉价旅行社式高饱和促销视觉。</p>\n<h2 id=\"xinzhi-travel-guide-1-agent-notes\">Agent Notes</h2>\n<p>在生成信致旅游相关内容时，优先表达“可信、在地、路线、体验、文化理解”。面向用户时减少抽象口号，多给具体路线、场景、服务承诺与目的地细节。</p>\n"
     }
   ],
   "tokens": [],

@@ -152,14 +152,50 @@
     "en": ""
   },
   "version": {
-    "hash": "a38ea80a8099966615f752f445f5520d7a515a9b",
-    "shortHash": "a38ea80",
-    "date": "2026-07-08T04:07:21+08:00",
-    "message": "Unify topbar and refine admin unlock UI",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a38ea80a8099966615f752f445f5520d7a515a9b"
+    "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+    "shortHash": "a5bf7cf",
+    "date": "2026-07-10T20:21:24+08:00",
+    "message": "Replace contrast-template brand copy",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9"
   },
   "historyUrl": "api/history/sanctem.json",
   "history": [
+    {
+      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "shortHash": "a5bf7cf",
+      "date": "2026-07-10T20:21:24+08:00",
+      "message": "Replace contrast-template brand copy",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "sourcePaths": [
+        "config/brands.json",
+        "Sanctem",
+        "Sanctem/README.md"
+      ]
+    },
+    {
+      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "shortHash": "ed33a8b",
+      "date": "2026-07-10T18:44:20+08:00",
+      "message": "Add Shanrenjing journey safety IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "sourcePaths": [
+        "config/brands.json",
+        "Sanctem",
+        "Sanctem/README.md"
+      ]
+    },
+    {
+      "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "shortHash": "cd0ea58",
+      "date": "2026-07-08T04:12:48+08:00",
+      "message": "Refine hero index labels",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "sourcePaths": [
+        "config/brands.json",
+        "Sanctem",
+        "Sanctem/README.md"
+      ]
+    },
     {
       "hash": "9e33619ad95856c977f8803517f325304d678821",
       "shortHash": "9e33619",
@@ -195,42 +231,6 @@
         "Sanctem",
         "Sanctem/README.md"
       ]
-    },
-    {
-      "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
-      "shortHash": "5a93d2b",
-      "date": "2026-07-08T03:19:10+08:00",
-      "message": "Add Xinzhi Travel IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
-      "sourcePaths": [
-        "config/brands.json",
-        "Sanctem",
-        "Sanctem/README.md"
-      ]
-    },
-    {
-      "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
-      "shortHash": "3e24857",
-      "date": "2026-07-06T12:50:10+08:00",
-      "message": "Add IP classifications and iNucleus",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a",
-      "sourcePaths": [
-        "config/brands.json",
-        "Sanctem",
-        "Sanctem/README.md"
-      ]
-    },
-    {
-      "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
-      "shortHash": "b0269d2",
-      "date": "2026-07-06T06:21:22+08:00",
-      "message": "Add ksamint IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34",
-      "sourcePaths": [
-        "config/brands.json",
-        "Sanctem",
-        "Sanctem/README.md"
-      ]
     }
   ],
   "url": "brand.html?brand=sanctem",
@@ -243,7 +243,8 @@
       "format": "md",
       "primary": true,
       "excerpt": "Sanctem Sanctem is an oriental wellness and healing brand. 中文定位：东方康养疗愈品牌。 Brand Main IP name: Sanctem Chinese description: 东方康养疗愈品牌 Main language: English System role: wellness, healing, hospitality, and restorative living under an oriental care sensibility. Business 康养疗愈 东方身心护理 旅居疗愈体验 品牌化健康服务 Voice Calm, precise, and restorative. Speak with quiet confidence. Avoid medical overclaims, heavy mysticism, and decorative ",
-      "text": "# Sanctem\n\nSanctem is an oriental wellness and healing brand.\n\n中文定位：东方康养疗愈品牌。\n\n## Brand\n\n- Main IP name: Sanctem\n- Chinese description: 东方康养疗愈品牌\n- Main language: English\n- System role: wellness, healing, hospitality, and restorative living under an oriental care sensibility.\n\n## Business\n\n- 康养疗愈\n- 东方身心护理\n- 旅居疗愈体验\n- 品牌化健康服务\n\n## Voice\n\nCalm, precise, and restorative. Speak with quiet confidence. Avoid medical overclaims, heavy mysticism, and decorative wellness cliches.\n\n## Asset Structure\n\n- `assets/brand-images/` — public logo images exposed through the website/API build.\n- `assets/logos/` — original logo source files.\n\n"
+      "text": "# Sanctem\n\nSanctem is an oriental wellness and healing brand.\n\n中文定位：东方康养疗愈品牌。\n\n## Brand\n\n- Main IP name: Sanctem\n- Chinese description: 东方康养疗愈品牌\n- Main language: English\n- System role: wellness, healing, hospitality, and restorative living under an oriental care sensibility.\n\n## Business\n\n- 康养疗愈\n- 东方身心护理\n- 旅居疗愈体验\n- 品牌化健康服务\n\n## Voice\n\nCalm, precise, and restorative. Speak with quiet confidence. Avoid medical overclaims, heavy mysticism, and decorative wellness cliches.\n\n## Asset Structure\n\n- `assets/brand-images/` — public logo images exposed through the website/API build.\n- `assets/logos/` — original logo source files.\n\n",
+      "html": "<h1 id=\"sanctem-guide-1-sanctem\">Sanctem</h1>\n<p>Sanctem is an oriental wellness and healing brand.</p>\n<p>中文定位：东方康养疗愈品牌。</p>\n<h2 id=\"sanctem-guide-1-brand\">Brand</h2>\n<ul>\n<li>Main IP name: Sanctem</li>\n<li>Chinese description: 东方康养疗愈品牌</li>\n<li>Main language: English</li>\n<li>System role: wellness, healing, hospitality, and restorative living under an oriental care sensibility.</li>\n</ul>\n<h2 id=\"sanctem-guide-1-business\">Business</h2>\n<ul>\n<li>康养疗愈</li>\n<li>东方身心护理</li>\n<li>旅居疗愈体验</li>\n<li>品牌化健康服务</li>\n</ul>\n<h2 id=\"sanctem-guide-1-voice\">Voice</h2>\n<p>Calm, precise, and restorative. Speak with quiet confidence. Avoid medical overclaims, heavy mysticism, and decorative wellness cliches.</p>\n<h2 id=\"sanctem-guide-1-asset-structure\">Asset Structure</h2>\n<ul>\n<li><code>assets/brand-images/</code> — public logo images exposed through the website/API build.</li>\n<li><code>assets/logos/</code> — original logo source files.</li>\n</ul>\n"
     }
   ],
   "tokens": [],

@@ -152,14 +152,50 @@
     }
   },
   "version": {
-    "hash": "a38ea80a8099966615f752f445f5520d7a515a9b",
-    "shortHash": "a38ea80",
-    "date": "2026-07-08T04:07:21+08:00",
-    "message": "Unify topbar and refine admin unlock UI",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a38ea80a8099966615f752f445f5520d7a515a9b"
+    "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+    "shortHash": "a5bf7cf",
+    "date": "2026-07-10T20:21:24+08:00",
+    "message": "Replace contrast-template brand copy",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9"
   },
   "historyUrl": "api/history/nibiru.json",
   "history": [
+    {
+      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "shortHash": "a5bf7cf",
+      "date": "2026-07-10T20:21:24+08:00",
+      "message": "Replace contrast-template brand copy",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "sourcePaths": [
+        "config/brands.json",
+        "Nibiru",
+        "Nibiru/README.md"
+      ]
+    },
+    {
+      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "shortHash": "ed33a8b",
+      "date": "2026-07-10T18:44:20+08:00",
+      "message": "Add Shanrenjing journey safety IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "sourcePaths": [
+        "config/brands.json",
+        "Nibiru",
+        "Nibiru/README.md"
+      ]
+    },
+    {
+      "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "shortHash": "cd0ea58",
+      "date": "2026-07-08T04:12:48+08:00",
+      "message": "Refine hero index labels",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "sourcePaths": [
+        "config/brands.json",
+        "Nibiru",
+        "Nibiru/README.md"
+      ]
+    },
     {
       "hash": "9e33619ad95856c977f8803517f325304d678821",
       "shortHash": "9e33619",
@@ -195,42 +231,6 @@
         "Nibiru",
         "Nibiru/README.md"
       ]
-    },
-    {
-      "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
-      "shortHash": "5a93d2b",
-      "date": "2026-07-08T03:19:10+08:00",
-      "message": "Add Xinzhi Travel IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
-      "sourcePaths": [
-        "config/brands.json",
-        "Nibiru",
-        "Nibiru/README.md"
-      ]
-    },
-    {
-      "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
-      "shortHash": "3e24857",
-      "date": "2026-07-06T12:50:10+08:00",
-      "message": "Add IP classifications and iNucleus",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a",
-      "sourcePaths": [
-        "config/brands.json",
-        "Nibiru",
-        "Nibiru/README.md"
-      ]
-    },
-    {
-      "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
-      "shortHash": "b0269d2",
-      "date": "2026-07-06T06:21:22+08:00",
-      "message": "Add ksamint IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34",
-      "sourcePaths": [
-        "config/brands.json",
-        "Nibiru",
-        "Nibiru/README.md"
-      ]
     }
   ],
   "url": "brand.html?brand=nibiru",
@@ -243,7 +243,8 @@
       "format": "md",
       "primary": true,
       "excerpt": "Nibiru · 睿悦科技 Nibiru is an English first technology IP for spatial computing, intelligent experiences, and product innovation. Brand Role Main language : English Chinese name : 睿悦科技 Tracks : Spatial computing / Intelligent experiences / Technology products Audiences : Technology partners, product teams, spatial computing developers Business : Spatial computing, intelligent hardware, immersive experiences, product inn",
-      "text": "# Nibiru · 睿悦科技\n\nNibiru is an English-first technology IP for spatial computing, intelligent experiences, and product innovation.\n\n## Brand Role\n\n- **Main language**: English\n- **Chinese name**: 睿悦科技\n- **Tracks**: Spatial computing / Intelligent experiences / Technology products\n- **Audiences**: Technology partners, product teams, spatial computing developers\n- **Business**: Spatial computing, intelligent hardware, immersive experiences, product innovation, and technology services\n\n## Voice\n\nPrecise, future-facing, and product-minded. Nibiru should sound like a technology team with real hardware, systems, and experience design discipline, not like generic futurism.\n\n## Visual Direction\n\nUse deep space blue, aurora mint, and violet signal. The visual language should feel intelligent, spatial, and high-contrast, with careful restraint around neon effects.\n\n## Agent Notes\n\nWhen generating Nibiru content, default to the English name `Nibiru`. Use `睿悦科技` as the Chinese alternate name. Prioritize concrete product scenarios, spatial interfaces, intelligent hardware, developer ecosystems, and immersive experience use cases.\n"
+      "text": "# Nibiru · 睿悦科技\n\nNibiru is an English-first technology IP for spatial computing, intelligent experiences, and product innovation.\n\n## Brand Role\n\n- **Main language**: English\n- **Chinese name**: 睿悦科技\n- **Tracks**: Spatial computing / Intelligent experiences / Technology products\n- **Audiences**: Technology partners, product teams, spatial computing developers\n- **Business**: Spatial computing, intelligent hardware, immersive experiences, product innovation, and technology services\n\n## Voice\n\nPrecise, future-facing, and product-minded. Nibiru should sound like a technology team with real hardware, systems, and experience design discipline, not like generic futurism.\n\n## Visual Direction\n\nUse deep space blue, aurora mint, and violet signal. The visual language should feel intelligent, spatial, and high-contrast, with careful restraint around neon effects.\n\n## Agent Notes\n\nWhen generating Nibiru content, default to the English name `Nibiru`. Use `睿悦科技` as the Chinese alternate name. Prioritize concrete product scenarios, spatial interfaces, intelligent hardware, developer ecosystems, and immersive experience use cases.\n",
+      "html": "<h1 id=\"nibiru-guide-1-nibiru-睿悦科技\">Nibiru · 睿悦科技</h1>\n<p>Nibiru is an English-first technology IP for spatial computing, intelligent experiences, and product innovation.</p>\n<h2 id=\"nibiru-guide-1-brand-role\">Brand Role</h2>\n<ul>\n<li><strong>Main language</strong>: English</li>\n<li><strong>Chinese name</strong>: 睿悦科技</li>\n<li><strong>Tracks</strong>: Spatial computing / Intelligent experiences / Technology products</li>\n<li><strong>Audiences</strong>: Technology partners, product teams, spatial computing developers</li>\n<li><strong>Business</strong>: Spatial computing, intelligent hardware, immersive experiences, product innovation, and technology services</li>\n</ul>\n<h2 id=\"nibiru-guide-1-voice\">Voice</h2>\n<p>Precise, future-facing, and product-minded. Nibiru should sound like a technology team with real hardware, systems, and experience design discipline, not like generic futurism.</p>\n<h2 id=\"nibiru-guide-1-visual-direction\">Visual Direction</h2>\n<p>Use deep space blue, aurora mint, and violet signal. The visual language should feel intelligent, spatial, and high-contrast, with careful restraint around neon effects.</p>\n<h2 id=\"nibiru-guide-1-agent-notes\">Agent Notes</h2>\n<p>When generating Nibiru content, default to the English name <code>Nibiru</code>. Use <code>睿悦科技</code> as the Chinese alternate name. Prioritize concrete product scenarios, spatial interfaces, intelligent hardware, developer ecosystems, and immersive experience use cases.</p>\n"
     }
   ],
   "tokens": [],

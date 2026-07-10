@@ -7,7 +7,7 @@
   <title>IP进化论 | 岁知社 IPTrust</title>
   <meta name="description" content="IP进化论把品牌架构、内核、表达、资产与治理连接成可持续更新的系统。">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site-ed33a8b-7f718a6e.css">
+  <link rel="stylesheet" href="assets/site-a5bf7cf-dad6c841.css">
 </head>
 <body class="ip-system-page">
   <header class="topbar">
@@ -55,7 +55,7 @@
       <h1 data-i18n="evolution.pageTitle">让品牌持续进化。</h1>
       <p data-i18n="evolution.pageLead">架构、内核、表达、资产与治理，构成可管理、可调用、可持续更新的闭环。</p>
       <div class="ip-system-actions">
-        <a class="button" href="ip_sys.md" data-i18n="evolution.readFramework">读取完整框架</a>
+        <a class="button" href="#framework" data-i18n="evolution.readFramework">查看完整系统</a>
         <a class="button ghost" href="./#brandGrid" data-i18n="evolution.applyToIp">选择一个 IP</a>
       </div>
     </section>
@@ -66,10 +66,414 @@
       <article><strong data-i18n="evolution.assets">资产</strong><p data-i18n="evolution.assetsBody">把系统转化为人和 Agent 可调用的资产。</p></article>
       <article><strong data-i18n="evolution.governance">治理</strong><p data-i18n="evolution.governanceBody">记录版本、衡量偏差并持续回修。</p></article>
     </section>
+    <section class="ip-system-content-shell" id="framework">
+      <aside class="ip-system-toc" aria-label="IP System contents">
+        <strong data-i18n="evolution.frameworkTitle">完整系统</strong>
+        <nav><a href="#ip-system-第-0-层-前置判断-品牌架构-brand-architecture">第 0 层 · 前置判断：品牌架构（Brand Architecture）</a>
+<a href="#ip-system-第-1-层-品牌内核-七问-反馈环">第 1 层 · 品牌内核（七问 + 反馈环）</a>
+<a href="#ip-system-第-2-层-表达系统-四个子系统">第 2 层 · 表达系统（四个子系统）</a>
+<a href="#ip-system-第-3-层-资产阶梯-v2-按信息密度排列">第 3 层 · 资产阶梯 v2（按信息密度排列）</a>
+<a href="#ip-system-第-4-层-治理与度量-v2-新增-品牌如何活着">第 4 层 · 治理与度量（v2 新增）——品牌如何活着</a>
+<a href="#ip-system-第-5-层-裁剪指南-组织类型-权重表-v2-新增">第 5 层 · 裁剪指南：组织类型 × 权重表（v2 新增）</a>
+<a href="#ip-system-实施路线图-v2-工作流">实施路线图（v2 工作流）</a>
+<a href="#ip-system-全系统校验清单">全系统校验清单</a>
+<a href="#ip-system-文案原则">文案原则</a></nav>
+      </aside>
+      <article class="rendered-document ip-system-document">
+        <h1 id="ip-system-品牌-ip-系统-v2-定义任意组织-品牌-ip-的完整操作系统">品牌 IP 系统 v2 · 定义任意组织/品牌 IP 的完整操作系统</h1>
+<blockquote>
+<p><strong>与 v1 的关系</strong>：v1 是&quot;内核 → 表达 → 资产&quot;的三层单向瀑布；v2 前置了品牌架构判断（第 0 层）、后置了治理与度量（第 4 层），并把瀑布改为<strong>闭环</strong>——市场端的品牌形象定期与我们定义的品牌识别做差距比对，差距过大即回修上游。《品牌内核七问·工作底稿（学术依据版）》仍是第 1 层的配套操作文件。</p>
+<p><strong>v1 → v2 变更清单</strong>：① 新增第 0 层品牌架构判断；② 内核层加入&quot;识别-形象反馈环&quot;与复审节奏；③ 表达系统补声音/动效系统与 AI 触点；④ 资产阶梯补信息屋、EVP、GEO/AI 口吻规范四类；⑤ 新增第 4 层治理与度量；⑥ 新增&quot;组织类型 × 权重&quot;裁剪表。</p>
+</blockquote>
+<hr>
+<h2 id="ip-system-第-0-层-前置判断-品牌架构-brand-architecture">第 0 层 · 前置判断：品牌架构（Brand Architecture）</h2>
+<p><strong>为什么前置</strong>：架构决定你要做几套内核。单品牌组织可跳过本层直接进入第 1 层；只要存在（或规划中存在）第二条产品线、子公司或收购标的，就必须先答此题。</p>
+<p><strong>理论依据</strong>：David Aaker &amp; Erich Joachimsthaler，<em>The Brand Relationship Spectrum</em>（《加州管理评论》2000）及《品牌领导》——品牌关系谱系从紧到松四档：</p>
+<table>
+<thead>
+<tr>
+<th>架构</th>
+<th>定义</th>
+<th>典型</th>
+<th>内核数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>统一品牌屋 branded house</td>
+<td>一个主品牌覆盖全部业务</td>
+<td>Google、FedEx</td>
+<td>1 套内核，多套表达微调</td>
+</tr>
+<tr>
+<td>子品牌 sub-brands</td>
+<td>主品牌 + 子品牌共同驱动</td>
+<td>微软 Xbox</td>
+<td>1 套主内核 + 子品牌人格差异化</td>
+</tr>
+<tr>
+<td>背书式 endorsed</td>
+<td>独立品牌获母品牌背书</td>
+<td>万豪旗下各酒店</td>
+<td>每品牌一套内核，共享部分价值观</td>
+</tr>
+<tr>
+<td>多品牌屋 house of brands</td>
+<td>各品牌完全独立</td>
+<td>宝洁</td>
+<td>每品牌完整一套，母公司另有企业内核</td>
+</tr>
+</tbody></table>
+<p><strong>决策变量</strong>（四问定档）：</p>
+<ol>
+<li>各业务的<strong>受众重叠度</strong>——重叠高→靠向品牌屋（共享心智资产省钱）；重叠低→靠向多品牌。</li>
+<li><strong>风险隔离</strong>需求——某业务失败会否连累主品牌？需要隔离→靠向多品牌/背书式。</li>
+<li><strong>心智冲突</strong>——两条业务的定位或人格是否互斥（如高端与平价）？互斥→分开。</li>
+<li><strong>预算现实</strong>——每个独立品牌都是一台烧钱机器；预算有限时，Aaker 的默认建议是&quot;能用一个品牌就不要用两个&quot;。</li>
+</ol>
+<p><strong>本层输出</strong>：架构档位、命名层级规则（母品牌/产品名/功能名如何组合）、需要走完下面四层的内核数量。</p>
+<hr>
+<h2 id="ip-system-第-1-层-品牌内核-七问-反馈环">第 1 层 · 品牌内核（七问 + 反馈环）</h2>
+<h3 id="ip-system-1-1-七问-详见配套底稿">1.1 七问（详见配套底稿）</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>问题</th>
+<th>理论锚点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>使命：为什么存在</td>
+<td>Sinek 黄金圈；Collins &amp; Porras 核心目的；Drucker 三问</td>
+</tr>
+<tr>
+<td>2</td>
+<td>愿景：去往何处</td>
+<td>Collins &amp; Porras BHAG + 生动描述</td>
+</tr>
+<tr>
+<td>3</td>
+<td>价值观：信什么、拒绝什么</td>
+<td>Lencioni 四类价值观；Schein 文化三层；Horowitz</td>
+</tr>
+<tr>
+<td>4</td>
+<td>受众：为谁完成什么任务</td>
+<td>Christensen JTBD；Moore 滩头；Sharp 渗透率制衡</td>
+</tr>
+<tr>
+<td>5</td>
+<td>定位：占据什么心智位置</td>
+<td>Ries &amp; Trout；Porter 取舍；Keller POP/POD；Neumeier 唯一性</td>
+</tr>
+<tr>
+<td>6</td>
+<td>人格：品牌是谁</td>
+<td>Jennifer Aaker 五维；Mark &amp; Pearson 12 原型；Kapferer 棱镜</td>
+</tr>
+<tr>
+<td>7</td>
+<td>核心主张：一句母句</td>
+<td>Keller 品牌咒语；Osterwalder 价值主张画布</td>
+</tr>
+<tr>
+<td>8*</td>
+<td>（可选）回应什么社会张力</td>
+<td>Holt《品牌如何成为偶像》，仅志在文化品牌者答</td>
+</tr>
+</tbody></table>
+<h3 id="ip-system-1-2-识别-形象反馈环-v2-核心升级">1.2 识别-形象反馈环（v2 核心升级）</h3>
+<p><strong>理论依据</strong>：</p>
+<ul>
+<li>Kapferer 的关键区分：**品牌识别（identity）**是我们定义的&quot;想成为谁&quot;，**品牌形象（image）**是用户心智中实际形成的&quot;你是谁&quot;。identity 是发送端，image 是接收端，二者永远有偏差。</li>
+<li>Henry Mintzberg，<em>Of Strategies, Deliberate and Emergent</em>（《战略管理学报》1985）：现实中的战略是&quot;刻意规划&quot;与&quot;实践涌现&quot;的合流。品牌内核同理——尤其在早期，内核往往是从产品与用户反馈中<strong>提炼</strong>出来的，而非先验设计。</li>
+<li>Eric Ries《精益创业》（2011）：build–measure–learn 循环同样适用于品牌假设的验证。</li>
+</ul>
+<p><strong>操作规则</strong>：</p>
+<ol>
+<li><strong>初创组织</strong>允许&quot;先开枪后画靶&quot;：用最小内核（第 4、5、7 三问的草稿版）先跑，不必等七问完美。</li>
+<li><strong>差距比对</strong>：第 4 层的形象调研结果与内核定义并排比对。差距的处理分两档——形象偏差但内核仍被团队笃信 → 修表达与资产（发送端失真）；用户实际热爱的点与内核定义系统性错位 → 修内核（靶画错了，涌现的才是真内核）。</li>
+<li><strong>复审节奏</strong>：初创每 6–12 个月复审一次内核；成熟组织 24–36 个月。<strong>事件触发</strong>不受节奏限制：定位被竞品攻破、受众结构漂移、重大并购、公关危机、连续两次形象调研同向偏离。</li>
+<li><strong>不可动项</strong>：复审可改愿景、受众、定位、人格；使命与核心价值观按 Collins &amp; Porras 原则原地不动。修改这些根本项意味着组织进入重新创业阶段。</li>
+</ol>
+<hr>
+<h2 id="ip-system-第-2-层-表达系统-四个子系统">第 2 层 · 表达系统（四个子系统）</h2>
+<p><strong>语言系统</strong>：命名体系（遵循第 0 层的架构规则）、slogan/tagline、口吻与语调规范（tone of voice：句长、人称、禁用词表、幽默边界）、关键词库、品牌故事叙事线、<strong>信息屋的上游素材</strong>（核心信息与证据点）。</p>
+<p><strong>视觉系统</strong>：logo 及安全区/误用规范、主辅色板、字体系统、图像/插画/摄影风格、版式网格、图标、动效原则。</p>
+<p><strong>声音与动效系统（v2 新增）</strong>：<strong>理论依据</strong>——Sharp &amp; Romaniuk《Distinctive Brand Assets》（2018）以&quot;名气 × 独特性&quot;矩阵评估品牌资产，声音资产（sonic logo，如 Intel 五音、Netflix &quot;ta-dum&quot;）与动效在实证中与视觉资产同权重，且在音频流媒体、短视频、语音助手场景中是唯一可用的识别通道。最小配置：一枚 3 秒内的声音标识 + 一条统一的动效曲线（缓动、时长、节奏）规范。</p>
+<p><strong>行为系统</strong>：产品体验原则、客服话术、内容节奏与选题边界、活动风格。<strong>v2 新增触点——AI 人格规范</strong>：如果产品或服务中存在对话式 AI（客服机器人、产品内助手），它就是行为系统里说话最多的&quot;员工&quot;，其人设、口吻、拒绝方式、幽默尺度必须显式继承第六问的人格定义并写入手册，否则它会以默认的通用腔调稀释品牌。</p>
+<hr>
+<h2 id="ip-system-第-3-层-资产阶梯-v2-按信息密度排列">第 3 层 · 资产阶梯 v2（按信息密度排列）</h2>
+<h3 id="ip-system-a-压缩端-秒级">A. 压缩端（秒级）</h3>
+<table>
+<thead>
+<tr>
+<th>资产</th>
+<th>场景/时长</th>
+<th>核心组成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Slogan</td>
+<td>3 秒，任何触点</td>
+<td>核心主张的极限压缩，8–12 字</td>
+</tr>
+<tr>
+<td>电梯陈述 / Boilerplate</td>
+<td>30 秒</td>
+<td>我们是谁 + 为谁解决什么 + 凭什么不同</td>
+</tr>
+<tr>
+<td>一图流 One-pager</td>
+<td>3 分钟速览与转发</td>
+<td>定位句、3 个价值点、关键数据、视觉锤、CTA</td>
+</tr>
+</tbody></table>
+<h3 id="ip-system-b-展开端-分钟级到手册级">B. 展开端（分钟级到手册级）</h3>
+<table>
+<thead>
+<tr>
+<th>资产</th>
+<th>场景</th>
+<th>核心组成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>品牌宣言 Manifesto</td>
+<td>发布会、招聘页、官网首屏</td>
+<td>信念而非功能：反对什么、相信什么、承诺什么</td>
+</tr>
+<tr>
+<td><strong>信息屋 Messaging House（v2 新增）</strong></td>
+<td>全员对外沟通的话术总控，B2B 必备</td>
+<td>屋顶 = 核心主张；支柱 = 3–4 条按受众/场景分列的支撑信息；地基 = 每条支柱的证据点（数据、案例、客户证言）。销售、市场、PR 从同一栋屋里取话术，保证千人一面</td>
+</tr>
+<tr>
+<td>介绍 PPT</td>
+<td>10–20 分钟，分对象</td>
+<td>投资人版/客户版/招聘版，10–20 页</td>
+</tr>
+<tr>
+<td>官网</td>
+<td>自助浏览、多受众入口</td>
+<td>首屏 = slogan + 定位句；分受众导航；每页一个转化目标</td>
+</tr>
+<tr>
+<td><strong>雇主品牌 EVP（v2 新增）</strong></td>
+<td>招聘全流程</td>
+<td>员工价值主张：候选人版的&quot;第五问定位&quot;（为什么加入我们而非大厂）+ 文化证据 + 职位描述口吻规范。理论参照：Ambler &amp; Barrow 最早提出 employer brand（1996），本质是把内核翻译给&quot;人才&quot;这一独立受众</td>
+</tr>
+<tr>
+<td>品牌手册 Brand Book</td>
+<td>内部与合作方的单一信息源</td>
+<td>上篇战略（内核、故事、口吻）+ 中篇规范（视觉/声音/动效全套规则与正误示例）+ 下篇应用与治理（模板、授权分级、复审日历——详见第 4 层）</td>
+</tr>
+</tbody></table>
+<h3 id="ip-system-c-新模态端-v2-新增-ai-时代触点">C. 新模态端（v2 新增，AI 时代触点）</h3>
+<table>
+<thead>
+<tr>
+<th>资产</th>
+<th>场景</th>
+<th>核心组成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GEO / LLM 呈现规范</td>
+<td>用户向 AI 助手询问品类推荐时</td>
+<td>结构化、事实一致的对外信息源（官网 FAQ、维基类条目、schema 标记、一致的 boilerplate），确保大模型检索与转述你时说法与定位一致——本质是&quot;让机器读得懂的一图流&quot;</td>
+</tr>
+<tr>
+<td>AI 口吻规范</td>
+<td>产品内 AI、智能客服</td>
+<td>第 2 层行为系统 AI 人格条款的落地文档：系统提示词模板、示例对话、禁区清单</td>
+</tr>
+<tr>
+<td>声音资产包</td>
+<td>音频广告、短视频、语音交互</td>
+<td>sonic logo 源文件、使用场景规则、混音规范</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="ip-system-第-4-层-治理与度量-v2-新增-品牌如何活着">第 4 层 · 治理与度量（v2 新增）——品牌如何活着</h2>
+<h3 id="ip-system-4-1-治理-governance">4.1 治理（Governance）</h3>
+<ol>
+<li><strong>守门人与授权分级</strong>：指定品牌 owner（小组织即创始人本人）。资产分三级——<strong>绿区</strong>（社媒日常内容等，任何人按手册自由创作）、<strong>黄区</strong>（对外 PPT、活动物料，需品牌 owner 抽检）、<strong>红区</strong>（logo 改动、slogan、定位表述、危机声明，必须审批）。</li>
+<li><strong>偏离流程</strong>：允许创意偏离手册，但须提交&quot;偏离申请&quot;说明理由与回收计划。治理让偏离<strong>可见</strong>，并保留创意空间。</li>
+<li><strong>复审日历</strong>：第 1 层的复审节奏与事件触发条款写入手册末章，指定召集人。</li>
+<li><strong>单一信息源纪律</strong>：任何资产更新必须回写手册；手册版本号 + 变更日志，杜绝&quot;最新版在某人电脑里&quot;。</li>
+</ol>
+<h3 id="ip-system-4-2-度量-metrics-两套互补仪表盘">4.2 度量（Metrics）——两套互补仪表盘</h3>
+<p><strong>A. Keller CBBE 共鸣金字塔</strong>（《战略品牌管理》，品牌资产的四级诊断）：</p>
+<table>
+<thead>
+<tr>
+<th>层级</th>
+<th>问题</th>
+<th>可操作指标</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>① 显著性</td>
+<td>想得起你吗</td>
+<td>提示/无提示知名度、品类第一提及率</td>
+</tr>
+<tr>
+<td>② 联想</td>
+<td>想到你时想到什么</td>
+<td>品牌联想图谱与第 5/6 问定义的重合度</td>
+</tr>
+<tr>
+<td>③ 评价与感受</td>
+<td>怎么评价你</td>
+<td>净推荐值 NPS、评价关键词情感分析</td>
+</tr>
+<tr>
+<td>④ 共鸣</td>
+<td>与你共同生活吗</td>
+<td>复购率、社群活跃、UGC 量、自发辩护行为</td>
+</tr>
+</tbody></table>
+<p><strong>B. Sharp &amp; Romaniuk 实证指标</strong>（《How Brands Grow》《Distinctive Brand Assets》）：</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>含义</th>
+<th>测法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>心智可得性</td>
+<td>购买情境出现时能否被想起</td>
+<td>品类进入点（CEP）关联度调研：列出品类的典型购买情境，测品牌与各情境的关联率</td>
+</tr>
+<tr>
+<td>独特资产强度</td>
+<td>遮住名字还认得出吗</td>
+<td>名气 × 独特性矩阵：对色彩、符号、句式、声音逐项测&quot;多少人认得&quot;与&quot;多少人只归于你&quot;</td>
+</tr>
+<tr>
+<td>渗透率</td>
+<td>买过的人占比</td>
+<td>品类买家中的购买渗透，Sharp 认为它比忠诚度更能解释增长</td>
+</tr>
+</tbody></table>
+<p><strong>C. 内部体检</strong>（低成本，每季度）：随机抽员工复述品牌咒语与定位句的通过率；新产资产的&quot;溯源测试&quot;合格率（能否追溯到手册条款）。</p>
+<p><strong>反馈环闭合</strong>：A/B 两套外部数据构成&quot;形象&quot;，与第 1 层的&quot;识别&quot;做差距表——差距在表达层可解释 → 修第 2/3 层；差距指向内核假设本身 → 触发内核复审。至此系统闭环。</p>
+<hr>
+<h2 id="ip-system-第-5-层-裁剪指南-组织类型-权重表-v2-新增">第 5 层 · 裁剪指南：组织类型 × 权重表（v2 新增）</h2>
+<p>同一框架，不同组织的生死题不同。★ 数量 = 投入权重；每行附首要资产与最常见死法。</p>
+<table>
+<thead>
+<tr>
+<th>组织类型</th>
+<th>Q1 使命</th>
+<th>Q3 价值观</th>
+<th>Q4 受众</th>
+<th>Q5 定位</th>
+<th>Q6 人格</th>
+<th>首要资产</th>
+<th>最常见死法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>个人 IP</td>
+<td>★★</td>
+<td>★★</td>
+<td>★★</td>
+<td>★★</td>
+<td>★★★★</td>
+<td>人格化内容 + slogan</td>
+<td>人设与真实自我分裂，无法持续</td>
+</tr>
+<tr>
+<td>初创公司</td>
+<td>★★</td>
+<td>★★</td>
+<td>★★★★</td>
+<td>★★★★</td>
+<td>★★</td>
+<td>一图流 + 官网 + 电梯陈述</td>
+<td>定位贪大，滩头没打穿</td>
+</tr>
+<tr>
+<td>B2B 企业</td>
+<td>★★</td>
+<td>★★</td>
+<td>★★★</td>
+<td>★★★★</td>
+<td>★★</td>
+<td>信息屋 + 分对象 PPT + 案例库</td>
+<td>销售各说各话，信息屋缺失</td>
+</tr>
+<tr>
+<td>消费品牌</td>
+<td>★★</td>
+<td>★★</td>
+<td>★★★</td>
+<td>★★★</td>
+<td>★★★★</td>
+<td>独特资产包（视觉/声音锤）</td>
+<td>有差异化没独特性，被记成别人</td>
+</tr>
+<tr>
+<td>开源社区</td>
+<td>★★★</td>
+<td>★★★★</td>
+<td>★★</td>
+<td>★★</td>
+<td>★★★</td>
+<td>Manifesto + 治理文档</td>
+<td>价值观不落地，社区分裂 fork</td>
+</tr>
+<tr>
+<td>非营利组织</td>
+<td>★★★★</td>
+<td>★★★</td>
+<td>★★</td>
+<td>★★</td>
+<td>★★</td>
+<td>Manifesto + 年报叙事</td>
+<td>使命宏大到无法度量，捐赠人流失</td>
+</tr>
+<tr>
+<td>多品牌集团</td>
+<td>母★★★</td>
+<td>母★★★</td>
+<td>各子品牌★★★★</td>
+<td>各子品牌★★★★</td>
+<td>各子品牌★★★</td>
+<td>第 0 层架构文档本身</td>
+<td>架构不清，子品牌互相蚕食</td>
+</tr>
+</tbody></table>
+<p>裁剪原则：低权重项先给&quot;够用版&quot;（一两句话），把工作坊时间和预算集中在 ★★★★ 项。</p>
+<hr>
+<h2 id="ip-system-实施路线图-v2-工作流">实施路线图（v2 工作流）</h2>
+<p><strong>Phase 0</strong> 架构判断（多业务组织必做）→ <strong>Phase 1</strong> 内核工作坊，七问出草稿，初创允许最小内核先行 → <strong>Phase 2</strong> 语言先行：核心主张 → slogan → 口吻规范 → 信息屋 → <strong>Phase 3</strong> 视觉 + 声音系统 → <strong>Phase 4</strong> 汇编品牌手册（含治理章节），确立单一信息源 → <strong>Phase 5</strong> 派生全部资产（官网、PPT、一图流、宣言、EVP、GEO 规范）→ <strong>Phase 6</strong> 建度量基线：上线后 3 个月内完成第一次 CBBE + 独特资产测量 → <strong>循环</strong>：按复审日历回到 Phase 1。</p>
+<h2 id="ip-system-全系统校验清单">全系统校验清单</h2>
+<ul>
+<li><strong>溯源测试</strong>：任何资产的任何一页能否追溯到手册条款或内核某问。</li>
+<li><strong>盲测测试</strong>：遮住 logo，用户凭口吻与视觉能否认出是你。</li>
+<li><strong>冒名测试</strong>：定位句换成竞品名是否依然成立——成立则重写。</li>
+<li><strong>代价测试</strong>：每条价值观过去一年是否付出过真实代价。</li>
+<li><strong>千人一面测试</strong>：随机抽三名员工做 30 秒电梯陈述，核心信息是否一致（信息屋是否生效）。</li>
+<li><strong>机器转述测试</strong>：向主流 AI 助手询问你的品牌与品类推荐，转述是否与定位一致（GEO 是否生效）。</li>
+<li><strong>差距仪表盘</strong>：识别 vs 形象的季度差距趋势，是收敛还是发散。</li>
+</ul>
+<hr>
+<p><em>配套文件：《品牌内核七问·工作底稿（学术依据版）》（第 1 层操作模板）。提供组织信息后，可依次实例化：架构判断 → 七问初稿 → 信息屋 → 各资产。</em></p>
+<h2 id="ip-system-文案原则">文案原则</h2>
+<p>直接陈述品牌的定位、能力、价值与边界。禁用先否定再反转的模板句式，避免用虚构对立制造观点感。</p>
+
+      </article>
+    </section>
     <section class="ip-system-loop">
       <p data-i18n="evolution.loop">识别品牌，建立系统，生成资产，回收反馈，再次进化。</p>
     </section>
   </main>
-  <script src="assets/site-ed33a8b-7f718a6e.js" type="module"></script>
+  <script src="assets/site-a5bf7cf-dad6c841.js" type="module"></script>
 </body>
 </html>

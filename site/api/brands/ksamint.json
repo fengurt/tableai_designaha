@@ -152,14 +152,50 @@
     "en": ""
   },
   "version": {
-    "hash": "a38ea80a8099966615f752f445f5520d7a515a9b",
-    "shortHash": "a38ea80",
-    "date": "2026-07-08T04:07:21+08:00",
-    "message": "Unify topbar and refine admin unlock UI",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a38ea80a8099966615f752f445f5520d7a515a9b"
+    "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+    "shortHash": "a5bf7cf",
+    "date": "2026-07-10T20:21:24+08:00",
+    "message": "Replace contrast-template brand copy",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9"
   },
   "historyUrl": "api/history/ksamint.json",
   "history": [
+    {
+      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "shortHash": "a5bf7cf",
+      "date": "2026-07-10T20:21:24+08:00",
+      "message": "Replace contrast-template brand copy",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "sourcePaths": [
+        "config/brands.json",
+        "ksamint",
+        "ksamint/README.md"
+      ]
+    },
+    {
+      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "shortHash": "ed33a8b",
+      "date": "2026-07-10T18:44:20+08:00",
+      "message": "Add Shanrenjing journey safety IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "sourcePaths": [
+        "config/brands.json",
+        "ksamint",
+        "ksamint/README.md"
+      ]
+    },
+    {
+      "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "shortHash": "cd0ea58",
+      "date": "2026-07-08T04:12:48+08:00",
+      "message": "Refine hero index labels",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "sourcePaths": [
+        "config/brands.json",
+        "ksamint",
+        "ksamint/README.md"
+      ]
+    },
     {
       "hash": "9e33619ad95856c977f8803517f325304d678821",
       "shortHash": "9e33619",
@@ -195,42 +231,6 @@
         "ksamint",
         "ksamint/README.md"
       ]
-    },
-    {
-      "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
-      "shortHash": "5a93d2b",
-      "date": "2026-07-08T03:19:10+08:00",
-      "message": "Add Xinzhi Travel IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
-      "sourcePaths": [
-        "config/brands.json",
-        "ksamint",
-        "ksamint/README.md"
-      ]
-    },
-    {
-      "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
-      "shortHash": "3e24857",
-      "date": "2026-07-06T12:50:10+08:00",
-      "message": "Add IP classifications and iNucleus",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a",
-      "sourcePaths": [
-        "config/brands.json",
-        "ksamint",
-        "ksamint/README.md"
-      ]
-    },
-    {
-      "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-      "shortHash": "4f7db01",
-      "date": "2026-07-06T10:17:49+08:00",
-      "message": "Add encrypted ksamint private skills service",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-      "sourcePaths": [
-        "config/brands.json",
-        "ksamint",
-        "ksamint/README.md"
-      ]
     }
   ],
   "url": "brand.html?brand=ksamint",
@@ -243,7 +243,8 @@
       "format": "md",
       "primary": true,
       "excerpt": "ksamint / 查明 Overview ksamint 是面向清晰判断、信息核验与轻盈智能协作的 IP。它帮助用户把混杂信息查清、讲明、沉淀为可复用的知识与行动依据。 ksamint is an IP for clear judgment, information verification, and lightweight intelligent collaboration. It turns mixed signals into checked context, concise explanation, and reusable knowledge. Brand Role English name: ksamint Chinese name: 查明 Main language: English Role: clarity oriented inquiry and verification IP Visual Directi",
-      "text": "# ksamint / 查明\n\n## Overview\n\nksamint 是面向清晰判断、信息核验与轻盈智能协作的 IP。它帮助用户把混杂信息查清、讲明、沉淀为可复用的知识与行动依据。\n\nksamint is an IP for clear judgment, information verification, and lightweight intelligent collaboration. It turns mixed signals into checked context, concise explanation, and reusable knowledge.\n\n## Brand Role\n\n- English name: ksamint\n- Chinese name: 查明\n- Main language: English\n- Role: clarity-oriented inquiry and verification IP\n\n## Visual Direction\n\nThe visual language should feel fresh, exact, and calm: mint as clarity, deep green as trust, white space as disciplined attention. Avoid noisy dashboards, heavy gradients, and decorative excess.\n\n## Agent Notes\n\nUse ksamint when the task requires checking, clarifying, comparing sources, extracting signal from noise, or turning uncertainty into a concise answer.\n"
+      "text": "# ksamint / 查明\n\n## Overview\n\nksamint 是面向清晰判断、信息核验与轻盈智能协作的 IP。它帮助用户把混杂信息查清、讲明、沉淀为可复用的知识与行动依据。\n\nksamint is an IP for clear judgment, information verification, and lightweight intelligent collaboration. It turns mixed signals into checked context, concise explanation, and reusable knowledge.\n\n## Brand Role\n\n- English name: ksamint\n- Chinese name: 查明\n- Main language: English\n- Role: clarity-oriented inquiry and verification IP\n\n## Visual Direction\n\nThe visual language should feel fresh, exact, and calm: mint as clarity, deep green as trust, white space as disciplined attention. Avoid noisy dashboards, heavy gradients, and decorative excess.\n\n## Agent Notes\n\nUse ksamint when the task requires checking, clarifying, comparing sources, extracting signal from noise, or turning uncertainty into a concise answer.\n",
+      "html": "<h1 id=\"ksamint-guide-1-ksamint-查明\">ksamint / 查明</h1>\n<h2 id=\"ksamint-guide-1-overview\">Overview</h2>\n<p>ksamint 是面向清晰判断、信息核验与轻盈智能协作的 IP。它帮助用户把混杂信息查清、讲明、沉淀为可复用的知识与行动依据。</p>\n<p>ksamint is an IP for clear judgment, information verification, and lightweight intelligent collaboration. It turns mixed signals into checked context, concise explanation, and reusable knowledge.</p>\n<h2 id=\"ksamint-guide-1-brand-role\">Brand Role</h2>\n<ul>\n<li>English name: ksamint</li>\n<li>Chinese name: 查明</li>\n<li>Main language: English</li>\n<li>Role: clarity-oriented inquiry and verification IP</li>\n</ul>\n<h2 id=\"ksamint-guide-1-visual-direction\">Visual Direction</h2>\n<p>The visual language should feel fresh, exact, and calm: mint as clarity, deep green as trust, white space as disciplined attention. Avoid noisy dashboards, heavy gradients, and decorative excess.</p>\n<h2 id=\"ksamint-guide-1-agent-notes\">Agent Notes</h2>\n<p>Use ksamint when the task requires checking, clarifying, comparing sources, extracting signal from noise, or turning uncertainty into a concise answer.</p>\n"
     },
     {
       "path": "ksamint/private/README.md",
@@ -251,7 +252,8 @@
       "format": "md",
       "primary": false,
       "excerpt": "ksamint Private Skills Private ksamint skills are stored only as encrypted payloads. Do not commit plaintext prompts here. Use: bash KSAMINT SKILL KEY=\"...\" npm run encrypt:ksamint skills /path/to/private skills.md The script writes: ksamint/private/guofeng writing style.enc.json site/api/private/ksamint skills.enc.json The encrypted site copy is readable only through /api/skills/ksamint after System API authenticati",
-      "text": "# ksamint Private Skills\n\nPrivate ksamint skills are stored only as encrypted payloads.\n\nDo not commit plaintext prompts here.\n\nUse:\n\n```bash\nKSAMINT_SKILL_KEY=\"...\" npm run encrypt:ksamint-skills -- /path/to/private-skills.md\n```\n\nThe script writes:\n\n- `ksamint/private/guofeng-writing-style.enc.json`\n- `site/api/private/ksamint-skills.enc.json`\n\nThe encrypted site copy is readable only through `/api/skills/ksamint` after System API authentication.\n"
+      "text": "# ksamint Private Skills\n\nPrivate ksamint skills are stored only as encrypted payloads.\n\nDo not commit plaintext prompts here.\n\nUse:\n\n```bash\nKSAMINT_SKILL_KEY=\"...\" npm run encrypt:ksamint-skills -- /path/to/private-skills.md\n```\n\nThe script writes:\n\n- `ksamint/private/guofeng-writing-style.enc.json`\n- `site/api/private/ksamint-skills.enc.json`\n\nThe encrypted site copy is readable only through `/api/skills/ksamint` after System API authentication.\n",
+      "html": "<h1 id=\"ksamint-guide-2-ksamint-private-skills\">ksamint Private Skills</h1>\n<p>Private ksamint skills are stored only as encrypted payloads.</p>\n<p>Do not commit plaintext prompts here.</p>\n<p>Use:</p>\n<pre><code class=\"language-bash\">KSAMINT_SKILL_KEY=&quot;...&quot; npm run encrypt:ksamint-skills -- /path/to/private-skills.md\n</code></pre>\n<p>The script writes:</p>\n<ul>\n<li><code>ksamint/private/guofeng-writing-style.enc.json</code></li>\n<li><code>site/api/private/ksamint-skills.enc.json</code></li>\n</ul>\n<p>The encrypted site copy is readable only through <code>/api/skills/ksamint</code> after System API authentication.</p>\n"
     }
   ],
   "tokens": [],

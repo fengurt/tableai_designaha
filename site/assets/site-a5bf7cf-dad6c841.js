@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "ed33a8b-7f718a6e";
+const BUILD_VERSION = "a5bf7cf-dad6c841";
 
 const i18n = {
   cn: {
@@ -54,6 +54,7 @@ const i18n = {
     "brand.openIpSystem": "打开框架",
     "brand.copyIpSystem": "复制 Apply Brief",
     "brand.ipSystemCopied": "已复制 IP System Apply Brief",
+    "brand.guideline": "品牌规范",
     "brand.moodBoard": "Mood Board",
     "brand.visualAssets": "视觉资产",
     "brand.keywords": "关键词",
@@ -106,7 +107,8 @@ const i18n = {
     "evolution.expressionBody": "统一语言、视觉、声音与行为。",
     "evolution.assetsBody": "把系统转化为人和 Agent 可调用的资产。",
     "evolution.governanceBody": "记录版本、衡量偏差并持续回修。",
-    "evolution.readFramework": "读取完整框架",
+    "evolution.readFramework": "查看完整系统",
+    "evolution.frameworkTitle": "完整系统",
     "evolution.applyToIp": "选择一个 IP",
     "evolution.loop": "识别品牌，建立系统，生成资产，回收反馈，再次进化。",
     "api.title": "System API",
@@ -199,6 +201,7 @@ const i18n = {
     "brand.openIpSystem": "Open framework",
     "brand.copyIpSystem": "Copy apply brief",
     "brand.ipSystemCopied": "IP System apply brief copied",
+    "brand.guideline": "Brand guideline",
     "brand.moodBoard": "Mood Board",
     "brand.visualAssets": "Visual assets",
     "brand.keywords": "Keywords",
@@ -251,7 +254,8 @@ const i18n = {
     "evolution.expressionBody": "Align language, visual, sound, and behavior.",
     "evolution.assetsBody": "Create assets that people and agents can call.",
     "evolution.governanceBody": "Track versions, measure gaps, and keep improving.",
-    "evolution.readFramework": "Read the framework",
+    "evolution.readFramework": "Explore the system",
+    "evolution.frameworkTitle": "System contents",
     "evolution.applyToIp": "Choose an IP",
     "evolution.loop": "Identify the brand. Build the system. Create assets. Learn from feedback. Evolve again.",
     "api.title": "System API",
@@ -1316,7 +1320,7 @@ function brandAssetHub(brand = {}) {
         ${endpointCard(t("brand.brandJson"), endpoints.brand || brand.apiUrl, `get_brand`)}
         ${endpointCard(t("brand.imageAssets"), endpoints.images || brand.apiUrl, `images[]`)}
         ${endpointCard(t("brand.historyApi"), endpoints.history || brand.historyUrl, `versions[]`)}
-        ${endpointCard(t("brand.ipSystem"), "ip_sys.md", `apply_ip_system`)}
+        ${endpointCard(t("brand.ipSystem"), "ip-evolution", `apply_ip_system`)}
         ${endpointCard(t("brand.agentUse"), brand.apiUrl, `get_brand({ "assetKey": "${key}" })`)}
       </div>
     </section>
@@ -1332,7 +1336,7 @@ function ipSystemPanel(brand = {}) {
           <h2>${escapeHtml(t("brand.ipSystem"))}</h2>
         </div>
         <div class="actions">
-          <a class="button ghost" href="ip_sys.md">${escapeHtml(t("brand.openIpSystem"))}</a>
+          <a class="button ghost" href="ip-evolution">${escapeHtml(t("brand.openIpSystem"))}</a>
           <button class="button" type="button" data-apply-ip-system="${escapeHtml(brand.slug)}">${escapeHtml(t("brand.copyIpSystem"))}</button>
         </div>
       </div>
@@ -1590,10 +1594,9 @@ async function renderBrand() {
         <div class="resource"><strong>${t("brand.tokens")}</strong><br>${brand.tokens?.map((token) => escapeHtml(token.path)).join("<br>") || t("brand.noneTokens")}</div>
       </section>
       ${brand.guides?.map((guide) => `
-        <article class="guide">
-          <p class="eyebrow">${escapeHtml(guide.format)} · ${escapeHtml(guide.path)}</p>
-          <h2>${escapeHtml(guide.title)}</h2>
-          <pre>${escapeHtml(guide.text)}</pre>
+        <article class="guide guide-rendered">
+          <p class="eyebrow">${escapeHtml(t("brand.guideline"))}</p>
+          <div class="rendered-document brand-guide-document">${guide.html || ("<p>" + escapeHtml(guide.excerpt || "") + "</p>")}</div>
         </article>
       `).join("") || ""}
     </div>

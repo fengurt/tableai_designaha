@@ -15,5 +15,8 @@
   },
   "devDependencies": {
     "style-dictionary": "^4.3.0"
+  },
+  "dependencies": {
+    "marked": "^18.0.6"
   }
 }

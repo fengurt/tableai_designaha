@@ -1,5 +1,12 @@
 [
   {
+    "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+    "shortHash": "a5bf7cf",
+    "date": "2026-07-10T20:21:24+08:00",
+    "message": "Replace contrast-template brand copy",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9"
+  },
+  {
     "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
     "shortHash": "ed33a8b",
     "date": "2026-07-10T18:44:20+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-07-06T08:11:57+08:00",
     "message": "Add protected cloud resource inventory",
     "url": "https://github.com/fengurt/tableai_designaha/commit/1daf4e6c3e8413ad270ce449d013215945098a85"
-  },
-  {
-    "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
-    "shortHash": "b0269d2",
-    "date": "2026-07-06T06:21:22+08:00",
-    "message": "Add ksamint IP",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34"
   }
 ]

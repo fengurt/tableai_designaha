@@ -4,6 +4,7 @@ import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { dirname, extname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
+import { marked, Renderer } from "marked";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const siteDir = join(root, "site");
@@ -229,6 +230,43 @@ function html(strings, ...values) {
   return String.raw({ raw: strings }, ...values);
 }
 
+function escapeBuildHtml(value = "") {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function markdownSlug(value = "") {
+  return String(value)
+    .toLowerCase()
+    .trim()
+    .replace(/[^\p{Letter}\p{Number}]+/gu, "-")
+    .replace(/^-+|-+$/g, "") || "section";
+}
+
+function renderMarkdownDocument(markdown = "", prefix = "document") {
+  const renderer = new Renderer();
+  const seen = new Map();
+  renderer.heading = function ({ tokens, depth, text }) {
+    const base = `${prefix}-${markdownSlug(text)}`;
+    const count = seen.get(base) || 0;
+    seen.set(base, count + 1);
+    const id = count ? `${base}-${count + 1}` : base;
+    return `<h${depth} id="${id}">${this.parser.parseInline(tokens)}</h${depth}>\n`;
+  };
+  return marked.parse(markdown, { gfm: true, renderer });
+}
+
+function markdownToc(markdown = "", prefix = "document") {
+  return marked.lexer(markdown)
+    .filter((token) => token.type === "heading" && token.depth === 2)
+    .map((token) => `<a href="#${prefix}-${markdownSlug(token.text)}">${escapeBuildHtml(token.text)}</a>`)
+    .join("\n");
+}
+
 function loadVersions() {
   try {
     const out = execFileSync("git", ["log", "-12", "--date=iso-strict", "--pretty=format:%H%x09%h%x09%cI%x09%s"], {
@@ -385,6 +423,9 @@ for (const inputPath of ["scripts/build-site.mjs", "config/brands.json", "packag
 const buildVersion = `${versions[0]?.shortHash ?? "dev"}-${buildFingerprint.digest("hex").slice(0, 8)}`;
 const siteCssPath = `assets/site-${buildVersion}.css`;
 const siteJsPath = `assets/site-${buildVersion}.js`;
+const ipSystemMarkdown = await readFile(join(root, "IP-System/ip_sys.md"), "utf8");
+const ipSystemDocumentHtml = renderMarkdownDocument(ipSystemMarkdown, "ip-system");
+const ipSystemTocHtml = markdownToc(ipSystemMarkdown, "ip-system");
 
 await rm(siteDir, { recursive: true, force: true });
 await mkdir(brandApiDir, { recursive: true });
@@ -423,6 +464,9 @@ for (const brand of brands) {
         primary: rel === brand.primaryGuide,
         excerpt: excerpt(text),
         text,
+        html: ["md", "markdown"].includes(extname(rel).toLowerCase().slice(1))
+          ? renderMarkdownDocument(text, `${brand.slug}-guide-${guides.length + 1}`)
+          : `<p>${escapeBuildHtml(excerpt(text))}</p>`,
       });
     }
     if (isToken(rel)) {
@@ -889,7 +933,7 @@ await writeFile(join(siteDir, "ip-evolution"), html`<!doctype html>
       <h1 data-i18n="evolution.pageTitle">让品牌持续进化。</h1>
       <p data-i18n="evolution.pageLead">架构、内核、表达、资产与治理，构成可管理、可调用、可持续更新的闭环。</p>
       <div class="ip-system-actions">
-        <a class="button" href="ip_sys.md" data-i18n="evolution.readFramework">读取完整框架</a>
+        <a class="button" href="#framework" data-i18n="evolution.readFramework">查看完整系统</a>
         <a class="button ghost" href="./#brandGrid" data-i18n="evolution.applyToIp">选择一个 IP</a>
       </div>
     </section>
@@ -899,6 +943,15 @@ await writeFile(join(siteDir, "ip-evolution"), html`<!doctype html>
       <article><strong data-i18n="evolution.expression">表达</strong><p data-i18n="evolution.expressionBody">统一语言、视觉、声音与行为。</p></article>
       <article><strong data-i18n="evolution.assets">资产</strong><p data-i18n="evolution.assetsBody">把系统转化为人和 Agent 可调用的资产。</p></article>
       <article><strong data-i18n="evolution.governance">治理</strong><p data-i18n="evolution.governanceBody">记录版本、衡量偏差并持续回修。</p></article>
+    </section>
+    <section class="ip-system-content-shell" id="framework">
+      <aside class="ip-system-toc" aria-label="IP System contents">
+        <strong data-i18n="evolution.frameworkTitle">完整系统</strong>
+        <nav>${ipSystemTocHtml}</nav>
+      </aside>
+      <article class="rendered-document ip-system-document">
+        ${ipSystemDocumentHtml}
+      </article>
     </section>
     <section class="ip-system-loop">
       <p data-i18n="evolution.loop">识别品牌，建立系统，生成资产，回收反馈，再次进化。</p>
@@ -1639,6 +1692,116 @@ p { line-height: 1.65; }
   color: var(--muted);
   font-size: 16px;
 }
+.ip-system-content-shell {
+  display: grid;
+  grid-template-columns: minmax(170px, .28fr) minmax(0, 1fr);
+  gap: clamp(36px, 7vw, 92px);
+  align-items: start;
+  padding: clamp(70px, 10vw, 132px) 0 20px;
+}
+.ip-system-toc {
+  position: sticky;
+  top: 96px;
+  display: grid;
+  gap: 18px;
+  max-height: calc(100vh - 120px);
+  overflow: auto;
+  padding-right: 12px;
+}
+.ip-system-toc > strong {
+  font-size: 13px;
+  letter-spacing: .06em;
+}
+.ip-system-toc nav {
+  display: grid;
+  align-items: start;
+  gap: 10px;
+  width: 100%;
+}
+.ip-system-toc a {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.35;
+  text-decoration: none;
+}
+.ip-system-toc a:hover,
+.ip-system-toc a:focus-visible { color: var(--ink); }
+.rendered-document {
+  min-width: 0;
+  max-width: 860px;
+  color: var(--ink);
+}
+.rendered-document > :first-child { margin-top: 0; }
+.rendered-document h1 {
+  max-width: 820px;
+  margin: 0 0 30px;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.04;
+}
+.rendered-document h2 {
+  margin: clamp(64px, 9vw, 108px) 0 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--ink);
+  font-size: clamp(28px, 4vw, 42px);
+}
+.rendered-document h3 {
+  margin: 42px 0 16px;
+  font-size: clamp(21px, 2.4vw, 28px);
+}
+.rendered-document h4 {
+  margin: 28px 0 12px;
+  font-size: 18px;
+}
+.rendered-document p,
+.rendered-document li {
+  color: color-mix(in srgb, var(--ink) 82%, var(--muted));
+  font-size: 16px;
+  line-height: 1.85;
+}
+.rendered-document ul,
+.rendered-document ol { padding-left: 1.35em; }
+.rendered-document li + li { margin-top: 7px; }
+.rendered-document blockquote {
+  margin: 28px 0;
+  padding: 4px 0 4px 20px;
+  border-left: 2px solid var(--accent);
+}
+.rendered-document blockquote p { color: var(--muted); }
+.rendered-document table {
+  display: block;
+  width: 100%;
+  margin: 24px 0 36px;
+  overflow-x: auto;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.rendered-document th,
+.rendered-document td {
+  min-width: 132px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.55;
+}
+.rendered-document th {
+  color: var(--ink);
+  font-weight: 800;
+  border-bottom-color: var(--ink);
+}
+.rendered-document code {
+  overflow-wrap: anywhere;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .9em;
+}
+.rendered-document pre code { color: inherit; }
+.brand-guide-document {
+  max-width: 920px;
+}
+.guide-rendered {
+  padding: clamp(24px, 4vw, 48px);
+}
+.guide-rendered > .eyebrow { margin: 0 0 22px; }
 .ip-system-loop {
   padding: clamp(54px, 8vw, 100px) 0 0 clamp(0px, 14vw, 170px);
 }
@@ -2336,6 +2499,20 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .evolution-open { grid-column: 2; grid-row: 1; }
   .ip-system-hero { min-height: auto; }
   .ip-system-layers article { grid-template-columns: 1fr; gap: 8px; }
+  .ip-system-content-shell { grid-template-columns: 1fr; gap: 36px; }
+  .ip-system-toc {
+    position: static;
+    max-height: none;
+    padding: 0 0 22px;
+    border-bottom: 1px solid var(--line);
+  }
+  .ip-system-toc nav {
+    display: flex;
+    gap: 8px 16px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+  }
+  .ip-system-toc a { flex: 0 0 auto; }
   .ip-system-loop { padding-left: 0; }
   .collab-card { grid-template-columns: 1fr; align-items: start; }
   .history-panel { grid-template-columns: 1fr; }
@@ -2417,6 +2594,7 @@ const i18n = {
     "brand.openIpSystem": "打开框架",
     "brand.copyIpSystem": "复制 Apply Brief",
     "brand.ipSystemCopied": "已复制 IP System Apply Brief",
+    "brand.guideline": "品牌规范",
     "brand.moodBoard": "Mood Board",
     "brand.visualAssets": "视觉资产",
     "brand.keywords": "关键词",
@@ -2469,7 +2647,8 @@ const i18n = {
     "evolution.expressionBody": "统一语言、视觉、声音与行为。",
     "evolution.assetsBody": "把系统转化为人和 Agent 可调用的资产。",
     "evolution.governanceBody": "记录版本、衡量偏差并持续回修。",
-    "evolution.readFramework": "读取完整框架",
+    "evolution.readFramework": "查看完整系统",
+    "evolution.frameworkTitle": "完整系统",
     "evolution.applyToIp": "选择一个 IP",
     "evolution.loop": "识别品牌，建立系统，生成资产，回收反馈，再次进化。",
     "api.title": "System API",
@@ -2562,6 +2741,7 @@ const i18n = {
     "brand.openIpSystem": "Open framework",
     "brand.copyIpSystem": "Copy apply brief",
     "brand.ipSystemCopied": "IP System apply brief copied",
+    "brand.guideline": "Brand guideline",
     "brand.moodBoard": "Mood Board",
     "brand.visualAssets": "Visual assets",
     "brand.keywords": "Keywords",
@@ -2614,7 +2794,8 @@ const i18n = {
     "evolution.expressionBody": "Align language, visual, sound, and behavior.",
     "evolution.assetsBody": "Create assets that people and agents can call.",
     "evolution.governanceBody": "Track versions, measure gaps, and keep improving.",
-    "evolution.readFramework": "Read the framework",
+    "evolution.readFramework": "Explore the system",
+    "evolution.frameworkTitle": "System contents",
     "evolution.applyToIp": "Choose an IP",
     "evolution.loop": "Identify the brand. Build the system. Create assets. Learn from feedback. Evolve again.",
     "api.title": "System API",
@@ -3679,7 +3860,7 @@ function brandAssetHub(brand = {}) {
         \${endpointCard(t("brand.brandJson"), endpoints.brand || brand.apiUrl, \`get_brand\`)}
         \${endpointCard(t("brand.imageAssets"), endpoints.images || brand.apiUrl, \`images[]\`)}
         \${endpointCard(t("brand.historyApi"), endpoints.history || brand.historyUrl, \`versions[]\`)}
-        \${endpointCard(t("brand.ipSystem"), "ip_sys.md", \`apply_ip_system\`)}
+        \${endpointCard(t("brand.ipSystem"), "ip-evolution", \`apply_ip_system\`)}
         \${endpointCard(t("brand.agentUse"), brand.apiUrl, \`get_brand({ "assetKey": "\${key}" })\`)}
       </div>
     </section>
@@ -3695,7 +3876,7 @@ function ipSystemPanel(brand = {}) {
           <h2>\${escapeHtml(t("brand.ipSystem"))}</h2>
         </div>
         <div class="actions">
-          <a class="button ghost" href="ip_sys.md">\${escapeHtml(t("brand.openIpSystem"))}</a>
+          <a class="button ghost" href="ip-evolution">\${escapeHtml(t("brand.openIpSystem"))}</a>
           <button class="button" type="button" data-apply-ip-system="\${escapeHtml(brand.slug)}">\${escapeHtml(t("brand.copyIpSystem"))}</button>
         </div>
       </div>
@@ -3953,10 +4134,9 @@ async function renderBrand() {
         <div class="resource"><strong>\${t("brand.tokens")}</strong><br>\${brand.tokens?.map((token) => escapeHtml(token.path)).join("<br>") || t("brand.noneTokens")}</div>
       </section>
       \${brand.guides?.map((guide) => \`
-        <article class="guide">
-          <p class="eyebrow">\${escapeHtml(guide.format)} · \${escapeHtml(guide.path)}</p>
-          <h2>\${escapeHtml(guide.title)}</h2>
-          <pre>\${escapeHtml(guide.text)}</pre>
+        <article class="guide guide-rendered">
+          <p class="eyebrow">\${escapeHtml(t("brand.guideline"))}</p>
+          <div class="rendered-document brand-guide-document">\${guide.html || ("<p>" + escapeHtml(guide.excerpt || "") + "</p>")}</div>
         </article>
       \`).join("") || ""}
     </div>

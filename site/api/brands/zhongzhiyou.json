@@ -156,14 +156,50 @@
     }
   },
   "version": {
-    "hash": "a38ea80a8099966615f752f445f5520d7a515a9b",
-    "shortHash": "a38ea80",
-    "date": "2026-07-08T04:07:21+08:00",
-    "message": "Unify topbar and refine admin unlock UI",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a38ea80a8099966615f752f445f5520d7a515a9b"
+    "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+    "shortHash": "a5bf7cf",
+    "date": "2026-07-10T20:21:24+08:00",
+    "message": "Replace contrast-template brand copy",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9"
   },
   "historyUrl": "api/history/zhongzhiyou.json",
   "history": [
+    {
+      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "shortHash": "a5bf7cf",
+      "date": "2026-07-10T20:21:24+08:00",
+      "message": "Replace contrast-template brand copy",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "sourcePaths": [
+        "config/brands.json",
+        "ZhongzhiyouGroup",
+        "ZhongzhiyouGroup/README.md"
+      ]
+    },
+    {
+      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "shortHash": "ed33a8b",
+      "date": "2026-07-10T18:44:20+08:00",
+      "message": "Add Shanrenjing journey safety IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "sourcePaths": [
+        "config/brands.json",
+        "ZhongzhiyouGroup",
+        "ZhongzhiyouGroup/README.md"
+      ]
+    },
+    {
+      "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "shortHash": "cd0ea58",
+      "date": "2026-07-08T04:12:48+08:00",
+      "message": "Refine hero index labels",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "sourcePaths": [
+        "config/brands.json",
+        "ZhongzhiyouGroup",
+        "ZhongzhiyouGroup/README.md"
+      ]
+    },
     {
       "hash": "9e33619ad95856c977f8803517f325304d678821",
       "shortHash": "9e33619",
@@ -199,42 +235,6 @@
         "ZhongzhiyouGroup",
         "ZhongzhiyouGroup/README.md"
       ]
-    },
-    {
-      "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
-      "shortHash": "5a93d2b",
-      "date": "2026-07-08T03:19:10+08:00",
-      "message": "Add Xinzhi Travel IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
-      "sourcePaths": [
-        "config/brands.json",
-        "ZhongzhiyouGroup",
-        "ZhongzhiyouGroup/README.md"
-      ]
-    },
-    {
-      "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
-      "shortHash": "3e24857",
-      "date": "2026-07-06T12:50:10+08:00",
-      "message": "Add IP classifications and iNucleus",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a",
-      "sourcePaths": [
-        "config/brands.json",
-        "ZhongzhiyouGroup",
-        "ZhongzhiyouGroup/README.md"
-      ]
-    },
-    {
-      "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
-      "shortHash": "b0269d2",
-      "date": "2026-07-06T06:21:22+08:00",
-      "message": "Add ksamint IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34",
-      "sourcePaths": [
-        "config/brands.json",
-        "ZhongzhiyouGroup",
-        "ZhongzhiyouGroup/README.md"
-      ]
     }
   ],
   "url": "brand.html?brand=zhongzhiyou",
@@ -247,7 +247,8 @@
       "format": "md",
       "primary": true,
       "excerpt": "中智游集团 · Zhongzhiyou Group 中智游集团是中文优先的智慧文旅与目的地运营集团 IP。 Brand Role 主语言 ：中文 英文对照 ：Zhongzhiyou Group 赛道 ：智慧文旅 / 目的地运营 / 文化旅游 人群 ：文旅集团、目的地伙伴、旅游服务团队 业务 ：智慧文旅、目的地运营、旅游服务协作、文化路线与项目孵化 Voice 可信、清晰、有组织感。表达要优先使用中文，并把复杂的文旅业务拆成可执行的路线、服务、资源与协作关系。 Visual Direction 以目的地绿、路线金、湖蓝为基础，整体应有集团级可信度、文旅温度和智慧运营感。避免廉价旅行促销视觉和过度科技感。 Agent Notes 在生成中智游集团相关内容时，默认使用中文主名称。英文仅作为对照、URL、文件名或国际化字段使用。内容重点放在智慧文旅、目的地运营、文化路线、服务协作与项目孵化。",
-      "text": "# 中智游集团 · Zhongzhiyou Group\n\n中智游集团是中文优先的智慧文旅与目的地运营集团 IP。\n\n## Brand Role\n\n- **主语言**：中文\n- **英文对照**：Zhongzhiyou Group\n- **赛道**：智慧文旅 / 目的地运营 / 文化旅游\n- **人群**：文旅集团、目的地伙伴、旅游服务团队\n- **业务**：智慧文旅、目的地运营、旅游服务协作、文化路线与项目孵化\n\n## Voice\n\n可信、清晰、有组织感。表达要优先使用中文，并把复杂的文旅业务拆成可执行的路线、服务、资源与协作关系。\n\n## Visual Direction\n\n以目的地绿、路线金、湖蓝为基础，整体应有集团级可信度、文旅温度和智慧运营感。避免廉价旅行促销视觉和过度科技感。\n\n## Agent Notes\n\n在生成中智游集团相关内容时，默认使用中文主名称。英文仅作为对照、URL、文件名或国际化字段使用。内容重点放在智慧文旅、目的地运营、文化路线、服务协作与项目孵化。\n"
+      "text": "# 中智游集团 · Zhongzhiyou Group\n\n中智游集团是中文优先的智慧文旅与目的地运营集团 IP。\n\n## Brand Role\n\n- **主语言**：中文\n- **英文对照**：Zhongzhiyou Group\n- **赛道**：智慧文旅 / 目的地运营 / 文化旅游\n- **人群**：文旅集团、目的地伙伴、旅游服务团队\n- **业务**：智慧文旅、目的地运营、旅游服务协作、文化路线与项目孵化\n\n## Voice\n\n可信、清晰、有组织感。表达要优先使用中文，并把复杂的文旅业务拆成可执行的路线、服务、资源与协作关系。\n\n## Visual Direction\n\n以目的地绿、路线金、湖蓝为基础，整体应有集团级可信度、文旅温度和智慧运营感。避免廉价旅行促销视觉和过度科技感。\n\n## Agent Notes\n\n在生成中智游集团相关内容时，默认使用中文主名称。英文仅作为对照、URL、文件名或国际化字段使用。内容重点放在智慧文旅、目的地运营、文化路线、服务协作与项目孵化。\n",
+      "html": "<h1 id=\"zhongzhiyou-guide-1-中智游集团-zhongzhiyou-group\">中智游集团 · Zhongzhiyou Group</h1>\n<p>中智游集团是中文优先的智慧文旅与目的地运营集团 IP。</p>\n<h2 id=\"zhongzhiyou-guide-1-brand-role\">Brand Role</h2>\n<ul>\n<li><strong>主语言</strong>：中文</li>\n<li><strong>英文对照</strong>：Zhongzhiyou Group</li>\n<li><strong>赛道</strong>：智慧文旅 / 目的地运营 / 文化旅游</li>\n<li><strong>人群</strong>：文旅集团、目的地伙伴、旅游服务团队</li>\n<li><strong>业务</strong>：智慧文旅、目的地运营、旅游服务协作、文化路线与项目孵化</li>\n</ul>\n<h2 id=\"zhongzhiyou-guide-1-voice\">Voice</h2>\n<p>可信、清晰、有组织感。表达要优先使用中文，并把复杂的文旅业务拆成可执行的路线、服务、资源与协作关系。</p>\n<h2 id=\"zhongzhiyou-guide-1-visual-direction\">Visual Direction</h2>\n<p>以目的地绿、路线金、湖蓝为基础，整体应有集团级可信度、文旅温度和智慧运营感。避免廉价旅行促销视觉和过度科技感。</p>\n<h2 id=\"zhongzhiyou-guide-1-agent-notes\">Agent Notes</h2>\n<p>在生成中智游集团相关内容时，默认使用中文主名称。英文仅作为对照、URL、文件名或国际化字段使用。内容重点放在智慧文旅、目的地运营、文化路线、服务协作与项目孵化。</p>\n"
     }
   ],
   "tokens": [],
