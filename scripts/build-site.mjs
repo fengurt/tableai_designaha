@@ -69,6 +69,11 @@ function brandImageOutputName(brand, rel, usedNames) {
   const parts = rel.split("/");
   const filename = parts.at(-1) ?? "image";
   const stem = filename.replace(/\.[^.]+$/, "");
+  if (brand.slug === "iptrust" && stem === `${brand.slug}-logo-black`) {
+    const canonical = `${stem}${ext}`;
+    usedNames.add(canonical);
+    return canonical;
+  }
   if (stem === `${brand.slug}-brand-hero` || stem.endsWith("-brand-hero")) {
     return `${brand.slug}${ext}`;
   }
@@ -433,6 +438,7 @@ await mkdir(historyApiDir, { recursive: true });
 await mkdir(imageDir, { recursive: true });
 await mkdir(contactDir, { recursive: true });
 await mkdir(join(siteDir, "skills", "iptrust-live-update"), { recursive: true });
+await copyFile(join(root, "styles/editorial.css"), join(assetsDir, "editorial.css"));
 if (existsSync(join(root, "skills/iptrust-live-update/SKILL.md"))) {
   await copyFile(join(root, "skills/iptrust-live-update/SKILL.md"), join(siteDir, "skills/iptrust-live-update/SKILL.md"));
 }
@@ -697,6 +703,9 @@ await writeFile(join(siteDir, "_headers"), [
   "/assets/site.js",
   "  Cache-Control: public, max-age=0, must-revalidate",
   "",
+  "/assets/editorial.css",
+  "  Cache-Control: public, max-age=0, must-revalidate",
+  "",
   "/assets/brand-images/*",
   "  Cache-Control: public, max-age=86400, stale-while-revalidate=604800",
   "",
@@ -773,10 +782,11 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
   <meta name="description" content="${hubDescription}">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${siteCssPath}">
+  <link rel="stylesheet" href="assets/editorial.css">
 </head>
 <body class="hub-home">
   <header class="topbar">
-    <a class="brand" href="./" data-i18n="hub.name">${hubNameCn}</a>
+    <a class="brand" href="./" aria-label="${hubNameCn}"><img src="assets/brand-images/iptrust-logo-black.png" alt="${hubNameCn}"></a>
     <div class="topbar-search" role="search">
       <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
       <div class="global-results" id="globalResults" aria-live="polite"></div>
@@ -886,10 +896,11 @@ await writeFile(join(siteDir, "ip-evolution"), html`<!doctype html>
   <meta name="description" content="IP进化论把品牌架构、内核、表达、资产与治理连接成可持续更新的系统。">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${siteCssPath}">
+  <link rel="stylesheet" href="assets/editorial.css">
 </head>
 <body class="ip-system-page">
   <header class="topbar">
-    <a class="brand" href="./" data-i18n="hub.name">${hubNameCn}</a>
+    <a class="brand" href="./" aria-label="${hubNameCn}"><img src="assets/brand-images/iptrust-logo-black.png" alt="${hubNameCn}"></a>
     <div class="topbar-search" role="search">
       <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
       <div class="global-results" id="globalResults" aria-live="polite"></div>
@@ -969,10 +980,11 @@ await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
   <title>Brand Guidelines</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${siteCssPath}">
+  <link rel="stylesheet" href="assets/editorial.css">
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="./" data-i18n="hub.name">${hubNameCn}</a>
+    <a class="brand" href="./" aria-label="${hubNameCn}"><img src="assets/brand-images/iptrust-logo-black.png" alt="${hubNameCn}"></a>
     <div class="topbar-search" role="search">
       <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
       <div class="global-results" id="globalResults" aria-live="polite"></div>
@@ -1027,10 +1039,11 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
   <title>Admin · ${hubName}</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${siteCssPath}">
+  <link rel="stylesheet" href="assets/editorial.css">
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="./" data-i18n="hub.name">${hubNameCn}</a>
+    <a class="brand" href="./" aria-label="${hubNameCn}"><img src="assets/brand-images/iptrust-logo-black.png" alt="${hubNameCn}"></a>
     <div class="topbar-search" role="search">
       <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
       <div class="global-results" id="globalResults" aria-live="polite"></div>
@@ -3076,6 +3089,11 @@ function cardClass(brand = {}) {
   return \`ip-card \${themeClass(brand.theme)}\`;
 }
 
+function cardHeroImage(brand = {}, localized = {}) {
+  if (!brand.heroImage) return "";
+  return \`<img src="\${escapeHtml(brand.heroImage)}" alt="\${escapeHtml(localized.name || brand.name || "")}" loading="lazy">\`;
+}
+
 function statusLabel(status) {
   return status === "documented" ? t("status.documented") : t("status.placeholder");
 }
@@ -4058,6 +4076,7 @@ async function renderIndex() {
       <a class="ip-card-link" href="\${brand.url}" aria-label="\${escapeHtml(localized.name)}">
         <div class="card-body">
           <div class="card-art">
+            \${cardHeroImage(brand, localized)}
             <span class="art-code">ID · \${escapeHtml(brand.assetKey || brand.slug)}</span>
             <span class="art-metric">\${brand.guideCount}G · \${brand.tokenCount}T</span>
           </div>

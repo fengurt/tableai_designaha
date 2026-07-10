@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "a5bf7cf-dad6c841";
+const BUILD_VERSION = "370e33f-251820fd";
 
 const i18n = {
   cn: {
@@ -534,6 +534,11 @@ function brandInitial(brand = {}) {
 
 function cardClass(brand = {}) {
   return `ip-card ${themeClass(brand.theme)}`;
+}
+
+function cardHeroImage(brand = {}, localized = {}) {
+  if (!brand.heroImage) return "";
+  return `<img src="${escapeHtml(brand.heroImage)}" alt="${escapeHtml(localized.name || brand.name || "")}" loading="lazy">`;
 }
 
 function statusLabel(status) {
@@ -1518,6 +1523,7 @@ async function renderIndex() {
       <a class="ip-card-link" href="${brand.url}" aria-label="${escapeHtml(localized.name)}">
         <div class="card-body">
           <div class="card-art">
+            ${cardHeroImage(brand, localized)}
             <span class="art-code">ID · ${escapeHtml(brand.assetKey || brand.slug)}</span>
             <span class="art-metric">${brand.guideCount}G · ${brand.tokenCount}T</span>
           </div>

@@ -152,11 +152,11 @@
     "en": ""
   },
   "version": {
-    "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
-    "shortHash": "a5bf7cf",
-    "date": "2026-07-10T20:21:24+08:00",
-    "message": "Replace contrast-template brand copy",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9"
+    "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
+    "shortHash": "370e33f",
+    "date": "2026-07-10T21:20:51+08:00",
+    "message": "Render IP guidelines as web content",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
   },
   "historyUrl": "api/history/iptrust.json",
   "history": [
@@ -239,6 +239,11 @@
       "title": "Iptrust Brand Hero"
     },
     {
+      "path": "IPTRUST/assets/brand-images/iptrust-logo-black.png",
+      "sitePath": "assets/brand-images/iptrust-logo-black.png",
+      "title": "Iptrust Logo Black"
+    },
+    {
       "path": "IPTRUST/assets/brand-images/iptrust-wide-black.png",
       "sitePath": "assets/brand-images/iptrust-iptrust-wide-black.png",
       "title": "Iptrust Wide Black"
@@ -247,6 +252,56 @@
       "path": "IPTRUST/assets/brand-images/iptrust-wide-white.png",
       "sitePath": "assets/brand-images/iptrust-iptrust-wide-white.png",
       "title": "Iptrust Wide White"
+    },
+    {
+      "path": "IPTRUST/assets/brand-images/logo-set/岁知社wideblack.png",
+      "sitePath": "assets/brand-images/iptrust-logo-set-wideblack.png",
+      "title": "岁知社Wideblack"
+    },
+    {
+      "path": "IPTRUST/assets/brand-images/logo-set/岁知社widewhite.png",
+      "sitePath": "assets/brand-images/iptrust-logo-set-widewhite.png",
+      "title": "岁知社Widewhite"
+    },
+    {
+      "path": "IPTRUST/assets/brand-images/logo-set/白色/logo.jpg",
+      "sitePath": "assets/brand-images/iptrust-logo.jpg",
+      "title": "Logo"
+    },
+    {
+      "path": "IPTRUST/assets/brand-images/logo-set/白色/logo.png",
+      "sitePath": "assets/brand-images/iptrust-logo.png",
+      "title": "Logo"
+    },
+    {
+      "path": "IPTRUST/assets/brand-images/logo-set/蓝色/logo_logo.jpg",
+      "sitePath": "assets/brand-images/iptrust-logo-logo.jpg",
+      "title": "Logo Logo"
+    },
+    {
+      "path": "IPTRUST/assets/brand-images/logo-set/蓝色/logo_logo.png",
+      "sitePath": "assets/brand-images/iptrust-logo-logo.png",
+      "title": "Logo Logo"
+    },
+    {
+      "path": "IPTRUST/assets/brand-images/logo-set/金色/logo_logo.jpg",
+      "sitePath": "assets/brand-images/iptrust-logo-logo-2.jpg",
+      "title": "Logo Logo"
+    },
+    {
+      "path": "IPTRUST/assets/brand-images/logo-set/金色/logo_logo.png",
+      "sitePath": "assets/brand-images/iptrust-logo-logo-2.png",
+      "title": "Logo Logo"
+    },
+    {
+      "path": "IPTRUST/assets/brand-images/logo-set/黑色/logo_logo.jpg",
+      "sitePath": "assets/brand-images/iptrust-logo-logo-3.jpg",
+      "title": "Logo Logo"
+    },
+    {
+      "path": "IPTRUST/assets/brand-images/logo-set/黑色/logohdpi.png",
+      "sitePath": "assets/brand-images/iptrust-logohdpi.png",
+      "title": "Logohdpi"
     }
   ],
   "assetKit": {
@@ -302,6 +357,11 @@
           "title": "Iptrust Brand Hero"
         },
         {
+          "path": "IPTRUST/assets/brand-images/iptrust-logo-black.png",
+          "sitePath": "assets/brand-images/iptrust-logo-black.png",
+          "title": "Iptrust Logo Black"
+        },
+        {
           "path": "IPTRUST/assets/brand-images/iptrust-wide-black.png",
           "sitePath": "assets/brand-images/iptrust-iptrust-wide-black.png",
           "title": "Iptrust Wide Black"
@@ -310,6 +370,56 @@
           "path": "IPTRUST/assets/brand-images/iptrust-wide-white.png",
           "sitePath": "assets/brand-images/iptrust-iptrust-wide-white.png",
           "title": "Iptrust Wide White"
+        },
+        {
+          "path": "IPTRUST/assets/brand-images/logo-set/岁知社wideblack.png",
+          "sitePath": "assets/brand-images/iptrust-logo-set-wideblack.png",
+          "title": "岁知社Wideblack"
+        },
+        {
+          "path": "IPTRUST/assets/brand-images/logo-set/岁知社widewhite.png",
+          "sitePath": "assets/brand-images/iptrust-logo-set-widewhite.png",
+          "title": "岁知社Widewhite"
+        },
+        {
+          "path": "IPTRUST/assets/brand-images/logo-set/白色/logo.jpg",
+          "sitePath": "assets/brand-images/iptrust-logo.jpg",
+          "title": "Logo"
+        },
+        {
+          "path": "IPTRUST/assets/brand-images/logo-set/白色/logo.png",
+          "sitePath": "assets/brand-images/iptrust-logo.png",
+          "title": "Logo"
+        },
+        {
+          "path": "IPTRUST/assets/brand-images/logo-set/蓝色/logo_logo.jpg",
+          "sitePath": "assets/brand-images/iptrust-logo-logo.jpg",
+          "title": "Logo Logo"
+        },
+        {
+          "path": "IPTRUST/assets/brand-images/logo-set/蓝色/logo_logo.png",
+          "sitePath": "assets/brand-images/iptrust-logo-logo.png",
+          "title": "Logo Logo"
+        },
+        {
+          "path": "IPTRUST/assets/brand-images/logo-set/金色/logo_logo.jpg",
+          "sitePath": "assets/brand-images/iptrust-logo-logo-2.jpg",
+          "title": "Logo Logo"
+        },
+        {
+          "path": "IPTRUST/assets/brand-images/logo-set/金色/logo_logo.png",
+          "sitePath": "assets/brand-images/iptrust-logo-logo-2.png",
+          "title": "Logo Logo"
+        },
+        {
+          "path": "IPTRUST/assets/brand-images/logo-set/黑色/logo_logo.jpg",
+          "sitePath": "assets/brand-images/iptrust-logo-logo-3.jpg",
+          "title": "Logo Logo"
+        },
+        {
+          "path": "IPTRUST/assets/brand-images/logo-set/黑色/logohdpi.png",
+          "sitePath": "assets/brand-images/iptrust-logohdpi.png",
+          "title": "Logohdpi"
         }
       ]
     }
@@ -359,6 +469,11 @@
         "title": "Iptrust Brand Hero"
       },
       {
+        "path": "IPTRUST/assets/brand-images/iptrust-logo-black.png",
+        "sitePath": "assets/brand-images/iptrust-logo-black.png",
+        "title": "Iptrust Logo Black"
+      },
+      {
         "path": "IPTRUST/assets/brand-images/iptrust-wide-black.png",
         "sitePath": "assets/brand-images/iptrust-iptrust-wide-black.png",
         "title": "Iptrust Wide Black"
@@ -367,6 +482,56 @@
         "path": "IPTRUST/assets/brand-images/iptrust-wide-white.png",
         "sitePath": "assets/brand-images/iptrust-iptrust-wide-white.png",
         "title": "Iptrust Wide White"
+      },
+      {
+        "path": "IPTRUST/assets/brand-images/logo-set/岁知社wideblack.png",
+        "sitePath": "assets/brand-images/iptrust-logo-set-wideblack.png",
+        "title": "岁知社Wideblack"
+      },
+      {
+        "path": "IPTRUST/assets/brand-images/logo-set/岁知社widewhite.png",
+        "sitePath": "assets/brand-images/iptrust-logo-set-widewhite.png",
+        "title": "岁知社Widewhite"
+      },
+      {
+        "path": "IPTRUST/assets/brand-images/logo-set/白色/logo.jpg",
+        "sitePath": "assets/brand-images/iptrust-logo.jpg",
+        "title": "Logo"
+      },
+      {
+        "path": "IPTRUST/assets/brand-images/logo-set/白色/logo.png",
+        "sitePath": "assets/brand-images/iptrust-logo.png",
+        "title": "Logo"
+      },
+      {
+        "path": "IPTRUST/assets/brand-images/logo-set/蓝色/logo_logo.jpg",
+        "sitePath": "assets/brand-images/iptrust-logo-logo.jpg",
+        "title": "Logo Logo"
+      },
+      {
+        "path": "IPTRUST/assets/brand-images/logo-set/蓝色/logo_logo.png",
+        "sitePath": "assets/brand-images/iptrust-logo-logo.png",
+        "title": "Logo Logo"
+      },
+      {
+        "path": "IPTRUST/assets/brand-images/logo-set/金色/logo_logo.jpg",
+        "sitePath": "assets/brand-images/iptrust-logo-logo-2.jpg",
+        "title": "Logo Logo"
+      },
+      {
+        "path": "IPTRUST/assets/brand-images/logo-set/金色/logo_logo.png",
+        "sitePath": "assets/brand-images/iptrust-logo-logo-2.png",
+        "title": "Logo Logo"
+      },
+      {
+        "path": "IPTRUST/assets/brand-images/logo-set/黑色/logo_logo.jpg",
+        "sitePath": "assets/brand-images/iptrust-logo-logo-3.jpg",
+        "title": "Logo Logo"
+      },
+      {
+        "path": "IPTRUST/assets/brand-images/logo-set/黑色/logohdpi.png",
+        "sitePath": "assets/brand-images/iptrust-logohdpi.png",
+        "title": "Logohdpi"
       }
     ]
   },

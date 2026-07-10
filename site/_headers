@@ -22,6 +22,9 @@
 /assets/site.js
   Cache-Control: public, max-age=0, must-revalidate
 
+/assets/editorial.css
+  Cache-Control: public, max-age=0, must-revalidate
+
 /assets/brand-images/*
   Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
