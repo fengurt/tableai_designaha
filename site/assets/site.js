@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "454f46c-1ec3504e";
+const BUILD_VERSION = "afdbfd6-6d7820db";
 
 const i18n = {
   cn: {
@@ -612,7 +612,7 @@ function languageLabel(value) {
 }
 
 function skillBaseText(skill = "") {
-  const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", location.href).href;
+  const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", document.baseURI).href;
   return [
     "IPTrust Skill ✦",
     "Hub: " + location.origin + location.pathname,
@@ -625,7 +625,7 @@ function skillBaseText(skill = "") {
 }
 
 async function portalSkillText() {
-  const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", location.href);
+  const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", document.baseURI);
   skillUrl.searchParams.set("v", BUILD_VERSION);
   let skill = "";
   try {
@@ -643,7 +643,7 @@ function referenceText(brand = {}) {
   const apiUrl = new URL(brand.apiUrl || `api/brands/${brand.slug}.json`, location.href).href;
   const historyUrl = new URL(brand.historyUrl || `api/history/${brand.slug}.json`, location.href).href;
   const schemaUrl = new URL("api/schema.json", location.href).href;
-  const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", location.href).href;
+  const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", document.baseURI).href;
   const mcpSource = new URL("api/manifest.json", location.href).href;
   const colors = palette(brand.theme)
     .map(([label, value]) => `${label}: ${value} / ${rgbValue(value)}`)

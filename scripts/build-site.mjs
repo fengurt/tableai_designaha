@@ -391,6 +391,7 @@ await mkdir(brandApiDir, { recursive: true });
 await mkdir(historyApiDir, { recursive: true });
 await mkdir(imageDir, { recursive: true });
 await mkdir(contactDir, { recursive: true });
+await mkdir(join(siteDir, "ip-evolution"), { recursive: true });
 await mkdir(join(siteDir, "skills", "iptrust-live-update"), { recursive: true });
 if (existsSync(join(root, "skills/iptrust-live-update/SKILL.md"))) {
   await copyFile(join(root, "skills/iptrust-live-update/SKILL.md"), join(siteDir, "skills/iptrust-live-update/SKILL.md"));
@@ -671,7 +672,6 @@ await writeFile(join(siteDir, "_redirects"), [
   "/manifest  /api/manifest.json  200",
   "/schema  /api/schema.json  200",
   "/brands  /api/brands.json  200",
-  "/ip-evolution  /ip-evolution.html  200",
   "/ip-system  /ip_sys.md  200",
   "",
 ].join("\n"));
@@ -779,7 +779,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       <div class="hero-index" id="heroIndex" aria-live="polite"></div>
     </section>
     <section class="evolution-entry" id="ip-evolution" aria-labelledby="evolutionTitle">
-      <a href="ip-evolution.html" class="evolution-link">
+      <a href="ip-evolution" class="evolution-link">
         <div class="evolution-copy">
           <p class="eyebrow" data-i18n="evolution.label">IP进化论</p>
           <h2 id="evolutionTitle" data-i18n="evolution.title">让品牌成为可管理的系统。</h2>
@@ -829,11 +829,12 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
 </body>
 </html>`);
 
-await writeFile(join(siteDir, "ip-evolution.html"), html`<!doctype html>
+await writeFile(join(siteDir, "ip-evolution", "index.html"), html`<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="../">
   <title>IP进化论 | ${hubName}</title>
   <meta name="description" content="IP进化论把品牌架构、内核、表达、资产与治理连接成可持续更新的系统。">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -1456,6 +1457,7 @@ p { line-height: 1.65; }
   max-width: 440px;
   margin: 7px 0 0;
   font-size: clamp(26px, 3vw, 38px);
+  text-wrap: balance;
 }
 .evolution-copy .eyebrow { margin: 0; }
 .evolution-path {
@@ -2343,6 +2345,13 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   h2 { font-size: 28px; }
   .card-body h2 { font-size: 24px; }
 }
+@media (min-width: 761px) {
+  .evolution-copy h2 {
+    max-width: none;
+    white-space: nowrap;
+    font-size: clamp(24px, 2.25vw, 32px);
+  }
+}
 @media (min-width: 761px) and (max-width: 1080px) {
   .hub-hero { grid-template-columns: 1fr; min-height: auto; }
   .ip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -2963,7 +2972,7 @@ function languageLabel(value) {
 }
 
 function skillBaseText(skill = "") {
-  const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", location.href).href;
+  const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", document.baseURI).href;
   return [
     "IPTrust Skill ✦",
     "Hub: " + location.origin + location.pathname,
@@ -2976,7 +2985,7 @@ function skillBaseText(skill = "") {
 }
 
 async function portalSkillText() {
-  const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", location.href);
+  const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", document.baseURI);
   skillUrl.searchParams.set("v", BUILD_VERSION);
   let skill = "";
   try {
@@ -2994,7 +3003,7 @@ function referenceText(brand = {}) {
   const apiUrl = new URL(brand.apiUrl || \`api/brands/\${brand.slug}.json\`, location.href).href;
   const historyUrl = new URL(brand.historyUrl || \`api/history/\${brand.slug}.json\`, location.href).href;
   const schemaUrl = new URL("api/schema.json", location.href).href;
-  const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", location.href).href;
+  const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", document.baseURI).href;
   const mcpSource = new URL("api/manifest.json", location.href).href;
   const colors = palette(brand.theme)
     .map(([label, value]) => \`\${label}: \${value} / \${rgbValue(value)}\`)

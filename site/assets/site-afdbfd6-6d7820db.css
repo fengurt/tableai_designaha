@@ -403,6 +403,7 @@ p { line-height: 1.65; }
   max-width: 440px;
   margin: 7px 0 0;
   font-size: clamp(26px, 3vw, 38px);
+  text-wrap: balance;
 }
 .evolution-copy .eyebrow { margin: 0; }
 .evolution-path {
@@ -1289,6 +1290,13 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   h1 { font-size: 40px; }
   h2 { font-size: 28px; }
   .card-body h2 { font-size: 24px; }
+}
+@media (min-width: 761px) {
+  .evolution-copy h2 {
+    max-width: none;
+    white-space: nowrap;
+    font-size: clamp(24px, 2.25vw, 32px);
+  }
 }
 @media (min-width: 761px) and (max-width: 1080px) {
   .hub-hero { grid-template-columns: 1fr; min-height: auto; }
