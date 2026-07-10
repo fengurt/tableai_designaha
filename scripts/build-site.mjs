@@ -391,7 +391,6 @@ await mkdir(brandApiDir, { recursive: true });
 await mkdir(historyApiDir, { recursive: true });
 await mkdir(imageDir, { recursive: true });
 await mkdir(contactDir, { recursive: true });
-await mkdir(join(siteDir, "ip-evolution"), { recursive: true });
 await mkdir(join(siteDir, "skills", "iptrust-live-update"), { recursive: true });
 if (existsSync(join(root, "skills/iptrust-live-update/SKILL.md"))) {
   await copyFile(join(root, "skills/iptrust-live-update/SKILL.md"), join(siteDir, "skills/iptrust-live-update/SKILL.md"));
@@ -638,6 +637,10 @@ await writeFile(join(siteDir, "_headers"), [
   "/*.html",
   "  Cache-Control: public, max-age=0, must-revalidate",
   "",
+  "/ip-evolution",
+  "  Content-Type: text/html; charset=utf-8",
+  "  Cache-Control: public, max-age=0, must-revalidate",
+  "",
   "/assets/site-*.css",
   "  Cache-Control: public, max-age=31536000, immutable",
   "",
@@ -829,12 +832,12 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
 </body>
 </html>`);
 
-await writeFile(join(siteDir, "ip-evolution", "index.html"), html`<!doctype html>
+await writeFile(join(siteDir, "ip-evolution"), html`<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <base href="../">
+  <base href="./">
   <title>IP进化论 | ${hubName}</title>
   <meta name="description" content="IP进化论把品牌架构、内核、表达、资产与治理连接成可持续更新的系统。">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
