@@ -40,6 +40,7 @@ Brands:
 - 中智游集团 (zhongzhiyou): /api/brands/zhongzhiyou.json · mainLocale CN · palette #1F5F57 / #C7A25A
 - Nibiru (nibiru): /api/brands/nibiru.json · mainLocale EN · palette #1D2BFF / #7CF7D4
 - 深圳微软出海中心 (shenzhen-microsoft-global-center): /api/brands/shenzhen-microsoft-global-center.json · mainLocale CN · palette #2563EB / #00A4EF
+- 山人境 (shanrenjing): /api/brands/shanrenjing.json · mainLocale CN · palette #173F38 / #D5A53B
 
 Admin workflow:
 - /admin.html unlocks with the generated admin key.

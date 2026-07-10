@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-07T20:10:43.632Z",
+  "generatedAt": "2026-07-10T10:42:07.859Z",
   "version": {
-    "hash": "a38ea80a8099966615f752f445f5520d7a515a9b",
-    "shortHash": "a38ea80",
-    "date": "2026-07-08T04:07:21+08:00",
-    "message": "Unify topbar and refine admin unlock UI",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a38ea80a8099966615f752f445f5520d7a515a9b"
+    "hash": "4e6ab2e053120e68f126313d2086b9b75778e321",
+    "shortHash": "4e6ab2e",
+    "date": "2026-07-10T18:11:43+08:00",
+    "message": "Serve IP Evolution as an extensionless page",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4e6ab2e053120e68f126313d2086b9b75778e321"
   },
   "brands": [
     {
@@ -235,6 +235,15 @@
       "apiUrl": "api/brands/shenzhen-microsoft-global-center.json",
       "historyUrl": "api/history/shenzhen-microsoft-global-center.json",
       "guideUrl": "brand.html?brand=shenzhen-microsoft-global-center"
+    },
+    {
+      "slug": "shanrenjing",
+      "name": "山人境",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "apiUrl": "api/brands/shanrenjing.json",
+      "historyUrl": "api/history/shanrenjing.json",
+      "guideUrl": "brand.html?brand=shanrenjing"
     }
   ],
   "mcp": {
@@ -269,11 +278,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "a38ea80a8099966615f752f445f5520d7a515a9b",
-      "shortHash": "a38ea80",
-      "date": "2026-07-08T04:07:21+08:00",
-      "message": "Unify topbar and refine admin unlock UI",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/a38ea80a8099966615f752f445f5520d7a515a9b"
+      "hash": "4e6ab2e053120e68f126313d2086b9b75778e321",
+      "shortHash": "4e6ab2e",
+      "date": "2026-07-10T18:11:43+08:00",
+      "message": "Serve IP Evolution as an extensionless page",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4e6ab2e053120e68f126313d2086b9b75778e321"
     }
   },
   "sync": {

@@ -558,5 +558,21 @@
     "subtitle": "深圳微软出海中心 · ShenzhenMicrosoftGlobalCenter/README.md",
     "text": "深圳微软出海中心 · Shenzhen Microsoft Global Center 深圳微软出海中心是中文优先的企业出海、技术生态与国际化增长服务 IP。 Brand Role 主语言 ：中文 英文对照 ：Shenzhen Microsoft Global Center 赛道 ：企业出海 / 技术生态 / 国际化增长 人群 ：出海企业、技术伙伴、生态服务团队 业务 ：企业出海、云与 AI 技术生态、国际化增长、伙伴连接与项目服务 Voice 清晰、可信、面向企业决策。表达要优先使用中文，强调技术生态、国际化路径、伙伴连接和可落地的出海服务。 Visual Direction 以全球化蓝、云青、生态绿为基础，整体应有企业级可信度、技术生态感和深圳速度。避免过度营销化和廉价科技炫光。 Agent Notes 在生成深圳微软出海中心相关内容时，默认使用中文主名称。英文仅作为对照、URL、文件名或国际化字段使用。内容重点放在企业出海",
     "url": "brand.html?brand=shenzhen-microsoft-global-center"
+  },
+  {
+    "type": "ip",
+    "slug": "shanrenjing",
+    "title": "山人境",
+    "subtitle": "山人境 · Shanrenjing",
+    "text": "山人境是一套面向景区、户外活动、研学营地、大型赛事与低信号区域作业的行程级人员安全基础设施。 Shanrenjing is a journey-level safety infrastructure IP for scenic destinations, outdoor programs, study camps, large events, and low-connectivity field operations. 人员定位、风险预警、应急救援、行程安全云、智能终端、补盲通信、保险风控、监管看板与专家带队系统。 Personnel positioning, risk alerts, emergency rescue, journey safety cloud, smart terminals, coverage extension, insurance risk control, regulatory dashboards, and expert-led operations. 品牌定位不是普通定位手环，也不是单一景区小程序。手环是入口，平台是产品本体，救援协同与责任闭环是核心价值。对外避免使用“监控”“管控游客”“实时盯人”，统一使用守护、保障、安全协同、应急响应、行程保障、风险预警、救援闭环与保险保障。 This is not a basic tracking wristband or a single scenic-area app. The wearable is the entry point, the platform is the product, and rescue coordination plus an accountable response loop form the core value. Public language should emphasize protection, safety coordination, emergency response, risk alerts, and rescue assurance rather than surveillance. 户外安全基础设施 应急救援 智慧文旅 卫星与北斗应用 Outdoor safety infrastructure Emergency rescue Smart cultural tourism Satellite and BeiDou applications 景区与文旅运营方 学校与研学营地 赛事与团建组织方 政府监管与应急部门 保险机构 户外领队与巡护人员 Scenic and tourism operators Schools and study camps Event and corporate program organizers Government and emergency agencies Insurers Outdoor leaders and field patrol teams 行程安全 北斗定位 风险预警 应急救援 保险风控 低信号通信 安全云 Journey safety BeiDou positioning Risk alerts Emergency rescue Insurance risk control Low-connectivity communications Safety cloud 中文优先的行程级人员安全基础设施 IP，连接定位、风险预警、救援协同、保险风控与监管留痕。 mountain green star amber signal blue journey safety rescue coordination",
+    "url": "brand.html?brand=shanrenjing"
+  },
+  {
+    "type": "guide",
+    "slug": "shanrenjing",
+    "title": "README",
+    "subtitle": "山人境 · Shanrenjing/README.md",
+    "text": "山人境 山人境是中文优先的行程级人员安全基础设施 IP。 它面向景区、户外活动、研学营地、大型赛事、企业团建、边境巡护与低信号区域作业场景，将人员定位、风险预警、快速救援、保险风控、政府监管与专家带队连接成一个可验证、可复盘的安全闭环。 核心定位 山人境不是普通定位手环，也不是单一景区小程序。 手环只是入口，平台才是产品本体。定位是基础能力，救援协同与责任闭环是商业护城河。 核心价值： 可定位 可预警 可调度 可救援 可留痕 可理赔 可监管 可复盘 品牌主张 每一次出发，都应该被星空守护。 政企表达：以北斗为核心的位置安全基础设施，提升文旅、研学、户外活动与大型活动的人员安全治理能力。 用户表达：扫码戴上，出发有人看得见；遇险一键呼救，救援知道你在哪。 保险表达：把行程轨迹、设备状态、报警记录、救援响应和事故复盘转化为可核验的风险与理赔证据链。 专家带队表达：专家不只带路，还能看队伍、看风险、看体力、看偏离、看失联，把经验转化为",
+    "url": "brand.html?brand=shanrenjing"
   }
 ]

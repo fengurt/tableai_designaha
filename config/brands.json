@@ -1848,5 +1848,99 @@
         ]
       }
     }
+  },
+  {
+    "slug": "shanrenjing",
+    "folder": "Shanrenjing",
+    "name": "山人境",
+    "nativeName": "Shanrenjing",
+    "description": "中文优先的行程级人员安全基础设施 IP，连接定位、风险预警、救援协同、保险风控与监管留痕。",
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "山人境是一套面向景区、户外活动、研学营地、大型赛事与低信号区域作业的行程级人员安全基础设施。",
+      "en": "Shanrenjing is a journey-level safety infrastructure IP for scenic destinations, outdoor programs, study camps, large events, and low-connectivity field operations."
+    },
+    "business": {
+      "zh": "人员定位、风险预警、应急救援、行程安全云、智能终端、补盲通信、保险风控、监管看板与专家带队系统。",
+      "en": "Personnel positioning, risk alerts, emergency rescue, journey safety cloud, smart terminals, coverage extension, insurance risk control, regulatory dashboards, and expert-led operations."
+    },
+    "notes": {
+      "zh": "品牌定位不是普通定位手环，也不是单一景区小程序。手环是入口，平台是产品本体，救援协同与责任闭环是核心价值。对外避免使用“监控”“管控游客”“实时盯人”，统一使用守护、保障、安全协同、应急响应、行程保障、风险预警、救援闭环与保险保障。",
+      "en": "This is not a basic tracking wristband or a single scenic-area app. The wearable is the entry point, the platform is the product, and rescue coordination plus an accountable response loop form the core value. Public language should emphasize protection, safety coordination, emergency response, risk alerts, and rescue assurance rather than surveillance."
+    },
+    "primaryGuide": "Shanrenjing/README.md",
+    "theme": {
+      "mode": "light",
+      "primary": "#173F38",
+      "accent": "#D5A53B",
+      "secondary": "#3E7890",
+      "surface": "#EEF3EF",
+      "paper": "#FBFCF9",
+      "ink": "#13201D",
+      "muted": "#60706A",
+      "line": "rgba(23, 63, 56, 0.18)",
+      "keywords": [
+        "mountain green",
+        "star amber",
+        "signal blue",
+        "journey safety",
+        "rescue coordination"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "户外安全基础设施",
+          "应急救援",
+          "智慧文旅",
+          "卫星与北斗应用"
+        ],
+        "en": [
+          "Outdoor safety infrastructure",
+          "Emergency rescue",
+          "Smart cultural tourism",
+          "Satellite and BeiDou applications"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "景区与文旅运营方",
+          "学校与研学营地",
+          "赛事与团建组织方",
+          "政府监管与应急部门",
+          "保险机构",
+          "户外领队与巡护人员"
+        ],
+        "en": [
+          "Scenic and tourism operators",
+          "Schools and study camps",
+          "Event and corporate program organizers",
+          "Government and emergency agencies",
+          "Insurers",
+          "Outdoor leaders and field patrol teams"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "行程安全",
+          "北斗定位",
+          "风险预警",
+          "应急救援",
+          "保险风控",
+          "低信号通信",
+          "安全云"
+        ],
+        "en": [
+          "Journey safety",
+          "BeiDou positioning",
+          "Risk alerts",
+          "Emergency rescue",
+          "Insurance risk control",
+          "Low-connectivity communications",
+          "Safety cloud"
+        ]
+      }
+    }
   }
 ]

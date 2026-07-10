@@ -1,5 +1,54 @@
 [
   {
+    "hash": "4e6ab2e053120e68f126313d2086b9b75778e321",
+    "shortHash": "4e6ab2e",
+    "date": "2026-07-10T18:11:43+08:00",
+    "message": "Serve IP Evolution as an extensionless page",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4e6ab2e053120e68f126313d2086b9b75778e321"
+  },
+  {
+    "hash": "319e710f6da8db9126f35426cdb91dd34f4123f9",
+    "shortHash": "319e710",
+    "date": "2026-07-10T18:09:52+08:00",
+    "message": "Fix IP Evolution route and headline wrapping",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/319e710f6da8db9126f35426cdb91dd34f4123f9"
+  },
+  {
+    "hash": "afdbfd60ad49c13eb45a5db51441388d4b06acab",
+    "shortHash": "afdbfd6",
+    "date": "2026-07-10T16:41:28+08:00",
+    "message": "Route IP Evolution on custom domain",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/afdbfd60ad49c13eb45a5db51441388d4b06acab"
+  },
+  {
+    "hash": "454f46c77cdaec43639c5c90dba26294ef82f33f",
+    "shortHash": "454f46c",
+    "date": "2026-07-10T16:39:14+08:00",
+    "message": "Separate IP Evolution page from agent endpoint",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/454f46c77cdaec43639c5c90dba26294ef82f33f"
+  },
+  {
+    "hash": "801b9ad39c9643fc7cf8ebe273e6bc67f56b3a01",
+    "shortHash": "801b9ad",
+    "date": "2026-07-10T16:36:44+08:00",
+    "message": "Add IP Evolution landing experience",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/801b9ad39c9643fc7cf8ebe273e6bc67f56b3a01"
+  },
+  {
+    "hash": "25149f231de7776fb274ed1a990ca65b042375cc",
+    "shortHash": "25149f2",
+    "date": "2026-07-08T06:06:05+08:00",
+    "message": "Improve System API input for password manager autofill",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/25149f231de7776fb274ed1a990ca65b042375cc"
+  },
+  {
+    "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+    "shortHash": "cd0ea58",
+    "date": "2026-07-08T04:12:48+08:00",
+    "message": "Refine hero index labels",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb"
+  },
+  {
     "hash": "a38ea80a8099966615f752f445f5520d7a515a9b",
     "shortHash": "a38ea80",
     "date": "2026-07-08T04:07:21+08:00",
@@ -89,54 +138,5 @@
     "date": "2026-07-06T06:14:20+08:00",
     "message": "Add IP asset calls and mood boards",
     "url": "https://github.com/fengurt/tableai_designaha/commit/60db50ce358da3722f47e41ce55f5470fbb59b78"
-  },
-  {
-    "hash": "542890fcc565ebcb28a3b1cd1113563d1535f5cf",
-    "shortHash": "542890f",
-    "date": "2026-07-05T10:48:18+08:00",
-    "message": "Add transparent Table AI logo",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf"
-  },
-  {
-    "hash": "3bd27b3a3d93f1421919a81055a1fa6dd2967192",
-    "shortHash": "3bd27b3",
-    "date": "2026-07-05T10:35:21+08:00",
-    "message": "Show logos on brand pages",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3bd27b3a3d93f1421919a81055a1fa6dd2967192"
-  },
-  {
-    "hash": "067a47c76f1cb812b607335089911c282f4d8f78",
-    "shortHash": "067a47c",
-    "date": "2026-07-05T10:24:24+08:00",
-    "message": "Add Sanctem IP and brand logos",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/067a47c76f1cb812b607335089911c282f4d8f78"
-  },
-  {
-    "hash": "5d88cf85e9e0fe1c57a540863665931cebb94e92",
-    "shortHash": "5d88cf8",
-    "date": "2026-07-04T22:48:29+08:00",
-    "message": "Refine system API connect panel",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/5d88cf85e9e0fe1c57a540863665931cebb94e92"
-  },
-  {
-    "hash": "3d16dc3a1bb17d2cf00a6096cf93652564b5edd8",
-    "shortHash": "3d16dc3",
-    "date": "2026-07-04T22:34:53+08:00",
-    "message": "Simplify System API key connection",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3d16dc3a1bb17d2cf00a6096cf93652564b5edd8"
-  },
-  {
-    "hash": "98dcf4e96e7f20b939a199f874fe542a1f3de479",
-    "shortHash": "98dcf4e",
-    "date": "2026-07-04T22:25:24+08:00",
-    "message": "Add homepage API connect panel",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/98dcf4e96e7f20b939a199f874fe542a1f3de479"
-  },
-  {
-    "hash": "df0202da7b5426135d2010d61f72e04189d1b276",
-    "shortHash": "df0202d",
-    "date": "2026-07-04T22:12:02+08:00",
-    "message": "Make homepage toolbar fully icon based",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/df0202da7b5426135d2010d61f72e04189d1b276"
   }
 ]
