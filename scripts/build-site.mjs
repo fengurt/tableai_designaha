@@ -778,7 +778,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       <div class="hero-index" id="heroIndex" aria-live="polite"></div>
     </section>
     <section class="evolution-entry" id="ip-evolution" aria-labelledby="evolutionTitle">
-      <a href="ip-system.html" class="evolution-link">
+      <a href="ip-evolution.html" class="evolution-link">
         <div class="evolution-copy">
           <p class="eyebrow" data-i18n="evolution.label">IP进化论</p>
           <h2 id="evolutionTitle" data-i18n="evolution.title">让品牌成为可管理的系统。</h2>
@@ -828,7 +828,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
 </body>
 </html>`);
 
-await writeFile(join(siteDir, "ip-system.html"), html`<!doctype html>
+await writeFile(join(siteDir, "ip-evolution.html"), html`<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
