@@ -2953,7 +2953,7 @@ function setupSearch() {
 async function loadJson(path) {
   const url = new URL(path, location.href);
   url.searchParams.set("v", BUILD_VERSION);
-  const res = await fetch(url);
+  const res = await fetch(url, { cache: "no-cache" });
   if (!res.ok) throw new Error(\`Could not load \${path}\`);
   return res.json();
 }
@@ -4008,6 +4008,7 @@ async function renderHeroIndex() {
       </div>
     \`;
   }).join("");
+  index.scrollTop = 0;
   setupCopyButtons(cachedBrands);
 }
 
@@ -4077,8 +4078,7 @@ async function renderIndex() {
         <div class="card-body">
           <div class="card-art">
             \${cardHeroImage(brand, localized)}
-            <span class="art-code">ID · \${escapeHtml(brand.assetKey || brand.slug)}</span>
-            <span class="art-metric">\${brand.guideCount}G · \${brand.tokenCount}T</span>
+            <span class="art-code">\${escapeHtml(brand.assetKey || brand.slug)}</span>
           </div>
           <p class="eyebrow">\${escapeHtml(statusLabel(brand.status))}</p>
           <h2>\${escapeHtml(localized.name)}</h2>

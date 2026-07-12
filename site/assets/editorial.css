@@ -102,31 +102,39 @@ button:active { transform: translateY(1px); }
   font-size: clamp(15px, 1.25vw, 18px);
 }
 .hero-index {
-  align-self: stretch;
-  align-content: center;
-  gap: 0;
-  max-height: 500px;
-  padding: 12px 0;
-  mask-image: linear-gradient(to bottom, transparent, #000 18px, #000 calc(100% - 18px), transparent);
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(13, minmax(0, 1fr));
+  grid-auto-flow: column;
+  column-gap: clamp(18px, 2.5vw, 36px);
+  row-gap: 0;
+  width: 100%;
+  height: 476px;
+  max-height: none;
+  overflow: hidden;
+  padding: 0;
+  mask-image: none;
 }
 .hero-index-row {
-  min-height: 38px;
+  min-width: 0;
+  min-height: 0;
   border: 0;
   border-bottom: 1px solid color-mix(in srgb, var(--brand-primary, var(--ink)) 18%, transparent);
   border-radius: 0;
-  padding: 5px 2px;
+  padding: 4px 2px;
   background: transparent;
   box-shadow: none;
-  font-size: 13px;
+  font-size: 12px;
   transform: translate3d(0, 8px, 0);
 }
 .hero-index-row:hover {
-  padding-left: 12px;
+  padding-left: 8px;
   background: color-mix(in srgb, var(--brand-primary, var(--ink)) 7%, transparent);
   box-shadow: none;
   transform: translate3d(0, 0, 0);
 }
-.hero-index-secondary { font-size: 11px; }
+.hero-index-secondary { font-size: 10px; }
 .hero-index-colors { gap: 2px; }
 .hero-index .color-dot {
   width: 18px;
@@ -136,9 +144,9 @@ button:active { transform: translateY(1px); }
   border-radius: 0;
 }
 .hero-index .icon-copy {
-  width: 28px;
-  height: 28px;
-  min-height: 28px;
+  width: 24px;
+  height: 24px;
+  min-height: 24px;
   border: 0;
   background: transparent;
 }
@@ -211,9 +219,9 @@ button:active { transform: translateY(1px); }
 .ip-card::before { width: 3px; }
 .ip-card:hover { transform: translateY(-3px); box-shadow: 0 22px 60px rgba(13, 17, 16, .09); }
 .card-body { padding: 12px; gap: 9px; }
-.card-art { min-height: 154px; border: 0; border-radius: 0; }
+.card-art { min-height: 176px; border: 0; border-radius: 0; }
 .ip-card:nth-child(7n + 1) .card-art,
-.ip-card:nth-child(7n + 5) .card-art { min-height: 220px; }
+.ip-card:nth-child(7n + 5) .card-art { min-height: 176px; }
 .card-art > img {
   position: absolute;
   inset: 0;
@@ -228,9 +236,30 @@ button:active { transform: translateY(1px); }
 .ip-card:hover .card-art > img { transform: scale(1.025); }
 .card-art > img ~ .art-code,
 .card-art > img ~ .art-metric { z-index: 2; }
+.art-code {
+  max-width: calc(100% - 54px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-transform: lowercase;
+  letter-spacing: .04em;
+}
+.art-metric { display: none; }
 .card-body > .eyebrow { display: none; }
-.card-body h2 { margin-top: 2px; font-size: clamp(23px, 2vw, 31px); line-height: 1; }
+.card-body h2 {
+  min-height: 2em;
+  margin-top: 2px;
+  font-size: clamp(23px, 2vw, 31px);
+  line-height: 1;
+}
+.alt-name {
+  min-height: 1.45em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .card-intro {
+  min-height: 3.25em;
   max-width: 52ch;
   margin: 0;
   display: -webkit-box;
@@ -339,12 +368,13 @@ button:active { transform: translateY(1px); }
 @media (max-width: 1080px) {
   .hub-hero { grid-template-columns: 1fr; min-height: auto; padding-top: 44px; }
   .hero-copy h1 { font-size: clamp(64px, 11vw, 96px); }
-  .hero-index { max-height: 410px; }
+  .hero-index { height: 442px; max-height: none; }
   .ip-card,
   .ip-card:nth-child(7n + 1),
   .ip-card:nth-child(7n + 5) { grid-column: span 6; min-height: 360px; }
+  .card-art,
   .ip-card:nth-child(7n + 1) .card-art,
-  .ip-card:nth-child(7n + 5) .card-art { min-height: 180px; }
+  .ip-card:nth-child(7n + 5) .card-art { min-height: 168px; }
   .resource-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
@@ -372,9 +402,18 @@ button:active { transform: translateY(1px); }
   .hub-hero { padding: 38px 0 24px; }
   .hero-copy h1 { font-size: clamp(54px, 17vw, 72px); }
   .hub-hero p:not(.eyebrow) { margin-top: 12px; font-size: 14px; }
-  .hero-index { max-height: 310px; padding: 6px 0; }
-  .hero-index-row { min-height: 35px; font-size: 12px; }
+  .hero-index {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(13, minmax(0, 1fr));
+    height: 416px;
+    max-height: none;
+    column-gap: 12px;
+    padding: 0;
+  }
+  .hero-index-row { min-height: 0; padding: 3px 0; font-size: 11px; }
   .hero-index-secondary { display: none; }
+  .hero-index-colors { display: none; }
+  .hero-index .icon-copy { width: 22px; height: 22px; min-height: 22px; }
   .evolution-link { grid-template-columns: minmax(0, 1fr) 44px; min-height: 0; }
   .evolution-copy h2 { max-width: 10em; font-size: 30px; line-height: 1.04; }
   .evolution-path { grid-template-columns: repeat(5, max-content); overflow-x: auto; justify-content: start; gap: 16px; }
@@ -400,6 +439,7 @@ button:active { transform: translateY(1px); }
   .ip-card:nth-child(7n + 5) .card-art { min-height: 104px; }
   .card-body { padding: 9px; gap: 7px; }
   .card-body h2 {
+    min-height: 3.12em;
     display: -webkit-box;
     overflow: hidden;
     -webkit-box-orient: vertical;
@@ -409,6 +449,7 @@ button:active { transform: translateY(1px); }
     overflow-wrap: anywhere;
   }
   .card-intro { display: none; }
+  .alt-name { min-height: 1.3em; font-size: 11px; }
   .card-art > img { padding: 18px; }
   .copy-reference { top: 7px; right: 7px; }
   .meta { gap: 6px; font-size: 10px; }
