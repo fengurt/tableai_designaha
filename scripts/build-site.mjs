@@ -773,6 +773,35 @@ const topbarIcon = {
   globe: `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.25 2.4 3.38 5.4 3.38 9S14.25 18.6 12 21"/><path d="M12 3C9.75 5.4 8.62 8.4 8.62 12S9.75 18.6 12 21"/></svg>`,
 };
 
+function initialThemeStyle(theme = {}) {
+  return Object.entries({
+    "--brand-primary": theme.primary,
+    "--brand-accent": theme.accent,
+    "--brand-secondary": theme.secondary,
+    "--brand-surface": theme.surface,
+    "--brand-paper": theme.paper,
+    "--brand-ink": theme.ink,
+  })
+    .filter(([, value]) => value)
+    .map(([key, value]) => `${key}:${value}`)
+    .join(";");
+}
+
+const initialCopyIcon = `<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="10" height="10" rx="2"></rect><path d="M5 15V7a2 2 0 0 1 2-2h8"></path></svg>`;
+const initialHeroIndexHtml = indexPayload.map((brand, idx) => {
+  const primaryName = brand.mainName || brand.name;
+  const localized = brand.mainLanguage === "zh" ? brand.display?.zh : brand.display?.en;
+  const secondary = localized?.secondaryName || "";
+  const colors = [brand.theme?.primary, brand.theme?.accent, brand.theme?.secondary].filter(Boolean).slice(0, 3);
+  return `<div class="hero-index-row" data-brand="${escapeBuildHtml(brand.slug)}" style="${initialThemeStyle(brand.theme)};--row-index:${idx}">
+    <a class="hero-index-link" href="${escapeBuildHtml(brand.url)}">
+      <span class="hero-index-title">${escapeBuildHtml(primaryName)}${secondary ? ` <span class="hero-index-secondary">· ${escapeBuildHtml(secondary)}</span>` : ""}</span>
+    </a>
+    <span class="hero-index-colors" aria-hidden="true">${colors.map((value) => `<span class="color-dot" style="--dot:${escapeBuildHtml(value)}"></span>`).join("")}</span>
+    <span class="icon-copy" aria-hidden="true">${initialCopyIcon}</span>
+  </div>`;
+}).join("");
+
 await writeFile(join(siteDir, "index.html"), html`<!doctype html>
 <html lang="zh-CN">
 <head>
@@ -833,7 +862,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
         <h1 data-i18n="hub.name">${hubNameCn}</h1>
         <p data-i18n="home.lead">高楼宾客似曾识，日光底下无新事。</p>
       </div>
-      <div class="hero-index" id="heroIndex" aria-live="polite"></div>
+      <div class="hero-index" id="heroIndex" aria-live="polite">${initialHeroIndexHtml}</div>
     </section>
     <section class="evolution-entry" id="ip-evolution" aria-labelledby="evolutionTitle">
       <a href="ip-evolution" class="evolution-link">
