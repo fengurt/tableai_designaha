@@ -156,11 +156,11 @@
     }
   },
   "version": {
-    "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
-    "shortHash": "a5bf7cf",
-    "date": "2026-07-10T20:21:24+08:00",
-    "message": "Replace contrast-template brand copy",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9"
+    "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+    "shortHash": "bb4944e",
+    "date": "2026-07-12T08:23:07+08:00",
+    "message": "Pre-render the complete IP directory",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
   },
   "historyUrl": "api/history/sidera.json",
   "history": [
@@ -259,10 +259,12 @@
       "title": "Sidera Brand Hero"
     }
   ],
+  "logoUrl": "assets/brand-images/sidera.png",
   "assetKit": {
     "assetKey": "sidera",
     "endpoints": {
       "brand": "api/brands/sidera.json",
+      "logo": "assets/brand-images/sidera.png",
       "images": "api/brands/sidera.json#images",
       "tokens": "api/brands/sidera.json#tokens",
       "history": "api/history/sidera.json"

@@ -38,6 +38,7 @@
     "guides": "Guideline metadata and text.",
     "tokens": "Token file metadata and text.",
     "images": "Image asset metadata and public site paths.",
+    "logoUrl": "Canonical public URL path for the preferred IP logo, blank when no verified logo asset exists.",
     "assetKit": "Unified callable IP asset endpoints, colors, images, and moodboard source.",
     "moodboard": "Derived colors, keywords, and image assets for visual direction.",
     "editablePaths": "Source files editable from admin flow.",

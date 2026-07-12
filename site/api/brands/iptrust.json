@@ -152,14 +152,25 @@
     "en": ""
   },
   "version": {
-    "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-    "shortHash": "370e33f",
-    "date": "2026-07-10T21:20:51+08:00",
-    "message": "Render IP guidelines as web content",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+    "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+    "shortHash": "bb4944e",
+    "date": "2026-07-12T08:23:07+08:00",
+    "message": "Pre-render the complete IP directory",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
   },
   "historyUrl": "api/history/iptrust.json",
   "history": [
+    {
+      "hash": "307513830db51470695adf67b4da3df8b2d669bb",
+      "shortHash": "3075138",
+      "date": "2026-07-10T22:06:39+08:00",
+      "message": "Redesign IPTrust and publish brand assets",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/307513830db51470695adf67b4da3df8b2d669bb",
+      "sourcePaths": [
+        "config/brands.json",
+        "IPTRUST"
+      ]
+    },
     {
       "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
       "shortHash": "a5bf7cf",
@@ -210,17 +221,6 @@
       "date": "2026-07-08T03:28:03+08:00",
       "message": "Update OPC Global primary language",
       "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb",
-      "sourcePaths": [
-        "config/brands.json",
-        "IPTRUST"
-      ]
-    },
-    {
-      "hash": "4efc463d2f51813f4aae7c47083471b15ca8d1bf",
-      "shortHash": "4efc463",
-      "date": "2026-07-08T03:23:22+08:00",
-      "message": "Add Zhongzhiyou Group IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4efc463d2f51813f4aae7c47083471b15ca8d1bf",
       "sourcePaths": [
         "config/brands.json",
         "IPTRUST"
@@ -304,10 +304,12 @@
       "title": "Logohdpi"
     }
   ],
+  "logoUrl": "assets/brand-images/iptrust-logo-set-wideblack.png",
   "assetKit": {
     "assetKey": "iptrust",
     "endpoints": {
       "brand": "api/brands/iptrust.json",
+      "logo": "assets/brand-images/iptrust-logo-set-wideblack.png",
       "images": "api/brands/iptrust.json#images",
       "tokens": "api/brands/iptrust.json#tokens",
       "history": "api/history/iptrust.json"

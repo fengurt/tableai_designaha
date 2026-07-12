@@ -153,20 +153,22 @@
       "en": ""
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/tableai.json",
     "url": "brand.html?brand=tableai",
     "apiUrl": "api/brands/tableai.json",
     "status": "documented",
+    "logoUrl": "assets/brand-images/tableai-tableai-a2a-logo-transparent.png",
     "assetKit": {
       "assetKey": "tableai",
       "endpoints": {
         "brand": "api/brands/tableai.json",
+        "logo": "assets/brand-images/tableai-tableai-a2a-logo-transparent.png",
         "images": "api/brands/tableai.json#images",
         "tokens": "api/brands/tableai.json#tokens",
         "history": "api/history/tableai.json"
@@ -451,20 +453,22 @@
       "en": ""
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/vanahom.json",
     "url": "brand.html?brand=vanahom",
     "apiUrl": "api/brands/vanahom.json",
     "status": "documented",
+    "logoUrl": "assets/brand-images/vanahom-vanahom-logo-red.png",
     "assetKit": {
       "assetKey": "vanahom",
       "endpoints": {
         "brand": "api/brands/vanahom.json",
+        "logo": "assets/brand-images/vanahom-vanahom-logo-red.png",
         "images": "api/brands/vanahom.json#images",
         "tokens": "api/brands/vanahom.json#tokens",
         "history": "api/history/vanahom.json"
@@ -809,20 +813,22 @@
       "en": ""
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/sanctem.json",
     "url": "brand.html?brand=sanctem",
     "apiUrl": "api/brands/sanctem.json",
     "status": "documented",
+    "logoUrl": "assets/brand-images/sanctem-sanctem-logo-color.png",
     "assetKit": {
       "assetKey": "sanctem",
       "endpoints": {
         "brand": "api/brands/sanctem.json",
+        "logo": "assets/brand-images/sanctem-sanctem-logo-color.png",
         "images": "api/brands/sanctem.json#images",
         "tokens": "api/brands/sanctem.json#tokens",
         "history": "api/history/sanctem.json"
@@ -1157,20 +1163,22 @@
       "en": ""
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/kind.json",
     "url": "brand.html?brand=kind",
     "apiUrl": "api/brands/kind.json",
     "status": "documented",
+    "logoUrl": "assets/brand-images/kind.png",
     "assetKit": {
       "assetKey": "kind",
       "endpoints": {
         "brand": "api/brands/kind.json",
+        "logo": "assets/brand-images/kind.png",
         "images": "api/brands/kind.json#images",
         "tokens": "api/brands/kind.json#tokens",
         "history": "api/history/kind.json"
@@ -1437,20 +1445,22 @@
       "en": ""
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/apha.json",
     "url": "brand.html?brand=apha",
     "apiUrl": "api/brands/apha.json",
     "status": "documented",
+    "logoUrl": "assets/brand-images/apha.png",
     "assetKit": {
       "assetKey": "apha",
       "endpoints": {
         "brand": "api/brands/apha.json",
+        "logo": "assets/brand-images/apha.png",
         "images": "api/brands/apha.json#images",
         "tokens": "api/brands/apha.json#tokens",
         "history": "api/history/apha.json"
@@ -1715,20 +1725,22 @@
       "en": ""
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/manaendless.json",
     "url": "brand.html?brand=manaendless",
     "apiUrl": "api/brands/manaendless.json",
     "status": "placeholder",
+    "logoUrl": "assets/brand-images/manaendless.png",
     "assetKit": {
       "assetKey": "manaendless",
       "endpoints": {
         "brand": "api/brands/manaendless.json",
+        "logo": "assets/brand-images/manaendless.png",
         "images": "api/brands/manaendless.json#images",
         "tokens": "api/brands/manaendless.json#tokens",
         "history": "api/history/manaendless.json"
@@ -1991,20 +2003,22 @@
       "en": ""
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/opcglobal.json",
     "url": "brand.html?brand=opcglobal",
     "apiUrl": "api/brands/opcglobal.json",
     "status": "placeholder",
+    "logoUrl": "assets/brand-images/opcglobal.png",
     "assetKit": {
       "assetKey": "opcglobal",
       "endpoints": {
         "brand": "api/brands/opcglobal.json",
+        "logo": "assets/brand-images/opcglobal.png",
         "images": "api/brands/opcglobal.json#images",
         "tokens": "api/brands/opcglobal.json#tokens",
         "history": "api/history/opcglobal.json"
@@ -2267,20 +2281,22 @@
       "en": ""
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/iptrust.json",
     "url": "brand.html?brand=iptrust",
     "apiUrl": "api/brands/iptrust.json",
     "status": "placeholder",
+    "logoUrl": "assets/brand-images/iptrust-logo-set-wideblack.png",
     "assetKit": {
       "assetKey": "iptrust",
       "endpoints": {
         "brand": "api/brands/iptrust.json",
+        "logo": "assets/brand-images/iptrust-logo-set-wideblack.png",
         "images": "api/brands/iptrust.json#images",
         "tokens": "api/brands/iptrust.json#tokens",
         "history": "api/history/iptrust.json"
@@ -2673,20 +2689,22 @@
       "en": ""
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/fengzhi.json",
     "url": "brand.html?brand=fengzhi",
     "apiUrl": "api/brands/fengzhi.json",
     "status": "documented",
+    "logoUrl": "assets/brand-images/fengzhi.png",
     "assetKit": {
       "assetKey": "fengzhi",
       "endpoints": {
         "brand": "api/brands/fengzhi.json",
+        "logo": "assets/brand-images/fengzhi.png",
         "images": "api/brands/fengzhi.json#images",
         "tokens": "api/brands/fengzhi.json#tokens",
         "history": "api/history/fengzhi.json"
@@ -2973,20 +2991,22 @@
       "en": ""
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/axisee.json",
     "url": "brand.html?brand=axisee",
     "apiUrl": "api/brands/axisee.json",
     "status": "documented",
+    "logoUrl": "assets/brand-images/axisee-axisee-logo.png",
     "assetKit": {
       "assetKey": "axisee",
       "endpoints": {
         "brand": "api/brands/axisee.json",
+        "logo": "assets/brand-images/axisee-axisee-logo.png",
         "images": "api/brands/axisee.json#images",
         "tokens": "api/brands/axisee.json#tokens",
         "history": "api/history/axisee.json"
@@ -3265,20 +3285,22 @@
       }
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/sidera.json",
     "url": "brand.html?brand=sidera",
     "apiUrl": "api/brands/sidera.json",
     "status": "documented",
+    "logoUrl": "assets/brand-images/sidera.png",
     "assetKit": {
       "assetKey": "sidera",
       "endpoints": {
         "brand": "api/brands/sidera.json",
+        "logo": "assets/brand-images/sidera.png",
         "images": "api/brands/sidera.json#images",
         "tokens": "api/brands/sidera.json#tokens",
         "history": "api/history/sidera.json"
@@ -3543,20 +3565,22 @@
       "en": ""
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/1stepmore.json",
     "url": "brand.html?brand=1stepmore",
     "apiUrl": "api/brands/1stepmore.json",
     "status": "documented",
+    "logoUrl": "",
     "assetKit": {
       "assetKey": "1stepmore",
       "endpoints": {
         "brand": "api/brands/1stepmore.json",
+        "logo": "",
         "images": "api/brands/1stepmore.json#images",
         "tokens": "api/brands/1stepmore.json#tokens",
         "history": "api/history/1stepmore.json"
@@ -3809,20 +3833,22 @@
       "en": ""
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/agem.json",
     "url": "brand.html?brand=agem",
     "apiUrl": "api/brands/agem.json",
     "status": "documented",
+    "logoUrl": "",
     "assetKit": {
       "assetKey": "agem",
       "endpoints": {
         "brand": "api/brands/agem.json",
+        "logo": "",
         "images": "api/brands/agem.json#images",
         "tokens": "api/brands/agem.json#tokens",
         "history": "api/history/agem.json"
@@ -4075,20 +4101,22 @@
       "en": ""
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/rgd.json",
     "url": "brand.html?brand=rgd",
     "apiUrl": "api/brands/rgd.json",
     "status": "documented",
+    "logoUrl": "",
     "assetKit": {
       "assetKey": "rgd",
       "endpoints": {
         "brand": "api/brands/rgd.json",
+        "logo": "",
         "images": "api/brands/rgd.json#images",
         "tokens": "api/brands/rgd.json#tokens",
         "history": "api/history/rgd.json"
@@ -4341,20 +4369,22 @@
       "en": ""
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/changoods.json",
     "url": "brand.html?brand=changoods",
     "apiUrl": "api/brands/changoods.json",
     "status": "documented",
+    "logoUrl": "",
     "assetKit": {
       "assetKey": "changoods",
       "endpoints": {
         "brand": "api/brands/changoods.json",
+        "logo": "",
         "images": "api/brands/changoods.json#images",
         "tokens": "api/brands/changoods.json#tokens",
         "history": "api/history/changoods.json"
@@ -4607,20 +4637,22 @@
       "en": ""
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/boya.json",
     "url": "brand.html?brand=boya",
     "apiUrl": "api/brands/boya.json",
     "status": "documented",
+    "logoUrl": "",
     "assetKit": {
       "assetKey": "boya",
       "endpoints": {
         "brand": "api/brands/boya.json",
+        "logo": "",
         "images": "api/brands/boya.json#images",
         "tokens": "api/brands/boya.json#tokens",
         "history": "api/history/boya.json"
@@ -4873,20 +4905,22 @@
       "en": ""
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/apuch.json",
     "url": "brand.html?brand=apuch",
     "apiUrl": "api/brands/apuch.json",
     "status": "documented",
+    "logoUrl": "",
     "assetKit": {
       "assetKey": "apuch",
       "endpoints": {
         "brand": "api/brands/apuch.json",
+        "logo": "",
         "images": "api/brands/apuch.json#images",
         "tokens": "api/brands/apuch.json#tokens",
         "history": "api/history/apuch.json"
@@ -5141,20 +5175,22 @@
       }
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/pam.json",
     "url": "brand.html?brand=pam",
     "apiUrl": "api/brands/pam.json",
     "status": "documented",
+    "logoUrl": "",
     "assetKit": {
       "assetKey": "pam",
       "endpoints": {
         "brand": "api/brands/pam.json",
+        "logo": "",
         "images": "api/brands/pam.json#images",
         "tokens": "api/brands/pam.json#tokens",
         "history": "api/history/pam.json"
@@ -5411,20 +5447,22 @@
       "en": ""
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/ksamint.json",
     "url": "brand.html?brand=ksamint",
     "apiUrl": "api/brands/ksamint.json",
     "status": "documented",
+    "logoUrl": "",
     "assetKit": {
       "assetKey": "ksamint",
       "endpoints": {
         "brand": "api/brands/ksamint.json",
+        "logo": "",
         "images": "api/brands/ksamint.json#images",
         "tokens": "api/brands/ksamint.json#tokens",
         "history": "api/history/ksamint.json"
@@ -5654,20 +5692,22 @@
       }
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/inucleus.json",
     "url": "brand.html?brand=inucleus",
     "apiUrl": "api/brands/inucleus.json",
     "status": "documented",
+    "logoUrl": "",
     "assetKit": {
       "assetKey": "inucleus",
       "endpoints": {
         "brand": "api/brands/inucleus.json",
+        "logo": "",
         "images": "api/brands/inucleus.json#images",
         "tokens": "api/brands/inucleus.json#tokens",
         "history": "api/history/inucleus.json"
@@ -5924,20 +5964,22 @@
       }
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/xinzhi-travel.json",
     "url": "brand.html?brand=xinzhi-travel",
     "apiUrl": "api/brands/xinzhi-travel.json",
     "status": "documented",
+    "logoUrl": "",
     "assetKit": {
       "assetKey": "xinzhi-travel",
       "endpoints": {
         "brand": "api/brands/xinzhi-travel.json",
+        "logo": "",
         "images": "api/brands/xinzhi-travel.json#images",
         "tokens": "api/brands/xinzhi-travel.json#tokens",
         "history": "api/history/xinzhi-travel.json"
@@ -6194,20 +6236,22 @@
       }
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/zhongzhiyou.json",
     "url": "brand.html?brand=zhongzhiyou",
     "apiUrl": "api/brands/zhongzhiyou.json",
     "status": "documented",
+    "logoUrl": "",
     "assetKit": {
       "assetKey": "zhongzhiyou",
       "endpoints": {
         "brand": "api/brands/zhongzhiyou.json",
+        "logo": "",
         "images": "api/brands/zhongzhiyou.json#images",
         "tokens": "api/brands/zhongzhiyou.json#tokens",
         "history": "api/history/zhongzhiyou.json"
@@ -6460,20 +6504,22 @@
       }
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/nibiru.json",
     "url": "brand.html?brand=nibiru",
     "apiUrl": "api/brands/nibiru.json",
     "status": "documented",
+    "logoUrl": "",
     "assetKit": {
       "assetKey": "nibiru",
       "endpoints": {
         "brand": "api/brands/nibiru.json",
+        "logo": "",
         "images": "api/brands/nibiru.json#images",
         "tokens": "api/brands/nibiru.json#tokens",
         "history": "api/history/nibiru.json"
@@ -6730,20 +6776,22 @@
       }
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/shenzhen-microsoft-global-center.json",
     "url": "brand.html?brand=shenzhen-microsoft-global-center",
     "apiUrl": "api/brands/shenzhen-microsoft-global-center.json",
     "status": "documented",
+    "logoUrl": "",
     "assetKit": {
       "assetKey": "shenzhen-microsoft-global-center",
       "endpoints": {
         "brand": "api/brands/shenzhen-microsoft-global-center.json",
+        "logo": "",
         "images": "api/brands/shenzhen-microsoft-global-center.json#images",
         "tokens": "api/brands/shenzhen-microsoft-global-center.json#tokens",
         "history": "api/history/shenzhen-microsoft-global-center.json"
@@ -7024,20 +7072,22 @@
       }
     },
     "version": {
-      "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-      "shortHash": "370e33f",
-      "date": "2026-07-10T21:20:51+08:00",
-      "message": "Render IP guidelines as web content",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+      "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+      "shortHash": "bb4944e",
+      "date": "2026-07-12T08:23:07+08:00",
+      "message": "Pre-render the complete IP directory",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
     },
     "historyUrl": "api/history/shanrenjing.json",
     "url": "brand.html?brand=shanrenjing",
     "apiUrl": "api/brands/shanrenjing.json",
     "status": "documented",
+    "logoUrl": "",
     "assetKit": {
       "assetKey": "shanrenjing",
       "endpoints": {
         "brand": "api/brands/shanrenjing.json",
+        "logo": "",
         "images": "api/brands/shanrenjing.json#images",
         "tokens": "api/brands/shanrenjing.json#tokens",
         "history": "api/history/shanrenjing.json"

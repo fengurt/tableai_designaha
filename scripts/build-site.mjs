@@ -90,6 +90,27 @@ function brandImageOutputName(brand, rel, usedNames) {
   return candidate;
 }
 
+function buildAssetScore(image = {}) {
+  const text = [image.path, image.sitePath, image.title].filter(Boolean).join(" ").toLowerCase();
+  let score = 0;
+  if (text.includes("logo")) score += 60;
+  if (text.includes("a2a")) score += 35;
+  if (text.includes("transparent") || text.includes("clear")) score += 42;
+  if (text.includes("wide") || text.includes("wordmark")) score += 25;
+  if (text.includes("color") || text.includes("red")) score += 32;
+  if (text.includes("black")) score += 10;
+  if (text.includes("white")) score -= 18;
+  if (String(image.sitePath || "").toLowerCase().endsWith(".png")) score += 10;
+  if (String(image.sitePath || "").toLowerCase().endsWith(".jpg")) score -= 4;
+  if (text.includes("brand-hero")) score -= 90;
+  return score;
+}
+
+function buildPreferredBrandImage(images = []) {
+  if (!images.length) return null;
+  return [...images].sort((a, b) => buildAssetScore(b) - buildAssetScore(a))[0] || images[0];
+}
+
 function titleFromPath(path) {
   return path
     .split("/")
@@ -391,6 +412,7 @@ function apiSchemaPayload() {
       guides: "Guideline metadata and text.",
       tokens: "Token file metadata and text.",
       images: "Image asset metadata and public site paths.",
+      logoUrl: "Canonical public URL path for the preferred IP logo, blank when no verified logo asset exists.",
       assetKit: "Unified callable IP asset endpoints, colors, images, and moodboard source.",
       moodboard: "Derived colors, keywords, and image assets for visual direction.",
       editablePaths: "Source files editable from admin flow.",
@@ -511,6 +533,7 @@ for (const brand of brands) {
     en: liveIntro(brand, guides, "en"),
   };
   const brandProfile = profile(brand);
+  const logoImage = buildPreferredBrandImage(images);
   const moodboard = {
     colors: themeColorEntries(brand.theme),
     keywords: brand.theme?.keywords ?? [],
@@ -520,6 +543,7 @@ for (const brand of brands) {
     assetKey: brand.slug,
     endpoints: {
       brand: `api/brands/${brand.slug}.json`,
+      logo: logoImage?.sitePath ?? "",
       images: `api/brands/${brand.slug}.json#images`,
       tokens: `api/brands/${brand.slug}.json#tokens`,
       history: `api/history/${brand.slug}.json`,
@@ -546,6 +570,7 @@ for (const brand of brands) {
     guides,
     tokens,
     images,
+    logoUrl: logoImage?.sitePath ?? "",
     assetKit,
     moodboard,
     editablePaths: guides.map((g) => g.path),
@@ -2607,6 +2632,8 @@ const i18n = {
     "copy.selected": "已选中，请按 ⌘C / Ctrl+C 复制",
     "copy.fail": "复制失败",
     "copy.referenceDone": "已复制 IP Agent Reference",
+    "copy.assetUrl": "复制资产地址",
+    "copy.assetDone": "已复制资产地址",
     "copy.colorDone": "已复制色值",
     "copy.pantoneDone": "已复制 Pantone 近似值",
     "brand.openJson": "打开 JSON",
@@ -2754,6 +2781,8 @@ const i18n = {
     "copy.selected": "Selected. Press Cmd/Ctrl+C to copy.",
     "copy.fail": "Failed",
     "copy.referenceDone": "IP Agent Reference copied",
+    "copy.assetUrl": "Copy asset URL",
+    "copy.assetDone": "Asset URL copied",
     "copy.colorDone": "Color copied",
     "copy.pantoneDone": "Pantone approximation copied",
     "brand.openJson": "Open JSON",
@@ -3236,6 +3265,9 @@ function referenceText(brand = {}) {
   const schemaUrl = new URL("api/schema.json", location.href).href;
   const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", document.baseURI).href;
   const mcpSource = new URL("api/manifest.json", location.href).href;
+  const preferredLogo = preferredBrandImage(brand.images || []);
+  const logoPath = brand.logoUrl || preferredLogo?.sitePath || brand.heroImage || "";
+  const logoUrl = logoPath ? new URL(logoPath, location.href).href : "TBD";
   const colors = palette(brand.theme)
     .map(([label, value]) => \`\${label}: \${value} / \${rgbValue(value)}\`)
     .join("\\n");
@@ -3250,6 +3282,7 @@ function referenceText(brand = {}) {
     "",
     "[Links]",
     \`IP page: \${ipPageUrl}\`,
+    \`Logo URL: \${logoUrl}\`,
     \`Official website: \${brand.officialWebsite || "TBD"}\`,
     \`Brand API: \${apiUrl}\`,
     \`History API: \${historyUrl}\`,
@@ -3839,6 +3872,23 @@ function setupCopyButtons(brands) {
   });
 }
 
+function setupAssetCopyButtons() {
+  document.querySelectorAll("[data-copy-asset-url]").forEach((button) => {
+    if (button.dataset.ready) return;
+    button.dataset.ready = "true";
+    button.addEventListener("click", async (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const assetUrl = new URL(button.dataset.copyAssetUrl, location.href).href;
+      const result = await writeClipboardText(assetUrl);
+      showToast(feedbackMessage(result, "copy.assetDone"));
+      button.classList.add("copied");
+      button.title = result === "selected" ? t("copy.selected") : t("copy.done");
+      setTimeout(() => button.classList.remove("copied"), 900);
+    });
+  });
+}
+
 function normalizeSearchText(value = "") {
   return String(value).toLowerCase();
 }
@@ -3872,9 +3922,12 @@ function brandAssetStrip(images = []) {
       <p class="eyebrow">\${escapeHtml(t("brand.visualAssets"))}</p>
       <div class="brand-asset-strip">
         \${images.map((image) => \`
-          <a class="brand-asset" href="\${escapeHtml(image.sitePath)}" title="\${escapeHtml(image.title || image.path || "")}">
-            <img src="\${escapeHtml(image.sitePath)}" alt="\${escapeHtml(image.title || "")}" loading="lazy">
-          </a>
+          <div class="brand-asset" title="\${escapeHtml(image.title || image.path || "")}">
+            <a class="brand-asset-link" href="\${escapeHtml(image.sitePath)}">
+              <img src="\${escapeHtml(image.sitePath)}" alt="\${escapeHtml(image.title || "")}" loading="lazy">
+            </a>
+            <button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="\${escapeHtml(image.sitePath)}" aria-label="\${escapeHtml(t("copy.assetUrl"))}">\${copyIcon()}</button>
+          </div>
         \`).join("")}
       </div>
     </section>
@@ -4160,7 +4213,7 @@ async function renderBrand() {
             <a class="button ghost" href="\${brand.source.github}">\${t("brand.source")}</a>
           </div>
         </div>
-        \${hero ? \`<div class="brand-visual"><img src="\${escapeHtml(hero.sitePath)}" alt="\${escapeHtml(hero.title || display.name)}"></div>\` : ""}
+        \${hero ? \`<div class="brand-visual"><img src="\${escapeHtml(hero.sitePath)}" alt="\${escapeHtml(hero.title || display.name)}"><button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="\${escapeHtml(hero.sitePath)}" aria-label="\${escapeHtml(t("copy.assetUrl"))}">\${copyIcon()}</button></div>\` : ""}
       </section>
       \${profileEditor(brand)}
       \${ipSystemPanel(brand)}
@@ -4191,6 +4244,7 @@ async function renderBrand() {
   \`;
   setupProfileEditor(brand);
   setupIpSystemPanel(brand);
+  setupAssetCopyButtons();
 }
 
 applyI18n();
