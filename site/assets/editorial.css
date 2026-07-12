@@ -126,7 +126,9 @@ button:active { transform: translateY(1px); }
   background: transparent;
   box-shadow: none;
   font-size: 12px;
-  transform: translate3d(0, 8px, 0);
+  opacity: 1;
+  animation: none;
+  transform: none;
 }
 .hero-index-row:hover {
   padding-left: 8px;
