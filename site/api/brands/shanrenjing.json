@@ -2,13 +2,13 @@
   "slug": "shanrenjing",
   "folder": "Shanrenjing",
   "name": "山人境",
-  "nativeName": "Shanrenjing",
+  "nativeName": "shanpass",
   "description": "中文优先的行程级人员安全基础设施 IP，连接定位、风险预警、救援协同、保险风控与监管留痕。",
   "officialWebsite": "",
   "mainLanguage": "zh",
   "intro": {
     "zh": "山人境是一套面向景区、户外活动、研学营地、大型赛事与低信号区域作业的行程级人员安全基础设施。",
-    "en": "Shanrenjing is a journey-level safety infrastructure IP for scenic destinations, outdoor programs, study camps, large events, and low-connectivity field operations."
+    "en": "shanpass is a journey-level safety infrastructure IP for scenic destinations, outdoor programs, study camps, large events, and low-connectivity field operations."
   },
   "business": {
     "zh": "人员定位、风险预警、应急救援、行程安全云、智能终端、补盲通信、保险风控、监管看板与专家带队系统。",
@@ -16,7 +16,7 @@
   },
   "notes": {
     "zh": "山人境定位为行程级人员安全基础设施。手环承担行程入口，平台连接定位、预警、调度、救援、留痕与理赔，救援协同和责任闭环构成核心价值。对外统一使用守护、保障、安全协同、应急响应、行程保障、风险预警、救援闭环与保险保障，避免使用“监控”“管控游客”“实时盯人”。",
-    "en": "Shanrenjing is journey-level personnel safety infrastructure. The wearable opens each journey, while the platform connects positioning, alerts, dispatch, rescue, records, and claims into an accountable response loop. Public language emphasizes protection, safety coordination, emergency response, risk alerts, and rescue assurance while avoiding surveillance framing."
+    "en": "shanpass is journey-level personnel safety infrastructure. The wearable opens each journey, while the platform connects positioning, alerts, dispatch, rescue, records, and claims into an accountable response loop. Public language emphasizes protection, safety coordination, emergency response, risk alerts, and rescue assurance while avoiding surveillance framing."
   },
   "primaryGuide": "Shanrenjing/README.md",
   "theme": {
@@ -100,7 +100,7 @@
     "mainLocale": "CN",
     "intro": {
       "zh": "山人境是一套面向景区、户外活动、研学营地、大型赛事与低信号区域作业的行程级人员安全基础设施。",
-      "en": "Shanrenjing is a journey-level safety infrastructure IP for scenic destinations, outdoor programs, study camps, large events, and low-connectivity field operations."
+      "en": "shanpass is a journey-level safety infrastructure IP for scenic destinations, outdoor programs, study camps, large events, and low-connectivity field operations."
     },
     "business": {
       "zh": "人员定位、风险预警、应急救援、行程安全云、智能终端、补盲通信、保险风控、监管看板与专家带队系统。",
@@ -108,7 +108,7 @@
     },
     "notes": {
       "zh": "山人境定位为行程级人员安全基础设施。手环承担行程入口，平台连接定位、预警、调度、救援、留痕与理赔，救援协同和责任闭环构成核心价值。对外统一使用守护、保障、安全协同、应急响应、行程保障、风险预警、救援闭环与保险保障，避免使用“监控”“管控游客”“实时盯人”。",
-      "en": "Shanrenjing is journey-level personnel safety infrastructure. The wearable opens each journey, while the platform connects positioning, alerts, dispatch, rescue, records, and claims into an accountable response loop. Public language emphasizes protection, safety coordination, emergency response, risk alerts, and rescue assurance while avoiding surveillance framing."
+      "en": "shanpass is journey-level personnel safety infrastructure. The wearable opens each journey, while the platform connects positioning, alerts, dispatch, rescue, records, and claims into an accountable response loop. Public language emphasizes protection, safety coordination, emergency response, risk alerts, and rescue assurance while avoiding surveillance framing."
     },
     "classification": {
       "tracks": {
@@ -172,19 +172,19 @@
     },
     "zh": {
       "name": "山人境",
-      "secondaryName": "Shanrenjing"
+      "secondaryName": "shanpass"
     },
     "en": {
-      "name": "Shanrenjing",
+      "name": "shanpass",
       "secondaryName": "山人境"
     }
   },
   "version": {
-    "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
-    "shortHash": "bb4944e",
-    "date": "2026-07-12T08:23:07+08:00",
-    "message": "Pre-render the complete IP directory",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
+    "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
+    "shortHash": "4227557",
+    "date": "2026-07-12T08:54:21+08:00",
+    "message": "Promote IP Evolution and expose asset URLs",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
   },
   "historyUrl": "api/history/shanrenjing.json",
   "history": [
@@ -271,8 +271,8 @@
       "format": "md",
       "primary": true,
       "excerpt": "山人境 山人境是中文优先的行程级人员安全基础设施 IP。 它面向景区、户外活动、研学营地、大型赛事、企业团建、边境巡护与低信号区域作业场景，将人员定位、风险预警、快速救援、保险风控、政府监管与专家带队连接成一个可验证、可复盘的安全闭环。 核心定位 山人境以行程级人员安全基础设施为核心定位，覆盖智能终端、通信链路、运营平台与救援协同。 手环承担行程入口，平台连接完整安全流程。定位提供基础能力，救援协同与责任闭环构成商业护城河。 核心价值： 可定位 可预警 可调度 可救援 可留痕 可理赔 可监管 可复盘 品牌主张 每一次出发，都应该被星空守护。 政企表达：以北斗为核心的位置安全基础设施，提升文旅、研学、户外活动与大型活动的人员安全治理能力。 用户表达：扫码戴上，出发有人看得见；遇险一键呼救，救援知道你在哪。 保险表达：把行程轨迹、设备状态、报警记录、救援响应和事故复盘转化为可核验的风险与理赔证据链。 专家带队表达：专家带队覆盖路线、",
-      "text": "# 山人境\n\n山人境是中文优先的行程级人员安全基础设施 IP。\n\n它面向景区、户外活动、研学营地、大型赛事、企业团建、边境巡护与低信号区域作业场景，将人员定位、风险预警、快速救援、保险风控、政府监管与专家带队连接成一个可验证、可复盘的安全闭环。\n\n## 核心定位\n\n山人境以行程级人员安全基础设施为核心定位，覆盖智能终端、通信链路、运营平台与救援协同。\n\n手环承担行程入口，平台连接完整安全流程。定位提供基础能力，救援协同与责任闭环构成商业护城河。\n\n核心价值：\n\n- 可定位\n- 可预警\n- 可调度\n- 可救援\n- 可留痕\n- 可理赔\n- 可监管\n- 可复盘\n\n## 品牌主张\n\n每一次出发，都应该被星空守护。\n\n政企表达：以北斗为核心的位置安全基础设施，提升文旅、研学、户外活动与大型活动的人员安全治理能力。\n\n用户表达：扫码戴上，出发有人看得见；遇险一键呼救，救援知道你在哪。\n\n保险表达：把行程轨迹、设备状态、报警记录、救援响应和事故复盘转化为可核验的风险与理赔证据链。\n\n专家带队表达：专家带队覆盖路线、队伍、风险、体力、偏离与失联状态，把经验转化为流程。\n\n## 产品系统\n\n| 层级 | 山人境产品名 | 作用 |\n|---|---|---|\n| 平台系统 | 山人境安全云 | 监管、运营、救援、保险与专家协同 |\n| 手环终端 | 山人境护腕 H 系列 | 游客、学员、队员与工作人员的行程绑定终端 |\n| 救援信标 | 山人境信标 R 系列 | 专家、救援队与无网区域巡护人员使用 |\n| 补盲基站 | 山人境星台 G 系列 | 景区、营地、山地路线与赛事路线通信补盲 |\n| 专家系统 | 山人境专家套件 | 领队、教练与研学导师的队伍安全工具 |\n| 保险模块 | 山人境风险与理赔套件 | 风险证据、事故复盘与理赔协同 |\n\n## 技术原则\n\n- 每次扫码绑定一次行程，设备、人员与责任关系随行程建立和结束。\n- 中国场景采用北斗优先、多星座兼容的定位路线。\n- 蜂窝网络承担常规通信，LoRa 或 Mesh 补盲，北斗短报文或卫星通信补充无地面网络救援链路。\n- 后台统一连接运营、监管、救援、保险与专家带队流程。\n- 所有报警、响应、调度与复盘形成可核验的事件时间线。\n\n## 品牌语气\n\n推荐使用：\n\n- 守护\n- 保障\n- 安全协同\n- 应急响应\n- 行程保障\n- 风险预警\n- 救援闭环\n- 保险保障\n\n避免使用：\n\n- 监控\n- 管控游客\n- 实时盯人\n\n山人境的公众认知应聚焦行程安全保障，避免任何监视感。\n\n## 视觉方向\n\n- 山林绿 `#173F38`：稳定、环境与长期守护\n- 星芒金 `#D5A53B`：求救、坐标与关键提醒\n- 信号蓝 `#3E7890`：定位、通信与基础设施\n- 雾白 `#FBFCF9`：清晰、可信与公共服务界面\n\n视觉表达应克制、可靠、户外但不探险化，具有基础设施与应急系统的专业感。避免军事化、监视器意象和高饱和警报色滥用。\n\n## 主语言\n\n中文优先。主名称始终显示为「山人境」，英文对照为 `Shanrenjing`。\n",
-      "html": "<h1 id=\"shanrenjing-guide-1-山人境\">山人境</h1>\n<p>山人境是中文优先的行程级人员安全基础设施 IP。</p>\n<p>它面向景区、户外活动、研学营地、大型赛事、企业团建、边境巡护与低信号区域作业场景，将人员定位、风险预警、快速救援、保险风控、政府监管与专家带队连接成一个可验证、可复盘的安全闭环。</p>\n<h2 id=\"shanrenjing-guide-1-核心定位\">核心定位</h2>\n<p>山人境以行程级人员安全基础设施为核心定位，覆盖智能终端、通信链路、运营平台与救援协同。</p>\n<p>手环承担行程入口，平台连接完整安全流程。定位提供基础能力，救援协同与责任闭环构成商业护城河。</p>\n<p>核心价值：</p>\n<ul>\n<li>可定位</li>\n<li>可预警</li>\n<li>可调度</li>\n<li>可救援</li>\n<li>可留痕</li>\n<li>可理赔</li>\n<li>可监管</li>\n<li>可复盘</li>\n</ul>\n<h2 id=\"shanrenjing-guide-1-品牌主张\">品牌主张</h2>\n<p>每一次出发，都应该被星空守护。</p>\n<p>政企表达：以北斗为核心的位置安全基础设施，提升文旅、研学、户外活动与大型活动的人员安全治理能力。</p>\n<p>用户表达：扫码戴上，出发有人看得见；遇险一键呼救，救援知道你在哪。</p>\n<p>保险表达：把行程轨迹、设备状态、报警记录、救援响应和事故复盘转化为可核验的风险与理赔证据链。</p>\n<p>专家带队表达：专家带队覆盖路线、队伍、风险、体力、偏离与失联状态，把经验转化为流程。</p>\n<h2 id=\"shanrenjing-guide-1-产品系统\">产品系统</h2>\n<table>\n<thead>\n<tr>\n<th>层级</th>\n<th>山人境产品名</th>\n<th>作用</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>平台系统</td>\n<td>山人境安全云</td>\n<td>监管、运营、救援、保险与专家协同</td>\n</tr>\n<tr>\n<td>手环终端</td>\n<td>山人境护腕 H 系列</td>\n<td>游客、学员、队员与工作人员的行程绑定终端</td>\n</tr>\n<tr>\n<td>救援信标</td>\n<td>山人境信标 R 系列</td>\n<td>专家、救援队与无网区域巡护人员使用</td>\n</tr>\n<tr>\n<td>补盲基站</td>\n<td>山人境星台 G 系列</td>\n<td>景区、营地、山地路线与赛事路线通信补盲</td>\n</tr>\n<tr>\n<td>专家系统</td>\n<td>山人境专家套件</td>\n<td>领队、教练与研学导师的队伍安全工具</td>\n</tr>\n<tr>\n<td>保险模块</td>\n<td>山人境风险与理赔套件</td>\n<td>风险证据、事故复盘与理赔协同</td>\n</tr>\n</tbody></table>\n<h2 id=\"shanrenjing-guide-1-技术原则\">技术原则</h2>\n<ul>\n<li>每次扫码绑定一次行程，设备、人员与责任关系随行程建立和结束。</li>\n<li>中国场景采用北斗优先、多星座兼容的定位路线。</li>\n<li>蜂窝网络承担常规通信，LoRa 或 Mesh 补盲，北斗短报文或卫星通信补充无地面网络救援链路。</li>\n<li>后台统一连接运营、监管、救援、保险与专家带队流程。</li>\n<li>所有报警、响应、调度与复盘形成可核验的事件时间线。</li>\n</ul>\n<h2 id=\"shanrenjing-guide-1-品牌语气\">品牌语气</h2>\n<p>推荐使用：</p>\n<ul>\n<li>守护</li>\n<li>保障</li>\n<li>安全协同</li>\n<li>应急响应</li>\n<li>行程保障</li>\n<li>风险预警</li>\n<li>救援闭环</li>\n<li>保险保障</li>\n</ul>\n<p>避免使用：</p>\n<ul>\n<li>监控</li>\n<li>管控游客</li>\n<li>实时盯人</li>\n</ul>\n<p>山人境的公众认知应聚焦行程安全保障，避免任何监视感。</p>\n<h2 id=\"shanrenjing-guide-1-视觉方向\">视觉方向</h2>\n<ul>\n<li>山林绿 <code>#173F38</code>：稳定、环境与长期守护</li>\n<li>星芒金 <code>#D5A53B</code>：求救、坐标与关键提醒</li>\n<li>信号蓝 <code>#3E7890</code>：定位、通信与基础设施</li>\n<li>雾白 <code>#FBFCF9</code>：清晰、可信与公共服务界面</li>\n</ul>\n<p>视觉表达应克制、可靠、户外但不探险化，具有基础设施与应急系统的专业感。避免军事化、监视器意象和高饱和警报色滥用。</p>\n<h2 id=\"shanrenjing-guide-1-主语言\">主语言</h2>\n<p>中文优先。主名称始终显示为「山人境」，英文对照为 <code>Shanrenjing</code>。</p>\n"
+      "text": "# 山人境\n\n山人境是中文优先的行程级人员安全基础设施 IP。\n\n它面向景区、户外活动、研学营地、大型赛事、企业团建、边境巡护与低信号区域作业场景，将人员定位、风险预警、快速救援、保险风控、政府监管与专家带队连接成一个可验证、可复盘的安全闭环。\n\n## 核心定位\n\n山人境以行程级人员安全基础设施为核心定位，覆盖智能终端、通信链路、运营平台与救援协同。\n\n手环承担行程入口，平台连接完整安全流程。定位提供基础能力，救援协同与责任闭环构成商业护城河。\n\n核心价值：\n\n- 可定位\n- 可预警\n- 可调度\n- 可救援\n- 可留痕\n- 可理赔\n- 可监管\n- 可复盘\n\n## 品牌主张\n\n每一次出发，都应该被星空守护。\n\n政企表达：以北斗为核心的位置安全基础设施，提升文旅、研学、户外活动与大型活动的人员安全治理能力。\n\n用户表达：扫码戴上，出发有人看得见；遇险一键呼救，救援知道你在哪。\n\n保险表达：把行程轨迹、设备状态、报警记录、救援响应和事故复盘转化为可核验的风险与理赔证据链。\n\n专家带队表达：专家带队覆盖路线、队伍、风险、体力、偏离与失联状态，把经验转化为流程。\n\n## 产品系统\n\n| 层级 | 山人境产品名 | 作用 |\n|---|---|---|\n| 平台系统 | 山人境安全云 | 监管、运营、救援、保险与专家协同 |\n| 手环终端 | 山人境护腕 H 系列 | 游客、学员、队员与工作人员的行程绑定终端 |\n| 救援信标 | 山人境信标 R 系列 | 专家、救援队与无网区域巡护人员使用 |\n| 补盲基站 | 山人境星台 G 系列 | 景区、营地、山地路线与赛事路线通信补盲 |\n| 专家系统 | 山人境专家套件 | 领队、教练与研学导师的队伍安全工具 |\n| 保险模块 | 山人境风险与理赔套件 | 风险证据、事故复盘与理赔协同 |\n\n## 技术原则\n\n- 每次扫码绑定一次行程，设备、人员与责任关系随行程建立和结束。\n- 中国场景采用北斗优先、多星座兼容的定位路线。\n- 蜂窝网络承担常规通信，LoRa 或 Mesh 补盲，北斗短报文或卫星通信补充无地面网络救援链路。\n- 后台统一连接运营、监管、救援、保险与专家带队流程。\n- 所有报警、响应、调度与复盘形成可核验的事件时间线。\n\n## 品牌语气\n\n推荐使用：\n\n- 守护\n- 保障\n- 安全协同\n- 应急响应\n- 行程保障\n- 风险预警\n- 救援闭环\n- 保险保障\n\n避免使用：\n\n- 监控\n- 管控游客\n- 实时盯人\n\n山人境的公众认知应聚焦行程安全保障，避免任何监视感。\n\n## 视觉方向\n\n- 山林绿 `#173F38`：稳定、环境与长期守护\n- 星芒金 `#D5A53B`：求救、坐标与关键提醒\n- 信号蓝 `#3E7890`：定位、通信与基础设施\n- 雾白 `#FBFCF9`：清晰、可信与公共服务界面\n\n视觉表达应克制、可靠、户外但不探险化，具有基础设施与应急系统的专业感。避免军事化、监视器意象和高饱和警报色滥用。\n\n## 主语言\n\n中文优先。主名称始终显示为「山人境」，英文对照为 `shanpass`。\n",
+      "html": "<h1 id=\"shanrenjing-guide-1-山人境\">山人境</h1>\n<p>山人境是中文优先的行程级人员安全基础设施 IP。</p>\n<p>它面向景区、户外活动、研学营地、大型赛事、企业团建、边境巡护与低信号区域作业场景，将人员定位、风险预警、快速救援、保险风控、政府监管与专家带队连接成一个可验证、可复盘的安全闭环。</p>\n<h2 id=\"shanrenjing-guide-1-核心定位\">核心定位</h2>\n<p>山人境以行程级人员安全基础设施为核心定位，覆盖智能终端、通信链路、运营平台与救援协同。</p>\n<p>手环承担行程入口，平台连接完整安全流程。定位提供基础能力，救援协同与责任闭环构成商业护城河。</p>\n<p>核心价值：</p>\n<ul>\n<li>可定位</li>\n<li>可预警</li>\n<li>可调度</li>\n<li>可救援</li>\n<li>可留痕</li>\n<li>可理赔</li>\n<li>可监管</li>\n<li>可复盘</li>\n</ul>\n<h2 id=\"shanrenjing-guide-1-品牌主张\">品牌主张</h2>\n<p>每一次出发，都应该被星空守护。</p>\n<p>政企表达：以北斗为核心的位置安全基础设施，提升文旅、研学、户外活动与大型活动的人员安全治理能力。</p>\n<p>用户表达：扫码戴上，出发有人看得见；遇险一键呼救，救援知道你在哪。</p>\n<p>保险表达：把行程轨迹、设备状态、报警记录、救援响应和事故复盘转化为可核验的风险与理赔证据链。</p>\n<p>专家带队表达：专家带队覆盖路线、队伍、风险、体力、偏离与失联状态，把经验转化为流程。</p>\n<h2 id=\"shanrenjing-guide-1-产品系统\">产品系统</h2>\n<table>\n<thead>\n<tr>\n<th>层级</th>\n<th>山人境产品名</th>\n<th>作用</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>平台系统</td>\n<td>山人境安全云</td>\n<td>监管、运营、救援、保险与专家协同</td>\n</tr>\n<tr>\n<td>手环终端</td>\n<td>山人境护腕 H 系列</td>\n<td>游客、学员、队员与工作人员的行程绑定终端</td>\n</tr>\n<tr>\n<td>救援信标</td>\n<td>山人境信标 R 系列</td>\n<td>专家、救援队与无网区域巡护人员使用</td>\n</tr>\n<tr>\n<td>补盲基站</td>\n<td>山人境星台 G 系列</td>\n<td>景区、营地、山地路线与赛事路线通信补盲</td>\n</tr>\n<tr>\n<td>专家系统</td>\n<td>山人境专家套件</td>\n<td>领队、教练与研学导师的队伍安全工具</td>\n</tr>\n<tr>\n<td>保险模块</td>\n<td>山人境风险与理赔套件</td>\n<td>风险证据、事故复盘与理赔协同</td>\n</tr>\n</tbody></table>\n<h2 id=\"shanrenjing-guide-1-技术原则\">技术原则</h2>\n<ul>\n<li>每次扫码绑定一次行程，设备、人员与责任关系随行程建立和结束。</li>\n<li>中国场景采用北斗优先、多星座兼容的定位路线。</li>\n<li>蜂窝网络承担常规通信，LoRa 或 Mesh 补盲，北斗短报文或卫星通信补充无地面网络救援链路。</li>\n<li>后台统一连接运营、监管、救援、保险与专家带队流程。</li>\n<li>所有报警、响应、调度与复盘形成可核验的事件时间线。</li>\n</ul>\n<h2 id=\"shanrenjing-guide-1-品牌语气\">品牌语气</h2>\n<p>推荐使用：</p>\n<ul>\n<li>守护</li>\n<li>保障</li>\n<li>安全协同</li>\n<li>应急响应</li>\n<li>行程保障</li>\n<li>风险预警</li>\n<li>救援闭环</li>\n<li>保险保障</li>\n</ul>\n<p>避免使用：</p>\n<ul>\n<li>监控</li>\n<li>管控游客</li>\n<li>实时盯人</li>\n</ul>\n<p>山人境的公众认知应聚焦行程安全保障，避免任何监视感。</p>\n<h2 id=\"shanrenjing-guide-1-视觉方向\">视觉方向</h2>\n<ul>\n<li>山林绿 <code>#173F38</code>：稳定、环境与长期守护</li>\n<li>星芒金 <code>#D5A53B</code>：求救、坐标与关键提醒</li>\n<li>信号蓝 <code>#3E7890</code>：定位、通信与基础设施</li>\n<li>雾白 <code>#FBFCF9</code>：清晰、可信与公共服务界面</li>\n</ul>\n<p>视觉表达应克制、可靠、户外但不探险化，具有基础设施与应急系统的专业感。避免军事化、监视器意象和高饱和警报色滥用。</p>\n<h2 id=\"shanrenjing-guide-1-主语言\">主语言</h2>\n<p>中文优先。主名称始终显示为「山人境」，英文对照为 <code>shanpass</code>。</p>\n"
     }
   ],
   "tokens": [],

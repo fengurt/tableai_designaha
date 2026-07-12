@@ -1853,13 +1853,13 @@
     "slug": "shanrenjing",
     "folder": "Shanrenjing",
     "name": "山人境",
-    "nativeName": "Shanrenjing",
+    "nativeName": "shanpass",
     "description": "中文优先的行程级人员安全基础设施 IP，连接定位、风险预警、救援协同、保险风控与监管留痕。",
     "officialWebsite": "",
     "mainLanguage": "zh",
     "intro": {
       "zh": "山人境是一套面向景区、户外活动、研学营地、大型赛事与低信号区域作业的行程级人员安全基础设施。",
-      "en": "Shanrenjing is a journey-level safety infrastructure IP for scenic destinations, outdoor programs, study camps, large events, and low-connectivity field operations."
+      "en": "shanpass is a journey-level safety infrastructure IP for scenic destinations, outdoor programs, study camps, large events, and low-connectivity field operations."
     },
     "business": {
       "zh": "人员定位、风险预警、应急救援、行程安全云、智能终端、补盲通信、保险风控、监管看板与专家带队系统。",
@@ -1867,7 +1867,7 @@
     },
     "notes": {
       "zh": "山人境定位为行程级人员安全基础设施。手环承担行程入口，平台连接定位、预警、调度、救援、留痕与理赔，救援协同和责任闭环构成核心价值。对外统一使用守护、保障、安全协同、应急响应、行程保障、风险预警、救援闭环与保险保障，避免使用“监控”“管控游客”“实时盯人”。",
-      "en": "Shanrenjing is journey-level personnel safety infrastructure. The wearable opens each journey, while the platform connects positioning, alerts, dispatch, rescue, records, and claims into an accountable response loop. Public language emphasizes protection, safety coordination, emergency response, risk alerts, and rescue assurance while avoiding surveillance framing."
+      "en": "shanpass is journey-level personnel safety infrastructure. The wearable opens each journey, while the platform connects positioning, alerts, dispatch, rescue, records, and claims into an accountable response loop. Public language emphasizes protection, safety coordination, emergency response, risk alerts, and rescue assurance while avoiding surveillance framing."
     },
     "primaryGuide": "Shanrenjing/README.md",
     "theme": {
