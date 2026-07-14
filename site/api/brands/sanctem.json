@@ -152,14 +152,26 @@
     "en": ""
   },
   "version": {
-    "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
-    "shortHash": "bb4944e",
-    "date": "2026-07-12T08:23:07+08:00",
-    "message": "Pre-render the complete IP directory",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
+    "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+    "shortHash": "b0056d3",
+    "date": "2026-07-12T21:39:51+08:00",
+    "message": "Rename Shanrenjing English brand to shanpass",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
   },
   "historyUrl": "api/history/sanctem.json",
   "history": [
+    {
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "sourcePaths": [
+        "config/brands.json",
+        "Sanctem",
+        "Sanctem/README.md"
+      ]
+    },
     {
       "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
       "shortHash": "a5bf7cf",
@@ -219,18 +231,6 @@
         "Sanctem",
         "Sanctem/README.md"
       ]
-    },
-    {
-      "hash": "4efc463d2f51813f4aae7c47083471b15ca8d1bf",
-      "shortHash": "4efc463",
-      "date": "2026-07-08T03:23:22+08:00",
-      "message": "Add Zhongzhiyou Group IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4efc463d2f51813f4aae7c47083471b15ca8d1bf",
-      "sourcePaths": [
-        "config/brands.json",
-        "Sanctem",
-        "Sanctem/README.md"
-      ]
     }
   ],
   "url": "brand.html?brand=sanctem",
@@ -252,42 +252,90 @@
     {
       "path": "Sanctem/assets/brand-images/sanctem-brand-hero.png",
       "sitePath": "assets/brand-images/sanctem.png",
-      "title": "Sanctem Brand Hero"
+      "title": "Sanctem Brand Hero",
+      "format": "PNG",
+      "bytes": 24726,
+      "size": "24.1 KB",
+      "width": 1920,
+      "height": 540,
+      "dimensions": "1920 x 540 px"
     },
     {
       "path": "Sanctem/assets/brand-images/sanctem-logo-black-alt.jpg",
       "sitePath": "assets/brand-images/sanctem-sanctem-logo-black-alt.jpg",
-      "title": "Sanctem Logo Black Alt"
+      "title": "Sanctem Logo Black Alt",
+      "format": "JPG",
+      "bytes": 474946,
+      "size": "464 KB",
+      "width": 8000,
+      "height": 2250,
+      "dimensions": "8000 x 2250 px"
     },
     {
       "path": "Sanctem/assets/brand-images/sanctem-logo-black.png",
       "sitePath": "assets/brand-images/sanctem-sanctem-logo-black.png",
-      "title": "Sanctem Logo Black"
+      "title": "Sanctem Logo Black",
+      "format": "PNG",
+      "bytes": 24756,
+      "size": "24.2 KB",
+      "width": 1920,
+      "height": 540,
+      "dimensions": "1920 x 540 px"
     },
     {
       "path": "Sanctem/assets/brand-images/sanctem-logo-color.jpg",
       "sitePath": "assets/brand-images/sanctem-sanctem-logo-color.jpg",
-      "title": "Sanctem Logo Color"
+      "title": "Sanctem Logo Color",
+      "format": "JPG",
+      "bytes": 249721,
+      "size": "244 KB",
+      "width": 6490,
+      "height": 1091,
+      "dimensions": "6490 x 1091 px"
     },
     {
       "path": "Sanctem/assets/brand-images/sanctem-logo-color.png",
       "sitePath": "assets/brand-images/sanctem-sanctem-logo-color.png",
-      "title": "Sanctem Logo Color"
+      "title": "Sanctem Logo Color",
+      "format": "PNG",
+      "bytes": 24726,
+      "size": "24.1 KB",
+      "width": 1920,
+      "height": 540,
+      "dimensions": "1920 x 540 px"
     },
     {
       "path": "Sanctem/assets/brand-images/sanctem-logo-white-black-alt.jpg",
       "sitePath": "assets/brand-images/sanctem-sanctem-logo-white-black-alt.jpg",
-      "title": "Sanctem Logo White Black Alt"
+      "title": "Sanctem Logo White Black Alt",
+      "format": "JPG",
+      "bytes": 474946,
+      "size": "464 KB",
+      "width": 8000,
+      "height": 2250,
+      "dimensions": "8000 x 2250 px"
     },
     {
       "path": "Sanctem/assets/brand-images/sanctem-logo-white-black.jpg",
       "sitePath": "assets/brand-images/sanctem-sanctem-logo-white-black.jpg",
-      "title": "Sanctem Logo White Black"
+      "title": "Sanctem Logo White Black",
+      "format": "JPG",
+      "bytes": 474158,
+      "size": "463 KB",
+      "width": 8000,
+      "height": 2250,
+      "dimensions": "8000 x 2250 px"
     },
     {
       "path": "Sanctem/assets/brand-images/sanctem-logo-white.png",
       "sitePath": "assets/brand-images/sanctem-sanctem-logo-white.png",
-      "title": "Sanctem Logo White"
+      "title": "Sanctem Logo White",
+      "format": "PNG",
+      "bytes": 22626,
+      "size": "22.1 KB",
+      "width": 1920,
+      "height": 540,
+      "dimensions": "1920 x 540 px"
     }
   ],
   "logoUrl": "assets/brand-images/sanctem-sanctem-logo-color.png",
@@ -342,42 +390,90 @@
         {
           "path": "Sanctem/assets/brand-images/sanctem-brand-hero.png",
           "sitePath": "assets/brand-images/sanctem.png",
-          "title": "Sanctem Brand Hero"
+          "title": "Sanctem Brand Hero",
+          "format": "PNG",
+          "bytes": 24726,
+          "size": "24.1 KB",
+          "width": 1920,
+          "height": 540,
+          "dimensions": "1920 x 540 px"
         },
         {
           "path": "Sanctem/assets/brand-images/sanctem-logo-black-alt.jpg",
           "sitePath": "assets/brand-images/sanctem-sanctem-logo-black-alt.jpg",
-          "title": "Sanctem Logo Black Alt"
+          "title": "Sanctem Logo Black Alt",
+          "format": "JPG",
+          "bytes": 474946,
+          "size": "464 KB",
+          "width": 8000,
+          "height": 2250,
+          "dimensions": "8000 x 2250 px"
         },
         {
           "path": "Sanctem/assets/brand-images/sanctem-logo-black.png",
           "sitePath": "assets/brand-images/sanctem-sanctem-logo-black.png",
-          "title": "Sanctem Logo Black"
+          "title": "Sanctem Logo Black",
+          "format": "PNG",
+          "bytes": 24756,
+          "size": "24.2 KB",
+          "width": 1920,
+          "height": 540,
+          "dimensions": "1920 x 540 px"
         },
         {
           "path": "Sanctem/assets/brand-images/sanctem-logo-color.jpg",
           "sitePath": "assets/brand-images/sanctem-sanctem-logo-color.jpg",
-          "title": "Sanctem Logo Color"
+          "title": "Sanctem Logo Color",
+          "format": "JPG",
+          "bytes": 249721,
+          "size": "244 KB",
+          "width": 6490,
+          "height": 1091,
+          "dimensions": "6490 x 1091 px"
         },
         {
           "path": "Sanctem/assets/brand-images/sanctem-logo-color.png",
           "sitePath": "assets/brand-images/sanctem-sanctem-logo-color.png",
-          "title": "Sanctem Logo Color"
+          "title": "Sanctem Logo Color",
+          "format": "PNG",
+          "bytes": 24726,
+          "size": "24.1 KB",
+          "width": 1920,
+          "height": 540,
+          "dimensions": "1920 x 540 px"
         },
         {
           "path": "Sanctem/assets/brand-images/sanctem-logo-white-black-alt.jpg",
           "sitePath": "assets/brand-images/sanctem-sanctem-logo-white-black-alt.jpg",
-          "title": "Sanctem Logo White Black Alt"
+          "title": "Sanctem Logo White Black Alt",
+          "format": "JPG",
+          "bytes": 474946,
+          "size": "464 KB",
+          "width": 8000,
+          "height": 2250,
+          "dimensions": "8000 x 2250 px"
         },
         {
           "path": "Sanctem/assets/brand-images/sanctem-logo-white-black.jpg",
           "sitePath": "assets/brand-images/sanctem-sanctem-logo-white-black.jpg",
-          "title": "Sanctem Logo White Black"
+          "title": "Sanctem Logo White Black",
+          "format": "JPG",
+          "bytes": 474158,
+          "size": "463 KB",
+          "width": 8000,
+          "height": 2250,
+          "dimensions": "8000 x 2250 px"
         },
         {
           "path": "Sanctem/assets/brand-images/sanctem-logo-white.png",
           "sitePath": "assets/brand-images/sanctem-sanctem-logo-white.png",
-          "title": "Sanctem Logo White"
+          "title": "Sanctem Logo White",
+          "format": "PNG",
+          "bytes": 22626,
+          "size": "22.1 KB",
+          "width": 1920,
+          "height": 540,
+          "dimensions": "1920 x 540 px"
         }
       ]
     }
@@ -424,42 +520,90 @@
       {
         "path": "Sanctem/assets/brand-images/sanctem-brand-hero.png",
         "sitePath": "assets/brand-images/sanctem.png",
-        "title": "Sanctem Brand Hero"
+        "title": "Sanctem Brand Hero",
+        "format": "PNG",
+        "bytes": 24726,
+        "size": "24.1 KB",
+        "width": 1920,
+        "height": 540,
+        "dimensions": "1920 x 540 px"
       },
       {
         "path": "Sanctem/assets/brand-images/sanctem-logo-black-alt.jpg",
         "sitePath": "assets/brand-images/sanctem-sanctem-logo-black-alt.jpg",
-        "title": "Sanctem Logo Black Alt"
+        "title": "Sanctem Logo Black Alt",
+        "format": "JPG",
+        "bytes": 474946,
+        "size": "464 KB",
+        "width": 8000,
+        "height": 2250,
+        "dimensions": "8000 x 2250 px"
       },
       {
         "path": "Sanctem/assets/brand-images/sanctem-logo-black.png",
         "sitePath": "assets/brand-images/sanctem-sanctem-logo-black.png",
-        "title": "Sanctem Logo Black"
+        "title": "Sanctem Logo Black",
+        "format": "PNG",
+        "bytes": 24756,
+        "size": "24.2 KB",
+        "width": 1920,
+        "height": 540,
+        "dimensions": "1920 x 540 px"
       },
       {
         "path": "Sanctem/assets/brand-images/sanctem-logo-color.jpg",
         "sitePath": "assets/brand-images/sanctem-sanctem-logo-color.jpg",
-        "title": "Sanctem Logo Color"
+        "title": "Sanctem Logo Color",
+        "format": "JPG",
+        "bytes": 249721,
+        "size": "244 KB",
+        "width": 6490,
+        "height": 1091,
+        "dimensions": "6490 x 1091 px"
       },
       {
         "path": "Sanctem/assets/brand-images/sanctem-logo-color.png",
         "sitePath": "assets/brand-images/sanctem-sanctem-logo-color.png",
-        "title": "Sanctem Logo Color"
+        "title": "Sanctem Logo Color",
+        "format": "PNG",
+        "bytes": 24726,
+        "size": "24.1 KB",
+        "width": 1920,
+        "height": 540,
+        "dimensions": "1920 x 540 px"
       },
       {
         "path": "Sanctem/assets/brand-images/sanctem-logo-white-black-alt.jpg",
         "sitePath": "assets/brand-images/sanctem-sanctem-logo-white-black-alt.jpg",
-        "title": "Sanctem Logo White Black Alt"
+        "title": "Sanctem Logo White Black Alt",
+        "format": "JPG",
+        "bytes": 474946,
+        "size": "464 KB",
+        "width": 8000,
+        "height": 2250,
+        "dimensions": "8000 x 2250 px"
       },
       {
         "path": "Sanctem/assets/brand-images/sanctem-logo-white-black.jpg",
         "sitePath": "assets/brand-images/sanctem-sanctem-logo-white-black.jpg",
-        "title": "Sanctem Logo White Black"
+        "title": "Sanctem Logo White Black",
+        "format": "JPG",
+        "bytes": 474158,
+        "size": "463 KB",
+        "width": 8000,
+        "height": 2250,
+        "dimensions": "8000 x 2250 px"
       },
       {
         "path": "Sanctem/assets/brand-images/sanctem-logo-white.png",
         "sitePath": "assets/brand-images/sanctem-sanctem-logo-white.png",
-        "title": "Sanctem Logo White"
+        "title": "Sanctem Logo White",
+        "format": "PNG",
+        "bytes": 22626,
+        "size": "22.1 KB",
+        "width": 1920,
+        "height": 540,
+        "dimensions": "1920 x 540 px"
       }
     ]
   },

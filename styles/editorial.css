@@ -344,10 +344,9 @@ button:active { transform: translateY(1px); }
 }
 .endpoint-card { min-height: 112px; border-radius: 0; box-shadow: none; }
 .mood-color { border-radius: 0; }
-.brand-asset { position: relative; display: block; }
+.brand-asset { position: relative; display: flex; flex-direction: column; }
 .brand-asset-link {
   width: 100%;
-  height: 100%;
   display: grid;
   place-items: center;
 }

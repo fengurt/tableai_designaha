@@ -152,14 +152,26 @@
     "en": ""
   },
   "version": {
-    "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
-    "shortHash": "bb4944e",
-    "date": "2026-07-12T08:23:07+08:00",
-    "message": "Pre-render the complete IP directory",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
+    "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+    "shortHash": "b0056d3",
+    "date": "2026-07-12T21:39:51+08:00",
+    "message": "Rename Shanrenjing English brand to shanpass",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
   },
   "historyUrl": "api/history/vanahom.json",
   "history": [
+    {
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "sourcePaths": [
+        "config/brands.json",
+        "VANAHOM",
+        "VANAHOM/vanahom_design.md"
+      ]
+    },
     {
       "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
       "shortHash": "a5bf7cf",
@@ -219,18 +231,6 @@
         "VANAHOM",
         "VANAHOM/vanahom_design.md"
       ]
-    },
-    {
-      "hash": "4efc463d2f51813f4aae7c47083471b15ca8d1bf",
-      "shortHash": "4efc463",
-      "date": "2026-07-08T03:23:22+08:00",
-      "message": "Add Zhongzhiyou Group IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4efc463d2f51813f4aae7c47083471b15ca8d1bf",
-      "sourcePaths": [
-        "config/brands.json",
-        "VANAHOM",
-        "VANAHOM/vanahom_design.md"
-      ]
     }
   ],
   "url": "brand.html?brand=vanahom",
@@ -252,47 +252,101 @@
     {
       "path": "VANAHOM/assets/brand-images/vanahom-brand-hero.png",
       "sitePath": "assets/brand-images/vanahom.png",
-      "title": "Vanahom Brand Hero"
+      "title": "Vanahom Brand Hero",
+      "format": "PNG",
+      "bytes": 2636669,
+      "size": "2.51 MB",
+      "width": 1672,
+      "height": 941,
+      "dimensions": "1672 x 941 px"
     },
     {
       "path": "VANAHOM/assets/brand-images/vanahom-logo-black.jpg",
       "sitePath": "assets/brand-images/vanahom-vanahom-logo-black.jpg",
-      "title": "Vanahom Logo Black"
+      "title": "Vanahom Logo Black",
+      "format": "JPG",
+      "bytes": 376303,
+      "size": "367 KB",
+      "width": 6729,
+      "height": 1048,
+      "dimensions": "6729 x 1048 px"
     },
     {
       "path": "VANAHOM/assets/brand-images/vanahom-logo-black.png",
       "sitePath": "assets/brand-images/vanahom-vanahom-logo-black.png",
-      "title": "Vanahom Logo Black"
+      "title": "Vanahom Logo Black",
+      "format": "PNG",
+      "bytes": 27255,
+      "size": "26.6 KB",
+      "width": 1920,
+      "height": 540,
+      "dimensions": "1920 x 540 px"
     },
     {
       "path": "VANAHOM/assets/brand-images/vanahom-logo-grey.jpg",
       "sitePath": "assets/brand-images/vanahom-vanahom-logo-grey.jpg",
-      "title": "Vanahom Logo Grey"
+      "title": "Vanahom Logo Grey",
+      "format": "JPG",
+      "bytes": 489776,
+      "size": "478 KB",
+      "width": 8000,
+      "height": 2250,
+      "dimensions": "8000 x 2250 px"
     },
     {
       "path": "VANAHOM/assets/brand-images/vanahom-logo-grey.png",
       "sitePath": "assets/brand-images/vanahom-vanahom-logo-grey.png",
-      "title": "Vanahom Logo Grey"
+      "title": "Vanahom Logo Grey",
+      "format": "PNG",
+      "bytes": 27412,
+      "size": "26.8 KB",
+      "width": 1920,
+      "height": 540,
+      "dimensions": "1920 x 540 px"
     },
     {
       "path": "VANAHOM/assets/brand-images/vanahom-logo-red.jpg",
       "sitePath": "assets/brand-images/vanahom-vanahom-logo-red.jpg",
-      "title": "Vanahom Logo Red"
+      "title": "Vanahom Logo Red",
+      "format": "JPG",
+      "bytes": 761183,
+      "size": "743 KB",
+      "width": 8000,
+      "height": 2250,
+      "dimensions": "8000 x 2250 px"
     },
     {
       "path": "VANAHOM/assets/brand-images/vanahom-logo-red.png",
       "sitePath": "assets/brand-images/vanahom-vanahom-logo-red.png",
-      "title": "Vanahom Logo Red"
+      "title": "Vanahom Logo Red",
+      "format": "PNG",
+      "bytes": 27472,
+      "size": "26.8 KB",
+      "width": 1920,
+      "height": 540,
+      "dimensions": "1920 x 540 px"
     },
     {
       "path": "VANAHOM/assets/brand-images/vanahom-logo-white.jpg",
       "sitePath": "assets/brand-images/vanahom-vanahom-logo-white.jpg",
-      "title": "Vanahom Logo White"
+      "title": "Vanahom Logo White",
+      "format": "JPG",
+      "bytes": 511799,
+      "size": "500 KB",
+      "width": 8000,
+      "height": 2250,
+      "dimensions": "8000 x 2250 px"
     },
     {
       "path": "VANAHOM/assets/brand-images/vanahom-logo-white.png",
       "sitePath": "assets/brand-images/vanahom-vanahom-logo-white.png",
-      "title": "Vanahom Logo White"
+      "title": "Vanahom Logo White",
+      "format": "PNG",
+      "bytes": 25138,
+      "size": "24.5 KB",
+      "width": 1920,
+      "height": 540,
+      "dimensions": "1920 x 540 px"
     }
   ],
   "logoUrl": "assets/brand-images/vanahom-vanahom-logo-red.png",
@@ -347,47 +401,101 @@
         {
           "path": "VANAHOM/assets/brand-images/vanahom-brand-hero.png",
           "sitePath": "assets/brand-images/vanahom.png",
-          "title": "Vanahom Brand Hero"
+          "title": "Vanahom Brand Hero",
+          "format": "PNG",
+          "bytes": 2636669,
+          "size": "2.51 MB",
+          "width": 1672,
+          "height": 941,
+          "dimensions": "1672 x 941 px"
         },
         {
           "path": "VANAHOM/assets/brand-images/vanahom-logo-black.jpg",
           "sitePath": "assets/brand-images/vanahom-vanahom-logo-black.jpg",
-          "title": "Vanahom Logo Black"
+          "title": "Vanahom Logo Black",
+          "format": "JPG",
+          "bytes": 376303,
+          "size": "367 KB",
+          "width": 6729,
+          "height": 1048,
+          "dimensions": "6729 x 1048 px"
         },
         {
           "path": "VANAHOM/assets/brand-images/vanahom-logo-black.png",
           "sitePath": "assets/brand-images/vanahom-vanahom-logo-black.png",
-          "title": "Vanahom Logo Black"
+          "title": "Vanahom Logo Black",
+          "format": "PNG",
+          "bytes": 27255,
+          "size": "26.6 KB",
+          "width": 1920,
+          "height": 540,
+          "dimensions": "1920 x 540 px"
         },
         {
           "path": "VANAHOM/assets/brand-images/vanahom-logo-grey.jpg",
           "sitePath": "assets/brand-images/vanahom-vanahom-logo-grey.jpg",
-          "title": "Vanahom Logo Grey"
+          "title": "Vanahom Logo Grey",
+          "format": "JPG",
+          "bytes": 489776,
+          "size": "478 KB",
+          "width": 8000,
+          "height": 2250,
+          "dimensions": "8000 x 2250 px"
         },
         {
           "path": "VANAHOM/assets/brand-images/vanahom-logo-grey.png",
           "sitePath": "assets/brand-images/vanahom-vanahom-logo-grey.png",
-          "title": "Vanahom Logo Grey"
+          "title": "Vanahom Logo Grey",
+          "format": "PNG",
+          "bytes": 27412,
+          "size": "26.8 KB",
+          "width": 1920,
+          "height": 540,
+          "dimensions": "1920 x 540 px"
         },
         {
           "path": "VANAHOM/assets/brand-images/vanahom-logo-red.jpg",
           "sitePath": "assets/brand-images/vanahom-vanahom-logo-red.jpg",
-          "title": "Vanahom Logo Red"
+          "title": "Vanahom Logo Red",
+          "format": "JPG",
+          "bytes": 761183,
+          "size": "743 KB",
+          "width": 8000,
+          "height": 2250,
+          "dimensions": "8000 x 2250 px"
         },
         {
           "path": "VANAHOM/assets/brand-images/vanahom-logo-red.png",
           "sitePath": "assets/brand-images/vanahom-vanahom-logo-red.png",
-          "title": "Vanahom Logo Red"
+          "title": "Vanahom Logo Red",
+          "format": "PNG",
+          "bytes": 27472,
+          "size": "26.8 KB",
+          "width": 1920,
+          "height": 540,
+          "dimensions": "1920 x 540 px"
         },
         {
           "path": "VANAHOM/assets/brand-images/vanahom-logo-white.jpg",
           "sitePath": "assets/brand-images/vanahom-vanahom-logo-white.jpg",
-          "title": "Vanahom Logo White"
+          "title": "Vanahom Logo White",
+          "format": "JPG",
+          "bytes": 511799,
+          "size": "500 KB",
+          "width": 8000,
+          "height": 2250,
+          "dimensions": "8000 x 2250 px"
         },
         {
           "path": "VANAHOM/assets/brand-images/vanahom-logo-white.png",
           "sitePath": "assets/brand-images/vanahom-vanahom-logo-white.png",
-          "title": "Vanahom Logo White"
+          "title": "Vanahom Logo White",
+          "format": "PNG",
+          "bytes": 25138,
+          "size": "24.5 KB",
+          "width": 1920,
+          "height": 540,
+          "dimensions": "1920 x 540 px"
         }
       ]
     }
@@ -434,47 +542,101 @@
       {
         "path": "VANAHOM/assets/brand-images/vanahom-brand-hero.png",
         "sitePath": "assets/brand-images/vanahom.png",
-        "title": "Vanahom Brand Hero"
+        "title": "Vanahom Brand Hero",
+        "format": "PNG",
+        "bytes": 2636669,
+        "size": "2.51 MB",
+        "width": 1672,
+        "height": 941,
+        "dimensions": "1672 x 941 px"
       },
       {
         "path": "VANAHOM/assets/brand-images/vanahom-logo-black.jpg",
         "sitePath": "assets/brand-images/vanahom-vanahom-logo-black.jpg",
-        "title": "Vanahom Logo Black"
+        "title": "Vanahom Logo Black",
+        "format": "JPG",
+        "bytes": 376303,
+        "size": "367 KB",
+        "width": 6729,
+        "height": 1048,
+        "dimensions": "6729 x 1048 px"
       },
       {
         "path": "VANAHOM/assets/brand-images/vanahom-logo-black.png",
         "sitePath": "assets/brand-images/vanahom-vanahom-logo-black.png",
-        "title": "Vanahom Logo Black"
+        "title": "Vanahom Logo Black",
+        "format": "PNG",
+        "bytes": 27255,
+        "size": "26.6 KB",
+        "width": 1920,
+        "height": 540,
+        "dimensions": "1920 x 540 px"
       },
       {
         "path": "VANAHOM/assets/brand-images/vanahom-logo-grey.jpg",
         "sitePath": "assets/brand-images/vanahom-vanahom-logo-grey.jpg",
-        "title": "Vanahom Logo Grey"
+        "title": "Vanahom Logo Grey",
+        "format": "JPG",
+        "bytes": 489776,
+        "size": "478 KB",
+        "width": 8000,
+        "height": 2250,
+        "dimensions": "8000 x 2250 px"
       },
       {
         "path": "VANAHOM/assets/brand-images/vanahom-logo-grey.png",
         "sitePath": "assets/brand-images/vanahom-vanahom-logo-grey.png",
-        "title": "Vanahom Logo Grey"
+        "title": "Vanahom Logo Grey",
+        "format": "PNG",
+        "bytes": 27412,
+        "size": "26.8 KB",
+        "width": 1920,
+        "height": 540,
+        "dimensions": "1920 x 540 px"
       },
       {
         "path": "VANAHOM/assets/brand-images/vanahom-logo-red.jpg",
         "sitePath": "assets/brand-images/vanahom-vanahom-logo-red.jpg",
-        "title": "Vanahom Logo Red"
+        "title": "Vanahom Logo Red",
+        "format": "JPG",
+        "bytes": 761183,
+        "size": "743 KB",
+        "width": 8000,
+        "height": 2250,
+        "dimensions": "8000 x 2250 px"
       },
       {
         "path": "VANAHOM/assets/brand-images/vanahom-logo-red.png",
         "sitePath": "assets/brand-images/vanahom-vanahom-logo-red.png",
-        "title": "Vanahom Logo Red"
+        "title": "Vanahom Logo Red",
+        "format": "PNG",
+        "bytes": 27472,
+        "size": "26.8 KB",
+        "width": 1920,
+        "height": 540,
+        "dimensions": "1920 x 540 px"
       },
       {
         "path": "VANAHOM/assets/brand-images/vanahom-logo-white.jpg",
         "sitePath": "assets/brand-images/vanahom-vanahom-logo-white.jpg",
-        "title": "Vanahom Logo White"
+        "title": "Vanahom Logo White",
+        "format": "JPG",
+        "bytes": 511799,
+        "size": "500 KB",
+        "width": 8000,
+        "height": 2250,
+        "dimensions": "8000 x 2250 px"
       },
       {
         "path": "VANAHOM/assets/brand-images/vanahom-logo-white.png",
         "sitePath": "assets/brand-images/vanahom-vanahom-logo-white.png",
-        "title": "Vanahom Logo White"
+        "title": "Vanahom Logo White",
+        "format": "PNG",
+        "bytes": 25138,
+        "size": "24.5 KB",
+        "width": 1920,
+        "height": 540,
+        "dimensions": "1920 x 540 px"
       }
     ]
   },

@@ -55,6 +55,85 @@ function isBrandImage(path) {
   return path.includes("/assets/brand-images/") && [".png", ".jpg", ".jpeg", ".webp"].includes(extname(path).toLowerCase());
 }
 
+function formatFileSize(bytes = 0) {
+  if (!Number.isFinite(bytes) || bytes < 1) return "0 B";
+  const units = ["B", "KB", "MB", "GB"];
+  const unit = Math.min(Math.floor(Math.log(bytes) / Math.log(1024)), units.length - 1);
+  const value = bytes / (1024 ** unit);
+  const precision = unit === 0 || value >= 100 ? 0 : value >= 10 ? 1 : 2;
+  return `${value.toFixed(precision)} ${units[unit]}`;
+}
+
+function jpegDimensions(buffer) {
+  let offset = 2;
+  while (offset + 8 < buffer.length) {
+    if (buffer[offset] !== 0xff) {
+      offset += 1;
+      continue;
+    }
+    const marker = buffer[offset + 1];
+    if (marker === 0xd8 || marker === 0xd9) {
+      offset += 2;
+      continue;
+    }
+    const length = buffer.readUInt16BE(offset + 2);
+    if (length < 2 || offset + length + 2 > buffer.length) break;
+    if ([0xc0, 0xc1, 0xc2, 0xc3, 0xc5, 0xc6, 0xc7, 0xc9, 0xca, 0xcb, 0xcd, 0xce, 0xcf].includes(marker)) {
+      return { width: buffer.readUInt16BE(offset + 7), height: buffer.readUInt16BE(offset + 5) };
+    }
+    offset += length + 2;
+  }
+  return {};
+}
+
+function webpDimensions(buffer) {
+  const chunk = buffer.toString("ascii", 12, 16);
+  if (chunk === "VP8X" && buffer.length >= 30) {
+    return {
+      width: 1 + buffer.readUIntLE(24, 3),
+      height: 1 + buffer.readUIntLE(27, 3),
+    };
+  }
+  if (chunk === "VP8 " && buffer.length >= 30) {
+    return {
+      width: buffer.readUInt16LE(26) & 0x3fff,
+      height: buffer.readUInt16LE(28) & 0x3fff,
+    };
+  }
+  if (chunk === "VP8L" && buffer.length >= 25) {
+    const bits = buffer.readUInt32LE(21);
+    return {
+      width: 1 + (bits & 0x3fff),
+      height: 1 + ((bits >> 14) & 0x3fff),
+    };
+  }
+  return {};
+}
+
+async function imageFileMetadata(full, rel) {
+  const extension = extname(rel).toLowerCase().slice(1);
+  const format = extension === "jpeg" ? "JPG" : extension.toUpperCase();
+  const [file, fileStat] = await Promise.all([readFile(full), stat(full)]);
+  let dimensions = {};
+  if (extension === "png" && file.length >= 24 && file.toString("ascii", 1, 4) === "PNG") {
+    dimensions = { width: file.readUInt32BE(16), height: file.readUInt32BE(20) };
+  } else if (["jpg", "jpeg"].includes(extension) && file.length >= 4) {
+    dimensions = jpegDimensions(file);
+  } else if (extension === "webp" && file.length >= 30) {
+    dimensions = webpDimensions(file);
+  }
+  const width = dimensions.width || null;
+  const height = dimensions.height || null;
+  return {
+    format,
+    bytes: fileStat.size,
+    size: formatFileSize(fileStat.size),
+    width,
+    height,
+    dimensions: width && height ? `${width} x ${height} px` : "",
+  };
+}
+
 function safeAssetStem(value) {
   const safe = value
     .toLowerCase()
@@ -374,7 +453,7 @@ function loadBrandVersions(brand) {
 function apiSchemaPayload() {
   return {
     name: "IPTrust Brand API Schema",
-    version: "1.0.0",
+    version: "1.1.0",
     description: "Every public IPTrust brand field is callable through JSON APIs and versioned through Git-backed history endpoints.",
     endpoints: {
       manifest: "api/manifest.json",
@@ -411,7 +490,7 @@ function apiSchemaPayload() {
       status: "documented or placeholder.",
       guides: "Guideline metadata and text.",
       tokens: "Token file metadata and text.",
-      images: "Image asset metadata and public site paths.",
+      images: "Image asset metadata and public site paths, including format, bytes, human-readable size, width, height, and dimensions.",
       logoUrl: "Canonical public URL path for the preferred IP logo, blank when no verified logo asset exists.",
       assetKit: "Unified callable IP asset endpoints, colors, images, and moodboard source.",
       moodboard: "Derived colors, keywords, and image assets for visual direction.",
@@ -507,11 +586,13 @@ for (const brand of brands) {
     }
     if (isBrandImage(rel)) {
       const outputName = brandImageOutputName(brand, rel, usedImageNames);
+      const metadata = await imageFileMetadata(full, rel);
       await copyFile(full, join(imageDir, outputName));
       images.push({
         path: rel,
         sitePath: `assets/brand-images/${outputName}`,
         title: titleFromPath(rel),
+        ...metadata,
       });
     }
   }
@@ -537,7 +618,7 @@ for (const brand of brands) {
   const moodboard = {
     colors: themeColorEntries(brand.theme),
     keywords: brand.theme?.keywords ?? [],
-    images: images.map(({ path, sitePath, title }) => ({ path, sitePath, title })),
+    images: images.map((image) => ({ ...image })),
   };
   const assetKit = {
     assetKey: brand.slug,
@@ -2449,21 +2530,22 @@ p { line-height: 1.65; }
 }
 .brand-asset-strip {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   overflow-x: auto;
-  padding: 2px 0 8px;
+  padding: 2px 0 12px;
 }
 .brand-asset {
-  flex: 0 0 132px;
-  height: 88px;
-  display: grid;
-  place-items: center;
+  flex: 0 0 176px;
+  min-width: 0;
   border: 1px solid var(--brand-line, var(--line));
   border-radius: 8px;
   background: var(--brand-paper, white);
   color: var(--brand-muted, var(--muted));
-  text-decoration: none;
   overflow: hidden;
+}
+.brand-asset-link {
+  height: 116px;
+  border-bottom: 1px solid var(--brand-line, var(--line));
 }
 .brand-asset img {
   width: 100%;
@@ -2471,6 +2553,38 @@ p { line-height: 1.65; }
   object-fit: contain;
   padding: 10px;
   box-sizing: border-box;
+}
+.brand-asset-info {
+  display: grid;
+  gap: 4px;
+  padding: 10px 11px 11px;
+}
+.brand-asset-name {
+  overflow: hidden;
+  color: var(--brand-ink, var(--ink));
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.brand-asset-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px 6px;
+  color: var(--brand-muted, var(--muted));
+  font: 600 10px/1.25 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: 0;
+}
+.brand-asset-meta span + span::before {
+  margin-right: 6px;
+  content: "·";
+}
+.brand-asset-dimensions {
+  display: block;
+  flex-basis: 100%;
+}
+.brand-asset-dimensions::before { display: none; }
 }
 .resource-list { display: grid; gap: 14px; margin: 24px 0; }
 .resource-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 24px 0; }
@@ -3927,6 +4041,14 @@ function brandAssetStrip(images = []) {
               <img src="\${escapeHtml(image.sitePath)}" alt="\${escapeHtml(image.title || "")}" loading="lazy">
             </a>
             <button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="\${escapeHtml(image.sitePath)}" aria-label="\${escapeHtml(t("copy.assetUrl"))}">\${copyIcon()}</button>
+            <div class="brand-asset-info">
+              <span class="brand-asset-name">\${escapeHtml(image.title || image.path || "Asset")}</span>
+              <span class="brand-asset-meta">
+                \${image.format ? \`<span>\${escapeHtml(image.format)}</span>\` : ""}
+                \${image.size ? \`<span>\${escapeHtml(image.size)}</span>\` : ""}
+                \${image.dimensions ? \`<span class="brand-asset-dimensions">\${escapeHtml(image.dimensions.replace(" x ", " × "))}</span>\` : ""}
+              </span>
+            </div>
           </div>
         \`).join("")}
       </div>

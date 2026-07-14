@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "4227557-58f6f38c";
+const BUILD_VERSION = "b0056d3-cd235e93";
 
 const i18n = {
   cn: {
@@ -1320,6 +1320,14 @@ function brandAssetStrip(images = []) {
               <img src="${escapeHtml(image.sitePath)}" alt="${escapeHtml(image.title || "")}" loading="lazy">
             </a>
             <button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="${escapeHtml(image.sitePath)}" aria-label="${escapeHtml(t("copy.assetUrl"))}">${copyIcon()}</button>
+            <div class="brand-asset-info">
+              <span class="brand-asset-name">${escapeHtml(image.title || image.path || "Asset")}</span>
+              <span class="brand-asset-meta">
+                ${image.format ? `<span>${escapeHtml(image.format)}</span>` : ""}
+                ${image.size ? `<span>${escapeHtml(image.size)}</span>` : ""}
+                ${image.dimensions ? `<span class="brand-asset-dimensions">${escapeHtml(image.dimensions.replace(" x ", " × "))}</span>` : ""}
+              </span>
+            </div>
           </div>
         `).join("")}
       </div>

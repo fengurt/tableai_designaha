@@ -1,6 +1,6 @@
 {
   "name": "IPTrust Brand API Schema",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Every public IPTrust brand field is callable through JSON APIs and versioned through Git-backed history endpoints.",
   "endpoints": {
     "manifest": "api/manifest.json",
@@ -37,7 +37,7 @@
     "status": "documented or placeholder.",
     "guides": "Guideline metadata and text.",
     "tokens": "Token file metadata and text.",
-    "images": "Image asset metadata and public site paths.",
+    "images": "Image asset metadata and public site paths, including format, bytes, human-readable size, width, height, and dimensions.",
     "logoUrl": "Canonical public URL path for the preferred IP logo, blank when no verified logo asset exists.",
     "assetKit": "Unified callable IP asset endpoints, colors, images, and moodboard source.",
     "moodboard": "Derived colors, keywords, and image assets for visual direction.",

@@ -153,11 +153,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/tableai.json",
     "url": "brand.html?brand=tableai",
@@ -215,17 +215,35 @@
           {
             "path": "TABLEAI/assets/brand-images/tableai-brand-hero.png",
             "sitePath": "assets/brand-images/tableai.png",
-            "title": "Tableai Brand Hero"
+            "title": "Tableai Brand Hero",
+            "format": "PNG",
+            "bytes": 1614214,
+            "size": "1.54 MB",
+            "width": 1672,
+            "height": 941,
+            "dimensions": "1672 x 941 px"
           },
           {
             "path": "TABLEAI/assets/brand-images/tableai-a2a-logo-transparent.png",
             "sitePath": "assets/brand-images/tableai-tableai-a2a-logo-transparent.png",
-            "title": "Tableai A2a Logo Transparent"
+            "title": "Tableai A2a Logo Transparent",
+            "format": "PNG",
+            "bytes": 60647,
+            "size": "59.2 KB",
+            "width": 1024,
+            "height": 1024,
+            "dimensions": "1024 x 1024 px"
           },
           {
             "path": "TABLEAI/assets/brand-images/tableai-a2a-logo.png",
             "sitePath": "assets/brand-images/tableai-tableai-a2a-logo.png",
-            "title": "Tableai A2a Logo"
+            "title": "Tableai A2a Logo",
+            "format": "PNG",
+            "bytes": 176118,
+            "size": "172 KB",
+            "width": 1024,
+            "height": 1024,
+            "dimensions": "1024 x 1024 px"
           }
         ]
       }
@@ -272,17 +290,35 @@
         {
           "path": "TABLEAI/assets/brand-images/tableai-brand-hero.png",
           "sitePath": "assets/brand-images/tableai.png",
-          "title": "Tableai Brand Hero"
+          "title": "Tableai Brand Hero",
+          "format": "PNG",
+          "bytes": 1614214,
+          "size": "1.54 MB",
+          "width": 1672,
+          "height": 941,
+          "dimensions": "1672 x 941 px"
         },
         {
           "path": "TABLEAI/assets/brand-images/tableai-a2a-logo-transparent.png",
           "sitePath": "assets/brand-images/tableai-tableai-a2a-logo-transparent.png",
-          "title": "Tableai A2a Logo Transparent"
+          "title": "Tableai A2a Logo Transparent",
+          "format": "PNG",
+          "bytes": 60647,
+          "size": "59.2 KB",
+          "width": 1024,
+          "height": 1024,
+          "dimensions": "1024 x 1024 px"
         },
         {
           "path": "TABLEAI/assets/brand-images/tableai-a2a-logo.png",
           "sitePath": "assets/brand-images/tableai-tableai-a2a-logo.png",
-          "title": "Tableai A2a Logo"
+          "title": "Tableai A2a Logo",
+          "format": "PNG",
+          "bytes": 176118,
+          "size": "172 KB",
+          "width": 1024,
+          "height": 1024,
+          "dimensions": "1024 x 1024 px"
         }
       ]
     },
@@ -453,11 +489,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/vanahom.json",
     "url": "brand.html?brand=vanahom",
@@ -515,47 +551,101 @@
           {
             "path": "VANAHOM/assets/brand-images/vanahom-brand-hero.png",
             "sitePath": "assets/brand-images/vanahom.png",
-            "title": "Vanahom Brand Hero"
+            "title": "Vanahom Brand Hero",
+            "format": "PNG",
+            "bytes": 2636669,
+            "size": "2.51 MB",
+            "width": 1672,
+            "height": 941,
+            "dimensions": "1672 x 941 px"
           },
           {
             "path": "VANAHOM/assets/brand-images/vanahom-logo-black.jpg",
             "sitePath": "assets/brand-images/vanahom-vanahom-logo-black.jpg",
-            "title": "Vanahom Logo Black"
+            "title": "Vanahom Logo Black",
+            "format": "JPG",
+            "bytes": 376303,
+            "size": "367 KB",
+            "width": 6729,
+            "height": 1048,
+            "dimensions": "6729 x 1048 px"
           },
           {
             "path": "VANAHOM/assets/brand-images/vanahom-logo-black.png",
             "sitePath": "assets/brand-images/vanahom-vanahom-logo-black.png",
-            "title": "Vanahom Logo Black"
+            "title": "Vanahom Logo Black",
+            "format": "PNG",
+            "bytes": 27255,
+            "size": "26.6 KB",
+            "width": 1920,
+            "height": 540,
+            "dimensions": "1920 x 540 px"
           },
           {
             "path": "VANAHOM/assets/brand-images/vanahom-logo-grey.jpg",
             "sitePath": "assets/brand-images/vanahom-vanahom-logo-grey.jpg",
-            "title": "Vanahom Logo Grey"
+            "title": "Vanahom Logo Grey",
+            "format": "JPG",
+            "bytes": 489776,
+            "size": "478 KB",
+            "width": 8000,
+            "height": 2250,
+            "dimensions": "8000 x 2250 px"
           },
           {
             "path": "VANAHOM/assets/brand-images/vanahom-logo-grey.png",
             "sitePath": "assets/brand-images/vanahom-vanahom-logo-grey.png",
-            "title": "Vanahom Logo Grey"
+            "title": "Vanahom Logo Grey",
+            "format": "PNG",
+            "bytes": 27412,
+            "size": "26.8 KB",
+            "width": 1920,
+            "height": 540,
+            "dimensions": "1920 x 540 px"
           },
           {
             "path": "VANAHOM/assets/brand-images/vanahom-logo-red.jpg",
             "sitePath": "assets/brand-images/vanahom-vanahom-logo-red.jpg",
-            "title": "Vanahom Logo Red"
+            "title": "Vanahom Logo Red",
+            "format": "JPG",
+            "bytes": 761183,
+            "size": "743 KB",
+            "width": 8000,
+            "height": 2250,
+            "dimensions": "8000 x 2250 px"
           },
           {
             "path": "VANAHOM/assets/brand-images/vanahom-logo-red.png",
             "sitePath": "assets/brand-images/vanahom-vanahom-logo-red.png",
-            "title": "Vanahom Logo Red"
+            "title": "Vanahom Logo Red",
+            "format": "PNG",
+            "bytes": 27472,
+            "size": "26.8 KB",
+            "width": 1920,
+            "height": 540,
+            "dimensions": "1920 x 540 px"
           },
           {
             "path": "VANAHOM/assets/brand-images/vanahom-logo-white.jpg",
             "sitePath": "assets/brand-images/vanahom-vanahom-logo-white.jpg",
-            "title": "Vanahom Logo White"
+            "title": "Vanahom Logo White",
+            "format": "JPG",
+            "bytes": 511799,
+            "size": "500 KB",
+            "width": 8000,
+            "height": 2250,
+            "dimensions": "8000 x 2250 px"
           },
           {
             "path": "VANAHOM/assets/brand-images/vanahom-logo-white.png",
             "sitePath": "assets/brand-images/vanahom-vanahom-logo-white.png",
-            "title": "Vanahom Logo White"
+            "title": "Vanahom Logo White",
+            "format": "PNG",
+            "bytes": 25138,
+            "size": "24.5 KB",
+            "width": 1920,
+            "height": 540,
+            "dimensions": "1920 x 540 px"
           }
         ]
       }
@@ -602,47 +692,101 @@
         {
           "path": "VANAHOM/assets/brand-images/vanahom-brand-hero.png",
           "sitePath": "assets/brand-images/vanahom.png",
-          "title": "Vanahom Brand Hero"
+          "title": "Vanahom Brand Hero",
+          "format": "PNG",
+          "bytes": 2636669,
+          "size": "2.51 MB",
+          "width": 1672,
+          "height": 941,
+          "dimensions": "1672 x 941 px"
         },
         {
           "path": "VANAHOM/assets/brand-images/vanahom-logo-black.jpg",
           "sitePath": "assets/brand-images/vanahom-vanahom-logo-black.jpg",
-          "title": "Vanahom Logo Black"
+          "title": "Vanahom Logo Black",
+          "format": "JPG",
+          "bytes": 376303,
+          "size": "367 KB",
+          "width": 6729,
+          "height": 1048,
+          "dimensions": "6729 x 1048 px"
         },
         {
           "path": "VANAHOM/assets/brand-images/vanahom-logo-black.png",
           "sitePath": "assets/brand-images/vanahom-vanahom-logo-black.png",
-          "title": "Vanahom Logo Black"
+          "title": "Vanahom Logo Black",
+          "format": "PNG",
+          "bytes": 27255,
+          "size": "26.6 KB",
+          "width": 1920,
+          "height": 540,
+          "dimensions": "1920 x 540 px"
         },
         {
           "path": "VANAHOM/assets/brand-images/vanahom-logo-grey.jpg",
           "sitePath": "assets/brand-images/vanahom-vanahom-logo-grey.jpg",
-          "title": "Vanahom Logo Grey"
+          "title": "Vanahom Logo Grey",
+          "format": "JPG",
+          "bytes": 489776,
+          "size": "478 KB",
+          "width": 8000,
+          "height": 2250,
+          "dimensions": "8000 x 2250 px"
         },
         {
           "path": "VANAHOM/assets/brand-images/vanahom-logo-grey.png",
           "sitePath": "assets/brand-images/vanahom-vanahom-logo-grey.png",
-          "title": "Vanahom Logo Grey"
+          "title": "Vanahom Logo Grey",
+          "format": "PNG",
+          "bytes": 27412,
+          "size": "26.8 KB",
+          "width": 1920,
+          "height": 540,
+          "dimensions": "1920 x 540 px"
         },
         {
           "path": "VANAHOM/assets/brand-images/vanahom-logo-red.jpg",
           "sitePath": "assets/brand-images/vanahom-vanahom-logo-red.jpg",
-          "title": "Vanahom Logo Red"
+          "title": "Vanahom Logo Red",
+          "format": "JPG",
+          "bytes": 761183,
+          "size": "743 KB",
+          "width": 8000,
+          "height": 2250,
+          "dimensions": "8000 x 2250 px"
         },
         {
           "path": "VANAHOM/assets/brand-images/vanahom-logo-red.png",
           "sitePath": "assets/brand-images/vanahom-vanahom-logo-red.png",
-          "title": "Vanahom Logo Red"
+          "title": "Vanahom Logo Red",
+          "format": "PNG",
+          "bytes": 27472,
+          "size": "26.8 KB",
+          "width": 1920,
+          "height": 540,
+          "dimensions": "1920 x 540 px"
         },
         {
           "path": "VANAHOM/assets/brand-images/vanahom-logo-white.jpg",
           "sitePath": "assets/brand-images/vanahom-vanahom-logo-white.jpg",
-          "title": "Vanahom Logo White"
+          "title": "Vanahom Logo White",
+          "format": "JPG",
+          "bytes": 511799,
+          "size": "500 KB",
+          "width": 8000,
+          "height": 2250,
+          "dimensions": "8000 x 2250 px"
         },
         {
           "path": "VANAHOM/assets/brand-images/vanahom-logo-white.png",
           "sitePath": "assets/brand-images/vanahom-vanahom-logo-white.png",
-          "title": "Vanahom Logo White"
+          "title": "Vanahom Logo White",
+          "format": "PNG",
+          "bytes": 25138,
+          "size": "24.5 KB",
+          "width": 1920,
+          "height": 540,
+          "dimensions": "1920 x 540 px"
         }
       ]
     },
@@ -813,11 +957,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/sanctem.json",
     "url": "brand.html?brand=sanctem",
@@ -875,42 +1019,90 @@
           {
             "path": "Sanctem/assets/brand-images/sanctem-brand-hero.png",
             "sitePath": "assets/brand-images/sanctem.png",
-            "title": "Sanctem Brand Hero"
+            "title": "Sanctem Brand Hero",
+            "format": "PNG",
+            "bytes": 24726,
+            "size": "24.1 KB",
+            "width": 1920,
+            "height": 540,
+            "dimensions": "1920 x 540 px"
           },
           {
             "path": "Sanctem/assets/brand-images/sanctem-logo-black-alt.jpg",
             "sitePath": "assets/brand-images/sanctem-sanctem-logo-black-alt.jpg",
-            "title": "Sanctem Logo Black Alt"
+            "title": "Sanctem Logo Black Alt",
+            "format": "JPG",
+            "bytes": 474946,
+            "size": "464 KB",
+            "width": 8000,
+            "height": 2250,
+            "dimensions": "8000 x 2250 px"
           },
           {
             "path": "Sanctem/assets/brand-images/sanctem-logo-black.png",
             "sitePath": "assets/brand-images/sanctem-sanctem-logo-black.png",
-            "title": "Sanctem Logo Black"
+            "title": "Sanctem Logo Black",
+            "format": "PNG",
+            "bytes": 24756,
+            "size": "24.2 KB",
+            "width": 1920,
+            "height": 540,
+            "dimensions": "1920 x 540 px"
           },
           {
             "path": "Sanctem/assets/brand-images/sanctem-logo-color.jpg",
             "sitePath": "assets/brand-images/sanctem-sanctem-logo-color.jpg",
-            "title": "Sanctem Logo Color"
+            "title": "Sanctem Logo Color",
+            "format": "JPG",
+            "bytes": 249721,
+            "size": "244 KB",
+            "width": 6490,
+            "height": 1091,
+            "dimensions": "6490 x 1091 px"
           },
           {
             "path": "Sanctem/assets/brand-images/sanctem-logo-color.png",
             "sitePath": "assets/brand-images/sanctem-sanctem-logo-color.png",
-            "title": "Sanctem Logo Color"
+            "title": "Sanctem Logo Color",
+            "format": "PNG",
+            "bytes": 24726,
+            "size": "24.1 KB",
+            "width": 1920,
+            "height": 540,
+            "dimensions": "1920 x 540 px"
           },
           {
             "path": "Sanctem/assets/brand-images/sanctem-logo-white-black-alt.jpg",
             "sitePath": "assets/brand-images/sanctem-sanctem-logo-white-black-alt.jpg",
-            "title": "Sanctem Logo White Black Alt"
+            "title": "Sanctem Logo White Black Alt",
+            "format": "JPG",
+            "bytes": 474946,
+            "size": "464 KB",
+            "width": 8000,
+            "height": 2250,
+            "dimensions": "8000 x 2250 px"
           },
           {
             "path": "Sanctem/assets/brand-images/sanctem-logo-white-black.jpg",
             "sitePath": "assets/brand-images/sanctem-sanctem-logo-white-black.jpg",
-            "title": "Sanctem Logo White Black"
+            "title": "Sanctem Logo White Black",
+            "format": "JPG",
+            "bytes": 474158,
+            "size": "463 KB",
+            "width": 8000,
+            "height": 2250,
+            "dimensions": "8000 x 2250 px"
           },
           {
             "path": "Sanctem/assets/brand-images/sanctem-logo-white.png",
             "sitePath": "assets/brand-images/sanctem-sanctem-logo-white.png",
-            "title": "Sanctem Logo White"
+            "title": "Sanctem Logo White",
+            "format": "PNG",
+            "bytes": 22626,
+            "size": "22.1 KB",
+            "width": 1920,
+            "height": 540,
+            "dimensions": "1920 x 540 px"
           }
         ]
       }
@@ -957,42 +1149,90 @@
         {
           "path": "Sanctem/assets/brand-images/sanctem-brand-hero.png",
           "sitePath": "assets/brand-images/sanctem.png",
-          "title": "Sanctem Brand Hero"
+          "title": "Sanctem Brand Hero",
+          "format": "PNG",
+          "bytes": 24726,
+          "size": "24.1 KB",
+          "width": 1920,
+          "height": 540,
+          "dimensions": "1920 x 540 px"
         },
         {
           "path": "Sanctem/assets/brand-images/sanctem-logo-black-alt.jpg",
           "sitePath": "assets/brand-images/sanctem-sanctem-logo-black-alt.jpg",
-          "title": "Sanctem Logo Black Alt"
+          "title": "Sanctem Logo Black Alt",
+          "format": "JPG",
+          "bytes": 474946,
+          "size": "464 KB",
+          "width": 8000,
+          "height": 2250,
+          "dimensions": "8000 x 2250 px"
         },
         {
           "path": "Sanctem/assets/brand-images/sanctem-logo-black.png",
           "sitePath": "assets/brand-images/sanctem-sanctem-logo-black.png",
-          "title": "Sanctem Logo Black"
+          "title": "Sanctem Logo Black",
+          "format": "PNG",
+          "bytes": 24756,
+          "size": "24.2 KB",
+          "width": 1920,
+          "height": 540,
+          "dimensions": "1920 x 540 px"
         },
         {
           "path": "Sanctem/assets/brand-images/sanctem-logo-color.jpg",
           "sitePath": "assets/brand-images/sanctem-sanctem-logo-color.jpg",
-          "title": "Sanctem Logo Color"
+          "title": "Sanctem Logo Color",
+          "format": "JPG",
+          "bytes": 249721,
+          "size": "244 KB",
+          "width": 6490,
+          "height": 1091,
+          "dimensions": "6490 x 1091 px"
         },
         {
           "path": "Sanctem/assets/brand-images/sanctem-logo-color.png",
           "sitePath": "assets/brand-images/sanctem-sanctem-logo-color.png",
-          "title": "Sanctem Logo Color"
+          "title": "Sanctem Logo Color",
+          "format": "PNG",
+          "bytes": 24726,
+          "size": "24.1 KB",
+          "width": 1920,
+          "height": 540,
+          "dimensions": "1920 x 540 px"
         },
         {
           "path": "Sanctem/assets/brand-images/sanctem-logo-white-black-alt.jpg",
           "sitePath": "assets/brand-images/sanctem-sanctem-logo-white-black-alt.jpg",
-          "title": "Sanctem Logo White Black Alt"
+          "title": "Sanctem Logo White Black Alt",
+          "format": "JPG",
+          "bytes": 474946,
+          "size": "464 KB",
+          "width": 8000,
+          "height": 2250,
+          "dimensions": "8000 x 2250 px"
         },
         {
           "path": "Sanctem/assets/brand-images/sanctem-logo-white-black.jpg",
           "sitePath": "assets/brand-images/sanctem-sanctem-logo-white-black.jpg",
-          "title": "Sanctem Logo White Black"
+          "title": "Sanctem Logo White Black",
+          "format": "JPG",
+          "bytes": 474158,
+          "size": "463 KB",
+          "width": 8000,
+          "height": 2250,
+          "dimensions": "8000 x 2250 px"
         },
         {
           "path": "Sanctem/assets/brand-images/sanctem-logo-white.png",
           "sitePath": "assets/brand-images/sanctem-sanctem-logo-white.png",
-          "title": "Sanctem Logo White"
+          "title": "Sanctem Logo White",
+          "format": "PNG",
+          "bytes": 22626,
+          "size": "22.1 KB",
+          "width": 1920,
+          "height": 540,
+          "dimensions": "1920 x 540 px"
         }
       ]
     },
@@ -1163,11 +1403,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/kind.json",
     "url": "brand.html?brand=kind",
@@ -1225,7 +1465,13 @@
           {
             "path": "KiND/assets/brand-images/kind-brand-hero.png",
             "sitePath": "assets/brand-images/kind.png",
-            "title": "Kind Brand Hero"
+            "title": "Kind Brand Hero",
+            "format": "PNG",
+            "bytes": 2190640,
+            "size": "2.09 MB",
+            "width": 1672,
+            "height": 941,
+            "dimensions": "1672 x 941 px"
           }
         ]
       }
@@ -1272,7 +1518,13 @@
         {
           "path": "KiND/assets/brand-images/kind-brand-hero.png",
           "sitePath": "assets/brand-images/kind.png",
-          "title": "Kind Brand Hero"
+          "title": "Kind Brand Hero",
+          "format": "PNG",
+          "bytes": 2190640,
+          "size": "2.09 MB",
+          "width": 1672,
+          "height": 941,
+          "dimensions": "1672 x 941 px"
         }
       ]
     },
@@ -1445,11 +1697,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/apha.json",
     "url": "brand.html?brand=apha",
@@ -1507,7 +1759,13 @@
           {
             "path": "APHA/assets/brand-images/apha-brand-hero.png",
             "sitePath": "assets/brand-images/apha.png",
-            "title": "Apha Brand Hero"
+            "title": "Apha Brand Hero",
+            "format": "PNG",
+            "bytes": 2233911,
+            "size": "2.13 MB",
+            "width": 1672,
+            "height": 941,
+            "dimensions": "1672 x 941 px"
           }
         ]
       }
@@ -1554,7 +1812,13 @@
         {
           "path": "APHA/assets/brand-images/apha-brand-hero.png",
           "sitePath": "assets/brand-images/apha.png",
-          "title": "Apha Brand Hero"
+          "title": "Apha Brand Hero",
+          "format": "PNG",
+          "bytes": 2233911,
+          "size": "2.13 MB",
+          "width": 1672,
+          "height": 941,
+          "dimensions": "1672 x 941 px"
         }
       ]
     },
@@ -1725,11 +1989,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/manaendless.json",
     "url": "brand.html?brand=manaendless",
@@ -1787,7 +2051,13 @@
           {
             "path": "MANAENDLESS/assets/brand-images/manaendless-brand-hero.png",
             "sitePath": "assets/brand-images/manaendless.png",
-            "title": "Manaendless Brand Hero"
+            "title": "Manaendless Brand Hero",
+            "format": "PNG",
+            "bytes": 1890717,
+            "size": "1.80 MB",
+            "width": 1672,
+            "height": 941,
+            "dimensions": "1672 x 941 px"
           }
         ]
       }
@@ -1834,7 +2104,13 @@
         {
           "path": "MANAENDLESS/assets/brand-images/manaendless-brand-hero.png",
           "sitePath": "assets/brand-images/manaendless.png",
-          "title": "Manaendless Brand Hero"
+          "title": "Manaendless Brand Hero",
+          "format": "PNG",
+          "bytes": 1890717,
+          "size": "1.80 MB",
+          "width": 1672,
+          "height": 941,
+          "dimensions": "1672 x 941 px"
         }
       ]
     },
@@ -2003,11 +2279,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/opcglobal.json",
     "url": "brand.html?brand=opcglobal",
@@ -2065,7 +2341,13 @@
           {
             "path": "OPCGLOBAL/assets/brand-images/opcglobal-brand-hero.png",
             "sitePath": "assets/brand-images/opcglobal.png",
-            "title": "Opcglobal Brand Hero"
+            "title": "Opcglobal Brand Hero",
+            "format": "PNG",
+            "bytes": 1923799,
+            "size": "1.83 MB",
+            "width": 1672,
+            "height": 941,
+            "dimensions": "1672 x 941 px"
           }
         ]
       }
@@ -2112,7 +2394,13 @@
         {
           "path": "OPCGLOBAL/assets/brand-images/opcglobal-brand-hero.png",
           "sitePath": "assets/brand-images/opcglobal.png",
-          "title": "Opcglobal Brand Hero"
+          "title": "Opcglobal Brand Hero",
+          "format": "PNG",
+          "bytes": 1923799,
+          "size": "1.83 MB",
+          "width": 1672,
+          "height": 941,
+          "dimensions": "1672 x 941 px"
         }
       ]
     },
@@ -2281,11 +2569,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/iptrust.json",
     "url": "brand.html?brand=iptrust",
@@ -2343,72 +2631,156 @@
           {
             "path": "IPTRUST/assets/brand-images/iptrust-brand-hero.png",
             "sitePath": "assets/brand-images/iptrust.png",
-            "title": "Iptrust Brand Hero"
+            "title": "Iptrust Brand Hero",
+            "format": "PNG",
+            "bytes": 1885530,
+            "size": "1.80 MB",
+            "width": 1672,
+            "height": 941,
+            "dimensions": "1672 x 941 px"
           },
           {
             "path": "IPTRUST/assets/brand-images/iptrust-logo-black.png",
             "sitePath": "assets/brand-images/iptrust-logo-black.png",
-            "title": "Iptrust Logo Black"
+            "title": "Iptrust Logo Black",
+            "format": "PNG",
+            "bytes": 43190,
+            "size": "42.2 KB",
+            "width": 915,
+            "height": 915,
+            "dimensions": "915 x 915 px"
           },
           {
             "path": "IPTRUST/assets/brand-images/iptrust-wide-black.png",
             "sitePath": "assets/brand-images/iptrust-iptrust-wide-black.png",
-            "title": "Iptrust Wide Black"
+            "title": "Iptrust Wide Black",
+            "format": "PNG",
+            "bytes": 137631,
+            "size": "134 KB",
+            "width": 3840,
+            "height": 2160,
+            "dimensions": "3840 x 2160 px"
           },
           {
             "path": "IPTRUST/assets/brand-images/iptrust-wide-white.png",
             "sitePath": "assets/brand-images/iptrust-iptrust-wide-white.png",
-            "title": "Iptrust Wide White"
+            "title": "Iptrust Wide White",
+            "format": "PNG",
+            "bytes": 141288,
+            "size": "138 KB",
+            "width": 3840,
+            "height": 2160,
+            "dimensions": "3840 x 2160 px"
           },
           {
             "path": "IPTRUST/assets/brand-images/logo-set/岁知社wideblack.png",
             "sitePath": "assets/brand-images/iptrust-logo-set-wideblack.png",
-            "title": "岁知社Wideblack"
+            "title": "岁知社Wideblack",
+            "format": "PNG",
+            "bytes": 137631,
+            "size": "134 KB",
+            "width": 3840,
+            "height": 2160,
+            "dimensions": "3840 x 2160 px"
           },
           {
             "path": "IPTRUST/assets/brand-images/logo-set/岁知社widewhite.png",
             "sitePath": "assets/brand-images/iptrust-logo-set-widewhite.png",
-            "title": "岁知社Widewhite"
+            "title": "岁知社Widewhite",
+            "format": "PNG",
+            "bytes": 141288,
+            "size": "138 KB",
+            "width": 3840,
+            "height": 2160,
+            "dimensions": "3840 x 2160 px"
           },
           {
             "path": "IPTRUST/assets/brand-images/logo-set/白色/logo.jpg",
             "sitePath": "assets/brand-images/iptrust-logo.jpg",
-            "title": "Logo"
+            "title": "Logo",
+            "format": "JPG",
+            "bytes": 1221688,
+            "size": "1.17 MB",
+            "width": 2539,
+            "height": 2539,
+            "dimensions": "2539 x 2539 px"
           },
           {
             "path": "IPTRUST/assets/brand-images/logo-set/白色/logo.png",
             "sitePath": "assets/brand-images/iptrust-logo.png",
-            "title": "Logo"
+            "title": "Logo",
+            "format": "PNG",
+            "bytes": 41464,
+            "size": "40.5 KB",
+            "width": 915,
+            "height": 915,
+            "dimensions": "915 x 915 px"
           },
           {
             "path": "IPTRUST/assets/brand-images/logo-set/蓝色/logo_logo.jpg",
             "sitePath": "assets/brand-images/iptrust-logo-logo.jpg",
-            "title": "Logo Logo"
+            "title": "Logo Logo",
+            "format": "JPG",
+            "bytes": 140204,
+            "size": "137 KB",
+            "width": 2540,
+            "height": 2540,
+            "dimensions": "2540 x 2540 px"
           },
           {
             "path": "IPTRUST/assets/brand-images/logo-set/蓝色/logo_logo.png",
             "sitePath": "assets/brand-images/iptrust-logo-logo.png",
-            "title": "Logo Logo"
+            "title": "Logo Logo",
+            "format": "PNG",
+            "bytes": 45334,
+            "size": "44.3 KB",
+            "width": 2540,
+            "height": 2540,
+            "dimensions": "2540 x 2540 px"
           },
           {
             "path": "IPTRUST/assets/brand-images/logo-set/金色/logo_logo.jpg",
             "sitePath": "assets/brand-images/iptrust-logo-logo-2.jpg",
-            "title": "Logo Logo"
+            "title": "Logo Logo",
+            "format": "JPG",
+            "bytes": 146164,
+            "size": "143 KB",
+            "width": 2540,
+            "height": 2540,
+            "dimensions": "2540 x 2540 px"
           },
           {
             "path": "IPTRUST/assets/brand-images/logo-set/金色/logo_logo.png",
             "sitePath": "assets/brand-images/iptrust-logo-logo-2.png",
-            "title": "Logo Logo"
+            "title": "Logo Logo",
+            "format": "PNG",
+            "bytes": 45331,
+            "size": "44.3 KB",
+            "width": 2540,
+            "height": 2540,
+            "dimensions": "2540 x 2540 px"
           },
           {
             "path": "IPTRUST/assets/brand-images/logo-set/黑色/logo_logo.jpg",
             "sitePath": "assets/brand-images/iptrust-logo-logo-3.jpg",
-            "title": "Logo Logo"
+            "title": "Logo Logo",
+            "format": "JPG",
+            "bytes": 801557,
+            "size": "783 KB",
+            "width": 2539,
+            "height": 2539,
+            "dimensions": "2539 x 2539 px"
           },
           {
             "path": "IPTRUST/assets/brand-images/logo-set/黑色/logohdpi.png",
             "sitePath": "assets/brand-images/iptrust-logohdpi.png",
-            "title": "Logohdpi"
+            "title": "Logohdpi",
+            "format": "PNG",
+            "bytes": 43190,
+            "size": "42.2 KB",
+            "width": 915,
+            "height": 915,
+            "dimensions": "915 x 915 px"
           }
         ]
       }
@@ -2455,72 +2827,156 @@
         {
           "path": "IPTRUST/assets/brand-images/iptrust-brand-hero.png",
           "sitePath": "assets/brand-images/iptrust.png",
-          "title": "Iptrust Brand Hero"
+          "title": "Iptrust Brand Hero",
+          "format": "PNG",
+          "bytes": 1885530,
+          "size": "1.80 MB",
+          "width": 1672,
+          "height": 941,
+          "dimensions": "1672 x 941 px"
         },
         {
           "path": "IPTRUST/assets/brand-images/iptrust-logo-black.png",
           "sitePath": "assets/brand-images/iptrust-logo-black.png",
-          "title": "Iptrust Logo Black"
+          "title": "Iptrust Logo Black",
+          "format": "PNG",
+          "bytes": 43190,
+          "size": "42.2 KB",
+          "width": 915,
+          "height": 915,
+          "dimensions": "915 x 915 px"
         },
         {
           "path": "IPTRUST/assets/brand-images/iptrust-wide-black.png",
           "sitePath": "assets/brand-images/iptrust-iptrust-wide-black.png",
-          "title": "Iptrust Wide Black"
+          "title": "Iptrust Wide Black",
+          "format": "PNG",
+          "bytes": 137631,
+          "size": "134 KB",
+          "width": 3840,
+          "height": 2160,
+          "dimensions": "3840 x 2160 px"
         },
         {
           "path": "IPTRUST/assets/brand-images/iptrust-wide-white.png",
           "sitePath": "assets/brand-images/iptrust-iptrust-wide-white.png",
-          "title": "Iptrust Wide White"
+          "title": "Iptrust Wide White",
+          "format": "PNG",
+          "bytes": 141288,
+          "size": "138 KB",
+          "width": 3840,
+          "height": 2160,
+          "dimensions": "3840 x 2160 px"
         },
         {
           "path": "IPTRUST/assets/brand-images/logo-set/岁知社wideblack.png",
           "sitePath": "assets/brand-images/iptrust-logo-set-wideblack.png",
-          "title": "岁知社Wideblack"
+          "title": "岁知社Wideblack",
+          "format": "PNG",
+          "bytes": 137631,
+          "size": "134 KB",
+          "width": 3840,
+          "height": 2160,
+          "dimensions": "3840 x 2160 px"
         },
         {
           "path": "IPTRUST/assets/brand-images/logo-set/岁知社widewhite.png",
           "sitePath": "assets/brand-images/iptrust-logo-set-widewhite.png",
-          "title": "岁知社Widewhite"
+          "title": "岁知社Widewhite",
+          "format": "PNG",
+          "bytes": 141288,
+          "size": "138 KB",
+          "width": 3840,
+          "height": 2160,
+          "dimensions": "3840 x 2160 px"
         },
         {
           "path": "IPTRUST/assets/brand-images/logo-set/白色/logo.jpg",
           "sitePath": "assets/brand-images/iptrust-logo.jpg",
-          "title": "Logo"
+          "title": "Logo",
+          "format": "JPG",
+          "bytes": 1221688,
+          "size": "1.17 MB",
+          "width": 2539,
+          "height": 2539,
+          "dimensions": "2539 x 2539 px"
         },
         {
           "path": "IPTRUST/assets/brand-images/logo-set/白色/logo.png",
           "sitePath": "assets/brand-images/iptrust-logo.png",
-          "title": "Logo"
+          "title": "Logo",
+          "format": "PNG",
+          "bytes": 41464,
+          "size": "40.5 KB",
+          "width": 915,
+          "height": 915,
+          "dimensions": "915 x 915 px"
         },
         {
           "path": "IPTRUST/assets/brand-images/logo-set/蓝色/logo_logo.jpg",
           "sitePath": "assets/brand-images/iptrust-logo-logo.jpg",
-          "title": "Logo Logo"
+          "title": "Logo Logo",
+          "format": "JPG",
+          "bytes": 140204,
+          "size": "137 KB",
+          "width": 2540,
+          "height": 2540,
+          "dimensions": "2540 x 2540 px"
         },
         {
           "path": "IPTRUST/assets/brand-images/logo-set/蓝色/logo_logo.png",
           "sitePath": "assets/brand-images/iptrust-logo-logo.png",
-          "title": "Logo Logo"
+          "title": "Logo Logo",
+          "format": "PNG",
+          "bytes": 45334,
+          "size": "44.3 KB",
+          "width": 2540,
+          "height": 2540,
+          "dimensions": "2540 x 2540 px"
         },
         {
           "path": "IPTRUST/assets/brand-images/logo-set/金色/logo_logo.jpg",
           "sitePath": "assets/brand-images/iptrust-logo-logo-2.jpg",
-          "title": "Logo Logo"
+          "title": "Logo Logo",
+          "format": "JPG",
+          "bytes": 146164,
+          "size": "143 KB",
+          "width": 2540,
+          "height": 2540,
+          "dimensions": "2540 x 2540 px"
         },
         {
           "path": "IPTRUST/assets/brand-images/logo-set/金色/logo_logo.png",
           "sitePath": "assets/brand-images/iptrust-logo-logo-2.png",
-          "title": "Logo Logo"
+          "title": "Logo Logo",
+          "format": "PNG",
+          "bytes": 45331,
+          "size": "44.3 KB",
+          "width": 2540,
+          "height": 2540,
+          "dimensions": "2540 x 2540 px"
         },
         {
           "path": "IPTRUST/assets/brand-images/logo-set/黑色/logo_logo.jpg",
           "sitePath": "assets/brand-images/iptrust-logo-logo-3.jpg",
-          "title": "Logo Logo"
+          "title": "Logo Logo",
+          "format": "JPG",
+          "bytes": 801557,
+          "size": "783 KB",
+          "width": 2539,
+          "height": 2539,
+          "dimensions": "2539 x 2539 px"
         },
         {
           "path": "IPTRUST/assets/brand-images/logo-set/黑色/logohdpi.png",
           "sitePath": "assets/brand-images/iptrust-logohdpi.png",
-          "title": "Logohdpi"
+          "title": "Logohdpi",
+          "format": "PNG",
+          "bytes": 43190,
+          "size": "42.2 KB",
+          "width": 915,
+          "height": 915,
+          "dimensions": "915 x 915 px"
         }
       ]
     },
@@ -2689,11 +3145,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/fengzhi.json",
     "url": "brand.html?brand=fengzhi",
@@ -2751,7 +3207,13 @@
           {
             "path": "FENGZHI/assets/brand-images/fengzhi-brand-hero.png",
             "sitePath": "assets/brand-images/fengzhi.png",
-            "title": "Fengzhi Brand Hero"
+            "title": "Fengzhi Brand Hero",
+            "format": "PNG",
+            "bytes": 2079681,
+            "size": "1.98 MB",
+            "width": 1672,
+            "height": 941,
+            "dimensions": "1672 x 941 px"
           }
         ]
       }
@@ -2798,7 +3260,13 @@
         {
           "path": "FENGZHI/assets/brand-images/fengzhi-brand-hero.png",
           "sitePath": "assets/brand-images/fengzhi.png",
-          "title": "Fengzhi Brand Hero"
+          "title": "Fengzhi Brand Hero",
+          "format": "PNG",
+          "bytes": 2079681,
+          "size": "1.98 MB",
+          "width": 1672,
+          "height": 941,
+          "dimensions": "1672 x 941 px"
         }
       ]
     },
@@ -2991,11 +3459,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/axisee.json",
     "url": "brand.html?brand=axisee",
@@ -3053,12 +3521,24 @@
           {
             "path": "Axisee/assets/brand-images/axisee-brand-hero.png",
             "sitePath": "assets/brand-images/axisee.png",
-            "title": "Axisee Brand Hero"
+            "title": "Axisee Brand Hero",
+            "format": "PNG",
+            "bytes": 1921090,
+            "size": "1.83 MB",
+            "width": 1672,
+            "height": 941,
+            "dimensions": "1672 x 941 px"
           },
           {
             "path": "Axisee/assets/brand-images/axisee-logo.png",
             "sitePath": "assets/brand-images/axisee-axisee-logo.png",
-            "title": "Axisee Logo"
+            "title": "Axisee Logo",
+            "format": "PNG",
+            "bytes": 35402,
+            "size": "34.6 KB",
+            "width": 1500,
+            "height": 1500,
+            "dimensions": "1500 x 1500 px"
           }
         ]
       }
@@ -3105,12 +3585,24 @@
         {
           "path": "Axisee/assets/brand-images/axisee-brand-hero.png",
           "sitePath": "assets/brand-images/axisee.png",
-          "title": "Axisee Brand Hero"
+          "title": "Axisee Brand Hero",
+          "format": "PNG",
+          "bytes": 1921090,
+          "size": "1.83 MB",
+          "width": 1672,
+          "height": 941,
+          "dimensions": "1672 x 941 px"
         },
         {
           "path": "Axisee/assets/brand-images/axisee-logo.png",
           "sitePath": "assets/brand-images/axisee-axisee-logo.png",
-          "title": "Axisee Logo"
+          "title": "Axisee Logo",
+          "format": "PNG",
+          "bytes": 35402,
+          "size": "34.6 KB",
+          "width": 1500,
+          "height": 1500,
+          "dimensions": "1500 x 1500 px"
         }
       ]
     },
@@ -3285,11 +3777,11 @@
       }
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/sidera.json",
     "url": "brand.html?brand=sidera",
@@ -3347,7 +3839,13 @@
           {
             "path": "Sidera/assets/brand-images/sidera-brand-hero.png",
             "sitePath": "assets/brand-images/sidera.png",
-            "title": "Sidera Brand Hero"
+            "title": "Sidera Brand Hero",
+            "format": "PNG",
+            "bytes": 2318145,
+            "size": "2.21 MB",
+            "width": 1672,
+            "height": 941,
+            "dimensions": "1672 x 941 px"
           }
         ]
       }
@@ -3394,7 +3892,13 @@
         {
           "path": "Sidera/assets/brand-images/sidera-brand-hero.png",
           "sitePath": "assets/brand-images/sidera.png",
-          "title": "Sidera Brand Hero"
+          "title": "Sidera Brand Hero",
+          "format": "PNG",
+          "bytes": 2318145,
+          "size": "2.21 MB",
+          "width": 1672,
+          "height": 941,
+          "dimensions": "1672 x 941 px"
         }
       ]
     },
@@ -3565,11 +4069,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/1stepmore.json",
     "url": "brand.html?brand=1stepmore",
@@ -3833,11 +4337,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/agem.json",
     "url": "brand.html?brand=agem",
@@ -4101,11 +4605,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/rgd.json",
     "url": "brand.html?brand=rgd",
@@ -4369,11 +4873,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/changoods.json",
     "url": "brand.html?brand=changoods",
@@ -4637,11 +5141,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/boya.json",
     "url": "brand.html?brand=boya",
@@ -4905,11 +5409,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/apuch.json",
     "url": "brand.html?brand=apuch",
@@ -5175,11 +5679,11 @@
       }
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/pam.json",
     "url": "brand.html?brand=pam",
@@ -5447,11 +5951,11 @@
       "en": ""
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/ksamint.json",
     "url": "brand.html?brand=ksamint",
@@ -5692,11 +6196,11 @@
       }
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/inucleus.json",
     "url": "brand.html?brand=inucleus",
@@ -5964,11 +6468,11 @@
       }
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/xinzhi-travel.json",
     "url": "brand.html?brand=xinzhi-travel",
@@ -6236,11 +6740,11 @@
       }
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/zhongzhiyou.json",
     "url": "brand.html?brand=zhongzhiyou",
@@ -6504,11 +7008,11 @@
       }
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/nibiru.json",
     "url": "brand.html?brand=nibiru",
@@ -6776,11 +7280,11 @@
       }
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/shenzhen-microsoft-global-center.json",
     "url": "brand.html?brand=shenzhen-microsoft-global-center",
@@ -7072,11 +7576,11 @@
       }
     },
     "version": {
-      "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-      "shortHash": "4227557",
-      "date": "2026-07-12T08:54:21+08:00",
-      "message": "Promote IP Evolution and expose asset URLs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
     },
     "historyUrl": "api/history/shanrenjing.json",
     "url": "brand.html?brand=shanrenjing",
