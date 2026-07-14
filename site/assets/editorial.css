@@ -365,6 +365,29 @@ button:active { transform: translateY(1px); }
   backdrop-filter: blur(10px);
 }
 .brand-visual .asset-copy-button { top: 12px; right: 12px; }
+.brand-visual-meta {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 10px 18px;
+  align-items: center;
+  padding: 11px 14px;
+  border-top: 1px solid var(--brand-line, var(--line));
+  background: color-mix(in srgb, var(--brand-paper, white) 92%, transparent);
+  color: var(--brand-muted, var(--muted));
+  font: 600 10px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  backdrop-filter: blur(12px);
+}
+.brand-visual-meta strong {
+  overflow: hidden;
+  color: var(--brand-ink, var(--ink));
+  font: 700 11px/1.2 var(--sans);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .guide-rendered > .eyebrow { margin-bottom: 22px; }
 .rendered-document { max-width: 920px; }
 .rendered-document h1 { font-size: clamp(48px, 7vw, 86px); }
@@ -411,6 +434,11 @@ button:active { transform: translateY(1px); }
 }
 
 @media (max-width: 760px) {
+  .brand-visual-meta {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 4px 12px;
+  }
+  .brand-visual-meta span:last-child { grid-column: 1 / -1; }
   main,
   .brand-page { width: min(100% - 28px, 1320px); }
   .topbar {

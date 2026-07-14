@@ -2585,7 +2585,6 @@ p { line-height: 1.65; }
   flex-basis: 100%;
 }
 .brand-asset-dimensions::before { display: none; }
-}
 .resource-list { display: grid; gap: 14px; margin: 24px 0; }
 .resource-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 24px 0; }
 .resource, .guide {
@@ -4335,7 +4334,17 @@ async function renderBrand() {
             <a class="button ghost" href="\${brand.source.github}">\${t("brand.source")}</a>
           </div>
         </div>
-        \${hero ? \`<div class="brand-visual"><img src="\${escapeHtml(hero.sitePath)}" alt="\${escapeHtml(hero.title || display.name)}"><button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="\${escapeHtml(hero.sitePath)}" aria-label="\${escapeHtml(t("copy.assetUrl"))}">\${copyIcon()}</button></div>\` : ""}
+        \${hero ? \`
+          <div class="brand-visual">
+            <img src="\${escapeHtml(hero.sitePath)}" alt="\${escapeHtml(hero.title || display.name)}">
+            <button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="\${escapeHtml(hero.sitePath)}" aria-label="\${escapeHtml(t("copy.assetUrl"))}">\${copyIcon()}</button>
+            <div class="brand-visual-meta">
+              <strong>\${escapeHtml(hero.title || display.name)}</strong>
+              <span>\${escapeHtml([hero.format, hero.size].filter(Boolean).join(" · "))}</span>
+              \${hero.dimensions ? \`<span>\${escapeHtml(hero.dimensions.replace(" x ", " × "))}</span>\` : ""}
+            </div>
+          </div>
+        \` : ""}
       </section>
       \${profileEditor(brand)}
       \${ipSystemPanel(brand)}

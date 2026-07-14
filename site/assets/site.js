@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "b0056d3-cd235e93";
+const BUILD_VERSION = "6521ac3-a086799c";
 
 const i18n = {
   cn: {
@@ -1614,7 +1614,17 @@ async function renderBrand() {
             <a class="button ghost" href="${brand.source.github}">${t("brand.source")}</a>
           </div>
         </div>
-        ${hero ? `<div class="brand-visual"><img src="${escapeHtml(hero.sitePath)}" alt="${escapeHtml(hero.title || display.name)}"><button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="${escapeHtml(hero.sitePath)}" aria-label="${escapeHtml(t("copy.assetUrl"))}">${copyIcon()}</button></div>` : ""}
+        ${hero ? `
+          <div class="brand-visual">
+            <img src="${escapeHtml(hero.sitePath)}" alt="${escapeHtml(hero.title || display.name)}">
+            <button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="${escapeHtml(hero.sitePath)}" aria-label="${escapeHtml(t("copy.assetUrl"))}">${copyIcon()}</button>
+            <div class="brand-visual-meta">
+              <strong>${escapeHtml(hero.title || display.name)}</strong>
+              <span>${escapeHtml([hero.format, hero.size].filter(Boolean).join(" · "))}</span>
+              ${hero.dimensions ? `<span>${escapeHtml(hero.dimensions.replace(" x ", " × "))}</span>` : ""}
+            </div>
+          </div>
+        ` : ""}
       </section>
       ${profileEditor(brand)}
       ${ipSystemPanel(brand)}
