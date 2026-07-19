@@ -43,6 +43,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
+      - name: Install dependencies
+        if: steps.cloudflare.outputs.enabled == 'true'
+        run: npm ci
       - name: Build static site
         if: steps.cloudflare.outputs.enabled == 'true'
         run: npm run build:site
@@ -50,8 +54,11 @@ jobs:
         if: steps.cloudflare.outputs.enabled == 'true'
         run: |
           npm run seed:library
-          npx wrangler d1 migrations apply iptrust-library --remote
-          npx wrangler d1 execute iptrust-library --remote --file .tmp/iptrust-library-seed.sql
+          npx wrangler d1 migrations apply iptrust-library --remote --config edge/wrangler.toml
+          npx wrangler d1 execute iptrust-library --remote --config edge/wrangler.toml --file .tmp/iptrust-library-seed.sql
+      - name: Deploy edge API and media worker
+        if: steps.cloudflare.outputs.enabled == 'true'
+        run: npx wrangler deploy --config edge/wrangler.toml
       - name: Deploy to Cloudflare Pages
         if: steps.cloudflare.outputs.enabled == 'true'
         uses: cloudflare/wrangler-action@v3

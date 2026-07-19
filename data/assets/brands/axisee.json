@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "slug": "axisee",
+  "count": 2,
+  "items": [
+    {
+      "id": "axisee-hero-axisee-brand-hero-3c42c4665693",
+      "ownerType": "owned-ip",
+      "ownerId": "axisee",
+      "role": "hero",
+      "title": "axisee brand hero",
+      "access": "public",
+      "sourcePath": "Axisee/assets/brand-images/axisee-brand-hero.png",
+      "sourceFilename": "axisee-brand-hero.png",
+      "sha256": "3c42c46656933438947f69248397748722fd580e006146938a77fb7aceb76e4f",
+      "mimeType": "image/png",
+      "extension": "png",
+      "bytes": 1921090,
+      "size": "1.83 MB",
+      "width": 1672,
+      "height": 941,
+      "dimensions": "1672 x 941 px",
+      "objectKey": "public/axisee/axisee-hero-axisee-brand-hero-3c42c4665693/3c42c46656933438947f69248397748722fd580e006146938a77fb7aceb76e4f/original.png",
+      "mediaUrl": "https://media.apuch.art/public/axisee/axisee-hero-axisee-brand-hero-3c42c4665693/3c42c46656933438947f69248397748722fd580e006146938a77fb7aceb76e4f/original.png",
+      "legacyUrls": [
+        "/assets/brand-images/axisee.png"
+      ],
+      "status": "ready",
+      "version": 1
+    },
+    {
+      "id": "axisee-logo-axisee-logo-5f1cfebfc5b9",
+      "ownerType": "owned-ip",
+      "ownerId": "axisee",
+      "role": "logo",
+      "title": "axisee logo",
+      "access": "public",
+      "sourcePath": "Axisee/assets/brand-images/axisee-logo.png",
+      "sourceFilename": "axisee-logo.png",
+      "sha256": "5f1cfebfc5b92db2708c2957b47419a456de13e78c20ddab4973056b08cafe3b",
+      "mimeType": "image/png",
+      "extension": "png",
+      "bytes": 35402,
+      "size": "34.6 KB",
+      "width": 1500,
+      "height": 1500,
+      "dimensions": "1500 x 1500 px",
+      "objectKey": "public/axisee/axisee-logo-axisee-logo-5f1cfebfc5b9/5f1cfebfc5b92db2708c2957b47419a456de13e78c20ddab4973056b08cafe3b/original.png",
+      "mediaUrl": "https://media.apuch.art/public/axisee/axisee-logo-axisee-logo-5f1cfebfc5b9/5f1cfebfc5b92db2708c2957b47419a456de13e78c20ddab4973056b08cafe3b/original.png",
+      "legacyUrls": [
+        "/assets/brand-images/axisee-axisee-logo.png"
+      ],
+      "status": "ready",
+      "version": 1
+    }
+  ]
+}

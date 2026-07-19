@@ -1,0 +1,69 @@
+name: Process private assets
+
+on:
+  repository_dispatch:
+    types: [iptrust-asset-process]
+  workflow_dispatch:
+    inputs:
+      asset_id:
+        description: Source asset ID
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: asset-${{ github.event.client_payload.assetId || inputs.asset_id }}
+  cancel-in-progress: false
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      ASSET_ID: ${{ github.event.client_payload.assetId || inputs.asset_id }}
+      IPTRUST_API_URL: https://apuch.art/api/v2
+      IPTRUST_SERVICE_API_KEY: ${{ secrets.IPTRUST_ASSET_PROCESSOR_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install guarded conversion tools
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends clamav ghostscript imagemagick poppler-utils
+      - name: Request private source
+        shell: bash
+        run: |
+          set -euo pipefail
+          META=$(curl --fail --silent --show-error -H "Authorization: Bearer $IPTRUST_SERVICE_API_KEY" "$IPTRUST_API_URL/assets/$ASSET_ID")
+          URL=$(curl --fail --silent --show-error -X POST -H "Authorization: Bearer $IPTRUST_SERVICE_API_KEY" -H 'Content-Type: application/json' --data '{"ttlSeconds":600}' "$IPTRUST_API_URL/assets/$ASSET_ID/sign" | jq -r .url)
+          EXT=$(printf '%s' "$META" | jq -r .extension)
+          curl --fail --silent --show-error --location "$URL" --output "source.$EXT"
+          printf 'SOURCE=source.%s\nEXT=%s\n' "$EXT" "$EXT" >> "$GITHUB_ENV"
+      - name: Validate and scan
+        shell: bash
+        run: |
+          set -euo pipefail
+          file "$SOURCE"
+          sudo freshclam || true
+          clamscan --no-summary "$SOURCE"
+      - name: Convert preview
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p output
+          case "$EXT" in
+            ai|pdf) pdftoppm -f 1 -singlefile -png -r 144 "$SOURCE" output/preview ;;
+            psd) magick "${SOURCE}[0]" -strip -resize '2400x2400>' output/preview.png ;;
+            *) magick "$SOURCE" -strip -resize '2400x2400>' output/preview.png ;;
+          esac
+          test -s output/preview.png
+      - name: Upload public derivative
+        run: node scripts/upload-derived-asset.mjs output/preview.png "$ASSET_ID" preview
+      - name: Report conversion failure
+        if: failure()
+        shell: bash
+        run: |
+          curl --fail --silent --show-error -X POST \
+            -H "Authorization: Bearer $IPTRUST_SERVICE_API_KEY" \
+            -H 'Content-Type: application/json' \
+            -H "Idempotency-Key: conversion-failed-${ASSET_ID}-${GITHUB_RUN_ID}" \
+            --data '{"status":"failed","error":"GitHub conversion workflow failed; inspect run '${GITHUB_RUN_ID}'."}' \
+            "$IPTRUST_API_URL/assets/$ASSET_ID/status"

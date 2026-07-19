@@ -152,14 +152,26 @@
     "en": ""
   },
   "version": {
-    "hash": "a92c3f25ee6c61875e3356cd843a7582eaa8ef00",
-    "shortHash": "a92c3f2",
-    "date": "2026-07-14T16:56:44+08:00",
-    "message": "Show metadata on brand hero assets",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a92c3f25ee6c61875e3356cd843a7582eaa8ef00"
+    "hash": "4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9",
+    "shortHash": "4d8fc4d",
+    "date": "2026-07-19T14:16:14+08:00",
+    "message": "Fix GitHub Pages dependency install",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9"
   },
   "historyUrl": "api/history/boya.json",
   "history": [
+    {
+      "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "shortHash": "eaf4320",
+      "date": "2026-07-19T14:13:21+08:00",
+      "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "sourcePaths": [
+        "config/brands.json",
+        "BOYA",
+        "BOYA/README.md"
+      ]
+    },
     {
       "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
       "shortHash": "b0056d3",
@@ -219,18 +231,6 @@
         "BOYA",
         "BOYA/README.md"
       ]
-    },
-    {
-      "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
-      "shortHash": "4c1ae93",
-      "date": "2026-07-08T03:28:03+08:00",
-      "message": "Update OPC Global primary language",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb",
-      "sourcePaths": [
-        "config/brands.json",
-        "BOYA",
-        "BOYA/README.md"
-      ]
     }
   ],
   "url": "brand.html?brand=boya",
@@ -249,6 +249,7 @@
   ],
   "tokens": [],
   "images": [],
+  "assetManifest": [],
   "adobeAssets": [],
   "logoUrl": "",
   "assetKit": {

@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin · 岁知社 IPTrust</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site-a92c3f2-ce23c28f.css">
-  <link rel="stylesheet" href="assets/editorial.css?v=a92c3f2-ce23c28f">
+  <link rel="stylesheet" href="assets/site-4d8fc4d-05a8f724.css">
+  <link rel="stylesheet" href="assets/editorial.css?v=4d8fc4d-05a8f724">
 </head>
 <body>
   <header class="topbar">
@@ -34,6 +34,7 @@
     </div>
     <form class="api-connect-form" id="apiConnectForm" autocomplete="on">
       <label><span data-i18n="api.key">System API Key</span><input id="apiAdminKey" name="admin_api_key" type="password" autocomplete="current-password" placeholder="System API Key" spellcheck="false"></label>
+      <label class="hidden" id="apiTotpField"><span>Google Authenticator</span><input id="apiTotpCode" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="000000"></label>
       <button class="portal-action" type="submit" id="apiConnectSubmit" data-i18n="api.connect">Connect</button>
     </form>
     <p class="portal-status" id="apiConnectStatus"></p>
@@ -59,29 +60,25 @@
       <p class="muted admin-lead" data-i18n="admin.unlockBody">通过 AI 原生的方式，一站式管理你的品牌和 IP。</p>
       <label><span data-i18n="admin.keyLabel">Key</span><input id="adminKey" type="password" autocomplete="current-password"></label>
       <label><span data-i18n="admin.totpLabel">Google Authenticator</span><input id="totpCode" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" maxlength="8" placeholder="000000"></label>
-      <label><span data-i18n="admin.scopeLabel">IP 权限范围</span><select id="adminScopes" multiple size="4"></select></label>
       <button id="unlockButton" data-i18n="admin.unlockButton">继续</button>
       <p class="notice" id="unlockStatus"></p>
     </section>
     <section class="panel hidden" id="editorPanel">
-      <p class="eyebrow" data-i18n="admin.sync">同步</p>
-      <h1 data-i18n="admin.editTitle">编辑源文件</h1>
+      <p class="eyebrow">API</p>
+      <h1 data-i18n="admin.editTitle">编辑品牌记录</h1>
       <div class="form-grid">
-        <label><span data-i18n="admin.githubToken">Token</span><input id="githubToken" type="password" autocomplete="off" placeholder="GitHub token" data-i18n-placeholder="admin.tokenPlaceholder"></label>
-        <label><span data-i18n="admin.branch">分支</span><input id="branch" value="main"></label>
         <label><span data-i18n="admin.brand">IP</span><select id="brandSelect"></select></label>
-        <label><span data-i18n="admin.file">文件</span><select id="fileSelect"></select></label>
       </div>
       <div class="actions">
-        <button id="loadFile" data-i18n="admin.loadFile">载入</button>
-        <button id="saveFile" data-i18n="admin.saveFile">保存</button>
+        <button id="loadBrand">载入</button>
+        <button id="saveBrand">保存</button>
       </div>
-      <textarea id="editor" spellcheck="false" placeholder="载入文件..." data-i18n-placeholder="admin.editorPlaceholder"></textarea>
-      <label><span data-i18n="admin.commitMessage">提交信息</span><input id="commitMessage" value="Update brand guideline from admin site"></label>
+      <textarea id="editor" spellcheck="false" placeholder="Brand JSON"></textarea>
+      <p class="muted" id="recordVersion"></p>
       <p class="notice" id="editorStatus"></p>
     </section>
   </main>
-  <script src="assets/site-a92c3f2-ce23c28f.js" type="module"></script>
+  <script src="assets/site-4d8fc4d-05a8f724.js" type="module"></script>
   <script src="assets/admin.js" type="module"></script>
 </body>
 </html>

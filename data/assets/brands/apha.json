@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "slug": "apha",
+  "count": 1,
+  "items": [
+    {
+      "id": "apha-hero-apha-brand-hero-fc9496d55971",
+      "ownerType": "owned-ip",
+      "ownerId": "apha",
+      "role": "hero",
+      "title": "apha brand hero",
+      "access": "public",
+      "sourcePath": "APHA/assets/brand-images/apha-brand-hero.png",
+      "sourceFilename": "apha-brand-hero.png",
+      "sha256": "fc9496d5597101a9cacd136c43a3ecd5be168fe488fff2abb925fb8e1de061bc",
+      "mimeType": "image/png",
+      "extension": "png",
+      "bytes": 2233911,
+      "size": "2.13 MB",
+      "width": 1672,
+      "height": 941,
+      "dimensions": "1672 x 941 px",
+      "objectKey": "public/apha/apha-hero-apha-brand-hero-fc9496d55971/fc9496d5597101a9cacd136c43a3ecd5be168fe488fff2abb925fb8e1de061bc/original.png",
+      "mediaUrl": "https://media.apuch.art/public/apha/apha-hero-apha-brand-hero-fc9496d55971/fc9496d5597101a9cacd136c43a3ecd5be168fe488fff2abb925fb8e1de061bc/original.png",
+      "legacyUrls": [
+        "/assets/brand-images/apha.png"
+      ],
+      "status": "ready",
+      "version": 1
+    }
+  ]
+}

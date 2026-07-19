@@ -156,14 +156,26 @@
     }
   },
   "version": {
-    "hash": "a92c3f25ee6c61875e3356cd843a7582eaa8ef00",
-    "shortHash": "a92c3f2",
-    "date": "2026-07-14T16:56:44+08:00",
-    "message": "Show metadata on brand hero assets",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a92c3f25ee6c61875e3356cd843a7582eaa8ef00"
+    "hash": "4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9",
+    "shortHash": "4d8fc4d",
+    "date": "2026-07-19T14:16:14+08:00",
+    "message": "Fix GitHub Pages dependency install",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9"
   },
   "historyUrl": "api/history/sidera.json",
   "history": [
+    {
+      "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "shortHash": "eaf4320",
+      "date": "2026-07-19T14:13:21+08:00",
+      "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "sourcePaths": [
+        "config/brands.json",
+        "Sidera",
+        "Sidera/sidera_design.md"
+      ]
+    },
     {
       "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
       "shortHash": "b0056d3",
@@ -223,18 +235,6 @@
         "Sidera",
         "Sidera/sidera_design.md"
       ]
-    },
-    {
-      "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
-      "shortHash": "4c1ae93",
-      "date": "2026-07-08T03:28:03+08:00",
-      "message": "Update OPC Global primary language",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb",
-      "sourcePaths": [
-        "config/brands.json",
-        "Sidera",
-        "Sidera/sidera_design.md"
-      ]
     }
   ],
   "url": "brand.html?brand=sidera",
@@ -254,24 +254,54 @@
   "tokens": [],
   "images": [
     {
+      "assetId": "sidera-hero-sidera-brand-hero-3501c8d23cb5",
       "path": "Sidera/assets/brand-images/sidera-brand-hero.png",
-      "sitePath": "assets/brand-images/sidera.png",
-      "title": "Sidera Brand Hero",
+      "sitePath": "https://media.apuch.art/public/sidera/sidera-hero-sidera-brand-hero-3501c8d23cb5/3501c8d23cb5507005b8d8dea3904e72dbc849783b039a90406b976f7fbf7672/original.png",
+      "title": "sidera brand hero",
       "format": "PNG",
       "bytes": 2318145,
       "size": "2.21 MB",
       "width": 1672,
       "height": 941,
-      "dimensions": "1672 x 941 px"
+      "dimensions": "1672 x 941 px",
+      "sha256": "3501c8d23cb5507005b8d8dea3904e72dbc849783b039a90406b976f7fbf7672",
+      "access": "public"
+    }
+  ],
+  "assetManifest": [
+    {
+      "id": "sidera-hero-sidera-brand-hero-3501c8d23cb5",
+      "ownerType": "owned-ip",
+      "ownerId": "sidera",
+      "role": "hero",
+      "title": "sidera brand hero",
+      "access": "public",
+      "sourcePath": "Sidera/assets/brand-images/sidera-brand-hero.png",
+      "sourceFilename": "sidera-brand-hero.png",
+      "sha256": "3501c8d23cb5507005b8d8dea3904e72dbc849783b039a90406b976f7fbf7672",
+      "mimeType": "image/png",
+      "extension": "png",
+      "bytes": 2318145,
+      "size": "2.21 MB",
+      "width": 1672,
+      "height": 941,
+      "dimensions": "1672 x 941 px",
+      "objectKey": "public/sidera/sidera-hero-sidera-brand-hero-3501c8d23cb5/3501c8d23cb5507005b8d8dea3904e72dbc849783b039a90406b976f7fbf7672/original.png",
+      "mediaUrl": "https://media.apuch.art/public/sidera/sidera-hero-sidera-brand-hero-3501c8d23cb5/3501c8d23cb5507005b8d8dea3904e72dbc849783b039a90406b976f7fbf7672/original.png",
+      "legacyUrls": [
+        "/assets/brand-images/sidera.png"
+      ],
+      "status": "ready",
+      "version": 1
     }
   ],
   "adobeAssets": [],
-  "logoUrl": "assets/brand-images/sidera.png",
+  "logoUrl": "https://media.apuch.art/public/sidera/sidera-hero-sidera-brand-hero-3501c8d23cb5/3501c8d23cb5507005b8d8dea3904e72dbc849783b039a90406b976f7fbf7672/original.png",
   "assetKit": {
     "assetKey": "sidera",
     "endpoints": {
       "brand": "api/brands/sidera.json",
-      "logo": "assets/brand-images/sidera.png",
+      "logo": "https://media.apuch.art/public/sidera/sidera-hero-sidera-brand-hero-3501c8d23cb5/3501c8d23cb5507005b8d8dea3904e72dbc849783b039a90406b976f7fbf7672/original.png",
       "images": "api/brands/sidera.json#images",
       "adobe": "",
       "tokens": "api/brands/sidera.json#tokens",
@@ -317,15 +347,18 @@
       ],
       "images": [
         {
+          "assetId": "sidera-hero-sidera-brand-hero-3501c8d23cb5",
           "path": "Sidera/assets/brand-images/sidera-brand-hero.png",
-          "sitePath": "assets/brand-images/sidera.png",
-          "title": "Sidera Brand Hero",
+          "sitePath": "https://media.apuch.art/public/sidera/sidera-hero-sidera-brand-hero-3501c8d23cb5/3501c8d23cb5507005b8d8dea3904e72dbc849783b039a90406b976f7fbf7672/original.png",
+          "title": "sidera brand hero",
           "format": "PNG",
           "bytes": 2318145,
           "size": "2.21 MB",
           "width": 1672,
           "height": 941,
-          "dimensions": "1672 x 941 px"
+          "dimensions": "1672 x 941 px",
+          "sha256": "3501c8d23cb5507005b8d8dea3904e72dbc849783b039a90406b976f7fbf7672",
+          "access": "public"
         }
       ]
     }
@@ -370,15 +403,18 @@
     ],
     "images": [
       {
+        "assetId": "sidera-hero-sidera-brand-hero-3501c8d23cb5",
         "path": "Sidera/assets/brand-images/sidera-brand-hero.png",
-        "sitePath": "assets/brand-images/sidera.png",
-        "title": "Sidera Brand Hero",
+        "sitePath": "https://media.apuch.art/public/sidera/sidera-hero-sidera-brand-hero-3501c8d23cb5/3501c8d23cb5507005b8d8dea3904e72dbc849783b039a90406b976f7fbf7672/original.png",
+        "title": "sidera brand hero",
         "format": "PNG",
         "bytes": 2318145,
         "size": "2.21 MB",
         "width": 1672,
         "height": 941,
-        "dimensions": "1672 x 941 px"
+        "dimensions": "1672 x 941 px",
+        "sha256": "3501c8d23cb5507005b8d8dea3904e72dbc849783b039a90406b976f7fbf7672",
+        "access": "public"
       }
     ]
   },

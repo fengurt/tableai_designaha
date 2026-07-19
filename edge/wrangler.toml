@@ -1,0 +1,118 @@
+name = "iptrust-edge"
+main = "src/index.js"
+compatibility_date = "2026-05-03"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+
+routes = [
+  { pattern = "edge.apuch.art", custom_domain = true },
+  { pattern = "media.apuch.art", custom_domain = true }
+]
+
+[observability]
+enabled = true
+head_sampling_rate = 1
+
+[ai]
+binding = "AI"
+
+[images]
+binding = "IMAGES"
+
+[cache]
+enabled = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "iptrust-library"
+database_id = "0e2047ba-5801-41c9-9cdd-14259027ac9f"
+migrations_dir = "../migrations"
+
+[[r2_buckets]]
+binding = "ORIGINALS"
+bucket_name = "iptrust-media"
+
+[[r2_buckets]]
+binding = "PREVIEWS"
+bucket_name = "iptrust-media-preview"
+
+[[vectorize]]
+binding = "VECTORIZE"
+index_name = "iptrust-search-v1"
+
+[[queues.producers]]
+binding = "WRITE_SYNC"
+queue = "iptrust-write-sync"
+
+[[queues.producers]]
+binding = "PROCESSING"
+queue = "iptrust-processing"
+
+[[queues.consumers]]
+queue = "iptrust-write-sync"
+max_batch_size = 10
+max_batch_timeout = 5
+max_retries = 5
+dead_letter_queue = "iptrust-dlq"
+max_concurrency = 1
+
+[[queues.consumers]]
+queue = "iptrust-processing"
+max_batch_size = 10
+max_batch_timeout = 5
+max_retries = 5
+dead_letter_queue = "iptrust-dlq"
+
+[[queues.consumers]]
+queue = "iptrust-dlq"
+max_batch_size = 10
+max_batch_timeout = 5
+max_retries = 2
+max_concurrency = 1
+
+[[analytics_engine_datasets]]
+binding = "METRICS"
+dataset = "iptrust_edge_metrics"
+
+[[ratelimits]]
+name = "PUBLIC_LIMITER"
+namespace_id = "7801001"
+  [ratelimits.simple]
+  limit = 120
+  period = 60
+
+[[ratelimits]]
+name = "AUTH_LIMITER"
+namespace_id = "7801002"
+  [ratelimits.simple]
+  limit = 600
+  period = 60
+
+[[ratelimits]]
+name = "WRITE_LIMITER"
+namespace_id = "7801003"
+  [ratelimits.simple]
+  limit = 120
+  period = 60
+
+[[ratelimits]]
+name = "LOGIN_LIMITER"
+namespace_id = "7801004"
+  [ratelimits.simple]
+  limit = 10
+  period = 60
+
+[triggers]
+crons = ["*/5 * * * *", "17 3 * * *"]
+
+[vars]
+PUBLIC_SITE_URL = "https://apuch.art"
+PAGES_ORIGIN = "https://tableai-designaha.pages.dev"
+MEDIA_BASE_URL = "https://media.apuch.art"
+GITHUB_OWNER = "fengurt"
+GITHUB_REPO = "tableai_designaha"
+GITHUB_BRANCH = "main"
+SESSION_TTL_SECONDS = "604800"
+SIGNED_URL_TTL_SECONDS = "600"
+MAX_UPLOAD_BYTES = "524288000"
+SEMANTIC_SEARCH_ENABLED = "true"

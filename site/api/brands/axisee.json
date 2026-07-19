@@ -152,14 +152,26 @@
     "en": ""
   },
   "version": {
-    "hash": "a92c3f25ee6c61875e3356cd843a7582eaa8ef00",
-    "shortHash": "a92c3f2",
-    "date": "2026-07-14T16:56:44+08:00",
-    "message": "Show metadata on brand hero assets",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a92c3f25ee6c61875e3356cd843a7582eaa8ef00"
+    "hash": "4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9",
+    "shortHash": "4d8fc4d",
+    "date": "2026-07-19T14:16:14+08:00",
+    "message": "Fix GitHub Pages dependency install",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9"
   },
   "historyUrl": "api/history/axisee.json",
   "history": [
+    {
+      "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "shortHash": "eaf4320",
+      "date": "2026-07-19T14:13:21+08:00",
+      "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "sourcePaths": [
+        "config/brands.json",
+        "Axisee",
+        "Axisee/axisee_design.md"
+      ]
+    },
     {
       "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
       "shortHash": "b0056d3",
@@ -219,18 +231,6 @@
         "Axisee",
         "Axisee/axisee_design.md"
       ]
-    },
-    {
-      "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
-      "shortHash": "4c1ae93",
-      "date": "2026-07-08T03:28:03+08:00",
-      "message": "Update OPC Global primary language",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb",
-      "sourcePaths": [
-        "config/brands.json",
-        "Axisee",
-        "Axisee/axisee_design.md"
-      ]
     }
   ],
   "url": "brand.html?brand=axisee",
@@ -250,35 +250,93 @@
   "tokens": [],
   "images": [
     {
+      "assetId": "axisee-hero-axisee-brand-hero-3c42c4665693",
       "path": "Axisee/assets/brand-images/axisee-brand-hero.png",
-      "sitePath": "assets/brand-images/axisee.png",
-      "title": "Axisee Brand Hero",
+      "sitePath": "https://media.apuch.art/public/axisee/axisee-hero-axisee-brand-hero-3c42c4665693/3c42c46656933438947f69248397748722fd580e006146938a77fb7aceb76e4f/original.png",
+      "title": "axisee brand hero",
       "format": "PNG",
       "bytes": 1921090,
       "size": "1.83 MB",
       "width": 1672,
       "height": 941,
-      "dimensions": "1672 x 941 px"
+      "dimensions": "1672 x 941 px",
+      "sha256": "3c42c46656933438947f69248397748722fd580e006146938a77fb7aceb76e4f",
+      "access": "public"
     },
     {
+      "assetId": "axisee-logo-axisee-logo-5f1cfebfc5b9",
       "path": "Axisee/assets/brand-images/axisee-logo.png",
-      "sitePath": "assets/brand-images/axisee-axisee-logo.png",
-      "title": "Axisee Logo",
+      "sitePath": "https://media.apuch.art/public/axisee/axisee-logo-axisee-logo-5f1cfebfc5b9/5f1cfebfc5b92db2708c2957b47419a456de13e78c20ddab4973056b08cafe3b/original.png",
+      "title": "axisee logo",
       "format": "PNG",
       "bytes": 35402,
       "size": "34.6 KB",
       "width": 1500,
       "height": 1500,
-      "dimensions": "1500 x 1500 px"
+      "dimensions": "1500 x 1500 px",
+      "sha256": "5f1cfebfc5b92db2708c2957b47419a456de13e78c20ddab4973056b08cafe3b",
+      "access": "public"
+    }
+  ],
+  "assetManifest": [
+    {
+      "id": "axisee-hero-axisee-brand-hero-3c42c4665693",
+      "ownerType": "owned-ip",
+      "ownerId": "axisee",
+      "role": "hero",
+      "title": "axisee brand hero",
+      "access": "public",
+      "sourcePath": "Axisee/assets/brand-images/axisee-brand-hero.png",
+      "sourceFilename": "axisee-brand-hero.png",
+      "sha256": "3c42c46656933438947f69248397748722fd580e006146938a77fb7aceb76e4f",
+      "mimeType": "image/png",
+      "extension": "png",
+      "bytes": 1921090,
+      "size": "1.83 MB",
+      "width": 1672,
+      "height": 941,
+      "dimensions": "1672 x 941 px",
+      "objectKey": "public/axisee/axisee-hero-axisee-brand-hero-3c42c4665693/3c42c46656933438947f69248397748722fd580e006146938a77fb7aceb76e4f/original.png",
+      "mediaUrl": "https://media.apuch.art/public/axisee/axisee-hero-axisee-brand-hero-3c42c4665693/3c42c46656933438947f69248397748722fd580e006146938a77fb7aceb76e4f/original.png",
+      "legacyUrls": [
+        "/assets/brand-images/axisee.png"
+      ],
+      "status": "ready",
+      "version": 1
+    },
+    {
+      "id": "axisee-logo-axisee-logo-5f1cfebfc5b9",
+      "ownerType": "owned-ip",
+      "ownerId": "axisee",
+      "role": "logo",
+      "title": "axisee logo",
+      "access": "public",
+      "sourcePath": "Axisee/assets/brand-images/axisee-logo.png",
+      "sourceFilename": "axisee-logo.png",
+      "sha256": "5f1cfebfc5b92db2708c2957b47419a456de13e78c20ddab4973056b08cafe3b",
+      "mimeType": "image/png",
+      "extension": "png",
+      "bytes": 35402,
+      "size": "34.6 KB",
+      "width": 1500,
+      "height": 1500,
+      "dimensions": "1500 x 1500 px",
+      "objectKey": "public/axisee/axisee-logo-axisee-logo-5f1cfebfc5b9/5f1cfebfc5b92db2708c2957b47419a456de13e78c20ddab4973056b08cafe3b/original.png",
+      "mediaUrl": "https://media.apuch.art/public/axisee/axisee-logo-axisee-logo-5f1cfebfc5b9/5f1cfebfc5b92db2708c2957b47419a456de13e78c20ddab4973056b08cafe3b/original.png",
+      "legacyUrls": [
+        "/assets/brand-images/axisee-axisee-logo.png"
+      ],
+      "status": "ready",
+      "version": 1
     }
   ],
   "adobeAssets": [],
-  "logoUrl": "assets/brand-images/axisee-axisee-logo.png",
+  "logoUrl": "https://media.apuch.art/public/axisee/axisee-logo-axisee-logo-5f1cfebfc5b9/5f1cfebfc5b92db2708c2957b47419a456de13e78c20ddab4973056b08cafe3b/original.png",
   "assetKit": {
     "assetKey": "axisee",
     "endpoints": {
       "brand": "api/brands/axisee.json",
-      "logo": "assets/brand-images/axisee-axisee-logo.png",
+      "logo": "https://media.apuch.art/public/axisee/axisee-logo-axisee-logo-5f1cfebfc5b9/5f1cfebfc5b92db2708c2957b47419a456de13e78c20ddab4973056b08cafe3b/original.png",
       "images": "api/brands/axisee.json#images",
       "adobe": "",
       "tokens": "api/brands/axisee.json#tokens",
@@ -324,26 +382,32 @@
       ],
       "images": [
         {
+          "assetId": "axisee-hero-axisee-brand-hero-3c42c4665693",
           "path": "Axisee/assets/brand-images/axisee-brand-hero.png",
-          "sitePath": "assets/brand-images/axisee.png",
-          "title": "Axisee Brand Hero",
+          "sitePath": "https://media.apuch.art/public/axisee/axisee-hero-axisee-brand-hero-3c42c4665693/3c42c46656933438947f69248397748722fd580e006146938a77fb7aceb76e4f/original.png",
+          "title": "axisee brand hero",
           "format": "PNG",
           "bytes": 1921090,
           "size": "1.83 MB",
           "width": 1672,
           "height": 941,
-          "dimensions": "1672 x 941 px"
+          "dimensions": "1672 x 941 px",
+          "sha256": "3c42c46656933438947f69248397748722fd580e006146938a77fb7aceb76e4f",
+          "access": "public"
         },
         {
+          "assetId": "axisee-logo-axisee-logo-5f1cfebfc5b9",
           "path": "Axisee/assets/brand-images/axisee-logo.png",
-          "sitePath": "assets/brand-images/axisee-axisee-logo.png",
-          "title": "Axisee Logo",
+          "sitePath": "https://media.apuch.art/public/axisee/axisee-logo-axisee-logo-5f1cfebfc5b9/5f1cfebfc5b92db2708c2957b47419a456de13e78c20ddab4973056b08cafe3b/original.png",
+          "title": "axisee logo",
           "format": "PNG",
           "bytes": 35402,
           "size": "34.6 KB",
           "width": 1500,
           "height": 1500,
-          "dimensions": "1500 x 1500 px"
+          "dimensions": "1500 x 1500 px",
+          "sha256": "5f1cfebfc5b92db2708c2957b47419a456de13e78c20ddab4973056b08cafe3b",
+          "access": "public"
         }
       ]
     }
@@ -388,26 +452,32 @@
     ],
     "images": [
       {
+        "assetId": "axisee-hero-axisee-brand-hero-3c42c4665693",
         "path": "Axisee/assets/brand-images/axisee-brand-hero.png",
-        "sitePath": "assets/brand-images/axisee.png",
-        "title": "Axisee Brand Hero",
+        "sitePath": "https://media.apuch.art/public/axisee/axisee-hero-axisee-brand-hero-3c42c4665693/3c42c46656933438947f69248397748722fd580e006146938a77fb7aceb76e4f/original.png",
+        "title": "axisee brand hero",
         "format": "PNG",
         "bytes": 1921090,
         "size": "1.83 MB",
         "width": 1672,
         "height": 941,
-        "dimensions": "1672 x 941 px"
+        "dimensions": "1672 x 941 px",
+        "sha256": "3c42c46656933438947f69248397748722fd580e006146938a77fb7aceb76e4f",
+        "access": "public"
       },
       {
+        "assetId": "axisee-logo-axisee-logo-5f1cfebfc5b9",
         "path": "Axisee/assets/brand-images/axisee-logo.png",
-        "sitePath": "assets/brand-images/axisee-axisee-logo.png",
-        "title": "Axisee Logo",
+        "sitePath": "https://media.apuch.art/public/axisee/axisee-logo-axisee-logo-5f1cfebfc5b9/5f1cfebfc5b92db2708c2957b47419a456de13e78c20ddab4973056b08cafe3b/original.png",
+        "title": "axisee logo",
         "format": "PNG",
         "bytes": 35402,
         "size": "34.6 KB",
         "width": 1500,
         "height": 1500,
-        "dimensions": "1500 x 1500 px"
+        "dimensions": "1500 x 1500 px",
+        "sha256": "5f1cfebfc5b92db2708c2957b47419a456de13e78c20ddab4973056b08cafe3b",
+        "access": "public"
       }
     ]
   },

@@ -1,5 +1,19 @@
 [
   {
+    "hash": "4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9",
+    "shortHash": "4d8fc4d",
+    "date": "2026-07-19T14:16:14+08:00",
+    "message": "Fix GitHub Pages dependency install",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9"
+  },
+  {
+    "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+    "shortHash": "eaf4320",
+    "date": "2026-07-19T14:13:21+08:00",
+    "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86"
+  },
+  {
     "hash": "a92c3f25ee6c61875e3356cd843a7582eaa8ef00",
     "shortHash": "a92c3f2",
     "date": "2026-07-14T16:56:44+08:00",
@@ -68,75 +82,5 @@
     "date": "2026-07-10T22:06:39+08:00",
     "message": "Redesign IPTrust and publish brand assets",
     "url": "https://github.com/fengurt/tableai_designaha/commit/307513830db51470695adf67b4da3df8b2d669bb"
-  },
-  {
-    "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
-    "shortHash": "370e33f",
-    "date": "2026-07-10T21:20:51+08:00",
-    "message": "Render IP guidelines as web content",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
-  },
-  {
-    "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
-    "shortHash": "a5bf7cf",
-    "date": "2026-07-10T20:21:24+08:00",
-    "message": "Replace contrast-template brand copy",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9"
-  },
-  {
-    "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
-    "shortHash": "ed33a8b",
-    "date": "2026-07-10T18:44:20+08:00",
-    "message": "Add Shanrenjing journey safety IP",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c"
-  },
-  {
-    "hash": "4e6ab2e053120e68f126313d2086b9b75778e321",
-    "shortHash": "4e6ab2e",
-    "date": "2026-07-10T18:11:43+08:00",
-    "message": "Serve IP Evolution as an extensionless page",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4e6ab2e053120e68f126313d2086b9b75778e321"
-  },
-  {
-    "hash": "319e710f6da8db9126f35426cdb91dd34f4123f9",
-    "shortHash": "319e710",
-    "date": "2026-07-10T18:09:52+08:00",
-    "message": "Fix IP Evolution route and headline wrapping",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/319e710f6da8db9126f35426cdb91dd34f4123f9"
-  },
-  {
-    "hash": "afdbfd60ad49c13eb45a5db51441388d4b06acab",
-    "shortHash": "afdbfd6",
-    "date": "2026-07-10T16:41:28+08:00",
-    "message": "Route IP Evolution on custom domain",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/afdbfd60ad49c13eb45a5db51441388d4b06acab"
-  },
-  {
-    "hash": "454f46c77cdaec43639c5c90dba26294ef82f33f",
-    "shortHash": "454f46c",
-    "date": "2026-07-10T16:39:14+08:00",
-    "message": "Separate IP Evolution page from agent endpoint",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/454f46c77cdaec43639c5c90dba26294ef82f33f"
-  },
-  {
-    "hash": "801b9ad39c9643fc7cf8ebe273e6bc67f56b3a01",
-    "shortHash": "801b9ad",
-    "date": "2026-07-10T16:36:44+08:00",
-    "message": "Add IP Evolution landing experience",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/801b9ad39c9643fc7cf8ebe273e6bc67f56b3a01"
-  },
-  {
-    "hash": "25149f231de7776fb274ed1a990ca65b042375cc",
-    "shortHash": "25149f2",
-    "date": "2026-07-08T06:06:05+08:00",
-    "message": "Improve System API input for password manager autofill",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/25149f231de7776fb274ed1a990ca65b042375cc"
-  },
-  {
-    "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
-    "shortHash": "cd0ea58",
-    "date": "2026-07-08T04:12:48+08:00",
-    "message": "Refine hero index labels",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb"
   }
 ]

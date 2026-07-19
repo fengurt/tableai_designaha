@@ -152,14 +152,25 @@
     "en": ""
   },
   "version": {
-    "hash": "a92c3f25ee6c61875e3356cd843a7582eaa8ef00",
-    "shortHash": "a92c3f2",
-    "date": "2026-07-14T16:56:44+08:00",
-    "message": "Show metadata on brand hero assets",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a92c3f25ee6c61875e3356cd843a7582eaa8ef00"
+    "hash": "4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9",
+    "shortHash": "4d8fc4d",
+    "date": "2026-07-19T14:16:14+08:00",
+    "message": "Fix GitHub Pages dependency install",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9"
   },
   "historyUrl": "api/history/opcglobal.json",
   "history": [
+    {
+      "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "shortHash": "eaf4320",
+      "date": "2026-07-19T14:13:21+08:00",
+      "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "sourcePaths": [
+        "config/brands.json",
+        "OPCGLOBAL"
+      ]
+    },
     {
       "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
       "shortHash": "b0056d3",
@@ -214,17 +225,6 @@
         "config/brands.json",
         "OPCGLOBAL"
       ]
-    },
-    {
-      "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
-      "shortHash": "4c1ae93",
-      "date": "2026-07-08T03:28:03+08:00",
-      "message": "Update OPC Global primary language",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb",
-      "sourcePaths": [
-        "config/brands.json",
-        "OPCGLOBAL"
-      ]
     }
   ],
   "url": "brand.html?brand=opcglobal",
@@ -234,24 +234,54 @@
   "tokens": [],
   "images": [
     {
+      "assetId": "opcglobal-hero-opcglobal-brand-hero-8351935e9abc",
       "path": "OPCGLOBAL/assets/brand-images/opcglobal-brand-hero.png",
-      "sitePath": "assets/brand-images/opcglobal.png",
-      "title": "Opcglobal Brand Hero",
+      "sitePath": "https://media.apuch.art/public/opcglobal/opcglobal-hero-opcglobal-brand-hero-8351935e9abc/8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40/original.png",
+      "title": "opcglobal brand hero",
       "format": "PNG",
       "bytes": 1923799,
       "size": "1.83 MB",
       "width": 1672,
       "height": 941,
-      "dimensions": "1672 x 941 px"
+      "dimensions": "1672 x 941 px",
+      "sha256": "8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40",
+      "access": "public"
+    }
+  ],
+  "assetManifest": [
+    {
+      "id": "opcglobal-hero-opcglobal-brand-hero-8351935e9abc",
+      "ownerType": "owned-ip",
+      "ownerId": "opcglobal",
+      "role": "hero",
+      "title": "opcglobal brand hero",
+      "access": "public",
+      "sourcePath": "OPCGLOBAL/assets/brand-images/opcglobal-brand-hero.png",
+      "sourceFilename": "opcglobal-brand-hero.png",
+      "sha256": "8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40",
+      "mimeType": "image/png",
+      "extension": "png",
+      "bytes": 1923799,
+      "size": "1.83 MB",
+      "width": 1672,
+      "height": 941,
+      "dimensions": "1672 x 941 px",
+      "objectKey": "public/opcglobal/opcglobal-hero-opcglobal-brand-hero-8351935e9abc/8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40/original.png",
+      "mediaUrl": "https://media.apuch.art/public/opcglobal/opcglobal-hero-opcglobal-brand-hero-8351935e9abc/8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40/original.png",
+      "legacyUrls": [
+        "/assets/brand-images/opcglobal.png"
+      ],
+      "status": "ready",
+      "version": 1
     }
   ],
   "adobeAssets": [],
-  "logoUrl": "assets/brand-images/opcglobal.png",
+  "logoUrl": "https://media.apuch.art/public/opcglobal/opcglobal-hero-opcglobal-brand-hero-8351935e9abc/8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40/original.png",
   "assetKit": {
     "assetKey": "opcglobal",
     "endpoints": {
       "brand": "api/brands/opcglobal.json",
-      "logo": "assets/brand-images/opcglobal.png",
+      "logo": "https://media.apuch.art/public/opcglobal/opcglobal-hero-opcglobal-brand-hero-8351935e9abc/8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40/original.png",
       "images": "api/brands/opcglobal.json#images",
       "adobe": "",
       "tokens": "api/brands/opcglobal.json#tokens",
@@ -297,15 +327,18 @@
       ],
       "images": [
         {
+          "assetId": "opcglobal-hero-opcglobal-brand-hero-8351935e9abc",
           "path": "OPCGLOBAL/assets/brand-images/opcglobal-brand-hero.png",
-          "sitePath": "assets/brand-images/opcglobal.png",
-          "title": "Opcglobal Brand Hero",
+          "sitePath": "https://media.apuch.art/public/opcglobal/opcglobal-hero-opcglobal-brand-hero-8351935e9abc/8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40/original.png",
+          "title": "opcglobal brand hero",
           "format": "PNG",
           "bytes": 1923799,
           "size": "1.83 MB",
           "width": 1672,
           "height": 941,
-          "dimensions": "1672 x 941 px"
+          "dimensions": "1672 x 941 px",
+          "sha256": "8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40",
+          "access": "public"
         }
       ]
     }
@@ -350,15 +383,18 @@
     ],
     "images": [
       {
+        "assetId": "opcglobal-hero-opcglobal-brand-hero-8351935e9abc",
         "path": "OPCGLOBAL/assets/brand-images/opcglobal-brand-hero.png",
-        "sitePath": "assets/brand-images/opcglobal.png",
-        "title": "Opcglobal Brand Hero",
+        "sitePath": "https://media.apuch.art/public/opcglobal/opcglobal-hero-opcglobal-brand-hero-8351935e9abc/8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40/original.png",
+        "title": "opcglobal brand hero",
         "format": "PNG",
         "bytes": 1923799,
         "size": "1.83 MB",
         "width": 1672,
         "height": 941,
-        "dimensions": "1672 x 941 px"
+        "dimensions": "1672 x 941 px",
+        "sha256": "8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40",
+        "access": "public"
       }
     ]
   },

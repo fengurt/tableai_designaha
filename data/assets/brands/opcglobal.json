@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "slug": "opcglobal",
+  "count": 1,
+  "items": [
+    {
+      "id": "opcglobal-hero-opcglobal-brand-hero-8351935e9abc",
+      "ownerType": "owned-ip",
+      "ownerId": "opcglobal",
+      "role": "hero",
+      "title": "opcglobal brand hero",
+      "access": "public",
+      "sourcePath": "OPCGLOBAL/assets/brand-images/opcglobal-brand-hero.png",
+      "sourceFilename": "opcglobal-brand-hero.png",
+      "sha256": "8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40",
+      "mimeType": "image/png",
+      "extension": "png",
+      "bytes": 1923799,
+      "size": "1.83 MB",
+      "width": 1672,
+      "height": 941,
+      "dimensions": "1672 x 941 px",
+      "objectKey": "public/opcglobal/opcglobal-hero-opcglobal-brand-hero-8351935e9abc/8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40/original.png",
+      "mediaUrl": "https://media.apuch.art/public/opcglobal/opcglobal-hero-opcglobal-brand-hero-8351935e9abc/8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40/original.png",
+      "legacyUrls": [
+        "/assets/brand-images/opcglobal.png"
+      ],
+      "status": "ready",
+      "version": 1
+    }
+  ]
+}

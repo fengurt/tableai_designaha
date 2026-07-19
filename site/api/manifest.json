@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-19T06:06:59.256Z",
+  "generatedAt": "2026-07-19T13:20:29.928Z",
   "version": {
-    "hash": "a92c3f25ee6c61875e3356cd843a7582eaa8ef00",
-    "shortHash": "a92c3f2",
-    "date": "2026-07-14T16:56:44+08:00",
-    "message": "Show metadata on brand hero assets",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a92c3f25ee6c61875e3356cd843a7582eaa8ef00"
+    "hash": "4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9",
+    "shortHash": "4d8fc4d",
+    "date": "2026-07-19T14:16:14+08:00",
+    "message": "Fix GitHub Pages dependency install",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9"
   },
   "brands": [
     {
@@ -337,11 +337,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "a92c3f25ee6c61875e3356cd843a7582eaa8ef00",
-      "shortHash": "a92c3f2",
-      "date": "2026-07-14T16:56:44+08:00",
-      "message": "Show metadata on brand hero assets",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/a92c3f25ee6c61875e3356cd843a7582eaa8ef00"
+      "hash": "4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9",
+      "shortHash": "4d8fc4d",
+      "date": "2026-07-19T14:16:14+08:00",
+      "message": "Fix GitHub Pages dependency install",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9"
     }
   },
   "sync": {

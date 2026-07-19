@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "slug": "sidera",
+  "count": 1,
+  "items": [
+    {
+      "id": "sidera-hero-sidera-brand-hero-3501c8d23cb5",
+      "ownerType": "owned-ip",
+      "ownerId": "sidera",
+      "role": "hero",
+      "title": "sidera brand hero",
+      "access": "public",
+      "sourcePath": "Sidera/assets/brand-images/sidera-brand-hero.png",
+      "sourceFilename": "sidera-brand-hero.png",
+      "sha256": "3501c8d23cb5507005b8d8dea3904e72dbc849783b039a90406b976f7fbf7672",
+      "mimeType": "image/png",
+      "extension": "png",
+      "bytes": 2318145,
+      "size": "2.21 MB",
+      "width": 1672,
+      "height": 941,
+      "dimensions": "1672 x 941 px",
+      "objectKey": "public/sidera/sidera-hero-sidera-brand-hero-3501c8d23cb5/3501c8d23cb5507005b8d8dea3904e72dbc849783b039a90406b976f7fbf7672/original.png",
+      "mediaUrl": "https://media.apuch.art/public/sidera/sidera-hero-sidera-brand-hero-3501c8d23cb5/3501c8d23cb5507005b8d8dea3904e72dbc849783b039a90406b976f7fbf7672/original.png",
+      "legacyUrls": [
+        "/assets/brand-images/sidera.png"
+      ],
+      "status": "ready",
+      "version": 1
+    }
+  ]
+}

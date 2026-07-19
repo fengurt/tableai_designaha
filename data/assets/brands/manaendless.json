@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "slug": "manaendless",
+  "count": 1,
+  "items": [
+    {
+      "id": "manaendless-hero-manaendless-brand-hero-58a52f2e1748",
+      "ownerType": "owned-ip",
+      "ownerId": "manaendless",
+      "role": "hero",
+      "title": "manaendless brand hero",
+      "access": "public",
+      "sourcePath": "MANAENDLESS/assets/brand-images/manaendless-brand-hero.png",
+      "sourceFilename": "manaendless-brand-hero.png",
+      "sha256": "58a52f2e174817fe795761cd6688f944bd266782a5468c7448d70ed11b40952c",
+      "mimeType": "image/png",
+      "extension": "png",
+      "bytes": 1890717,
+      "size": "1.80 MB",
+      "width": 1672,
+      "height": 941,
+      "dimensions": "1672 x 941 px",
+      "objectKey": "public/manaendless/manaendless-hero-manaendless-brand-hero-58a52f2e1748/58a52f2e174817fe795761cd6688f944bd266782a5468c7448d70ed11b40952c/original.png",
+      "mediaUrl": "https://media.apuch.art/public/manaendless/manaendless-hero-manaendless-brand-hero-58a52f2e1748/58a52f2e174817fe795761cd6688f944bd266782a5468c7448d70ed11b40952c/original.png",
+      "legacyUrls": [
+        "/assets/brand-images/manaendless.png"
+      ],
+      "status": "ready",
+      "version": 1
+    }
+  ]
+}

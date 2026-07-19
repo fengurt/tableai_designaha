@@ -7,8 +7,8 @@
   <title>IP进化论 | 岁知社 IPTrust</title>
   <meta name="description" content="IP进化论把品牌架构、内核、表达、资产与治理连接成可持续更新的系统。">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site-a92c3f2-ce23c28f.css">
-  <link rel="stylesheet" href="assets/editorial.css?v=a92c3f2-ce23c28f">
+  <link rel="stylesheet" href="assets/site-4d8fc4d-05a8f724.css">
+  <link rel="stylesheet" href="assets/editorial.css?v=4d8fc4d-05a8f724">
 </head>
 <body class="ip-system-page">
   <header class="topbar">
@@ -32,6 +32,7 @@
     </div>
     <form class="api-connect-form" id="apiConnectForm" autocomplete="on">
       <label><span data-i18n="api.key">System API Key</span><input id="apiAdminKey" name="admin_api_key" type="password" autocomplete="current-password" placeholder="System API Key" spellcheck="false"></label>
+      <label class="hidden" id="apiTotpField"><span>Google Authenticator</span><input id="apiTotpCode" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="000000"></label>
       <button class="portal-action" type="submit" id="apiConnectSubmit" data-i18n="api.connect">Connect</button>
     </form>
     <p class="portal-status" id="apiConnectStatus"></p>
@@ -472,6 +473,6 @@
       <p data-i18n="evolution.loop">识别品牌，建立系统，生成资产，回收反馈，再次进化。</p>
     </section>
   </main>
-  <script src="assets/site-a92c3f2-ce23c28f.js" type="module"></script>
+  <script src="assets/site-4d8fc4d-05a8f724.js" type="module"></script>
 </body>
 </html>

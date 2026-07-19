@@ -18,19 +18,21 @@ const adobeDir = join(assetsDir, "adobe");
 const contactDir = join(assetsDir, "contact");
 const librarySiteDir = join(siteDir, "library");
 const libraryDataDir = join(root, "data", "library");
+const assetManifestPath = join(root, "data", "assets", "manifest.json");
 
 const brands = JSON.parse(await readFile(join(root, "config/brands.json"), "utf8"));
+const assetManifest = existsSync(assetManifestPath)
+  ? JSON.parse(await readFile(assetManifestPath, "utf8"))
+  : null;
 const librarySnapshotNames = ["sources", "organizations", "cases", "reports", "datasets", "relations", "sync"];
 const librarySnapshots = Object.fromEntries(await Promise.all(librarySnapshotNames.map(async (name) => [
   name,
   JSON.parse(await readFile(join(libraryDataDir, `${name}.json`), "utf8")),
 ])));
-const adminConfig = existsSync(join(root, "config/site-admin.public.json"))
-  ? JSON.parse(await readFile(join(root, "config/site-admin.public.json"), "utf8"))
-  : {};
 const hubName = "岁知社 IPTrust";
 const hubNameCn = "岁知社";
 const hubNameEn = "IPTrust";
+const repository = { owner: "fengurt", repo: "tableai_designaha", branch: "main" };
 const hubDescription = "岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。";
 const hubDescriptionEn = "IPTrust is an IP trust hub for people and agents.";
 
@@ -398,7 +400,7 @@ function loadVersions() {
         shortHash,
         date,
         message: messageParts.join("\t"),
-        url: `https://github.com/${adminConfig.owner ?? "fengurt"}/${adminConfig.repo ?? "tableai_designaha"}/commit/${hash}`,
+        url: `https://github.com/${repository.owner}/${repository.repo}/commit/${hash}`,
       };
     });
   } catch {
@@ -454,7 +456,7 @@ function loadBrandVersions(brand) {
         shortHash,
         date,
         message: messageParts.join("\t"),
-        url: `https://github.com/${adminConfig.owner ?? "fengurt"}/${adminConfig.repo ?? "tableai_designaha"}/commit/${hash}`,
+        url: `https://github.com/${repository.owner}/${repository.repo}/commit/${hash}`,
         sourcePaths: paths,
       };
     });
@@ -569,7 +571,7 @@ if (existsSync(join(root, "skills/iptrust-live-update/SKILL.md"))) {
 if (existsSync(join(root, "IP-System/ip_sys.md"))) {
   await copyFile(join(root, "IP-System/ip_sys.md"), join(siteDir, "ip_sys.md"));
 }
-if (existsSync(join(root, "assets/contact/wecom-qr.png"))) {
+if (!assetManifest && existsSync(join(root, "assets/contact/wecom-qr.png"))) {
   await copyFile(join(root, "assets/contact/wecom-qr.png"), join(contactDir, "wecom-qr.png"));
 }
 for (const name of librarySnapshotNames) {
@@ -586,7 +588,23 @@ for (const brand of brands) {
   const files = await walk(folderAbs);
   const guides = [];
   const tokens = [];
-  const images = [];
+  const manifestAssets = assetManifest?.items?.filter((item) => item.ownerId === brand.slug) || [];
+  const images = manifestAssets
+    .filter((item) => item.access === "public" && ["hero", "logo", "image"].includes(item.role))
+    .map((item) => ({
+      assetId: item.id,
+      path: item.sourcePath,
+      sitePath: item.mediaUrl,
+      title: item.title,
+      format: item.extension === "jpg" ? "JPG" : item.extension.toUpperCase(),
+      bytes: item.bytes,
+      size: item.size,
+      width: item.width,
+      height: item.height,
+      dimensions: item.dimensions,
+      sha256: item.sha256,
+      access: item.access,
+    }));
   const adobeManifests = [];
   const usedImageNames = new Set();
 
@@ -614,7 +632,7 @@ for (const brand of brands) {
         text: await readFile(full, "utf8"),
       });
     }
-    if (isBrandImage(rel)) {
+    if (!assetManifest && isBrandImage(rel)) {
       const outputName = brandImageOutputName(brand, rel, usedImageNames);
       const metadata = await imageFileMetadata(full, rel);
       await copyFile(full, join(imageDir, outputName));
@@ -636,10 +654,13 @@ for (const brand of brands) {
   const adobeAssets = [];
   for (const manifest of adobeManifests) {
     const sourcePath = manifest.source?.path ? join(root, manifest.source.path) : "";
-    const brandAdobeDir = join(adobeDir, brand.slug);
-    await mkdir(brandAdobeDir, { recursive: true });
     let source = { ...(manifest.source || {}) };
-    if (sourcePath && existsSync(sourcePath)) {
+    const sourceAsset = manifestAssets.find((item) => item.sourcePath === manifest.source?.path);
+    if (sourceAsset) {
+      source = { ...source, assetId: sourceAsset.id, apiUrl: `api/v2/assets/${sourceAsset.id}`, private: sourceAsset.access === "private", size: sourceAsset.size, bytes: sourceAsset.bytes, sha256: sourceAsset.sha256 };
+    } else if (sourcePath && existsSync(sourcePath)) {
+      const brandAdobeDir = join(adobeDir, brand.slug);
+      await mkdir(brandAdobeDir, { recursive: true });
       const sourceName = sourcePath.split("/").at(-1);
       await copyFile(sourcePath, join(brandAdobeDir, sourceName));
       source = { ...source, sitePath: `assets/adobe/${brand.slug}/${sourceName}` };
@@ -713,13 +734,14 @@ for (const brand of brands) {
     guides,
     tokens,
     images,
+    assetManifest: manifestAssets,
     adobeAssets,
     logoUrl: logoImage?.sitePath ?? "",
     assetKit,
     moodboard,
     editablePaths: guides.map((g) => g.path),
     source: {
-      github: `https://github.com/${adminConfig.owner ?? "fengurt"}/${adminConfig.repo ?? "tableai_designaha"}/tree/${adminConfig.branch ?? "main"}/${brand.folder}`,
+      github: `https://github.com/${repository.owner}/${repository.repo}/tree/${repository.branch}/${brand.folder}`,
       folder: brand.folder,
     },
   };
@@ -871,7 +893,7 @@ await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
     latest: versions[0] ?? null,
   },
   sync: {
-    sourceOfTruth: `https://github.com/${adminConfig.owner ?? "fengurt"}/${adminConfig.repo ?? "tableai_designaha"}`,
+    sourceOfTruth: `https://github.com/${repository.owner}/${repository.repo}`,
     githubToWebsite: "GitHub Pages rebuilds site/ on push to main.",
     websiteToGithub: "admin.html commits edits through the GitHub Contents API.",
   },
@@ -880,13 +902,6 @@ await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
     available: ["CN", "EN"],
     storageKey: "iptrust-locale",
   },
-}, null, 2));
-
-await writeFile(join(siteDir, "admin-config.json"), JSON.stringify({
-  adminKeySha256: adminConfig.adminKeySha256 ?? "",
-  owner: adminConfig.owner ?? "fengurt",
-  repo: adminConfig.repo ?? "tableai_designaha",
-  branch: adminConfig.branch ?? "main",
 }, null, 2));
 
 await writeFile(join(siteDir, "_headers"), [
@@ -950,6 +965,44 @@ await writeFile(join(siteDir, "_redirects"), [
   "/ip-system  /ip_sys.md  200",
   "",
 ].join("\n"));
+
+await writeFile(join(siteDir, "_routes.json"), JSON.stringify({
+  version: 1,
+  include: [
+    "/api/v2/*",
+    "/mcp",
+    "/assets/brand-images/*",
+    "/assets/adobe/*",
+    "/assets/contact/*",
+  ],
+  exclude: [],
+}, null, 2));
+
+await writeFile(join(siteDir, "_worker.js"), `const EDGE_ORIGIN = "https://edge.apuch.art";
+
+export default {
+  async fetch(request) {
+    const incoming = new URL(request.url);
+    const upstream = new URL(\`${'${incoming.pathname}${incoming.search}'}\`, EDGE_ORIGIN);
+    const headers = new Headers(request.headers);
+    headers.delete("host");
+    headers.set("X-IPTrust-Gateway", "pages");
+    const response = await fetch(new Request(upstream, {
+      method: request.method,
+      headers,
+      body: ["GET", "HEAD"].includes(request.method) ? null : request.body,
+      redirect: "manual",
+    }));
+    const responseHeaders = new Headers(response.headers);
+    responseHeaders.set("X-IPTrust-Edge", "pages-gateway");
+    return new Response(response.body, {
+      status: response.status,
+      statusText: response.statusText,
+      headers: responseHeaders,
+    });
+  },
+};
+`);
 
 await writeFile(join(siteDir, "llms.txt"), [
   `# ${hubName}`,
@@ -1067,6 +1120,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
     </div>
     <form class="api-connect-form" id="apiConnectForm" autocomplete="on">
       <label><span data-i18n="api.key">System API Key</span><input id="apiAdminKey" name="admin_api_key" type="password" autocomplete="current-password" placeholder="System API Key" spellcheck="false"></label>
+      <label class="hidden" id="apiTotpField"><span>Google Authenticator</span><input id="apiTotpCode" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="000000"></label>
       <button class="portal-action" type="submit" id="apiConnectSubmit" data-i18n="api.connect">Connect</button>
     </form>
     <p class="portal-status" id="apiConnectStatus"></p>
@@ -1193,6 +1247,7 @@ await writeFile(join(siteDir, "ip-evolution"), html`<!doctype html>
     </div>
     <form class="api-connect-form" id="apiConnectForm" autocomplete="on">
       <label><span data-i18n="api.key">System API Key</span><input id="apiAdminKey" name="admin_api_key" type="password" autocomplete="current-password" placeholder="System API Key" spellcheck="false"></label>
+      <label class="hidden" id="apiTotpField"><span>Google Authenticator</span><input id="apiTotpCode" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="000000"></label>
       <button class="portal-action" type="submit" id="apiConnectSubmit" data-i18n="api.connect">Connect</button>
     </form>
     <p class="portal-status" id="apiConnectStatus"></p>
@@ -1280,6 +1335,7 @@ await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
     </div>
     <form class="api-connect-form" id="apiConnectForm" autocomplete="on">
       <label><span data-i18n="api.key">System API Key</span><input id="apiAdminKey" name="admin_api_key" type="password" autocomplete="current-password" placeholder="System API Key" spellcheck="false"></label>
+      <label class="hidden" id="apiTotpField"><span>Google Authenticator</span><input id="apiTotpCode" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="000000"></label>
       <button class="portal-action" type="submit" id="apiConnectSubmit" data-i18n="api.connect">Connect</button>
     </form>
     <p class="portal-status" id="apiConnectStatus"></p>
@@ -1339,6 +1395,7 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
     </div>
     <form class="api-connect-form" id="apiConnectForm" autocomplete="on">
       <label><span data-i18n="api.key">System API Key</span><input id="apiAdminKey" name="admin_api_key" type="password" autocomplete="current-password" placeholder="System API Key" spellcheck="false"></label>
+      <label class="hidden" id="apiTotpField"><span>Google Authenticator</span><input id="apiTotpCode" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="000000"></label>
       <button class="portal-action" type="submit" id="apiConnectSubmit" data-i18n="api.connect">Connect</button>
     </form>
     <p class="portal-status" id="apiConnectStatus"></p>
@@ -1364,25 +1421,21 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
       <p class="muted admin-lead" data-i18n="admin.unlockBody">通过 AI 原生的方式，一站式管理你的品牌和 IP。</p>
       <label><span data-i18n="admin.keyLabel">Key</span><input id="adminKey" type="password" autocomplete="current-password"></label>
       <label><span data-i18n="admin.totpLabel">Google Authenticator</span><input id="totpCode" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" maxlength="8" placeholder="000000"></label>
-      <label><span data-i18n="admin.scopeLabel">IP 权限范围</span><select id="adminScopes" multiple size="4"></select></label>
       <button id="unlockButton" data-i18n="admin.unlockButton">继续</button>
       <p class="notice" id="unlockStatus"></p>
     </section>
     <section class="panel hidden" id="editorPanel">
-      <p class="eyebrow" data-i18n="admin.sync">同步</p>
-      <h1 data-i18n="admin.editTitle">编辑源文件</h1>
+      <p class="eyebrow">API</p>
+      <h1 data-i18n="admin.editTitle">编辑品牌记录</h1>
       <div class="form-grid">
-        <label><span data-i18n="admin.githubToken">Token</span><input id="githubToken" type="password" autocomplete="off" placeholder="GitHub token" data-i18n-placeholder="admin.tokenPlaceholder"></label>
-        <label><span data-i18n="admin.branch">分支</span><input id="branch" value="${adminConfig.branch ?? "main"}"></label>
         <label><span data-i18n="admin.brand">IP</span><select id="brandSelect"></select></label>
-        <label><span data-i18n="admin.file">文件</span><select id="fileSelect"></select></label>
       </div>
       <div class="actions">
-        <button id="loadFile" data-i18n="admin.loadFile">载入</button>
-        <button id="saveFile" data-i18n="admin.saveFile">保存</button>
+        <button id="loadBrand">载入</button>
+        <button id="saveBrand">保存</button>
       </div>
-      <textarea id="editor" spellcheck="false" placeholder="载入文件..." data-i18n-placeholder="admin.editorPlaceholder"></textarea>
-      <label><span data-i18n="admin.commitMessage">提交信息</span><input id="commitMessage" value="Update brand guideline from admin site"></label>
+      <textarea id="editor" spellcheck="false" placeholder="Brand JSON"></textarea>
+      <p class="muted" id="recordVersion"></p>
       <p class="notice" id="editorStatus"></p>
     </section>
   </main>
@@ -3811,58 +3864,33 @@ function apiErrorMessage(error) {
 
 function apiCurlTemplate() {
   return [
-    \`curl -X POST "\${new URL("api/admin/login", location.href).href}"\`,
+    \`curl -X POST "\${new URL("api/v2/auth/exchange", location.href).href}"\`,
     \`  -H "Content-Type: application/json"\`,
-    \`  -H "X-Admin-Key: <ADMIN_API_KEY>"\`,
-    \`  -d '{"adminKey":"<ADMIN_API_KEY>"}'\`,
+    \`  -d '{"apiKey":"<SYSTEM_API_KEY>","totp":"<TOTP>"}'\`,
   ].join("\\n");
 }
 
-const API_CONNECT_COOKIE = "iptrust_api_connected";
-const API_KEY_SESSION = "iptrust_api_key";
+const API_CSRF_SESSION = "iptrust_csrf";
+let apiConnection = null;
 
-function setApiCookie(scopes = ["*"]) {
-  const value = JSON.stringify({ connected: true, scopes, at: Date.now() });
-  const secure = location.protocol === "https:" ? "; Secure" : "";
-  document.cookie = API_CONNECT_COOKIE + "=" + encodeURIComponent(value) + "; path=/; max-age=604800; SameSite=Lax" + secure;
-}
-
-function clearApiCookie() {
-  const secure = location.protocol === "https:" ? "; Secure" : "";
-  document.cookie = API_CONNECT_COOKIE + "=; path=/; max-age=0; SameSite=Lax" + secure;
-  sessionStorage.removeItem(API_KEY_SESSION);
-}
-
-function readApiCookie() {
-  const entry = document.cookie
-    .split("; ")
-    .find((item) => item.startsWith(API_CONNECT_COOKIE + "="));
-  if (!entry) return null;
-  try {
-    return JSON.parse(decodeURIComponent(entry.slice(API_CONNECT_COOKIE.length + 1)));
-  } catch {
-    return null;
-  }
-}
-
-function renderApiConnected(scopes = ["*"]) {
+function renderApiConnected(scopes = ["*"], ipScopes = ["*"]) {
+  apiConnection = { scopes, ipScopes };
   $("#apiConnectButton")?.classList.add("api-connected");
   $("#apiConnectPanel")?.classList.add("is-connected");
   $("#apiConnectForm")?.classList.add("hidden");
   $("#apiConnectedOps")?.classList.remove("hidden");
   const scopeText = $("#apiScopeText");
   if (scopeText) {
-    scopeText.textContent = scopes.includes("*") ? t("api.allAccess") : \`\${t("api.scopesGranted")}\${scopes.join(", ")}\`;
+    scopeText.textContent = scopes.includes("system:*") || ipScopes.includes("*") ? t("api.allAccess") : \`\${t("api.scopesGranted")}\${ipScopes.join(", ")}\`;
   }
   apiStatus(t("api.connected"));
   window.dispatchEvent(new CustomEvent("iptrust:api-connected", { detail: { scopes } }));
 }
 
 async function loadProtectedResources() {
-  const key = sessionStorage.getItem(API_KEY_SESSION) || $("#apiAdminKey")?.value || "";
   const summary = $("#apiResourceSummary");
   if (!summary) return;
-  if (!key) {
+  if (!apiConnection) {
     summary.classList.remove("hidden");
     summary.textContent = t("api.reconnectForResources");
     return;
@@ -3870,14 +3898,12 @@ async function loadProtectedResources() {
   summary.classList.remove("hidden");
   summary.textContent = t("api.loadingResources");
   try {
-    const res = await fetch("api/resources", { headers: { "X-Admin-Key": key } });
+    const res = await fetch("api/v2/assets?limit=20", { credentials: "include" });
     const data = await res.json().catch(() => ({}));
     if (!res.ok) throw new Error(data.hint || data.error || t("api.failed"));
     summary.textContent = JSON.stringify({
-      updatedAt: data.updatedAt,
-      summary: data.summary,
-      providers: data.providers,
-      ipDomainCandidates: data.ipDomainCandidates?.length || 0,
+      assets: data.total,
+      items: data.items?.map((item) => ({ id: item.id, ip: item.ownerId, access: item.access, status: item.status })) || [],
     }, null, 2);
   } catch (error) {
     summary.textContent = error.message || t("api.failed");
@@ -3894,8 +3920,11 @@ function setupApiConnect() {
   if (!button || !panel || button.dataset.ready) return;
   button.dataset.ready = "true";
 
-  const saved = readApiCookie();
-  if (saved?.connected) renderApiConnected(saved.scopes?.length ? saved.scopes : ["*"]);
+  fetch("api/v2/auth/session", { credentials: "include" }).then(async (res) => {
+    if (!res.ok) return;
+    const data = await res.json();
+    renderApiConnected(data.actor?.scopes || [], data.actor?.ipScopes || []);
+  }).catch(() => {});
 
   button.addEventListener("click", async () => {
     panel.classList.toggle("hidden");
@@ -3916,25 +3945,32 @@ function setupApiConnect() {
 
   const connectApi = async () => {
     const adminKey = $("#apiAdminKey")?.value || "";
+    const totp = $("#apiTotpCode")?.value || "";
     apiStatus(t("api.connecting"));
     try {
-      const res = await fetch("api/admin/login", {
+      const res = await fetch("api/v2/auth/exchange", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "X-Admin-Key": adminKey,
         },
-        body: JSON.stringify({ adminKey }),
+        credentials: "include",
+        body: JSON.stringify({ apiKey: adminKey, totp }),
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(apiErrorMessage(data.error));
-      const scopes = data.scopes?.length ? data.scopes : data.allowedScopes || ["*"];
-      sessionStorage.setItem(API_KEY_SESSION, adminKey);
-      setApiCookie(scopes);
-      renderApiConnected(scopes);
+      if (!res.ok) {
+        if (data.error === "bad_totp") $("#apiTotpField")?.classList.remove("hidden");
+        throw new Error(apiErrorMessage(data.error));
+      }
+      const scopes = data.scopes || [];
+      const ipScopes = data.ipScopes || [];
+      sessionStorage.setItem(API_CSRF_SESSION, data.csrfToken || "");
+      $("#apiAdminKey").value = "";
+      if ($("#apiTotpCode")) $("#apiTotpCode").value = "";
+      renderApiConnected(scopes, ipScopes);
       showToast(t("api.connected"));
     } catch (error) {
-      clearApiCookie();
+      apiConnection = null;
+      sessionStorage.removeItem(API_CSRF_SESSION);
       button.classList.remove("api-connected");
       panel.classList.remove("is-connected");
       form?.classList.remove("hidden");
@@ -3951,17 +3987,18 @@ function setupApiConnect() {
 }
 
 function apiKeyForWrite() {
-  return sessionStorage.getItem(API_KEY_SESSION) || "";
+  return sessionStorage.getItem(API_CSRF_SESSION) || "";
 }
 
 function apiScopesForWrite() {
-  const saved = readApiCookie();
-  return saved?.scopes?.length ? saved.scopes : [];
+  return apiConnection?.ipScopes || [];
 }
 
 function canManageBrand(slug) {
   const scopes = apiScopesForWrite();
-  return Boolean(apiKeyForWrite()) && (scopes.includes("*") || scopes.includes(slug));
+  const permissions = apiConnection?.scopes || [];
+  const canWrite = permissions.includes("system:*") || permissions.includes("brands:*") || permissions.includes("brands:write");
+  return Boolean(apiKeyForWrite()) && canWrite && (scopes.includes("*") || scopes.includes(slug));
 }
 
 function setProfileStatus(message, isError = false) {
@@ -4126,14 +4163,19 @@ function setupProfileEditor(brand = {}) {
     }
     setProfileStatus(t("brand.saving"));
     try {
-      const res = await fetch(\`api/manage/brands/\${encodeURIComponent(brand.slug)}\`, {
+      const current = await fetch(\`api/v2/brands/\${encodeURIComponent(brand.slug)}\`, { credentials: "include" });
+      if (!current.ok) throw new Error(t("brand.saveFailed"));
+      const etag = current.headers.get("etag");
+      const res = await fetch(\`api/v2/brands/\${encodeURIComponent(brand.slug)}\`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
-          "X-Admin-Key": key,
+          "X-CSRF-Token": key,
+          "If-Match": etag || "",
+          "Idempotency-Key": crypto.randomUUID(),
         },
+        credentials: "include",
         body: JSON.stringify({
-          message: \`Update \${brand.slug} profile from IPTrust API\`,
           patch: profilePatchFromForm(form),
         }),
       });
@@ -4629,7 +4671,7 @@ renderBrand().catch(console.error);`);
 await copyFile(join(assetsDir, "site.js"), join(siteDir, siteJsPath));
 
 await writeFile(join(assetsDir, "admin.js"), html`const $ = (selector) => document.querySelector(selector);
-const state = { config: null, brands: [], authScopes: [], currentFile: null, currentSha: null };
+const state = { brands: [], authScopes: [], csrf: "", slug: "", etag: "" };
 const adminCopy = {
   cn: {
     needToken: "先填 Token。",
@@ -4663,12 +4705,6 @@ function copy(key) {
   return adminCopy[lang()]?.[key] || adminCopy.cn[key] || key;
 }
 
-async function sha256(text) {
-  const bytes = new TextEncoder().encode(text);
-  const hash = await crypto.subtle.digest("SHA-256", bytes);
-  return [...new Uint8Array(hash)].map((byte) => byte.toString(16).padStart(2, "0")).join("");
-}
-
 async function loadJson(path) {
   const res = await fetch(path);
   if (!res.ok) throw new Error(\`Could not load \${path}\`);
@@ -4681,34 +4717,6 @@ function status(message, isError = false) {
   node.style.color = isError ? "#b12137" : "#0e8c7b";
 }
 
-function b64DecodeUnicode(value) {
-  const binary = atob(value.replace(/\\n/g, ""));
-  const bytes = Uint8Array.from(binary, (char) => char.charCodeAt(0));
-  return new TextDecoder().decode(bytes);
-}
-
-function b64EncodeUnicode(value) {
-  const bytes = new TextEncoder().encode(value);
-  let binary = "";
-  bytes.forEach((byte) => binary += String.fromCharCode(byte));
-  return btoa(binary);
-}
-
-function githubHeaders() {
-  const token = $("#githubToken").value.trim();
-  if (!token) throw new Error(copy("needToken"));
-  return {
-    "Accept": "application/vnd.github+json",
-    "Authorization": \`Bearer \${token}\`,
-    "X-GitHub-Api-Version": "2022-11-28",
-  };
-}
-
-function contentsUrl(path, branch) {
-  const { owner, repo } = state.config;
-  return \`https://api.github.com/repos/\${owner}/\${repo}/contents/\${encodeURIComponent(path).replaceAll("%2F", "/")}?ref=\${encodeURIComponent(branch)}\`;
-}
-
 async function populateBrands() {
   state.brands = await loadJson("api/brands.json");
   const scopes = state.authScopes.length ? state.authScopes : ["*"];
@@ -4716,84 +4724,56 @@ async function populateBrands() {
     ? state.brands
     : state.brands.filter((brand) => scopes.includes(brand.slug));
   $("#brandSelect").innerHTML = brands.map((brand) => \`<option value="\${brand.slug}">\${brand.mainName || brand.name}</option>\`).join("");
-  await populateFiles();
+  await loadBrand();
 }
 
-async function populateAdminScopes() {
-  const select = $("#adminScopes");
-  if (!select) return;
-  const brands = await loadJson("api/brands.json");
-  select.innerHTML = [
-    \`<option value="*">*</option>\`,
-    ...brands.map((brand) => \`<option value="\${brand.slug}">\${brand.mainName || brand.name}</option>\`),
-  ].join("");
-  select.querySelector('option[value="*"]').selected = true;
-}
-
-function selectedAdminScopes() {
-  const select = $("#adminScopes");
-  if (!select) return ["*"];
-  const values = [...select.selectedOptions].map((option) => option.value);
-  return values.length ? values : ["*"];
-}
-
-async function populateFiles() {
+async function loadBrand() {
   const slug = $("#brandSelect").value;
-  const brand = await loadJson(\`api/brands/\${slug}.json\`);
-  const paths = brand.editablePaths?.length ? brand.editablePaths : [brand.primaryGuide].filter(Boolean);
-  $("#fileSelect").innerHTML = paths.map((path) => \`<option value="\${path}">\${path}</option>\`).join("");
-  state.currentFile = null;
-  state.currentSha = null;
-  $("#editor").value = "";
-}
-
-async function loadFile() {
-  const path = $("#fileSelect").value;
-  const branch = $("#branch").value.trim() || state.config.branch;
-  const res = await fetch(contentsUrl(path, branch), { headers: githubHeaders() });
+  if (!slug) return;
+  const res = await fetch(\`api/v2/brands/\${encodeURIComponent(slug)}\`, { credentials: "include" });
   if (!res.ok) throw new Error(await res.text());
-  const data = await res.json();
-  state.currentFile = path;
-  state.currentSha = data.sha;
-  $("#editor").value = b64DecodeUnicode(data.content);
-  status(\`\${copy("loaded")} \${path}\`);
+  state.slug = slug;
+  state.etag = res.headers.get("etag") || "";
+  $("#editor").value = JSON.stringify(await res.json(), null, 2);
+  $("#recordVersion").textContent = state.etag;
+  status("Loaded.");
 }
 
-async function saveFile() {
-  if (!state.currentFile || !state.currentSha) await loadFile();
-  const branch = $("#branch").value.trim() || state.config.branch;
-  const body = {
-    message: $("#commitMessage").value.trim() || \`Update \${state.currentFile} from admin site\`,
-    content: b64EncodeUnicode($("#editor").value),
-    sha: state.currentSha,
-    branch,
-  };
-  const res = await fetch(contentsUrl(state.currentFile, branch), {
-    method: "PUT",
-    headers: githubHeaders(),
-    body: JSON.stringify(body),
+async function saveBrand() {
+  if (!state.slug || !state.etag) await loadBrand();
+  const patch = JSON.parse($("#editor").value);
+  const res = await fetch(\`api/v2/brands/\${encodeURIComponent(state.slug)}\`, {
+    method: "PATCH",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+      "If-Match": state.etag,
+      "Idempotency-Key": crypto.randomUUID(),
+      "X-CSRF-Token": state.csrf,
+    },
+    body: JSON.stringify({ patch }),
   });
   if (!res.ok) throw new Error(await res.text());
   const data = await res.json();
-  state.currentSha = data.content.sha;
-  status(copy("saved"));
+  state.etag = res.headers.get("etag") || \`brand-\${state.slug}-v\${data.version}\`;
+  $("#editor").value = JSON.stringify(data.brand, null, 2);
+  $("#recordVersion").textContent = state.etag;
+  status("Saved.");
 }
 
-async function apiUnlock(config) {
+async function apiUnlock() {
   const key = $("#adminKey").value;
   const totp = $("#totpCode")?.value.trim();
   if (!totp) throw new Error(copy("totpRequired"));
-  const res = await fetch("api/admin/login", {
+  const res = await fetch("api/v2/auth/exchange", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "X-Admin-Key": key,
     },
+    credentials: "include",
     body: JSON.stringify({
-      adminKey: key,
+      apiKey: key,
       totp,
-      scopes: selectedAdminScopes(),
-      repo: config.repo,
     }),
   });
   const data = await res.json().catch(() => ({}));
@@ -4803,45 +4783,26 @@ async function apiUnlock(config) {
     if (data.error === "bad_totp") throw new Error(copy("totpRequired"));
     throw new Error(data.error || copy("apiLoginFailed"));
   }
-  state.authScopes = data.scopes?.length ? data.scopes : data.allowedScopes || ["*"];
+  state.authScopes = data.ipScopes?.length ? data.ipScopes : ["*"];
+  state.csrf = data.csrfToken || "";
+  sessionStorage.setItem("iptrust_csrf", state.csrf);
+  $("#adminKey").value = "";
 }
 
 async function unlock() {
-  state.config = await loadJson("admin-config.json");
-  const totp = $("#totpCode")?.value.trim();
-  if (totp) {
-    await apiUnlock(state.config);
-    $("#unlockPanel").classList.add("hidden");
-    $("#editorPanel").classList.remove("hidden");
-    await populateBrands();
-    status(copy("unlocked"));
-    return;
-  }
-  const expected = state.config.adminKeySha256;
-  if (!expected) {
-    $("#unlockStatus").textContent = copy("noKey");
-    return;
-  }
-  const actual = await sha256($("#adminKey").value);
-  if (actual !== expected) {
-    $("#unlockStatus").textContent = copy("badKey");
-    $("#unlockStatus").style.color = "#b12137";
-    return;
-  }
+  await apiUnlock();
   $("#unlockPanel").classList.add("hidden");
   $("#editorPanel").classList.remove("hidden");
   await populateBrands();
   status(copy("unlocked"));
 }
 
-populateAdminScopes().catch(console.error);
-
 $("#unlockButton")?.addEventListener("click", () => unlock().catch((err) => {
   $("#unlockStatus").textContent = err.message;
   $("#unlockStatus").style.color = "#b12137";
 }));
-$("#brandSelect")?.addEventListener("change", () => populateFiles().catch((err) => status(err.message, true)));
-$("#loadFile")?.addEventListener("click", () => loadFile().catch((err) => status(err.message, true)));
-$("#saveFile")?.addEventListener("click", () => saveFile().catch((err) => status(err.message, true)));`);
+$("#brandSelect")?.addEventListener("change", () => loadBrand().catch((err) => status(err.message, true)));
+$("#loadBrand")?.addEventListener("click", () => loadBrand().catch((err) => status(err.message, true)));
+$("#saveBrand")?.addEventListener("click", () => saveBrand().catch((err) => status(err.message, true)));`);
 
 console.log(`Built site with ${brandPayloads.length} brands at ${relative(root, siteDir)}`);

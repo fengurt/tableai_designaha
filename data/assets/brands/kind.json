@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "slug": "kind",
+  "count": 1,
+  "items": [
+    {
+      "id": "kind-hero-kind-brand-hero-c7224d4b8fb7",
+      "ownerType": "owned-ip",
+      "ownerId": "kind",
+      "role": "hero",
+      "title": "kind brand hero",
+      "access": "public",
+      "sourcePath": "KiND/assets/brand-images/kind-brand-hero.png",
+      "sourceFilename": "kind-brand-hero.png",
+      "sha256": "c7224d4b8fb7d8058636e35bc4df2c7f0dec0baf8968da57f533a6918cf33ee3",
+      "mimeType": "image/png",
+      "extension": "png",
+      "bytes": 2190640,
+      "size": "2.09 MB",
+      "width": 1672,
+      "height": 941,
+      "dimensions": "1672 x 941 px",
+      "objectKey": "public/kind/kind-hero-kind-brand-hero-c7224d4b8fb7/c7224d4b8fb7d8058636e35bc4df2c7f0dec0baf8968da57f533a6918cf33ee3/original.png",
+      "mediaUrl": "https://media.apuch.art/public/kind/kind-hero-kind-brand-hero-c7224d4b8fb7/c7224d4b8fb7d8058636e35bc4df2c7f0dec0baf8968da57f533a6918cf33ee3/original.png",
+      "legacyUrls": [
+        "/assets/brand-images/kind.png"
+      ],
+      "status": "ready",
+      "version": 1
+    }
+  ]
+}

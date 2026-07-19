@@ -160,14 +160,26 @@
     }
   },
   "version": {
-    "hash": "a92c3f25ee6c61875e3356cd843a7582eaa8ef00",
-    "shortHash": "a92c3f2",
-    "date": "2026-07-14T16:56:44+08:00",
-    "message": "Show metadata on brand hero assets",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a92c3f25ee6c61875e3356cd843a7582eaa8ef00"
+    "hash": "4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9",
+    "shortHash": "4d8fc4d",
+    "date": "2026-07-19T14:16:14+08:00",
+    "message": "Fix GitHub Pages dependency install",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9"
   },
   "historyUrl": "api/history/kaoyu-shenhua.json",
   "history": [
+    {
+      "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "shortHash": "eaf4320",
+      "date": "2026-07-19T14:13:21+08:00",
+      "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "sourcePaths": [
+        "config/brands.json",
+        "KaoyuShenhua",
+        "KaoyuShenhua/README.md"
+      ]
+    },
     {
       "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
       "shortHash": "b0056d3",
@@ -227,18 +239,6 @@
         "KaoyuShenhua",
         "KaoyuShenhua/README.md"
       ]
-    },
-    {
-      "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
-      "shortHash": "4c1ae93",
-      "date": "2026-07-08T03:28:03+08:00",
-      "message": "Update OPC Global primary language",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb",
-      "sourcePaths": [
-        "config/brands.json",
-        "KaoyuShenhua",
-        "KaoyuShenhua/README.md"
-      ]
     }
   ],
   "url": "brand.html?brand=kaoyu-shenhua",
@@ -258,59 +258,226 @@
   "tokens": [],
   "images": [
     {
+      "assetId": "kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7",
       "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-brand-hero.png",
-      "sitePath": "assets/brand-images/kaoyu-shenhua.png",
-      "title": "Kaoyu Shenhua Brand Hero",
+      "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
+      "title": "kaoyu shenhua brand hero",
       "format": "PNG",
       "bytes": 23456,
       "size": "22.9 KB",
       "width": 1488,
       "height": 744,
-      "dimensions": "1488 x 744 px"
+      "dimensions": "1488 x 744 px",
+      "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
+      "access": "public"
     },
     {
+      "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc",
       "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.jpg",
-      "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.jpg",
-      "title": "Kaoyu Shenhua Logo Page 01",
+      "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
+      "title": "kaoyu shenhua logo page 01",
       "format": "JPG",
       "bytes": 123391,
-      "size": "120 KB",
+      "size": "120.5 KB",
       "width": 1488,
       "height": 744,
-      "dimensions": "1488 x 744 px"
+      "dimensions": "1488 x 744 px",
+      "sha256": "8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c",
+      "access": "public"
     },
     {
+      "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49",
       "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.png",
-      "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.png",
-      "title": "Kaoyu Shenhua Logo Page 01",
+      "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49/81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c/original.png",
+      "title": "kaoyu shenhua logo page 01",
       "format": "PNG",
       "bytes": 50420,
       "size": "49.2 KB",
       "width": 1488,
       "height": 744,
-      "dimensions": "1488 x 744 px"
+      "dimensions": "1488 x 744 px",
+      "sha256": "81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c",
+      "access": "public"
     },
     {
+      "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea",
       "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.jpg",
-      "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.jpg",
-      "title": "Kaoyu Shenhua Logo Page 02",
+      "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea/25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033/original.jpg",
+      "title": "kaoyu shenhua logo page 02",
       "format": "JPG",
       "bytes": 58912,
       "size": "57.5 KB",
       "width": 1488,
       "height": 744,
-      "dimensions": "1488 x 744 px"
+      "dimensions": "1488 x 744 px",
+      "sha256": "25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033",
+      "access": "public"
     },
     {
+      "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7",
       "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.png",
-      "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.png",
-      "title": "Kaoyu Shenhua Logo Page 02",
+      "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
+      "title": "kaoyu shenhua logo page 02",
       "format": "PNG",
       "bytes": 23456,
       "size": "22.9 KB",
       "width": 1488,
       "height": 744,
-      "dimensions": "1488 x 744 px"
+      "dimensions": "1488 x 744 px",
+      "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
+      "access": "public"
+    }
+  ],
+  "assetManifest": [
+    {
+      "id": "kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7",
+      "ownerType": "owned-ip",
+      "ownerId": "kaoyu-shenhua",
+      "role": "hero",
+      "title": "kaoyu shenhua brand hero",
+      "access": "public",
+      "sourcePath": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-brand-hero.png",
+      "sourceFilename": "kaoyu-shenhua-brand-hero.png",
+      "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
+      "mimeType": "image/png",
+      "extension": "png",
+      "bytes": 23456,
+      "size": "22.9 KB",
+      "width": 1488,
+      "height": 744,
+      "dimensions": "1488 x 744 px",
+      "objectKey": "public/kaoyu-shenhua/kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
+      "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
+      "legacyUrls": [
+        "/assets/brand-images/kaoyu-shenhua.png"
+      ],
+      "status": "ready",
+      "version": 1
+    },
+    {
+      "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc",
+      "ownerType": "owned-ip",
+      "ownerId": "kaoyu-shenhua",
+      "role": "logo",
+      "title": "kaoyu shenhua logo page 01",
+      "access": "public",
+      "sourcePath": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.jpg",
+      "sourceFilename": "kaoyu-shenhua-logo-page-01.jpg",
+      "sha256": "8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c",
+      "mimeType": "image/jpeg",
+      "extension": "jpg",
+      "bytes": 123391,
+      "size": "120.5 KB",
+      "width": 1488,
+      "height": 744,
+      "dimensions": "1488 x 744 px",
+      "objectKey": "public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
+      "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
+      "legacyUrls": [
+        "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.jpg"
+      ],
+      "status": "ready",
+      "version": 1
+    },
+    {
+      "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49",
+      "ownerType": "owned-ip",
+      "ownerId": "kaoyu-shenhua",
+      "role": "logo",
+      "title": "kaoyu shenhua logo page 01",
+      "access": "public",
+      "sourcePath": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.png",
+      "sourceFilename": "kaoyu-shenhua-logo-page-01.png",
+      "sha256": "81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c",
+      "mimeType": "image/png",
+      "extension": "png",
+      "bytes": 50420,
+      "size": "49.2 KB",
+      "width": 1488,
+      "height": 744,
+      "dimensions": "1488 x 744 px",
+      "objectKey": "public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49/81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c/original.png",
+      "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49/81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c/original.png",
+      "legacyUrls": [
+        "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.png"
+      ],
+      "status": "ready",
+      "version": 1
+    },
+    {
+      "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea",
+      "ownerType": "owned-ip",
+      "ownerId": "kaoyu-shenhua",
+      "role": "logo",
+      "title": "kaoyu shenhua logo page 02",
+      "access": "public",
+      "sourcePath": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.jpg",
+      "sourceFilename": "kaoyu-shenhua-logo-page-02.jpg",
+      "sha256": "25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033",
+      "mimeType": "image/jpeg",
+      "extension": "jpg",
+      "bytes": 58912,
+      "size": "57.5 KB",
+      "width": 1488,
+      "height": 744,
+      "dimensions": "1488 x 744 px",
+      "objectKey": "public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea/25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033/original.jpg",
+      "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea/25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033/original.jpg",
+      "legacyUrls": [
+        "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.jpg"
+      ],
+      "status": "ready",
+      "version": 1
+    },
+    {
+      "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7",
+      "ownerType": "owned-ip",
+      "ownerId": "kaoyu-shenhua",
+      "role": "logo",
+      "title": "kaoyu shenhua logo page 02",
+      "access": "public",
+      "sourcePath": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.png",
+      "sourceFilename": "kaoyu-shenhua-logo-page-02.png",
+      "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
+      "mimeType": "image/png",
+      "extension": "png",
+      "bytes": 23456,
+      "size": "22.9 KB",
+      "width": 1488,
+      "height": 744,
+      "dimensions": "1488 x 744 px",
+      "objectKey": "public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
+      "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
+      "legacyUrls": [
+        "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.png"
+      ],
+      "status": "ready",
+      "version": 1
+    },
+    {
+      "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0",
+      "ownerType": "owned-ip",
+      "ownerId": "kaoyu-shenhua",
+      "role": "logo",
+      "title": "kaoyu shenhua logo",
+      "access": "private",
+      "sourcePath": "KaoyuShenhua/assets/source/kaoyu-shenhua-logo.ai",
+      "sourceFilename": "kaoyu-shenhua-logo.ai",
+      "sha256": "e7f64c62b8b04bfca4eaf1ebd523b29a1822969d6942ae5645e6081475e63cc6",
+      "mimeType": "application/illustrator",
+      "extension": "ai",
+      "bytes": 1635017,
+      "size": "1.56 MB",
+      "width": null,
+      "height": null,
+      "dimensions": "",
+      "objectKey": "private/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0/e7f64c62b8b04bfca4eaf1ebd523b29a1822969d6942ae5645e6081475e63cc6/source.ai",
+      "mediaUrl": "https://media.apuch.art/private/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0/e7f64c62b8b04bfca4eaf1ebd523b29a1822969d6942ae5645e6081475e63cc6/source.ai",
+      "legacyUrls": [
+        "/assets/adobe/kaoyu-shenhua/kaoyu-shenhua-logo.ai"
+      ],
+      "status": "processing",
+      "version": 1
     }
   ],
   "adobeAssets": [
@@ -323,7 +490,10 @@
         "format": "AI",
         "bytes": 1635017,
         "size": "1.56 MB",
-        "sitePath": "assets/adobe/kaoyu-shenhua/kaoyu-shenhua-logo.ai"
+        "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0",
+        "apiUrl": "api/v2/assets/kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0",
+        "private": true,
+        "sha256": "e7f64c62b8b04bfca4eaf1ebd523b29a1822969d6942ae5645e6081475e63cc6"
       },
       "preview": {
         "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.png",
@@ -333,8 +503,8 @@
         "width": 1488,
         "height": 744,
         "dimensions": "1488 x 744 px",
-        "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.png",
-        "title": "Kaoyu Shenhua Logo Page 02"
+        "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
+        "title": "kaoyu shenhua logo page 02"
       },
       "hero": {
         "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-brand-hero.png",
@@ -344,8 +514,8 @@
         "width": 1488,
         "height": 744,
         "dimensions": "1488 x 744 px",
-        "sitePath": "assets/brand-images/kaoyu-shenhua.png",
-        "title": "Kaoyu Shenhua Brand Hero"
+        "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
+        "title": "kaoyu shenhua brand hero"
       },
       "exports": [
         {
@@ -358,8 +528,8 @@
             "width": 1488,
             "height": 744,
             "dimensions": "1488 x 744 px",
-            "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.jpg",
-            "title": "Kaoyu Shenhua Logo Page 01"
+            "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
+            "title": "kaoyu shenhua logo page 01"
           },
           "png": {
             "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.png",
@@ -369,8 +539,8 @@
             "width": 1488,
             "height": 744,
             "dimensions": "1488 x 744 px",
-            "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.png",
-            "title": "Kaoyu Shenhua Logo Page 01"
+            "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49/81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c/original.png",
+            "title": "kaoyu shenhua logo page 01"
           }
         },
         {
@@ -383,8 +553,8 @@
             "width": 1488,
             "height": 744,
             "dimensions": "1488 x 744 px",
-            "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.jpg",
-            "title": "Kaoyu Shenhua Logo Page 02"
+            "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea/25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033/original.jpg",
+            "title": "kaoyu shenhua logo page 02"
           },
           "png": {
             "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.png",
@@ -394,8 +564,8 @@
             "width": 1488,
             "height": 744,
             "dimensions": "1488 x 744 px",
-            "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.png",
-            "title": "Kaoyu Shenhua Logo Page 02"
+            "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
+            "title": "kaoyu shenhua logo page 02"
           }
         }
       ],
@@ -403,12 +573,12 @@
       "pipeline": "ghostscript"
     }
   ],
-  "logoUrl": "assets/brand-images/kaoyu-shenhua.png",
+  "logoUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
   "assetKit": {
     "assetKey": "kaoyu-shenhua",
     "endpoints": {
       "brand": "api/brands/kaoyu-shenhua.json",
-      "logo": "assets/brand-images/kaoyu-shenhua.png",
+      "logo": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
       "images": "api/brands/kaoyu-shenhua.json#images",
       "adobe": "api/brands/kaoyu-shenhua.json#adobeAssets",
       "tokens": "api/brands/kaoyu-shenhua.json#tokens",
@@ -454,59 +624,74 @@
       ],
       "images": [
         {
+          "assetId": "kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7",
           "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-brand-hero.png",
-          "sitePath": "assets/brand-images/kaoyu-shenhua.png",
-          "title": "Kaoyu Shenhua Brand Hero",
+          "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
+          "title": "kaoyu shenhua brand hero",
           "format": "PNG",
           "bytes": 23456,
           "size": "22.9 KB",
           "width": 1488,
           "height": 744,
-          "dimensions": "1488 x 744 px"
+          "dimensions": "1488 x 744 px",
+          "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
+          "access": "public"
         },
         {
+          "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc",
           "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.jpg",
-          "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.jpg",
-          "title": "Kaoyu Shenhua Logo Page 01",
+          "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
+          "title": "kaoyu shenhua logo page 01",
           "format": "JPG",
           "bytes": 123391,
-          "size": "120 KB",
+          "size": "120.5 KB",
           "width": 1488,
           "height": 744,
-          "dimensions": "1488 x 744 px"
+          "dimensions": "1488 x 744 px",
+          "sha256": "8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c",
+          "access": "public"
         },
         {
+          "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49",
           "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.png",
-          "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.png",
-          "title": "Kaoyu Shenhua Logo Page 01",
+          "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49/81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c/original.png",
+          "title": "kaoyu shenhua logo page 01",
           "format": "PNG",
           "bytes": 50420,
           "size": "49.2 KB",
           "width": 1488,
           "height": 744,
-          "dimensions": "1488 x 744 px"
+          "dimensions": "1488 x 744 px",
+          "sha256": "81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c",
+          "access": "public"
         },
         {
+          "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea",
           "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.jpg",
-          "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.jpg",
-          "title": "Kaoyu Shenhua Logo Page 02",
+          "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea/25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033/original.jpg",
+          "title": "kaoyu shenhua logo page 02",
           "format": "JPG",
           "bytes": 58912,
           "size": "57.5 KB",
           "width": 1488,
           "height": 744,
-          "dimensions": "1488 x 744 px"
+          "dimensions": "1488 x 744 px",
+          "sha256": "25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033",
+          "access": "public"
         },
         {
+          "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7",
           "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.png",
-          "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.png",
-          "title": "Kaoyu Shenhua Logo Page 02",
+          "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
+          "title": "kaoyu shenhua logo page 02",
           "format": "PNG",
           "bytes": 23456,
           "size": "22.9 KB",
           "width": 1488,
           "height": 744,
-          "dimensions": "1488 x 744 px"
+          "dimensions": "1488 x 744 px",
+          "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
+          "access": "public"
         }
       ]
     }
@@ -551,59 +736,74 @@
     ],
     "images": [
       {
+        "assetId": "kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7",
         "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-brand-hero.png",
-        "sitePath": "assets/brand-images/kaoyu-shenhua.png",
-        "title": "Kaoyu Shenhua Brand Hero",
+        "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
+        "title": "kaoyu shenhua brand hero",
         "format": "PNG",
         "bytes": 23456,
         "size": "22.9 KB",
         "width": 1488,
         "height": 744,
-        "dimensions": "1488 x 744 px"
+        "dimensions": "1488 x 744 px",
+        "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
+        "access": "public"
       },
       {
+        "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc",
         "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.jpg",
-        "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.jpg",
-        "title": "Kaoyu Shenhua Logo Page 01",
+        "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
+        "title": "kaoyu shenhua logo page 01",
         "format": "JPG",
         "bytes": 123391,
-        "size": "120 KB",
+        "size": "120.5 KB",
         "width": 1488,
         "height": 744,
-        "dimensions": "1488 x 744 px"
+        "dimensions": "1488 x 744 px",
+        "sha256": "8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c",
+        "access": "public"
       },
       {
+        "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49",
         "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.png",
-        "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.png",
-        "title": "Kaoyu Shenhua Logo Page 01",
+        "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49/81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c/original.png",
+        "title": "kaoyu shenhua logo page 01",
         "format": "PNG",
         "bytes": 50420,
         "size": "49.2 KB",
         "width": 1488,
         "height": 744,
-        "dimensions": "1488 x 744 px"
+        "dimensions": "1488 x 744 px",
+        "sha256": "81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c",
+        "access": "public"
       },
       {
+        "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea",
         "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.jpg",
-        "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.jpg",
-        "title": "Kaoyu Shenhua Logo Page 02",
+        "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea/25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033/original.jpg",
+        "title": "kaoyu shenhua logo page 02",
         "format": "JPG",
         "bytes": 58912,
         "size": "57.5 KB",
         "width": 1488,
         "height": 744,
-        "dimensions": "1488 x 744 px"
+        "dimensions": "1488 x 744 px",
+        "sha256": "25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033",
+        "access": "public"
       },
       {
+        "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7",
         "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.png",
-        "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.png",
-        "title": "Kaoyu Shenhua Logo Page 02",
+        "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
+        "title": "kaoyu shenhua logo page 02",
         "format": "PNG",
         "bytes": 23456,
         "size": "22.9 KB",
         "width": 1488,
         "height": 744,
-        "dimensions": "1488 x 744 px"
+        "dimensions": "1488 x 744 px",
+        "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
+        "access": "public"
       }
     ]
   },
