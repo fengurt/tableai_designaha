@@ -42,7 +42,20 @@ jobs:
         run: |
           set -euo pipefail
           file "$SOURCE"
-          sudo freshclam || true
+          sudo systemctl stop clamav-freshclam.service 2>/dev/null || true
+          updated=false
+          for attempt in 1 2 3; do
+            if sudo freshclam --stdout; then
+              updated=true
+              break
+            fi
+            sleep $((attempt * 5))
+          done
+          if [ "$updated" != true ] && ! find /var/lib/clamav -maxdepth 1 -type f \
+            \( -name '*.cvd' -o -name '*.cld' \) -print -quit | grep -q .; then
+            echo 'ClamAV database is unavailable after three update attempts.' >&2
+            exit 1
+          fi
           clamscan --no-summary "$SOURCE"
       - name: Convert preview
         shell: bash
