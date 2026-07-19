@@ -2,6 +2,14 @@ import { indexSearchDocument, indexSearchDocuments } from "./search.js";
 import { chineseNgrams, now, parseJson } from "./utils.js";
 import { sha256 } from "./security.js";
 
+function textValues(value) {
+  if (typeof value === "string") return value.trim() ? [value.trim()] : [];
+  if (typeof value === "number" || typeof value === "boolean") return [String(value)];
+  if (Array.isArray(value)) return value.flatMap(textValues);
+  if (value && typeof value === "object") return Object.values(value).flatMap(textValues);
+  return [];
+}
+
 async function githubFile(env, path, content, version) {
   if (!env.GITHUB_SERVICE_TOKEN) throw new Error("github_service_token_missing");
   const endpoint = `https://api.github.com/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/contents/${path}`;
@@ -28,7 +36,7 @@ async function materializeSearchDocument(env, payload, deferVector = false) {
     if (!row) return null;
     const brand = parseJson(row.payload_json);
     const title = brand.displayName || brand.name || brand.names?.zh || brand.names?.en || id;
-    const body = [brand.secondaryName, brand.description, brand.introduction, brand.business, ...(brand.tags || []), ...(brand.tracks || []), ...(brand.audiences || [])].filter(Boolean).join("\n");
+    const body = textValues([brand.secondaryName, brand.description, brand.introduction, brand.business, brand.tags, brand.tracks, brand.audiences]).join("\n");
     document = { id: `brand:${id}`, entityType: "brand", entityId: id, ipSlug: id, language: brand.mainLanguage || "und", access: "public", title, body, metadata: { slug: id, website: brand.website || "" }, authority: 1.3, version: row.version };
   } else if (["case", "report", "dataset", "library"].includes(type)) {
     const row = await env.DB.prepare("SELECT * FROM library_items WHERE id=?").bind(id).first();

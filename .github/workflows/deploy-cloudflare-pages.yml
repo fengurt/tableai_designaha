@@ -56,6 +56,13 @@ jobs:
           npm run seed:library
           npx wrangler d1 migrations apply iptrust-library --remote --config edge/wrangler.toml
           npx wrangler d1 execute iptrust-library --remote --config edge/wrangler.toml --file .tmp/iptrust-library-seed.sql
+      - name: Import version-safe brand snapshots
+        if: steps.cloudflare.outputs.enabled == 'true'
+        run: |
+          npm run seed:platform -- --brands-only
+          for seed in .tmp/platform-brand-seed-*.sql; do
+            npx wrangler d1 execute iptrust-library --remote --config edge/wrangler.toml --file "$seed"
+          done
       - name: Deploy edge API and media worker
         if: steps.cloudflare.outputs.enabled == 'true'
         run: npx wrangler deploy --config edge/wrangler.toml
