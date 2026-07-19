@@ -3399,6 +3399,26 @@ function escapeHtml(value) {
   }[char]));
 }
 
+function mediaPreviewUrl(value, size = "640") {
+  try {
+    const url = new URL(value, location.href);
+    if (url.hostname === "media.apuch.art" && url.pathname.startsWith("/public/")) {
+      url.searchParams.set("size", String(size));
+    }
+    return url.href;
+  } catch {
+    return String(value || "");
+  }
+}
+
+function responsiveImageAttributes(value, widths = [320, 640, 1280], sizes = "100vw") {
+  const normalized = [...new Set(widths.map(String))];
+  const fallback = normalized[Math.min(1, normalized.length - 1)] || "640";
+  const src = mediaPreviewUrl(value, fallback);
+  const srcset = normalized.map((width) => mediaPreviewUrl(value, width) + " " + width + "w").join(", ");
+  return 'src="' + escapeHtml(src) + '" srcset="' + escapeHtml(srcset) + '" sizes="' + escapeHtml(sizes) + '"';
+}
+
 function copyIcon() {
   return \`<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="10" height="10" rx="2"></rect><path d="M5 15V7a2 2 0 0 1 2-2h8"></path></svg>\`;
 }
@@ -3517,7 +3537,7 @@ function cardClass(brand = {}) {
 
 function cardHeroImage(brand = {}, localized = {}) {
   if (!brand.heroImage) return "";
-  return \`<img src="\${escapeHtml(brand.heroImage)}" alt="\${escapeHtml(localized.name || brand.name || "")}" loading="lazy">\`;
+  return \`<img \${responsiveImageAttributes(brand.heroImage, [320, 640, 1280], "(max-width: 760px) 100vw, 33vw")} alt="\${escapeHtml(localized.name || brand.name || "")}" loading="lazy" decoding="async">\`;
 }
 
 function statusLabel(status) {
@@ -4282,7 +4302,7 @@ function brandAssetStrip(images = []) {
         \${images.map((image) => \`
           <div class="brand-asset" title="\${escapeHtml(image.title || image.path || "")}">
             <a class="brand-asset-link" href="\${escapeHtml(image.sitePath)}">
-              <img src="\${escapeHtml(image.sitePath)}" alt="\${escapeHtml(image.title || "")}" loading="lazy">
+              <img \${responsiveImageAttributes(image.sitePath, [320, 640, 1280], "(max-width: 760px) 54vw, 240px")} alt="\${escapeHtml(image.title || "")}" loading="lazy" decoding="async">
             </a>
             <button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="\${escapeHtml(image.sitePath)}" aria-label="\${escapeHtml(t("copy.assetUrl"))}">\${copyIcon()}</button>
             <div class="brand-asset-info">
@@ -4311,7 +4331,7 @@ function adobeAssetPanel(adobeAssets = []) {
       \${adobeAssets.map((asset) => \`
         <article class="adobe-source-file">
           <div class="adobe-source-preview">
-            \${asset.preview?.sitePath ? \`<img src="\${escapeHtml(asset.preview.sitePath)}" alt="\${escapeHtml(asset.title || "Adobe asset")}" loading="lazy">\` : ""}
+            \${asset.preview?.sitePath ? \`<img \${responsiveImageAttributes(asset.preview.sitePath, [320, 640, 1280], "(max-width: 760px) 100vw, 42vw")} alt="\${escapeHtml(asset.title || "Adobe asset")}" loading="lazy" decoding="async">\` : ""}
             \${asset.preview?.sitePath ? \`<button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="\${escapeHtml(asset.preview.sitePath)}" aria-label="\${escapeHtml(t("copy.assetUrl"))}">\${copyIcon()}</button>\` : ""}
           </div>
           <div class="adobe-source-body">
@@ -4617,7 +4637,7 @@ async function renderBrand() {
         </div>
         \${hero ? \`
           <div class="brand-visual">
-            <img src="\${escapeHtml(hero.sitePath)}" alt="\${escapeHtml(hero.title || display.name)}">
+            <img \${responsiveImageAttributes(hero.sitePath, [640, 1280, 2400], "(max-width: 900px) 100vw, 52vw")} alt="\${escapeHtml(hero.title || display.name)}" decoding="async">
             <button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="\${escapeHtml(hero.sitePath)}" aria-label="\${escapeHtml(t("copy.assetUrl"))}">\${copyIcon()}</button>
             <div class="brand-visual-meta">
               <strong>\${escapeHtml(hero.title || display.name)}</strong>
