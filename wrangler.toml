@@ -6,3 +6,9 @@ compatibility_date = "2026-05-03"
 binding = "MEDIA_BUCKET"
 bucket_name = "iptrust-media"
 preview_bucket_name = "iptrust-media-preview"
+
+[[d1_databases]]
+binding = "LIBRARY_DB"
+database_name = "iptrust-library"
+database_id = "0e2047ba-5801-41c9-9cdd-14259027ac9f"
+migrations_dir = "migrations"

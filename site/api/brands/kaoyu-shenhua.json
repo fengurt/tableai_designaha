@@ -1,0 +1,617 @@
+{
+  "slug": "kaoyu-shenhua",
+  "folder": "KaoyuShenhua",
+  "name": "烤鱼神话",
+  "nativeName": "KAOYUSHENHUA",
+  "description": "烤鱼神话是以烤鱼与川湘菜为核心的餐饮品牌。",
+  "officialWebsite": "",
+  "mainLanguage": "zh",
+  "intro": {
+    "zh": "烤鱼神话以烤鱼与川湘菜为核心，通过鲜明符号、门店体验与稳定出品建立可识别的餐饮品牌。",
+    "en": "KAOYUSHENHUA is a Chinese dining brand centered on grilled fish and Sichuan-Hunan cuisine, shaped through a distinctive symbol, restaurant experience, and consistent foo…"
+  },
+  "business": {
+    "zh": "烤鱼、川湘菜、餐饮门店运营、品牌连锁与供应链协同。",
+    "en": "Grilled fish, Sichuan-Hunan cuisine, restaurant operations, brand franchising, and supply-chain coordination."
+  },
+  "notes": {
+    "zh": "已归档 Adobe Illustrator 原始标志文件，并提供网页预览与 PNG/JPG 导出版本。",
+    "en": "The original Adobe Illustrator logo is archived with browser previews and PNG/JPG exports."
+  },
+  "primaryGuide": "KaoyuShenhua/README.md",
+  "theme": {
+    "mode": "light",
+    "primary": "#241714",
+    "accent": "#B33A2B",
+    "secondary": "#C89B58",
+    "surface": "#F5F2EE",
+    "paper": "#FFFDFC",
+    "ink": "#181312",
+    "muted": "#6C625E",
+    "line": "rgba(36, 23, 20, 0.18)",
+    "keywords": [
+      "grilled fish",
+      "Sichuan-Hunan cuisine",
+      "fire red",
+      "restaurant symbol",
+      "Chinese dining"
+    ]
+  },
+  "classification": {
+    "tracks": {
+      "zh": [
+        "餐饮品牌",
+        "烤鱼",
+        "川湘菜",
+        "连锁经营"
+      ],
+      "en": [
+        "Restaurant brand",
+        "Grilled fish",
+        "Sichuan-Hunan cuisine",
+        "Chain operations"
+      ]
+    },
+    "audiences": {
+      "zh": [
+        "餐饮消费者",
+        "门店合作方",
+        "连锁经营团队"
+      ],
+      "en": [
+        "Restaurant guests",
+        "Store partners",
+        "Chain operating teams"
+      ]
+    },
+    "tags": {
+      "zh": [
+        "烤鱼",
+        "川湘菜",
+        "中式餐饮",
+        "门店",
+        "品牌连锁"
+      ],
+      "en": [
+        "Grilled fish",
+        "Sichuan-Hunan cuisine",
+        "Chinese dining",
+        "Restaurants",
+        "Brand chain"
+      ]
+    }
+  },
+  "assetKey": "kaoyu-shenhua",
+  "mainName": "烤鱼神话",
+  "mainLocale": "CN",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "mainLocale": "CN",
+    "intro": {
+      "zh": "烤鱼神话以烤鱼与川湘菜为核心，通过鲜明符号、门店体验与稳定出品建立可识别的餐饮品牌。",
+      "en": "KAOYUSHENHUA is a Chinese dining brand centered on grilled fish and Sichuan-Hunan cuisine, shaped through a distinctive symbol, restaurant experience, and consistent food quality."
+    },
+    "business": {
+      "zh": "烤鱼、川湘菜、餐饮门店运营、品牌连锁与供应链协同。",
+      "en": "Grilled fish, Sichuan-Hunan cuisine, restaurant operations, brand franchising, and supply-chain coordination."
+    },
+    "notes": {
+      "zh": "已归档 Adobe Illustrator 原始标志文件，并提供网页预览与 PNG/JPG 导出版本。",
+      "en": "The original Adobe Illustrator logo is archived with browser previews and PNG/JPG exports."
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "餐饮品牌",
+          "烤鱼",
+          "川湘菜",
+          "连锁经营"
+        ],
+        "en": [
+          "Restaurant brand",
+          "Grilled fish",
+          "Sichuan-Hunan cuisine",
+          "Chain operations"
+        ]
+      },
+      "audiences": {
+        "zh": [
+          "餐饮消费者",
+          "门店合作方",
+          "连锁经营团队"
+        ],
+        "en": [
+          "Restaurant guests",
+          "Store partners",
+          "Chain operating teams"
+        ]
+      },
+      "tags": {
+        "zh": [
+          "烤鱼",
+          "川湘菜",
+          "中式餐饮",
+          "门店",
+          "品牌连锁"
+        ],
+        "en": [
+          "Grilled fish",
+          "Sichuan-Hunan cuisine",
+          "Chinese dining",
+          "Restaurants",
+          "Brand chain"
+        ]
+      }
+    }
+  },
+  "display": {
+    "default": {
+      "language": "zh",
+      "name": "烤鱼神话"
+    },
+    "zh": {
+      "name": "烤鱼神话",
+      "secondaryName": "KAOYUSHENHUA"
+    },
+    "en": {
+      "name": "KAOYUSHENHUA",
+      "secondaryName": "烤鱼神话"
+    }
+  },
+  "version": {
+    "hash": "a92c3f25ee6c61875e3356cd843a7582eaa8ef00",
+    "shortHash": "a92c3f2",
+    "date": "2026-07-14T16:56:44+08:00",
+    "message": "Show metadata on brand hero assets",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a92c3f25ee6c61875e3356cd843a7582eaa8ef00"
+  },
+  "historyUrl": "api/history/kaoyu-shenhua.json",
+  "history": [
+    {
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "sourcePaths": [
+        "config/brands.json",
+        "KaoyuShenhua",
+        "KaoyuShenhua/README.md"
+      ]
+    },
+    {
+      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "shortHash": "a5bf7cf",
+      "date": "2026-07-10T20:21:24+08:00",
+      "message": "Replace contrast-template brand copy",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "sourcePaths": [
+        "config/brands.json",
+        "KaoyuShenhua",
+        "KaoyuShenhua/README.md"
+      ]
+    },
+    {
+      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "shortHash": "ed33a8b",
+      "date": "2026-07-10T18:44:20+08:00",
+      "message": "Add Shanrenjing journey safety IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "sourcePaths": [
+        "config/brands.json",
+        "KaoyuShenhua",
+        "KaoyuShenhua/README.md"
+      ]
+    },
+    {
+      "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "shortHash": "cd0ea58",
+      "date": "2026-07-08T04:12:48+08:00",
+      "message": "Refine hero index labels",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "sourcePaths": [
+        "config/brands.json",
+        "KaoyuShenhua",
+        "KaoyuShenhua/README.md"
+      ]
+    },
+    {
+      "hash": "9e33619ad95856c977f8803517f325304d678821",
+      "shortHash": "9e33619",
+      "date": "2026-07-08T03:55:08+08:00",
+      "message": "Add Nibiru and Shenzhen Microsoft Global Center IPs",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/9e33619ad95856c977f8803517f325304d678821",
+      "sourcePaths": [
+        "config/brands.json",
+        "KaoyuShenhua",
+        "KaoyuShenhua/README.md"
+      ]
+    },
+    {
+      "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
+      "shortHash": "4c1ae93",
+      "date": "2026-07-08T03:28:03+08:00",
+      "message": "Update OPC Global primary language",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb",
+      "sourcePaths": [
+        "config/brands.json",
+        "KaoyuShenhua",
+        "KaoyuShenhua/README.md"
+      ]
+    }
+  ],
+  "url": "brand.html?brand=kaoyu-shenhua",
+  "apiUrl": "api/brands/kaoyu-shenhua.json",
+  "status": "documented",
+  "guides": [
+    {
+      "path": "KaoyuShenhua/README.md",
+      "title": "README",
+      "format": "md",
+      "primary": true,
+      "excerpt": "烤鱼神话 品牌定位 烤鱼神话是以烤鱼与川湘菜为核心的餐饮品牌，通过鲜明符号、门店体验与稳定出品建立可识别、可扩展的品牌系统。 品牌名称 中文主名称：烤鱼神话 英文名称：KAOYUSHENHUA 主语言：中文 业务 烤鱼与川湘菜 餐饮门店运营 品牌连锁 供应链协同 视觉资产 原始标志以 Adobe Illustrator 文件归档。网站提供逐页 PNG/JPG 预览与导出版本；原始文件、导出文件、格式、尺寸、文件大小及公开地址均通过品牌 API 的 adobeAssets 与 images 字段调用。 使用原则 优先使用原始矢量标志或透明背景 PNG。 不拉伸、不描边、不改变标志比例。 门店与餐饮场景以深墨、火红与暖金为核心色彩。 中文主名称始终优先显示，英文名称作为辅助识别。",
+      "text": "# 烤鱼神话\n\n## 品牌定位\n\n烤鱼神话是以烤鱼与川湘菜为核心的餐饮品牌，通过鲜明符号、门店体验与稳定出品建立可识别、可扩展的品牌系统。\n\n## 品牌名称\n\n- 中文主名称：烤鱼神话\n- 英文名称：KAOYUSHENHUA\n- 主语言：中文\n\n## 业务\n\n- 烤鱼与川湘菜\n- 餐饮门店运营\n- 品牌连锁\n- 供应链协同\n\n## 视觉资产\n\n原始标志以 Adobe Illustrator 文件归档。网站提供逐页 PNG/JPG 预览与导出版本；原始文件、导出文件、格式、尺寸、文件大小及公开地址均通过品牌 API 的 `adobeAssets` 与 `images` 字段调用。\n\n## 使用原则\n\n- 优先使用原始矢量标志或透明背景 PNG。\n- 不拉伸、不描边、不改变标志比例。\n- 门店与餐饮场景以深墨、火红与暖金为核心色彩。\n- 中文主名称始终优先显示，英文名称作为辅助识别。\n",
+      "html": "<h1 id=\"kaoyu-shenhua-guide-1-烤鱼神话\">烤鱼神话</h1>\n<h2 id=\"kaoyu-shenhua-guide-1-品牌定位\">品牌定位</h2>\n<p>烤鱼神话是以烤鱼与川湘菜为核心的餐饮品牌，通过鲜明符号、门店体验与稳定出品建立可识别、可扩展的品牌系统。</p>\n<h2 id=\"kaoyu-shenhua-guide-1-品牌名称\">品牌名称</h2>\n<ul>\n<li>中文主名称：烤鱼神话</li>\n<li>英文名称：KAOYUSHENHUA</li>\n<li>主语言：中文</li>\n</ul>\n<h2 id=\"kaoyu-shenhua-guide-1-业务\">业务</h2>\n<ul>\n<li>烤鱼与川湘菜</li>\n<li>餐饮门店运营</li>\n<li>品牌连锁</li>\n<li>供应链协同</li>\n</ul>\n<h2 id=\"kaoyu-shenhua-guide-1-视觉资产\">视觉资产</h2>\n<p>原始标志以 Adobe Illustrator 文件归档。网站提供逐页 PNG/JPG 预览与导出版本；原始文件、导出文件、格式、尺寸、文件大小及公开地址均通过品牌 API 的 <code>adobeAssets</code> 与 <code>images</code> 字段调用。</p>\n<h2 id=\"kaoyu-shenhua-guide-1-使用原则\">使用原则</h2>\n<ul>\n<li>优先使用原始矢量标志或透明背景 PNG。</li>\n<li>不拉伸、不描边、不改变标志比例。</li>\n<li>门店与餐饮场景以深墨、火红与暖金为核心色彩。</li>\n<li>中文主名称始终优先显示，英文名称作为辅助识别。</li>\n</ul>\n"
+    }
+  ],
+  "tokens": [],
+  "images": [
+    {
+      "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-brand-hero.png",
+      "sitePath": "assets/brand-images/kaoyu-shenhua.png",
+      "title": "Kaoyu Shenhua Brand Hero",
+      "format": "PNG",
+      "bytes": 23456,
+      "size": "22.9 KB",
+      "width": 1488,
+      "height": 744,
+      "dimensions": "1488 x 744 px"
+    },
+    {
+      "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.jpg",
+      "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.jpg",
+      "title": "Kaoyu Shenhua Logo Page 01",
+      "format": "JPG",
+      "bytes": 123391,
+      "size": "120 KB",
+      "width": 1488,
+      "height": 744,
+      "dimensions": "1488 x 744 px"
+    },
+    {
+      "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.png",
+      "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.png",
+      "title": "Kaoyu Shenhua Logo Page 01",
+      "format": "PNG",
+      "bytes": 50420,
+      "size": "49.2 KB",
+      "width": 1488,
+      "height": 744,
+      "dimensions": "1488 x 744 px"
+    },
+    {
+      "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.jpg",
+      "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.jpg",
+      "title": "Kaoyu Shenhua Logo Page 02",
+      "format": "JPG",
+      "bytes": 58912,
+      "size": "57.5 KB",
+      "width": 1488,
+      "height": 744,
+      "dimensions": "1488 x 744 px"
+    },
+    {
+      "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.png",
+      "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.png",
+      "title": "Kaoyu Shenhua Logo Page 02",
+      "format": "PNG",
+      "bytes": 23456,
+      "size": "22.9 KB",
+      "width": 1488,
+      "height": 744,
+      "dimensions": "1488 x 744 px"
+    }
+  ],
+  "adobeAssets": [
+    {
+      "id": "kaoyu-shenhua-logo-source",
+      "slug": "kaoyu-shenhua",
+      "title": "烤鱼神话logo符号(3)",
+      "source": {
+        "path": "KaoyuShenhua/assets/source/kaoyu-shenhua-logo.ai",
+        "format": "AI",
+        "bytes": 1635017,
+        "size": "1.56 MB",
+        "sitePath": "assets/adobe/kaoyu-shenhua/kaoyu-shenhua-logo.ai"
+      },
+      "preview": {
+        "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.png",
+        "format": "PNG",
+        "bytes": 23456,
+        "size": "22.9 KB",
+        "width": 1488,
+        "height": 744,
+        "dimensions": "1488 x 744 px",
+        "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.png",
+        "title": "Kaoyu Shenhua Logo Page 02"
+      },
+      "hero": {
+        "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-brand-hero.png",
+        "format": "PNG",
+        "bytes": 23456,
+        "size": "22.9 KB",
+        "width": 1488,
+        "height": 744,
+        "dimensions": "1488 x 744 px",
+        "sitePath": "assets/brand-images/kaoyu-shenhua.png",
+        "title": "Kaoyu Shenhua Brand Hero"
+      },
+      "exports": [
+        {
+          "page": 1,
+          "jpg": {
+            "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.jpg",
+            "format": "JPG",
+            "bytes": 123391,
+            "size": "120 KB",
+            "width": 1488,
+            "height": 744,
+            "dimensions": "1488 x 744 px",
+            "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.jpg",
+            "title": "Kaoyu Shenhua Logo Page 01"
+          },
+          "png": {
+            "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.png",
+            "format": "PNG",
+            "bytes": 50420,
+            "size": "49.2 KB",
+            "width": 1488,
+            "height": 744,
+            "dimensions": "1488 x 744 px",
+            "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.png",
+            "title": "Kaoyu Shenhua Logo Page 01"
+          }
+        },
+        {
+          "page": 2,
+          "jpg": {
+            "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.jpg",
+            "format": "JPG",
+            "bytes": 58912,
+            "size": "57.5 KB",
+            "width": 1488,
+            "height": 744,
+            "dimensions": "1488 x 744 px",
+            "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.jpg",
+            "title": "Kaoyu Shenhua Logo Page 02"
+          },
+          "png": {
+            "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.png",
+            "format": "PNG",
+            "bytes": 23456,
+            "size": "22.9 KB",
+            "width": 1488,
+            "height": 744,
+            "dimensions": "1488 x 744 px",
+            "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.png",
+            "title": "Kaoyu Shenhua Logo Page 02"
+          }
+        }
+      ],
+      "generatedAt": "2026-07-19T05:48:57.936Z",
+      "pipeline": "ghostscript"
+    }
+  ],
+  "logoUrl": "assets/brand-images/kaoyu-shenhua.png",
+  "assetKit": {
+    "assetKey": "kaoyu-shenhua",
+    "endpoints": {
+      "brand": "api/brands/kaoyu-shenhua.json",
+      "logo": "assets/brand-images/kaoyu-shenhua.png",
+      "images": "api/brands/kaoyu-shenhua.json#images",
+      "adobe": "api/brands/kaoyu-shenhua.json#adobeAssets",
+      "tokens": "api/brands/kaoyu-shenhua.json#tokens",
+      "history": "api/history/kaoyu-shenhua.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#241714"
+        },
+        {
+          "key": "accent",
+          "value": "#B33A2B"
+        },
+        {
+          "key": "secondary",
+          "value": "#C89B58"
+        },
+        {
+          "key": "surface",
+          "value": "#F5F2EE"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFDFC"
+        },
+        {
+          "key": "ink",
+          "value": "#181312"
+        },
+        {
+          "key": "muted",
+          "value": "#6C625E"
+        }
+      ],
+      "keywords": [
+        "grilled fish",
+        "Sichuan-Hunan cuisine",
+        "fire red",
+        "restaurant symbol",
+        "Chinese dining"
+      ],
+      "images": [
+        {
+          "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-brand-hero.png",
+          "sitePath": "assets/brand-images/kaoyu-shenhua.png",
+          "title": "Kaoyu Shenhua Brand Hero",
+          "format": "PNG",
+          "bytes": 23456,
+          "size": "22.9 KB",
+          "width": 1488,
+          "height": 744,
+          "dimensions": "1488 x 744 px"
+        },
+        {
+          "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.jpg",
+          "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.jpg",
+          "title": "Kaoyu Shenhua Logo Page 01",
+          "format": "JPG",
+          "bytes": 123391,
+          "size": "120 KB",
+          "width": 1488,
+          "height": 744,
+          "dimensions": "1488 x 744 px"
+        },
+        {
+          "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.png",
+          "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.png",
+          "title": "Kaoyu Shenhua Logo Page 01",
+          "format": "PNG",
+          "bytes": 50420,
+          "size": "49.2 KB",
+          "width": 1488,
+          "height": 744,
+          "dimensions": "1488 x 744 px"
+        },
+        {
+          "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.jpg",
+          "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.jpg",
+          "title": "Kaoyu Shenhua Logo Page 02",
+          "format": "JPG",
+          "bytes": 58912,
+          "size": "57.5 KB",
+          "width": 1488,
+          "height": 744,
+          "dimensions": "1488 x 744 px"
+        },
+        {
+          "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.png",
+          "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.png",
+          "title": "Kaoyu Shenhua Logo Page 02",
+          "format": "PNG",
+          "bytes": 23456,
+          "size": "22.9 KB",
+          "width": 1488,
+          "height": 744,
+          "dimensions": "1488 x 744 px"
+        }
+      ]
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#241714"
+      },
+      {
+        "key": "accent",
+        "value": "#B33A2B"
+      },
+      {
+        "key": "secondary",
+        "value": "#C89B58"
+      },
+      {
+        "key": "surface",
+        "value": "#F5F2EE"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFDFC"
+      },
+      {
+        "key": "ink",
+        "value": "#181312"
+      },
+      {
+        "key": "muted",
+        "value": "#6C625E"
+      }
+    ],
+    "keywords": [
+      "grilled fish",
+      "Sichuan-Hunan cuisine",
+      "fire red",
+      "restaurant symbol",
+      "Chinese dining"
+    ],
+    "images": [
+      {
+        "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-brand-hero.png",
+        "sitePath": "assets/brand-images/kaoyu-shenhua.png",
+        "title": "Kaoyu Shenhua Brand Hero",
+        "format": "PNG",
+        "bytes": 23456,
+        "size": "22.9 KB",
+        "width": 1488,
+        "height": 744,
+        "dimensions": "1488 x 744 px"
+      },
+      {
+        "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.jpg",
+        "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.jpg",
+        "title": "Kaoyu Shenhua Logo Page 01",
+        "format": "JPG",
+        "bytes": 123391,
+        "size": "120 KB",
+        "width": 1488,
+        "height": 744,
+        "dimensions": "1488 x 744 px"
+      },
+      {
+        "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.png",
+        "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.png",
+        "title": "Kaoyu Shenhua Logo Page 01",
+        "format": "PNG",
+        "bytes": 50420,
+        "size": "49.2 KB",
+        "width": 1488,
+        "height": 744,
+        "dimensions": "1488 x 744 px"
+      },
+      {
+        "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.jpg",
+        "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.jpg",
+        "title": "Kaoyu Shenhua Logo Page 02",
+        "format": "JPG",
+        "bytes": 58912,
+        "size": "57.5 KB",
+        "width": 1488,
+        "height": 744,
+        "dimensions": "1488 x 744 px"
+      },
+      {
+        "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.png",
+        "sitePath": "assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.png",
+        "title": "Kaoyu Shenhua Logo Page 02",
+        "format": "PNG",
+        "bytes": 23456,
+        "size": "22.9 KB",
+        "width": 1488,
+        "height": 744,
+        "dimensions": "1488 x 744 px"
+      }
+    ]
+  },
+  "editablePaths": [
+    "KaoyuShenhua/README.md"
+  ],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/KaoyuShenhua",
+    "folder": "KaoyuShenhua"
+  }
+}

@@ -12,6 +12,13 @@ Machine-readable entry points:
 - /api/history/{slug}.json
 - /api/search.json
 - /api/versions.json
+- /api/library/organizations
+- /api/library/cases
+- /api/library/reports
+- /api/library/datasets
+- /api/library/relations
+- /library/
+- /mcp (MCP Streamable HTTP, protocol 2025-11-25)
 - /ip_sys.md
 - /skills/iptrust-live-update/SKILL.md
 
@@ -41,6 +48,7 @@ Brands:
 - Nibiru (nibiru): /api/brands/nibiru.json · mainLocale EN · palette #1D2BFF / #7CF7D4
 - 深圳微软出海中心 (shenzhen-microsoft-global-center): /api/brands/shenzhen-microsoft-global-center.json · mainLocale CN · palette #2563EB / #00A4EF
 - 山人境 (shanrenjing): /api/brands/shanrenjing.json · mainLocale CN · palette #173F38 / #D5A53B
+- 烤鱼神话 (kaoyu-shenhua): /api/brands/kaoyu-shenhua.json · mainLocale CN · palette #241714 / #B33A2B
 
 Admin workflow:
 - /admin.html unlocks with the generated admin key.

@@ -46,6 +46,12 @@ jobs:
       - name: Build static site
         if: steps.cloudflare.outputs.enabled == 'true'
         run: npm run build:site
+      - name: Sync public library to D1
+        if: steps.cloudflare.outputs.enabled == 'true'
+        run: |
+          npm run seed:library
+          npx wrangler d1 migrations apply iptrust-library --remote
+          npx wrangler d1 execute iptrust-library --remote --file .tmp/iptrust-library-seed.sql
       - name: Deploy to Cloudflare Pages
         if: steps.cloudflare.outputs.enabled == 'true'
         uses: cloudflare/wrangler-action@v3

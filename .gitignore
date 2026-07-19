@@ -2,6 +2,7 @@
 node_modules/
 mcp/dist/
 .wrangler/
+.tmp/
 fengzhi/fengzhi.zip
 **/extracted/
 ksamint/private/*.md

@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-10T13:18:19.611Z",
+  "generatedAt": "2026-07-19T06:06:59.256Z",
   "version": {
-    "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
-    "shortHash": "a5bf7cf",
-    "date": "2026-07-10T20:21:24+08:00",
-    "message": "Replace contrast-template brand copy",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9"
+    "hash": "a92c3f25ee6c61875e3356cd843a7582eaa8ef00",
+    "shortHash": "a92c3f2",
+    "date": "2026-07-14T16:56:44+08:00",
+    "message": "Show metadata on brand hero assets",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a92c3f25ee6c61875e3356cd843a7582eaa8ef00"
   },
   "brands": [
     {
@@ -244,17 +244,33 @@
       "apiUrl": "api/brands/shanrenjing.json",
       "historyUrl": "api/history/shanrenjing.json",
       "guideUrl": "brand.html?brand=shanrenjing"
+    },
+    {
+      "slug": "kaoyu-shenhua",
+      "name": "烤鱼神话",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "apiUrl": "api/brands/kaoyu-shenhua.json",
+      "historyUrl": "api/history/kaoyu-shenhua.json",
+      "guideUrl": "brand.html?brand=kaoyu-shenhua"
     }
   ],
   "mcp": {
     "local": "mcp/src/index.ts",
+    "remote": "mcp",
+    "transport": "Streamable HTTP",
+    "protocolVersion": "2025-11-25",
     "resources": "api/brands/{slug}.json",
     "tools": [
       "list_brands",
       "get_brand",
       "get_guideline",
       "list_tokens",
-      "get_token"
+      "get_token",
+      "search_library",
+      "list_library",
+      "get_library_item",
+      "get_related"
     ]
   },
   "schema": {
@@ -267,6 +283,49 @@
     "path": "ip_sys.md",
     "description": "Universal closed-loop framework for defining and governing any organization or brand IP."
   },
+  "library": {
+    "page": "library/",
+    "storage": "Cloudflare D1 with Git snapshots and R2 file objects",
+    "publicMetadata": true,
+    "counts": {
+      "organizations": 599,
+      "cases": 0,
+      "reports": 0,
+      "datasets": 0
+    },
+    "endpoints": {
+      "organizations": "api/library/organizations",
+      "cases": "api/library/cases",
+      "reports": "api/library/reports",
+      "datasets": "api/library/datasets",
+      "relations": "api/library/relations"
+    },
+    "sources": [
+      {
+        "id": "fortune-global-500-2025",
+        "name": "Fortune Global 500 2025",
+        "publisher": "Fortune",
+        "type": "ranking",
+        "year": 2025,
+        "sourceUrl": "https://fortune.com/ranking/global500/?level=1",
+        "authority": "publisher",
+        "refresh": "annual",
+        "publicMetadata": true
+      },
+      {
+        "id": "sasac-central-enterprises-2026",
+        "name": "国务院国资委央企名录 2026",
+        "publisher": "国务院国有资产监督管理委员会",
+        "type": "official-registry",
+        "year": 2026,
+        "sourceDate": "2026-07-11",
+        "sourceUrl": "https://wap.sasac.gov.cn/n2588045/n27271785/n27271792/c14159097/content.html",
+        "authority": "government",
+        "refresh": "monthly",
+        "publicMetadata": true
+      }
+    ]
+  },
   "skills": [
     {
       "name": "iptrust-live-update",
@@ -278,11 +337,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
-      "shortHash": "a5bf7cf",
-      "date": "2026-07-10T20:21:24+08:00",
-      "message": "Replace contrast-template brand copy",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9"
+      "hash": "a92c3f25ee6c61875e3356cd843a7582eaa8ef00",
+      "shortHash": "a92c3f2",
+      "date": "2026-07-14T16:56:44+08:00",
+      "message": "Show metadata on brand hero assets",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a92c3f25ee6c61875e3356cd843a7582eaa8ef00"
     }
   },
   "sync": {

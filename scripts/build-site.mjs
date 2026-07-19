@@ -11,11 +11,20 @@ const siteDir = join(root, "site");
 const apiDir = join(siteDir, "api");
 const brandApiDir = join(apiDir, "brands");
 const historyApiDir = join(apiDir, "history");
+const libraryApiDir = join(apiDir, "library");
 const assetsDir = join(siteDir, "assets");
 const imageDir = join(assetsDir, "brand-images");
+const adobeDir = join(assetsDir, "adobe");
 const contactDir = join(assetsDir, "contact");
+const librarySiteDir = join(siteDir, "library");
+const libraryDataDir = join(root, "data", "library");
 
 const brands = JSON.parse(await readFile(join(root, "config/brands.json"), "utf8"));
+const librarySnapshotNames = ["sources", "organizations", "cases", "reports", "datasets", "relations", "sync"];
+const librarySnapshots = Object.fromEntries(await Promise.all(librarySnapshotNames.map(async (name) => [
+  name,
+  JSON.parse(await readFile(join(libraryDataDir, `${name}.json`), "utf8")),
+])));
 const adminConfig = existsSync(join(root, "config/site-admin.public.json"))
   ? JSON.parse(await readFile(join(root, "config/site-admin.public.json"), "utf8"))
   : {};
@@ -53,6 +62,10 @@ function isToken(path) {
 
 function isBrandImage(path) {
   return path.includes("/assets/brand-images/") && [".png", ".jpg", ".jpeg", ".webp"].includes(extname(path).toLowerCase());
+}
+
+function isAdobeManifest(path) {
+  return path.includes("/assets/adobe-assets/") && extname(path).toLowerCase() === ".json";
 }
 
 function formatFileSize(bytes = 0) {
@@ -459,12 +472,18 @@ function apiSchemaPayload() {
       manifest: "api/manifest.json",
       allBrands: "api/brands.json",
       search: "api/search.json",
+      organizations: "api/library/organizations",
+      cases: "api/library/cases",
+      reports: "api/library/reports",
+      datasets: "api/library/datasets",
+      relations: "api/library/relations",
       allVersions: "api/versions.json",
       brand: "api/brands/{slug}.json",
       brandHistory: "api/history/{slug}.json",
       ipSystem: "ip_sys.md",
       skill: "skills/iptrust-live-update/SKILL.md",
       llms: "llms.txt",
+      remoteMcp: "mcp",
     },
     brandFields: {
       slug: "Stable IP ID / asset key used by URLs and agent calls.",
@@ -491,6 +510,7 @@ function apiSchemaPayload() {
       guides: "Guideline metadata and text.",
       tokens: "Token file metadata and text.",
       images: "Image asset metadata and public site paths, including format, bytes, human-readable size, width, height, and dimensions.",
+      adobeAssets: "Adobe source files, preview images, page exports, formats, file sizes, and public URLs.",
       logoUrl: "Canonical public URL path for the preferred IP logo, blank when no verified logo asset exists.",
       assetKit: "Unified callable IP asset endpoints, colors, images, and moodboard source.",
       moodboard: "Derived colors, keywords, and image assets for visual direction.",
@@ -523,7 +543,7 @@ const previousHistoryBySlug = new Map(await Promise.all(brands.map(async (brand)
 })));
 const versions = mergeVersionHistory(loadVersions(), previousVersions, 20);
 const buildFingerprint = createHash("sha256");
-for (const inputPath of ["scripts/build-site.mjs", "styles/editorial.css", "config/brands.json", "package.json", "IP-System/ip_sys.md"]) {
+for (const inputPath of ["scripts/build-site.mjs", "styles/editorial.css", "config/brands.json", "package.json", "IP-System/ip_sys.md", "data/library/sync.json", "library/library.css", "library/library.js"]) {
   buildFingerprint.update(await readFile(join(root, inputPath)));
 }
 const buildVersion = `${versions[0]?.shortHash ?? "dev"}-${buildFingerprint.digest("hex").slice(0, 8)}`;
@@ -536,8 +556,11 @@ const ipSystemTocHtml = markdownToc(ipSystemMarkdown, "ip-system");
 await rm(siteDir, { recursive: true, force: true });
 await mkdir(brandApiDir, { recursive: true });
 await mkdir(historyApiDir, { recursive: true });
+await mkdir(libraryApiDir, { recursive: true });
 await mkdir(imageDir, { recursive: true });
+await mkdir(adobeDir, { recursive: true });
 await mkdir(contactDir, { recursive: true });
+await mkdir(librarySiteDir, { recursive: true });
 await mkdir(join(siteDir, "skills", "iptrust-live-update"), { recursive: true });
 await copyFile(join(root, "styles/editorial.css"), join(assetsDir, "editorial.css"));
 if (existsSync(join(root, "skills/iptrust-live-update/SKILL.md"))) {
@@ -549,6 +572,12 @@ if (existsSync(join(root, "IP-System/ip_sys.md"))) {
 if (existsSync(join(root, "assets/contact/wecom-qr.png"))) {
   await copyFile(join(root, "assets/contact/wecom-qr.png"), join(contactDir, "wecom-qr.png"));
 }
+for (const name of librarySnapshotNames) {
+  await copyFile(join(libraryDataDir, `${name}.json`), join(libraryApiDir, `${name}.json`));
+}
+await copyFile(join(root, "library/index.html"), join(librarySiteDir, "index.html"));
+await copyFile(join(root, "library/library.css"), join(librarySiteDir, "library.css"));
+await copyFile(join(root, "library/library.js"), join(librarySiteDir, "library.js"));
 
 const brandPayloads = [];
 
@@ -558,6 +587,7 @@ for (const brand of brands) {
   const guides = [];
   const tokens = [];
   const images = [];
+  const adobeManifests = [];
   const usedImageNames = new Set();
 
   for (const full of files) {
@@ -595,11 +625,41 @@ for (const brand of brands) {
         ...metadata,
       });
     }
+    if (isAdobeManifest(rel)) {
+      adobeManifests.push(JSON.parse(await readFile(full, "utf8")));
+    }
   }
 
   guides.sort((a, b) => Number(b.primary) - Number(a.primary) || a.path.localeCompare(b.path));
   tokens.sort((a, b) => a.path.localeCompare(b.path));
   images.sort((a, b) => Number(b.path.includes("brand-hero")) - Number(a.path.includes("brand-hero")) || a.path.localeCompare(b.path));
+  const adobeAssets = [];
+  for (const manifest of adobeManifests) {
+    const sourcePath = manifest.source?.path ? join(root, manifest.source.path) : "";
+    const brandAdobeDir = join(adobeDir, brand.slug);
+    await mkdir(brandAdobeDir, { recursive: true });
+    let source = { ...(manifest.source || {}) };
+    if (sourcePath && existsSync(sourcePath)) {
+      const sourceName = sourcePath.split("/").at(-1);
+      await copyFile(sourcePath, join(brandAdobeDir, sourceName));
+      source = { ...source, sitePath: `assets/adobe/${brand.slug}/${sourceName}` };
+    }
+    const attachImage = (asset = {}) => {
+      const image = images.find((item) => item.path === asset.path);
+      return image ? { ...asset, sitePath: image.sitePath, title: image.title } : asset;
+    };
+    adobeAssets.push({
+      ...manifest,
+      source,
+      preview: attachImage(manifest.preview),
+      hero: attachImage(manifest.hero),
+      exports: (manifest.exports || []).map((entry) => ({
+        ...entry,
+        png: entry.png ? attachImage(entry.png) : null,
+        jpg: entry.jpg ? attachImage(entry.jpg) : null,
+      })),
+    });
+  }
   const history = mergeVersionHistory(loadBrandVersions(brand), previousHistoryBySlug.get(brand.slug), 20, {
     preferPreviousWhenShallow: true,
   });
@@ -614,7 +674,8 @@ for (const brand of brands) {
     en: liveIntro(brand, guides, "en"),
   };
   const brandProfile = profile(brand);
-  const logoImage = buildPreferredBrandImage(images);
+  const manifestHeroPath = adobeAssets[0]?.hero?.path;
+  const logoImage = images.find((image) => image.path === manifestHeroPath) || buildPreferredBrandImage(images);
   const moodboard = {
     colors: themeColorEntries(brand.theme),
     keywords: brand.theme?.keywords ?? [],
@@ -626,6 +687,7 @@ for (const brand of brands) {
       brand: `api/brands/${brand.slug}.json`,
       logo: logoImage?.sitePath ?? "",
       images: `api/brands/${brand.slug}.json#images`,
+      adobe: adobeAssets.length ? `api/brands/${brand.slug}.json#adobeAssets` : "",
       tokens: `api/brands/${brand.slug}.json#tokens`,
       history: `api/history/${brand.slug}.json`,
     },
@@ -651,6 +713,7 @@ for (const brand of brands) {
     guides,
     tokens,
     images,
+    adobeAssets,
     logoUrl: logoImage?.sitePath ?? "",
     assetKit,
     moodboard,
@@ -674,16 +737,17 @@ for (const brand of brands) {
   await writeFile(join(brandApiDir, `${brand.slug}.json`), JSON.stringify(payload, null, 2));
 }
 
-const indexPayload = brandPayloads.map(({ guides, tokens, images, history, ...brand }) => ({
+const indexPayload = brandPayloads.map(({ guides, tokens, images, adobeAssets, history, ...brand }) => ({
   ...brand,
   guideCount: guides.length,
   tokenCount: tokens.length,
   imageCount: images.length,
+  adobeAssetCount: adobeAssets.length,
   heroImage: images[0]?.sitePath ?? "",
   primaryGuide: guides.find((g) => g.primary)?.path ?? guides[0]?.path ?? "",
   primaryExcerpt: guides.find((g) => g.primary)?.excerpt ?? guides[0]?.excerpt ?? brand.description,
 }));
-const searchPayload = brandPayloads.flatMap((brand) => {
+const brandSearchPayload = brandPayloads.flatMap((brand) => {
   const base = [{
     type: "ip",
     slug: brand.slug,
@@ -718,6 +782,25 @@ const searchPayload = brandPayloads.flatMap((brand) => {
   }));
   return [...base, ...guides];
 });
+const librarySearchPayload = [
+  ...librarySnapshots.organizations.map((organization) => ({
+    type: "organization",
+    slug: organization.id,
+    title: organization.name,
+    subtitle: [organization.sourcePublisher, organization.rank ? `#${organization.rank}` : "", organization.industry].filter(Boolean).join(" · "),
+    text: [organization.description, organization.country, organization.headquarters, organization.officialWebsite, organization.sourceUrl].filter(Boolean).join(" "),
+    url: `library/?type=organizations&q=${encodeURIComponent(organization.name)}`,
+  })),
+  ...["cases", "reports", "datasets"].flatMap((collection) => librarySnapshots[collection].map((item) => ({
+    type: item.type || collection.slice(0, -1),
+    slug: item.slug || item.id,
+    title: item.title?.zh || item.title?.en || item.slug || item.id,
+    subtitle: [item.title?.en, item.sourcePublisher].filter(Boolean).join(" · "),
+    text: [item.summary?.zh, item.summary?.en, item.sourceUrl, item.externalUrl].filter(Boolean).join(" "),
+    url: `library/?type=${collection}&q=${encodeURIComponent(item.title?.zh || item.title?.en || item.slug || item.id)}`,
+  }))),
+];
+const searchPayload = [...brandSearchPayload, ...librarySearchPayload];
 await writeFile(join(apiDir, "brands.json"), JSON.stringify(indexPayload, null, 2));
 await writeFile(join(apiDir, "search.json"), JSON.stringify(searchPayload, null, 2));
 await writeFile(join(apiDir, "versions.json"), JSON.stringify(versions, null, 2));
@@ -742,8 +825,11 @@ await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
   })),
   mcp: {
     local: "mcp/src/index.ts",
+    remote: "mcp",
+    transport: "Streamable HTTP",
+    protocolVersion: "2025-11-25",
     resources: "api/brands/{slug}.json",
-    tools: ["list_brands", "get_brand", "get_guideline", "list_tokens", "get_token"],
+    tools: ["list_brands", "get_brand", "get_guideline", "list_tokens", "get_token", "search_library", "list_library", "get_library_item", "get_related"],
   },
   schema: {
     apiUrl: "api/schema.json",
@@ -754,6 +840,25 @@ await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
     name: "Brand IP System v2",
     path: "ip_sys.md",
     description: "Universal closed-loop framework for defining and governing any organization or brand IP.",
+  },
+  library: {
+    page: "library/",
+    storage: "Cloudflare D1 with Git snapshots and R2 file objects",
+    publicMetadata: true,
+    counts: {
+      organizations: librarySnapshots.organizations.length,
+      cases: librarySnapshots.cases.length,
+      reports: librarySnapshots.reports.length,
+      datasets: librarySnapshots.datasets.length,
+    },
+    endpoints: {
+      organizations: "api/library/organizations",
+      cases: "api/library/cases",
+      reports: "api/library/reports",
+      datasets: "api/library/datasets",
+      relations: "api/library/relations",
+    },
+    sources: librarySnapshots.sources,
   },
   skills: [{
     name: "iptrust-live-update",
@@ -797,6 +902,9 @@ await writeFile(join(siteDir, "_headers"), [
   "  Content-Type: text/html; charset=utf-8",
   "  Cache-Control: public, max-age=0, must-revalidate",
   "",
+  "/library/*",
+  "  Cache-Control: public, max-age=0, must-revalidate",
+  "",
   "/assets/site-*.css",
   "  Cache-Control: public, max-age=31536000, immutable",
   "",
@@ -813,6 +921,9 @@ await writeFile(join(siteDir, "_headers"), [
   "  Cache-Control: public, max-age=0, must-revalidate",
   "",
   "/assets/brand-images/*",
+  "  Cache-Control: public, max-age=86400, stale-while-revalidate=604800",
+  "",
+  "/assets/adobe/*",
   "  Cache-Control: public, max-age=86400, stale-while-revalidate=604800",
   "",
   "/api/private/*",
@@ -834,6 +945,8 @@ await writeFile(join(siteDir, "_redirects"), [
   "/manifest  /api/manifest.json  200",
   "/schema  /api/schema.json  200",
   "/brands  /api/brands.json  200",
+  "/knowledge  /library/index.html  200",
+  "/library  /library/index.html  200",
   "/ip-system  /ip_sys.md  200",
   "",
 ].join("\n"));
@@ -853,6 +966,13 @@ await writeFile(join(siteDir, "llms.txt"), [
   "- /api/history/{slug}.json",
   "- /api/search.json",
   "- /api/versions.json",
+  "- /api/library/organizations",
+  "- /api/library/cases",
+  "- /api/library/reports",
+  "- /api/library/datasets",
+  "- /api/library/relations",
+  "- /library/",
+  "- /mcp (MCP Streamable HTTP, protocol 2025-11-25)",
   "- /ip_sys.md",
   "- /skills/iptrust-live-update/SKILL.md",
   "",
@@ -907,6 +1027,9 @@ const initialHeroIndexHtml = indexPayload.map((brand, idx) => {
     <span class="icon-copy" aria-hidden="true">${initialCopyIcon}</span>
   </div>`;
 }).join("");
+const publicOrganizationCount = librarySnapshots.organizations.length;
+const fortuneCount = librarySnapshots.organizations.filter((item) => item.sourceId === "fortune-global-500-2025").length;
+const sasacCount = librarySnapshots.organizations.filter((item) => item.sourceId === "sasac-central-enterprises-2026").length;
 
 await writeFile(join(siteDir, "index.html"), html`<!doctype html>
 <html lang="zh-CN">
@@ -984,6 +1107,21 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
           <span data-i18n="evolution.governance">治理</span>
         </div>
         <span class="evolution-open" aria-hidden="true">&#8599;</span>
+      </a>
+    </section>
+    <section class="library-entry" id="knowledge-library" aria-labelledby="libraryTitle">
+      <a href="library/" class="library-entry-link">
+        <div class="library-entry-copy">
+          <p class="eyebrow" data-i18n="library.label">公共知识库</p>
+          <h2 id="libraryTitle" data-i18n="library.title">让出处、案例与数据彼此连接。</h2>
+        </div>
+        <div class="library-entry-stats" aria-label="Library coverage">
+          <span><strong>${publicOrganizationCount}</strong><small data-i18n="library.organizations">组织</small></span>
+          <span><strong>${fortuneCount}</strong><small>Fortune 500</small></span>
+          <span><strong>${sasacCount}</strong><small data-i18n="library.centralEnterprises">中央企业</small></span>
+          <span><strong>4</strong><small data-i18n="library.modules">关联模块</small></span>
+        </div>
+        <span class="library-entry-open" aria-hidden="true">&#8599;</span>
       </a>
     </section>
     <section class="entry-portals" aria-label="IPTrust entries">
@@ -1700,6 +1838,29 @@ p { line-height: 1.65; }
   background: var(--blue);
   color: var(--paper);
 }
+.library-entry { padding: 0 0 34px; }
+.library-entry-link {
+  display: grid;
+  grid-template-columns: minmax(260px, .8fr) minmax(440px, 1.2fr) auto;
+  align-items: stretch;
+  min-height: 150px;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  color: var(--ink);
+  text-decoration: none;
+}
+.library-entry-copy { display: grid; align-content: center; padding: 22px 28px 22px 0; }
+.library-entry-copy h2 { max-width: 480px; margin: 8px 0 0; font-size: clamp(24px, 2.5vw, 34px); line-height: 1.04; text-wrap: balance; }
+.library-entry-copy .eyebrow { margin: 0; }
+.library-entry-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-left: 1px solid var(--line); }
+.library-entry-stats span { display: grid; align-content: center; gap: 7px; padding: 18px; border-right: 1px solid var(--line); }
+.library-entry-stats strong { font: 800 clamp(24px, 3vw, 42px)/.9 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+.library-entry-stats small { color: var(--muted); font-size: 11px; font-weight: 720; }
+.library-entry-open { display: grid; width: 54px; place-items: center; font-size: 22px; transition: background .2s ease, color .2s ease; }
+.library-entry-link:hover .library-entry-open,
+.library-entry-link:focus-visible .library-entry-open { background: var(--ink); color: var(--paper); }
+.library-entry-link:hover .library-entry-copy h2,
+.library-entry-link:focus-visible .library-entry-copy h2 { color: var(--blue); }
 .entry-portals {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2387,6 +2548,19 @@ p { line-height: 1.65; }
   gap: 10px;
   margin: 0 0 30px;
 }
+.adobe-assets { margin: 0 0 28px; border-top: 1px solid var(--brand-ink, var(--ink)); }
+.adobe-assets-head { display: flex; align-items: end; justify-content: space-between; gap: 18px; padding: 18px 0; }
+.adobe-assets-head h2 { margin: 5px 0 0; }
+.adobe-source-file { display: grid; grid-template-columns: minmax(280px, .95fr) minmax(0, 1.05fr); border-top: 1px solid var(--brand-line, var(--line)); border-bottom: 1px solid var(--brand-line, var(--line)); background: var(--brand-paper, white); }
+.adobe-source-preview { position: relative; min-height: 260px; border-right: 1px solid var(--brand-line, var(--line)); background: color-mix(in srgb, var(--brand-surface, #f5f3ee) 80%, white); }
+.adobe-source-preview img { width: 100%; height: 100%; max-height: 390px; object-fit: contain; padding: 24px; box-sizing: border-box; }
+.adobe-source-preview .asset-copy-button { position: absolute; top: 12px; right: 12px; }
+.adobe-source-body { display: grid; align-content: center; padding: clamp(22px, 4vw, 48px); }
+.adobe-source-body h3 { margin: 7px 0 8px; font-size: clamp(25px, 3vw, 38px); }
+.adobe-source-meta { margin: 0; color: var(--brand-muted, var(--muted)); font: 650 11px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+.adobe-downloads { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 24px; }
+.adobe-downloads a { padding: 8px 10px; border: 1px solid var(--brand-line, var(--line)); color: var(--brand-ink, var(--ink)); font-size: 12px; font-weight: 750; text-decoration: none; }
+.adobe-downloads a:hover { background: var(--brand-primary, var(--ink)); color: var(--brand-button-text, white); }
 .asset-hub,
 .mood-board,
 .profile-editor,
@@ -2669,6 +2843,8 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .resource-grid { grid-template-columns: 1fr; }
   .endpoint-grid, .mood-grid { grid-template-columns: 1fr; }
   .profile-form-grid { grid-template-columns: 1fr; }
+  .adobe-source-file { grid-template-columns: 1fr; }
+  .adobe-source-preview { min-height: 220px; border-right: 0; border-bottom: 1px solid var(--brand-line, var(--line)); }
   .hub-hero { min-height: auto; padding-top: 36px; }
   .hero-index { align-self: stretch; }
   .hero-index-row { grid-template-columns: minmax(0, 1fr) auto; }
@@ -2677,6 +2853,12 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .evolution-link { grid-template-columns: 1fr auto; gap: 18px; }
   .evolution-path { grid-column: 1 / -1; grid-row: 2; grid-template-columns: repeat(5, auto); justify-content: space-between; }
   .evolution-open { grid-column: 2; grid-row: 1; }
+  .library-entry-link { grid-template-columns: 1fr auto; }
+  .library-entry-copy { padding-right: 16px; }
+  .library-entry-stats { grid-column: 1 / -1; grid-row: 2; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 0; }
+  .library-entry-stats span { min-height: 82px; padding: 14px 0; }
+  .library-entry-stats span:nth-child(2n) { padding-left: 14px; }
+  .library-entry-open { grid-column: 2; grid-row: 1; }
   .ip-system-hero { min-height: auto; }
   .ip-system-layers article { grid-template-columns: 1fr; gap: 8px; }
   .ip-system-content-shell { grid-template-columns: 1fr; gap: 36px; }
@@ -2737,6 +2919,11 @@ const i18n = {
     "home.sectionTitle": "IP",
     "home.searchPlaceholder": "搜索 IP / Asset Key",
     "home.noResults": "没有匹配的 IP。",
+    "library.label": "公共知识库",
+    "library.title": "让出处、案例与数据彼此连接。",
+    "library.organizations": "组织",
+    "library.centralEnterprises": "中央企业",
+    "library.modules": "关联模块",
     "status.documented": "已建档",
     "status.placeholder": "待建档",
     "meta.guides": "规范",
@@ -2779,6 +2966,11 @@ const i18n = {
     "brand.guideline": "品牌规范",
     "brand.moodBoard": "Mood Board",
     "brand.visualAssets": "视觉资产",
+    "brand.adobeAssets": "Adobe 源文件",
+    "brand.preview": "预览",
+    "brand.original": "原始文件",
+    "brand.exportPng": "PNG 导出",
+    "brand.exportJpg": "JPG 导出",
     "brand.keywords": "关键词",
     "brand.editProfile": "编辑资料",
     "brand.edit": "编辑",
@@ -2886,6 +3078,11 @@ const i18n = {
     "home.sectionTitle": "IP",
     "home.searchPlaceholder": "Search IP / Asset Key",
     "home.noResults": "No matching IP.",
+    "library.label": "PUBLIC LIBRARY",
+    "library.title": "Connect every source, case, and dataset.",
+    "library.organizations": "Organizations",
+    "library.centralEnterprises": "Central enterprises",
+    "library.modules": "Linked modules",
     "status.documented": "Documented",
     "status.placeholder": "Pending",
     "meta.guides": "guides",
@@ -2928,6 +3125,11 @@ const i18n = {
     "brand.guideline": "Brand guideline",
     "brand.moodBoard": "Mood Board",
     "brand.visualAssets": "Visual assets",
+    "brand.adobeAssets": "Adobe sources",
+    "brand.preview": "Preview",
+    "brand.original": "Original",
+    "brand.exportPng": "PNG export",
+    "brand.exportJpg": "JPG export",
     "brand.keywords": "Keywords",
     "brand.editProfile": "Edit profile",
     "brand.edit": "Edit",
@@ -3351,6 +3553,7 @@ function skillBaseText(skill = "") {
     "Hub: " + location.origin + location.pathname,
     "Manifest: " + new URL("api/manifest.json", location.href).href,
     "Search API: " + new URL("api/search.json", location.href).href,
+    "MCP: " + new URL("mcp", location.href).href,
     \`Skill: \${skillUrl}\`,
     "",
     skill || "Use the IPTrust manifest and brand APIs to read each IP's latest name, colors, intro, business, language, and guideline files.",
@@ -4055,6 +4258,39 @@ function brandAssetStrip(images = []) {
   \`;
 }
 
+function adobeAssetPanel(adobeAssets = []) {
+  if (!adobeAssets.length) return "";
+  return \`
+    <section class="adobe-assets" aria-label="Adobe source assets">
+      <div class="adobe-assets-head">
+        <div><p class="eyebrow">ADOBE</p><h2>\${escapeHtml(t("brand.adobeAssets"))}</h2></div>
+        <span class="asset-key">AI / EPS / PS / PDF / PSD</span>
+      </div>
+      \${adobeAssets.map((asset) => \`
+        <article class="adobe-source-file">
+          <div class="adobe-source-preview">
+            \${asset.preview?.sitePath ? \`<img src="\${escapeHtml(asset.preview.sitePath)}" alt="\${escapeHtml(asset.title || "Adobe asset")}" loading="lazy">\` : ""}
+            \${asset.preview?.sitePath ? \`<button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="\${escapeHtml(asset.preview.sitePath)}" aria-label="\${escapeHtml(t("copy.assetUrl"))}">\${copyIcon()}</button>\` : ""}
+          </div>
+          <div class="adobe-source-body">
+            <p class="eyebrow">\${escapeHtml(asset.source?.format || "ADOBE")}</p>
+            <h3>\${escapeHtml(asset.title || asset.id || "Adobe asset")}</h3>
+            <p class="adobe-source-meta">\${escapeHtml([asset.source?.format, asset.source?.size, asset.pipeline].filter(Boolean).join(" · "))}</p>
+            <div class="adobe-downloads">
+              \${asset.source?.sitePath ? \`<a href="\${escapeHtml(asset.source.sitePath)}" download>\${escapeHtml(t("brand.original"))}</a>\` : ""}
+              \${asset.preview?.sitePath ? \`<a href="\${escapeHtml(asset.preview.sitePath)}" target="_blank">\${escapeHtml(t("brand.preview"))}</a>\` : ""}
+              \${(asset.exports || []).flatMap((page) => [
+                page.png?.sitePath ? \`<a href="\${escapeHtml(page.png.sitePath)}" download>p\${page.page} · \${escapeHtml(t("brand.exportPng"))}</a>\` : "",
+                page.jpg?.sitePath ? \`<a href="\${escapeHtml(page.jpg.sitePath)}" download>p\${page.page} · \${escapeHtml(t("brand.exportJpg"))}</a>\` : "",
+              ]).filter(Boolean).join("")}
+            </div>
+          </div>
+        </article>
+      \`).join("")}
+    </section>
+  \`;
+}
+
 function endpointCard(label, href, code) {
   return \`
     <a class="endpoint-card" href="\${escapeHtml(href)}">
@@ -4080,6 +4316,7 @@ function brandAssetHub(brand = {}) {
       <div class="endpoint-grid">
         \${endpointCard(t("brand.brandJson"), endpoints.brand || brand.apiUrl, \`get_brand\`)}
         \${endpointCard(t("brand.imageAssets"), endpoints.images || brand.apiUrl, \`images[]\`)}
+        \${endpoints.adobe ? endpointCard(t("brand.adobeAssets"), endpoints.adobe, \`adobeAssets[]\`) : ""}
         \${endpointCard(t("brand.historyApi"), endpoints.history || brand.historyUrl, \`versions[]\`)}
         \${endpointCard(t("brand.ipSystem"), "ip-evolution", \`apply_ip_system\`)}
         \${endpointCard(t("brand.agentUse"), brand.apiUrl, \`get_brand({ "assetKey": "\${key}" })\`)}
@@ -4315,7 +4552,9 @@ async function renderBrand() {
   const display = mainBrand(brand);
   const localized = localizedBrand(brand);
   document.title = \`\${display.name} · Brand Guidelines\`;
-  const hero = preferredBrandImage(brand.images || []);
+  const hero = brand.adobeAssets?.[0]?.hero?.sitePath
+    ? brand.adobeAssets[0].hero
+    : preferredBrandImage(brand.images || []);
   page.innerHTML = \`
     <div class="brand-shell \${themeClass(brand.theme)}" style="\${themeStyle(brand.theme)}">
       <section class="brand-hero">
@@ -4349,6 +4588,7 @@ async function renderBrand() {
       \${profileEditor(brand)}
       \${ipSystemPanel(brand)}
       \${brandAssetHub(brand)}
+      \${adobeAssetPanel(brand.adobeAssets || [])}
       \${moodBoard(brand)}
       <section class="resource-list">
         <div class="resource-grid">

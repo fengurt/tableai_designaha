@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>公共知识库 · 岁知社 IPTrust</title>
+  <meta name="description" content="权威来源驱动的公共组织、案例、报告与数据集知识库。">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="../assets/editorial.css">
+  <link rel="stylesheet" href="library.css">
+</head>
+<body class="library-page">
+  <header class="topbar library-topbar">
+    <a class="brand" href="../" aria-label="岁知社"><img src="../assets/brand-images/iptrust-logo-black.png" alt="岁知社"></a>
+    <div class="topbar-search" role="search">
+      <input id="librarySearch" type="search" autocomplete="off" placeholder="搜索组织、案例、报告、数据集" aria-label="搜索知识库">
+    </div>
+    <nav class="top-actions" aria-label="知识库操作">
+      <a href="../" data-copy="home">IP</a>
+      <a href="../ip-evolution">IP进化论</a>
+      <a href="../admin.html">API</a>
+      <button class="lang-toggle" id="libraryLang" type="button" aria-label="切换语言"><span class="is-active">CN</span><span class="lang-divider">/</span><span>EN</span></button>
+    </nav>
+  </header>
+
+  <main class="library-shell">
+    <section class="library-heading">
+      <div>
+        <p class="eyebrow" data-cn="公共知识库" data-en="PUBLIC LIBRARY">公共知识库</p>
+        <h1 data-cn="来源清楚，关系可查。" data-en="Sourced. Linked. Callable.">来源清楚，关系可查。</h1>
+      </div>
+      <p data-cn="组织、案例、报告与数据集统一连接到每个 IP。" data-en="Organizations, cases, reports, and datasets connected to every IP.">组织、案例、报告与数据集统一连接到每个 IP。</p>
+    </section>
+
+    <section class="library-toolbar" aria-label="知识库筛选">
+      <div class="library-tabs" role="tablist">
+        <button class="is-active" type="button" data-library-type="organizations" data-cn="组织" data-en="Organizations">组织</button>
+        <button type="button" data-library-type="cases" data-cn="案例" data-en="Cases">案例</button>
+        <button type="button" data-library-type="reports" data-cn="报告" data-en="Reports">报告</button>
+        <button type="button" data-library-type="datasets" data-cn="数据集" data-en="Datasets">数据集</button>
+      </div>
+      <label class="source-filter" id="sourceFilterLabel">
+        <span data-cn="来源" data-en="Source">来源</span>
+        <select id="sourceFilter">
+          <option value="" data-cn="全部" data-en="All">全部</option>
+          <option value="fortune-global-500-2025">Fortune Global 500</option>
+          <option value="sasac-central-enterprises-2026">国务院国资委央企名录</option>
+        </select>
+      </label>
+      <span class="library-count" id="libraryCount">0</span>
+    </section>
+
+    <section class="library-status" id="libraryStatus" aria-live="polite"></section>
+    <section class="organization-grid" id="libraryGrid" aria-live="polite"></section>
+    <button class="library-more hidden" id="libraryMore" type="button" data-cn="加载更多" data-en="Load more">加载更多</button>
+  </main>
+
+  <aside class="library-detail hidden" id="libraryDetail" aria-live="polite">
+    <button class="detail-close" id="detailClose" type="button" aria-label="关闭">×</button>
+    <div id="libraryDetailContent"></div>
+  </aside>
+  <div class="detail-scrim hidden" id="detailScrim"></div>
+  <script src="library.js" type="module"></script>
+</body>
+</html>

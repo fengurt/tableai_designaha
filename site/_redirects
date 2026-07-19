@@ -2,4 +2,6 @@
 /manifest  /api/manifest.json  200
 /schema  /api/schema.json  200
 /brands  /api/brands.json  200
+/knowledge  /library/index.html  200
+/library  /library/index.html  200
 /ip-system  /ip_sys.md  200

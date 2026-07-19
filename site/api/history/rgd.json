@@ -13,11 +13,11 @@
     "RGD/README.md"
   ],
   "latest": {
-    "hash": "9e33619ad95856c977f8803517f325304d678821",
-    "shortHash": "9e33619",
-    "date": "2026-07-08T03:55:08+08:00",
-    "message": "Add Nibiru and Shenzhen Microsoft Global Center IPs",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/9e33619ad95856c977f8803517f325304d678821",
+    "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+    "shortHash": "b0056d3",
+    "date": "2026-07-12T21:39:51+08:00",
+    "message": "Rename Shanrenjing English brand to shanpass",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12",
     "sourcePaths": [
       "config/brands.json",
       "RGD",
@@ -25,6 +25,54 @@
     ]
   },
   "versions": [
+    {
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "sourcePaths": [
+        "config/brands.json",
+        "RGD",
+        "RGD/README.md"
+      ]
+    },
+    {
+      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "shortHash": "a5bf7cf",
+      "date": "2026-07-10T20:21:24+08:00",
+      "message": "Replace contrast-template brand copy",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "sourcePaths": [
+        "config/brands.json",
+        "RGD",
+        "RGD/README.md"
+      ]
+    },
+    {
+      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "shortHash": "ed33a8b",
+      "date": "2026-07-10T18:44:20+08:00",
+      "message": "Add Shanrenjing journey safety IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "sourcePaths": [
+        "config/brands.json",
+        "RGD",
+        "RGD/README.md"
+      ]
+    },
+    {
+      "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "shortHash": "cd0ea58",
+      "date": "2026-07-08T04:12:48+08:00",
+      "message": "Refine hero index labels",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "sourcePaths": [
+        "config/brands.json",
+        "RGD",
+        "RGD/README.md"
+      ]
+    },
     {
       "hash": "9e33619ad95856c977f8803517f325304d678821",
       "shortHash": "9e33619",

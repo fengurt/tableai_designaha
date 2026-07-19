@@ -9,6 +9,9 @@
     "build:site": "node scripts/build-site.mjs",
     "sync:site": "node scripts/sync-site.mjs",
     "sync:cloud-resources": "node scripts/sync-cloud-resources.mjs",
+    "sync:library": "node scripts/sync-public-library.mjs --enrich",
+    "seed:library": "node scripts/build-library-seed.mjs",
+    "process:adobe-assets": "node scripts/process-adobe-assets.mjs",
     "encrypt:ksamint-skills": "node scripts/encrypt-private-skills.mjs",
     "provision:admin-key": "node scripts/provision-admin-key.mjs",
     "sync:skill": "cp KiND/tokens/kind.tokens.json .cursor/skills/kind-design/tokens.json"

@@ -1,0 +1,25 @@
+[
+  {
+    "id": "fortune-global-500-2025",
+    "name": "Fortune Global 500 2025",
+    "publisher": "Fortune",
+    "type": "ranking",
+    "year": 2025,
+    "sourceUrl": "https://fortune.com/ranking/global500/?level=1",
+    "authority": "publisher",
+    "refresh": "annual",
+    "publicMetadata": true
+  },
+  {
+    "id": "sasac-central-enterprises-2026",
+    "name": "国务院国资委央企名录 2026",
+    "publisher": "国务院国有资产监督管理委员会",
+    "type": "official-registry",
+    "year": 2026,
+    "sourceDate": "2026-07-11",
+    "sourceUrl": "https://wap.sasac.gov.cn/n2588045/n27271785/n27271792/c14159097/content.html",
+    "authority": "government",
+    "refresh": "monthly",
+    "publicMetadata": true
+  }
+]

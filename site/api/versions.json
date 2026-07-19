@@ -1,5 +1,82 @@
 [
   {
+    "hash": "a92c3f25ee6c61875e3356cd843a7582eaa8ef00",
+    "shortHash": "a92c3f2",
+    "date": "2026-07-14T16:56:44+08:00",
+    "message": "Show metadata on brand hero assets",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a92c3f25ee6c61875e3356cd843a7582eaa8ef00"
+  },
+  {
+    "hash": "6521ac39eaa48af9c74a3a82708c4735b7a00044",
+    "shortHash": "6521ac3",
+    "date": "2026-07-14T16:50:28+08:00",
+    "message": "Expose image asset metadata",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/6521ac39eaa48af9c74a3a82708c4735b7a00044"
+  },
+  {
+    "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+    "shortHash": "b0056d3",
+    "date": "2026-07-12T21:39:51+08:00",
+    "message": "Rename Shanrenjing English brand to shanpass",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
+  },
+  {
+    "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
+    "shortHash": "4227557",
+    "date": "2026-07-12T08:54:21+08:00",
+    "message": "Promote IP Evolution and expose asset URLs",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
+  },
+  {
+    "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
+    "shortHash": "bb4944e",
+    "date": "2026-07-12T08:23:07+08:00",
+    "message": "Pre-render the complete IP directory",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
+  },
+  {
+    "hash": "b468412a912963294944493e1e326943a4721951",
+    "shortHash": "b468412",
+    "date": "2026-07-12T08:20:37+08:00",
+    "message": "Show the full IP directory immediately",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/b468412a912963294944493e1e326943a4721951"
+  },
+  {
+    "hash": "e09374c99d2186bc57954895120282abd43eaee4",
+    "shortHash": "e09374c",
+    "date": "2026-07-12T08:18:18+08:00",
+    "message": "Keep IP directory complete and aligned",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/e09374c99d2186bc57954895120282abd43eaee4"
+  },
+  {
+    "hash": "6f0d28b10ae106649819acdfcbbc51bf8f4b5b76",
+    "shortHash": "6f0d28b",
+    "date": "2026-07-10T22:27:54+08:00",
+    "message": "Version design system assets",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/6f0d28b10ae106649819acdfcbbc51bf8f4b5b76"
+  },
+  {
+    "hash": "3acbecff8f78733a9e82eab937d3ff83c5e6959b",
+    "shortHash": "3acbecf",
+    "date": "2026-07-10T22:25:26+08:00",
+    "message": "Tighten IPTrust interface density",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/3acbecff8f78733a9e82eab937d3ff83c5e6959b"
+  },
+  {
+    "hash": "307513830db51470695adf67b4da3df8b2d669bb",
+    "shortHash": "3075138",
+    "date": "2026-07-10T22:06:39+08:00",
+    "message": "Redesign IPTrust and publish brand assets",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/307513830db51470695adf67b4da3df8b2d669bb"
+  },
+  {
+    "hash": "370e33f4d10cbf5e13d754428e7be1e590557296",
+    "shortHash": "370e33f",
+    "date": "2026-07-10T21:20:51+08:00",
+    "message": "Render IP guidelines as web content",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/370e33f4d10cbf5e13d754428e7be1e590557296"
+  },
+  {
     "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
     "shortHash": "a5bf7cf",
     "date": "2026-07-10T20:21:24+08:00",
@@ -61,82 +138,5 @@
     "date": "2026-07-08T04:12:48+08:00",
     "message": "Refine hero index labels",
     "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb"
-  },
-  {
-    "hash": "a38ea80a8099966615f752f445f5520d7a515a9b",
-    "shortHash": "a38ea80",
-    "date": "2026-07-08T04:07:21+08:00",
-    "message": "Unify topbar and refine admin unlock UI",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a38ea80a8099966615f752f445f5520d7a515a9b"
-  },
-  {
-    "hash": "9e33619ad95856c977f8803517f325304d678821",
-    "shortHash": "9e33619",
-    "date": "2026-07-08T03:55:08+08:00",
-    "message": "Add Nibiru and Shenzhen Microsoft Global Center IPs",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/9e33619ad95856c977f8803517f325304d678821"
-  },
-  {
-    "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
-    "shortHash": "4c1ae93",
-    "date": "2026-07-08T03:28:03+08:00",
-    "message": "Update OPC Global primary language",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb"
-  },
-  {
-    "hash": "4efc463d2f51813f4aae7c47083471b15ca8d1bf",
-    "shortHash": "4efc463",
-    "date": "2026-07-08T03:23:22+08:00",
-    "message": "Add Zhongzhiyou Group IP",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4efc463d2f51813f4aae7c47083471b15ca8d1bf"
-  },
-  {
-    "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
-    "shortHash": "5a93d2b",
-    "date": "2026-07-08T03:19:10+08:00",
-    "message": "Add Xinzhi Travel IP",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14"
-  },
-  {
-    "hash": "8f21723e87dc35342ed79de59a0648a1a363e833",
-    "shortHash": "8f21723",
-    "date": "2026-07-07T07:09:51+08:00",
-    "message": "Add universal IP system framework",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/8f21723e87dc35342ed79de59a0648a1a363e833"
-  },
-  {
-    "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
-    "shortHash": "3e24857",
-    "date": "2026-07-06T12:50:10+08:00",
-    "message": "Add IP classifications and iNucleus",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a"
-  },
-  {
-    "hash": "a469733ee54e9f03ca0024c789b0713597775dbc",
-    "shortHash": "a469733",
-    "date": "2026-07-06T12:06:43+08:00",
-    "message": "Add direct brand profile editing API",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a469733ee54e9f03ca0024c789b0713597775dbc"
-  },
-  {
-    "hash": "4f7db01d5b322cb21b6034376b6d01485ab5adc5",
-    "shortHash": "4f7db01",
-    "date": "2026-07-06T10:17:49+08:00",
-    "message": "Add encrypted ksamint private skills service",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4f7db01d5b322cb21b6034376b6d01485ab5adc5"
-  },
-  {
-    "hash": "079dbb39ab5ed6359187796516d01f2807c3e267",
-    "shortHash": "079dbb3",
-    "date": "2026-07-06T08:56:58+08:00",
-    "message": "Refine homepage API navigation",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/079dbb39ab5ed6359187796516d01f2807c3e267"
-  },
-  {
-    "hash": "1daf4e6c3e8413ad270ce449d013215945098a85",
-    "shortHash": "1daf4e6",
-    "date": "2026-07-06T08:11:57+08:00",
-    "message": "Add protected cloud resource inventory",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/1daf4e6c3e8413ad270ce449d013215945098a85"
   }
 ]

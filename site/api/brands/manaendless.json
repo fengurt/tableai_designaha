@@ -152,11 +152,11 @@
     "en": ""
   },
   "version": {
-    "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
-    "shortHash": "b0056d3",
-    "date": "2026-07-12T21:39:51+08:00",
-    "message": "Rename Shanrenjing English brand to shanpass",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
+    "hash": "a92c3f25ee6c61875e3356cd843a7582eaa8ef00",
+    "shortHash": "a92c3f2",
+    "date": "2026-07-14T16:56:44+08:00",
+    "message": "Show metadata on brand hero assets",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a92c3f25ee6c61875e3356cd843a7582eaa8ef00"
   },
   "historyUrl": "api/history/manaendless.json",
   "history": [
@@ -245,6 +245,7 @@
       "dimensions": "1672 x 941 px"
     }
   ],
+  "adobeAssets": [],
   "logoUrl": "assets/brand-images/manaendless.png",
   "assetKit": {
     "assetKey": "manaendless",
@@ -252,6 +253,7 @@
       "brand": "api/brands/manaendless.json",
       "logo": "assets/brand-images/manaendless.png",
       "images": "api/brands/manaendless.json#images",
+      "adobe": "",
       "tokens": "api/brands/manaendless.json#tokens",
       "history": "api/history/manaendless.json"
     },

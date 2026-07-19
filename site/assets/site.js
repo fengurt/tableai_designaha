@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "6521ac3-a086799c";
+const BUILD_VERSION = "a92c3f2-ce23c28f";
 
 const i18n = {
   cn: {
@@ -17,6 +17,11 @@ const i18n = {
     "home.sectionTitle": "IP",
     "home.searchPlaceholder": "搜索 IP / Asset Key",
     "home.noResults": "没有匹配的 IP。",
+    "library.label": "公共知识库",
+    "library.title": "让出处、案例与数据彼此连接。",
+    "library.organizations": "组织",
+    "library.centralEnterprises": "中央企业",
+    "library.modules": "关联模块",
     "status.documented": "已建档",
     "status.placeholder": "待建档",
     "meta.guides": "规范",
@@ -59,6 +64,11 @@ const i18n = {
     "brand.guideline": "品牌规范",
     "brand.moodBoard": "Mood Board",
     "brand.visualAssets": "视觉资产",
+    "brand.adobeAssets": "Adobe 源文件",
+    "brand.preview": "预览",
+    "brand.original": "原始文件",
+    "brand.exportPng": "PNG 导出",
+    "brand.exportJpg": "JPG 导出",
     "brand.keywords": "关键词",
     "brand.editProfile": "编辑资料",
     "brand.edit": "编辑",
@@ -166,6 +176,11 @@ const i18n = {
     "home.sectionTitle": "IP",
     "home.searchPlaceholder": "Search IP / Asset Key",
     "home.noResults": "No matching IP.",
+    "library.label": "PUBLIC LIBRARY",
+    "library.title": "Connect every source, case, and dataset.",
+    "library.organizations": "Organizations",
+    "library.centralEnterprises": "Central enterprises",
+    "library.modules": "Linked modules",
     "status.documented": "Documented",
     "status.placeholder": "Pending",
     "meta.guides": "guides",
@@ -208,6 +223,11 @@ const i18n = {
     "brand.guideline": "Brand guideline",
     "brand.moodBoard": "Mood Board",
     "brand.visualAssets": "Visual assets",
+    "brand.adobeAssets": "Adobe sources",
+    "brand.preview": "Preview",
+    "brand.original": "Original",
+    "brand.exportPng": "PNG export",
+    "brand.exportJpg": "JPG export",
     "brand.keywords": "Keywords",
     "brand.editProfile": "Edit profile",
     "brand.edit": "Edit",
@@ -631,6 +651,7 @@ function skillBaseText(skill = "") {
     "Hub: " + location.origin + location.pathname,
     "Manifest: " + new URL("api/manifest.json", location.href).href,
     "Search API: " + new URL("api/search.json", location.href).href,
+    "MCP: " + new URL("mcp", location.href).href,
     `Skill: ${skillUrl}`,
     "",
     skill || "Use the IPTrust manifest and brand APIs to read each IP's latest name, colors, intro, business, language, and guideline files.",
@@ -1335,6 +1356,39 @@ function brandAssetStrip(images = []) {
   `;
 }
 
+function adobeAssetPanel(adobeAssets = []) {
+  if (!adobeAssets.length) return "";
+  return `
+    <section class="adobe-assets" aria-label="Adobe source assets">
+      <div class="adobe-assets-head">
+        <div><p class="eyebrow">ADOBE</p><h2>${escapeHtml(t("brand.adobeAssets"))}</h2></div>
+        <span class="asset-key">AI / EPS / PS / PDF / PSD</span>
+      </div>
+      ${adobeAssets.map((asset) => `
+        <article class="adobe-source-file">
+          <div class="adobe-source-preview">
+            ${asset.preview?.sitePath ? `<img src="${escapeHtml(asset.preview.sitePath)}" alt="${escapeHtml(asset.title || "Adobe asset")}" loading="lazy">` : ""}
+            ${asset.preview?.sitePath ? `<button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="${escapeHtml(asset.preview.sitePath)}" aria-label="${escapeHtml(t("copy.assetUrl"))}">${copyIcon()}</button>` : ""}
+          </div>
+          <div class="adobe-source-body">
+            <p class="eyebrow">${escapeHtml(asset.source?.format || "ADOBE")}</p>
+            <h3>${escapeHtml(asset.title || asset.id || "Adobe asset")}</h3>
+            <p class="adobe-source-meta">${escapeHtml([asset.source?.format, asset.source?.size, asset.pipeline].filter(Boolean).join(" · "))}</p>
+            <div class="adobe-downloads">
+              ${asset.source?.sitePath ? `<a href="${escapeHtml(asset.source.sitePath)}" download>${escapeHtml(t("brand.original"))}</a>` : ""}
+              ${asset.preview?.sitePath ? `<a href="${escapeHtml(asset.preview.sitePath)}" target="_blank">${escapeHtml(t("brand.preview"))}</a>` : ""}
+              ${(asset.exports || []).flatMap((page) => [
+                page.png?.sitePath ? `<a href="${escapeHtml(page.png.sitePath)}" download>p${page.page} · ${escapeHtml(t("brand.exportPng"))}</a>` : "",
+                page.jpg?.sitePath ? `<a href="${escapeHtml(page.jpg.sitePath)}" download>p${page.page} · ${escapeHtml(t("brand.exportJpg"))}</a>` : "",
+              ]).filter(Boolean).join("")}
+            </div>
+          </div>
+        </article>
+      `).join("")}
+    </section>
+  `;
+}
+
 function endpointCard(label, href, code) {
   return `
     <a class="endpoint-card" href="${escapeHtml(href)}">
@@ -1360,6 +1414,7 @@ function brandAssetHub(brand = {}) {
       <div class="endpoint-grid">
         ${endpointCard(t("brand.brandJson"), endpoints.brand || brand.apiUrl, `get_brand`)}
         ${endpointCard(t("brand.imageAssets"), endpoints.images || brand.apiUrl, `images[]`)}
+        ${endpoints.adobe ? endpointCard(t("brand.adobeAssets"), endpoints.adobe, `adobeAssets[]`) : ""}
         ${endpointCard(t("brand.historyApi"), endpoints.history || brand.historyUrl, `versions[]`)}
         ${endpointCard(t("brand.ipSystem"), "ip-evolution", `apply_ip_system`)}
         ${endpointCard(t("brand.agentUse"), brand.apiUrl, `get_brand({ "assetKey": "${key}" })`)}
@@ -1595,7 +1650,9 @@ async function renderBrand() {
   const display = mainBrand(brand);
   const localized = localizedBrand(brand);
   document.title = `${display.name} · Brand Guidelines`;
-  const hero = preferredBrandImage(brand.images || []);
+  const hero = brand.adobeAssets?.[0]?.hero?.sitePath
+    ? brand.adobeAssets[0].hero
+    : preferredBrandImage(brand.images || []);
   page.innerHTML = `
     <div class="brand-shell ${themeClass(brand.theme)}" style="${themeStyle(brand.theme)}">
       <section class="brand-hero">
@@ -1629,6 +1686,7 @@ async function renderBrand() {
       ${profileEditor(brand)}
       ${ipSystemPanel(brand)}
       ${brandAssetHub(brand)}
+      ${adobeAssetPanel(brand.adobeAssets || [])}
       ${moodBoard(brand)}
       <section class="resource-list">
         <div class="resource-grid">

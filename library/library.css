@@ -1,0 +1,60 @@
+:root { --library-accent: #0f685b; }
+.library-page { background: #f8f9f7; color: #121514; }
+.library-topbar { position: sticky; top: 0; z-index: 40; background: rgba(248,249,247,.94); backdrop-filter: blur(16px); }
+.library-shell { width: min(1420px, calc(100% - 44px)); margin: 0 auto; padding: 44px 0 90px; }
+.library-heading { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(260px, .6fr); gap: 40px; align-items: end; padding: 28px 0 40px; border-bottom: 2px solid currentColor; }
+.library-heading h1 { max-width: 920px; margin: 8px 0 0; font-size: clamp(44px, 6.6vw, 92px); line-height: .9; }
+.library-heading > p { max-width: 420px; margin: 0; color: #5c625f; font-size: 16px; line-height: 1.55; }
+.library-toolbar { position: sticky; top: 58px; z-index: 20; display: grid; grid-template-columns: minmax(0,1fr) auto auto; gap: 18px; align-items: center; min-height: 66px; padding: 10px 0; border-bottom: 1px solid #cfd3cf; background: rgba(248,249,247,.96); backdrop-filter: blur(14px); }
+.library-tabs { display: flex; gap: 4px; overflow-x: auto; }
+.library-tabs button { min-height: 36px; padding: 0 14px; border: 0; border-radius: 0; background: transparent; color: #616763; font-weight: 700; white-space: nowrap; }
+.library-tabs button.is-active { background: #111514; color: white; }
+.source-filter { display: flex; gap: 9px; align-items: center; color: #6b716d; font-size: 12px; }
+.source-filter select { min-height: 36px; max-width: 250px; border: 1px solid #cfd3cf; border-radius: 0; background: #fff; color: #1a1d1b; }
+.library-count { min-width: 44px; text-align: right; font: 700 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.library-status { min-height: 30px; padding: 12px 0 0; color: #6c716e; font-size: 12px; }
+.organization-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); border-top: 1px solid #cfd3cf; border-left: 1px solid #cfd3cf; }
+.organization-card { position: relative; min-height: 230px; padding: 18px 18px 52px; border: 0; border-right: 1px solid #cfd3cf; border-bottom: 1px solid #cfd3cf; background: #fff; color: inherit; text-align: left; transition: background .18s ease, color .18s ease; }
+.organization-card:hover { background: #111514; color: white; }
+.organization-card:active { transform: translateY(1px); }
+.organization-card-head { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+.organization-mark { width: 44px; height: 44px; display: grid; place-items: center; overflow: hidden; border: 1px solid currentColor; background: #fff; color: #111514; font-weight: 800; }
+.organization-mark img { width: 100%; height: 100%; object-fit: contain; padding: 5px; }
+.organization-rank { font: 700 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.organization-card h2 { margin: 32px 0 8px; font-size: clamp(20px,2vw,28px); line-height: 1.02; }
+.organization-card p { margin: 0; color: #686f6b; font-size: 12px; line-height: 1.45; display: -webkit-box; overflow: hidden; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+.organization-card:hover p { color: #c8ceca; }
+.organization-meta { position: absolute; right: 18px; bottom: 15px; left: 18px; display: flex; gap: 8px; justify-content: space-between; color: #777d79; font: 700 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.organization-card:hover .organization-meta { color: #d5d9d6; }
+.library-more { display: block; width: 100%; min-height: 52px; margin-top: 18px; border: 1px solid #111514; border-radius: 0; background: transparent; color: #111514; font-weight: 750; }
+.library-more:hover { background: #111514; color: white; }
+.empty-library { grid-column: 1/-1; min-height: 280px; display: grid; place-items: center; border-right: 1px solid #cfd3cf; border-bottom: 1px solid #cfd3cf; color: #666d69; }
+.library-detail { position: fixed; top: 0; right: 0; z-index: 80; width: min(540px, 92vw); height: 100dvh; overflow-y: auto; padding: 70px 30px 44px; background: #111514; color: white; box-shadow: -30px 0 80px rgba(20,28,24,.2); }
+.detail-scrim { position: fixed; inset: 0; z-index: 70; background: rgba(17,21,20,.28); backdrop-filter: blur(2px); }
+.detail-close { position: absolute; top: 18px; right: 20px; width: 36px; height: 36px; border: 1px solid #626965; border-radius: 0; background: transparent; color: white; font-size: 22px; }
+.detail-mark { width: 100px; height: 100px; display: grid; place-items: center; margin-bottom: 40px; border: 1px solid #59615d; background: white; color: #111514; font-size: 28px; font-weight: 800; }
+.detail-mark img { width: 100%; height: 100%; object-fit: contain; padding: 12px; }
+.library-detail h2 { margin: 0 0 14px; font-size: clamp(36px,5vw,62px); line-height: .92; }
+.library-detail p { color: #c3c9c5; line-height: 1.65; }
+.detail-data { display: grid; grid-template-columns: 1fr 1fr; margin: 34px 0; border-top: 1px solid #4b524e; }
+.detail-data div { min-height: 76px; padding: 12px 12px 12px 0; border-bottom: 1px solid #4b524e; }
+.detail-data span { display: block; margin-bottom: 8px; color: #858e89; font-size: 10px; text-transform: uppercase; }
+.detail-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.detail-links a { padding: 9px 12px; border: 1px solid #737b76; color: white; text-decoration: none; font-size: 12px; }
+.detail-links a:hover { background: white; color: #111514; }
+.hidden { display: none !important; }
+@media (max-width: 1060px) { .organization-grid { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+@media (max-width: 760px) {
+  .library-shell { width: min(100% - 24px, 1420px); padding-top: 18px; }
+  .library-heading { grid-template-columns: 1fr; gap: 14px; padding-bottom: 26px; }
+  .library-heading h1 { font-size: 48px; }
+  .library-toolbar { top: 54px; grid-template-columns: 1fr auto; gap: 8px; }
+  .library-tabs { grid-column: 1/-1; }
+  .source-filter span { display: none; }
+  .source-filter select { max-width: 220px; }
+  .organization-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .organization-card { min-height: 240px; padding: 13px 13px 50px; }
+  .organization-card h2 { margin-top: 26px; font-size: 20px; }
+  .organization-meta { right: 13px; bottom: 12px; left: 13px; }
+  .library-detail { width: 100%; padding: 64px 22px 36px; }
+}

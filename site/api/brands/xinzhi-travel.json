@@ -156,14 +156,26 @@
     }
   },
   "version": {
-    "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
-    "shortHash": "bb4944e",
-    "date": "2026-07-12T08:23:07+08:00",
-    "message": "Pre-render the complete IP directory",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
+    "hash": "a92c3f25ee6c61875e3356cd843a7582eaa8ef00",
+    "shortHash": "a92c3f2",
+    "date": "2026-07-14T16:56:44+08:00",
+    "message": "Show metadata on brand hero assets",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a92c3f25ee6c61875e3356cd843a7582eaa8ef00"
   },
   "historyUrl": "api/history/xinzhi-travel.json",
   "history": [
+    {
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "sourcePaths": [
+        "config/brands.json",
+        "XinzhiTravel",
+        "XinzhiTravel/README.md"
+      ]
+    },
     {
       "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
       "shortHash": "a5bf7cf",
@@ -223,18 +235,6 @@
         "XinzhiTravel",
         "XinzhiTravel/README.md"
       ]
-    },
-    {
-      "hash": "4efc463d2f51813f4aae7c47083471b15ca8d1bf",
-      "shortHash": "4efc463",
-      "date": "2026-07-08T03:23:22+08:00",
-      "message": "Add Zhongzhiyou Group IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4efc463d2f51813f4aae7c47083471b15ca8d1bf",
-      "sourcePaths": [
-        "config/brands.json",
-        "XinzhiTravel",
-        "XinzhiTravel/README.md"
-      ]
     }
   ],
   "url": "brand.html?brand=xinzhi-travel",
@@ -253,6 +253,7 @@
   ],
   "tokens": [],
   "images": [],
+  "adobeAssets": [],
   "logoUrl": "",
   "assetKit": {
     "assetKey": "xinzhi-travel",
@@ -260,6 +261,7 @@
       "brand": "api/brands/xinzhi-travel.json",
       "logo": "",
       "images": "api/brands/xinzhi-travel.json#images",
+      "adobe": "",
       "tokens": "api/brands/xinzhi-travel.json#tokens",
       "history": "api/history/xinzhi-travel.json"
     },

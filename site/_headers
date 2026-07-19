@@ -10,6 +10,9 @@
   Content-Type: text/html; charset=utf-8
   Cache-Control: public, max-age=0, must-revalidate
 
+/library/*
+  Cache-Control: public, max-age=0, must-revalidate
+
 /assets/site-*.css
   Cache-Control: public, max-age=31536000, immutable
 
@@ -26,6 +29,9 @@
   Cache-Control: public, max-age=0, must-revalidate
 
 /assets/brand-images/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/assets/adobe/*
   Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
 /api/private/*

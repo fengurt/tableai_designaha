@@ -1,0 +1,75 @@
+{
+  "id": "kaoyu-shenhua-logo-source",
+  "slug": "kaoyu-shenhua",
+  "title": "烤鱼神话logo符号(3)",
+  "source": {
+    "path": "KaoyuShenhua/assets/source/kaoyu-shenhua-logo.ai",
+    "format": "AI",
+    "bytes": 1635017,
+    "size": "1.56 MB"
+  },
+  "preview": {
+    "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.png",
+    "format": "PNG",
+    "bytes": 23456,
+    "size": "22.9 KB",
+    "width": 1488,
+    "height": 744,
+    "dimensions": "1488 x 744 px"
+  },
+  "hero": {
+    "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-brand-hero.png",
+    "format": "PNG",
+    "bytes": 23456,
+    "size": "22.9 KB",
+    "width": 1488,
+    "height": 744,
+    "dimensions": "1488 x 744 px"
+  },
+  "exports": [
+    {
+      "page": 1,
+      "jpg": {
+        "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.jpg",
+        "format": "JPG",
+        "bytes": 123391,
+        "size": "120 KB",
+        "width": 1488,
+        "height": 744,
+        "dimensions": "1488 x 744 px"
+      },
+      "png": {
+        "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.png",
+        "format": "PNG",
+        "bytes": 50420,
+        "size": "49.2 KB",
+        "width": 1488,
+        "height": 744,
+        "dimensions": "1488 x 744 px"
+      }
+    },
+    {
+      "page": 2,
+      "jpg": {
+        "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.jpg",
+        "format": "JPG",
+        "bytes": 58912,
+        "size": "57.5 KB",
+        "width": 1488,
+        "height": 744,
+        "dimensions": "1488 x 744 px"
+      },
+      "png": {
+        "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.png",
+        "format": "PNG",
+        "bytes": 23456,
+        "size": "22.9 KB",
+        "width": 1488,
+        "height": 744,
+        "dimensions": "1488 x 744 px"
+      }
+    }
+  ],
+  "generatedAt": "2026-07-19T05:48:57.936Z",
+  "pipeline": "ghostscript"
+}

@@ -11,6 +11,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = resolve(__dirname, "../..");
 const BRANDS_PATH = resolve(REPO_ROOT, "config/brands.json");
 const IP_SYSTEM_PATH = resolve(REPO_ROOT, "IP-System/ip_sys.md");
+const LIBRARY_ROOT = resolve(REPO_ROOT, "data/library");
 const PRIVATE_SKILL_PATHS = [
   resolve(REPO_ROOT, "site/api/private/ksamint-skills.enc.json"),
   resolve(REPO_ROOT, "ksamint/private/guofeng-writing-style.enc.json"),
@@ -75,6 +76,25 @@ type EncryptedPrivateSkills = {
   iv: string;
   tag: string;
   ciphertext: string;
+};
+
+type LibraryOrganization = {
+  id: string; slug: string; name: string; nativeName?: string; description?: string;
+  officialWebsite?: string; logoUrl?: string; logoSourceUrl?: string; country?: string;
+  headquarters?: string; industry?: string; ticker?: string; verificationStatus?: string;
+  sourceId: string; sourceUrl: string; sourcePublisher: string; sourceDate?: string;
+  fetchedAt?: string; rank?: number; year?: number; metadata?: Record<string, unknown>;
+};
+
+type LibraryItem = {
+  id: string; slug: string; type: "case" | "report" | "dataset";
+  title: { zh?: string; en?: string }; summary?: { zh?: string; en?: string };
+  sourceUrl?: string; sourcePublisher?: string; publishedAt?: string; access?: string;
+  externalUrl?: string; verificationStatus?: string; metadata?: Record<string, unknown>;
+};
+
+type LibraryRelation = {
+  id: string; fromType: string; fromId: string; toType: string; toId: string; relation: string; note?: string;
 };
 
 const brandKeyInputSchema = {
@@ -312,6 +332,30 @@ async function loadPrivateSkills(assetKey = "ksamint") {
   return decryptPrivateSkills(encrypted, secret);
 }
 
+async function readLibraryFile<T>(name: string): Promise<T> {
+  return JSON.parse(await readFile(resolve(LIBRARY_ROOT, `${name}.json`), "utf8")) as T;
+}
+
+async function loadLibrary() {
+  const [sources, organizations, cases, reports, datasets, relations] = await Promise.all([
+    readLibraryFile<Record<string, unknown>[]>("sources"),
+    readLibraryFile<LibraryOrganization[]>("organizations"),
+    readLibraryFile<LibraryItem[]>("cases"),
+    readLibraryFile<LibraryItem[]>("reports"),
+    readLibraryFile<LibraryItem[]>("datasets"),
+    readLibraryFile<LibraryRelation[]>("relations"),
+  ]);
+  return { sources, organizations, cases, reports, datasets, relations };
+}
+
+function publicLibraryItem(item: LibraryItem) {
+  return { ...item, fileUrl: undefined, fileKey: undefined };
+}
+
+function searchable(value: unknown) {
+  return JSON.stringify(value).toLowerCase();
+}
+
 const brandConfigs = await loadBrandConfigs();
 const server = new McpServer({ name: "tableai-designaha", version: "0.2.0" });
 
@@ -326,6 +370,35 @@ server.registerResource(
   async (uri) => ({
     contents: [{ uri: uri.href, mimeType: "text/markdown", text: await readFile(IP_SYSTEM_PATH, "utf8") }],
   })
+);
+
+server.registerResource(
+  "public-library",
+  "library://index",
+  {
+    title: "IPTrust public knowledge library",
+    description: "Source-backed organizations, cases, reports, datasets, and links to owned IPs.",
+    mimeType: "application/json",
+  },
+  async (uri) => {
+    const library = await loadLibrary();
+    return {
+      contents: [{
+        uri: uri.href,
+        mimeType: "application/json",
+        text: JSON.stringify({
+          sources: library.sources,
+          counts: {
+            organizations: library.organizations.length,
+            cases: library.cases.length,
+            reports: library.reports.length,
+            datasets: library.datasets.length,
+            relations: library.relations.length,
+          },
+        }, null, 2),
+      }],
+    };
+  }
 );
 
 for (const brand of brandConfigs) {
@@ -469,6 +542,95 @@ server.registerTool(
     }
     const palette = colors.map(([name, token]) => `${name}: ${token.$value}`).join("\n");
     return { content: [{ type: "text", text: `${hex} is not an exact ${assetKey} brand color.${palette ? ` Use one of:\n${palette}` : " No palette tokens are available yet."}` }] };
+  }
+);
+
+server.registerTool(
+  "search_library",
+  {
+    title: "Search the IPTrust knowledge library",
+    description: "Search source-backed organizations, cases, reports, and datasets. Results include provenance metadata.",
+    inputSchema: {
+      query: z.string().min(1).describe("Search text, organization name, industry, title, or topic."),
+      type: z.enum(["all", "organization", "case", "report", "dataset"]).optional().describe("Optional library type."),
+      source: z.string().optional().describe("Optional source id, e.g. fortune-global-500-2025."),
+      limit: z.number().int().min(1).max(100).optional().describe("Maximum results. Defaults to 20."),
+    },
+  },
+  async (input) => {
+    const library = await loadLibrary();
+    const q = input.query.toLowerCase();
+    const limit = input.limit ?? 20;
+    const organizations = input.type && !["all", "organization"].includes(input.type) ? [] : library.organizations
+      .filter((item) => (!input.source || item.sourceId === input.source) && searchable(item).includes(q))
+      .map((item) => ({ type: "organization", ...item }));
+    const itemCollections = [library.cases, library.reports, library.datasets].flat()
+      .filter((item) => (!input.type || input.type === "all" || item.type === input.type) && searchable(item).includes(q))
+      .map(publicLibraryItem);
+    return { content: [{ type: "text", text: JSON.stringify([...organizations, ...itemCollections].slice(0, limit), null, 2) }] };
+  }
+);
+
+server.registerTool(
+  "list_library",
+  {
+    title: "List IPTrust library records",
+    description: "List a public library collection with stable ids and provenance.",
+    inputSchema: {
+      type: z.enum(["organization", "case", "report", "dataset"]).describe("Library collection."),
+      source: z.string().optional().describe("Optional organization source id."),
+      limit: z.number().int().min(1).max(200).optional(),
+      offset: z.number().int().min(0).optional(),
+    },
+  },
+  async (input) => {
+    const library = await loadLibrary();
+    const offset = input.offset ?? 0;
+    const limit = input.limit ?? 50;
+    const collection = input.type === "organization"
+      ? library.organizations.filter((item) => !input.source || item.sourceId === input.source)
+      : library[`${input.type}s` as "cases" | "reports" | "datasets"].map(publicLibraryItem);
+    return { content: [{ type: "text", text: JSON.stringify({ type: input.type, total: collection.length, offset, limit, items: collection.slice(offset, offset + limit) }, null, 2) }] };
+  }
+);
+
+server.registerTool(
+  "get_library_item",
+  {
+    title: "Get an IPTrust library record",
+    description: "Resolve one organization, case, report, or dataset by stable id.",
+    inputSchema: {
+      type: z.enum(["organization", "case", "report", "dataset"]),
+      id: z.string().describe("Stable library id."),
+    },
+  },
+  async (input) => {
+    const library = await loadLibrary();
+    const collection = input.type === "organization"
+      ? library.organizations
+      : library[`${input.type}s` as "cases" | "reports" | "datasets"];
+    const item = collection.find((entry) => entry.id === input.id || entry.slug === input.id);
+    if (!item) return { content: [{ type: "text", text: `Library item "${input.id}" was not found.` }], isError: true };
+    return { content: [{ type: "text", text: JSON.stringify(input.type === "organization" ? item : publicLibraryItem(item as LibraryItem), null, 2) }] };
+  }
+);
+
+server.registerTool(
+  "get_related",
+  {
+    title: "Get linked IPTrust records",
+    description: "Find cases, reports, datasets, public organizations, or owned IPs linked to one entity.",
+    inputSchema: {
+      entityType: z.enum(["owned-ip", "organization", "case", "report", "dataset"]),
+      entityId: z.string().describe("Stable IP or library id."),
+    },
+  },
+  async (input) => {
+    const library = await loadLibrary();
+    const relations = library.relations.filter((item) =>
+      (item.fromType === input.entityType && item.fromId === input.entityId)
+      || (item.toType === input.entityType && item.toId === input.entityId));
+    return { content: [{ type: "text", text: JSON.stringify(relations, null, 2) }] };
   }
 );
 
