@@ -161,14 +161,25 @@
   "lifecycleStatus": "active",
   "guidelineMode": "independent",
   "version": {
-    "hash": "bdd9764d1d5239666a3b9def6e2cafbdf4d1e659",
-    "shortHash": "bdd9764",
-    "date": "2026-07-19T21:49:19+08:00",
-    "message": "fix: normalize brand search indexing",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/bdd9764d1d5239666a3b9def6e2cafbdf4d1e659"
+    "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+    "shortHash": "bc7b985",
+    "date": "2026-07-20T08:12:03+08:00",
+    "message": "feat: add IP taxonomy and brand architecture",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
   },
   "historyUrl": "api/history/iptrust.json",
   "history": [
+    {
+      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+      "shortHash": "bc7b985",
+      "date": "2026-07-20T08:12:03+08:00",
+      "message": "feat: add IP taxonomy and brand architecture",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+      "sourcePaths": [
+        "config/brands.json",
+        "IPTRUST"
+      ]
+    },
     {
       "hash": "6e096d2f1250e265b38f71788760071c1a31c469",
       "shortHash": "6e096d2",
@@ -219,17 +230,6 @@
       "date": "2026-07-10T20:21:24+08:00",
       "message": "Replace contrast-template brand copy",
       "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
-      "sourcePaths": [
-        "config/brands.json",
-        "IPTRUST"
-      ]
-    },
-    {
-      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
-      "shortHash": "ed33a8b",
-      "date": "2026-07-10T18:44:20+08:00",
-      "message": "Add Shanrenjing journey safety IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
       "sourcePaths": [
         "config/brands.json",
         "IPTRUST"

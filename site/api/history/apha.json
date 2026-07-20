@@ -13,11 +13,11 @@
     "APHA/README.md"
   ],
   "latest": {
-    "hash": "6e096d2f1250e265b38f71788760071c1a31c469",
-    "shortHash": "6e096d2",
-    "date": "2026-07-19T21:20:43+08:00",
-    "message": "feat: move IPTrust platform to Cloudflare edge storage",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/6e096d2f1250e265b38f71788760071c1a31c469",
+    "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+    "shortHash": "bc7b985",
+    "date": "2026-07-20T08:12:03+08:00",
+    "message": "feat: add IP taxonomy and brand architecture",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
     "sourcePaths": [
       "config/brands.json",
       "APHA",
@@ -25,6 +25,18 @@
     ]
   },
   "versions": [
+    {
+      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+      "shortHash": "bc7b985",
+      "date": "2026-07-20T08:12:03+08:00",
+      "message": "feat: add IP taxonomy and brand architecture",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+      "sourcePaths": [
+        "config/brands.json",
+        "APHA",
+        "APHA/README.md"
+      ]
+    },
     {
       "hash": "6e096d2f1250e265b38f71788760071c1a31c469",
       "shortHash": "6e096d2",
@@ -247,18 +259,6 @@
       "date": "2026-07-04T10:52:32+08:00",
       "message": "Add global search and version history",
       "url": "https://github.com/fengurt/tableai_designaha/commit/c723f8453cb7795108b51880986e7d9a664da5b1",
-      "sourcePaths": [
-        "config/brands.json",
-        "APHA",
-        "APHA/README.md"
-      ]
-    },
-    {
-      "hash": "a550421605e0fadecfb30c3fd5066754feda54d7",
-      "shortHash": "a550421",
-      "date": "2026-07-04T07:52:24+08:00",
-      "message": "Add IPTrust brand systems",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/a550421605e0fadecfb30c3fd5066754feda54d7",
       "sourcePaths": [
         "config/brands.json",
         "APHA",

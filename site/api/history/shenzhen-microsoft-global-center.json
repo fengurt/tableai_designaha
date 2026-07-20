@@ -13,11 +13,11 @@
     "ShenzhenMicrosoftGlobalCenter/README.md"
   ],
   "latest": {
-    "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
-    "shortHash": "eaf4320",
-    "date": "2026-07-19T14:13:21+08:00",
-    "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+    "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+    "shortHash": "bc7b985",
+    "date": "2026-07-20T08:12:03+08:00",
+    "message": "feat: add IP taxonomy and brand architecture",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
     "sourcePaths": [
       "config/brands.json",
       "ShenzhenMicrosoftGlobalCenter",
@@ -25,6 +25,18 @@
     ]
   },
   "versions": [
+    {
+      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+      "shortHash": "bc7b985",
+      "date": "2026-07-20T08:12:03+08:00",
+      "message": "feat: add IP taxonomy and brand architecture",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+      "sourcePaths": [
+        "config/brands.json",
+        "ShenzhenMicrosoftGlobalCenter",
+        "ShenzhenMicrosoftGlobalCenter/README.md"
+      ]
+    },
     {
       "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
       "shortHash": "eaf4320",
@@ -247,18 +259,6 @@
       "date": "2026-07-04T07:52:24+08:00",
       "message": "Add IPTrust brand systems",
       "url": "https://github.com/fengurt/tableai_designaha/commit/a550421605e0fadecfb30c3fd5066754feda54d7",
-      "sourcePaths": [
-        "config/brands.json",
-        "ShenzhenMicrosoftGlobalCenter",
-        "ShenzhenMicrosoftGlobalCenter/README.md"
-      ]
-    },
-    {
-      "hash": "e98dae7a98dfe32921ebc76e2783caeb85e64d61",
-      "shortHash": "e98dae7",
-      "date": "2026-07-03T21:55:07+08:00",
-      "message": "Add per-IP brand theming to design site",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/e98dae7a98dfe32921ebc76e2783caeb85e64d61",
       "sourcePaths": [
         "config/brands.json",
         "ShenzhenMicrosoftGlobalCenter",

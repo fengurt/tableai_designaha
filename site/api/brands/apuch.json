@@ -161,14 +161,26 @@
   "lifecycleStatus": "active",
   "guidelineMode": "independent",
   "version": {
-    "hash": "bdd9764d1d5239666a3b9def6e2cafbdf4d1e659",
-    "shortHash": "bdd9764",
-    "date": "2026-07-19T21:49:19+08:00",
-    "message": "fix: normalize brand search indexing",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/bdd9764d1d5239666a3b9def6e2cafbdf4d1e659"
+    "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+    "shortHash": "bc7b985",
+    "date": "2026-07-20T08:12:03+08:00",
+    "message": "feat: add IP taxonomy and brand architecture",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
   },
   "historyUrl": "api/history/apuch.json",
   "history": [
+    {
+      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+      "shortHash": "bc7b985",
+      "date": "2026-07-20T08:12:03+08:00",
+      "message": "feat: add IP taxonomy and brand architecture",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+      "sourcePaths": [
+        "config/brands.json",
+        "APUCH",
+        "APUCH/README.md"
+      ]
+    },
     {
       "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
       "shortHash": "eaf4320",
@@ -223,18 +235,6 @@
       "date": "2026-07-08T04:12:48+08:00",
       "message": "Refine hero index labels",
       "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
-      "sourcePaths": [
-        "config/brands.json",
-        "APUCH",
-        "APUCH/README.md"
-      ]
-    },
-    {
-      "hash": "9e33619ad95856c977f8803517f325304d678821",
-      "shortHash": "9e33619",
-      "date": "2026-07-08T03:55:08+08:00",
-      "message": "Add Nibiru and Shenzhen Microsoft Global Center IPs",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/9e33619ad95856c977f8803517f325304d678821",
       "sourcePaths": [
         "config/brands.json",
         "APUCH",

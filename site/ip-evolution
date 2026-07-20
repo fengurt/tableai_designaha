@@ -7,8 +7,8 @@
   <title>IP进化论 | 岁知社 IPTrust</title>
   <meta name="description" content="IP进化论把品牌架构、内核、表达、资产与治理连接成可持续更新的系统。">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site-bdd9764-d9f25ec5.css">
-  <link rel="stylesheet" href="assets/editorial.css?v=bdd9764-d9f25ec5">
+  <link rel="stylesheet" href="assets/site-bc7b985-14ccb74b.css">
+  <link rel="stylesheet" href="assets/editorial.css?v=bc7b985-14ccb74b">
 </head>
 <body class="ip-system-page">
   <header class="topbar">
@@ -473,6 +473,6 @@
       <p data-i18n="evolution.loop">识别品牌，建立系统，生成资产，回收反馈，再次进化。</p>
     </section>
   </main>
-  <script src="assets/site-bdd9764-d9f25ec5.js" type="module"></script>
+  <script src="assets/site-bc7b985-14ccb74b.js" type="module"></script>
 </body>
 </html>

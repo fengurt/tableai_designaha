@@ -4904,7 +4904,7 @@ async function renderDirectory() {
   const filtered = data.ips.filter((ip) => (!industry || ip.primaryIndustry === industry || ip.industries?.includes(industry)) && (!ipType || ip.ipType === ipType) && (!parent || parents.get(ip.slug) === parent) && (!query || [ip.slug, ip.names?.zh, ip.names?.en].join(" ").toLowerCase().includes(query)));
   const parentIps = data.ips.filter((ip) => (data.relationships || []).some((relation) => relation.parent === ip.slug));
   page.innerHTML = \`
-    <header class="directory-hero"><p class="eyebrow">IPTrust Directory</p><h1>\${currentLocale === "en" ? "IP, clearly structured." : "看清每个 IP 的位置。"}</h1><p>\${data.ips.length} IP · \${data.applications.length} \${currentLocale === "en" ? "applications" : "项目应用"}</p></header>
+    <header class="directory-hero"><p class="eyebrow">IPTrust Directory</p><h1>\${currentLocale === "en" ? "IP, clearly structured." : "IP，一目了然。"}</h1><p>\${data.ips.length} IP · \${data.applications.length} \${currentLocale === "en" ? "applications" : "项目应用"}</p></header>
     <form class="directory-filters" id="directoryFilters">
       <input name="q" value="\${escapeHtml(params.get("q") || "")}" placeholder="\${currentLocale === "en" ? "Search IP" : "搜索 IP"}">
       <select name="industry">\${selectOptions(data.taxonomy.industries || [], industry, currentLocale === "en" ? "All industries" : "全部行业")}</select>

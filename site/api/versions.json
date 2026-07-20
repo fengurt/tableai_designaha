@@ -1,5 +1,12 @@
 [
   {
+    "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+    "shortHash": "bc7b985",
+    "date": "2026-07-20T08:12:03+08:00",
+    "message": "feat: add IP taxonomy and brand architecture",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+  },
+  {
     "hash": "bdd9764d1d5239666a3b9def6e2cafbdf4d1e659",
     "shortHash": "bdd9764",
     "date": "2026-07-19T21:49:19+08:00",
