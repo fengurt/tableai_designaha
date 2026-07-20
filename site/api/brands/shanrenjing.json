@@ -179,12 +179,22 @@
       "secondaryName": "山人境"
     }
   },
+  "recordClass": "owned",
+  "primaryIndustry": "safety-public-infrastructure",
+  "industries": [
+    "safety-public-infrastructure",
+    "travel-destinations",
+    "technology-ai"
+  ],
+  "ipType": "product-service-brand",
+  "lifecycleStatus": "active",
+  "guidelineMode": "independent",
   "version": {
-    "hash": "4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9",
-    "shortHash": "4d8fc4d",
-    "date": "2026-07-19T14:16:14+08:00",
-    "message": "Fix GitHub Pages dependency install",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9"
+    "hash": "bdd9764d1d5239666a3b9def6e2cafbdf4d1e659",
+    "shortHash": "bdd9764",
+    "date": "2026-07-19T21:49:19+08:00",
+    "message": "fix: normalize brand search indexing",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/bdd9764d1d5239666a3b9def6e2cafbdf4d1e659"
   },
   "historyUrl": "api/history/shanrenjing.json",
   "history": [

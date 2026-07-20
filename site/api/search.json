@@ -592,6 +592,22 @@
     "url": "brand.html?brand=kaoyu-shenhua"
   },
   {
+    "type": "ip",
+    "slug": "yanan-shiyao-hotel",
+    "title": "延安石窑宾馆",
+    "subtitle": "延安石窑宾馆",
+    "text": "酒店住宿 在地文旅 场所体验 Hospitality Local travel Place experience 延安 宾馆 在地文化 Yan'an Hotel Local culture 中文优先的独立酒店与场所 IP。 stone cave dwelling Yan'an hospitality local culture",
+    "url": "brand.html?brand=yanan-shiyao-hotel"
+  },
+  {
+    "type": "guide",
+    "slug": "yanan-shiyao-hotel",
+    "title": "README",
+    "subtitle": "延安石窑宾馆 · YanAnShiyao/README.md",
+    "text": "延安石窑宾馆 中文优先的独立酒店与场所 IP。 基本资料 中文名：延安石窑宾馆 英文名：暂未设定 行业：酒店与住宿、文旅与目的地 IP 类型：场所/空间品牌 品牌状态：建档中 官网、简介、业务、地址、视觉资产与品牌规范暂留空，后续通过管理 API 补充。",
+    "url": "brand.html?brand=yanan-shiyao-hotel"
+  },
+  {
     "type": "organization",
     "slug": "fortune-walmart",
     "title": "Walmart",

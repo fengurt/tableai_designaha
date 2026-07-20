@@ -17,6 +17,7 @@
     "assets:migrate:upload": "node scripts/migrate-assets-to-r2.mjs --upload",
     "assets:migrate:verify": "node scripts/migrate-assets-to-r2.mjs --verify",
     "validate:assets": "node scripts/validate-asset-policy.mjs",
+    "validate:ip": "node scripts/validate-ip-system.mjs",
     "seed:platform": "node scripts/build-platform-seed.mjs",
     "encrypt:ksamint-skills": "node scripts/encrypt-private-skills.mjs",
     "sync:skill": "cp KiND/tokens/kind.tokens.json .cursor/skills/kind-design/tokens.json"

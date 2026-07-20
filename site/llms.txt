@@ -49,6 +49,7 @@ Brands:
 - 深圳微软出海中心 (shenzhen-microsoft-global-center): /api/brands/shenzhen-microsoft-global-center.json · mainLocale CN · palette #2563EB / #00A4EF
 - 山人境 (shanrenjing): /api/brands/shanrenjing.json · mainLocale CN · palette #173F38 / #D5A53B
 - 烤鱼神话 (kaoyu-shenhua): /api/brands/kaoyu-shenhua.json · mainLocale CN · palette #241714 / #B33A2B
+- 延安石窑宾馆 (yanan-shiyao-hotel): /api/brands/yanan-shiyao-hotel.json · mainLocale CN · palette #352F2A / #A87946
 
 Admin workflow:
 - /admin.html unlocks with the generated admin key.

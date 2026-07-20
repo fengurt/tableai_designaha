@@ -1,5 +1,33 @@
 [
   {
+    "hash": "bdd9764d1d5239666a3b9def6e2cafbdf4d1e659",
+    "shortHash": "bdd9764",
+    "date": "2026-07-19T21:49:19+08:00",
+    "message": "fix: normalize brand search indexing",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/bdd9764d1d5239666a3b9def6e2cafbdf4d1e659"
+  },
+  {
+    "hash": "f00a7899dc5da392abf1d4153c8eee3930bd9495",
+    "shortHash": "f00a789",
+    "date": "2026-07-19T21:37:44+08:00",
+    "message": "perf: serve responsive brand media",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/f00a7899dc5da392abf1d4153c8eee3930bd9495"
+  },
+  {
+    "hash": "3a5f1658229c4ddfc9c789795f13f1f862315902",
+    "shortHash": "3a5f165",
+    "date": "2026-07-19T21:28:22+08:00",
+    "message": "fix: make asset malware scans reliable",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/3a5f1658229c4ddfc9c789795f13f1f862315902"
+  },
+  {
+    "hash": "6e096d2f1250e265b38f71788760071c1a31c469",
+    "shortHash": "6e096d2",
+    "date": "2026-07-19T21:20:43+08:00",
+    "message": "feat: move IPTrust platform to Cloudflare edge storage",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/6e096d2f1250e265b38f71788760071c1a31c469"
+  },
+  {
     "hash": "4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9",
     "shortHash": "4d8fc4d",
     "date": "2026-07-19T14:16:14+08:00",

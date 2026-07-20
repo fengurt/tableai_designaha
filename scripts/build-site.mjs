@@ -21,9 +21,11 @@ const libraryDataDir = join(root, "data", "library");
 const assetManifestPath = join(root, "data", "assets", "manifest.json");
 
 const brands = JSON.parse(await readFile(join(root, "config/brands.json"), "utf8"));
+const ipSystem = JSON.parse(await readFile(join(root, "config/ip-system.json"), "utf8"));
 const assetManifest = existsSync(assetManifestPath)
   ? JSON.parse(await readFile(assetManifestPath, "utf8"))
   : null;
+const hubLogoUrl = assetManifest?.items?.find((item) => item.sourcePath === "IPTRUST/assets/brand-images/iptrust-logo-black.png")?.mediaUrl || "assets/brand-images/iptrust-logo-black.png";
 const librarySnapshotNames = ["sources", "organizations", "cases", "reports", "datasets", "relations", "sync"];
 const librarySnapshots = Object.fromEntries(await Promise.all(librarySnapshotNames.map(async (name) => [
   name,
@@ -467,13 +469,22 @@ function loadBrandVersions(brand) {
 
 function apiSchemaPayload() {
   return {
-    name: "IPTrust Brand API Schema",
-    version: "1.1.0",
-    description: "Every public IPTrust brand field is callable through JSON APIs and versioned through Git-backed history endpoints.",
+    name: "IPTrust IP System API Schema",
+    version: "2.0.0",
+    description: "IPTrust exposes brands, IP taxonomy, brand architecture, project applications, assets and history through REST and MCP.",
     endpoints: {
       manifest: "api/manifest.json",
       allBrands: "api/brands.json",
-      search: "api/search.json",
+      taxonomy: "api/v2/taxonomy",
+      ips: "api/v2/ips",
+      ip: "api/v2/ips/{slug}",
+      ipHistory: "api/v2/ips/{slug}/history",
+      ipGraph: "api/v2/ips/{slug}/graph",
+      ipRelations: "api/v2/ip-relations",
+      applications: "api/v2/applications",
+      application: "api/v2/applications/{slug}",
+      applicationHistory: "api/v2/applications/{slug}/history",
+      search: "api/v2/search",
       organizations: "api/library/organizations",
       cases: "api/library/cases",
       reports: "api/library/reports",
@@ -486,6 +497,7 @@ function apiSchemaPayload() {
       skill: "skills/iptrust-live-update/SKILL.md",
       llms: "llms.txt",
       remoteMcp: "mcp",
+      directory: "directory/",
     },
     brandFields: {
       slug: "Stable IP ID / asset key used by URLs and agent calls.",
@@ -520,6 +532,18 @@ function apiSchemaPayload() {
       source: "GitHub source folder and local folder.",
       version: "Latest build/global version object.",
       history: "Latest per-IP history records.",
+      primaryIndustry: "Primary term from the controlled bilingual industry taxonomy.",
+      industries: "One or more controlled industry taxonomy terms.",
+      ipType: "Controlled single IP type; parent/child status is represented by relationships.",
+      recordClass: "owned or reference.",
+      lifecycleStatus: "Lifecycle state such as active, draft, archived or retired.",
+      guidelineMode: "independent or inherited guideline behavior.",
+    },
+    architecture: {
+      primaryParent: "One optional brand_parent relationship; cycles are rejected.",
+      auxiliaryRelations: ["endorsed_by", "operated_by", "licensed_by", "member_of", "co_branded_with"],
+      applications: "Stores, properties, deployments, events, content series, digital products and collaborations remain applications rather than independent IPs.",
+      inheritance: "An application inherits its primary IP guideline and stores local changes in overrides.",
     },
     versioning: {
       model: "Git-backed history. Source edits flow through repository commits, then build into website JSON.",
@@ -545,7 +569,7 @@ const previousHistoryBySlug = new Map(await Promise.all(brands.map(async (brand)
 })));
 const versions = mergeVersionHistory(loadVersions(), previousVersions, 20);
 const buildFingerprint = createHash("sha256");
-for (const inputPath of ["scripts/build-site.mjs", "styles/editorial.css", "config/brands.json", "package.json", "IP-System/ip_sys.md", "data/library/sync.json", "library/library.css", "library/library.js"]) {
+for (const inputPath of ["scripts/build-site.mjs", "styles/editorial.css", "config/brands.json", "config/ip-system.json", "package.json", "IP-System/ip_sys.md", "data/library/sync.json", "library/library.css", "library/library.js"]) {
   buildFingerprint.update(await readFile(join(root, inputPath)));
 }
 const buildVersion = `${versions[0]?.shortHash ?? "dev"}-${buildFingerprint.digest("hex").slice(0, 8)}`;
@@ -725,6 +749,12 @@ for (const brand of brands) {
     display,
     intro,
     notes: brandProfile.notes,
+    recordClass: "owned",
+    primaryIndustry: ipSystem.owned[brand.slug]?.primaryIndustry || "business-professional-services",
+    industries: ipSystem.owned[brand.slug]?.industries || [],
+    ipType: ipSystem.owned[brand.slug]?.ipType || "corporate-brand",
+    lifecycleStatus: "active",
+    guidelineMode: ipSystem.owned[brand.slug]?.guidelineMode || "independent",
     version: versions[0] ?? null,
     historyUrl: `api/history/${brand.slug}.json`,
     history: history.slice(0, 6),
@@ -824,6 +854,12 @@ const librarySearchPayload = [
 ];
 const searchPayload = [...brandSearchPayload, ...librarySearchPayload];
 await writeFile(join(apiDir, "brands.json"), JSON.stringify(indexPayload, null, 2));
+const staticIps = [
+  ...indexPayload.map((brand) => ({ slug: brand.slug, recordClass: "owned", ipType: brand.ipType, primaryIndustry: brand.primaryIndustry, industries: brand.industries, names: { zh: brand.display?.zh?.name || brand.nativeName || brand.name, en: brand.display?.en?.name || brand.name }, mainLanguage: brand.mainLanguage, lifecycleStatus: brand.lifecycleStatus, guidelineMode: brand.guidelineMode, sourceUrl: brand.officialWebsite || "", logoUrl: brand.logoUrl || brand.heroImage || "", url: brand.url })),
+  ...ipSystem.references.map((item) => ({ ...item, recordClass: "reference", lifecycleStatus: "active", guidelineMode: "independent", url: `ip?ip=${item.slug}` })),
+];
+await writeFile(join(apiDir, "taxonomy.json"), JSON.stringify(ipSystem.taxonomy, null, 2));
+await writeFile(join(apiDir, "ips.json"), JSON.stringify({ items: staticIps, relationships: ipSystem.relationships, applications: ipSystem.applications }, null, 2));
 await writeFile(join(apiDir, "search.json"), JSON.stringify(searchPayload, null, 2));
 await writeFile(join(apiDir, "versions.json"), JSON.stringify(versions, null, 2));
 await writeFile(join(apiDir, "schema.json"), JSON.stringify(apiSchemaPayload(), null, 2));
@@ -851,7 +887,7 @@ await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
     transport: "Streamable HTTP",
     protocolVersion: "2025-11-25",
     resources: "api/brands/{slug}.json",
-    tools: ["list_brands", "get_brand", "get_guideline", "list_tokens", "get_token", "search_library", "list_library", "get_library_item", "get_related"],
+    tools: ["list_brands", "get_brand", "list_ips", "get_ip_graph", "list_ip_children", "list_ip_applications", "get_application", "search_library", "list_assets", "get_asset", "request_asset_url"],
   },
   schema: {
     apiUrl: "api/schema.json",
@@ -862,6 +898,11 @@ await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
     name: "Brand IP System v2",
     path: "ip_sys.md",
     description: "Universal closed-loop framework for defining and governing any organization or brand IP.",
+    directory: "directory/",
+    taxonomy: "api/v2/taxonomy",
+    ips: "api/v2/ips",
+    relations: "api/v2/ip-relations",
+    applications: "api/v2/applications",
   },
   library: {
     page: "library/",
@@ -1097,7 +1138,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
 </head>
 <body class="hub-home">
   <header class="topbar">
-    <a class="brand" href="./" aria-label="${hubNameCn}"><img src="assets/brand-images/iptrust-logo-black.png" alt="${hubNameCn}"></a>
+    <a class="brand" href="./" aria-label="${hubNameCn}"><img src="${hubLogoUrl}" alt="${hubNameCn}"></a>
     <div class="topbar-search" role="search">
       <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
       <div class="global-results" id="globalResults" aria-live="polite"></div>
@@ -1205,7 +1246,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       <div>
         <h2 data-i18n="home.sectionTitle">IP</h2>
       </div>
-      <span id="brandCount" class="count-pill"></span>
+      <div class="section-actions"><a class="directory-shortcut" href="directory">筛选 / Filter</a><span id="brandCount" class="count-pill"></span></div>
     </section>
     <section class="ip-grid" id="brandGrid" aria-live="polite"></section>
   </main>
@@ -1227,7 +1268,7 @@ await writeFile(join(siteDir, "ip-evolution"), html`<!doctype html>
 </head>
 <body class="ip-system-page">
   <header class="topbar">
-    <a class="brand" href="./" aria-label="${hubNameCn}"><img src="assets/brand-images/iptrust-logo-black.png" alt="${hubNameCn}"></a>
+    <a class="brand" href="./" aria-label="${hubNameCn}"><img src="${hubLogoUrl}" alt="${hubNameCn}"></a>
     <div class="topbar-search" role="search">
       <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
       <div class="global-results" id="globalResults" aria-live="polite"></div>
@@ -1312,7 +1353,7 @@ await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="./" aria-label="${hubNameCn}"><img src="assets/brand-images/iptrust-logo-black.png" alt="${hubNameCn}"></a>
+    <a class="brand" href="./" aria-label="${hubNameCn}"><img src="${hubLogoUrl}" alt="${hubNameCn}"></a>
     <div class="topbar-search" role="search">
       <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
       <div class="global-results" id="globalResults" aria-live="polite"></div>
@@ -1359,6 +1400,42 @@ await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
 </body>
 </html>`);
 
+function directoryPage({ kind, title, mountId }) {
+  return html`<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <base href="../">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${title} · ${hubName}</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="${siteCssPath}">
+  <link rel="stylesheet" href="assets/editorial.css?v=${buildVersion}">
+</head>
+<body data-page="${kind}">
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="${hubNameCn}"><img src="${hubLogoUrl}" alt="${hubNameCn}"></a>
+    <div class="topbar-search" role="search"><input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP"><div class="global-results" id="globalResults" aria-live="polite"></div></div>
+    <nav class="top-actions" aria-label="Primary actions">
+      <a href="directory" aria-current="${kind === "directory" ? "page" : "false"}">Directory</a>
+      <button class="api-link" type="button" id="apiConnectButton" aria-label="API connect"><span class="api-dot"></span>API</button>
+      <a href="./#agent-entry">Agent</a><a href="./#partner-entry">Partner</a><a href="./#collab-entry">Collab</a>
+      <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language"><span class="is-active">CN</span><span class="lang-divider">/</span><span>EN</span></button>
+    </nav>
+  </header>
+  <main id="${mountId}" class="directory-main" aria-live="polite"></main>
+  <script src="${siteJsPath}" type="module"></script>
+</body>
+</html>`;
+}
+
+await mkdir(join(siteDir, "directory"), { recursive: true });
+await mkdir(join(siteDir, "ip"), { recursive: true });
+await mkdir(join(siteDir, "application"), { recursive: true });
+await writeFile(join(siteDir, "directory", "index.html"), directoryPage({ kind: "directory", title: "IP Directory", mountId: "directoryPage" }));
+await writeFile(join(siteDir, "ip", "index.html"), directoryPage({ kind: "ip", title: "IP", mountId: "ipRecordPage" }));
+await writeFile(join(siteDir, "application", "index.html"), directoryPage({ kind: "application", title: "Application", mountId: "applicationPage" }));
+
 await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
 <html lang="zh-CN">
 <head>
@@ -1372,7 +1449,7 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="./" aria-label="${hubNameCn}"><img src="assets/brand-images/iptrust-logo-black.png" alt="${hubNameCn}"></a>
+    <a class="brand" href="./" aria-label="${hubNameCn}"><img src="${hubLogoUrl}" alt="${hubNameCn}"></a>
     <div class="topbar-search" role="search">
       <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
       <div class="global-results" id="globalResults" aria-live="polite"></div>
@@ -1425,17 +1502,30 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
       <p class="notice" id="unlockStatus"></p>
     </section>
     <section class="panel hidden" id="editorPanel">
-      <p class="eyebrow">API</p>
-      <h1 data-i18n="admin.editTitle">编辑品牌记录</h1>
-      <div class="form-grid">
-        <label><span data-i18n="admin.brand">IP</span><select id="brandSelect"></select></label>
-      </div>
-      <div class="actions">
-        <button id="loadBrand">载入</button>
-        <button id="saveBrand">保存</button>
-      </div>
-      <textarea id="editor" spellcheck="false" placeholder="Brand JSON"></textarea>
-      <p class="muted" id="recordVersion"></p>
+      <div class="admin-heading"><div><p class="eyebrow">IPTrust OS</p><h1>管理中枢</h1></div><span class="connected-pill">Connected</span></div>
+      <nav class="admin-tabs" aria-label="Admin sections">
+        <button class="is-active" data-admin-tab="overview">概览</button><button data-admin-tab="ips">IP</button><button data-admin-tab="architecture">品牌架构</button><button data-admin-tab="applications">项目应用</button><button data-admin-tab="assets">资产</button><button data-admin-tab="library">资料库</button><button data-admin-tab="jobs">任务</button><button data-admin-tab="audit">审计</button><button data-admin-tab="keys">API Keys</button>
+      </nav>
+      <section class="admin-view" data-admin-view="overview"><div class="admin-stats" id="adminStats"></div><div class="service-health" id="serviceHealth"></div></section>
+      <section class="admin-view hidden" data-admin-view="ips">
+        <div class="admin-toolbar"><label><span>IP</span><select id="brandSelect"></select></label><button id="loadBrand">载入</button></div>
+        <div class="form-grid">
+          <label><span>中文名称</span><input id="ipNameZh"></label><label><span>English name</span><input id="ipNameEn"></label>
+          <label><span>主语言</span><select id="ipMainLanguage"><option value="zh">中文</option><option value="en">English</option></select></label><label><span>IP 类型</span><select id="ipType"></select></label>
+          <label><span>主行业</span><select id="ipPrimaryIndustry"></select></label><label><span>其他行业</span><select id="ipIndustries" multiple></select></label>
+          <label><span>生命周期</span><select id="ipLifecycle"><option value="active">Active</option><option value="draft">Draft</option><option value="archived">Archived</option></select></label><label><span>规范模式</span><select id="ipGuideline"><option value="independent">Independent</option><option value="inherit">Inherit</option><option value="extend">Extend</option></select></label>
+        </div>
+        <div class="actions"><button id="saveIp">保存字段</button><button class="ghost" id="saveBrand">保存品牌内容</button></div>
+        <details class="advanced-editor"><summary>高级 · Raw JSON</summary><textarea id="editor" spellcheck="false" placeholder="Brand JSON"></textarea></details>
+        <p class="muted" id="recordVersion"></p>
+      </section>
+      <section class="admin-view hidden" data-admin-view="architecture"><div class="admin-split"><form id="relationForm"><h2>连接 IP</h2><label>母 IP<select id="relationParent"></select></label><label>子 IP<select id="relationChild"></select></label><label>关系<select id="relationType"><option value="brand_parent">主母 IP</option><option value="endorsed_by">背书</option><option value="operated_by">运营</option><option value="licensed_by">授权</option><option value="member_of">成员</option><option value="co_branded_with">联合品牌</option></select></label><button>建立关系</button></form><div id="relationList"></div></div></section>
+      <section class="admin-view hidden" data-admin-view="applications"><div class="admin-split"><form id="applicationForm"><div class="admin-form-heading"><h2 id="applicationFormTitle">新增项目应用</h2><button class="ghost" type="button" id="newApplication">新建</button></div><label>Slug<input id="applicationSlug"></label><label>中文名称<input id="applicationNameZh"></label><label>English name<input id="applicationNameEn"></label><label>类型<select id="applicationType"></select></label><label>主 IP<select id="applicationPrimary"></select></label><label>规范模式<select id="applicationGuideline"><option value="inherit">Inherit</option><option value="extend">Extend</option><option value="independent">Independent</option></select></label><label>中文简介<textarea id="applicationDescriptionZh"></textarea></label><label>English intro<textarea id="applicationDescriptionEn"></textarea></label><label>中文业务<textarea id="applicationBusinessZh"></textarea></label><label>English business<textarea id="applicationBusinessEn"></textarea></label><div class="form-grid"><label>省份<input id="applicationProvince"></label><label>城市<input id="applicationCity"></label></div><button id="saveApplication">保存应用</button></form><div id="applicationList"></div></div></section>
+      <section class="admin-view hidden" data-admin-view="assets"><div id="assetList"></div></section>
+      <section class="admin-view hidden" data-admin-view="library"><p>案例、报告、数据与公共品牌库通过资料库 API 管理。</p><a class="button" href="library/">打开资料库</a></section>
+      <section class="admin-view hidden" data-admin-view="jobs"><div id="jobList"></div></section>
+      <section class="admin-view hidden" data-admin-view="audit"><div id="auditList"></div></section>
+      <section class="admin-view hidden" data-admin-view="keys"><div class="step-up"><label>Google Authenticator<input id="stepUpTotp" inputmode="numeric" maxlength="6" placeholder="000000"></label><button id="stepUpButton">验证 10 分钟</button></div><div class="admin-split"><form id="keyForm"><h2>创建 API Key</h2><label>名称<input id="keyLabel" required></label><label>类型<select id="keyKind"><option value="service">Service</option><option value="partner">Partner</option><option value="agent">Agent</option></select></label><label>Scopes<input id="keyScopes" value="brands:read,ips:read,assets:read"></label><label>IP 范围<input id="keyIpScopes" value="*"></label><button>创建 Key</button><pre class="new-key-token hidden" id="newKeyToken"></pre></form><div id="keyList"></div></div></section>
       <p class="notice" id="editorStatus"></p>
     </section>
   </main>
@@ -2873,6 +2963,38 @@ pre {
   margin-top: 2px;
 }
 .panel { padding: 24px; margin-bottom: 18px; }
+.admin #editorPanel { max-width: 1180px; margin-inline: auto; background: transparent; border: 0; padding: 0; }
+.admin-heading { display: flex; align-items: end; justify-content: space-between; border-bottom: 1px solid var(--ink); padding: 0 0 22px; }
+.admin-heading h1 { margin: 3px 0 0; font-size: clamp(38px, 5vw, 68px); }
+.admin-tabs { display: flex; gap: 0; overflow-x: auto; border-bottom: 1px solid var(--line); margin-bottom: 28px; }
+.admin-tabs button { flex: 0 0 auto; padding: 14px 12px; color: var(--muted); background: transparent; border: 0; border-bottom: 2px solid transparent; border-radius: 0; }
+.admin-tabs button.is-active { color: var(--ink); border-bottom-color: var(--ink); }
+.admin-view { min-height: 400px; }
+.admin-stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.admin-stats article { min-height: 132px; display: flex; flex-direction: column; justify-content: space-between; padding: 18px 12px 18px 0; border-right: 1px solid var(--line); }
+.admin-stats strong { font-size: clamp(28px, 4vw, 54px); line-height: 1; }
+.admin-stats span { color: var(--muted); font-size: 12px; }
+.service-health { display: flex; flex-wrap: wrap; gap: 8px; padding: 22px 0; }
+.service-health span { display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--line); padding: 7px 10px; font: 700 11px/1 ui-monospace, monospace; }
+.service-health i { width: 7px; height: 7px; border-radius: 50%; background: #b12137; }
+.service-health .is-ok i { background: var(--green); }
+.admin-toolbar { display: flex; align-items: end; gap: 12px; margin-bottom: 20px; }
+.admin-toolbar label { min-width: 280px; margin: 0; }
+.admin-toolbar button { min-height: 42px; }
+.admin-split { display: grid; grid-template-columns: minmax(260px, .8fr) minmax(0, 1.5fr); gap: 48px; }
+.admin-split form { border-top: 1px solid var(--ink); padding-top: 18px; }
+.admin-form-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.admin-list-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; width: 100%; padding: 14px 0; border: 0; border-top: 1px solid var(--line); border-radius: 0; background: transparent; color: inherit; text-align: left; text-decoration: none; }
+.admin-list-row[data-edit-application] { cursor: pointer; }
+.admin-list-row span { color: var(--muted); font-size: 12px; }
+.admin-list-row span strong { display: block; color: var(--ink); font-size: 14px; }
+.admin-list-row small { display: block; margin-top: 4px; color: var(--muted); font-size: 11px; }
+.admin-split textarea { min-height: 88px; resize: vertical; }
+.new-key-token { overflow-wrap: anywhere; white-space: pre-wrap; border: 1px solid var(--line); padding: 12px; background: var(--paper); }
+.advanced-editor { margin-top: 28px; border-top: 1px solid var(--line); }
+.advanced-editor summary { cursor: pointer; padding: 14px 0; color: var(--muted); font-size: 12px; font-weight: 750; }
+.step-up { display: flex; align-items: end; gap: 10px; margin-bottom: 24px; }
+.step-up label { margin: 0; max-width: 240px; }
 .hidden { display: none; }
 label { display: grid; gap: 8px; font-size: 14px; font-weight: 700; margin: 12px 0; }
 input, select, textarea {
@@ -2887,11 +3009,52 @@ input, select, textarea {
 textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; line-height: 1.55; }
 .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 18px; }
 .notice { color: var(--green); font-weight: 700; }
+.section-actions { display: flex; align-items: center; gap: 10px; }
+.directory-shortcut { color: var(--muted); font-size: 12px; font-weight: 750; text-decoration: none; border-bottom: 1px solid var(--line); padding: 6px 0; }
+.directory-main { width: min(1180px, calc(100% - 40px)); margin: 0 auto; padding: clamp(48px, 8vw, 108px) 0 100px; }
+.directory-hero { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 24px; border-bottom: 1px solid var(--ink); padding-bottom: 28px; margin-bottom: 20px; }
+.directory-hero .eyebrow { grid-column: 1 / -1; }
+.directory-hero h1 { max-width: 760px; margin: 0; font-size: clamp(44px, 7vw, 92px); line-height: .92; }
+.directory-hero > p:last-child { color: var(--muted); font: 700 12px/1 ui-monospace, monospace; }
+.directory-filters { display: grid; grid-template-columns: minmax(180px, 1.6fr) repeat(3, minmax(140px, 1fr)) auto; gap: 8px; position: sticky; top: 74px; z-index: 4; padding: 12px 0; background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(14px); }
+.directory-filters input, .directory-filters select, .directory-filters button { min-height: 42px; margin: 0; border-radius: 2px; }
+.directory-list { border-top: 1px solid var(--line); }
+.directory-row { display: grid; grid-template-columns: minmax(220px, 2fr) 1.15fr 1.15fr 1fr 24px; gap: 16px; align-items: center; min-height: 68px; border-bottom: 1px solid var(--line); text-decoration: none; transition: padding .2s ease, background .2s ease; }
+.directory-row:hover { padding: 0 12px; background: var(--paper); }
+.directory-row > span:not(.directory-name) { color: var(--muted); font-size: 12px; }
+.directory-name { display: flex; align-items: baseline; gap: 10px; min-width: 0; }
+.directory-name strong { font-size: 17px; }
+.directory-name small { color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.application-directory { margin-top: 88px; border-top: 1px solid var(--ink); }
+.application-directory header { padding: 28px 0 18px; }
+.application-directory h2 { margin: 4px 0 0; }
+.application-directory > a { display: grid; grid-template-columns: 1fr auto 24px; gap: 20px; padding: 18px 0; border-top: 1px solid var(--line); text-decoration: none; }
+.record-detail { min-height: 58vh; display: flex; flex-direction: column; justify-content: flex-end; border-bottom: 1px solid var(--ink); padding-bottom: 38px; }
+.record-detail h1 { max-width: 930px; margin: 10px 0; font-size: clamp(54px, 10vw, 128px); line-height: .9; overflow-wrap: anywhere; }
+.record-secondary { color: var(--muted); font-size: clamp(18px, 2vw, 28px); }
+.record-facts { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0; }
+.record-facts > * { border: 1px solid var(--line); padding: 8px 11px; color: inherit; text-decoration: none; font-size: 12px; }
+.application-details { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: 42px; border-top: 1px solid var(--line); }
+.application-details > div { min-height: 170px; padding: 18px 14px 18px 0; border-right: 1px solid var(--line); }
+.application-details h2 { margin: 18px 0 8px; font-size: 19px; }
+.application-details a { display: block; color: inherit; padding: 5px 0; font-size: 12px; }
+.lineage-block, .brand-architecture { padding: 32px 0; border-bottom: 1px solid var(--brand-line, var(--line)); }
+.lineage-block a { display: block; padding: 16px 0; border-top: 1px solid var(--line); font-size: 22px; text-decoration: none; }
+.brand-architecture header { display: flex; justify-content: space-between; align-items: end; }
+.brand-architecture h2 { margin: 0; font-size: clamp(28px, 4vw, 48px); }
+.lineage-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 20px; border-top: 1px solid var(--brand-line, var(--line)); }
+.lineage-grid a { display: grid; gap: 6px; padding: 18px 14px 18px 0; border-right: 1px solid var(--brand-line, var(--line)); color: inherit; text-decoration: none; }
+.lineage-grid small { color: var(--brand-muted, var(--muted)); text-transform: uppercase; }
+.lineage-grid strong { font-size: 17px; }
 @media (max-width: 760px) {
   .topbar { align-items: flex-start; flex-direction: column; }
   .topbar-search { flex: 1 1 auto; width: 100%; max-width: none; order: 3; }
   nav { width: 100%; justify-content: space-between; gap: 10px; }
   .admin #unlockPanel { grid-template-columns: 1fr; }
+  .admin-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .admin-split { grid-template-columns: 1fr; gap: 36px; }
+  .admin-toolbar { align-items: stretch; flex-direction: column; }
+  .admin-toolbar label { min-width: 0; width: 100%; }
   .hub-hero, .brand-hero, .form-grid { grid-template-columns: 1fr; }
   .resource-grid { grid-template-columns: 1fr; }
   .endpoint-grid, .mood-grid { grid-template-columns: 1fr; }
@@ -2936,6 +3099,15 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .section-head { display: grid; align-items: start; }
   .ip-grid { grid-template-columns: 1fr; }
   .ip-card { min-height: 320px; }
+  .directory-main { width: min(100% - 28px, 1180px); padding-top: 42px; }
+  .directory-hero { grid-template-columns: 1fr; }
+  .directory-filters { position: static; grid-template-columns: 1fr 1fr; }
+  .directory-filters input { grid-column: 1 / -1; }
+  .directory-row { grid-template-columns: minmax(0, 1fr) 22px; padding: 13px 0; }
+  .directory-row > span:not(.directory-name) { display: none; }
+  .directory-name { align-items: flex-start; flex-direction: column; gap: 3px; }
+  .lineage-grid { grid-template-columns: 1fr; }
+  .application-details { grid-template-columns: 1fr 1fr; }
   h1 { font-size: 40px; }
   h2 { font-size: 28px; }
   .card-body h2 { font-size: 24px; }
@@ -3377,7 +3549,7 @@ function setupSearch() {
 }
 
 async function loadJson(path) {
-  const url = new URL(path, location.href);
+  const url = path.startsWith("api/") ? new URL("../" + path, import.meta.url) : new URL(path, location.href);
   url.searchParams.set("v", BUILD_VERSION);
   const res = await fetch(url, { cache: "no-cache" });
   if (!res.ok) throw new Error(\`Could not load \${path}\`);
@@ -4648,6 +4820,7 @@ async function renderBrand() {
         \` : ""}
       </section>
       \${profileEditor(brand)}
+      <section class="brand-architecture" id="brandArchitecture" aria-live="polite"></section>
       \${ipSystemPanel(brand)}
       \${brandAssetHub(brand)}
       \${adobeAssetPanel(brand.adobeAssets || [])}
@@ -4678,151 +4851,444 @@ async function renderBrand() {
   setupProfileEditor(brand);
   setupIpSystemPanel(brand);
   setupAssetCopyButtons();
+  renderBrandArchitecture(slug).catch(console.error);
+}
+
+function primaryIpName(ip = {}) {
+  return ip.mainLanguage === "en" ? (ip.names?.en || ip.names?.zh || ip.slug) : (ip.names?.zh || ip.names?.en || ip.slug);
+}
+
+function setupDirectoryLink() {
+  document.querySelectorAll(".top-actions").forEach((nav) => {
+    if (nav.querySelector('[href="directory"]')) return;
+    const link = document.createElement("a");
+    link.href = "directory";
+    link.textContent = "Directory";
+    nav.insertBefore(link, nav.firstChild);
+  });
+}
+
+function secondaryIpName(ip = {}) {
+  const primary = primaryIpName(ip);
+  return [ip.names?.zh, ip.names?.en].find((name) => name && name !== primary) || "";
+}
+
+async function loadIpSystem() {
+  try {
+    const [ips, taxonomy, applications, relationships] = await Promise.all([loadJson("api/v2/ips"), loadJson("api/v2/taxonomy"), loadJson("api/v2/applications"), loadJson("api/v2/ip-relations")]);
+    return { ips: ips.items || [], taxonomy, applications: applications.items || [], relationships: relationships.items || [] };
+  } catch {
+    const [snapshot, taxonomy] = await Promise.all([loadJson("api/ips.json"), loadJson("api/taxonomy.json")]);
+    return { ips: snapshot.items || [], taxonomy, applications: snapshot.applications || [], relationships: snapshot.relationships || [] };
+  }
+}
+
+function taxonomyLabel(term = {}) {
+  return term.labels?.[currentLocale === "en" ? "en" : "zh"] || term[currentLocale === "en" ? "en" : "zh"] || term.id || "";
+}
+
+function selectOptions(items, active, empty) {
+  return \`<option value="">\${escapeHtml(empty)}</option>\${items.map((item) => \`<option value="\${escapeHtml(item.id)}" \${active === item.id ? "selected" : ""}>\${escapeHtml(taxonomyLabel(item))}</option>\`).join("")}\`;
+}
+
+async function renderDirectory() {
+  const page = $("#directoryPage");
+  if (!page) return;
+  const data = await loadIpSystem();
+  const params = new URLSearchParams(location.search);
+  const industry = params.get("industry") || "";
+  const ipType = params.get("type") || "";
+  const parent = params.get("parent") || "";
+  const query = (params.get("q") || "").trim().toLowerCase();
+  const parents = new Map((data.relationships || []).filter((item) => item.type === "brand_parent" && item.primary).map((item) => [item.child, item.parent]));
+  const filtered = data.ips.filter((ip) => (!industry || ip.primaryIndustry === industry || ip.industries?.includes(industry)) && (!ipType || ip.ipType === ipType) && (!parent || parents.get(ip.slug) === parent) && (!query || [ip.slug, ip.names?.zh, ip.names?.en].join(" ").toLowerCase().includes(query)));
+  const parentIps = data.ips.filter((ip) => (data.relationships || []).some((relation) => relation.parent === ip.slug));
+  page.innerHTML = \`
+    <header class="directory-hero"><p class="eyebrow">IPTrust Directory</p><h1>\${currentLocale === "en" ? "IP, clearly structured." : "看清每个 IP 的位置。"}</h1><p>\${data.ips.length} IP · \${data.applications.length} \${currentLocale === "en" ? "applications" : "项目应用"}</p></header>
+    <form class="directory-filters" id="directoryFilters">
+      <input name="q" value="\${escapeHtml(params.get("q") || "")}" placeholder="\${currentLocale === "en" ? "Search IP" : "搜索 IP"}">
+      <select name="industry">\${selectOptions(data.taxonomy.industries || [], industry, currentLocale === "en" ? "All industries" : "全部行业")}</select>
+      <select name="type">\${selectOptions(data.taxonomy.ipTypes || [], ipType, currentLocale === "en" ? "All IP types" : "全部类型")}</select>
+      <select name="parent"><option value="">\${currentLocale === "en" ? "All parent IPs" : "全部母 IP"}</option>\${parentIps.map((ip) => \`<option value="\${ip.slug}" \${parent === ip.slug ? "selected" : ""}>\${escapeHtml(primaryIpName(ip))}</option>\`).join("")}</select>
+      <button type="submit">\${currentLocale === "en" ? "Apply" : "筛选"}</button>
+    </form>
+    <section class="directory-list">\${filtered.map((ip) => {
+      const parentIp = data.ips.find((candidate) => candidate.slug === parents.get(ip.slug));
+      const href = ip.recordClass === "owned" ? (ip.url || \`brand.html?brand=\${ip.slug}\`) : \`ip?ip=\${ip.slug}\`;
+      return \`<a class="directory-row" href="\${escapeHtml(href)}"><span class="directory-name"><strong>\${escapeHtml(primaryIpName(ip))}</strong>\${secondaryIpName(ip) ? \`<small>\${escapeHtml(secondaryIpName(ip))}</small>\` : ""}</span><span>\${escapeHtml(taxonomyLabel((data.taxonomy.industries || []).find((item) => item.id === ip.primaryIndustry)))}</span><span>\${escapeHtml(taxonomyLabel((data.taxonomy.ipTypes || []).find((item) => item.id === ip.ipType)))}</span><span>\${parentIp ? \`↳ \${escapeHtml(primaryIpName(parentIp))}\` : ""}</span><b>↗</b></a>\`;
+    }).join("") || \`<p class="empty-state">\${escapeHtml(t("home.noResults"))}</p>\`}</section>
+    <section class="application-directory"><header><p class="eyebrow">Applications</p><h2>\${currentLocale === "en" ? "Project applications" : "项目应用"}</h2></header>\${data.applications.map((app) => \`<a href="application?application=\${escapeHtml(app.slug)}"><strong>\${escapeHtml(app.mainLanguage === "en" ? (app.names?.en || app.names?.zh) : (app.names?.zh || app.names?.en))}</strong><span>\${escapeHtml(app.applicationType)}</span><b>↗</b></a>\`).join("")}</section>
+  \`;
+}
+
+async function fallbackGraph(slug) {
+  const data = await loadIpSystem();
+  const ip = data.ips.find((item) => item.slug === slug);
+  if (!ip) return null;
+  const findNames = (candidate) => data.ips.find((item) => item.slug === candidate)?.names || {};
+  return {
+    ip,
+    parents: data.relationships.filter((item) => item.child === slug).map((item) => ({ ...item, parentNames: findNames(item.parent), childNames: findNames(item.child) })),
+    children: data.relationships.filter((item) => item.parent === slug).map((item) => ({ ...item, parentNames: findNames(item.parent), childNames: findNames(item.child) })),
+    applications: data.applications.filter((app) => app.links?.some((link) => link.ip === slug)),
+  };
+}
+
+async function loadGraph(slug) {
+  try { return await loadJson(\`api/v2/ips/\${encodeURIComponent(slug)}/graph\`); } catch { return fallbackGraph(slug); }
+}
+
+async function renderIpRecord() {
+  const page = $("#ipRecordPage");
+  if (!page) return;
+  const slug = new URLSearchParams(location.search).get("ip") || "";
+  const graph = await loadGraph(slug);
+  if (!graph) { page.innerHTML = \`<p class="empty-state">IP not found.</p>\`; return; }
+  const ip = graph.ip;
+  page.innerHTML = \`<article class="record-detail"><p class="eyebrow">\${escapeHtml(ip.recordClass)} · \${escapeHtml(ip.ipType)}</p><h1>\${escapeHtml(primaryIpName(ip))}</h1><p class="record-secondary">\${escapeHtml(secondaryIpName(ip))}</p><div class="record-facts"><span>\${escapeHtml(ip.primaryIndustry)}</span><span>\${escapeHtml(ip.lifecycleStatus)}</span><span>\${escapeHtml(ip.guidelineMode)}</span></div>\${ip.sourceUrl ? \`<a class="button" href="\${escapeHtml(ip.sourceUrl)}" rel="noreferrer">Official source ↗</a>\` : ""}</article>\${graph.parents?.length ? \`<section class="lineage-block"><p class="eyebrow">Parent IP</p>\${graph.parents.map((relation) => \`<a href="ip?ip=\${relation.parent}">\${escapeHtml(relation.parentNames?.zh || relation.parentNames?.en || relation.parent)}</a>\`).join("")}</section>\` : ""}\${graph.children?.length ? \`<section class="lineage-block"><p class="eyebrow">Child IP</p>\${graph.children.map((relation) => \`<a href="ip?ip=\${relation.child}">\${escapeHtml(relation.childNames?.zh || relation.childNames?.en || relation.child)}</a>\`).join("")}</section>\` : ""}\${graph.applications?.length ? \`<section class="lineage-block"><p class="eyebrow">Applications</p>\${graph.applications.map((app) => \`<a href="application?application=\${app.slug}">\${escapeHtml(primaryIpName(app))}</a>\`).join("")}</section>\` : ""}\`;
+}
+
+async function renderApplicationPage() {
+  const page = $("#applicationPage");
+  if (!page) return;
+  const slug = new URLSearchParams(location.search).get("application") || "";
+  const ipSystemData = await loadIpSystem();
+  let app;
+  try { app = await loadJson(\`api/v2/applications/\${encodeURIComponent(slug)}\`); } catch { app = ipSystemData.applications.find((item) => item.slug === slug); }
+  if (!app) { page.innerHTML = \`<p class="empty-state">Application not found.</p>\`; return; }
+  const title = app.mainLanguage === "en" ? (app.names?.en || app.names?.zh) : (app.names?.zh || app.names?.en);
+  const primary = app.links?.find((link) => link.role === "primary")?.ip || "";
+  const primaryRecord = ipSystemData.ips.find((item) => item.slug === primary);
+  page.innerHTML = \`<article class="record-detail"><p class="eyebrow">\${escapeHtml(app.applicationType)} · Application</p><h1>\${escapeHtml(title)}</h1><p class="record-secondary">\${escapeHtml(app.description?.[currentLocale === "en" ? "en" : "zh"] || app.description?.zh || app.description?.en || "")}</p><div class="record-facts"><a href="ip?ip=\${escapeHtml(primary)}">Primary IP · \${escapeHtml(primaryRecord ? primaryIpName(primaryRecord) : primary)}</a><span>\${escapeHtml(app.guidelineMode)} guidelines</span><span>\${escapeHtml([app.location?.province, app.location?.city].filter(Boolean).join(" · "))}</span></div></article>\`;
+  const [assetData, historyData] = await Promise.all([
+    loadJson("api/v2/assets?ownerType=ip-application&ownerId=" + encodeURIComponent(slug)).catch(() => ({ items: [] })),
+    loadJson("api/v2/applications/" + encodeURIComponent(slug) + "/history").catch(() => ({ items: [] })),
+  ]);
+  const details = document.createElement("section");
+  details.className = "application-details";
+  const linked = (app.links || []).filter((link) => link.role !== "primary");
+  const business = app.business?.[currentLocale === "en" ? "en" : "zh"] || app.business?.zh || app.business?.en || "";
+  details.innerHTML = '<div><p class="eyebrow">Guideline inheritance</p><h2>' + escapeHtml(app.guidelineMode === "inherit" ? "继承主 IP 规范" : app.guidelineMode) + '</h2><p>' + escapeHtml(Object.keys(app.overrides || {}).length ? "含局部覆盖" : "无局部覆盖") + '</p></div>'
+    + '<div><p class="eyebrow">Linked IP</p>' + (linked.map((link) => '<a href="ip?ip=' + escapeHtml(link.ip) + '">' + escapeHtml(link.role + " · " + link.ip) + '</a>').join("") || '<p class="muted">None</p>') + '</div>'
+    + '<div><p class="eyebrow">Business</p><p>' + escapeHtml(business || t("brand.blank")) + '</p></div>'
+    + '<div><p class="eyebrow">Assets</p><p>' + escapeHtml(String(assetData.items?.length || 0)) + ' files</p></div>'
+    + '<div><p class="eyebrow">History</p><p>' + escapeHtml(String(historyData.items?.length || 0)) + ' revisions</p></div>';
+  page.append(details);
+}
+
+async function renderBrandArchitecture(slug) {
+  const node = $("#brandArchitecture");
+  if (!node) return;
+  const graph = await loadGraph(slug);
+  if (!graph || (!graph.parents?.length && !graph.children?.length && !graph.applications?.length)) { node.remove(); return; }
+  node.innerHTML = \`<header><p class="eyebrow">Architecture</p><h2>\${currentLocale === "en" ? "Brand lineage" : "品牌谱系"}</h2></header><div class="lineage-grid">\${graph.parents.map((relation) => \`<a href="ip?ip=\${relation.parent}"><small>Parent IP</small><strong>\${escapeHtml(relation.parentNames?.zh || relation.parentNames?.en || relation.parent)}</strong></a>\`).join("")}\${graph.children.map((relation) => \`<a href="ip?ip=\${relation.child}"><small>Child IP</small><strong>\${escapeHtml(relation.childNames?.zh || relation.childNames?.en || relation.child)}</strong></a>\`).join("")}\${graph.applications.map((app) => \`<a href="application?application=\${app.slug}"><small>Application</small><strong>\${escapeHtml(app.names?.zh || app.names?.en || app.slug)}</strong></a>\`).join("")}</div>\`;
 }
 
 applyI18n();
 setupLanguageToggle();
+setupDirectoryLink();
 setupSearch();
 setupPortalActions();
 setupApiConnect();
 renderHeroIndex().catch(console.error);
 renderIndex().catch(console.error);
-renderBrand().catch(console.error);`);
+renderBrand().catch(console.error);
+renderDirectory().catch(console.error);
+renderIpRecord().catch(console.error);
+renderApplicationPage().catch(console.error);`);
 await copyFile(join(assetsDir, "site.js"), join(siteDir, siteJsPath));
 
 await writeFile(join(assetsDir, "admin.js"), html`const $ = (selector) => document.querySelector(selector);
-const state = { brands: [], authScopes: [], csrf: "", slug: "", etag: "" };
-const adminCopy = {
-  cn: {
-    needToken: "先填 Token。",
-    loaded: "已载入",
-    saved: "已保存。等待部署。",
-    noKey: "缺少 Key 配置。",
-    badKey: "Key 不对。",
-    totpRequired: "请填写 Google Authenticator 动态码。",
-    apiLoginFailed: "API 登录失败。",
-    apiNotConfigured: "后台 API 尚未配置 Cloudflare secrets。",
-    unlocked: "已解锁。Token next.",
-  },
-  en: {
-    needToken: "Token first.",
-    loaded: "Loaded",
-    saved: "Saved. Deploying.",
-    noKey: "No key set.",
-    badKey: "Wrong key.",
-    totpRequired: "Enter the Google Authenticator code.",
-    apiLoginFailed: "API login failed.",
-    apiNotConfigured: "Admin API is not configured with Cloudflare secrets yet.",
-    unlocked: "Unlocked. Token next.",
-  },
-};
+const state = { csrf: "", ipScopes: [], taxonomy: null, ips: [], slug: "", ipEtag: "", brandEtag: "", brand: null, applicationSlug: "", applicationEtag: "", applicationLinks: [] };
 
-function lang() {
-  return document.documentElement.dataset.locale === "en" ? "en" : "cn";
-}
-
-function copy(key) {
-  return adminCopy[lang()]?.[key] || adminCopy.cn[key] || key;
-}
-
-async function loadJson(path) {
-  const res = await fetch(path);
-  if (!res.ok) throw new Error(\`Could not load \${path}\`);
-  return res.json();
+function esc(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[character]);
 }
 
 function status(message, isError = false) {
   const node = $("#editorStatus") || $("#unlockStatus");
+  if (!node) return;
   node.textContent = message;
   node.style.color = isError ? "#b12137" : "#0e8c7b";
 }
 
-async function populateBrands() {
-  state.brands = await loadJson("api/brands.json");
-  const scopes = state.authScopes.length ? state.authScopes : ["*"];
-  const brands = scopes.includes("*")
-    ? state.brands
-    : state.brands.filter((brand) => scopes.includes(brand.slug));
-  $("#brandSelect").innerHTML = brands.map((brand) => \`<option value="\${brand.slug}">\${brand.mainName || brand.name}</option>\`).join("");
-  await loadBrand();
+async function api(path, init = {}) {
+  const method = init.method || "GET";
+  const headers = new Headers(init.headers || {});
+  if (!["GET", "HEAD", "OPTIONS"].includes(method)) headers.set("X-CSRF-Token", state.csrf);
+  const target = path.startsWith("api/") ? new URL("../" + path, import.meta.url) : path;
+  const response = await fetch(target, { ...init, method, headers, credentials: "include" });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error(data.error || data.message || ("HTTP " + response.status));
+  return { data, response };
 }
 
-async function loadBrand() {
+function primaryName(ip) {
+  return ip.mainLanguage === "en" ? (ip.names?.en || ip.names?.zh || ip.slug) : (ip.names?.zh || ip.names?.en || ip.slug);
+}
+
+function options(items, selected = "") {
+  return items.map((item) => '<option value="' + esc(item.id) + '"' + (selected === item.id ? " selected" : "") + ">" + esc(item.labels?.zh || item.zh || item.id) + "</option>").join("");
+}
+
+function setSelectValues(select, values) {
+  for (const option of select.options) option.selected = values.includes(option.value);
+}
+
+async function loadOverview() {
+  const value = (await api("api/v2/admin/status")).data;
+  const labels = { ips: "IP", applications: "项目应用", assets: "资产", assetBytes: "存储字节", sessions: "有效会话" };
+  $("#adminStats").innerHTML = Object.entries(value.counts).map(([key, count]) => '<article><strong>' + Number(count).toLocaleString() + '</strong><span>' + labels[key] + "</span></article>").join("");
+  $("#serviceHealth").innerHTML = Object.entries(value.services).map(([key, service]) => '<span class="' + (service === "connected" ? "is-ok" : "") + '"><i></i>' + key + " · " + service + "</span>").join("");
+}
+
+function populateIpSelectors() {
+  const allowed = state.ipScopes.includes("*") ? state.ips : state.ips.filter((ip) => state.ipScopes.includes(ip.slug));
+  const markup = allowed.map((ip) => '<option value="' + esc(ip.slug) + '">' + esc(primaryName(ip)) + "</option>").join("");
+  for (const selector of ["#brandSelect", "#relationParent", "#relationChild", "#applicationPrimary"]) {
+    const node = $(selector);
+    if (node) node.innerHTML = markup;
+  }
+}
+
+async function loadCore() {
+  const [taxonomy, ips] = await Promise.all([api("api/v2/taxonomy"), api("api/v2/ips")]);
+  state.taxonomy = taxonomy.data;
+  state.ips = ips.data.items || [];
+  $("#ipType").innerHTML = options(state.taxonomy.ipTypes || []);
+  $("#ipPrimaryIndustry").innerHTML = options(state.taxonomy.industries || []);
+  $("#ipIndustries").innerHTML = options(state.taxonomy.industries || []);
+  $("#applicationType").innerHTML = options(state.taxonomy.applicationTypes || []);
+  populateIpSelectors();
+  await Promise.all([loadOverview(), loadRelations(), loadApplications()]);
+  if ($("#brandSelect").value) await loadIp();
+}
+
+async function loadIp() {
   const slug = $("#brandSelect").value;
   if (!slug) return;
-  const res = await fetch(\`api/v2/brands/\${encodeURIComponent(slug)}\`, { credentials: "include" });
-  if (!res.ok) throw new Error(await res.text());
+  const [ipResult, brandResult] = await Promise.all([api("api/v2/ips/" + encodeURIComponent(slug)), api("api/v2/brands/" + encodeURIComponent(slug)).catch(() => null)]);
+  const ip = ipResult.data;
   state.slug = slug;
-  state.etag = res.headers.get("etag") || "";
-  $("#editor").value = JSON.stringify(await res.json(), null, 2);
-  $("#recordVersion").textContent = state.etag;
-  status("Loaded.");
+  state.ipEtag = ipResult.response.headers.get("etag") || "";
+  state.brandEtag = brandResult?.response.headers.get("etag") || "";
+  state.brand = brandResult?.data || ip.payload || {};
+  $("#ipNameZh").value = ip.names?.zh || "";
+  $("#ipNameEn").value = ip.names?.en || "";
+  $("#ipMainLanguage").value = ip.mainLanguage;
+  $("#ipType").value = ip.ipType;
+  $("#ipPrimaryIndustry").value = ip.primaryIndustry;
+  setSelectValues($("#ipIndustries"), ip.industries || []);
+  $("#ipLifecycle").value = ip.lifecycleStatus;
+  $("#ipGuideline").value = ip.guidelineMode;
+  $("#editor").value = JSON.stringify(state.brand, null, 2);
+  $("#recordVersion").textContent = state.ipEtag;
+  status("已载入 " + primaryName(ip));
+}
+
+async function saveIp() {
+  const patch = {
+    names: { zh: $("#ipNameZh").value.trim(), en: $("#ipNameEn").value.trim() },
+    mainLanguage: $("#ipMainLanguage").value,
+    ipType: $("#ipType").value,
+    primaryIndustry: $("#ipPrimaryIndustry").value,
+    industries: [...$("#ipIndustries").selectedOptions].map((option) => option.value),
+    lifecycleStatus: $("#ipLifecycle").value,
+    guidelineMode: $("#ipGuideline").value,
+  };
+  const result = await api("api/v2/ips/" + encodeURIComponent(state.slug), {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json", "If-Match": state.ipEtag, "Idempotency-Key": crypto.randomUUID() },
+    body: JSON.stringify({ patch }),
+  });
+  state.ipEtag = result.response.headers.get("etag") || "";
+  $("#recordVersion").textContent = state.ipEtag;
+  status("字段已保存。");
+  await loadCore();
 }
 
 async function saveBrand() {
-  if (!state.slug || !state.etag) await loadBrand();
   const patch = JSON.parse($("#editor").value);
-  const res = await fetch(\`api/v2/brands/\${encodeURIComponent(state.slug)}\`, {
+  const result = await api("api/v2/brands/" + encodeURIComponent(state.slug), {
     method: "PATCH",
-    credentials: "include",
-    headers: {
-      "Content-Type": "application/json",
-      "If-Match": state.etag,
-      "Idempotency-Key": crypto.randomUUID(),
-      "X-CSRF-Token": state.csrf,
-    },
+    headers: { "Content-Type": "application/json", "If-Match": state.brandEtag, "Idempotency-Key": crypto.randomUUID() },
     body: JSON.stringify({ patch }),
   });
-  if (!res.ok) throw new Error(await res.text());
-  const data = await res.json();
-  state.etag = res.headers.get("etag") || \`brand-\${state.slug}-v\${data.version}\`;
-  $("#editor").value = JSON.stringify(data.brand, null, 2);
-  $("#recordVersion").textContent = state.etag;
-  status("Saved.");
+  state.brandEtag = result.response.headers.get("etag") || "";
+  status("品牌内容已保存。");
 }
 
-async function apiUnlock() {
-  const key = $("#adminKey").value;
-  const totp = $("#totpCode")?.value.trim();
-  if (!totp) throw new Error(copy("totpRequired"));
-  const res = await fetch("api/v2/auth/exchange", {
+async function loadRelations() {
+  const items = (await api("api/v2/ip-relations")).data.items || [];
+  $("#relationList").innerHTML = '<h2>当前关系</h2>' + items.map((item) => '<div class="admin-list-row"><span><strong>' + esc(item.parent) + " → " + esc(item.child) + "</strong><small>" + esc(item.type) + (item.primary ? " · primary" : "") + '</small></span><button class="ghost" type="button" data-delete-relation="' + esc(item.id) + '" data-version="' + Number(item.version || 1) + '">删除</button></div>').join("");
+  document.querySelectorAll("[data-delete-relation]").forEach((button) => button.addEventListener("click", () => deleteRelation(button).catch((error) => status(error.message, true))));
+}
+
+async function deleteRelation(button) {
+  if (!window.confirm("确认删除这条关系？")) return;
+  const id = button.dataset.deleteRelation;
+  await api("api/v2/ip-relations/" + encodeURIComponent(id), { method: "DELETE", headers: { "If-Match": '"ip-relation-' + id + "-v" + button.dataset.version + '"', "Idempotency-Key": crypto.randomUUID() }, body: "{}" });
+  status("关系已删除。");
+  await loadRelations();
+}
+
+async function createRelation(event) {
+  event.preventDefault();
+  await api("api/v2/ip-relations", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    credentials: "include",
-    body: JSON.stringify({
-      apiKey: key,
-      totp,
-    }),
+    headers: { "Content-Type": "application/json", "Idempotency-Key": crypto.randomUUID() },
+    body: JSON.stringify({ parent: $("#relationParent").value, child: $("#relationChild").value, type: $("#relationType").value, primary: $("#relationType").value === "brand_parent" }),
   });
-  const data = await res.json().catch(() => ({}));
-  if (!res.ok) {
-    if (data.error === "admin_auth_not_configured") throw new Error(copy("apiNotConfigured"));
-    if (data.error === "bad_api_key") throw new Error(copy("badKey"));
-    if (data.error === "bad_totp") throw new Error(copy("totpRequired"));
-    throw new Error(data.error || copy("apiLoginFailed"));
-  }
-  state.authScopes = data.ipScopes?.length ? data.ipScopes : ["*"];
-  state.csrf = data.csrfToken || "";
+  status("品牌关系已建立。");
+  await loadRelations();
+}
+
+async function loadApplications() {
+  const items = (await api("api/v2/applications")).data.items || [];
+  $("#applicationList").innerHTML = '<h2>项目应用</h2>' + items.map((item) => '<button class="admin-list-row" type="button" data-edit-application="' + esc(item.slug) + '"><strong>' + esc(primaryName(item)) + "</strong><span>" + esc(item.applicationType) + " · " + esc(item.guidelineMode) + "</span></button>").join("");
+  document.querySelectorAll("[data-edit-application]").forEach((button) => button.addEventListener("click", () => loadApplication(button.dataset.editApplication).catch((error) => status(error.message, true))));
+}
+
+function resetApplication() {
+  state.applicationSlug = "";
+  state.applicationEtag = "";
+  state.applicationLinks = [];
+  $("#applicationForm").reset();
+  $("#applicationSlug").disabled = false;
+  $("#applicationFormTitle").textContent = "新增项目应用";
+  populateIpSelectors();
+}
+
+async function loadApplication(slug) {
+  const result = await api("api/v2/applications/" + encodeURIComponent(slug));
+  const item = result.data;
+  state.applicationSlug = slug;
+  state.applicationEtag = result.response.headers.get("etag") || "";
+  state.applicationLinks = item.links || [];
+  $("#applicationSlug").value = slug;
+  $("#applicationSlug").disabled = true;
+  $("#applicationNameZh").value = item.names?.zh || "";
+  $("#applicationNameEn").value = item.names?.en || "";
+  $("#applicationType").value = item.applicationType;
+  $("#applicationPrimary").value = item.links?.find((link) => link.role === "primary")?.ip || "";
+  $("#applicationGuideline").value = item.guidelineMode || "inherit";
+  $("#applicationDescriptionZh").value = item.description?.zh || "";
+  $("#applicationDescriptionEn").value = item.description?.en || "";
+  $("#applicationBusinessZh").value = item.business?.zh || "";
+  $("#applicationBusinessEn").value = item.business?.en || "";
+  $("#applicationProvince").value = item.location?.province || "";
+  $("#applicationCity").value = item.location?.city || "";
+  $("#applicationFormTitle").textContent = "编辑项目应用";
+}
+
+async function saveApplication(event) {
+  event.preventDefault();
+  const slug = state.applicationSlug || $("#applicationSlug").value;
+  const editing = Boolean(state.applicationSlug);
+  const primaryIp = $("#applicationPrimary").value;
+  const links = [{ ip: primaryIp, role: "primary" }, ...state.applicationLinks.filter((link) => link.role !== "primary" && link.ip !== primaryIp)];
+  const headers = { "Content-Type": "application/json", "Idempotency-Key": crypto.randomUUID() };
+  if (editing) headers["If-Match"] = state.applicationEtag;
+  await api(editing ? "api/v2/applications/" + encodeURIComponent(slug) : "api/v2/applications", {
+    method: editing ? "PATCH" : "POST",
+    headers,
+    body: JSON.stringify({ patch: { slug, names: { zh: $("#applicationNameZh").value, en: $("#applicationNameEn").value }, mainLanguage: $("#applicationNameZh").value ? "zh" : "en", applicationType: $("#applicationType").value, lifecycleStatus: "active", guidelineMode: $("#applicationGuideline").value, description: { zh: $("#applicationDescriptionZh").value, en: $("#applicationDescriptionEn").value }, business: { zh: $("#applicationBusinessZh").value, en: $("#applicationBusinessEn").value }, location: { country: "CN", province: $("#applicationProvince").value, city: $("#applicationCity").value }, links } }),
+  });
+  status(editing ? "项目应用已保存。" : "项目应用已创建。");
+  resetApplication();
+  await loadApplications();
+}
+
+async function loadAssets() {
+  const items = (await api("api/v2/assets?limit=100")).data.items || [];
+  $("#assetList").innerHTML = '<h2>资产</h2>' + items.map((item) => '<div class="admin-list-row"><strong>' + esc(item.title) + "</strong><span>" + esc(item.ownerId) + " · " + esc(item.mimeType) + " · " + Number(item.bytes || 0).toLocaleString() + " B</span></div>").join("");
+}
+
+async function loadJobs() {
+  const value = (await api("api/v2/admin/jobs")).data;
+  $("#jobList").innerHTML = '<h2>任务</h2><pre>' + JSON.stringify({ counts: value.counts, outbox: value.outbox?.slice(0, 30), assetJobs: value.assetJobs?.slice(0, 30) }, null, 2) + "</pre>";
+}
+
+async function loadAudit() {
+  const items = (await api("api/v2/audit?limit=100")).data.items || [];
+  $("#auditList").innerHTML = '<h2>审计</h2>' + items.map((item) => '<div class="admin-list-row"><strong>' + esc(item.action) + "</strong><span>" + esc(item.resource_type) + " · " + esc(item.resource_id) + " · " + esc(item.created_at) + "</span></div>").join("");
+}
+
+async function loadKeys() {
+  const items = (await api("api/v2/admin/keys")).data.items || [];
+  $("#keyList").innerHTML = '<h2>API Keys</h2>' + items.map((item) => '<div class="admin-list-row"><span><strong>' + esc(item.label) + "</strong><small>" + esc(item.prefix) + " · " + (item.revoked_at ? "revoked" : "active") + '</small></span>' + (item.revoked_at ? "" : '<button class="ghost" type="button" data-revoke-key="' + esc(item.id) + '" data-etag="' + esc(item.etag) + '">撤销</button>') + "</div>").join("");
+  document.querySelectorAll("[data-revoke-key]").forEach((button) => button.addEventListener("click", () => revokeKey(button).catch((error) => status(error.message, true))));
+}
+
+function csv(value) {
+  return String(value || "").split(",").map((item) => item.trim()).filter(Boolean);
+}
+
+async function createKey(event) {
+  event.preventDefault();
+  const result = await api("api/v2/admin/keys", { method: "POST", headers: { "Content-Type": "application/json", "Idempotency-Key": crypto.randomUUID() }, body: JSON.stringify({ label: $("#keyLabel").value, kind: $("#keyKind").value, scopes: csv($("#keyScopes").value), ipScopes: csv($("#keyIpScopes").value) }) });
+  $("#newKeyToken").textContent = result.data.key.token;
+  $("#newKeyToken").classList.remove("hidden");
+  status("Key 已创建；明文只显示这一次。");
+  await loadKeys();
+}
+
+async function revokeKey(button) {
+  if (!window.confirm("确认撤销这个 API Key？")) return;
+  await api("api/v2/admin/keys/" + encodeURIComponent(button.dataset.revokeKey), { method: "DELETE", headers: { "If-Match": button.dataset.etag, "Idempotency-Key": crypto.randomUUID() }, body: "{}" });
+  status("Key 已撤销。");
+  await loadKeys();
+}
+
+async function stepUp() {
+  const result = await api("api/v2/auth/step-up", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ totp: $("#stepUpTotp").value }) });
+  status("高权限已验证至 " + result.data.stepUpUntil);
+  $("#stepUpTotp").value = "";
+}
+
+async function showAdmin(actor) {
+  state.ipScopes = actor.ipScopes?.length ? actor.ipScopes : ["*"];
+  $("#unlockPanel").classList.add("hidden");
+  $("#editorPanel").classList.remove("hidden");
+  await loadCore();
+}
+
+async function restoreSession() {
+  const result = await api("api/v2/auth/session");
+  state.csrf = result.data.csrfToken || "";
   sessionStorage.setItem("iptrust_csrf", state.csrf);
-  $("#adminKey").value = "";
+  await showAdmin(result.data.actor);
 }
 
 async function unlock() {
-  await apiUnlock();
-  $("#unlockPanel").classList.add("hidden");
-  $("#editorPanel").classList.remove("hidden");
-  await populateBrands();
-  status(copy("unlocked"));
+  const key = $("#adminKey").value;
+  const totp = $("#totpCode").value.trim();
+  if (!key || !totp) throw new Error("Key + Google Authenticator first.");
+  const result = await api("api/v2/auth/exchange", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ apiKey: key, totp }) });
+  state.csrf = result.data.csrfToken || "";
+  sessionStorage.setItem("iptrust_csrf", state.csrf);
+  $("#adminKey").value = "";
+  $("#totpCode").value = "";
+  await showAdmin({ ipScopes: result.data.ipScopes, scopes: result.data.scopes });
 }
 
-$("#unlockButton")?.addEventListener("click", () => unlock().catch((err) => {
-  $("#unlockStatus").textContent = err.message;
-  $("#unlockStatus").style.color = "#b12137";
+document.querySelectorAll("[data-admin-tab]").forEach((button) => button.addEventListener("click", async () => {
+  document.querySelectorAll("[data-admin-tab]").forEach((item) => item.classList.toggle("is-active", item === button));
+  document.querySelectorAll("[data-admin-view]").forEach((view) => view.classList.toggle("hidden", view.dataset.adminView !== button.dataset.adminTab));
+  const loaders = { overview: loadOverview, assets: loadAssets, jobs: loadJobs, audit: loadAudit, keys: loadKeys };
+  if (loaders[button.dataset.adminTab]) await loaders[button.dataset.adminTab]().catch((error) => status(error.message, true));
 }));
-$("#brandSelect")?.addEventListener("change", () => loadBrand().catch((err) => status(err.message, true)));
-$("#loadBrand")?.addEventListener("click", () => loadBrand().catch((err) => status(err.message, true)));
-$("#saveBrand")?.addEventListener("click", () => saveBrand().catch((err) => status(err.message, true)));`);
+$("#unlockButton")?.addEventListener("click", () => unlock().catch((error) => status(error.message, true)));
+$("#brandSelect")?.addEventListener("change", () => loadIp().catch((error) => status(error.message, true)));
+$("#loadBrand")?.addEventListener("click", () => loadIp().catch((error) => status(error.message, true)));
+$("#saveIp")?.addEventListener("click", () => saveIp().catch((error) => status(error.message, true)));
+$("#saveBrand")?.addEventListener("click", () => saveBrand().catch((error) => status(error.message, true)));
+$("#relationForm")?.addEventListener("submit", (event) => createRelation(event).catch((error) => status(error.message, true)));
+$("#applicationForm")?.addEventListener("submit", (event) => saveApplication(event).catch((error) => status(error.message, true)));
+$("#newApplication")?.addEventListener("click", resetApplication);
+$("#keyForm")?.addEventListener("submit", (event) => createKey(event).catch((error) => status(error.message, true)));
+$("#stepUpButton")?.addEventListener("click", () => stepUp().catch((error) => status(error.message, true)));
+restoreSession().catch(() => {});
+`);
 
 console.log(`Built site with ${brandPayloads.length} brands at ${relative(root, siteDir)}`);

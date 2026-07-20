@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-19T13:20:29.928Z",
+  "generatedAt": "2026-07-20T00:11:12.987Z",
   "version": {
-    "hash": "4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9",
-    "shortHash": "4d8fc4d",
-    "date": "2026-07-19T14:16:14+08:00",
-    "message": "Fix GitHub Pages dependency install",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9"
+    "hash": "bdd9764d1d5239666a3b9def6e2cafbdf4d1e659",
+    "shortHash": "bdd9764",
+    "date": "2026-07-19T21:49:19+08:00",
+    "message": "fix: normalize brand search indexing",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/bdd9764d1d5239666a3b9def6e2cafbdf4d1e659"
   },
   "brands": [
     {
@@ -253,6 +253,15 @@
       "apiUrl": "api/brands/kaoyu-shenhua.json",
       "historyUrl": "api/history/kaoyu-shenhua.json",
       "guideUrl": "brand.html?brand=kaoyu-shenhua"
+    },
+    {
+      "slug": "yanan-shiyao-hotel",
+      "name": "延安石窑宾馆",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "apiUrl": "api/brands/yanan-shiyao-hotel.json",
+      "historyUrl": "api/history/yanan-shiyao-hotel.json",
+      "guideUrl": "brand.html?brand=yanan-shiyao-hotel"
     }
   ],
   "mcp": {
@@ -264,13 +273,15 @@
     "tools": [
       "list_brands",
       "get_brand",
-      "get_guideline",
-      "list_tokens",
-      "get_token",
+      "list_ips",
+      "get_ip_graph",
+      "list_ip_children",
+      "list_ip_applications",
+      "get_application",
       "search_library",
-      "list_library",
-      "get_library_item",
-      "get_related"
+      "list_assets",
+      "get_asset",
+      "request_asset_url"
     ]
   },
   "schema": {
@@ -281,7 +292,12 @@
   "ipSystem": {
     "name": "Brand IP System v2",
     "path": "ip_sys.md",
-    "description": "Universal closed-loop framework for defining and governing any organization or brand IP."
+    "description": "Universal closed-loop framework for defining and governing any organization or brand IP.",
+    "directory": "directory/",
+    "taxonomy": "api/v2/taxonomy",
+    "ips": "api/v2/ips",
+    "relations": "api/v2/ip-relations",
+    "applications": "api/v2/applications"
   },
   "library": {
     "page": "library/",
@@ -337,11 +353,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9",
-      "shortHash": "4d8fc4d",
-      "date": "2026-07-19T14:16:14+08:00",
-      "message": "Fix GitHub Pages dependency install",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9"
+      "hash": "bdd9764d1d5239666a3b9def6e2cafbdf4d1e659",
+      "shortHash": "bdd9764",
+      "date": "2026-07-19T21:49:19+08:00",
+      "message": "fix: normalize brand search indexing",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bdd9764d1d5239666a3b9def6e2cafbdf4d1e659"
     }
   },
   "sync": {

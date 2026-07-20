@@ -43,6 +43,8 @@ Git contains `data/assets/manifest.json` and per-IP manifests. CI rejects tracke
 - D1 stores only HMAC-SHA256 values made with `API_KEY_PEPPER`.
 - Admin login requires a System Key and TOTP.
 - Successful login creates `__Host-iptrust_session` for seven days with `HttpOnly`, `Secure` and `SameSite=Strict`.
+- `GET /api/v2/auth/session` restores a valid session and rotates its CSRF token, so the admin opens without another Key prompt.
+- Parent moves, relation deletion and API Key operations require a TOTP step-up completed within the previous 10 minutes.
 - Private media links use `MEDIA_SIGNING_KEY` and expire after 10 minutes by default.
 - Write calls require `Idempotency-Key`; updates and deletes require `If-Match`.
 
@@ -57,5 +59,14 @@ npx wrangler pages deploy site --project-name tableai-designaha --branch main
 ```
 
 `GET /api/v2/admin/jobs` reports outbox and asset jobs. `POST /api/v2/admin/jobs/replay` requeues failed events and requires `jobs:manage`, an idempotency key and an authenticated session or Bearer key.
+
+## IP architecture
+
+- `GET /api/v2/taxonomy` publishes the bilingual industry, IP type and application type trees.
+- `GET /api/v2/ips/{slug}/graph` returns the primary parent, children, auxiliary relationships and project applications.
+- A child IP has at most one primary `brand_parent`; writes reject cycles.
+- Project applications have one primary IP and inherit its guideline by default. Local changes stay in the application's `overrides` rather than mutating the IP.
+- Classification, relationships and applications are revisioned in D1, audited, indexed for search and emitted to the Git outbox.
+- `/api/v2/brands/{slug}` remains available as the compatibility representation of an owned IP.
 
 Set `SEMANTIC_SEARCH_ENABLED=false` to immediately fall back to lexical search when AI usage or budget requires it. Search requests already degrade to lexical results when Workers AI or Vectorize is unavailable.

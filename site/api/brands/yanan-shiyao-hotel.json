@@ -1,0 +1,342 @@
+{
+  "slug": "yanan-shiyao-hotel",
+  "folder": "YanAnShiyao",
+  "name": "延安石窑宾馆",
+  "nativeName": "",
+  "description": "中文优先的独立酒店与场所 IP。",
+  "officialWebsite": "",
+  "mainLanguage": "zh",
+  "intro": {
+    "zh": "",
+    "en": ""
+  },
+  "business": {
+    "zh": "",
+    "en": ""
+  },
+  "notes": {
+    "zh": "",
+    "en": ""
+  },
+  "primaryGuide": "YanAnShiyao/README.md",
+  "theme": {
+    "mode": "light",
+    "primary": "#352F2A",
+    "accent": "#A87946",
+    "secondary": "#8F8A7D",
+    "surface": "#F3F0EA",
+    "paper": "#FFFEFB",
+    "ink": "#201D1A",
+    "muted": "#716B63",
+    "line": "rgba(53, 47, 42, 0.16)",
+    "keywords": [
+      "stone",
+      "cave dwelling",
+      "Yan'an",
+      "hospitality",
+      "local culture"
+    ]
+  },
+  "classification": {
+    "tracks": {
+      "zh": [
+        "酒店住宿",
+        "在地文旅",
+        "场所体验"
+      ],
+      "en": [
+        "Hospitality",
+        "Local travel",
+        "Place experience"
+      ]
+    },
+    "audiences": {
+      "zh": [],
+      "en": []
+    },
+    "tags": {
+      "zh": [
+        "延安",
+        "宾馆",
+        "在地文化"
+      ],
+      "en": [
+        "Yan'an",
+        "Hotel",
+        "Local culture"
+      ]
+    }
+  },
+  "assetKey": "yanan-shiyao-hotel",
+  "mainName": "延安石窑宾馆",
+  "mainLocale": "CN",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "mainLocale": "CN",
+    "intro": {
+      "zh": "",
+      "en": ""
+    },
+    "business": {
+      "zh": "",
+      "en": ""
+    },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "酒店住宿",
+          "在地文旅",
+          "场所体验"
+        ],
+        "en": [
+          "Hospitality",
+          "Local travel",
+          "Place experience"
+        ]
+      },
+      "audiences": {
+        "zh": [],
+        "en": []
+      },
+      "tags": {
+        "zh": [
+          "延安",
+          "宾馆",
+          "在地文化"
+        ],
+        "en": [
+          "Yan'an",
+          "Hotel",
+          "Local culture"
+        ]
+      }
+    }
+  },
+  "display": {
+    "default": {
+      "language": "zh",
+      "name": "延安石窑宾馆"
+    },
+    "zh": {
+      "name": "延安石窑宾馆",
+      "secondaryName": ""
+    },
+    "en": {
+      "name": "延安石窑宾馆",
+      "secondaryName": ""
+    }
+  },
+  "recordClass": "owned",
+  "primaryIndustry": "hospitality-hotels",
+  "industries": [
+    "hospitality-hotels",
+    "travel-destinations"
+  ],
+  "ipType": "place-venue-brand",
+  "lifecycleStatus": "active",
+  "guidelineMode": "independent",
+  "version": {
+    "hash": "bdd9764d1d5239666a3b9def6e2cafbdf4d1e659",
+    "shortHash": "bdd9764",
+    "date": "2026-07-19T21:49:19+08:00",
+    "message": "fix: normalize brand search indexing",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/bdd9764d1d5239666a3b9def6e2cafbdf4d1e659"
+  },
+  "historyUrl": "api/history/yanan-shiyao-hotel.json",
+  "history": [
+    {
+      "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "shortHash": "eaf4320",
+      "date": "2026-07-19T14:13:21+08:00",
+      "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "sourcePaths": [
+        "config/brands.json",
+        "YanAnShiyao",
+        "YanAnShiyao/README.md"
+      ]
+    },
+    {
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "sourcePaths": [
+        "config/brands.json",
+        "YanAnShiyao",
+        "YanAnShiyao/README.md"
+      ]
+    },
+    {
+      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "shortHash": "a5bf7cf",
+      "date": "2026-07-10T20:21:24+08:00",
+      "message": "Replace contrast-template brand copy",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "sourcePaths": [
+        "config/brands.json",
+        "YanAnShiyao",
+        "YanAnShiyao/README.md"
+      ]
+    },
+    {
+      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "shortHash": "ed33a8b",
+      "date": "2026-07-10T18:44:20+08:00",
+      "message": "Add Shanrenjing journey safety IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "sourcePaths": [
+        "config/brands.json",
+        "YanAnShiyao",
+        "YanAnShiyao/README.md"
+      ]
+    },
+    {
+      "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "shortHash": "cd0ea58",
+      "date": "2026-07-08T04:12:48+08:00",
+      "message": "Refine hero index labels",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "sourcePaths": [
+        "config/brands.json",
+        "YanAnShiyao",
+        "YanAnShiyao/README.md"
+      ]
+    },
+    {
+      "hash": "9e33619ad95856c977f8803517f325304d678821",
+      "shortHash": "9e33619",
+      "date": "2026-07-08T03:55:08+08:00",
+      "message": "Add Nibiru and Shenzhen Microsoft Global Center IPs",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/9e33619ad95856c977f8803517f325304d678821",
+      "sourcePaths": [
+        "config/brands.json",
+        "YanAnShiyao",
+        "YanAnShiyao/README.md"
+      ]
+    }
+  ],
+  "url": "brand.html?brand=yanan-shiyao-hotel",
+  "apiUrl": "api/brands/yanan-shiyao-hotel.json",
+  "status": "documented",
+  "guides": [
+    {
+      "path": "YanAnShiyao/README.md",
+      "title": "README",
+      "format": "md",
+      "primary": true,
+      "excerpt": "延安石窑宾馆 中文优先的独立酒店与场所 IP。 基本资料 中文名：延安石窑宾馆 英文名：暂未设定 行业：酒店与住宿、文旅与目的地 IP 类型：场所/空间品牌 品牌状态：建档中 官网、简介、业务、地址、视觉资产与品牌规范暂留空，后续通过管理 API 补充。",
+      "text": "# 延安石窑宾馆\n\n中文优先的独立酒店与场所 IP。\n\n## 基本资料\n\n- 中文名：延安石窑宾馆\n- 英文名：暂未设定\n- 行业：酒店与住宿、文旅与目的地\n- IP 类型：场所/空间品牌\n- 品牌状态：建档中\n\n官网、简介、业务、地址、视觉资产与品牌规范暂留空，后续通过管理 API 补充。\n",
+      "html": "<h1 id=\"yanan-shiyao-hotel-guide-1-延安石窑宾馆\">延安石窑宾馆</h1>\n<p>中文优先的独立酒店与场所 IP。</p>\n<h2 id=\"yanan-shiyao-hotel-guide-1-基本资料\">基本资料</h2>\n<ul>\n<li>中文名：延安石窑宾馆</li>\n<li>英文名：暂未设定</li>\n<li>行业：酒店与住宿、文旅与目的地</li>\n<li>IP 类型：场所/空间品牌</li>\n<li>品牌状态：建档中</li>\n</ul>\n<p>官网、简介、业务、地址、视觉资产与品牌规范暂留空，后续通过管理 API 补充。</p>\n"
+    }
+  ],
+  "tokens": [],
+  "images": [],
+  "assetManifest": [],
+  "adobeAssets": [],
+  "logoUrl": "",
+  "assetKit": {
+    "assetKey": "yanan-shiyao-hotel",
+    "endpoints": {
+      "brand": "api/brands/yanan-shiyao-hotel.json",
+      "logo": "",
+      "images": "api/brands/yanan-shiyao-hotel.json#images",
+      "adobe": "",
+      "tokens": "api/brands/yanan-shiyao-hotel.json#tokens",
+      "history": "api/history/yanan-shiyao-hotel.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#352F2A"
+        },
+        {
+          "key": "accent",
+          "value": "#A87946"
+        },
+        {
+          "key": "secondary",
+          "value": "#8F8A7D"
+        },
+        {
+          "key": "surface",
+          "value": "#F3F0EA"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFEFB"
+        },
+        {
+          "key": "ink",
+          "value": "#201D1A"
+        },
+        {
+          "key": "muted",
+          "value": "#716B63"
+        }
+      ],
+      "keywords": [
+        "stone",
+        "cave dwelling",
+        "Yan'an",
+        "hospitality",
+        "local culture"
+      ],
+      "images": []
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#352F2A"
+      },
+      {
+        "key": "accent",
+        "value": "#A87946"
+      },
+      {
+        "key": "secondary",
+        "value": "#8F8A7D"
+      },
+      {
+        "key": "surface",
+        "value": "#F3F0EA"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFEFB"
+      },
+      {
+        "key": "ink",
+        "value": "#201D1A"
+      },
+      {
+        "key": "muted",
+        "value": "#716B63"
+      }
+    ],
+    "keywords": [
+      "stone",
+      "cave dwelling",
+      "Yan'an",
+      "hospitality",
+      "local culture"
+    ],
+    "images": []
+  },
+  "editablePaths": [
+    "YanAnShiyao/README.md"
+  ],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/YanAnShiyao",
+    "folder": "YanAnShiyao"
+  }
+}

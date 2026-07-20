@@ -458,6 +458,9 @@ button:active { transform: translateY(1px); }
     overflow-x: auto;
     justify-content: flex-end;
   }
+  .top-actions a[href*="#agent-entry"],
+  .top-actions a[href*="#partner-entry"],
+  .top-actions a[href*="#collab-entry"] { display: none; }
   .topbar-search { grid-column: 1 / -1; grid-row: 2; order: initial; }
   .hub-hero { padding: 38px 0 24px; }
   .hero-copy h1 { font-size: clamp(54px, 17vw, 72px); }

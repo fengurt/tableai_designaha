@@ -2026,5 +2026,75 @@
         ]
       }
     }
+  },
+  {
+    "slug": "yanan-shiyao-hotel",
+    "folder": "YanAnShiyao",
+    "name": "延安石窑宾馆",
+    "nativeName": "",
+    "description": "中文优先的独立酒店与场所 IP。",
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "",
+      "en": ""
+    },
+    "business": {
+      "zh": "",
+      "en": ""
+    },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
+    "primaryGuide": "YanAnShiyao/README.md",
+    "theme": {
+      "mode": "light",
+      "primary": "#352F2A",
+      "accent": "#A87946",
+      "secondary": "#8F8A7D",
+      "surface": "#F3F0EA",
+      "paper": "#FFFEFB",
+      "ink": "#201D1A",
+      "muted": "#716B63",
+      "line": "rgba(53, 47, 42, 0.16)",
+      "keywords": [
+        "stone",
+        "cave dwelling",
+        "Yan'an",
+        "hospitality",
+        "local culture"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "酒店住宿",
+          "在地文旅",
+          "场所体验"
+        ],
+        "en": [
+          "Hospitality",
+          "Local travel",
+          "Place experience"
+        ]
+      },
+      "audiences": {
+        "zh": [],
+        "en": []
+      },
+      "tags": {
+        "zh": [
+          "延安",
+          "宾馆",
+          "在地文化"
+        ],
+        "en": [
+          "Yan'an",
+          "Hotel",
+          "Local culture"
+        ]
+      }
+    }
   }
 ]

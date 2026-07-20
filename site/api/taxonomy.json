@@ -1,0 +1,138 @@
+{
+  "industries": [
+    {
+      "id": "hospitality-hotels",
+      "zh": "酒店与住宿",
+      "en": "Hospitality & Hotels"
+    },
+    {
+      "id": "food-beverage",
+      "zh": "餐饮与食品",
+      "en": "Food & Beverage"
+    },
+    {
+      "id": "travel-destinations",
+      "zh": "文旅与目的地",
+      "en": "Travel & Destinations"
+    },
+    {
+      "id": "technology-ai",
+      "zh": "科技与 AI",
+      "en": "Technology & AI"
+    },
+    {
+      "id": "culture-creative-media",
+      "zh": "文化创意与媒体",
+      "en": "Culture, Creative & Media"
+    },
+    {
+      "id": "education-research",
+      "zh": "教育与研究",
+      "en": "Education & Research"
+    },
+    {
+      "id": "wellness-healing",
+      "zh": "康养与疗愈",
+      "en": "Wellness & Healing"
+    },
+    {
+      "id": "architecture-space-real-estate",
+      "zh": "建筑空间与地产",
+      "en": "Architecture, Space & Real Estate"
+    },
+    {
+      "id": "business-professional-services",
+      "zh": "商业与专业服务",
+      "en": "Business & Professional Services"
+    },
+    {
+      "id": "consumer-lifestyle",
+      "zh": "消费与生活方式",
+      "en": "Consumer & Lifestyle"
+    },
+    {
+      "id": "alliances-social-organizations",
+      "zh": "联盟与社会组织",
+      "en": "Alliances & Social Organizations"
+    },
+    {
+      "id": "safety-public-infrastructure",
+      "zh": "安全与公共基础设施",
+      "en": "Safety & Public Infrastructure"
+    }
+  ],
+  "ipTypes": [
+    {
+      "id": "corporate-brand",
+      "zh": "企业/组织品牌",
+      "en": "Corporate / Organization Brand"
+    },
+    {
+      "id": "product-service-brand",
+      "zh": "产品/服务品牌",
+      "en": "Product / Service Brand"
+    },
+    {
+      "id": "platform-system-ip",
+      "zh": "平台/系统 IP",
+      "en": "Platform / System IP"
+    },
+    {
+      "id": "personal-ip",
+      "zh": "个人 IP",
+      "en": "Personal IP"
+    },
+    {
+      "id": "alliance-community-ip",
+      "zh": "联盟/社区 IP",
+      "en": "Alliance / Community IP"
+    },
+    {
+      "id": "content-media-ip",
+      "zh": "内容/媒体 IP",
+      "en": "Content / Media IP"
+    },
+    {
+      "id": "place-venue-brand",
+      "zh": "场所/空间品牌",
+      "en": "Place / Venue Brand"
+    },
+    {
+      "id": "project-event-brand",
+      "zh": "项目/活动品牌",
+      "en": "Project / Event Brand"
+    }
+  ],
+  "applicationTypes": [
+    {
+      "id": "property",
+      "zh": "门店/物业",
+      "en": "Property / Venue"
+    },
+    {
+      "id": "deployment",
+      "zh": "产品部署",
+      "en": "Product Deployment"
+    },
+    {
+      "id": "event",
+      "zh": "活动",
+      "en": "Event"
+    },
+    {
+      "id": "content-program",
+      "zh": "内容栏目",
+      "en": "Content Program"
+    },
+    {
+      "id": "digital-product",
+      "zh": "数字产品",
+      "en": "Digital Product"
+    },
+    {
+      "id": "partnership",
+      "zh": "合作项目",
+      "en": "Partnership"
+    }
+  ]
+}

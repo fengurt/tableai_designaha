@@ -21,9 +21,11 @@ jobs:
       - run: npm ci
       - run: npm run build:site
       - run: npm run validate:assets
+      - run: npm run validate:ip
       - run: |
           node --check edge/src/index.js
           node --check edge/src/api.js
+          node --check edge/src/ip.js
           node --check edge/src/jobs.js
           node --check edge/src/media.js
           node --check edge/src/mcp.js

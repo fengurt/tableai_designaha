@@ -114,6 +114,7 @@ async function actorFromSession(request, env) {
     scopes: parseJson(row.scopes_json),
     ipScopes: parseJson(row.ip_scopes_json),
     csrfHash: row.csrf_hash,
+    stepUpUntil: row.step_up_until || "",
   };
 }
 
@@ -135,13 +136,35 @@ export async function issueSession(env, actor) {
   const id = crypto.randomUUID();
   const now = new Date();
   const expires = new Date(now.getTime() + Number(env.SESSION_TTL_SECONDS || 604800) * 1000);
-  await env.DB.prepare("INSERT INTO sessions(id,api_key_id,token_hash,csrf_hash,scopes_json,ip_scopes_json,totp_verified_at,expires_at,created_at,last_seen_at) VALUES(?,?,?,?,?,?,?,?,?,?)")
-    .bind(id, actor.id, await hmac(env.SESSION_PEPPER, token), await hmac(env.SESSION_PEPPER, csrf), JSON.stringify(actor.scopes), JSON.stringify(actor.ipScopes), now.toISOString(), expires.toISOString(), now.toISOString(), now.toISOString()).run();
+  const stepUpUntil = new Date(now.getTime() + 10 * 60 * 1000).toISOString();
+  await env.DB.prepare("INSERT INTO sessions(id,api_key_id,token_hash,csrf_hash,scopes_json,ip_scopes_json,totp_verified_at,step_up_until,expires_at,created_at,last_seen_at) VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+    .bind(id, actor.id, await hmac(env.SESSION_PEPPER, token), await hmac(env.SESSION_PEPPER, csrf), JSON.stringify(actor.scopes), JSON.stringify(actor.ipScopes), now.toISOString(), stepUpUntil, expires.toISOString(), now.toISOString(), now.toISOString()).run();
   return {
     csrf,
+    stepUpUntil,
     expiresAt: expires.toISOString(),
     cookie: `__Host-iptrust_session=${token}; Path=/; Max-Age=${Number(env.SESSION_TTL_SECONDS || 604800)}; HttpOnly; Secure; SameSite=Strict`,
   };
+}
+
+export function hasRecentStepUp(actor) {
+  return Boolean(actor?.stepUpUntil && actor.stepUpUntil > new Date().toISOString());
+}
+
+export async function rotateSessionCsrf(env, actor) {
+  if (!actor?.sessionId) return "";
+  const csrf = randomToken(24);
+  await env.DB.prepare("UPDATE sessions SET csrf_hash=?,last_seen_at=? WHERE id=?")
+    .bind(await hmac(env.SESSION_PEPPER, csrf), new Date().toISOString(), actor.sessionId).run();
+  return csrf;
+}
+
+export async function stepUpSession(env, actor) {
+  if (!actor?.sessionId) return "";
+  const until = new Date(Date.now() + 10 * 60 * 1000).toISOString();
+  await env.DB.prepare("UPDATE sessions SET totp_verified_at=?,step_up_until=? WHERE id=?")
+    .bind(new Date().toISOString(), until, actor.sessionId).run();
+  return until;
 }
 
 export async function createApiKey(env, { label, kind = "service", scopes = [], ipScopes = [], expiresAt = null, createdBy = "system" }) {

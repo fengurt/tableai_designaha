@@ -1,0 +1,624 @@
+{
+  "items": [
+    {
+      "slug": "tableai",
+      "recordClass": "owned",
+      "ipType": "platform-system-ip",
+      "primaryIndustry": "technology-ai",
+      "industries": [
+        "technology-ai",
+        "business-professional-services"
+      ],
+      "names": {
+        "zh": "Table AI",
+        "en": "Table AI"
+      },
+      "mainLanguage": "en",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "https://media.apuch.art/public/tableai/tableai-logo-tableai-a2a-logo-transparent-c1e7752b39f5/c1e7752b39f5607594e40f701395a0f6ef3addb8b5a964880408e522fe34c210/original.png",
+      "url": "brand.html?brand=tableai"
+    },
+    {
+      "slug": "vanahom",
+      "recordClass": "owned",
+      "ipType": "corporate-brand",
+      "primaryIndustry": "hospitality-hotels",
+      "industries": [
+        "hospitality-hotels",
+        "wellness-healing",
+        "business-professional-services"
+      ],
+      "names": {
+        "zh": "凡纳弘途",
+        "en": "VANAHOM"
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-logo-red-30e1cf3ac718/30e1cf3ac718bac77ac730c09f514b6f68a7f30fb763d7fa58fb6d96531862fc/original.png",
+      "url": "brand.html?brand=vanahom"
+    },
+    {
+      "slug": "sanctem",
+      "recordClass": "owned",
+      "ipType": "product-service-brand",
+      "primaryIndustry": "wellness-healing",
+      "industries": [
+        "wellness-healing",
+        "hospitality-hotels"
+      ],
+      "names": {
+        "zh": "东方康养疗愈品牌",
+        "en": "Sanctem"
+      },
+      "mainLanguage": "en",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "https://media.apuch.art/public/sanctem/sanctem-logo-sanctem-logo-color-dc34ba67f3af/dc34ba67f3af31597b6f03e8fd4890320676451d08cf17c48cb9ca650fa62cde/original.png",
+      "url": "brand.html?brand=sanctem"
+    },
+    {
+      "slug": "kind",
+      "recordClass": "owned",
+      "ipType": "platform-system-ip",
+      "primaryIndustry": "technology-ai",
+      "industries": [
+        "technology-ai",
+        "business-professional-services"
+      ],
+      "names": {
+        "zh": "善渡科技",
+        "en": "KiND"
+      },
+      "mainLanguage": "en",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "https://media.apuch.art/public/kind/kind-hero-kind-brand-hero-c7224d4b8fb7/c7224d4b8fb7d8058636e35bc4df2c7f0dec0baf8968da57f533a6918cf33ee3/original.png",
+      "url": "brand.html?brand=kind"
+    },
+    {
+      "slug": "apha",
+      "recordClass": "owned",
+      "ipType": "alliance-community-ip",
+      "primaryIndustry": "wellness-healing",
+      "industries": [
+        "wellness-healing",
+        "culture-creative-media",
+        "education-research",
+        "alliances-social-organizations"
+      ],
+      "names": {
+        "zh": "亚太艺术疗愈联盟",
+        "en": "APHA"
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "https://media.apuch.art/public/apha/apha-hero-apha-brand-hero-fc9496d55971/fc9496d5597101a9cacd136c43a3ecd5be168fe488fff2abb925fb8e1de061bc/original.png",
+      "url": "brand.html?brand=apha"
+    },
+    {
+      "slug": "manaendless",
+      "recordClass": "owned",
+      "ipType": "alliance-community-ip",
+      "primaryIndustry": "alliances-social-organizations",
+      "industries": [
+        "alliances-social-organizations",
+        "education-research"
+      ],
+      "names": {
+        "zh": "无魔协会",
+        "en": "MANA Endless"
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "https://media.apuch.art/public/manaendless/manaendless-hero-manaendless-brand-hero-58a52f2e1748/58a52f2e174817fe795761cd6688f944bd266782a5468c7448d70ed11b40952c/original.png",
+      "url": "brand.html?brand=manaendless"
+    },
+    {
+      "slug": "opcglobal",
+      "recordClass": "owned",
+      "ipType": "alliance-community-ip",
+      "primaryIndustry": "alliances-social-organizations",
+      "industries": [
+        "alliances-social-organizations",
+        "business-professional-services"
+      ],
+      "names": {
+        "zh": "欧匹赛全球联盟",
+        "en": "OPC Global"
+      },
+      "mainLanguage": "en",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "https://opcglobal.ai",
+      "logoUrl": "https://media.apuch.art/public/opcglobal/opcglobal-hero-opcglobal-brand-hero-8351935e9abc/8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40/original.png",
+      "url": "brand.html?brand=opcglobal"
+    },
+    {
+      "slug": "iptrust",
+      "recordClass": "owned",
+      "ipType": "platform-system-ip",
+      "primaryIndustry": "business-professional-services",
+      "industries": [
+        "business-professional-services",
+        "technology-ai"
+      ],
+      "names": {
+        "zh": "岁知社",
+        "en": "IPTrust"
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-iptrust-logo-black-4a253cbe0faa/4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64/original.png",
+      "url": "brand.html?brand=iptrust"
+    },
+    {
+      "slug": "fengzhi",
+      "recordClass": "owned",
+      "ipType": "corporate-brand",
+      "primaryIndustry": "business-professional-services",
+      "industries": [
+        "business-professional-services",
+        "technology-ai"
+      ],
+      "names": {
+        "zh": "峰值永造局",
+        "en": "Fengzhi Yongzaoju"
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-mono-d7b2e1dc871a/d7b2e1dc871abb01b9d9cb8eaf26a19217b2a84cbae87412dc1475839d91001d/original.svg",
+      "url": "brand.html?brand=fengzhi"
+    },
+    {
+      "slug": "axisee",
+      "recordClass": "owned",
+      "ipType": "personal-ip",
+      "primaryIndustry": "hospitality-hotels",
+      "industries": [
+        "hospitality-hotels",
+        "business-professional-services"
+      ],
+      "names": {
+        "zh": "酒店盈利大师",
+        "en": "Axisee"
+      },
+      "mainLanguage": "en",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "https://media.apuch.art/public/axisee/axisee-logo-axisee-logo-5f1cfebfc5b9/5f1cfebfc5b92db2708c2957b47419a456de13e78c20ddab4973056b08cafe3b/original.png",
+      "url": "brand.html?brand=axisee"
+    },
+    {
+      "slug": "sidera",
+      "recordClass": "owned",
+      "ipType": "content-media-ip",
+      "primaryIndustry": "food-beverage",
+      "industries": [
+        "food-beverage",
+        "technology-ai",
+        "culture-creative-media"
+      ],
+      "names": {
+        "zh": "侍天 - 智慧餐饮",
+        "en": "Sidera"
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "https://media.apuch.art/public/sidera/sidera-hero-sidera-brand-hero-3501c8d23cb5/3501c8d23cb5507005b8d8dea3904e72dbc849783b039a90406b976f7fbf7672/original.png",
+      "url": "brand.html?brand=sidera"
+    },
+    {
+      "slug": "1stepmore",
+      "recordClass": "owned",
+      "ipType": "platform-system-ip",
+      "primaryIndustry": "business-professional-services",
+      "industries": [
+        "business-professional-services"
+      ],
+      "names": {
+        "zh": "壹目贯维",
+        "en": "1stepmore"
+      },
+      "mainLanguage": "en",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "",
+      "url": "brand.html?brand=1stepmore"
+    },
+    {
+      "slug": "agem",
+      "recordClass": "owned",
+      "ipType": "alliance-community-ip",
+      "primaryIndustry": "travel-destinations",
+      "industries": [
+        "travel-destinations",
+        "culture-creative-media",
+        "alliances-social-organizations"
+      ],
+      "names": {
+        "zh": "游赋社",
+        "en": "AGEM"
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "",
+      "url": "brand.html?brand=agem"
+    },
+    {
+      "slug": "rgd",
+      "recordClass": "owned",
+      "ipType": "content-media-ip",
+      "primaryIndustry": "culture-creative-media",
+      "industries": [
+        "culture-creative-media"
+      ],
+      "names": {
+        "zh": "燃古豋",
+        "en": "RGD"
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "",
+      "url": "brand.html?brand=rgd"
+    },
+    {
+      "slug": "changoods",
+      "recordClass": "owned",
+      "ipType": "product-service-brand",
+      "primaryIndustry": "consumer-lifestyle",
+      "industries": [
+        "consumer-lifestyle"
+      ],
+      "names": {
+        "zh": "常幸",
+        "en": "Changoods"
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "",
+      "url": "brand.html?brand=changoods"
+    },
+    {
+      "slug": "boya",
+      "recordClass": "owned",
+      "ipType": "corporate-brand",
+      "primaryIndustry": "education-research",
+      "industries": [
+        "education-research"
+      ],
+      "names": {
+        "zh": "博雅问渠书院",
+        "en": "PKU BOYA Academy"
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "",
+      "url": "brand.html?brand=boya"
+    },
+    {
+      "slug": "apuch",
+      "recordClass": "owned",
+      "ipType": "content-media-ip",
+      "primaryIndustry": "consumer-lifestyle",
+      "industries": [
+        "consumer-lifestyle",
+        "architecture-space-real-estate"
+      ],
+      "names": {
+        "zh": "APUCH",
+        "en": "APUCH"
+      },
+      "mainLanguage": "en",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "",
+      "url": "brand.html?brand=apuch"
+    },
+    {
+      "slug": "pam",
+      "recordClass": "owned",
+      "ipType": "corporate-brand",
+      "primaryIndustry": "architecture-space-real-estate",
+      "industries": [
+        "architecture-space-real-estate",
+        "travel-destinations"
+      ],
+      "names": {
+        "zh": "帕姆建筑",
+        "en": "PaM Design Office"
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "",
+      "url": "brand.html?brand=pam"
+    },
+    {
+      "slug": "ksamint",
+      "recordClass": "owned",
+      "ipType": "personal-ip",
+      "primaryIndustry": "business-professional-services",
+      "industries": [
+        "business-professional-services",
+        "culture-creative-media"
+      ],
+      "names": {
+        "zh": "查明",
+        "en": "ksamint"
+      },
+      "mainLanguage": "en",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "",
+      "url": "brand.html?brand=ksamint"
+    },
+    {
+      "slug": "inucleus",
+      "recordClass": "owned",
+      "ipType": "platform-system-ip",
+      "primaryIndustry": "technology-ai",
+      "industries": [
+        "technology-ai"
+      ],
+      "names": {
+        "zh": "iNucleus",
+        "en": "iNucleus"
+      },
+      "mainLanguage": "en",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "",
+      "url": "brand.html?brand=inucleus"
+    },
+    {
+      "slug": "xinzhi-travel",
+      "recordClass": "owned",
+      "ipType": "corporate-brand",
+      "primaryIndustry": "travel-destinations",
+      "industries": [
+        "travel-destinations",
+        "culture-creative-media"
+      ],
+      "names": {
+        "zh": "信致旅游",
+        "en": "Xinzhi Travel"
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "",
+      "url": "brand.html?brand=xinzhi-travel"
+    },
+    {
+      "slug": "zhongzhiyou",
+      "recordClass": "owned",
+      "ipType": "corporate-brand",
+      "primaryIndustry": "travel-destinations",
+      "industries": [
+        "travel-destinations",
+        "technology-ai"
+      ],
+      "names": {
+        "zh": "中智游集团",
+        "en": "Zhongzhiyou Group"
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "",
+      "url": "brand.html?brand=zhongzhiyou"
+    },
+    {
+      "slug": "nibiru",
+      "recordClass": "owned",
+      "ipType": "corporate-brand",
+      "primaryIndustry": "technology-ai",
+      "industries": [
+        "technology-ai"
+      ],
+      "names": {
+        "zh": "睿悦科技",
+        "en": "Nibiru"
+      },
+      "mainLanguage": "en",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "",
+      "url": "brand.html?brand=nibiru"
+    },
+    {
+      "slug": "shenzhen-microsoft-global-center",
+      "recordClass": "owned",
+      "ipType": "corporate-brand",
+      "primaryIndustry": "technology-ai",
+      "industries": [
+        "technology-ai",
+        "business-professional-services"
+      ],
+      "names": {
+        "zh": "深圳微软出海中心",
+        "en": "Shenzhen Microsoft Global Center"
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "",
+      "url": "brand.html?brand=shenzhen-microsoft-global-center"
+    },
+    {
+      "slug": "shanrenjing",
+      "recordClass": "owned",
+      "ipType": "product-service-brand",
+      "primaryIndustry": "safety-public-infrastructure",
+      "industries": [
+        "safety-public-infrastructure",
+        "travel-destinations",
+        "technology-ai"
+      ],
+      "names": {
+        "zh": "山人境",
+        "en": "shanpass"
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "",
+      "url": "brand.html?brand=shanrenjing"
+    },
+    {
+      "slug": "kaoyu-shenhua",
+      "recordClass": "owned",
+      "ipType": "product-service-brand",
+      "primaryIndustry": "food-beverage",
+      "industries": [
+        "food-beverage"
+      ],
+      "names": {
+        "zh": "烤鱼神话",
+        "en": "KAOYUSHENHUA"
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
+      "url": "brand.html?brand=kaoyu-shenhua"
+    },
+    {
+      "slug": "yanan-shiyao-hotel",
+      "recordClass": "owned",
+      "ipType": "place-venue-brand",
+      "primaryIndustry": "hospitality-hotels",
+      "industries": [
+        "hospitality-hotels",
+        "travel-destinations"
+      ],
+      "names": {
+        "zh": "延安石窑宾馆",
+        "en": "延安石窑宾馆"
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "sourceUrl": "",
+      "logoUrl": "",
+      "url": "brand.html?brand=yanan-shiyao-hotel"
+    },
+    {
+      "slug": "wyndham-hotels-resorts",
+      "names": {
+        "zh": "温德姆酒店集团",
+        "en": "Wyndham Hotels & Resorts"
+      },
+      "mainLanguage": "en",
+      "primaryIndustry": "hospitality-hotels",
+      "industries": [
+        "hospitality-hotels"
+      ],
+      "ipType": "corporate-brand",
+      "sourceUrl": "https://corporate.wyndhamhotels.com/",
+      "sourcePublisher": "Wyndham Hotels & Resorts",
+      "verificationStatus": "source-verified",
+      "recordClass": "reference",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "url": "ip?ip=wyndham-hotels-resorts"
+    },
+    {
+      "slug": "days-inn-by-wyndham",
+      "names": {
+        "zh": "戴斯温德姆酒店",
+        "en": "Days Inn by Wyndham"
+      },
+      "mainLanguage": "en",
+      "primaryIndustry": "hospitality-hotels",
+      "industries": [
+        "hospitality-hotels"
+      ],
+      "ipType": "product-service-brand",
+      "sourceUrl": "https://www.wyndhamhotels.com/days-inn",
+      "sourcePublisher": "Wyndham Hotels & Resorts",
+      "verificationStatus": "source-verified",
+      "recordClass": "reference",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "url": "ip?ip=days-inn-by-wyndham"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "rel-wyndham-days-inn",
+      "parent": "wyndham-hotels-resorts",
+      "child": "days-inn-by-wyndham",
+      "type": "brand_parent",
+      "primary": true
+    }
+  ],
+  "applications": [
+    {
+      "slug": "xian-ruili-days-inn-by-wyndham",
+      "names": {
+        "zh": "西安瑞骊戴斯温德姆酒店",
+        "en": "Xi'an Ruili Days Inn by Wyndham"
+      },
+      "mainLanguage": "zh",
+      "applicationType": "property",
+      "lifecycleStatus": "active",
+      "guidelineMode": "inherit",
+      "description": {
+        "zh": "Days Inn by Wyndham 在西安的酒店项目应用。",
+        "en": "A Days Inn by Wyndham hotel property in Xi'an."
+      },
+      "location": {
+        "country": "CN",
+        "province": "陕西",
+        "city": "西安"
+      },
+      "links": [
+        {
+          "ip": "days-inn-by-wyndham",
+          "role": "primary"
+        },
+        {
+          "ip": "wyndham-hotels-resorts",
+          "role": "endorsed"
+        }
+      ]
+    }
+  ]
+}

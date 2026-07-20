@@ -1,4 +1,5 @@
-import { authenticate, createApiKey, hasIpScope, hasScope, issueSession, requireCsrf, verifyTotp } from "./security.js";
+import { authenticate, createApiKey, hasIpScope, hasRecentStepUp, hasScope, issueSession, requireCsrf, rotateSessionCsrf, stepUpSession, verifyTotp } from "./security.js";
+import { handleApplicationRoutes, handleIpRoutes, handleRelationRoutes, handleTaxonomyRoute, handleAdminStatus } from "./ip.js";
 import { signMediaPath } from "./media.js";
 import { search } from "./search.js";
 import { applyRateLimit, audit, checkIdempotency, cleanSegment, deepMerge, enqueueOutbox, entityEtag, json, now, parseBody, parseJson, storeIdempotency } from "./utils.js";
@@ -28,11 +29,23 @@ async function authRoutes(request, env, parts) {
     if (env.ADMIN_TOTP_SECRET && !(await verifyTotp(env.ADMIN_TOTP_SECRET, body.totp))) return error(request, "bad_totp", 401);
     const session = await issueSession(env, actor);
     await audit(env, request, actor, "auth.exchange", "session", "", "success");
-    return json(request, { ok: true, connected: true, csrfToken: session.csrf, expiresAt: session.expiresAt, scopes: actor.scopes, ipScopes: actor.ipScopes }, { headers: cookieHeaders(session.cookie) }, true);
+    return json(request, { ok: true, connected: true, csrfToken: session.csrf, expiresAt: session.expiresAt, stepUpUntil: session.stepUpUntil, scopes: actor.scopes, ipScopes: actor.ipScopes }, { headers: cookieHeaders(session.cookie) }, true);
   }
   if (parts[1] === "session" && request.method === "GET") {
     const actor = await authenticate(request, env);
-    return actor ? json(request, { connected: true, actor: { id: actor.id, kind: actor.kind, scopes: actor.scopes, ipScopes: actor.ipScopes } }, {}, true) : error(request, "unauthorized", 401);
+    if (!actor) return error(request, "unauthorized", 401);
+    const csrfToken = actor.sessionId ? await rotateSessionCsrf(env, actor) : "";
+    return json(request, { connected: true, csrfToken, actor: { id: actor.id, kind: actor.kind, scopes: actor.scopes, ipScopes: actor.ipScopes, stepUpUntil: actor.stepUpUntil || "" } }, {}, true);
+  }
+  if (parts[1] === "step-up" && request.method === "POST") {
+    const actor = await authenticate(request, env);
+    if (!actor?.sessionId) return error(request, "session_required", 401);
+    if (!(await requireCsrf(request, actor, env))) return error(request, "csrf_required", 403);
+    const body = await parseBody(request);
+    if (env.ADMIN_TOTP_SECRET && !(await verifyTotp(env.ADMIN_TOTP_SECRET, body.totp))) return error(request, "bad_totp", 401);
+    const stepUpUntil = await stepUpSession(env, actor);
+    await audit(env, request, actor, "auth.step_up", "session", actor.sessionId, "success");
+    return json(request, { ok: true, stepUpUntil }, {}, true);
   }
   if (parts[1] === "logout" && request.method === "POST") {
     const actor = await authenticate(request, env);
@@ -46,10 +59,11 @@ async function keyRoutes(request, env, parts) {
   const auth = await requireActor(request, env, "keys:manage");
   if (auth.response) return auth.response;
   if (request.method === "GET") {
-    const rows = await env.DB.prepare("SELECT id,prefix,kind,label,scopes_json,ip_scopes_json,expires_at,revoked_at,last_used_at,created_by,created_at FROM api_keys ORDER BY created_at DESC").all();
-    return json(request, { items: rows.results.map((row) => ({ ...row, scopes: parseJson(row.scopes_json, []), ipScopes: parseJson(row.ip_scopes_json, []) })) }, {}, true);
+    const rows = await env.DB.prepare("SELECT id,prefix,kind,label,scopes_json,ip_scopes_json,expires_at,revoked_at,last_used_at,created_by,created_at,version FROM api_keys ORDER BY created_at DESC").all();
+    return json(request, { items: rows.results.map((row) => ({ ...row, scopes: parseJson(row.scopes_json, []), ipScopes: parseJson(row.ip_scopes_json, []), etag: entityEtag("api-key", row.id, row.version) })) }, {}, true);
   }
   if (request.method === "POST" && !parts[1]) {
+    if (!hasRecentStepUp(auth.actor)) return error(request, "totp_step_up_required", 403);
     const body = await parseBody(request);
     const idem = await checkIdempotency(env, request, auth.actor, body);
     if (idem.error) return error(request, idem.error, idem.status);
@@ -61,10 +75,22 @@ async function keyRoutes(request, env, parts) {
     return json(request, payload, { status: 201 }, true);
   }
   if (request.method === "DELETE" && parts[1]) {
-    await env.DB.prepare("UPDATE api_keys SET revoked_at=? WHERE id=?").bind(now(), parts[1]).run();
+    if (!hasRecentStepUp(auth.actor)) return error(request, "totp_step_up_required", 403);
+    const body = await parseBody(request);
+    const idem = await checkIdempotency(env, request, auth.actor, body);
+    if (idem.error) return error(request, idem.error, idem.status);
+    if (idem.replay) return json(request, idem.data, { status: idem.status, headers: { "Idempotency-Replayed": "true" } }, true);
+    const current = await env.DB.prepare("SELECT id,version,revoked_at FROM api_keys WHERE id=?").bind(parts[1]).first();
+    if (!current) return error(request, "not_found", 404);
+    const expected = entityEtag("api-key", current.id, current.version);
+    if (!request.headers.get("if-match")) return error(request, "if_match_required", 428);
+    if (request.headers.get("if-match") !== expected) return error(request, "version_conflict", 412, { currentEtag: expected });
+    await env.DB.prepare("UPDATE api_keys SET revoked_at=?,version=version+1 WHERE id=?").bind(now(), parts[1]).run();
     await env.DB.prepare("UPDATE sessions SET revoked_at=? WHERE api_key_id=? AND revoked_at IS NULL").bind(now(), parts[1]).run();
     await audit(env, request, auth.actor, "key.revoke", "api-key", parts[1], "success");
-    return json(request, { ok: true, revoked: parts[1] }, {}, true);
+    const payload = { ok: true, revoked: parts[1] };
+    await storeIdempotency(env, request, auth.actor, idem, 200, payload);
+    return json(request, payload, {}, true);
   }
   return error(request, "method_not_allowed", 405);
 }
@@ -97,24 +123,41 @@ async function brandRoutes(request, env, parts) {
   const version = current.version + 1;
   await env.DB.prepare("INSERT INTO brand_records(slug,payload_json,version,created_at,updated_at) VALUES(?,?,?,?,?) ON CONFLICT(slug) DO UPDATE SET payload_json=excluded.payload_json,version=excluded.version,updated_at=excluded.updated_at")
     .bind(slug, JSON.stringify(next), version, current.row?.created_at || now(), now()).run();
+  const ipRow = await env.DB.prepare("SELECT version,names_json FROM ip_records WHERE slug=?").bind(slug).first();
+  if (ipRow) {
+    const names = parseJson(ipRow.names_json, {});
+    const mainLanguage = next.mainLanguage === "en" ? "en" : "zh";
+    const updatedNames = {
+      zh: next.display?.zh?.name || next.profile?.names?.zh || names.zh || "",
+      en: next.display?.en?.name || next.profile?.names?.en || names.en || "",
+    };
+    await env.DB.prepare("UPDATE ip_records SET names_json=?,main_language=?,payload_json=?,version=?,updated_at=? WHERE slug=?")
+      .bind(JSON.stringify(updatedNames), mainLanguage, JSON.stringify(next), version, now(), slug).run();
+  }
   await env.DB.prepare("INSERT INTO library_revisions(entity_type,entity_id,action,snapshot_json,actor,source_url,created_at) VALUES('brand',?,'update',?,?,?,?)")
     .bind(slug, JSON.stringify(next), auth.actor.id, `${env.PUBLIC_SITE_URL}/brand?brand=${slug}`, now()).run();
   await enqueueOutbox(env, "git.sync", "brand", slug, version, { path: `data/runtime/brands/${slug}.json`, content: next });
-  await enqueueOutbox(env, "search.index", "brand", slug, version, { entityType: "brand", entityId: slug });
+  await enqueueOutbox(env, "search.index", "ip", slug, version, { entityType: "ip", entityId: slug });
   const payload = { ok: true, brand: next, version };
   await storeIdempotency(env, request, auth.actor, idem, 200, payload);
   await audit(env, request, auth.actor, "brand.update", "brand", slug, "success", current.payload, next);
   return json(request, payload, { headers: { ETag: entityEtag("brand", slug, version) } }, true);
 }
 
-function assetResult(row, variants, env, actor) {
+async function assetScopeSlug(env, ownerType, ownerId) {
+  if (ownerType !== "ip-application") return ownerId;
+  const link = await env.DB.prepare("SELECT ip_slug FROM application_ip_links WHERE application_slug=? AND role='primary' LIMIT 1").bind(ownerId).first();
+  return link?.ip_slug || ownerId;
+}
+
+function assetResult(row, variants, env, actor, scopeSlug = row.owner_id) {
   const publicUrl = row.access === "public" ? `${env.MEDIA_BASE_URL}/${row.source_object_key}` : "";
   return {
     id: row.id, ownerType: row.owner_type, ownerId: row.owner_id, role: row.role, title: row.title, access: row.access,
     filename: row.source_filename, sha256: row.sha256, mimeType: row.mime_type, extension: row.extension, bytes: row.bytes,
     width: row.width, height: row.height, status: row.status, version: row.version, publicUrl,
     variants: variants.map((item) => ({ id: item.id, kind: item.kind, format: item.format, mimeType: item.mime_type, bytes: item.bytes, width: item.width, height: item.height, url: `${env.MEDIA_BASE_URL}/${item.object_key}` })),
-    canRequestPrivateUrl: row.access === "private" && hasScope(actor, "assets:read_private") && hasIpScope(actor, row.owner_id),
+    canRequestPrivateUrl: row.access === "private" && hasScope(actor, "assets:read_private") && hasIpScope(actor, scopeSlug),
     metadata: parseJson(row.metadata_json), updatedAt: row.updated_at,
   };
 }
@@ -122,17 +165,22 @@ function assetResult(row, variants, env, actor) {
 async function listAssets(request, env, actor) {
   const url = new URL(request.url);
   const ip = cleanSegment(url.searchParams.get("ip") || "");
+  const ownerType = String(url.searchParams.get("ownerType") || "").trim().slice(0, 60);
+  const ownerId = cleanSegment(url.searchParams.get("ownerId") || "");
   const limit = Math.min(Math.max(Number(url.searchParams.get("limit") || 50), 1), 200);
   const where = ["deleted_at IS NULL"];
   const bindings = [];
   if (ip) { where.push("owner_id=?"); bindings.push(ip); }
+  if (ownerType) { where.push("owner_type=?"); bindings.push(ownerType); }
+  if (ownerId) { where.push("owner_id=?"); bindings.push(ownerId); }
   if (!hasScope(actor, "assets:read_private")) where.push("access='public'");
   const rows = await env.DB.prepare(`SELECT * FROM assets WHERE ${where.join(" AND ")} ORDER BY updated_at DESC LIMIT ?`).bind(...bindings, limit).all();
   const items = [];
   for (const row of rows.results) {
-    if (row.access === "private" && !hasIpScope(actor, row.owner_id)) continue;
+    const scopeSlug = await assetScopeSlug(env, row.owner_type, row.owner_id);
+    if (row.access === "private" && !hasIpScope(actor, scopeSlug)) continue;
     const variants = await env.DB.prepare("SELECT * FROM asset_variants WHERE asset_id=? ORDER BY kind,format").bind(row.id).all();
-    items.push(assetResult(row, variants.results, env, actor));
+    items.push(assetResult(row, variants.results, env, actor, scopeSlug));
   }
   return json(request, { items, total: items.length }, {}, Boolean(actor));
 }
@@ -140,9 +188,10 @@ async function listAssets(request, env, actor) {
 async function getAsset(request, env, id, actor) {
   const row = await env.DB.prepare("SELECT * FROM assets WHERE id=? AND deleted_at IS NULL").bind(id).first();
   if (!row) return error(request, "not_found", 404);
-  if (row.access === "private" && (!hasScope(actor, "assets:read_private") || !hasIpScope(actor, row.owner_id))) return error(request, "forbidden", 403);
+  const scopeSlug = await assetScopeSlug(env, row.owner_type, row.owner_id);
+  if (row.access === "private" && (!hasScope(actor, "assets:read_private") || !hasIpScope(actor, scopeSlug))) return error(request, "forbidden", 403);
   const variants = await env.DB.prepare("SELECT * FROM asset_variants WHERE asset_id=? ORDER BY kind,format").bind(id).all();
-  return json(request, assetResult(row, variants.results, env, actor), { headers: { ETag: entityEtag("asset", id, row.version) } }, Boolean(actor));
+  return json(request, assetResult(row, variants.results, env, actor, scopeSlug), { headers: { ETag: entityEtag("asset", id, row.version) } }, Boolean(actor));
 }
 
 async function startUpload(request, env, actor) {
@@ -154,7 +203,13 @@ async function startUpload(request, env, actor) {
   const sourceAsset = sourceAssetId ? await env.DB.prepare("SELECT * FROM assets WHERE id=? AND deleted_at IS NULL").bind(sourceAssetId).first() : null;
   if (sourceAssetId && !sourceAsset) return error(request, "source_asset_not_found", 404);
   const ownerId = cleanSegment(sourceAsset?.owner_id || body.ownerId);
-  if (!ownerId || !hasIpScope(actor, ownerId)) return error(request, "forbidden_ip_scope", 403);
+  const ownerType = sourceAsset?.owner_type || (body.ownerType === "ip-application" ? "ip-application" : "owned-ip");
+  if (ownerType === "ip-application") {
+    const application = await env.DB.prepare("SELECT a.slug,l.ip_slug FROM ip_applications a JOIN application_ip_links l ON l.application_slug=a.slug AND l.role='primary' WHERE a.slug=? AND a.deleted_at IS NULL LIMIT 1").bind(ownerId).first();
+    if (!application) return error(request, "application_not_found", 404);
+  }
+  const scopeSlug = await assetScopeSlug(env, ownerType, ownerId);
+  if (!ownerId || !hasIpScope(actor, scopeSlug)) return error(request, "forbidden_ip_scope", 403, { ip: scopeSlug });
   const bytes = Number(body.bytes || 0);
   if (!Number.isFinite(bytes) || bytes < 1 || bytes > Number(env.MAX_UPLOAD_BYTES || 524288000)) return error(request, "invalid_size", 413, { maxBytes: Number(env.MAX_UPLOAD_BYTES || 524288000) });
   const mime = String(body.mimeType || "application/octet-stream").toLowerCase();
@@ -170,7 +225,7 @@ async function startUpload(request, env, actor) {
   const bucket = access === "private" ? env.ORIGINALS : env.PREVIEWS;
   const upload = await bucket.createMultipartUpload(objectKey, { httpMetadata: { contentType: mime, cacheControl: access === "public" ? "public, max-age=31536000, immutable" : "private, no-store" }, customMetadata: { sha256: sha, ownerId, assetId, role, access, filename } });
   const jobId = crypto.randomUUID();
-  const job = { uploadId: upload.uploadId, objectKey, access, ownerId, assetId, variantOf: sourceAsset?.id || "", filename, extension, mime, bytes, sha256: sha, role, title: String(body.title || filename).slice(0, 240), width: body.width || null, height: body.height || null };
+  const job = { uploadId: upload.uploadId, objectKey, access, ownerType, ownerId, scopeSlug, assetId, variantOf: sourceAsset?.id || "", filename, extension, mime, bytes, sha256: sha, role, title: String(body.title || filename).slice(0, 240), width: body.width || null, height: body.height || null };
   await env.DB.prepare("INSERT INTO asset_jobs(id,type,status,payload_json,created_at,updated_at) VALUES(?,'upload','uploading',?,?,?)").bind(jobId, JSON.stringify(job), now(), now()).run();
   const apiOrigin = new URL(request.url).origin;
   const payload = { ok: true, upload: { id: jobId, assetId, uploadId: upload.uploadId, partSize: 16 * 1024 * 1024, maxBytes: Number(env.MAX_UPLOAD_BYTES || 524288000), partsUrl: `${apiOrigin}/api/v2/assets/uploads/${jobId}/parts/{partNumber}`, completeUrl: `${apiOrigin}/api/v2/assets/uploads/${jobId}/complete` } };
@@ -183,7 +238,7 @@ async function uploadPart(request, env, actor, jobId, partNumber) {
   const jobRow = await env.DB.prepare("SELECT * FROM asset_jobs WHERE id=? AND status='uploading'").bind(jobId).first();
   if (!jobRow) return error(request, "upload_not_found", 404);
   const job = parseJson(jobRow.payload_json);
-  if (!hasIpScope(actor, job.ownerId)) return error(request, "forbidden_ip_scope", 403);
+  if (!hasIpScope(actor, job.scopeSlug || job.ownerId)) return error(request, "forbidden_ip_scope", 403);
   const length = Number(request.headers.get("content-length") || 0);
   if (!length || length > 20 * 1024 * 1024) return error(request, "invalid_part_size", 413, { maxPartBytes: 20 * 1024 * 1024 });
   const bucket = job.access === "private" ? env.ORIGINALS : env.PREVIEWS;
@@ -200,7 +255,7 @@ async function completeUpload(request, env, actor, jobId) {
   const jobRow = await env.DB.prepare("SELECT * FROM asset_jobs WHERE id=? AND status='uploading'").bind(jobId).first();
   if (!jobRow) return error(request, "upload_not_found", 404);
   const job = parseJson(jobRow.payload_json);
-  if (!hasIpScope(actor, job.ownerId)) return error(request, "forbidden_ip_scope", 403);
+  if (!hasIpScope(actor, job.scopeSlug || job.ownerId)) return error(request, "forbidden_ip_scope", 403);
   const parts = Array.isArray(body.parts) ? body.parts.map((part) => ({ partNumber: Number(part.partNumber), etag: String(part.etag) })).sort((a, b) => a.partNumber - b.partNumber) : [];
   if (!parts.length) return error(request, "parts_required", 400);
   const bucket = job.access === "private" ? env.ORIGINALS : env.PREVIEWS;
@@ -218,8 +273,8 @@ async function completeUpload(request, env, actor, jobId) {
     await enqueueOutbox(env, "search.index", "asset", job.assetId, 1, { entityType: "asset", entityId: job.assetId });
   } else {
     await env.DB.batch([
-      env.DB.prepare("INSERT INTO assets(id,owner_type,owner_id,role,title,access,source_object_key,source_filename,sha256,mime_type,extension,bytes,width,height,status,version,metadata_json,created_at,updated_at) VALUES(?,'owned-ip',?,?,?,?,?,?,?,?,?,?,?,?,'processing',1,?,?,?) ON CONFLICT(id) DO UPDATE SET source_object_key=excluded.source_object_key,sha256=excluded.sha256,mime_type=excluded.mime_type,bytes=excluded.bytes,status='processing',version=assets.version+1,updated_at=excluded.updated_at")
-        .bind(job.assetId, job.ownerId, job.role, job.title, job.access, job.objectKey, job.filename, job.sha256, job.mime, job.extension, job.bytes, job.width, job.height, JSON.stringify({ uploadJobId: jobId }), timestamp, timestamp),
+      env.DB.prepare("INSERT INTO assets(id,owner_type,owner_id,role,title,access,source_object_key,source_filename,sha256,mime_type,extension,bytes,width,height,status,version,metadata_json,created_at,updated_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,'processing',1,?,?,?) ON CONFLICT(id) DO UPDATE SET owner_type=excluded.owner_type,owner_id=excluded.owner_id,source_object_key=excluded.source_object_key,sha256=excluded.sha256,mime_type=excluded.mime_type,bytes=excluded.bytes,status='processing',version=assets.version+1,updated_at=excluded.updated_at")
+        .bind(job.assetId, job.ownerType || "owned-ip", job.ownerId, job.role, job.title, job.access, job.objectKey, job.filename, job.sha256, job.mime, job.extension, job.bytes, job.width, job.height, JSON.stringify({ uploadJobId: jobId }), timestamp, timestamp),
       env.DB.prepare("UPDATE asset_jobs SET asset_id=?,status='queued',updated_at=? WHERE id=?").bind(job.assetId, timestamp, jobId),
     ]);
     await enqueueOutbox(env, "asset.process", "asset", job.assetId, 1, { jobId, assetId: job.assetId, ownerId: job.ownerId, objectKey: job.objectKey, access: job.access, mimeType: job.mime, extension: job.extension, expectedSha256: job.sha256 });
@@ -265,13 +320,13 @@ async function assetRoutes(request, env, parts) {
   if (request.method === "POST" && parts[2] === "status") {
     const row = await env.DB.prepare("SELECT * FROM assets WHERE id=? AND deleted_at IS NULL").bind(parts[1]).first();
     if (!row) return error(request, "not_found", 404);
-    const auth = await requireActor(request, env, "assets:upload", row.owner_id);
+    const auth = await requireActor(request, env, "assets:upload", await assetScopeSlug(env, row.owner_type, row.owner_id));
     return auth.response || updateAssetProcessingStatus(request, env, auth.actor, row);
   }
   if (request.method === "POST" && parts[2] === "sign") {
     const row = await env.DB.prepare("SELECT * FROM assets WHERE id=? AND deleted_at IS NULL").bind(parts[1]).first();
     if (!row) return error(request, "not_found", 404);
-    const auth = await requireActor(request, env, "assets:read_private", row.owner_id);
+    const auth = await requireActor(request, env, "assets:read_private", await assetScopeSlug(env, row.owner_type, row.owner_id));
     if (auth.response) return auth.response;
     const body = await parseBody(request);
     const signed = await signMediaPath(env, `/${row.source_object_key}`, body.ttlSeconds);
@@ -281,7 +336,7 @@ async function assetRoutes(request, env, parts) {
   if (request.method === "DELETE" && parts[1]) {
     const row = await env.DB.prepare("SELECT * FROM assets WHERE id=? AND deleted_at IS NULL").bind(parts[1]).first();
     if (!row) return error(request, "not_found", 404);
-    const auth = await requireActor(request, env, "assets:delete", row.owner_id);
+    const auth = await requireActor(request, env, "assets:delete", await assetScopeSlug(env, row.owner_type, row.owner_id));
     if (auth.response) return auth.response;
     if (!request.headers.get("if-match")) return error(request, "if_match_required", 428);
     if (request.headers.get("if-match") !== entityEtag("asset", row.id, row.version)) return error(request, "version_conflict", 412, { currentEtag: entityEtag("asset", row.id, row.version) });
@@ -349,7 +404,7 @@ async function searchRoute(request, env) {
   const query = String(url.searchParams.get("q") || "").trim().slice(0, 500);
   if (!query) return error(request, "query_required", 400);
   const mode = ["lexical", "semantic", "hybrid"].includes(url.searchParams.get("mode")) ? url.searchParams.get("mode") : "hybrid";
-  const items = await search(env, actor, { query, mode, limit: url.searchParams.get("limit"), types: (url.searchParams.get("types") || "").split(",").filter(Boolean), ip: cleanSegment(url.searchParams.get("ip") || "") });
+  const items = await search(env, actor, { query, mode, limit: url.searchParams.get("limit"), types: (url.searchParams.get("types") || "").split(",").filter(Boolean), ip: cleanSegment(url.searchParams.get("ip") || ""), industry: cleanSegment(url.searchParams.get("industry") || ""), ipType: cleanSegment(url.searchParams.get("ipType") || "") });
   return json(request, { query, mode, total: items.length, items }, {}, Boolean(actor));
 }
 
@@ -400,6 +455,11 @@ export async function handleApi(request, env) {
   const parts = new URL(request.url).pathname.replace(/^\/api\/v2\/?/, "").split("/").filter(Boolean);
   try {
     if (parts[0] === "auth") return authRoutes(request, env, parts);
+    if (parts[0] === "taxonomy") return handleTaxonomyRoute(request, env);
+    if (parts[0] === "ips") return handleIpRoutes(request, env, parts.slice(1));
+    if (parts[0] === "ip-relations") return handleRelationRoutes(request, env, parts.slice(1));
+    if (parts[0] === "applications") return handleApplicationRoutes(request, env, parts.slice(1));
+    if (parts[0] === "admin" && parts[1] === "status") return handleAdminStatus(request, env);
     if (parts[0] === "admin" && parts[1] === "keys") return keyRoutes(request, env, parts.slice(1));
     if (parts[0] === "admin" && parts[1] === "jobs") return jobRoutes(request, env, parts.slice(1));
     if (parts[0] === "brands") return brandRoutes(request, env, parts);

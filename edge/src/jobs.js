@@ -31,7 +31,25 @@ async function materializeSearchDocument(env, payload, deferVector = false) {
   const type = payload.entityType;
   const id = payload.entityId;
   let document;
-  if (type === "brand") {
+  if (type === "ip") {
+    const row = await env.DB.prepare("SELECT * FROM ip_records WHERE slug=? AND deleted_at IS NULL").bind(id).first();
+    if (!row) return null;
+    const value = parseJson(row.payload_json);
+    const names = parseJson(row.names_json);
+    const taxonomy = await env.DB.prepare("SELECT term_id FROM ip_taxonomy JOIN taxonomy_terms ON taxonomy_terms.id=ip_taxonomy.term_id WHERE ip_slug=? AND taxonomy_terms.dimension='industry' ORDER BY is_primary DESC,taxonomy_terms.sort_order").bind(id).all();
+    const title = row.main_language === "en" ? (names.en || names.zh || id) : (names.zh || names.en || id);
+    const body = textValues([names, value.description, value.introduction, value.profile, value.business, value.notes, value.tags, value.tracks, row.source_publisher]).join("\n");
+    document = { id: `ip:${id}`, entityType: "ip", entityId: id, ipSlug: id, language: row.main_language || "und", access: "public", title, body, metadata: { slug: id, recordClass: row.record_class, ipType: row.ip_type, primaryIndustry: row.primary_industry, industries: taxonomy.results.map((item) => item.term_id), sourceUrl: row.source_url }, authority: row.verification_status === "source-verified" ? 1.4 : 1.3, version: row.version };
+  } else if (type === "application") {
+    const row = await env.DB.prepare("SELECT * FROM ip_applications WHERE slug=? AND deleted_at IS NULL").bind(id).first();
+    if (!row) return null;
+    const names = parseJson(row.names_json);
+    const links = await env.DB.prepare("SELECT ip_slug,role FROM application_ip_links WHERE application_slug=?").bind(id).all();
+    const primary = links.results.find((item) => item.role === "primary")?.ip_slug || "";
+    const title = row.main_language === "en" ? (names.en || names.zh || id) : (names.zh || names.en || id);
+    const body = textValues([names, parseJson(row.description_json), parseJson(row.business_json), parseJson(row.location_json), parseJson(row.overrides_json), links.results]).join("\n");
+    document = { id: `application:${id}`, entityType: "application", entityId: id, ipSlug: primary, language: row.main_language || "und", access: "public", title, body, metadata: { slug: id, applicationType: row.application_type, primaryIp: primary, linkedIps: links.results }, authority: 1.2, version: row.version };
+  } else if (type === "brand") {
     const row = await env.DB.prepare("SELECT * FROM brand_records WHERE slug=?").bind(id).first();
     if (!row) return null;
     const brand = parseJson(row.payload_json);
@@ -49,7 +67,8 @@ async function materializeSearchDocument(env, payload, deferVector = false) {
   } else if (type === "asset") {
     const row = await env.DB.prepare("SELECT * FROM assets WHERE id=? AND deleted_at IS NULL").bind(id).first();
     if (!row) return null;
-    document = { id: `asset:${id}`, entityType: "asset", entityId: id, ipSlug: row.owner_id, language: "und", access: row.access, title: row.title || row.source_filename, body: `${row.role}\n${row.source_filename}\n${row.mime_type}`, metadata: { mimeType: row.mime_type, role: row.role, bytes: row.bytes }, authority: 1, version: row.version };
+    const primary = row.owner_type === "ip-application" ? await env.DB.prepare("SELECT ip_slug FROM application_ip_links WHERE application_slug=? AND role='primary' LIMIT 1").bind(row.owner_id).first() : null;
+    document = { id: `asset:${id}`, entityType: "asset", entityId: id, ipSlug: primary?.ip_slug || row.owner_id, language: "und", access: row.access, title: row.title || row.source_filename, body: `${row.role}\n${row.source_filename}\n${row.mime_type}`, metadata: { mimeType: row.mime_type, role: row.role, bytes: row.bytes, ownerType: row.owner_type, ownerId: row.owner_id }, authority: 1, version: row.version };
   }
   if (!document) return null;
   const contentHash = await sha256(`${document.title}\n${document.body}`);

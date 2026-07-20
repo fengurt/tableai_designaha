@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin · 岁知社 IPTrust</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site-4d8fc4d-05a8f724.css">
-  <link rel="stylesheet" href="assets/editorial.css?v=4d8fc4d-05a8f724">
+  <link rel="stylesheet" href="assets/site-bdd9764-d9f25ec5.css">
+  <link rel="stylesheet" href="assets/editorial.css?v=bdd9764-d9f25ec5">
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="./" aria-label="岁知社"><img src="assets/brand-images/iptrust-logo-black.png" alt="岁知社"></a>
+    <a class="brand" href="./" aria-label="岁知社"><img src="https://media.apuch.art/public/iptrust/iptrust-logo-iptrust-logo-black-4a253cbe0faa/4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64/original.png" alt="岁知社"></a>
     <div class="topbar-search" role="search">
       <input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP">
       <div class="global-results" id="globalResults" aria-live="polite"></div>
@@ -64,21 +64,34 @@
       <p class="notice" id="unlockStatus"></p>
     </section>
     <section class="panel hidden" id="editorPanel">
-      <p class="eyebrow">API</p>
-      <h1 data-i18n="admin.editTitle">编辑品牌记录</h1>
-      <div class="form-grid">
-        <label><span data-i18n="admin.brand">IP</span><select id="brandSelect"></select></label>
-      </div>
-      <div class="actions">
-        <button id="loadBrand">载入</button>
-        <button id="saveBrand">保存</button>
-      </div>
-      <textarea id="editor" spellcheck="false" placeholder="Brand JSON"></textarea>
-      <p class="muted" id="recordVersion"></p>
+      <div class="admin-heading"><div><p class="eyebrow">IPTrust OS</p><h1>管理中枢</h1></div><span class="connected-pill">Connected</span></div>
+      <nav class="admin-tabs" aria-label="Admin sections">
+        <button class="is-active" data-admin-tab="overview">概览</button><button data-admin-tab="ips">IP</button><button data-admin-tab="architecture">品牌架构</button><button data-admin-tab="applications">项目应用</button><button data-admin-tab="assets">资产</button><button data-admin-tab="library">资料库</button><button data-admin-tab="jobs">任务</button><button data-admin-tab="audit">审计</button><button data-admin-tab="keys">API Keys</button>
+      </nav>
+      <section class="admin-view" data-admin-view="overview"><div class="admin-stats" id="adminStats"></div><div class="service-health" id="serviceHealth"></div></section>
+      <section class="admin-view hidden" data-admin-view="ips">
+        <div class="admin-toolbar"><label><span>IP</span><select id="brandSelect"></select></label><button id="loadBrand">载入</button></div>
+        <div class="form-grid">
+          <label><span>中文名称</span><input id="ipNameZh"></label><label><span>English name</span><input id="ipNameEn"></label>
+          <label><span>主语言</span><select id="ipMainLanguage"><option value="zh">中文</option><option value="en">English</option></select></label><label><span>IP 类型</span><select id="ipType"></select></label>
+          <label><span>主行业</span><select id="ipPrimaryIndustry"></select></label><label><span>其他行业</span><select id="ipIndustries" multiple></select></label>
+          <label><span>生命周期</span><select id="ipLifecycle"><option value="active">Active</option><option value="draft">Draft</option><option value="archived">Archived</option></select></label><label><span>规范模式</span><select id="ipGuideline"><option value="independent">Independent</option><option value="inherit">Inherit</option><option value="extend">Extend</option></select></label>
+        </div>
+        <div class="actions"><button id="saveIp">保存字段</button><button class="ghost" id="saveBrand">保存品牌内容</button></div>
+        <details class="advanced-editor"><summary>高级 · Raw JSON</summary><textarea id="editor" spellcheck="false" placeholder="Brand JSON"></textarea></details>
+        <p class="muted" id="recordVersion"></p>
+      </section>
+      <section class="admin-view hidden" data-admin-view="architecture"><div class="admin-split"><form id="relationForm"><h2>连接 IP</h2><label>母 IP<select id="relationParent"></select></label><label>子 IP<select id="relationChild"></select></label><label>关系<select id="relationType"><option value="brand_parent">主母 IP</option><option value="endorsed_by">背书</option><option value="operated_by">运营</option><option value="licensed_by">授权</option><option value="member_of">成员</option><option value="co_branded_with">联合品牌</option></select></label><button>建立关系</button></form><div id="relationList"></div></div></section>
+      <section class="admin-view hidden" data-admin-view="applications"><div class="admin-split"><form id="applicationForm"><div class="admin-form-heading"><h2 id="applicationFormTitle">新增项目应用</h2><button class="ghost" type="button" id="newApplication">新建</button></div><label>Slug<input id="applicationSlug"></label><label>中文名称<input id="applicationNameZh"></label><label>English name<input id="applicationNameEn"></label><label>类型<select id="applicationType"></select></label><label>主 IP<select id="applicationPrimary"></select></label><label>规范模式<select id="applicationGuideline"><option value="inherit">Inherit</option><option value="extend">Extend</option><option value="independent">Independent</option></select></label><label>中文简介<textarea id="applicationDescriptionZh"></textarea></label><label>English intro<textarea id="applicationDescriptionEn"></textarea></label><label>中文业务<textarea id="applicationBusinessZh"></textarea></label><label>English business<textarea id="applicationBusinessEn"></textarea></label><div class="form-grid"><label>省份<input id="applicationProvince"></label><label>城市<input id="applicationCity"></label></div><button id="saveApplication">保存应用</button></form><div id="applicationList"></div></div></section>
+      <section class="admin-view hidden" data-admin-view="assets"><div id="assetList"></div></section>
+      <section class="admin-view hidden" data-admin-view="library"><p>案例、报告、数据与公共品牌库通过资料库 API 管理。</p><a class="button" href="library/">打开资料库</a></section>
+      <section class="admin-view hidden" data-admin-view="jobs"><div id="jobList"></div></section>
+      <section class="admin-view hidden" data-admin-view="audit"><div id="auditList"></div></section>
+      <section class="admin-view hidden" data-admin-view="keys"><div class="step-up"><label>Google Authenticator<input id="stepUpTotp" inputmode="numeric" maxlength="6" placeholder="000000"></label><button id="stepUpButton">验证 10 分钟</button></div><div class="admin-split"><form id="keyForm"><h2>创建 API Key</h2><label>名称<input id="keyLabel" required></label><label>类型<select id="keyKind"><option value="service">Service</option><option value="partner">Partner</option><option value="agent">Agent</option></select></label><label>Scopes<input id="keyScopes" value="brands:read,ips:read,assets:read"></label><label>IP 范围<input id="keyIpScopes" value="*"></label><button>创建 Key</button><pre class="new-key-token hidden" id="newKeyToken"></pre></form><div id="keyList"></div></div></section>
       <p class="notice" id="editorStatus"></p>
     </section>
   </main>
-  <script src="assets/site-4d8fc4d-05a8f724.js" type="module"></script>
+  <script src="assets/site-bdd9764-d9f25ec5.js" type="module"></script>
   <script src="assets/admin.js" type="module"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "4d8fc4d-05a8f724";
+const BUILD_VERSION = "bdd9764-d9f25ec5";
 
 const i18n = {
   cn: {
@@ -422,7 +422,7 @@ function setupSearch() {
 }
 
 async function loadJson(path) {
-  const url = new URL(path, location.href);
+  const url = path.startsWith("api/") ? new URL("../" + path, import.meta.url) : new URL(path, location.href);
   url.searchParams.set("v", BUILD_VERSION);
   const res = await fetch(url, { cache: "no-cache" });
   if (!res.ok) throw new Error(`Could not load ${path}`);
@@ -442,6 +442,26 @@ function escapeHtml(value) {
     '"': "&quot;",
     "'": "&#039;",
   }[char]));
+}
+
+function mediaPreviewUrl(value, size = "640") {
+  try {
+    const url = new URL(value, location.href);
+    if (url.hostname === "media.apuch.art" && url.pathname.startsWith("/public/")) {
+      url.searchParams.set("size", String(size));
+    }
+    return url.href;
+  } catch {
+    return String(value || "");
+  }
+}
+
+function responsiveImageAttributes(value, widths = [320, 640, 1280], sizes = "100vw") {
+  const normalized = [...new Set(widths.map(String))];
+  const fallback = normalized[Math.min(1, normalized.length - 1)] || "640";
+  const src = mediaPreviewUrl(value, fallback);
+  const srcset = normalized.map((width) => mediaPreviewUrl(value, width) + " " + width + "w").join(", ");
+  return 'src="' + escapeHtml(src) + '" srcset="' + escapeHtml(srcset) + '" sizes="' + escapeHtml(sizes) + '"';
 }
 
 function copyIcon() {
@@ -562,7 +582,7 @@ function cardClass(brand = {}) {
 
 function cardHeroImage(brand = {}, localized = {}) {
   if (!brand.heroImage) return "";
-  return `<img src="${escapeHtml(brand.heroImage)}" alt="${escapeHtml(localized.name || brand.name || "")}" loading="lazy">`;
+  return `<img ${responsiveImageAttributes(brand.heroImage, [320, 640, 1280], "(max-width: 760px) 100vw, 33vw")} alt="${escapeHtml(localized.name || brand.name || "")}" loading="lazy" decoding="async">`;
 }
 
 function statusLabel(status) {
@@ -1327,7 +1347,7 @@ function brandAssetStrip(images = []) {
         ${images.map((image) => `
           <div class="brand-asset" title="${escapeHtml(image.title || image.path || "")}">
             <a class="brand-asset-link" href="${escapeHtml(image.sitePath)}">
-              <img src="${escapeHtml(image.sitePath)}" alt="${escapeHtml(image.title || "")}" loading="lazy">
+              <img ${responsiveImageAttributes(image.sitePath, [320, 640, 1280], "(max-width: 760px) 54vw, 240px")} alt="${escapeHtml(image.title || "")}" loading="lazy" decoding="async">
             </a>
             <button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="${escapeHtml(image.sitePath)}" aria-label="${escapeHtml(t("copy.assetUrl"))}">${copyIcon()}</button>
             <div class="brand-asset-info">
@@ -1356,7 +1376,7 @@ function adobeAssetPanel(adobeAssets = []) {
       ${adobeAssets.map((asset) => `
         <article class="adobe-source-file">
           <div class="adobe-source-preview">
-            ${asset.preview?.sitePath ? `<img src="${escapeHtml(asset.preview.sitePath)}" alt="${escapeHtml(asset.title || "Adobe asset")}" loading="lazy">` : ""}
+            ${asset.preview?.sitePath ? `<img ${responsiveImageAttributes(asset.preview.sitePath, [320, 640, 1280], "(max-width: 760px) 100vw, 42vw")} alt="${escapeHtml(asset.title || "Adobe asset")}" loading="lazy" decoding="async">` : ""}
             ${asset.preview?.sitePath ? `<button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="${escapeHtml(asset.preview.sitePath)}" aria-label="${escapeHtml(t("copy.assetUrl"))}">${copyIcon()}</button>` : ""}
           </div>
           <div class="adobe-source-body">
@@ -1662,7 +1682,7 @@ async function renderBrand() {
         </div>
         ${hero ? `
           <div class="brand-visual">
-            <img src="${escapeHtml(hero.sitePath)}" alt="${escapeHtml(hero.title || display.name)}">
+            <img ${responsiveImageAttributes(hero.sitePath, [640, 1280, 2400], "(max-width: 900px) 100vw, 52vw")} alt="${escapeHtml(hero.title || display.name)}" decoding="async">
             <button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="${escapeHtml(hero.sitePath)}" aria-label="${escapeHtml(t("copy.assetUrl"))}">${copyIcon()}</button>
             <div class="brand-visual-meta">
               <strong>${escapeHtml(hero.title || display.name)}</strong>
@@ -1673,6 +1693,7 @@ async function renderBrand() {
         ` : ""}
       </section>
       ${profileEditor(brand)}
+      <section class="brand-architecture" id="brandArchitecture" aria-live="polite"></section>
       ${ipSystemPanel(brand)}
       ${brandAssetHub(brand)}
       ${adobeAssetPanel(brand.adobeAssets || [])}
@@ -1703,13 +1724,148 @@ async function renderBrand() {
   setupProfileEditor(brand);
   setupIpSystemPanel(brand);
   setupAssetCopyButtons();
+  renderBrandArchitecture(slug).catch(console.error);
+}
+
+function primaryIpName(ip = {}) {
+  return ip.mainLanguage === "en" ? (ip.names?.en || ip.names?.zh || ip.slug) : (ip.names?.zh || ip.names?.en || ip.slug);
+}
+
+function setupDirectoryLink() {
+  document.querySelectorAll(".top-actions").forEach((nav) => {
+    if (nav.querySelector('[href="directory"]')) return;
+    const link = document.createElement("a");
+    link.href = "directory";
+    link.textContent = "Directory";
+    nav.insertBefore(link, nav.firstChild);
+  });
+}
+
+function secondaryIpName(ip = {}) {
+  const primary = primaryIpName(ip);
+  return [ip.names?.zh, ip.names?.en].find((name) => name && name !== primary) || "";
+}
+
+async function loadIpSystem() {
+  try {
+    const [ips, taxonomy, applications, relationships] = await Promise.all([loadJson("api/v2/ips"), loadJson("api/v2/taxonomy"), loadJson("api/v2/applications"), loadJson("api/v2/ip-relations")]);
+    return { ips: ips.items || [], taxonomy, applications: applications.items || [], relationships: relationships.items || [] };
+  } catch {
+    const [snapshot, taxonomy] = await Promise.all([loadJson("api/ips.json"), loadJson("api/taxonomy.json")]);
+    return { ips: snapshot.items || [], taxonomy, applications: snapshot.applications || [], relationships: snapshot.relationships || [] };
+  }
+}
+
+function taxonomyLabel(term = {}) {
+  return term.labels?.[currentLocale === "en" ? "en" : "zh"] || term[currentLocale === "en" ? "en" : "zh"] || term.id || "";
+}
+
+function selectOptions(items, active, empty) {
+  return `<option value="">${escapeHtml(empty)}</option>${items.map((item) => `<option value="${escapeHtml(item.id)}" ${active === item.id ? "selected" : ""}>${escapeHtml(taxonomyLabel(item))}</option>`).join("")}`;
+}
+
+async function renderDirectory() {
+  const page = $("#directoryPage");
+  if (!page) return;
+  const data = await loadIpSystem();
+  const params = new URLSearchParams(location.search);
+  const industry = params.get("industry") || "";
+  const ipType = params.get("type") || "";
+  const parent = params.get("parent") || "";
+  const query = (params.get("q") || "").trim().toLowerCase();
+  const parents = new Map((data.relationships || []).filter((item) => item.type === "brand_parent" && item.primary).map((item) => [item.child, item.parent]));
+  const filtered = data.ips.filter((ip) => (!industry || ip.primaryIndustry === industry || ip.industries?.includes(industry)) && (!ipType || ip.ipType === ipType) && (!parent || parents.get(ip.slug) === parent) && (!query || [ip.slug, ip.names?.zh, ip.names?.en].join(" ").toLowerCase().includes(query)));
+  const parentIps = data.ips.filter((ip) => (data.relationships || []).some((relation) => relation.parent === ip.slug));
+  page.innerHTML = `
+    <header class="directory-hero"><p class="eyebrow">IPTrust Directory</p><h1>${currentLocale === "en" ? "IP, clearly structured." : "看清每个 IP 的位置。"}</h1><p>${data.ips.length} IP · ${data.applications.length} ${currentLocale === "en" ? "applications" : "项目应用"}</p></header>
+    <form class="directory-filters" id="directoryFilters">
+      <input name="q" value="${escapeHtml(params.get("q") || "")}" placeholder="${currentLocale === "en" ? "Search IP" : "搜索 IP"}">
+      <select name="industry">${selectOptions(data.taxonomy.industries || [], industry, currentLocale === "en" ? "All industries" : "全部行业")}</select>
+      <select name="type">${selectOptions(data.taxonomy.ipTypes || [], ipType, currentLocale === "en" ? "All IP types" : "全部类型")}</select>
+      <select name="parent"><option value="">${currentLocale === "en" ? "All parent IPs" : "全部母 IP"}</option>${parentIps.map((ip) => `<option value="${ip.slug}" ${parent === ip.slug ? "selected" : ""}>${escapeHtml(primaryIpName(ip))}</option>`).join("")}</select>
+      <button type="submit">${currentLocale === "en" ? "Apply" : "筛选"}</button>
+    </form>
+    <section class="directory-list">${filtered.map((ip) => {
+      const parentIp = data.ips.find((candidate) => candidate.slug === parents.get(ip.slug));
+      const href = ip.recordClass === "owned" ? (ip.url || `brand.html?brand=${ip.slug}`) : `ip?ip=${ip.slug}`;
+      return `<a class="directory-row" href="${escapeHtml(href)}"><span class="directory-name"><strong>${escapeHtml(primaryIpName(ip))}</strong>${secondaryIpName(ip) ? `<small>${escapeHtml(secondaryIpName(ip))}</small>` : ""}</span><span>${escapeHtml(taxonomyLabel((data.taxonomy.industries || []).find((item) => item.id === ip.primaryIndustry)))}</span><span>${escapeHtml(taxonomyLabel((data.taxonomy.ipTypes || []).find((item) => item.id === ip.ipType)))}</span><span>${parentIp ? `↳ ${escapeHtml(primaryIpName(parentIp))}` : ""}</span><b>↗</b></a>`;
+    }).join("") || `<p class="empty-state">${escapeHtml(t("home.noResults"))}</p>`}</section>
+    <section class="application-directory"><header><p class="eyebrow">Applications</p><h2>${currentLocale === "en" ? "Project applications" : "项目应用"}</h2></header>${data.applications.map((app) => `<a href="application?application=${escapeHtml(app.slug)}"><strong>${escapeHtml(app.mainLanguage === "en" ? (app.names?.en || app.names?.zh) : (app.names?.zh || app.names?.en))}</strong><span>${escapeHtml(app.applicationType)}</span><b>↗</b></a>`).join("")}</section>
+  `;
+}
+
+async function fallbackGraph(slug) {
+  const data = await loadIpSystem();
+  const ip = data.ips.find((item) => item.slug === slug);
+  if (!ip) return null;
+  const findNames = (candidate) => data.ips.find((item) => item.slug === candidate)?.names || {};
+  return {
+    ip,
+    parents: data.relationships.filter((item) => item.child === slug).map((item) => ({ ...item, parentNames: findNames(item.parent), childNames: findNames(item.child) })),
+    children: data.relationships.filter((item) => item.parent === slug).map((item) => ({ ...item, parentNames: findNames(item.parent), childNames: findNames(item.child) })),
+    applications: data.applications.filter((app) => app.links?.some((link) => link.ip === slug)),
+  };
+}
+
+async function loadGraph(slug) {
+  try { return await loadJson(`api/v2/ips/${encodeURIComponent(slug)}/graph`); } catch { return fallbackGraph(slug); }
+}
+
+async function renderIpRecord() {
+  const page = $("#ipRecordPage");
+  if (!page) return;
+  const slug = new URLSearchParams(location.search).get("ip") || "";
+  const graph = await loadGraph(slug);
+  if (!graph) { page.innerHTML = `<p class="empty-state">IP not found.</p>`; return; }
+  const ip = graph.ip;
+  page.innerHTML = `<article class="record-detail"><p class="eyebrow">${escapeHtml(ip.recordClass)} · ${escapeHtml(ip.ipType)}</p><h1>${escapeHtml(primaryIpName(ip))}</h1><p class="record-secondary">${escapeHtml(secondaryIpName(ip))}</p><div class="record-facts"><span>${escapeHtml(ip.primaryIndustry)}</span><span>${escapeHtml(ip.lifecycleStatus)}</span><span>${escapeHtml(ip.guidelineMode)}</span></div>${ip.sourceUrl ? `<a class="button" href="${escapeHtml(ip.sourceUrl)}" rel="noreferrer">Official source ↗</a>` : ""}</article>${graph.parents?.length ? `<section class="lineage-block"><p class="eyebrow">Parent IP</p>${graph.parents.map((relation) => `<a href="ip?ip=${relation.parent}">${escapeHtml(relation.parentNames?.zh || relation.parentNames?.en || relation.parent)}</a>`).join("")}</section>` : ""}${graph.children?.length ? `<section class="lineage-block"><p class="eyebrow">Child IP</p>${graph.children.map((relation) => `<a href="ip?ip=${relation.child}">${escapeHtml(relation.childNames?.zh || relation.childNames?.en || relation.child)}</a>`).join("")}</section>` : ""}${graph.applications?.length ? `<section class="lineage-block"><p class="eyebrow">Applications</p>${graph.applications.map((app) => `<a href="application?application=${app.slug}">${escapeHtml(primaryIpName(app))}</a>`).join("")}</section>` : ""}`;
+}
+
+async function renderApplicationPage() {
+  const page = $("#applicationPage");
+  if (!page) return;
+  const slug = new URLSearchParams(location.search).get("application") || "";
+  const ipSystemData = await loadIpSystem();
+  let app;
+  try { app = await loadJson(`api/v2/applications/${encodeURIComponent(slug)}`); } catch { app = ipSystemData.applications.find((item) => item.slug === slug); }
+  if (!app) { page.innerHTML = `<p class="empty-state">Application not found.</p>`; return; }
+  const title = app.mainLanguage === "en" ? (app.names?.en || app.names?.zh) : (app.names?.zh || app.names?.en);
+  const primary = app.links?.find((link) => link.role === "primary")?.ip || "";
+  const primaryRecord = ipSystemData.ips.find((item) => item.slug === primary);
+  page.innerHTML = `<article class="record-detail"><p class="eyebrow">${escapeHtml(app.applicationType)} · Application</p><h1>${escapeHtml(title)}</h1><p class="record-secondary">${escapeHtml(app.description?.[currentLocale === "en" ? "en" : "zh"] || app.description?.zh || app.description?.en || "")}</p><div class="record-facts"><a href="ip?ip=${escapeHtml(primary)}">Primary IP · ${escapeHtml(primaryRecord ? primaryIpName(primaryRecord) : primary)}</a><span>${escapeHtml(app.guidelineMode)} guidelines</span><span>${escapeHtml([app.location?.province, app.location?.city].filter(Boolean).join(" · "))}</span></div></article>`;
+  const [assetData, historyData] = await Promise.all([
+    loadJson("api/v2/assets?ownerType=ip-application&ownerId=" + encodeURIComponent(slug)).catch(() => ({ items: [] })),
+    loadJson("api/v2/applications/" + encodeURIComponent(slug) + "/history").catch(() => ({ items: [] })),
+  ]);
+  const details = document.createElement("section");
+  details.className = "application-details";
+  const linked = (app.links || []).filter((link) => link.role !== "primary");
+  const business = app.business?.[currentLocale === "en" ? "en" : "zh"] || app.business?.zh || app.business?.en || "";
+  details.innerHTML = '<div><p class="eyebrow">Guideline inheritance</p><h2>' + escapeHtml(app.guidelineMode === "inherit" ? "继承主 IP 规范" : app.guidelineMode) + '</h2><p>' + escapeHtml(Object.keys(app.overrides || {}).length ? "含局部覆盖" : "无局部覆盖") + '</p></div>'
+    + '<div><p class="eyebrow">Linked IP</p>' + (linked.map((link) => '<a href="ip?ip=' + escapeHtml(link.ip) + '">' + escapeHtml(link.role + " · " + link.ip) + '</a>').join("") || '<p class="muted">None</p>') + '</div>'
+    + '<div><p class="eyebrow">Business</p><p>' + escapeHtml(business || t("brand.blank")) + '</p></div>'
+    + '<div><p class="eyebrow">Assets</p><p>' + escapeHtml(String(assetData.items?.length || 0)) + ' files</p></div>'
+    + '<div><p class="eyebrow">History</p><p>' + escapeHtml(String(historyData.items?.length || 0)) + ' revisions</p></div>';
+  page.append(details);
+}
+
+async function renderBrandArchitecture(slug) {
+  const node = $("#brandArchitecture");
+  if (!node) return;
+  const graph = await loadGraph(slug);
+  if (!graph || (!graph.parents?.length && !graph.children?.length && !graph.applications?.length)) { node.remove(); return; }
+  node.innerHTML = `<header><p class="eyebrow">Architecture</p><h2>${currentLocale === "en" ? "Brand lineage" : "品牌谱系"}</h2></header><div class="lineage-grid">${graph.parents.map((relation) => `<a href="ip?ip=${relation.parent}"><small>Parent IP</small><strong>${escapeHtml(relation.parentNames?.zh || relation.parentNames?.en || relation.parent)}</strong></a>`).join("")}${graph.children.map((relation) => `<a href="ip?ip=${relation.child}"><small>Child IP</small><strong>${escapeHtml(relation.childNames?.zh || relation.childNames?.en || relation.child)}</strong></a>`).join("")}${graph.applications.map((app) => `<a href="application?application=${app.slug}"><small>Application</small><strong>${escapeHtml(app.names?.zh || app.names?.en || app.slug)}</strong></a>`).join("")}</div>`;
 }
 
 applyI18n();
 setupLanguageToggle();
+setupDirectoryLink();
 setupSearch();
 setupPortalActions();
 setupApiConnect();
 renderHeroIndex().catch(console.error);
 renderIndex().catch(console.error);
 renderBrand().catch(console.error);
+renderDirectory().catch(console.error);
+renderIpRecord().catch(console.error);
+renderApplicationPage().catch(console.error);

@@ -96,7 +96,7 @@ function publicResult(row, score) {
   };
 }
 
-export async function search(env, actor, { query, mode = "hybrid", limit = 20, types = [], ip = "" }) {
+export async function search(env, actor, { query, mode = "hybrid", limit = 20, types = [], ip = "", industry = "", ipType = "" }) {
   const capped = Math.min(Math.max(Number(limit || 20), 1), 50);
   const poolSize = Math.min(capped * 3, 50);
   const [lexicalRows, semanticRows] = await Promise.all([
@@ -106,7 +106,10 @@ export async function search(env, actor, { query, mode = "hybrid", limit = 20, t
   const scores = new Map();
   const rows = new Map();
   const add = (items, weight) => items.forEach((row, index) => {
+    const metadata = parseJson(row.metadata_json || "{}");
     if (!visible(row, actor) || (ip && row.ip_slug !== ip) || (types.length && !types.includes(row.entity_type))) return;
+    if (industry && metadata.primaryIndustry !== industry && !metadata.industries?.includes?.(industry)) return;
+    if (ipType && metadata.ipType !== ipType) return;
     rows.set(row.id, row);
     scores.set(row.id, (scores.get(row.id) || 0) + weight / (60 + index + 1));
   });

@@ -1,11 +1,20 @@
 {
-  "name": "IPTrust Brand API Schema",
-  "version": "1.1.0",
-  "description": "Every public IPTrust brand field is callable through JSON APIs and versioned through Git-backed history endpoints.",
+  "name": "IPTrust IP System API Schema",
+  "version": "2.0.0",
+  "description": "IPTrust exposes brands, IP taxonomy, brand architecture, project applications, assets and history through REST and MCP.",
   "endpoints": {
     "manifest": "api/manifest.json",
     "allBrands": "api/brands.json",
-    "search": "api/search.json",
+    "taxonomy": "api/v2/taxonomy",
+    "ips": "api/v2/ips",
+    "ip": "api/v2/ips/{slug}",
+    "ipHistory": "api/v2/ips/{slug}/history",
+    "ipGraph": "api/v2/ips/{slug}/graph",
+    "ipRelations": "api/v2/ip-relations",
+    "applications": "api/v2/applications",
+    "application": "api/v2/applications/{slug}",
+    "applicationHistory": "api/v2/applications/{slug}/history",
+    "search": "api/v2/search",
     "organizations": "api/library/organizations",
     "cases": "api/library/cases",
     "reports": "api/library/reports",
@@ -17,7 +26,8 @@
     "ipSystem": "ip_sys.md",
     "skill": "skills/iptrust-live-update/SKILL.md",
     "llms": "llms.txt",
-    "remoteMcp": "mcp"
+    "remoteMcp": "mcp",
+    "directory": "directory/"
   },
   "brandFields": {
     "slug": "Stable IP ID / asset key used by URLs and agent calls.",
@@ -51,7 +61,25 @@
     "editablePaths": "Source files editable from admin flow.",
     "source": "GitHub source folder and local folder.",
     "version": "Latest build/global version object.",
-    "history": "Latest per-IP history records."
+    "history": "Latest per-IP history records.",
+    "primaryIndustry": "Primary term from the controlled bilingual industry taxonomy.",
+    "industries": "One or more controlled industry taxonomy terms.",
+    "ipType": "Controlled single IP type; parent/child status is represented by relationships.",
+    "recordClass": "owned or reference.",
+    "lifecycleStatus": "Lifecycle state such as active, draft, archived or retired.",
+    "guidelineMode": "independent or inherited guideline behavior."
+  },
+  "architecture": {
+    "primaryParent": "One optional brand_parent relationship; cycles are rejected.",
+    "auxiliaryRelations": [
+      "endorsed_by",
+      "operated_by",
+      "licensed_by",
+      "member_of",
+      "co_branded_with"
+    ],
+    "applications": "Stores, properties, deployments, events, content series, digital products and collaborations remain applications rather than independent IPs.",
+    "inheritance": "An application inherits its primary IP guideline and stores local changes in overrides."
   },
   "versioning": {
     "model": "Git-backed history. Source edits flow through repository commits, then build into website JSON.",

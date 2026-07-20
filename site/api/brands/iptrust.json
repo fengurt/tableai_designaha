@@ -151,15 +151,35 @@
     "zh": "",
     "en": ""
   },
+  "recordClass": "owned",
+  "primaryIndustry": "business-professional-services",
+  "industries": [
+    "business-professional-services",
+    "technology-ai"
+  ],
+  "ipType": "platform-system-ip",
+  "lifecycleStatus": "active",
+  "guidelineMode": "independent",
   "version": {
-    "hash": "4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9",
-    "shortHash": "4d8fc4d",
-    "date": "2026-07-19T14:16:14+08:00",
-    "message": "Fix GitHub Pages dependency install",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9"
+    "hash": "bdd9764d1d5239666a3b9def6e2cafbdf4d1e659",
+    "shortHash": "bdd9764",
+    "date": "2026-07-19T21:49:19+08:00",
+    "message": "fix: normalize brand search indexing",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/bdd9764d1d5239666a3b9def6e2cafbdf4d1e659"
   },
   "historyUrl": "api/history/iptrust.json",
   "history": [
+    {
+      "hash": "6e096d2f1250e265b38f71788760071c1a31c469",
+      "shortHash": "6e096d2",
+      "date": "2026-07-19T21:20:43+08:00",
+      "message": "feat: move IPTrust platform to Cloudflare edge storage",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/6e096d2f1250e265b38f71788760071c1a31c469",
+      "sourcePaths": [
+        "config/brands.json",
+        "IPTRUST"
+      ]
+    },
     {
       "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
       "shortHash": "eaf4320",
@@ -210,17 +230,6 @@
       "date": "2026-07-10T18:44:20+08:00",
       "message": "Add Shanrenjing journey safety IP",
       "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
-      "sourcePaths": [
-        "config/brands.json",
-        "IPTRUST"
-      ]
-    },
-    {
-      "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
-      "shortHash": "cd0ea58",
-      "date": "2026-07-08T04:12:48+08:00",
-      "message": "Refine hero index labels",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
       "sourcePaths": [
         "config/brands.json",
         "IPTRUST"

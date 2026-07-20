@@ -13,11 +13,11 @@
     "KiND/KiND Design.md"
   ],
   "latest": {
-    "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
-    "shortHash": "eaf4320",
-    "date": "2026-07-19T14:13:21+08:00",
-    "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+    "hash": "6e096d2f1250e265b38f71788760071c1a31c469",
+    "shortHash": "6e096d2",
+    "date": "2026-07-19T21:20:43+08:00",
+    "message": "feat: move IPTrust platform to Cloudflare edge storage",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/6e096d2f1250e265b38f71788760071c1a31c469",
     "sourcePaths": [
       "config/brands.json",
       "KiND",
@@ -25,6 +25,18 @@
     ]
   },
   "versions": [
+    {
+      "hash": "6e096d2f1250e265b38f71788760071c1a31c469",
+      "shortHash": "6e096d2",
+      "date": "2026-07-19T21:20:43+08:00",
+      "message": "feat: move IPTrust platform to Cloudflare edge storage",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/6e096d2f1250e265b38f71788760071c1a31c469",
+      "sourcePaths": [
+        "config/brands.json",
+        "KiND",
+        "KiND/KiND Design.md"
+      ]
+    },
     {
       "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
       "shortHash": "eaf4320",
@@ -247,18 +259,6 @@
       "date": "2026-07-04T07:52:24+08:00",
       "message": "Add IPTrust brand systems",
       "url": "https://github.com/fengurt/tableai_designaha/commit/a550421605e0fadecfb30c3fd5066754feda54d7",
-      "sourcePaths": [
-        "config/brands.json",
-        "KiND",
-        "KiND/KiND Design.md"
-      ]
-    },
-    {
-      "hash": "e98dae7a98dfe32921ebc76e2783caeb85e64d61",
-      "shortHash": "e98dae7",
-      "date": "2026-07-03T21:55:07+08:00",
-      "message": "Add per-IP brand theming to design site",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/e98dae7a98dfe32921ebc76e2783caeb85e64d61",
       "sourcePaths": [
         "config/brands.json",
         "KiND",

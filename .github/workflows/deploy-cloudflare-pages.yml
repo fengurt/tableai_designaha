@@ -56,7 +56,7 @@ jobs:
           npm run seed:library
           npx wrangler d1 migrations apply iptrust-library --remote --config edge/wrangler.toml
           npx wrangler d1 execute iptrust-library --remote --config edge/wrangler.toml --file .tmp/iptrust-library-seed.sql
-      - name: Import version-safe brand snapshots
+      - name: Import version-safe IP architecture snapshots
         if: steps.cloudflare.outputs.enabled == 'true'
         run: |
           npm run seed:platform -- --brands-only
