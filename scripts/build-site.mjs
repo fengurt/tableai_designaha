@@ -1053,16 +1053,21 @@ await writeFile(join(siteDir, "_redirects"), [
 
 await writeFile(join(siteDir, "_routes.json"), JSON.stringify({
   version: 1,
-  include: ["/*"],
+  include: [
+    "/api/v2/*",
+    "/mcp",
+    "/assets/brand-images/*",
+    "/assets/adobe/*",
+    "/assets/contact/*",
+  ],
   exclude: [],
 }, null, 2));
 
 await writeFile(join(siteDir, "_worker.js"), `const EDGE_ORIGIN = "https://edge.apuch.art";
 
 export default {
-  async fetch(request, env) {
+  async fetch(request) {
     const incoming = new URL(request.url);
-    if (incoming.hostname.endsWith(".pages.dev")) return env.ASSETS.fetch(request);
     const upstream = new URL(\`${'${incoming.pathname}${incoming.search}'}\`, EDGE_ORIGIN);
     const headers = new Headers(request.headers);
     headers.delete("host");
@@ -1277,7 +1282,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       <article class="portal" id="collab-entry">
         <p class="eyebrow">Collab</p>
         <h3 data-i18n="portal.collabTitle">我想合作</h3>
-        <p data-i18n="portal.collabBody">hi@tableai.ai</p>
+        <p data-i18n="portal.collabBody">Email</p>
         <button class="portal-action" type="button" data-portal-action="collab" data-portal-href="mailto:hi@tableai.ai" data-i18n="portal.collabAction">Email</button>
         <p class="portal-status" data-portal-status="collab" aria-live="polite"></p>
       </article>

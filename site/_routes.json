@@ -1,7 +1,11 @@
 {
   "version": 1,
   "include": [
-    "/*"
+    "/api/v2/*",
+    "/mcp",
+    "/assets/brand-images/*",
+    "/assets/adobe/*",
+    "/assets/contact/*"
   ],
   "exclude": []
 }
