@@ -5,8 +5,6 @@ compatibility_flags = ["nodejs_compat"]
 workers_dev = true
 
 routes = [
-  { pattern = "apuch.art/*", zone_name = "apuch.art" },
-  { pattern = "www.apuch.art/*", zone_name = "apuch.art" },
   { pattern = "edge.apuch.art", custom_domain = true },
   { pattern = "media.apuch.art", custom_domain = true }
 ]
