@@ -81,6 +81,7 @@ async function loadIp() {
   setSelectValues($("#ipIndustries"), ip.industries || []);
   $("#ipLifecycle").value = ip.lifecycleStatus;
   $("#ipGuideline").value = ip.guidelineMode;
+  $("#ipParentCapable").checked = Boolean(ip.parentCapable);
   $("#editor").value = JSON.stringify(state.brand, null, 2);
   $("#recordVersion").textContent = state.ipEtag;
   status("已载入 " + primaryName(ip));
@@ -95,6 +96,7 @@ async function saveIp() {
     industries: [...$("#ipIndustries").selectedOptions].map((option) => option.value),
     lifecycleStatus: $("#ipLifecycle").value,
     guidelineMode: $("#ipGuideline").value,
+    parentCapable: $("#ipParentCapable").checked,
   };
   const result = await api("api/v2/ips/" + encodeURIComponent(state.slug), {
     method: "PATCH",

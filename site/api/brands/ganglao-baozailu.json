@@ -1,0 +1,338 @@
+{
+  "slug": "ganglao-baozailu",
+  "folder": "GanglaoBaozailu",
+  "name": "港佬煲仔炉车仔面碟头饭",
+  "nativeName": "",
+  "description": "聚焦煲仔饭、车仔面与碟头饭的港式街坊餐饮品牌。",
+  "officialWebsite": "",
+  "mainLanguage": "zh",
+  "intro": {
+    "zh": "港佬煲仔炉车仔面碟头饭聚焦煲仔饭、车仔面与碟头饭等港式街坊餐饮，公开资料仍待进一步核验。",
+    "en": ""
+  },
+  "business": {
+    "zh": "煲仔饭、车仔面、碟头饭与港式简餐。",
+    "en": ""
+  },
+  "notes": {
+    "zh": "品牌定位依据现有名称建立，来源状态为 provisional。",
+    "en": ""
+  },
+  "primaryGuide": "GanglaoBaozailu/README.md",
+  "sources": [],
+  "theme": {
+    "mode": "light",
+    "primary": "#25594F",
+    "accent": "#D36B3F",
+    "secondary": "#D0B05A",
+    "surface": "#EEF4F0",
+    "paper": "#FFFEFA",
+    "ink": "#182720",
+    "muted": "#66746E",
+    "line": "rgba(37, 89, 79, 0.18)",
+    "provisional": true,
+    "keywords": [
+      "claypot rice",
+      "cart noodles",
+      "Hong Kong",
+      "street dining"
+    ]
+  },
+  "classification": {
+    "tracks": {
+      "zh": [
+        "港式简餐",
+        "煲仔饭",
+        "车仔面"
+      ],
+      "en": []
+    },
+    "audiences": {
+      "zh": [
+        "社区食客",
+        "上班族",
+        "年轻客群"
+      ],
+      "en": []
+    },
+    "tags": {
+      "zh": [
+        "煲仔饭",
+        "车仔面",
+        "碟头饭",
+        "港式"
+      ],
+      "en": []
+    }
+  },
+  "assetKey": "ganglao-baozailu",
+  "mainName": "港佬煲仔炉车仔面碟头饭",
+  "mainLocale": "CN",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "mainLocale": "CN",
+    "intro": {
+      "zh": "港佬煲仔炉车仔面碟头饭聚焦煲仔饭、车仔面与碟头饭等港式街坊餐饮，公开资料仍待进一步核验。",
+      "en": ""
+    },
+    "business": {
+      "zh": "煲仔饭、车仔面、碟头饭与港式简餐。",
+      "en": ""
+    },
+    "notes": {
+      "zh": "品牌定位依据现有名称建立，来源状态为 provisional。",
+      "en": ""
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "港式简餐",
+          "煲仔饭",
+          "车仔面"
+        ],
+        "en": []
+      },
+      "audiences": {
+        "zh": [
+          "社区食客",
+          "上班族",
+          "年轻客群"
+        ],
+        "en": []
+      },
+      "tags": {
+        "zh": [
+          "煲仔饭",
+          "车仔面",
+          "碟头饭",
+          "港式"
+        ],
+        "en": []
+      }
+    }
+  },
+  "display": {
+    "default": {
+      "language": "zh",
+      "name": "港佬煲仔炉车仔面碟头饭"
+    },
+    "zh": {
+      "name": "港佬煲仔炉车仔面碟头饭",
+      "secondaryName": ""
+    },
+    "en": {
+      "name": "港佬煲仔炉车仔面碟头饭",
+      "secondaryName": ""
+    }
+  },
+  "recordClass": "owned",
+  "primaryIndustry": "food-beverage",
+  "industries": [
+    "food-beverage"
+  ],
+  "ipType": "product-service-brand",
+  "lifecycleStatus": "active",
+  "guidelineMode": "extend",
+  "parentCapable": false,
+  "architectureRoles": [
+    "child"
+  ],
+  "version": {
+    "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+    "shortHash": "f751eee",
+    "date": "2026-07-20T08:17:19+08:00",
+    "message": "fix: prevent orphaned directory headline",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+  },
+  "historyUrl": "api/history/ganglao-baozailu.json",
+  "history": [
+    {
+      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+      "shortHash": "bc7b985",
+      "date": "2026-07-20T08:12:03+08:00",
+      "message": "feat: add IP taxonomy and brand architecture",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+      "sourcePaths": [
+        "config/brands.json",
+        "GanglaoBaozailu",
+        "GanglaoBaozailu/README.md"
+      ]
+    },
+    {
+      "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "shortHash": "eaf4320",
+      "date": "2026-07-19T14:13:21+08:00",
+      "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "sourcePaths": [
+        "config/brands.json",
+        "GanglaoBaozailu",
+        "GanglaoBaozailu/README.md"
+      ]
+    },
+    {
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "sourcePaths": [
+        "config/brands.json",
+        "GanglaoBaozailu",
+        "GanglaoBaozailu/README.md"
+      ]
+    },
+    {
+      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "shortHash": "a5bf7cf",
+      "date": "2026-07-10T20:21:24+08:00",
+      "message": "Replace contrast-template brand copy",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "sourcePaths": [
+        "config/brands.json",
+        "GanglaoBaozailu",
+        "GanglaoBaozailu/README.md"
+      ]
+    },
+    {
+      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "shortHash": "ed33a8b",
+      "date": "2026-07-10T18:44:20+08:00",
+      "message": "Add Shanrenjing journey safety IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "sourcePaths": [
+        "config/brands.json",
+        "GanglaoBaozailu",
+        "GanglaoBaozailu/README.md"
+      ]
+    },
+    {
+      "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "shortHash": "cd0ea58",
+      "date": "2026-07-08T04:12:48+08:00",
+      "message": "Refine hero index labels",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "sourcePaths": [
+        "config/brands.json",
+        "GanglaoBaozailu",
+        "GanglaoBaozailu/README.md"
+      ]
+    }
+  ],
+  "url": "brand.html?brand=ganglao-baozailu",
+  "apiUrl": "api/brands/ganglao-baozailu.json",
+  "status": "documented",
+  "guides": [
+    {
+      "path": "GanglaoBaozailu/README.md",
+      "title": "README",
+      "format": "md",
+      "primary": true,
+      "excerpt": "港佬煲仔炉车仔面碟头饭 中文优先的港式街坊餐饮 IP，为同里市集子 IP。 定位：煲仔饭、车仔面、碟头饭与港式简餐 规范模式：继承并扩展同里市集 资料状态：Provisional，待官方资料核验",
+      "text": "# 港佬煲仔炉车仔面碟头饭\n\n中文优先的港式街坊餐饮 IP，为同里市集子 IP。\n\n- 定位：煲仔饭、车仔面、碟头饭与港式简餐\n- 规范模式：继承并扩展同里市集\n- 资料状态：Provisional，待官方资料核验\n\n",
+      "html": "<h1 id=\"ganglao-baozailu-guide-1-港佬煲仔炉车仔面碟头饭\">港佬煲仔炉车仔面碟头饭</h1>\n<p>中文优先的港式街坊餐饮 IP，为同里市集子 IP。</p>\n<ul>\n<li>定位：煲仔饭、车仔面、碟头饭与港式简餐</li>\n<li>规范模式：继承并扩展同里市集</li>\n<li>资料状态：Provisional，待官方资料核验</li>\n</ul>\n"
+    }
+  ],
+  "tokens": [],
+  "images": [],
+  "assetManifest": [],
+  "adobeAssets": [],
+  "logoUrl": "",
+  "assetKit": {
+    "assetKey": "ganglao-baozailu",
+    "endpoints": {
+      "brand": "api/brands/ganglao-baozailu.json",
+      "logo": "",
+      "images": "api/brands/ganglao-baozailu.json#images",
+      "adobe": "",
+      "tokens": "api/brands/ganglao-baozailu.json#tokens",
+      "history": "api/history/ganglao-baozailu.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#25594F"
+        },
+        {
+          "key": "accent",
+          "value": "#D36B3F"
+        },
+        {
+          "key": "secondary",
+          "value": "#D0B05A"
+        },
+        {
+          "key": "surface",
+          "value": "#EEF4F0"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFEFA"
+        },
+        {
+          "key": "ink",
+          "value": "#182720"
+        },
+        {
+          "key": "muted",
+          "value": "#66746E"
+        }
+      ],
+      "keywords": [
+        "claypot rice",
+        "cart noodles",
+        "Hong Kong",
+        "street dining"
+      ],
+      "images": []
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#25594F"
+      },
+      {
+        "key": "accent",
+        "value": "#D36B3F"
+      },
+      {
+        "key": "secondary",
+        "value": "#D0B05A"
+      },
+      {
+        "key": "surface",
+        "value": "#EEF4F0"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFEFA"
+      },
+      {
+        "key": "ink",
+        "value": "#182720"
+      },
+      {
+        "key": "muted",
+        "value": "#66746E"
+      }
+    ],
+    "keywords": [
+      "claypot rice",
+      "cart noodles",
+      "Hong Kong",
+      "street dining"
+    ],
+    "images": []
+  },
+  "editablePaths": [
+    "GanglaoBaozailu/README.md"
+  ],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/GanglaoBaozailu",
+    "folder": "GanglaoBaozailu"
+  }
+}

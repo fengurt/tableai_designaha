@@ -349,8 +349,33 @@ async function assetRoutes(request, env, parts) {
 }
 
 async function libraryRoutes(request, env, parts) {
+  const collection = parts[1] || "organizations";
+  const itemId = cleanSegment(parts[2] || "");
+  const itemType = { cases: "case", reports: "report", datasets: "dataset" }[collection] || "";
+  if (itemId && ["GET", "POST"].includes(request.method)) {
+    const row = await env.DB.prepare("SELECT * FROM library_items WHERE id=?").bind(itemId).first();
+    if (!row || (itemType && row.type !== itemType)) return error(request, "not_found", 404);
+    const metadata = parseJson(row.metadata_json);
+    const relation = metadata.ipSlug ? null : await env.DB.prepare("SELECT to_id FROM library_relations WHERE from_type=? AND from_id=? AND to_type IN ('owned-ip','ip') LIMIT 1").bind(row.type, row.id).first();
+    const ipSlug = metadata.ipSlug || relation?.to_id || "";
+    const actor = await authenticate(request, env);
+    const isPrivate = row.access === "private";
+    if (isPrivate && (!actor || !hasScope(actor, "library:read_private") || !hasIpScope(actor, ipSlug))) return error(request, actor ? "forbidden" : "unauthorized", actor ? 403 : 401);
+    const value = { id: row.id, slug: row.slug, type: row.type, title: { zh: row.title_zh, en: row.title_en }, summary: { zh: row.summary_zh, en: row.summary_en }, sourceUrl: row.source_url, sourcePublisher: row.source_publisher, publishedAt: row.published_at, access: row.access, verificationStatus: row.verification_status, metadata, ipSlug, version: row.version, updatedAt: row.updated_at };
+    if (parts[3] === "sign") {
+      if (request.method !== "POST" || !row.file_key) return error(request, "method_not_allowed", 405);
+      const auth = await requireActor(request, env, "library:read_private", ipSlug);
+      if (auth.response) return auth.response;
+      const body = await parseBody(request);
+      const signed = await signMediaPath(env, `/${row.file_key}`, body.ttlSeconds);
+      await audit(env, request, auth.actor, "library.sign", row.type, row.id, "success");
+      return json(request, { ok: true, id: row.id, ...signed }, {}, true);
+    }
+    if (request.method !== "GET") return error(request, "method_not_allowed", 405);
+    return json(request, value, { headers: { ETag: entityEtag("library", row.id, row.version) } }, Boolean(actor));
+  }
   if (request.method === "GET") {
-    const target = new URL(`${env.PUBLIC_SITE_URL}/api/library/${parts[1] || "organizations"}`);
+    const target = new URL(`${env.PUBLIC_SITE_URL}/api/library/${collection}`);
     target.search = new URL(request.url).search;
     const response = await fetch(target);
     return new Response(response.body, { status: response.status, headers: { "Content-Type": "application/json", "Cache-Control": "public, max-age=60, stale-while-revalidate=300" } });
@@ -406,6 +431,24 @@ async function searchRoute(request, env) {
   const mode = ["lexical", "semantic", "hybrid"].includes(url.searchParams.get("mode")) ? url.searchParams.get("mode") : "hybrid";
   const items = await search(env, actor, { query, mode, limit: url.searchParams.get("limit"), types: (url.searchParams.get("types") || "").split(",").filter(Boolean), ip: cleanSegment(url.searchParams.get("ip") || ""), industry: cleanSegment(url.searchParams.get("industry") || ""), ipType: cleanSegment(url.searchParams.get("ipType") || "") });
   return json(request, { query, mode, total: items.length, items }, {}, Boolean(actor));
+}
+
+async function webVitalsRoute(request, env) {
+  if (request.method !== "POST") return error(request, "method_not_allowed", 405);
+  if (!(await applyRateLimit(request, env, null, "write"))) return error(request, "rate_limited", 429);
+  const body = await parseBody(request);
+  const numeric = (value, max) => {
+    const number = Number(value);
+    return Number.isFinite(number) && number >= 0 && number <= max ? number : 0;
+  };
+  const path = String(body.path || "/").slice(0, 200);
+  const locale = String(body.locale || "und").slice(0, 16);
+  env.METRICS?.writeDataPoint({
+    blobs: ["web_vitals", path, locale, String(body.cache || "unknown").slice(0, 32), String(body.imageFormat || "unknown").slice(0, 32)],
+    doubles: [numeric(body.ttfb, 120000), numeric(body.lcp, 120000), numeric(body.cls, 100), numeric(body.inp, 120000), numeric(body.transferSize, 1_000_000_000)],
+    indexes: [(request.headers.get("cf-ray") || crypto.randomUUID()).slice(0, 32)],
+  });
+  return new Response(null, { status: 204, headers: { "Cache-Control": "private, no-store" } });
 }
 
 async function auditRoute(request, env) {
@@ -466,6 +509,7 @@ export async function handleApi(request, env) {
     if (parts[0] === "assets") return assetRoutes(request, env, parts);
     if (parts[0] === "library") return libraryRoutes(request, env, parts);
     if (parts[0] === "search") return searchRoute(request, env);
+    if (parts[0] === "metrics" && parts[1] === "web-vitals") return webVitalsRoute(request, env);
     if (parts[0] === "audit") return auditRoute(request, env);
     if (parts[0] === "health") return json(request, { ok: true, service: "iptrust-edge", bindings: { d1: Boolean(env.DB), originals: Boolean(env.ORIGINALS), previews: Boolean(env.PREVIEWS), ai: Boolean(env.AI), vectorize: Boolean(env.VECTORIZE), images: Boolean(env.IMAGES), queues: Boolean(env.WRITE_SYNC && env.PROCESSING) } });
     return error(request, "not_found", 404);

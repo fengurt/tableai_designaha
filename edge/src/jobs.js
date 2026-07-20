@@ -2,6 +2,12 @@ import { indexSearchDocument, indexSearchDocuments } from "./search.js";
 import { chineseNgrams, now, parseJson } from "./utils.js";
 import { sha256 } from "./security.js";
 
+const RESPONSIVE_WIDTHS = [320, 640, 1280];
+const RESPONSIVE_FORMATS = [
+  { extension: "avif", mimeType: "image/avif" },
+  { extension: "webp", mimeType: "image/webp" },
+];
+
 function textValues(value) {
   if (typeof value === "string") return value.trim() ? [value.trim()] : [];
   if (typeof value === "number" || typeof value === "boolean") return [String(value)];
@@ -59,7 +65,10 @@ async function materializeSearchDocument(env, payload, deferVector = false) {
   } else if (["case", "report", "dataset", "library"].includes(type)) {
     const row = await env.DB.prepare("SELECT * FROM library_items WHERE id=?").bind(id).first();
     if (!row) return null;
-    document = { id: `${row.type}:${id}`, entityType: row.type, entityId: id, ipSlug: "", language: row.title_zh ? "zh" : "en", access: row.access === "private" ? "private" : "public", title: row.title_zh || row.title_en, body: [row.summary_zh, row.summary_en, row.source_publisher].filter(Boolean).join("\n"), metadata: { sourceUrl: row.source_url, sourcePublisher: row.source_publisher }, authority: row.verification_status === "verified" ? 1.25 : 1, version: row.version };
+    const metadata = parseJson(row.metadata_json);
+    const relation = metadata.ipSlug ? null : await env.DB.prepare("SELECT to_id FROM library_relations WHERE from_type=? AND from_id=? AND to_type IN ('owned-ip','ip') LIMIT 1").bind(row.type, id).first();
+    const ipSlug = metadata.ipSlug || relation?.to_id || "";
+    document = { id: `${row.type}:${id}`, entityType: row.type, entityId: id, ipSlug, language: row.title_zh ? "zh" : "en", access: row.access === "private" ? "private" : "public", title: row.title_zh || row.title_en, body: [row.summary_zh, row.summary_en, row.source_publisher].filter(Boolean).join("\n"), metadata: { ...metadata, sourceUrl: row.source_url, sourcePublisher: row.source_publisher }, authority: row.verification_status === "verified" ? 1.25 : 1, version: row.version };
   } else if (type === "organization") {
     const row = await env.DB.prepare("SELECT * FROM organizations WHERE id=?").bind(id).first();
     if (!row) return null;
@@ -82,10 +91,45 @@ async function materializeSearchDocument(env, payload, deferVector = false) {
   return deferVector ? document.id : indexSearchDocument(env, document.id);
 }
 
+function variantObjectKey(sourceKey, width, extension) {
+  return `${sourceKey.slice(0, sourceKey.lastIndexOf("/"))}/${width}.${extension}`;
+}
+
+async function generateResponsiveVariants(env, row) {
+  if (!env.IMAGES || !env.PREVIEWS) throw new Error("image_processing_binding_missing");
+  for (const width of RESPONSIVE_WIDTHS) {
+    for (const format of RESPONSIVE_FORMATS) {
+      const objectKey = variantObjectKey(row.source_object_key, width, format.extension);
+      let stored = await env.PREVIEWS.head(objectKey);
+      let digest = stored?.customMetadata?.sha256 || "";
+      if (!stored) {
+        const source = await env.PREVIEWS.get(row.source_object_key);
+        if (!source) throw new Error(`asset_source_missing:${row.id}`);
+        const transformed = (await env.IMAGES.input(source.body).transform({ width, fit: "scale-down" }).output({ format: format.mimeType, quality: 82 })).response();
+        const bytes = await transformed.arrayBuffer();
+        digest = await sha256(bytes);
+        await env.PREVIEWS.put(objectKey, bytes, {
+          httpMetadata: { contentType: format.mimeType, cacheControl: "public, max-age=31536000, immutable" },
+          customMetadata: { sha256: digest, assetId: row.id, sourceSha256: row.sha256, width: String(width), format: format.extension },
+        });
+        stored = await env.PREVIEWS.head(objectKey);
+      }
+      const variantId = `${row.id}-${width}-${format.extension}`;
+      await env.DB.prepare("INSERT INTO asset_variants(id,asset_id,kind,object_key,format,mime_type,sha256,bytes,width,height,created_at) VALUES(?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(asset_id,kind,format) DO UPDATE SET object_key=excluded.object_key,mime_type=excluded.mime_type,sha256=excluded.sha256,bytes=excluded.bytes,width=excluded.width,created_at=excluded.created_at")
+        .bind(variantId, row.id, `responsive-${width}`, objectKey, format.extension, format.mimeType, digest, stored?.size || 0, width, null, now()).run();
+    }
+  }
+}
+
 async function processAsset(env, payload) {
   const row = await env.DB.prepare("SELECT * FROM assets WHERE id=?").bind(payload.assetId).first();
   if (!row) return { skipped: "asset_missing" };
-  if (row.access === "public" && /^image\/(png|jpeg|webp|avif|svg\+xml)$/.test(row.mime_type)) {
+  if (row.access === "public" && /^image\/(png|jpeg|webp|avif)$/.test(row.mime_type)) {
+    await generateResponsiveVariants(env, row);
+    await env.DB.prepare("UPDATE assets SET status='ready',updated_at=? WHERE id=?").bind(now(), row.id).run();
+    return materializeSearchDocument(env, { entityType: "asset", entityId: row.id });
+  }
+  if (row.access === "public" && row.mime_type === "image/svg+xml") {
     await env.DB.prepare("UPDATE assets SET status='ready',updated_at=? WHERE id=?").bind(now(), row.id).run();
     return materializeSearchDocument(env, { entityType: "asset", entityId: row.id });
   }

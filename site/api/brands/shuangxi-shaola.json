@@ -1,0 +1,346 @@
+{
+  "slug": "shuangxi-shaola",
+  "folder": "ShuangxiShaola",
+  "name": "双囍烧腊",
+  "nativeName": "",
+  "description": "以粤式烧腊和便捷中式餐饮为核心的餐饮品牌。",
+  "officialWebsite": "",
+  "mainLanguage": "zh",
+  "intro": {
+    "zh": "双囍烧腊以粤式烧腊和便捷中式餐饮为核心，在同里市集设有门店。",
+    "en": ""
+  },
+  "business": {
+    "zh": "粤式烧腊、中式简餐与餐饮门店运营。",
+    "en": ""
+  },
+  "primaryGuide": "ShuangxiShaola/README.md",
+  "sources": [
+    {
+      "title": "双囍烧腊新国展店",
+      "publisher": "携程美食",
+      "url": "https://gs.ctrip.com/html5/you/foods/fooddetail/1/130033671.html",
+      "verifiedAt": "2026-07-20",
+      "confidence": "directory"
+    }
+  ],
+  "theme": {
+    "mode": "light",
+    "primary": "#A92732",
+    "accent": "#D6A33E",
+    "secondary": "#342525",
+    "surface": "#F8F0EC",
+    "paper": "#FFFDFC",
+    "ink": "#24191A",
+    "muted": "#796868",
+    "line": "rgba(169, 39, 50, 0.18)",
+    "provisional": true,
+    "keywords": [
+      "roast meat",
+      "Cantonese",
+      "quick dining",
+      "double happiness"
+    ]
+  },
+  "classification": {
+    "tracks": {
+      "zh": [
+        "粤式烧腊",
+        "中式简餐",
+        "餐饮门店"
+      ],
+      "en": []
+    },
+    "audiences": {
+      "zh": [
+        "社区食客",
+        "上班族",
+        "家庭客群"
+      ],
+      "en": []
+    },
+    "tags": {
+      "zh": [
+        "烧腊",
+        "粤式",
+        "简餐",
+        "同里市集"
+      ],
+      "en": []
+    }
+  },
+  "assetKey": "shuangxi-shaola",
+  "mainName": "双囍烧腊",
+  "mainLocale": "CN",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "mainLocale": "CN",
+    "intro": {
+      "zh": "双囍烧腊以粤式烧腊和便捷中式餐饮为核心，在同里市集设有门店。",
+      "en": ""
+    },
+    "business": {
+      "zh": "粤式烧腊、中式简餐与餐饮门店运营。",
+      "en": ""
+    },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "粤式烧腊",
+          "中式简餐",
+          "餐饮门店"
+        ],
+        "en": []
+      },
+      "audiences": {
+        "zh": [
+          "社区食客",
+          "上班族",
+          "家庭客群"
+        ],
+        "en": []
+      },
+      "tags": {
+        "zh": [
+          "烧腊",
+          "粤式",
+          "简餐",
+          "同里市集"
+        ],
+        "en": []
+      }
+    }
+  },
+  "display": {
+    "default": {
+      "language": "zh",
+      "name": "双囍烧腊"
+    },
+    "zh": {
+      "name": "双囍烧腊",
+      "secondaryName": ""
+    },
+    "en": {
+      "name": "双囍烧腊",
+      "secondaryName": ""
+    }
+  },
+  "notes": {
+    "zh": "",
+    "en": ""
+  },
+  "recordClass": "owned",
+  "primaryIndustry": "food-beverage",
+  "industries": [
+    "food-beverage"
+  ],
+  "ipType": "product-service-brand",
+  "lifecycleStatus": "active",
+  "guidelineMode": "extend",
+  "parentCapable": false,
+  "architectureRoles": [
+    "child"
+  ],
+  "version": {
+    "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+    "shortHash": "f751eee",
+    "date": "2026-07-20T08:17:19+08:00",
+    "message": "fix: prevent orphaned directory headline",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+  },
+  "historyUrl": "api/history/shuangxi-shaola.json",
+  "history": [
+    {
+      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+      "shortHash": "bc7b985",
+      "date": "2026-07-20T08:12:03+08:00",
+      "message": "feat: add IP taxonomy and brand architecture",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+      "sourcePaths": [
+        "config/brands.json",
+        "ShuangxiShaola",
+        "ShuangxiShaola/README.md"
+      ]
+    },
+    {
+      "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "shortHash": "eaf4320",
+      "date": "2026-07-19T14:13:21+08:00",
+      "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "sourcePaths": [
+        "config/brands.json",
+        "ShuangxiShaola",
+        "ShuangxiShaola/README.md"
+      ]
+    },
+    {
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "sourcePaths": [
+        "config/brands.json",
+        "ShuangxiShaola",
+        "ShuangxiShaola/README.md"
+      ]
+    },
+    {
+      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "shortHash": "a5bf7cf",
+      "date": "2026-07-10T20:21:24+08:00",
+      "message": "Replace contrast-template brand copy",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "sourcePaths": [
+        "config/brands.json",
+        "ShuangxiShaola",
+        "ShuangxiShaola/README.md"
+      ]
+    },
+    {
+      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "shortHash": "ed33a8b",
+      "date": "2026-07-10T18:44:20+08:00",
+      "message": "Add Shanrenjing journey safety IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "sourcePaths": [
+        "config/brands.json",
+        "ShuangxiShaola",
+        "ShuangxiShaola/README.md"
+      ]
+    },
+    {
+      "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "shortHash": "cd0ea58",
+      "date": "2026-07-08T04:12:48+08:00",
+      "message": "Refine hero index labels",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "sourcePaths": [
+        "config/brands.json",
+        "ShuangxiShaola",
+        "ShuangxiShaola/README.md"
+      ]
+    }
+  ],
+  "url": "brand.html?brand=shuangxi-shaola",
+  "apiUrl": "api/brands/shuangxi-shaola.json",
+  "status": "documented",
+  "guides": [
+    {
+      "path": "ShuangxiShaola/README.md",
+      "title": "README",
+      "format": "md",
+      "primary": true,
+      "excerpt": "双囍烧腊 中文优先的粤式烧腊餐饮 IP，为同里市集子 IP。 定位：粤式烧腊与便捷中式餐饮 规范模式：继承并扩展同里市集 视觉状态：Provisional，待官方资产补充",
+      "text": "# 双囍烧腊\n\n中文优先的粤式烧腊餐饮 IP，为同里市集子 IP。\n\n- 定位：粤式烧腊与便捷中式餐饮\n- 规范模式：继承并扩展同里市集\n- 视觉状态：Provisional，待官方资产补充\n\n",
+      "html": "<h1 id=\"shuangxi-shaola-guide-1-双囍烧腊\">双囍烧腊</h1>\n<p>中文优先的粤式烧腊餐饮 IP，为同里市集子 IP。</p>\n<ul>\n<li>定位：粤式烧腊与便捷中式餐饮</li>\n<li>规范模式：继承并扩展同里市集</li>\n<li>视觉状态：Provisional，待官方资产补充</li>\n</ul>\n"
+    }
+  ],
+  "tokens": [],
+  "images": [],
+  "assetManifest": [],
+  "adobeAssets": [],
+  "logoUrl": "",
+  "assetKit": {
+    "assetKey": "shuangxi-shaola",
+    "endpoints": {
+      "brand": "api/brands/shuangxi-shaola.json",
+      "logo": "",
+      "images": "api/brands/shuangxi-shaola.json#images",
+      "adobe": "",
+      "tokens": "api/brands/shuangxi-shaola.json#tokens",
+      "history": "api/history/shuangxi-shaola.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#A92732"
+        },
+        {
+          "key": "accent",
+          "value": "#D6A33E"
+        },
+        {
+          "key": "secondary",
+          "value": "#342525"
+        },
+        {
+          "key": "surface",
+          "value": "#F8F0EC"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFDFC"
+        },
+        {
+          "key": "ink",
+          "value": "#24191A"
+        },
+        {
+          "key": "muted",
+          "value": "#796868"
+        }
+      ],
+      "keywords": [
+        "roast meat",
+        "Cantonese",
+        "quick dining",
+        "double happiness"
+      ],
+      "images": []
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#A92732"
+      },
+      {
+        "key": "accent",
+        "value": "#D6A33E"
+      },
+      {
+        "key": "secondary",
+        "value": "#342525"
+      },
+      {
+        "key": "surface",
+        "value": "#F8F0EC"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFDFC"
+      },
+      {
+        "key": "ink",
+        "value": "#24191A"
+      },
+      {
+        "key": "muted",
+        "value": "#796868"
+      }
+    ],
+    "keywords": [
+      "roast meat",
+      "Cantonese",
+      "quick dining",
+      "double happiness"
+    ],
+    "images": []
+  },
+  "editablePaths": [
+    "ShuangxiShaola/README.md"
+  ],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/ShuangxiShaola",
+    "folder": "ShuangxiShaola"
+  }
+}

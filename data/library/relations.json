@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": "rel-report-subangyuan-product-research-ip",
+    "fromType": "report",
+    "fromId": "subangyuan-product-research-2026",
+    "toType": "owned-ip",
+    "toId": "subangyuan",
+    "relation": "supports",
+    "note": "Private internal product research"
+  },
+  {
+    "id": "rel-report-youyuan-jingmeng-product-research-ip",
+    "fromType": "report",
+    "fromId": "youyuan-jingmeng-product-research-2026",
+    "toType": "owned-ip",
+    "toId": "youyuan-jingmeng",
+    "relation": "supports",
+    "note": "Private internal product research"
+  }
+]

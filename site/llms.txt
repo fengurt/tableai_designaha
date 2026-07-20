@@ -50,6 +50,15 @@ Brands:
 - 山人境 (shanrenjing): /api/brands/shanrenjing.json · mainLocale CN · palette #173F38 / #D5A53B
 - 烤鱼神话 (kaoyu-shenhua): /api/brands/kaoyu-shenhua.json · mainLocale CN · palette #241714 / #B33A2B
 - 延安石窑宾馆 (yanan-shiyao-hotel): /api/brands/yanan-shiyao-hotel.json · mainLocale CN · palette #352F2A / #A87946
+- 同里市集 (tongli-market): /api/brands/tongli-market.json · mainLocale CN · palette #26483D / #C95D3A
+- 同香荟 (tongxianghui): /api/brands/tongxianghui.json · mainLocale CN · palette #742337 / #D29A4A
+- 睦堂湾 (mutangwan): /api/brands/mutangwan.json · mainLocale CN · palette #174556 / #C58B4E
+- 双囍烧腊 (shuangxi-shaola): /api/brands/shuangxi-shaola.json · mainLocale CN · palette #A92732 / #D6A33E
+- 港佬煲仔炉车仔面碟头饭 (ganglao-baozailu): /api/brands/ganglao-baozailu.json · mainLocale CN · palette #25594F / #D36B3F
+- 小桃园 (xiaotaoyuan): /api/brands/xiaotaoyuan.json · mainLocale CN · palette #8D3F45 / #E3A15A
+- 苏帮袁 (subangyuan): /api/brands/subangyuan.json · mainLocale CN · palette #315849 / #A84E3E
+- 游园京梦 (youyuan-jingmeng): /api/brands/youyuan-jingmeng.json · mainLocale CN · palette #2E514A / #A55764
+- 清水亭 (qingshuiting): /api/brands/qingshuiting.json · mainLocale CN · palette #1F5A63 / #B56E42
 
 Admin workflow:
 - /admin.html unlocks with the generated admin key.

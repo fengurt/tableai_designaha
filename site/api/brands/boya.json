@@ -159,12 +159,16 @@
   "ipType": "corporate-brand",
   "lifecycleStatus": "active",
   "guidelineMode": "independent",
+  "parentCapable": false,
+  "architectureRoles": [
+    "standalone"
+  ],
   "version": {
-    "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-    "shortHash": "bc7b985",
-    "date": "2026-07-20T08:12:03+08:00",
-    "message": "feat: add IP taxonomy and brand architecture",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+    "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+    "shortHash": "f751eee",
+    "date": "2026-07-20T08:17:19+08:00",
+    "message": "fix: prevent orphaned directory headline",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
   },
   "historyUrl": "api/history/boya.json",
   "history": [

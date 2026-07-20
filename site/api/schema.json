@@ -18,6 +18,8 @@
     "organizations": "api/library/organizations",
     "cases": "api/library/cases",
     "reports": "api/library/reports",
+    "protectedLibraryItem": "api/v2/library/{collection}/{id}",
+    "protectedLibraryFile": "api/v2/library/{collection}/{id}/sign",
     "datasets": "api/library/datasets",
     "relations": "api/library/relations",
     "allVersions": "api/versions.json",
@@ -60,6 +62,7 @@
     "moodboard": "Derived colors, keywords, and image assets for visual direction.",
     "editablePaths": "Source files editable from admin flow.",
     "source": "GitHub source folder and local folder.",
+    "sources": "Public provenance records with publisher, URL, verification date, and confidence.",
     "version": "Latest build/global version object.",
     "history": "Latest per-IP history records.",
     "primaryIndustry": "Primary term from the controlled bilingual industry taxonomy.",
@@ -67,7 +70,9 @@
     "ipType": "Controlled single IP type; parent/child status is represented by relationships.",
     "recordClass": "owned or reference.",
     "lifecycleStatus": "Lifecycle state such as active, draft, archived or retired.",
-    "guidelineMode": "independent or inherited guideline behavior."
+    "guidelineMode": "independent or inherited guideline behavior.",
+    "parentCapable": "Whether the IP is explicitly available as a mother IP even before children are linked.",
+    "architectureRoles": "Computed roles; an IP can be parent, child, both, or standalone."
   },
   "architecture": {
     "primaryParent": "One optional brand_parent relationship; cycles are rejected.",

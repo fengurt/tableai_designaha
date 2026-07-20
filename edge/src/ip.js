@@ -24,6 +24,13 @@ function names(value = {}) {
   return { zh: String(value.zh || "").trim().slice(0, 180), en: String(value.en || "").trim().slice(0, 180) };
 }
 
+function architectureRoles(row = {}) {
+  const roles = [];
+  if (Boolean(row.parent_capable) || Boolean(row.has_children)) roles.push("parent");
+  if (Boolean(row.has_parent)) roles.push("child");
+  return roles.length ? roles : ["standalone"];
+}
+
 function ipValue(row, industries = []) {
   return {
     slug: row.slug,
@@ -35,6 +42,8 @@ function ipValue(row, industries = []) {
     mainLanguage: row.main_language,
     lifecycleStatus: row.lifecycle_status,
     guidelineMode: row.guideline_mode,
+    parentCapable: Boolean(row.parent_capable),
+    architectureRoles: architectureRoles(row),
     sourceUrl: row.source_url,
     sourcePublisher: row.source_publisher,
     verificationStatus: row.verification_status,
@@ -78,7 +87,10 @@ async function industriesFor(env, slugs) {
 }
 
 async function loadIp(env, slug) {
-  const row = await env.DB.prepare("SELECT * FROM ip_records WHERE slug=? AND deleted_at IS NULL").bind(slug).first();
+  const row = await env.DB.prepare(`SELECT i.*,
+    EXISTS(SELECT 1 FROM ip_relationships r WHERE r.child_ip_slug=i.slug AND r.relation_type='brand_parent') has_parent,
+    EXISTS(SELECT 1 FROM ip_relationships r WHERE r.parent_ip_slug=i.slug AND r.relation_type='brand_parent') has_children
+    FROM ip_records i WHERE i.slug=? AND i.deleted_at IS NULL`).bind(slug).first();
   if (!row) return null;
   const map = await industriesFor(env, [slug]);
   return { row, value: ipValue(row, map.get(slug) || []) };
@@ -123,6 +135,7 @@ async function writeIp(request, env, actor, current = null) {
   value.recordClass = RECORD_CLASSES.has(value.recordClass) ? value.recordClass : "owned";
   value.mainLanguage = value.mainLanguage === "en" ? "en" : "zh";
   value.guidelineMode = GUIDELINE_MODES.has(value.guidelineMode) ? value.guidelineMode : "independent";
+  value.parentCapable = Boolean(value.parentCapable);
   value.lifecycleStatus = cleanSegment(value.lifecycleStatus || "active") || "active";
   value.ipType = cleanSegment(value.ipType);
   value.primaryIndustry = cleanSegment(value.primaryIndustry);
@@ -136,9 +149,9 @@ async function writeIp(request, env, actor, current = null) {
   const version = (current?.row.version || 0) + 1;
   const payload = value.payload && typeof value.payload === "object" ? value.payload : {};
   await env.DB.batch([
-    env.DB.prepare(`INSERT INTO ip_records(slug,record_class,ip_type,primary_industry,names_json,main_language,lifecycle_status,guideline_mode,source_url,source_publisher,verification_status,payload_json,version,created_at,updated_at)
-      VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(slug) DO UPDATE SET record_class=excluded.record_class,ip_type=excluded.ip_type,primary_industry=excluded.primary_industry,names_json=excluded.names_json,main_language=excluded.main_language,lifecycle_status=excluded.lifecycle_status,guideline_mode=excluded.guideline_mode,source_url=excluded.source_url,source_publisher=excluded.source_publisher,verification_status=excluded.verification_status,payload_json=excluded.payload_json,version=excluded.version,updated_at=excluded.updated_at`)
-      .bind(slug, value.recordClass, value.ipType, value.primaryIndustry, JSON.stringify(value.names), value.mainLanguage, value.lifecycleStatus, value.guidelineMode, String(value.sourceUrl || ""), String(value.sourcePublisher || ""), String(value.verificationStatus || "internal"), JSON.stringify(payload), version, current?.row.created_at || timestamp, timestamp),
+    env.DB.prepare(`INSERT INTO ip_records(slug,record_class,ip_type,primary_industry,names_json,main_language,lifecycle_status,guideline_mode,parent_capable,source_url,source_publisher,verification_status,payload_json,version,created_at,updated_at)
+      VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(slug) DO UPDATE SET record_class=excluded.record_class,ip_type=excluded.ip_type,primary_industry=excluded.primary_industry,names_json=excluded.names_json,main_language=excluded.main_language,lifecycle_status=excluded.lifecycle_status,guideline_mode=excluded.guideline_mode,parent_capable=excluded.parent_capable,source_url=excluded.source_url,source_publisher=excluded.source_publisher,verification_status=excluded.verification_status,payload_json=excluded.payload_json,version=excluded.version,updated_at=excluded.updated_at`)
+      .bind(slug, value.recordClass, value.ipType, value.primaryIndustry, JSON.stringify(value.names), value.mainLanguage, value.lifecycleStatus, value.guidelineMode, value.parentCapable ? 1 : 0, String(value.sourceUrl || ""), String(value.sourcePublisher || ""), String(value.verificationStatus || "internal"), JSON.stringify(payload), version, current?.row.created_at || timestamp, timestamp),
     env.DB.prepare("DELETE FROM ip_taxonomy WHERE ip_slug=?").bind(slug),
     ...value.industries.map((industry) => env.DB.prepare("INSERT INTO ip_taxonomy(ip_slug,term_id,is_primary,created_at) VALUES(?,?,?,?)").bind(slug, industry, industry === value.primaryIndustry ? 1 : 0, timestamp)),
     env.DB.prepare("INSERT INTO ip_taxonomy(ip_slug,term_id,is_primary,created_at) VALUES(?,?,1,?)").bind(slug, value.ipType, timestamp),
@@ -176,11 +189,18 @@ export async function handleIpRoutes(request, env, parts) {
     add("i.record_class=?", cleanSegment(url.searchParams.get("recordClass") || ""));
     add("i.ip_type=?", cleanSegment(url.searchParams.get("ipType") || url.searchParams.get("type") || ""));
     add("i.primary_industry=?", cleanSegment(url.searchParams.get("industry") || ""));
+    const architectureRole = cleanSegment(url.searchParams.get("architectureRole") || "");
+    if (architectureRole === "parent") where.push("(i.parent_capable=1 OR EXISTS(SELECT 1 FROM ip_relationships r WHERE r.parent_ip_slug=i.slug AND r.relation_type='brand_parent'))");
+    if (architectureRole === "child") where.push("EXISTS(SELECT 1 FROM ip_relationships r WHERE r.child_ip_slug=i.slug AND r.relation_type='brand_parent')");
+    if (architectureRole === "standalone") where.push("i.parent_capable=0 AND NOT EXISTS(SELECT 1 FROM ip_relationships r WHERE (r.parent_ip_slug=i.slug OR r.child_ip_slug=i.slug) AND r.relation_type='brand_parent')");
     const parent = cleanSegment(url.searchParams.get("parent") || "");
     if (parent) { where.push("EXISTS(SELECT 1 FROM ip_relationships r WHERE r.child_ip_slug=i.slug AND r.parent_ip_slug=? AND r.relation_type='brand_parent')"); bindings.push(parent); }
     const q = String(url.searchParams.get("q") || "").trim().slice(0, 200);
     if (q) { where.push("(i.slug LIKE ? OR i.names_json LIKE ? OR i.payload_json LIKE ?)"); bindings.push(...Array(3).fill(`%${q}%`)); }
-    const rows = await env.DB.prepare(`SELECT i.* FROM ip_records i WHERE ${where.join(" AND ")} ORDER BY i.record_class,i.updated_at DESC,i.slug LIMIT 300`).bind(...bindings).all();
+    const rows = await env.DB.prepare(`SELECT i.*,
+      EXISTS(SELECT 1 FROM ip_relationships r WHERE r.child_ip_slug=i.slug AND r.relation_type='brand_parent') has_parent,
+      EXISTS(SELECT 1 FROM ip_relationships r WHERE r.parent_ip_slug=i.slug AND r.relation_type='brand_parent') has_children
+      FROM ip_records i WHERE ${where.join(" AND ")} ORDER BY i.record_class,i.updated_at DESC,i.slug LIMIT 300`).bind(...bindings).all();
     const map = await industriesFor(env, rows.results.map((row) => row.slug));
     return json(request, { items: rows.results.map((row) => ipValue(row, map.get(row.slug) || [])), total: rows.results.length });
   }

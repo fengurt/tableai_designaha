@@ -1,0 +1,346 @@
+{
+  "slug": "xiaotaoyuan",
+  "folder": "Xiaotaoyuan",
+  "name": "小桃园",
+  "nativeName": "",
+  "description": "面向社区早餐与日常简餐的中式餐饮品牌。",
+  "officialWebsite": "",
+  "mainLanguage": "zh",
+  "intro": {
+    "zh": "小桃园面向社区早餐与日常简餐，提供油条、粢饭团、鸭血粉丝汤和小笼包等中式早点。",
+    "en": ""
+  },
+  "business": {
+    "zh": "中式早餐、社区简餐与门店运营。",
+    "en": ""
+  },
+  "primaryGuide": "Xiaotaoyuan/README.md",
+  "sources": [
+    {
+      "title": "有灵魂的市集什么样",
+      "publisher": "澎湃新闻 / 新浪",
+      "url": "https://tech.sina.com.cn/roll/2021-05-06/doc-ikmxzfmm0775758.shtml",
+      "verifiedAt": "2026-07-20",
+      "confidence": "editorial"
+    }
+  ],
+  "theme": {
+    "mode": "light",
+    "primary": "#8D3F45",
+    "accent": "#E3A15A",
+    "secondary": "#6F8A68",
+    "surface": "#F7F1E9",
+    "paper": "#FFFEFA",
+    "ink": "#2A2020",
+    "muted": "#786B65",
+    "line": "rgba(141, 63, 69, 0.18)",
+    "provisional": true,
+    "keywords": [
+      "breakfast",
+      "neighborhood",
+      "Chinese snacks",
+      "morning"
+    ]
+  },
+  "classification": {
+    "tracks": {
+      "zh": [
+        "中式早餐",
+        "社区简餐",
+        "餐饮门店"
+      ],
+      "en": []
+    },
+    "audiences": {
+      "zh": [
+        "社区居民",
+        "家庭客群",
+        "上班族"
+      ],
+      "en": []
+    },
+    "tags": {
+      "zh": [
+        "早餐",
+        "油条",
+        "粢饭团",
+        "小笼包"
+      ],
+      "en": []
+    }
+  },
+  "assetKey": "xiaotaoyuan",
+  "mainName": "小桃园",
+  "mainLocale": "CN",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "mainLocale": "CN",
+    "intro": {
+      "zh": "小桃园面向社区早餐与日常简餐，提供油条、粢饭团、鸭血粉丝汤和小笼包等中式早点。",
+      "en": ""
+    },
+    "business": {
+      "zh": "中式早餐、社区简餐与门店运营。",
+      "en": ""
+    },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "中式早餐",
+          "社区简餐",
+          "餐饮门店"
+        ],
+        "en": []
+      },
+      "audiences": {
+        "zh": [
+          "社区居民",
+          "家庭客群",
+          "上班族"
+        ],
+        "en": []
+      },
+      "tags": {
+        "zh": [
+          "早餐",
+          "油条",
+          "粢饭团",
+          "小笼包"
+        ],
+        "en": []
+      }
+    }
+  },
+  "display": {
+    "default": {
+      "language": "zh",
+      "name": "小桃园"
+    },
+    "zh": {
+      "name": "小桃园",
+      "secondaryName": ""
+    },
+    "en": {
+      "name": "小桃园",
+      "secondaryName": ""
+    }
+  },
+  "notes": {
+    "zh": "",
+    "en": ""
+  },
+  "recordClass": "owned",
+  "primaryIndustry": "food-beverage",
+  "industries": [
+    "food-beverage"
+  ],
+  "ipType": "product-service-brand",
+  "lifecycleStatus": "active",
+  "guidelineMode": "extend",
+  "parentCapable": false,
+  "architectureRoles": [
+    "child"
+  ],
+  "version": {
+    "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+    "shortHash": "f751eee",
+    "date": "2026-07-20T08:17:19+08:00",
+    "message": "fix: prevent orphaned directory headline",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+  },
+  "historyUrl": "api/history/xiaotaoyuan.json",
+  "history": [
+    {
+      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+      "shortHash": "bc7b985",
+      "date": "2026-07-20T08:12:03+08:00",
+      "message": "feat: add IP taxonomy and brand architecture",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+      "sourcePaths": [
+        "config/brands.json",
+        "Xiaotaoyuan",
+        "Xiaotaoyuan/README.md"
+      ]
+    },
+    {
+      "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "shortHash": "eaf4320",
+      "date": "2026-07-19T14:13:21+08:00",
+      "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "sourcePaths": [
+        "config/brands.json",
+        "Xiaotaoyuan",
+        "Xiaotaoyuan/README.md"
+      ]
+    },
+    {
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "sourcePaths": [
+        "config/brands.json",
+        "Xiaotaoyuan",
+        "Xiaotaoyuan/README.md"
+      ]
+    },
+    {
+      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "shortHash": "a5bf7cf",
+      "date": "2026-07-10T20:21:24+08:00",
+      "message": "Replace contrast-template brand copy",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "sourcePaths": [
+        "config/brands.json",
+        "Xiaotaoyuan",
+        "Xiaotaoyuan/README.md"
+      ]
+    },
+    {
+      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "shortHash": "ed33a8b",
+      "date": "2026-07-10T18:44:20+08:00",
+      "message": "Add Shanrenjing journey safety IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "sourcePaths": [
+        "config/brands.json",
+        "Xiaotaoyuan",
+        "Xiaotaoyuan/README.md"
+      ]
+    },
+    {
+      "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "shortHash": "cd0ea58",
+      "date": "2026-07-08T04:12:48+08:00",
+      "message": "Refine hero index labels",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "sourcePaths": [
+        "config/brands.json",
+        "Xiaotaoyuan",
+        "Xiaotaoyuan/README.md"
+      ]
+    }
+  ],
+  "url": "brand.html?brand=xiaotaoyuan",
+  "apiUrl": "api/brands/xiaotaoyuan.json",
+  "status": "documented",
+  "guides": [
+    {
+      "path": "Xiaotaoyuan/README.md",
+      "title": "README",
+      "format": "md",
+      "primary": true,
+      "excerpt": "小桃园 中文优先的社区早餐与日常简餐 IP，为同里市集子 IP。 定位：中式早餐、社区简餐与日常门店 规范模式：继承并扩展同里市集 视觉状态：Provisional，待官方资产补充",
+      "text": "# 小桃园\n\n中文优先的社区早餐与日常简餐 IP，为同里市集子 IP。\n\n- 定位：中式早餐、社区简餐与日常门店\n- 规范模式：继承并扩展同里市集\n- 视觉状态：Provisional，待官方资产补充\n\n",
+      "html": "<h1 id=\"xiaotaoyuan-guide-1-小桃园\">小桃园</h1>\n<p>中文优先的社区早餐与日常简餐 IP，为同里市集子 IP。</p>\n<ul>\n<li>定位：中式早餐、社区简餐与日常门店</li>\n<li>规范模式：继承并扩展同里市集</li>\n<li>视觉状态：Provisional，待官方资产补充</li>\n</ul>\n"
+    }
+  ],
+  "tokens": [],
+  "images": [],
+  "assetManifest": [],
+  "adobeAssets": [],
+  "logoUrl": "",
+  "assetKit": {
+    "assetKey": "xiaotaoyuan",
+    "endpoints": {
+      "brand": "api/brands/xiaotaoyuan.json",
+      "logo": "",
+      "images": "api/brands/xiaotaoyuan.json#images",
+      "adobe": "",
+      "tokens": "api/brands/xiaotaoyuan.json#tokens",
+      "history": "api/history/xiaotaoyuan.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#8D3F45"
+        },
+        {
+          "key": "accent",
+          "value": "#E3A15A"
+        },
+        {
+          "key": "secondary",
+          "value": "#6F8A68"
+        },
+        {
+          "key": "surface",
+          "value": "#F7F1E9"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFEFA"
+        },
+        {
+          "key": "ink",
+          "value": "#2A2020"
+        },
+        {
+          "key": "muted",
+          "value": "#786B65"
+        }
+      ],
+      "keywords": [
+        "breakfast",
+        "neighborhood",
+        "Chinese snacks",
+        "morning"
+      ],
+      "images": []
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#8D3F45"
+      },
+      {
+        "key": "accent",
+        "value": "#E3A15A"
+      },
+      {
+        "key": "secondary",
+        "value": "#6F8A68"
+      },
+      {
+        "key": "surface",
+        "value": "#F7F1E9"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFEFA"
+      },
+      {
+        "key": "ink",
+        "value": "#2A2020"
+      },
+      {
+        "key": "muted",
+        "value": "#786B65"
+      }
+    ],
+    "keywords": [
+      "breakfast",
+      "neighborhood",
+      "Chinese snacks",
+      "morning"
+    ],
+    "images": []
+  },
+  "editablePaths": [
+    "Xiaotaoyuan/README.md"
+  ],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/Xiaotaoyuan",
+    "folder": "Xiaotaoyuan"
+  }
+}

@@ -56,6 +56,27 @@ jobs:
           npm run seed:library
           npx wrangler d1 migrations apply iptrust-library --remote --config edge/wrangler.toml
           npx wrangler d1 execute iptrust-library --remote --config edge/wrangler.toml --file .tmp/iptrust-library-seed.sql
+      - name: Upload private research notes to R2
+        if: steps.cloudflare.outputs.enabled == 'true'
+        env:
+          SUBANGYUAN_NOTE_B64: ${{ secrets.IPTRUST_SUBANGYUAN_NOTE_B64 }}
+          YOUYUAN_JINGMENG_NOTE_B64: ${{ secrets.IPTRUST_YOUYUAN_JINGMENG_NOTE_B64 }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          work="${RUNNER_TEMP}/iptrust-private-notes"
+          mkdir -p "$work"
+          if [[ -n "${SUBANGYUAN_NOTE_B64:-}" ]]; then
+            printf '%s' "$SUBANGYUAN_NOTE_B64" | base64 --decode > "$work/subangyuan.md"
+            echo "03f8c85995bd2c298ca270a0c3f4c8e8adc07151ea940a2f3275cdf1439c2b1f  $work/subangyuan.md" | sha256sum --check --status
+            npx wrangler r2 object put iptrust-media/private/subangyuan/notes/03f8c85995bd2c298ca270a0c3f4c8e8adc07151ea940a2f3275cdf1439c2b1f/source.md --remote --config edge/wrangler.toml --file "$work/subangyuan.md" --content-type text/markdown
+          fi
+          if [[ -n "${YOUYUAN_JINGMENG_NOTE_B64:-}" ]]; then
+            printf '%s' "$YOUYUAN_JINGMENG_NOTE_B64" | base64 --decode > "$work/youyuan-jingmeng.md"
+            echo "49acff2bb8ef69a8a691d41c454379f11b1c1aa742b117a06efa070bae6f84ac  $work/youyuan-jingmeng.md" | sha256sum --check --status
+            npx wrangler r2 object put iptrust-media/private/youyuan-jingmeng/notes/49acff2bb8ef69a8a691d41c454379f11b1c1aa742b117a06efa070bae6f84ac/source.md --remote --config edge/wrangler.toml --file "$work/youyuan-jingmeng.md" --content-type text/markdown
+          fi
+          rm -rf "$work"
       - name: Import version-safe IP architecture snapshots
         if: steps.cloudflare.outputs.enabled == 'true'
         run: |

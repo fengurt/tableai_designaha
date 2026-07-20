@@ -1477,7 +1477,7 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
 .directory-hero .eyebrow { grid-column: 1 / -1; }
 .directory-hero h1 { max-width: 760px; margin: 0; font-size: clamp(44px, 7vw, 92px); line-height: .92; }
 .directory-hero > p:last-child { color: var(--muted); font: 700 12px/1 ui-monospace, monospace; }
-.directory-filters { display: grid; grid-template-columns: minmax(180px, 1.6fr) repeat(3, minmax(140px, 1fr)) auto; gap: 8px; position: sticky; top: 74px; z-index: 4; padding: 12px 0; background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(14px); }
+.directory-filters { display: grid; grid-template-columns: minmax(180px, 1.6fr) repeat(4, minmax(132px, 1fr)) auto; gap: 8px; position: sticky; top: 74px; z-index: 4; padding: 12px 0; background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(14px); }
 .directory-filters input, .directory-filters select, .directory-filters button { min-height: 42px; margin: 0; border-radius: 2px; }
 .directory-list { border-top: 1px solid var(--line); }
 .directory-row { display: grid; grid-template-columns: minmax(220px, 2fr) 1.15fr 1.15fr 1fr 24px; gap: 16px; align-items: center; min-height: 68px; border-bottom: 1px solid var(--line); text-decoration: none; transition: padding .2s ease, background .2s ease; }

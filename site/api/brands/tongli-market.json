@@ -1,0 +1,358 @@
+{
+  "slug": "tongli-market",
+  "folder": "TongliMarket",
+  "name": "同里市集",
+  "nativeName": "",
+  "description": "北京顺义后沙峪的社区型餐饮与生活方式市集。",
+  "officialWebsite": "",
+  "mainLanguage": "zh",
+  "intro": {
+    "zh": "同里市集是位于北京顺义后沙峪的社区型餐饮与生活方式市集，以多元餐饮、社交与社区活动形成邻里共享空间。",
+    "en": ""
+  },
+  "business": {
+    "zh": "餐饮市集、社区生活方式、餐饮品牌运营与线下活动。",
+    "en": ""
+  },
+  "notes": {
+    "zh": "公开简介依据政府与公开媒体资料整理。",
+    "en": ""
+  },
+  "primaryGuide": "TongliMarket/README.md",
+  "sources": [
+    {
+      "title": "顺义消费场景推荐",
+      "publisher": "顺义文明网",
+      "url": "https://www.shywm.gov.cn/newsconsultation/8467.jhtml",
+      "verifiedAt": "2026-07-20",
+      "confidence": "government"
+    },
+    {
+      "title": "有灵魂的市集什么样",
+      "publisher": "澎湃新闻 / 新浪",
+      "url": "https://tech.sina.com.cn/roll/2021-05-06/doc-ikmxzfmm0775758.shtml",
+      "verifiedAt": "2026-07-20",
+      "confidence": "editorial"
+    }
+  ],
+  "theme": {
+    "mode": "light",
+    "primary": "#26483D",
+    "accent": "#C95D3A",
+    "secondary": "#C9A65A",
+    "surface": "#F2F4EF",
+    "paper": "#FFFEFA",
+    "ink": "#18221E",
+    "muted": "#66716B",
+    "line": "rgba(38, 72, 61, 0.18)",
+    "provisional": true,
+    "keywords": [
+      "community market",
+      "food",
+      "neighborhood",
+      "Beijing"
+    ]
+  },
+  "classification": {
+    "tracks": {
+      "zh": [
+        "餐饮市集",
+        "社区商业",
+        "生活方式"
+      ],
+      "en": []
+    },
+    "audiences": {
+      "zh": [
+        "社区居民",
+        "家庭客群",
+        "餐饮消费者",
+        "品牌合作方"
+      ],
+      "en": []
+    },
+    "tags": {
+      "zh": [
+        "北京顺义",
+        "市集",
+        "餐饮",
+        "社区",
+        "线下空间"
+      ],
+      "en": []
+    }
+  },
+  "assetKey": "tongli-market",
+  "mainName": "同里市集",
+  "mainLocale": "CN",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "mainLocale": "CN",
+    "intro": {
+      "zh": "同里市集是位于北京顺义后沙峪的社区型餐饮与生活方式市集，以多元餐饮、社交与社区活动形成邻里共享空间。",
+      "en": ""
+    },
+    "business": {
+      "zh": "餐饮市集、社区生活方式、餐饮品牌运营与线下活动。",
+      "en": ""
+    },
+    "notes": {
+      "zh": "公开简介依据政府与公开媒体资料整理。",
+      "en": ""
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "餐饮市集",
+          "社区商业",
+          "生活方式"
+        ],
+        "en": []
+      },
+      "audiences": {
+        "zh": [
+          "社区居民",
+          "家庭客群",
+          "餐饮消费者",
+          "品牌合作方"
+        ],
+        "en": []
+      },
+      "tags": {
+        "zh": [
+          "北京顺义",
+          "市集",
+          "餐饮",
+          "社区",
+          "线下空间"
+        ],
+        "en": []
+      }
+    }
+  },
+  "display": {
+    "default": {
+      "language": "zh",
+      "name": "同里市集"
+    },
+    "zh": {
+      "name": "同里市集",
+      "secondaryName": ""
+    },
+    "en": {
+      "name": "同里市集",
+      "secondaryName": ""
+    }
+  },
+  "recordClass": "owned",
+  "primaryIndustry": "food-beverage",
+  "industries": [
+    "food-beverage",
+    "consumer-lifestyle"
+  ],
+  "ipType": "place-venue-brand",
+  "lifecycleStatus": "active",
+  "guidelineMode": "independent",
+  "parentCapable": true,
+  "architectureRoles": [
+    "parent"
+  ],
+  "version": {
+    "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+    "shortHash": "f751eee",
+    "date": "2026-07-20T08:17:19+08:00",
+    "message": "fix: prevent orphaned directory headline",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+  },
+  "historyUrl": "api/history/tongli-market.json",
+  "history": [
+    {
+      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+      "shortHash": "bc7b985",
+      "date": "2026-07-20T08:12:03+08:00",
+      "message": "feat: add IP taxonomy and brand architecture",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+      "sourcePaths": [
+        "config/brands.json",
+        "TongliMarket",
+        "TongliMarket/README.md"
+      ]
+    },
+    {
+      "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "shortHash": "eaf4320",
+      "date": "2026-07-19T14:13:21+08:00",
+      "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "sourcePaths": [
+        "config/brands.json",
+        "TongliMarket",
+        "TongliMarket/README.md"
+      ]
+    },
+    {
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "sourcePaths": [
+        "config/brands.json",
+        "TongliMarket",
+        "TongliMarket/README.md"
+      ]
+    },
+    {
+      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "shortHash": "a5bf7cf",
+      "date": "2026-07-10T20:21:24+08:00",
+      "message": "Replace contrast-template brand copy",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "sourcePaths": [
+        "config/brands.json",
+        "TongliMarket",
+        "TongliMarket/README.md"
+      ]
+    },
+    {
+      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "shortHash": "ed33a8b",
+      "date": "2026-07-10T18:44:20+08:00",
+      "message": "Add Shanrenjing journey safety IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "sourcePaths": [
+        "config/brands.json",
+        "TongliMarket",
+        "TongliMarket/README.md"
+      ]
+    },
+    {
+      "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "shortHash": "cd0ea58",
+      "date": "2026-07-08T04:12:48+08:00",
+      "message": "Refine hero index labels",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "sourcePaths": [
+        "config/brands.json",
+        "TongliMarket",
+        "TongliMarket/README.md"
+      ]
+    }
+  ],
+  "url": "brand.html?brand=tongli-market",
+  "apiUrl": "api/brands/tongli-market.json",
+  "status": "documented",
+  "guides": [
+    {
+      "path": "TongliMarket/README.md",
+      "title": "README",
+      "format": "md",
+      "primary": true,
+      "excerpt": "同里市集 中文优先的社区型餐饮与生活方式市集 IP。 定位：北京顺义后沙峪的社区餐饮与邻里共享空间 业务：餐饮市集、社区生活方式、品牌运营与线下活动 架构：母 IP 视觉状态：Provisional，待官方资产补充",
+      "text": "# 同里市集\n\n中文优先的社区型餐饮与生活方式市集 IP。\n\n- 定位：北京顺义后沙峪的社区餐饮与邻里共享空间\n- 业务：餐饮市集、社区生活方式、品牌运营与线下活动\n- 架构：母 IP\n- 视觉状态：Provisional，待官方资产补充\n\n",
+      "html": "<h1 id=\"tongli-market-guide-1-同里市集\">同里市集</h1>\n<p>中文优先的社区型餐饮与生活方式市集 IP。</p>\n<ul>\n<li>定位：北京顺义后沙峪的社区餐饮与邻里共享空间</li>\n<li>业务：餐饮市集、社区生活方式、品牌运营与线下活动</li>\n<li>架构：母 IP</li>\n<li>视觉状态：Provisional，待官方资产补充</li>\n</ul>\n"
+    }
+  ],
+  "tokens": [],
+  "images": [],
+  "assetManifest": [],
+  "adobeAssets": [],
+  "logoUrl": "",
+  "assetKit": {
+    "assetKey": "tongli-market",
+    "endpoints": {
+      "brand": "api/brands/tongli-market.json",
+      "logo": "",
+      "images": "api/brands/tongli-market.json#images",
+      "adobe": "",
+      "tokens": "api/brands/tongli-market.json#tokens",
+      "history": "api/history/tongli-market.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#26483D"
+        },
+        {
+          "key": "accent",
+          "value": "#C95D3A"
+        },
+        {
+          "key": "secondary",
+          "value": "#C9A65A"
+        },
+        {
+          "key": "surface",
+          "value": "#F2F4EF"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFEFA"
+        },
+        {
+          "key": "ink",
+          "value": "#18221E"
+        },
+        {
+          "key": "muted",
+          "value": "#66716B"
+        }
+      ],
+      "keywords": [
+        "community market",
+        "food",
+        "neighborhood",
+        "Beijing"
+      ],
+      "images": []
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#26483D"
+      },
+      {
+        "key": "accent",
+        "value": "#C95D3A"
+      },
+      {
+        "key": "secondary",
+        "value": "#C9A65A"
+      },
+      {
+        "key": "surface",
+        "value": "#F2F4EF"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFEFA"
+      },
+      {
+        "key": "ink",
+        "value": "#18221E"
+      },
+      {
+        "key": "muted",
+        "value": "#66716B"
+      }
+    ],
+    "keywords": [
+      "community market",
+      "food",
+      "neighborhood",
+      "Beijing"
+    ],
+    "images": []
+  },
+  "editablePaths": [
+    "TongliMarket/README.md"
+  ],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/TongliMarket",
+    "folder": "TongliMarket"
+  }
+}

@@ -608,6 +608,150 @@
     "url": "brand.html?brand=yanan-shiyao-hotel"
   },
   {
+    "type": "ip",
+    "slug": "tongli-market",
+    "title": "同里市集",
+    "subtitle": "同里市集",
+    "text": "同里市集是位于北京顺义后沙峪的社区型餐饮与生活方式市集，以多元餐饮、社交与社区活动形成邻里共享空间。 餐饮市集、社区生活方式、餐饮品牌运营与线下活动。 公开简介依据政府与公开媒体资料整理。 餐饮市集 社区商业 生活方式 社区居民 家庭客群 餐饮消费者 品牌合作方 北京顺义 市集 餐饮 社区 线下空间 北京顺义后沙峪的社区型餐饮与生活方式市集。 community market food neighborhood Beijing",
+    "url": "brand.html?brand=tongli-market"
+  },
+  {
+    "type": "guide",
+    "slug": "tongli-market",
+    "title": "README",
+    "subtitle": "同里市集 · TongliMarket/README.md",
+    "text": "同里市集 中文优先的社区型餐饮与生活方式市集 IP。 定位：北京顺义后沙峪的社区餐饮与邻里共享空间 业务：餐饮市集、社区生活方式、品牌运营与线下活动 架构：母 IP 视觉状态：Provisional，待官方资产补充",
+    "url": "brand.html?brand=tongli-market"
+  },
+  {
+    "type": "ip",
+    "slug": "tongxianghui",
+    "title": "同香荟",
+    "subtitle": "同香荟",
+    "text": "同香荟以潮粤菜、港式粉面、打冷和传统风味为核心，在同里市集形成兼顾日常用餐与聚会的餐饮体验。 潮粤菜、港式粉面、烧味、打冷与餐饮门店运营。 潮粤菜 港式餐饮 餐饮门店 家庭聚餐 商务宴请 社区食客 潮粤菜 港式粉面 打冷 烧味 以潮粤菜、港式粉面、打冷和传统风味为核心的餐饮品牌。 Cantonese Chaozhou Hong Kong heritage",
+    "url": "brand.html?brand=tongxianghui"
+  },
+  {
+    "type": "guide",
+    "slug": "tongxianghui",
+    "title": "README",
+    "subtitle": "同香荟 · Tongxianghui/README.md",
+    "text": "同香荟 中文优先的潮粤与港式餐饮 IP，为同里市集子 IP。 定位：潮粤菜、港式粉面、打冷与传统风味 规范模式：继承并扩展同里市集 视觉状态：Provisional，待官方资产补充",
+    "url": "brand.html?brand=tongxianghui"
+  },
+  {
+    "type": "ip",
+    "slug": "mutangwan",
+    "title": "睦堂湾",
+    "subtitle": "睦堂湾",
+    "text": "睦堂湾以海鲜打边炉、粤菜和港式风味为核心，服务家庭聚餐与社交用餐场景。 海鲜打边炉、粤菜、港式餐饮与门店运营。 海鲜餐饮 粤菜 港式风味 家庭聚餐 朋友聚会 商务客群 海鲜 打边炉 粤菜 港式 以海鲜打边炉、粤菜和港式风味为核心的餐饮品牌。 seafood hot pot Cantonese gathering",
+    "url": "brand.html?brand=mutangwan"
+  },
+  {
+    "type": "guide",
+    "slug": "mutangwan",
+    "title": "README",
+    "subtitle": "睦堂湾 · Mutangwan/README.md",
+    "text": "睦堂湾 中文优先的海鲜打边炉与粤菜餐饮 IP，为同里市集子 IP。 定位：海鲜打边炉、粤菜与港式风味 规范模式：继承并扩展同里市集 视觉状态：Provisional，待官方资产补充",
+    "url": "brand.html?brand=mutangwan"
+  },
+  {
+    "type": "ip",
+    "slug": "shuangxi-shaola",
+    "title": "双囍烧腊",
+    "subtitle": "双囍烧腊",
+    "text": "双囍烧腊以粤式烧腊和便捷中式餐饮为核心，在同里市集设有门店。 粤式烧腊、中式简餐与餐饮门店运营。 粤式烧腊 中式简餐 餐饮门店 社区食客 上班族 家庭客群 烧腊 粤式 简餐 同里市集 以粤式烧腊和便捷中式餐饮为核心的餐饮品牌。 roast meat Cantonese quick dining double happiness",
+    "url": "brand.html?brand=shuangxi-shaola"
+  },
+  {
+    "type": "guide",
+    "slug": "shuangxi-shaola",
+    "title": "README",
+    "subtitle": "双囍烧腊 · ShuangxiShaola/README.md",
+    "text": "双囍烧腊 中文优先的粤式烧腊餐饮 IP，为同里市集子 IP。 定位：粤式烧腊与便捷中式餐饮 规范模式：继承并扩展同里市集 视觉状态：Provisional，待官方资产补充",
+    "url": "brand.html?brand=shuangxi-shaola"
+  },
+  {
+    "type": "ip",
+    "slug": "ganglao-baozailu",
+    "title": "港佬煲仔炉车仔面碟头饭",
+    "subtitle": "港佬煲仔炉车仔面碟头饭",
+    "text": "港佬煲仔炉车仔面碟头饭聚焦煲仔饭、车仔面与碟头饭等港式街坊餐饮，公开资料仍待进一步核验。 煲仔饭、车仔面、碟头饭与港式简餐。 品牌定位依据现有名称建立，来源状态为 provisional。 港式简餐 煲仔饭 车仔面 社区食客 上班族 年轻客群 煲仔饭 车仔面 碟头饭 港式 聚焦煲仔饭、车仔面与碟头饭的港式街坊餐饮品牌。 claypot rice cart noodles Hong Kong street dining",
+    "url": "brand.html?brand=ganglao-baozailu"
+  },
+  {
+    "type": "guide",
+    "slug": "ganglao-baozailu",
+    "title": "README",
+    "subtitle": "港佬煲仔炉车仔面碟头饭 · GanglaoBaozailu/README.md",
+    "text": "港佬煲仔炉车仔面碟头饭 中文优先的港式街坊餐饮 IP，为同里市集子 IP。 定位：煲仔饭、车仔面、碟头饭与港式简餐 规范模式：继承并扩展同里市集 资料状态：Provisional，待官方资料核验",
+    "url": "brand.html?brand=ganglao-baozailu"
+  },
+  {
+    "type": "ip",
+    "slug": "xiaotaoyuan",
+    "title": "小桃园",
+    "subtitle": "小桃园",
+    "text": "小桃园面向社区早餐与日常简餐，提供油条、粢饭团、鸭血粉丝汤和小笼包等中式早点。 中式早餐、社区简餐与门店运营。 中式早餐 社区简餐 餐饮门店 社区居民 家庭客群 上班族 早餐 油条 粢饭团 小笼包 面向社区早餐与日常简餐的中式餐饮品牌。 breakfast neighborhood Chinese snacks morning",
+    "url": "brand.html?brand=xiaotaoyuan"
+  },
+  {
+    "type": "guide",
+    "slug": "xiaotaoyuan",
+    "title": "README",
+    "subtitle": "小桃园 · Xiaotaoyuan/README.md",
+    "text": "小桃园 中文优先的社区早餐与日常简餐 IP，为同里市集子 IP。 定位：中式早餐、社区简餐与日常门店 规范模式：继承并扩展同里市集 视觉状态：Provisional，待官方资产补充",
+    "url": "brand.html?brand=xiaotaoyuan"
+  },
+  {
+    "type": "ip",
+    "slug": "subangyuan",
+    "title": "苏帮袁",
+    "subtitle": "苏帮袁",
+    "text": "苏帮袁以苏帮菜、淮扬菜和江南饮食文化为核心，名称中的“袁”取意美食家袁枚。 苏帮菜、淮扬菜、江南餐饮、门店运营与品牌发展。 内部产品研究作为 API 受限私密 Notes 保存，不公开经营数据。 苏帮菜 淮扬菜 江南餐饮 品牌连锁 家庭聚餐 商务用餐 江南菜消费者 苏帮菜 淮扬菜 袁枚 江南 以苏帮菜、淮扬菜和江南饮食文化为核心的中式餐饮品牌。 Jiangnan Huaiyang cuisine Suzhou cuisine Chinese dining",
+    "url": "brand.html?brand=subangyuan"
+  },
+  {
+    "type": "guide",
+    "slug": "subangyuan",
+    "title": "README",
+    "subtitle": "苏帮袁 · Subangyuan/README.md",
+    "text": "苏帮袁 中文优先的苏帮菜与淮扬菜餐饮 IP。 定位：苏帮菜、淮扬菜与江南饮食文化 架构：母 IP 私密资料：内部产品研究仅通过授权 API / MCP 访问 视觉状态：Provisional，待官方资产补充",
+    "url": "brand.html?brand=subangyuan"
+  },
+  {
+    "type": "ip",
+    "slug": "youyuan-jingmeng",
+    "title": "游园京梦",
+    "subtitle": "游园京梦",
+    "text": "游园京梦自 2017 年起将淮扬菜与江南园林、昆曲意象融入城市商务与聚餐场景。 淮扬菜、城市商务餐饮、家庭聚餐与门店运营。 内部产品研究作为 API 受限私密 Notes 保存，不公开经营数据。 淮扬菜 城市餐饮 江南文化 商务客群 家庭聚餐 城市消费者 淮扬菜 江南园林 昆曲 北京 将淮扬菜与江南园林、昆曲意象融入城市餐饮场景的品牌。 Huaiyang cuisine Chinese garden Kunqu urban dining",
+    "url": "brand.html?brand=youyuan-jingmeng"
+  },
+  {
+    "type": "guide",
+    "slug": "youyuan-jingmeng",
+    "title": "README",
+    "subtitle": "游园京梦 · YouyuanJingmeng/README.md",
+    "text": "游园京梦 中文优先的淮扬菜与江南文化餐饮 IP。 定位：淮扬菜、江南园林意象与城市餐饮 架构：母 IP 私密资料：内部产品研究仅通过授权 API / MCP 访问 视觉状态：Provisional，待官方资产补充",
+    "url": "brand.html?brand=youyuan-jingmeng"
+  },
+  {
+    "type": "ip",
+    "slug": "qingshuiting",
+    "title": "清水亭",
+    "subtitle": "清水亭",
+    "text": "清水亭是围绕丹江口河鲜与湖北风味发展的商场型楚菜品牌，属于丹江渔村相关餐饮品牌矩阵。 楚菜、丹江口河鲜、湖北风味与商场餐饮门店运营。 楚菜 河鲜 湖北风味 商场餐饮 家庭聚餐 商场客群 湖北菜消费者 楚菜 丹江口 河鲜 湖北 围绕丹江口河鲜与湖北风味发展的商场型楚菜品牌。 Hubei cuisine river fish Danjiangkou mall dining",
+    "url": "brand.html?brand=qingshuiting"
+  },
+  {
+    "type": "guide",
+    "slug": "qingshuiting",
+    "title": "README",
+    "subtitle": "清水亭 · Qingshuiting/README.md",
+    "text": "清水亭 中文优先的楚菜与丹江口河鲜餐饮 IP。 定位：楚菜、丹江口河鲜、湖北风味与商场餐饮 架构：母 IP 视觉状态：Provisional，待官方资产补充",
+    "url": "brand.html?brand=qingshuiting"
+  },
+  {
     "type": "organization",
     "slug": "fortune-walmart",
     "title": "Walmart",

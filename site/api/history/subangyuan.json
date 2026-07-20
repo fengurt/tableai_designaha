@@ -1,0 +1,269 @@
+{
+  "slug": "subangyuan",
+  "name": "苏帮袁",
+  "mainLanguage": "zh",
+  "apiUrl": "api/brands/subangyuan.json",
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/Subangyuan",
+    "folder": "Subangyuan"
+  },
+  "trackedPaths": [
+    "config/brands.json",
+    "Subangyuan",
+    "Subangyuan/README.md"
+  ],
+  "latest": {
+    "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+    "shortHash": "bc7b985",
+    "date": "2026-07-20T08:12:03+08:00",
+    "message": "feat: add IP taxonomy and brand architecture",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+    "sourcePaths": [
+      "config/brands.json",
+      "Subangyuan",
+      "Subangyuan/README.md"
+    ]
+  },
+  "versions": [
+    {
+      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+      "shortHash": "bc7b985",
+      "date": "2026-07-20T08:12:03+08:00",
+      "message": "feat: add IP taxonomy and brand architecture",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+      "sourcePaths": [
+        "config/brands.json",
+        "Subangyuan",
+        "Subangyuan/README.md"
+      ]
+    },
+    {
+      "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "shortHash": "eaf4320",
+      "date": "2026-07-19T14:13:21+08:00",
+      "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "sourcePaths": [
+        "config/brands.json",
+        "Subangyuan",
+        "Subangyuan/README.md"
+      ]
+    },
+    {
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "sourcePaths": [
+        "config/brands.json",
+        "Subangyuan",
+        "Subangyuan/README.md"
+      ]
+    },
+    {
+      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "shortHash": "a5bf7cf",
+      "date": "2026-07-10T20:21:24+08:00",
+      "message": "Replace contrast-template brand copy",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "sourcePaths": [
+        "config/brands.json",
+        "Subangyuan",
+        "Subangyuan/README.md"
+      ]
+    },
+    {
+      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "shortHash": "ed33a8b",
+      "date": "2026-07-10T18:44:20+08:00",
+      "message": "Add Shanrenjing journey safety IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "sourcePaths": [
+        "config/brands.json",
+        "Subangyuan",
+        "Subangyuan/README.md"
+      ]
+    },
+    {
+      "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "shortHash": "cd0ea58",
+      "date": "2026-07-08T04:12:48+08:00",
+      "message": "Refine hero index labels",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "sourcePaths": [
+        "config/brands.json",
+        "Subangyuan",
+        "Subangyuan/README.md"
+      ]
+    },
+    {
+      "hash": "9e33619ad95856c977f8803517f325304d678821",
+      "shortHash": "9e33619",
+      "date": "2026-07-08T03:55:08+08:00",
+      "message": "Add Nibiru and Shenzhen Microsoft Global Center IPs",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/9e33619ad95856c977f8803517f325304d678821",
+      "sourcePaths": [
+        "config/brands.json",
+        "Subangyuan",
+        "Subangyuan/README.md"
+      ]
+    },
+    {
+      "hash": "4c1ae93145b837340d2ad6b92c80cf9935868ecb",
+      "shortHash": "4c1ae93",
+      "date": "2026-07-08T03:28:03+08:00",
+      "message": "Update OPC Global primary language",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4c1ae93145b837340d2ad6b92c80cf9935868ecb",
+      "sourcePaths": [
+        "config/brands.json",
+        "Subangyuan",
+        "Subangyuan/README.md"
+      ]
+    },
+    {
+      "hash": "4efc463d2f51813f4aae7c47083471b15ca8d1bf",
+      "shortHash": "4efc463",
+      "date": "2026-07-08T03:23:22+08:00",
+      "message": "Add Zhongzhiyou Group IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/4efc463d2f51813f4aae7c47083471b15ca8d1bf",
+      "sourcePaths": [
+        "config/brands.json",
+        "Subangyuan",
+        "Subangyuan/README.md"
+      ]
+    },
+    {
+      "hash": "5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
+      "shortHash": "5a93d2b",
+      "date": "2026-07-08T03:19:10+08:00",
+      "message": "Add Xinzhi Travel IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5a93d2bd25b67c481c44af593249aa2bf2ef8d14",
+      "sourcePaths": [
+        "config/brands.json",
+        "Subangyuan",
+        "Subangyuan/README.md"
+      ]
+    },
+    {
+      "hash": "3e24857f33d1f7b4c09df235064b2e6597a2732a",
+      "shortHash": "3e24857",
+      "date": "2026-07-06T12:50:10+08:00",
+      "message": "Add IP classifications and iNucleus",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/3e24857f33d1f7b4c09df235064b2e6597a2732a",
+      "sourcePaths": [
+        "config/brands.json",
+        "Subangyuan",
+        "Subangyuan/README.md"
+      ]
+    },
+    {
+      "hash": "b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+      "shortHash": "b0269d2",
+      "date": "2026-07-06T06:21:22+08:00",
+      "message": "Add ksamint IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34",
+      "sourcePaths": [
+        "config/brands.json",
+        "Subangyuan",
+        "Subangyuan/README.md"
+      ]
+    },
+    {
+      "hash": "067a47c76f1cb812b607335089911c282f4d8f78",
+      "shortHash": "067a47c",
+      "date": "2026-07-05T10:24:24+08:00",
+      "message": "Add Sanctem IP and brand logos",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/067a47c76f1cb812b607335089911c282f4d8f78",
+      "sourcePaths": [
+        "config/brands.json",
+        "Subangyuan",
+        "Subangyuan/README.md"
+      ]
+    },
+    {
+      "hash": "a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
+      "shortHash": "a0e6ecd",
+      "date": "2026-07-04T22:02:17+08:00",
+      "message": "Add Sidera reference notes",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
+      "sourcePaths": [
+        "config/brands.json",
+        "Subangyuan",
+        "Subangyuan/README.md"
+      ]
+    },
+    {
+      "hash": "0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
+      "shortHash": "0e3d71b",
+      "date": "2026-07-04T21:38:07+08:00",
+      "message": "Add PaM Design Office IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
+      "sourcePaths": [
+        "config/brands.json",
+        "Subangyuan",
+        "Subangyuan/README.md"
+      ]
+    },
+    {
+      "hash": "534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
+      "shortHash": "534c825",
+      "date": "2026-07-04T16:34:09+08:00",
+      "message": "Correct APUCH language and IPTrust naming",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
+      "sourcePaths": [
+        "config/brands.json",
+        "Subangyuan",
+        "Subangyuan/README.md"
+      ]
+    },
+    {
+      "hash": "1f20db30a5e970cf81e24c76e4613bc7e0036f09",
+      "shortHash": "1f20db3",
+      "date": "2026-07-04T16:01:00+08:00",
+      "message": "Add IP profile fields and main language display",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/1f20db30a5e970cf81e24c76e4613bc7e0036f09",
+      "sourcePaths": [
+        "config/brands.json",
+        "Subangyuan",
+        "Subangyuan/README.md"
+      ]
+    },
+    {
+      "hash": "088ab8909a2d4284cd64d7924cc60fa39b8eb206",
+      "shortHash": "088ab89",
+      "date": "2026-07-04T11:59:40+08:00",
+      "message": "Add APUCH IP to IPTrust",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/088ab8909a2d4284cd64d7924cc60fa39b8eb206",
+      "sourcePaths": [
+        "config/brands.json",
+        "Subangyuan",
+        "Subangyuan/README.md"
+      ]
+    },
+    {
+      "hash": "c723f8453cb7795108b51880986e7d9a664da5b1",
+      "shortHash": "c723f84",
+      "date": "2026-07-04T10:52:32+08:00",
+      "message": "Add global search and version history",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/c723f8453cb7795108b51880986e7d9a664da5b1",
+      "sourcePaths": [
+        "config/brands.json",
+        "Subangyuan",
+        "Subangyuan/README.md"
+      ]
+    },
+    {
+      "hash": "a550421605e0fadecfb30c3fd5066754feda54d7",
+      "shortHash": "a550421",
+      "date": "2026-07-04T07:52:24+08:00",
+      "message": "Add IPTrust brand systems",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a550421605e0fadecfb30c3fd5066754feda54d7",
+      "sourcePaths": [
+        "config/brands.json",
+        "Subangyuan",
+        "Subangyuan/README.md"
+      ]
+    }
+  ]
+}

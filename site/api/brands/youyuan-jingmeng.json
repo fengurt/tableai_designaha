@@ -1,0 +1,346 @@
+{
+  "slug": "youyuan-jingmeng",
+  "folder": "YouyuanJingmeng",
+  "name": "游园京梦",
+  "nativeName": "",
+  "description": "将淮扬菜与江南园林、昆曲意象融入城市餐饮场景的品牌。",
+  "officialWebsite": "",
+  "mainLanguage": "zh",
+  "intro": {
+    "zh": "游园京梦自 2017 年起将淮扬菜与江南园林、昆曲意象融入城市商务与聚餐场景。",
+    "en": ""
+  },
+  "business": {
+    "zh": "淮扬菜、城市商务餐饮、家庭聚餐与门店运营。",
+    "en": ""
+  },
+  "notes": {
+    "zh": "内部产品研究作为 API 受限私密 Notes 保存，不公开经营数据。",
+    "en": ""
+  },
+  "primaryGuide": "YouyuanJingmeng/README.md",
+  "sources": [
+    {
+      "title": "游园京梦品牌与门店资料",
+      "publisher": "Apple Maps",
+      "url": "https://maps.apple.com/place?auid=1118368816552254&lsp=57879",
+      "verifiedAt": "2026-07-20",
+      "confidence": "directory"
+    }
+  ],
+  "theme": {
+    "mode": "light",
+    "primary": "#2E514A",
+    "accent": "#A55764",
+    "secondary": "#BCA169",
+    "surface": "#EEF2ED",
+    "paper": "#FFFEFA",
+    "ink": "#1A2724",
+    "muted": "#68746F",
+    "line": "rgba(46, 81, 74, 0.18)",
+    "provisional": true,
+    "keywords": [
+      "Huaiyang cuisine",
+      "Chinese garden",
+      "Kunqu",
+      "urban dining"
+    ]
+  },
+  "classification": {
+    "tracks": {
+      "zh": [
+        "淮扬菜",
+        "城市餐饮",
+        "江南文化"
+      ],
+      "en": []
+    },
+    "audiences": {
+      "zh": [
+        "商务客群",
+        "家庭聚餐",
+        "城市消费者"
+      ],
+      "en": []
+    },
+    "tags": {
+      "zh": [
+        "淮扬菜",
+        "江南园林",
+        "昆曲",
+        "北京"
+      ],
+      "en": []
+    }
+  },
+  "assetKey": "youyuan-jingmeng",
+  "mainName": "游园京梦",
+  "mainLocale": "CN",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "mainLocale": "CN",
+    "intro": {
+      "zh": "游园京梦自 2017 年起将淮扬菜与江南园林、昆曲意象融入城市商务与聚餐场景。",
+      "en": ""
+    },
+    "business": {
+      "zh": "淮扬菜、城市商务餐饮、家庭聚餐与门店运营。",
+      "en": ""
+    },
+    "notes": {
+      "zh": "内部产品研究作为 API 受限私密 Notes 保存，不公开经营数据。",
+      "en": ""
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "淮扬菜",
+          "城市餐饮",
+          "江南文化"
+        ],
+        "en": []
+      },
+      "audiences": {
+        "zh": [
+          "商务客群",
+          "家庭聚餐",
+          "城市消费者"
+        ],
+        "en": []
+      },
+      "tags": {
+        "zh": [
+          "淮扬菜",
+          "江南园林",
+          "昆曲",
+          "北京"
+        ],
+        "en": []
+      }
+    }
+  },
+  "display": {
+    "default": {
+      "language": "zh",
+      "name": "游园京梦"
+    },
+    "zh": {
+      "name": "游园京梦",
+      "secondaryName": ""
+    },
+    "en": {
+      "name": "游园京梦",
+      "secondaryName": ""
+    }
+  },
+  "recordClass": "owned",
+  "primaryIndustry": "food-beverage",
+  "industries": [
+    "food-beverage"
+  ],
+  "ipType": "product-service-brand",
+  "lifecycleStatus": "active",
+  "guidelineMode": "independent",
+  "parentCapable": true,
+  "architectureRoles": [
+    "parent"
+  ],
+  "version": {
+    "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+    "shortHash": "f751eee",
+    "date": "2026-07-20T08:17:19+08:00",
+    "message": "fix: prevent orphaned directory headline",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+  },
+  "historyUrl": "api/history/youyuan-jingmeng.json",
+  "history": [
+    {
+      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+      "shortHash": "bc7b985",
+      "date": "2026-07-20T08:12:03+08:00",
+      "message": "feat: add IP taxonomy and brand architecture",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+      "sourcePaths": [
+        "config/brands.json",
+        "YouyuanJingmeng",
+        "YouyuanJingmeng/README.md"
+      ]
+    },
+    {
+      "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "shortHash": "eaf4320",
+      "date": "2026-07-19T14:13:21+08:00",
+      "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "sourcePaths": [
+        "config/brands.json",
+        "YouyuanJingmeng",
+        "YouyuanJingmeng/README.md"
+      ]
+    },
+    {
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "sourcePaths": [
+        "config/brands.json",
+        "YouyuanJingmeng",
+        "YouyuanJingmeng/README.md"
+      ]
+    },
+    {
+      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "shortHash": "a5bf7cf",
+      "date": "2026-07-10T20:21:24+08:00",
+      "message": "Replace contrast-template brand copy",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "sourcePaths": [
+        "config/brands.json",
+        "YouyuanJingmeng",
+        "YouyuanJingmeng/README.md"
+      ]
+    },
+    {
+      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "shortHash": "ed33a8b",
+      "date": "2026-07-10T18:44:20+08:00",
+      "message": "Add Shanrenjing journey safety IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "sourcePaths": [
+        "config/brands.json",
+        "YouyuanJingmeng",
+        "YouyuanJingmeng/README.md"
+      ]
+    },
+    {
+      "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "shortHash": "cd0ea58",
+      "date": "2026-07-08T04:12:48+08:00",
+      "message": "Refine hero index labels",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "sourcePaths": [
+        "config/brands.json",
+        "YouyuanJingmeng",
+        "YouyuanJingmeng/README.md"
+      ]
+    }
+  ],
+  "url": "brand.html?brand=youyuan-jingmeng",
+  "apiUrl": "api/brands/youyuan-jingmeng.json",
+  "status": "documented",
+  "guides": [
+    {
+      "path": "YouyuanJingmeng/README.md",
+      "title": "README",
+      "format": "md",
+      "primary": true,
+      "excerpt": "游园京梦 中文优先的淮扬菜与江南文化餐饮 IP。 定位：淮扬菜、江南园林意象与城市餐饮 架构：母 IP 私密资料：内部产品研究仅通过授权 API / MCP 访问 视觉状态：Provisional，待官方资产补充",
+      "text": "# 游园京梦\n\n中文优先的淮扬菜与江南文化餐饮 IP。\n\n- 定位：淮扬菜、江南园林意象与城市餐饮\n- 架构：母 IP\n- 私密资料：内部产品研究仅通过授权 API / MCP 访问\n- 视觉状态：Provisional，待官方资产补充\n\n",
+      "html": "<h1 id=\"youyuan-jingmeng-guide-1-游园京梦\">游园京梦</h1>\n<p>中文优先的淮扬菜与江南文化餐饮 IP。</p>\n<ul>\n<li>定位：淮扬菜、江南园林意象与城市餐饮</li>\n<li>架构：母 IP</li>\n<li>私密资料：内部产品研究仅通过授权 API / MCP 访问</li>\n<li>视觉状态：Provisional，待官方资产补充</li>\n</ul>\n"
+    }
+  ],
+  "tokens": [],
+  "images": [],
+  "assetManifest": [],
+  "adobeAssets": [],
+  "logoUrl": "",
+  "assetKit": {
+    "assetKey": "youyuan-jingmeng",
+    "endpoints": {
+      "brand": "api/brands/youyuan-jingmeng.json",
+      "logo": "",
+      "images": "api/brands/youyuan-jingmeng.json#images",
+      "adobe": "",
+      "tokens": "api/brands/youyuan-jingmeng.json#tokens",
+      "history": "api/history/youyuan-jingmeng.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#2E514A"
+        },
+        {
+          "key": "accent",
+          "value": "#A55764"
+        },
+        {
+          "key": "secondary",
+          "value": "#BCA169"
+        },
+        {
+          "key": "surface",
+          "value": "#EEF2ED"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFEFA"
+        },
+        {
+          "key": "ink",
+          "value": "#1A2724"
+        },
+        {
+          "key": "muted",
+          "value": "#68746F"
+        }
+      ],
+      "keywords": [
+        "Huaiyang cuisine",
+        "Chinese garden",
+        "Kunqu",
+        "urban dining"
+      ],
+      "images": []
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#2E514A"
+      },
+      {
+        "key": "accent",
+        "value": "#A55764"
+      },
+      {
+        "key": "secondary",
+        "value": "#BCA169"
+      },
+      {
+        "key": "surface",
+        "value": "#EEF2ED"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFEFA"
+      },
+      {
+        "key": "ink",
+        "value": "#1A2724"
+      },
+      {
+        "key": "muted",
+        "value": "#68746F"
+      }
+    ],
+    "keywords": [
+      "Huaiyang cuisine",
+      "Chinese garden",
+      "Kunqu",
+      "urban dining"
+    ],
+    "images": []
+  },
+  "editablePaths": [
+    "YouyuanJingmeng/README.md"
+  ],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/YouyuanJingmeng",
+    "folder": "YouyuanJingmeng"
+  }
+}

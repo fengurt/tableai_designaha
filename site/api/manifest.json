@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-20T00:17:19.160Z",
+  "generatedAt": "2026-07-20T05:55:00.529Z",
   "version": {
-    "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-    "shortHash": "bc7b985",
-    "date": "2026-07-20T08:12:03+08:00",
-    "message": "feat: add IP taxonomy and brand architecture",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+    "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+    "shortHash": "f751eee",
+    "date": "2026-07-20T08:17:19+08:00",
+    "message": "fix: prevent orphaned directory headline",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
   },
   "brands": [
     {
@@ -262,6 +262,87 @@
       "apiUrl": "api/brands/yanan-shiyao-hotel.json",
       "historyUrl": "api/history/yanan-shiyao-hotel.json",
       "guideUrl": "brand.html?brand=yanan-shiyao-hotel"
+    },
+    {
+      "slug": "tongli-market",
+      "name": "同里市集",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "apiUrl": "api/brands/tongli-market.json",
+      "historyUrl": "api/history/tongli-market.json",
+      "guideUrl": "brand.html?brand=tongli-market"
+    },
+    {
+      "slug": "tongxianghui",
+      "name": "同香荟",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "apiUrl": "api/brands/tongxianghui.json",
+      "historyUrl": "api/history/tongxianghui.json",
+      "guideUrl": "brand.html?brand=tongxianghui"
+    },
+    {
+      "slug": "mutangwan",
+      "name": "睦堂湾",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "apiUrl": "api/brands/mutangwan.json",
+      "historyUrl": "api/history/mutangwan.json",
+      "guideUrl": "brand.html?brand=mutangwan"
+    },
+    {
+      "slug": "shuangxi-shaola",
+      "name": "双囍烧腊",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "apiUrl": "api/brands/shuangxi-shaola.json",
+      "historyUrl": "api/history/shuangxi-shaola.json",
+      "guideUrl": "brand.html?brand=shuangxi-shaola"
+    },
+    {
+      "slug": "ganglao-baozailu",
+      "name": "港佬煲仔炉车仔面碟头饭",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "apiUrl": "api/brands/ganglao-baozailu.json",
+      "historyUrl": "api/history/ganglao-baozailu.json",
+      "guideUrl": "brand.html?brand=ganglao-baozailu"
+    },
+    {
+      "slug": "xiaotaoyuan",
+      "name": "小桃园",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "apiUrl": "api/brands/xiaotaoyuan.json",
+      "historyUrl": "api/history/xiaotaoyuan.json",
+      "guideUrl": "brand.html?brand=xiaotaoyuan"
+    },
+    {
+      "slug": "subangyuan",
+      "name": "苏帮袁",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "apiUrl": "api/brands/subangyuan.json",
+      "historyUrl": "api/history/subangyuan.json",
+      "guideUrl": "brand.html?brand=subangyuan"
+    },
+    {
+      "slug": "youyuan-jingmeng",
+      "name": "游园京梦",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "apiUrl": "api/brands/youyuan-jingmeng.json",
+      "historyUrl": "api/history/youyuan-jingmeng.json",
+      "guideUrl": "brand.html?brand=youyuan-jingmeng"
+    },
+    {
+      "slug": "qingshuiting",
+      "name": "清水亭",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "apiUrl": "api/brands/qingshuiting.json",
+      "historyUrl": "api/history/qingshuiting.json",
+      "guideUrl": "brand.html?brand=qingshuiting"
     }
   ],
   "mcp": {
@@ -279,6 +360,7 @@
       "list_ip_applications",
       "get_application",
       "search_library",
+      "get_library_item",
       "list_assets",
       "get_asset",
       "request_asset_url"
@@ -353,11 +435,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     }
   },
   "sync": {

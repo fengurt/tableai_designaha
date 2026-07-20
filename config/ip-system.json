@@ -61,7 +61,16 @@
     "shenzhen-microsoft-global-center": { "primaryIndustry": "technology-ai", "industries": ["technology-ai", "business-professional-services"], "ipType": "corporate-brand" },
     "shanrenjing": { "primaryIndustry": "safety-public-infrastructure", "industries": ["safety-public-infrastructure", "travel-destinations", "technology-ai"], "ipType": "product-service-brand" },
     "kaoyu-shenhua": { "primaryIndustry": "food-beverage", "industries": ["food-beverage"], "ipType": "product-service-brand" },
-    "yanan-shiyao-hotel": { "primaryIndustry": "hospitality-hotels", "industries": ["hospitality-hotels", "travel-destinations"], "ipType": "place-venue-brand" }
+    "yanan-shiyao-hotel": { "primaryIndustry": "hospitality-hotels", "industries": ["hospitality-hotels", "travel-destinations"], "ipType": "place-venue-brand" },
+    "tongli-market": { "primaryIndustry": "food-beverage", "industries": ["food-beverage", "consumer-lifestyle"], "ipType": "place-venue-brand", "parentCapable": true, "guidelineMode": "independent" },
+    "tongxianghui": { "primaryIndustry": "food-beverage", "industries": ["food-beverage"], "ipType": "product-service-brand", "parentCapable": false, "guidelineMode": "extend" },
+    "mutangwan": { "primaryIndustry": "food-beverage", "industries": ["food-beverage"], "ipType": "product-service-brand", "parentCapable": false, "guidelineMode": "extend" },
+    "shuangxi-shaola": { "primaryIndustry": "food-beverage", "industries": ["food-beverage"], "ipType": "product-service-brand", "parentCapable": false, "guidelineMode": "extend" },
+    "ganglao-baozailu": { "primaryIndustry": "food-beverage", "industries": ["food-beverage"], "ipType": "product-service-brand", "parentCapable": false, "guidelineMode": "extend" },
+    "xiaotaoyuan": { "primaryIndustry": "food-beverage", "industries": ["food-beverage"], "ipType": "product-service-brand", "parentCapable": false, "guidelineMode": "extend" },
+    "subangyuan": { "primaryIndustry": "food-beverage", "industries": ["food-beverage"], "ipType": "product-service-brand", "parentCapable": true, "guidelineMode": "independent" },
+    "youyuan-jingmeng": { "primaryIndustry": "food-beverage", "industries": ["food-beverage"], "ipType": "product-service-brand", "parentCapable": true, "guidelineMode": "independent" },
+    "qingshuiting": { "primaryIndustry": "food-beverage", "industries": ["food-beverage"], "ipType": "product-service-brand", "parentCapable": true, "guidelineMode": "independent" }
   },
   "references": [
     {
@@ -88,7 +97,12 @@
     }
   ],
   "relationships": [
-    { "id": "rel-wyndham-days-inn", "parent": "wyndham-hotels-resorts", "child": "days-inn-by-wyndham", "type": "brand_parent", "primary": true }
+    { "id": "rel-wyndham-days-inn", "parent": "wyndham-hotels-resorts", "child": "days-inn-by-wyndham", "type": "brand_parent", "primary": true },
+    { "id": "rel-tongli-market-tongxianghui", "parent": "tongli-market", "child": "tongxianghui", "type": "brand_parent", "primary": true },
+    { "id": "rel-tongli-market-mutangwan", "parent": "tongli-market", "child": "mutangwan", "type": "brand_parent", "primary": true },
+    { "id": "rel-tongli-market-shuangxi-shaola", "parent": "tongli-market", "child": "shuangxi-shaola", "type": "brand_parent", "primary": true },
+    { "id": "rel-tongli-market-ganglao-baozailu", "parent": "tongli-market", "child": "ganglao-baozailu", "type": "brand_parent", "primary": true },
+    { "id": "rel-tongli-market-xiaotaoyuan", "parent": "tongli-market", "child": "xiaotaoyuan", "type": "brand_parent", "primary": true }
   ],
   "applications": [
     {

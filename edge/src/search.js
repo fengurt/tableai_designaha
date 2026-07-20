@@ -3,7 +3,8 @@ import { chineseNgrams, parseJson } from "./utils.js";
 
 function visible(row, actor) {
   if (row.access === "public") return true;
-  return hasScope(actor, "assets:read_private") && hasIpScope(actor, row.ip_slug);
+  const scope = row.entity_type === "asset" ? "assets:read_private" : "library:read_private";
+  return hasScope(actor, scope) && hasIpScope(actor, row.ip_slug);
 }
 
 function embeddingRows(result) {
@@ -57,7 +58,7 @@ async function semantic(env, actor, query, limit) {
   const result = await env.AI.run("@cf/baai/bge-m3", { text: [query] });
   const vector = embeddingRows(result)[0];
   const options = { topK: Math.min(limit, 50), returnMetadata: "all" };
-  const canReadPrivate = hasScope(actor, "assets:read_private");
+  const canReadPrivate = hasScope(actor, "assets:read_private") || hasScope(actor, "library:read_private");
   const scopes = canReadPrivate && Array.isArray(actor?.ipScopes) ? actor.ipScopes : [];
   const queries = scopes.includes("*")
     ? [env.VECTORIZE.query(vector, options)]

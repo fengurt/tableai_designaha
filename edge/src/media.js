@@ -3,6 +3,50 @@ import { json } from "./utils.js";
 
 const WIDTHS = { "320": 320, "640": 640, "1280": 1280, "2400": 2400 };
 
+function negotiatedFormat(request, size, pathname) {
+  if (!WIDTHS[size] || !/\.(?:png|jpe?g|webp|avif)$/i.test(pathname)) return "original";
+  const accept = request.headers.get("accept") || "";
+  if (accept.includes("image/avif")) return "avif";
+  if (accept.includes("image/webp")) return "webp";
+  return "original";
+}
+
+function mediaCacheKey(request, pathname, size, format) {
+  const url = new URL(request.url);
+  url.pathname = pathname;
+  url.search = "";
+  url.searchParams.set("__iptrust_size", size);
+  url.searchParams.set("__iptrust_format", format);
+  return new Request(url, { method: "GET" });
+}
+
+function variantKey(key, size, format) {
+  return `${key.slice(0, key.lastIndexOf("/") + 1)}${size}.${format}`;
+}
+
+function cacheResult(response, state, timing = "", method = "GET") {
+  const headers = new Headers(response.headers);
+  headers.set("X-IPTrust-Cache", state);
+  headers.set("Server-Timing", `edge-cache;desc=${state}${timing ? `, ${timing}` : ""}`);
+  headers.set("Timing-Allow-Origin", "*");
+  return new Response(method === "HEAD" ? null : response.body, { status: response.status, statusText: response.statusText, headers });
+}
+
+function objectResponse(object, { isPrivate = false, range = null, totalSize = object.size, method = "GET" } = {}) {
+  const headers = new Headers();
+  object.writeHttpMetadata(headers);
+  headers.set("ETag", object.httpEtag);
+  headers.set("Accept-Ranges", "bytes");
+  headers.set("X-Content-Type-Options", "nosniff");
+  headers.set("Cache-Control", isPrivate ? "private, no-store" : "public, max-age=31536000, immutable");
+  headers.set("Vary", "Accept");
+  if (range) {
+    headers.set("Content-Range", `bytes ${range.offset}-${range.offset + range.length - 1}/${totalSize}`);
+    headers.set("Content-Length", String(range.length));
+  }
+  return new Response(method === "HEAD" ? null : object.body, { status: range ? 206 : 200, headers });
+}
+
 function rangeFromHeader(value, size) {
   const match = String(value || "").match(/^bytes=(\d*)-(\d*)$/);
   if (!match) return null;
@@ -28,6 +72,7 @@ async function signed(request, env, pathname) {
 }
 
 export async function serveMedia(request, env) {
+  const startedAt = Date.now();
   if (!["GET", "HEAD"].includes(request.method)) return json(request, { error: "method_not_allowed" }, { status: 405 }, true);
   const url = new URL(request.url);
   const pathname = decodeURIComponent(url.pathname);
@@ -38,38 +83,57 @@ export async function serveMedia(request, env) {
 
   const key = pathname.slice(1);
   const bucket = isPrivate ? env.ORIGINALS : env.PREVIEWS;
-  const head = await bucket.head(key);
-  if (!head) return json(request, { error: "not_found" }, { status: 404 });
-
-  const range = rangeFromHeader(request.headers.get("range"), head.size);
   const size = url.searchParams.get("size") || "original";
-  const canTransform = isPublic && WIDTHS[size] && /^image\/(png|jpeg|webp|avif)$/i.test(head.httpMetadata?.contentType || "") && head.size <= 20 * 1024 * 1024 && env.IMAGES;
-  if (canTransform && !range && request.method === "GET") {
-    const cache = caches.default;
-    const cached = await cache.match(request);
-    if (cached) return cached;
-    const object = await bucket.get(key);
-    const accept = request.headers.get("accept") || "";
-    const format = accept.includes("image/avif") ? "image/avif" : accept.includes("image/webp") ? "image/webp" : (head.httpMetadata?.contentType || "image/jpeg");
-    const transformed = (await env.IMAGES.input(object.body).transform({ width: WIDTHS[size], fit: "scale-down" }).output({ format, quality: 82 })).response();
-    const response = new Response(transformed.body, { headers: { ...Object.fromEntries(transformed.headers), "Cache-Control": "public, max-age=31536000, immutable", "Vary": "Accept", "X-IPTrust-Transform": `${size}:${format}` } });
-    await cache.put(request, response.clone());
-    return response;
+  const rangeHeader = request.headers.get("range");
+  const format = negotiatedFormat(request, size, pathname);
+  const cache = caches.default;
+  const cacheKey = mediaCacheKey(request, pathname, size, format);
+
+  if (isPublic && !rangeHeader) {
+    const cached = await cache.match(cacheKey);
+    if (cached) return cacheResult(cached, "HIT", `total;dur=${Date.now() - startedAt}`, request.method);
   }
 
-  const object = await bucket.get(key, range ? { range } : undefined);
-  if (!object) return json(request, { error: "not_found" }, { status: 404 });
-  const headers = new Headers();
-  object.writeHttpMetadata(headers);
-  headers.set("ETag", object.httpEtag);
-  headers.set("Accept-Ranges", "bytes");
-  headers.set("X-Content-Type-Options", "nosniff");
-  headers.set("Cache-Control", isPrivate ? "private, no-store" : "public, max-age=31536000, immutable");
-  if (range) {
-    headers.set("Content-Range", `bytes ${range.offset}-${range.offset + range.length - 1}/${head.size}`);
-    headers.set("Content-Length", String(range.length));
+  if (isPublic && WIDTHS[size] && format !== "original" && !rangeHeader && request.method === "GET") {
+    const persisted = await env.PREVIEWS.get(variantKey(key, size, format));
+    if (persisted) {
+      const response = objectResponse(persisted);
+      await cache.put(cacheKey, response.clone());
+      return cacheResult(response, "MISS", `r2;dur=${Date.now() - startedAt}, variant;desc=persisted`);
+    }
+
+    const object = await bucket.get(key);
+    const contentType = object?.httpMetadata?.contentType || "";
+    const canTransform = object && /^image\/(png|jpeg|webp|avif)$/i.test(contentType) && object.size <= 20 * 1024 * 1024 && env.IMAGES;
+    if (!canTransform) return object ? cacheResult(objectResponse(object), "BYPASS", `r2;dur=${Date.now() - startedAt}`) : json(request, { error: "not_found" }, { status: 404 });
+
+    const transformed = (await env.IMAGES.input(object.body)
+      .transform({ width: WIDTHS[size], fit: "scale-down" })
+      .output({ format: `image/${format}`, quality: 82 })).response();
+    const headers = new Headers(transformed.headers);
+    headers.set("Cache-Control", "public, max-age=31536000, immutable");
+    headers.set("Vary", "Accept");
+    headers.set("X-IPTrust-Transform", `${size}:image/${format}`);
+    const response = new Response(transformed.body, { status: transformed.status, headers });
+    await cache.put(cacheKey, response.clone());
+    return cacheResult(response, "MISS", `r2;dur=${Date.now() - startedAt}, variant;desc=dynamic`);
   }
-  return new Response(request.method === "HEAD" ? null : object.body, { status: range ? 206 : 200, headers });
+
+  if (rangeHeader) {
+    const head = await bucket.head(key);
+    if (!head) return json(request, { error: "not_found" }, { status: 404 });
+    const range = rangeFromHeader(rangeHeader, head.size);
+    if (!range) return new Response(null, { status: 416, headers: { "Content-Range": `bytes */${head.size}` } });
+    const object = await bucket.get(key, { range });
+    if (!object) return json(request, { error: "not_found" }, { status: 404 });
+    return cacheResult(objectResponse(object, { isPrivate, range, totalSize: head.size, method: request.method }), "BYPASS", `r2;dur=${Date.now() - startedAt}`);
+  }
+
+  const object = request.method === "HEAD" ? await bucket.head(key) : await bucket.get(key);
+  if (!object) return json(request, { error: "not_found" }, { status: 404 });
+  const response = objectResponse(object, { isPrivate, method: request.method });
+  if (isPublic && request.method === "GET") await cache.put(cacheKey, response.clone());
+  return cacheResult(response, isPrivate ? "BYPASS" : "MISS", `r2;dur=${Date.now() - startedAt}`);
 }
 
 export async function serveLegacyAsset(request, env) {

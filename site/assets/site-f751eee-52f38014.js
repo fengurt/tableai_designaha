@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "bc7b985-14ccb74b";
+const BUILD_VERSION = "f751eee-52f38014";
 
 const i18n = {
   cn: {
@@ -462,6 +462,19 @@ function responsiveImageAttributes(value, widths = [320, 640, 1280], sizes = "10
   const src = mediaPreviewUrl(value, fallback);
   const srcset = normalized.map((width) => mediaPreviewUrl(value, width) + " " + width + "w").join(", ");
   return 'src="' + escapeHtml(src) + '" srcset="' + escapeHtml(srcset) + '" sizes="' + escapeHtml(sizes) + '"';
+}
+
+function imageDimensionAttributes(asset = {}) {
+  let width = Number(asset.width || 0);
+  let height = Number(asset.height || 0);
+  if ((!width || !height) && asset.dimensions) {
+    const match = String(asset.dimensions).match(/(d+)s*[x×]s*(d+)/i);
+    if (match) {
+      width = Number(match[1]);
+      height = Number(match[2]);
+    }
+  }
+  return width > 0 && height > 0 ? 'width="' + width + '" height="' + height + '"' : "";
 }
 
 function copyIcon() {
@@ -1682,7 +1695,7 @@ async function renderBrand() {
         </div>
         ${hero ? `
           <div class="brand-visual">
-            <img ${responsiveImageAttributes(hero.sitePath, [640, 1280, 2400], "(max-width: 900px) 100vw, 52vw")} alt="${escapeHtml(hero.title || display.name)}" decoding="async">
+            <img ${responsiveImageAttributes(hero.sitePath, [640, 1280, 2400], "(max-width: 900px) 100vw, 52vw")} ${imageDimensionAttributes(hero)} alt="${escapeHtml(hero.title || display.name)}" loading="eager" fetchpriority="high" decoding="async">
             <button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="${escapeHtml(hero.sitePath)}" aria-label="${escapeHtml(t("copy.assetUrl"))}">${copyIcon()}</button>
             <div class="brand-visual-meta">
               <strong>${escapeHtml(hero.title || display.name)}</strong>
@@ -1772,16 +1785,18 @@ async function renderDirectory() {
   const industry = params.get("industry") || "";
   const ipType = params.get("type") || "";
   const parent = params.get("parent") || "";
+  const architectureRole = params.get("architectureRole") || "";
   const query = (params.get("q") || "").trim().toLowerCase();
   const parents = new Map((data.relationships || []).filter((item) => item.type === "brand_parent" && item.primary).map((item) => [item.child, item.parent]));
-  const filtered = data.ips.filter((ip) => (!industry || ip.primaryIndustry === industry || ip.industries?.includes(industry)) && (!ipType || ip.ipType === ipType) && (!parent || parents.get(ip.slug) === parent) && (!query || [ip.slug, ip.names?.zh, ip.names?.en].join(" ").toLowerCase().includes(query)));
-  const parentIps = data.ips.filter((ip) => (data.relationships || []).some((relation) => relation.parent === ip.slug));
+  const filtered = data.ips.filter((ip) => (!industry || ip.primaryIndustry === industry || ip.industries?.includes(industry)) && (!ipType || ip.ipType === ipType) && (!architectureRole || ip.architectureRoles?.includes(architectureRole)) && (!parent || parents.get(ip.slug) === parent) && (!query || [ip.slug, ip.names?.zh, ip.names?.en].join(" ").toLowerCase().includes(query)));
+  const parentIps = data.ips.filter((ip) => ip.architectureRoles?.includes("parent") || (data.relationships || []).some((relation) => relation.parent === ip.slug));
   page.innerHTML = `
     <header class="directory-hero"><p class="eyebrow">IPTrust Directory</p><h1>${currentLocale === "en" ? "IP, clearly structured." : "IP，一目了然。"}</h1><p>${data.ips.length} IP · ${data.applications.length} ${currentLocale === "en" ? "applications" : "项目应用"}</p></header>
     <form class="directory-filters" id="directoryFilters">
       <input name="q" value="${escapeHtml(params.get("q") || "")}" placeholder="${currentLocale === "en" ? "Search IP" : "搜索 IP"}">
       <select name="industry">${selectOptions(data.taxonomy.industries || [], industry, currentLocale === "en" ? "All industries" : "全部行业")}</select>
       <select name="type">${selectOptions(data.taxonomy.ipTypes || [], ipType, currentLocale === "en" ? "All IP types" : "全部类型")}</select>
+      <select name="architectureRole"><option value="">${currentLocale === "en" ? "All architecture roles" : "全部架构"}</option><option value="parent" ${architectureRole === "parent" ? "selected" : ""}>${currentLocale === "en" ? "Parent IP" : "母 IP"}</option><option value="child" ${architectureRole === "child" ? "selected" : ""}>${currentLocale === "en" ? "Child IP" : "子 IP"}</option><option value="standalone" ${architectureRole === "standalone" ? "selected" : ""}>${currentLocale === "en" ? "Standalone" : "独立 IP"}</option></select>
       <select name="parent"><option value="">${currentLocale === "en" ? "All parent IPs" : "全部母 IP"}</option>${parentIps.map((ip) => `<option value="${ip.slug}" ${parent === ip.slug ? "selected" : ""}>${escapeHtml(primaryIpName(ip))}</option>`).join("")}</select>
       <button type="submit">${currentLocale === "en" ? "Apply" : "筛选"}</button>
     </form>
@@ -1857,6 +1872,37 @@ async function renderBrandArchitecture(slug) {
   node.innerHTML = `<header><p class="eyebrow">Architecture</p><h2>${currentLocale === "en" ? "Brand lineage" : "品牌谱系"}</h2></header><div class="lineage-grid">${graph.parents.map((relation) => `<a href="ip?ip=${relation.parent}"><small>Parent IP</small><strong>${escapeHtml(relation.parentNames?.zh || relation.parentNames?.en || relation.parent)}</strong></a>`).join("")}${graph.children.map((relation) => `<a href="ip?ip=${relation.child}"><small>Child IP</small><strong>${escapeHtml(relation.childNames?.zh || relation.childNames?.en || relation.child)}</strong></a>`).join("")}${graph.applications.map((app) => `<a href="application?application=${app.slug}"><small>Application</small><strong>${escapeHtml(app.names?.zh || app.names?.en || app.slug)}</strong></a>`).join("")}</div>`;
 }
 
+function setupWebVitals() {
+  if (!("PerformanceObserver" in window) || Math.random() > 0.1) return;
+  const metrics = { ttfb: 0, lcp: 0, cls: 0, inp: 0, transferSize: 0 };
+  const navigation = performance.getEntriesByType("navigation")[0];
+  if (navigation) {
+    metrics.ttfb = Math.max(0, navigation.responseStart - navigation.requestStart);
+    metrics.transferSize = navigation.transferSize || 0;
+  }
+  const observe = (type, callback, options = {}) => {
+    if (!PerformanceObserver.supportedEntryTypes?.includes(type)) return;
+    try {
+      const observer = new PerformanceObserver((list) => list.getEntries().forEach(callback));
+      observer.observe({ type, buffered: true, ...options });
+    } catch {}
+  };
+  observe("largest-contentful-paint", (entry) => { metrics.lcp = Math.max(metrics.lcp, entry.startTime || 0); });
+  observe("layout-shift", (entry) => { if (!entry.hadRecentInput) metrics.cls += entry.value || 0; });
+  observe("event", (entry) => { metrics.inp = Math.max(metrics.inp, entry.duration || 0); }, { durationThreshold: 40 });
+  let reported = false;
+  const report = () => {
+    if (reported) return;
+    reported = true;
+    const serverTiming = navigation?.serverTiming || [];
+    const cache = serverTiming.find((item) => item.name === "edge-cache")?.description || "unknown";
+    const body = JSON.stringify({ ...metrics, path: location.pathname, locale: document.documentElement.lang || "und", cache, imageFormat: "negotiated" });
+    navigator.sendBeacon(new URL("/api/v2/metrics/web-vitals", location.origin), new Blob([body], { type: "application/json" }));
+  };
+  addEventListener("pagehide", report, { once: true });
+  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") report(); }, { once: true });
+}
+
 applyI18n();
 setupLanguageToggle();
 setupDirectoryLink();
@@ -1869,3 +1915,4 @@ renderBrand().catch(console.error);
 renderDirectory().catch(console.error);
 renderIpRecord().catch(console.error);
 renderApplicationPage().catch(console.error);
+setupWebVitals();

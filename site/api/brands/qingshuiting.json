@@ -1,0 +1,348 @@
+{
+  "slug": "qingshuiting",
+  "folder": "Qingshuiting",
+  "name": "清水亭",
+  "nativeName": "",
+  "description": "围绕丹江口河鲜与湖北风味发展的商场型楚菜品牌。",
+  "officialWebsite": "",
+  "mainLanguage": "zh",
+  "intro": {
+    "zh": "清水亭是围绕丹江口河鲜与湖北风味发展的商场型楚菜品牌，属于丹江渔村相关餐饮品牌矩阵。",
+    "en": ""
+  },
+  "business": {
+    "zh": "楚菜、丹江口河鲜、湖北风味与商场餐饮门店运营。",
+    "en": ""
+  },
+  "primaryGuide": "Qingshuiting/README.md",
+  "sources": [
+    {
+      "title": "丹江渔村多品牌矩阵",
+      "publisher": "餐饮界 / 搜狐",
+      "url": "https://www.sohu.com/a/1003480090_121180127",
+      "verifiedAt": "2026-07-20",
+      "confidence": "editorial"
+    }
+  ],
+  "theme": {
+    "mode": "light",
+    "primary": "#1F5A63",
+    "accent": "#B56E42",
+    "secondary": "#819B72",
+    "surface": "#EEF3F0",
+    "paper": "#FFFEFB",
+    "ink": "#17282B",
+    "muted": "#66787A",
+    "line": "rgba(31, 90, 99, 0.18)",
+    "provisional": true,
+    "keywords": [
+      "Hubei cuisine",
+      "river fish",
+      "Danjiangkou",
+      "mall dining"
+    ]
+  },
+  "classification": {
+    "tracks": {
+      "zh": [
+        "楚菜",
+        "河鲜",
+        "湖北风味",
+        "商场餐饮"
+      ],
+      "en": []
+    },
+    "audiences": {
+      "zh": [
+        "家庭聚餐",
+        "商场客群",
+        "湖北菜消费者"
+      ],
+      "en": []
+    },
+    "tags": {
+      "zh": [
+        "楚菜",
+        "丹江口",
+        "河鲜",
+        "湖北"
+      ],
+      "en": []
+    }
+  },
+  "assetKey": "qingshuiting",
+  "mainName": "清水亭",
+  "mainLocale": "CN",
+  "profile": {
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "mainLocale": "CN",
+    "intro": {
+      "zh": "清水亭是围绕丹江口河鲜与湖北风味发展的商场型楚菜品牌，属于丹江渔村相关餐饮品牌矩阵。",
+      "en": ""
+    },
+    "business": {
+      "zh": "楚菜、丹江口河鲜、湖北风味与商场餐饮门店运营。",
+      "en": ""
+    },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "楚菜",
+          "河鲜",
+          "湖北风味",
+          "商场餐饮"
+        ],
+        "en": []
+      },
+      "audiences": {
+        "zh": [
+          "家庭聚餐",
+          "商场客群",
+          "湖北菜消费者"
+        ],
+        "en": []
+      },
+      "tags": {
+        "zh": [
+          "楚菜",
+          "丹江口",
+          "河鲜",
+          "湖北"
+        ],
+        "en": []
+      }
+    }
+  },
+  "display": {
+    "default": {
+      "language": "zh",
+      "name": "清水亭"
+    },
+    "zh": {
+      "name": "清水亭",
+      "secondaryName": ""
+    },
+    "en": {
+      "name": "清水亭",
+      "secondaryName": ""
+    }
+  },
+  "notes": {
+    "zh": "",
+    "en": ""
+  },
+  "recordClass": "owned",
+  "primaryIndustry": "food-beverage",
+  "industries": [
+    "food-beverage"
+  ],
+  "ipType": "product-service-brand",
+  "lifecycleStatus": "active",
+  "guidelineMode": "independent",
+  "parentCapable": true,
+  "architectureRoles": [
+    "parent"
+  ],
+  "version": {
+    "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+    "shortHash": "f751eee",
+    "date": "2026-07-20T08:17:19+08:00",
+    "message": "fix: prevent orphaned directory headline",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+  },
+  "historyUrl": "api/history/qingshuiting.json",
+  "history": [
+    {
+      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+      "shortHash": "bc7b985",
+      "date": "2026-07-20T08:12:03+08:00",
+      "message": "feat: add IP taxonomy and brand architecture",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+      "sourcePaths": [
+        "config/brands.json",
+        "Qingshuiting",
+        "Qingshuiting/README.md"
+      ]
+    },
+    {
+      "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "shortHash": "eaf4320",
+      "date": "2026-07-19T14:13:21+08:00",
+      "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86",
+      "sourcePaths": [
+        "config/brands.json",
+        "Qingshuiting",
+        "Qingshuiting/README.md"
+      ]
+    },
+    {
+      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "shortHash": "b0056d3",
+      "date": "2026-07-12T21:39:51+08:00",
+      "message": "Rename Shanrenjing English brand to shanpass",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12",
+      "sourcePaths": [
+        "config/brands.json",
+        "Qingshuiting",
+        "Qingshuiting/README.md"
+      ]
+    },
+    {
+      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "shortHash": "a5bf7cf",
+      "date": "2026-07-10T20:21:24+08:00",
+      "message": "Replace contrast-template brand copy",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
+      "sourcePaths": [
+        "config/brands.json",
+        "Qingshuiting",
+        "Qingshuiting/README.md"
+      ]
+    },
+    {
+      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "shortHash": "ed33a8b",
+      "date": "2026-07-10T18:44:20+08:00",
+      "message": "Add Shanrenjing journey safety IP",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
+      "sourcePaths": [
+        "config/brands.json",
+        "Qingshuiting",
+        "Qingshuiting/README.md"
+      ]
+    },
+    {
+      "hash": "cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "shortHash": "cd0ea58",
+      "date": "2026-07-08T04:12:48+08:00",
+      "message": "Refine hero index labels",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/cd0ea58d4be4c6567f5daa7abeda33ba56c9c2eb",
+      "sourcePaths": [
+        "config/brands.json",
+        "Qingshuiting",
+        "Qingshuiting/README.md"
+      ]
+    }
+  ],
+  "url": "brand.html?brand=qingshuiting",
+  "apiUrl": "api/brands/qingshuiting.json",
+  "status": "documented",
+  "guides": [
+    {
+      "path": "Qingshuiting/README.md",
+      "title": "README",
+      "format": "md",
+      "primary": true,
+      "excerpt": "清水亭 中文优先的楚菜与丹江口河鲜餐饮 IP。 定位：楚菜、丹江口河鲜、湖北风味与商场餐饮 架构：母 IP 视觉状态：Provisional，待官方资产补充",
+      "text": "# 清水亭\n\n中文优先的楚菜与丹江口河鲜餐饮 IP。\n\n- 定位：楚菜、丹江口河鲜、湖北风味与商场餐饮\n- 架构：母 IP\n- 视觉状态：Provisional，待官方资产补充\n\n",
+      "html": "<h1 id=\"qingshuiting-guide-1-清水亭\">清水亭</h1>\n<p>中文优先的楚菜与丹江口河鲜餐饮 IP。</p>\n<ul>\n<li>定位：楚菜、丹江口河鲜、湖北风味与商场餐饮</li>\n<li>架构：母 IP</li>\n<li>视觉状态：Provisional，待官方资产补充</li>\n</ul>\n"
+    }
+  ],
+  "tokens": [],
+  "images": [],
+  "assetManifest": [],
+  "adobeAssets": [],
+  "logoUrl": "",
+  "assetKit": {
+    "assetKey": "qingshuiting",
+    "endpoints": {
+      "brand": "api/brands/qingshuiting.json",
+      "logo": "",
+      "images": "api/brands/qingshuiting.json#images",
+      "adobe": "",
+      "tokens": "api/brands/qingshuiting.json#tokens",
+      "history": "api/history/qingshuiting.json"
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#1F5A63"
+        },
+        {
+          "key": "accent",
+          "value": "#B56E42"
+        },
+        {
+          "key": "secondary",
+          "value": "#819B72"
+        },
+        {
+          "key": "surface",
+          "value": "#EEF3F0"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFEFB"
+        },
+        {
+          "key": "ink",
+          "value": "#17282B"
+        },
+        {
+          "key": "muted",
+          "value": "#66787A"
+        }
+      ],
+      "keywords": [
+        "Hubei cuisine",
+        "river fish",
+        "Danjiangkou",
+        "mall dining"
+      ],
+      "images": []
+    }
+  },
+  "moodboard": {
+    "colors": [
+      {
+        "key": "primary",
+        "value": "#1F5A63"
+      },
+      {
+        "key": "accent",
+        "value": "#B56E42"
+      },
+      {
+        "key": "secondary",
+        "value": "#819B72"
+      },
+      {
+        "key": "surface",
+        "value": "#EEF3F0"
+      },
+      {
+        "key": "paper",
+        "value": "#FFFEFB"
+      },
+      {
+        "key": "ink",
+        "value": "#17282B"
+      },
+      {
+        "key": "muted",
+        "value": "#66787A"
+      }
+    ],
+    "keywords": [
+      "Hubei cuisine",
+      "river fish",
+      "Danjiangkou",
+      "mall dining"
+    ],
+    "images": []
+  },
+  "editablePaths": [
+    "Qingshuiting/README.md"
+  ],
+  "source": {
+    "github": "https://github.com/fengurt/tableai_designaha/tree/main/Qingshuiting",
+    "folder": "Qingshuiting"
+  }
+}

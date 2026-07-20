@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "id": "subangyuan-product-research-2026",
+    "slug": "subangyuan-product-research-2026",
+    "title": { "zh": "苏帮袁产品结构研究", "en": "" },
+    "summary": { "zh": "苏帮袁产品结构、消费场景与品牌认知研究。内容包含内部经营分析，仅限授权访问。", "en": "" },
+    "sourcePublisher": "苏帮袁产品结构升级项目组",
+    "publishedAt": "2026-05-29",
+    "access": "private",
+    "fileKey": "private/subangyuan/notes/03f8c85995bd2c298ca270a0c3f4c8e8adc07151ea940a2f3275cdf1439c2b1f/source.md",
+    "verificationStatus": "internal",
+    "metadata": { "ipSlug": "subangyuan", "sha256": "03f8c85995bd2c298ca270a0c3f4c8e8adc07151ea940a2f3275cdf1439c2b1f", "mimeType": "text/markdown", "bytes": 8718, "containsSensitiveMetrics": true }
+  },
+  {
+    "id": "youyuan-jingmeng-product-research-2026",
+    "slug": "youyuan-jingmeng-product-research-2026",
+    "title": { "zh": "游园京梦产品结构研究", "en": "" },
+    "summary": { "zh": "游园京梦产品结构、消费场景与品牌定位研究。内容包含内部经营分析，仅限授权访问。", "en": "" },
+    "sourcePublisher": "游园京梦产品研究项目组",
+    "publishedAt": "2026-06-22",
+    "access": "private",
+    "fileKey": "private/youyuan-jingmeng/notes/49acff2bb8ef69a8a691d41c454379f11b1c1aa742b117a06efa070bae6f84ac/source.md",
+    "verificationStatus": "internal",
+    "metadata": { "ipSlug": "youyuan-jingmeng", "sha256": "49acff2bb8ef69a8a691d41c454379f11b1c1aa742b117a06efa070bae6f84ac", "mimeType": "text/markdown", "bytes": 4788, "containsSensitiveMetrics": true }
+  }
+]

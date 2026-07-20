@@ -41,10 +41,10 @@ for (const [dimension, terms] of [
   }
 }
 
-function seedIpRecord({ slug, recordClass, ipType, primaryIndustry, industries, names, mainLanguage, lifecycleStatus = "active", guidelineMode = "independent", sourceUrl = "", sourcePublisher = "", verificationStatus = "internal", payload = {} }) {
+function seedIpRecord({ slug, recordClass, ipType, primaryIndustry, industries, names, mainLanguage, lifecycleStatus = "active", guidelineMode = "independent", parentCapable = false, sourceUrl = "", sourcePublisher = "", verificationStatus = "internal", payload = {} }) {
   const normalizedIndustries = [...new Set([primaryIndustry, ...(industries || [])])];
-  const snapshot = { slug, recordClass, ipType, primaryIndustry, industries: normalizedIndustries, names, mainLanguage, lifecycleStatus, guidelineMode, sourceUrl, sourcePublisher, verificationStatus, payload, version: 1, updatedAt: timestamp };
-  statements.push(`INSERT INTO ip_records(slug,record_class,ip_type,primary_industry,names_json,main_language,lifecycle_status,guideline_mode,source_url,source_publisher,verification_status,payload_json,version,created_at,updated_at) VALUES(${q(slug)},${q(recordClass)},${q(ipType)},${q(primaryIndustry)},${q(JSON.stringify(names))},${q(mainLanguage)},${q(lifecycleStatus)},${q(guidelineMode)},${q(sourceUrl)},${q(sourcePublisher)},${q(verificationStatus)},${q(JSON.stringify(payload))},1,${q(timestamp)},${q(timestamp)}) ON CONFLICT(slug) DO UPDATE SET record_class=excluded.record_class,ip_type=CASE WHEN ip_records.version<=1 THEN excluded.ip_type ELSE ip_records.ip_type END,primary_industry=CASE WHEN ip_records.version<=1 THEN excluded.primary_industry ELSE ip_records.primary_industry END,names_json=CASE WHEN ip_records.version<=1 THEN excluded.names_json ELSE ip_records.names_json END,main_language=CASE WHEN ip_records.version<=1 THEN excluded.main_language ELSE ip_records.main_language END,lifecycle_status=CASE WHEN ip_records.version<=1 THEN excluded.lifecycle_status ELSE ip_records.lifecycle_status END,guideline_mode=CASE WHEN ip_records.version<=1 THEN excluded.guideline_mode ELSE ip_records.guideline_mode END,source_url=excluded.source_url,source_publisher=excluded.source_publisher,verification_status=excluded.verification_status,payload_json=CASE WHEN ip_records.version<=1 THEN excluded.payload_json ELSE ip_records.payload_json END,updated_at=excluded.updated_at;`);
+  const snapshot = { slug, recordClass, ipType, primaryIndustry, industries: normalizedIndustries, names, mainLanguage, lifecycleStatus, guidelineMode, parentCapable: Boolean(parentCapable), sourceUrl, sourcePublisher, verificationStatus, payload, version: 1, updatedAt: timestamp };
+  statements.push(`INSERT INTO ip_records(slug,record_class,ip_type,primary_industry,names_json,main_language,lifecycle_status,guideline_mode,parent_capable,source_url,source_publisher,verification_status,payload_json,version,created_at,updated_at) VALUES(${q(slug)},${q(recordClass)},${q(ipType)},${q(primaryIndustry)},${q(JSON.stringify(names))},${q(mainLanguage)},${q(lifecycleStatus)},${q(guidelineMode)},${parentCapable ? 1 : 0},${q(sourceUrl)},${q(sourcePublisher)},${q(verificationStatus)},${q(JSON.stringify(payload))},1,${q(timestamp)},${q(timestamp)}) ON CONFLICT(slug) DO UPDATE SET record_class=excluded.record_class,ip_type=CASE WHEN ip_records.version<=1 THEN excluded.ip_type ELSE ip_records.ip_type END,primary_industry=CASE WHEN ip_records.version<=1 THEN excluded.primary_industry ELSE ip_records.primary_industry END,names_json=CASE WHEN ip_records.version<=1 THEN excluded.names_json ELSE ip_records.names_json END,main_language=CASE WHEN ip_records.version<=1 THEN excluded.main_language ELSE ip_records.main_language END,lifecycle_status=CASE WHEN ip_records.version<=1 THEN excluded.lifecycle_status ELSE ip_records.lifecycle_status END,guideline_mode=CASE WHEN ip_records.version<=1 THEN excluded.guideline_mode ELSE ip_records.guideline_mode END,parent_capable=CASE WHEN ip_records.version<=1 THEN excluded.parent_capable ELSE ip_records.parent_capable END,source_url=excluded.source_url,source_publisher=excluded.source_publisher,verification_status=excluded.verification_status,payload_json=CASE WHEN ip_records.version<=1 THEN excluded.payload_json ELSE ip_records.payload_json END,updated_at=excluded.updated_at;`);
   for (const industry of normalizedIndustries) {
     statements.push(`INSERT INTO ip_taxonomy(ip_slug,term_id,is_primary,created_at) VALUES(${q(slug)},${q(industry)},${industry === primaryIndustry ? 1 : 0},${q(timestamp)}) ON CONFLICT(ip_slug,term_id) DO UPDATE SET is_primary=CASE WHEN (SELECT version FROM ip_records WHERE slug=excluded.ip_slug)<=1 THEN excluded.is_primary ELSE ip_taxonomy.is_primary END;`);
   }
@@ -66,9 +66,13 @@ for (const brand of brands) {
     ipType: classification.ipType,
     primaryIndustry: classification.primaryIndustry,
     industries: classification.industries,
-    names: { zh: payload.display?.zh?.name || brand.nativeName || brand.name, en: payload.display?.en?.name || brand.name },
+    names: { zh: payload.display?.zh?.name || brand.name, en: brand.nativeName || (brand.mainLanguage === "en" ? brand.name : "") },
     mainLanguage: brand.mainLanguage || "zh",
     guidelineMode: classification.guidelineMode || "independent",
+    parentCapable: Boolean(classification.parentCapable),
+    sourceUrl: brand.sources?.[0]?.url || "",
+    sourcePublisher: brand.sources?.[0]?.publisher || "",
+    verificationStatus: brand.sources?.length ? (brand.sources.some((source) => source.confidence === "government") ? "source-verified" : "source-documented") : "provisional",
     payload,
   });
 }
@@ -82,6 +86,7 @@ for (const reference of ipSystem.references) {
     industries: reference.industries,
     names: reference.names,
     mainLanguage: reference.mainLanguage,
+    parentCapable: Boolean(reference.parentCapable),
     sourceUrl: reference.sourceUrl,
     sourcePublisher: reference.sourcePublisher,
     verificationStatus: reference.verificationStatus,
@@ -113,9 +118,11 @@ for (const name of brandsOnly ? [] : libraryNames) {
   }
 }
 
-for (const asset of brandsOnly ? [] : assets.items) {
-  outbox(`seed-search-asset-${asset.id}`, "search.index", "asset", asset.id, 1, { entityType: "asset", entityId: asset.id });
-  if (asset.access === "private") outbox(`seed-process-asset-${asset.id}`, "asset.process", "asset", asset.id, 1, { assetId: asset.id, ownerId: asset.ownerId, objectKey: asset.objectKey, access: asset.access, mimeType: asset.mimeType, extension: asset.extension, expectedSha256: asset.sha256 });
+for (const asset of assets.items) {
+  if (!brandsOnly) outbox(`seed-search-asset-${asset.id}`, "search.index", "asset", asset.id, 1, { entityType: "asset", entityId: asset.id });
+  const isPublicRaster = asset.access === "public" && /^image\/(png|jpeg|webp|avif)$/.test(asset.mimeType || "");
+  if (isPublicRaster) outbox(`seed-process-responsive-v1-${asset.id}`, "asset.process", "asset", asset.id, 1, { assetId: asset.id, ownerId: asset.ownerId, objectKey: asset.objectKey, access: asset.access, mimeType: asset.mimeType, extension: asset.extension, expectedSha256: asset.sha256 });
+  if (!brandsOnly && asset.access === "private") outbox(`seed-process-asset-${asset.id}`, "asset.process", "asset", asset.id, 1, { assetId: asset.id, ownerId: asset.ownerId, objectKey: asset.objectKey, access: asset.access, mimeType: asset.mimeType, extension: asset.extension, expectedSha256: asset.sha256 });
 }
 
 const tempDir = join(root, ".tmp");

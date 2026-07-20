@@ -31,6 +31,16 @@ const librarySnapshots = Object.fromEntries(await Promise.all(librarySnapshotNam
   name,
   JSON.parse(await readFile(join(libraryDataDir, `${name}.json`), "utf8")),
 ])));
+const privateLibraryIds = new Set(["cases", "reports", "datasets"].flatMap((name) => librarySnapshots[name].filter((item) => item.access === "private").map((item) => item.id)));
+const relationParentSlugs = new Set(ipSystem.relationships.filter((item) => item.type === "brand_parent").map((item) => item.parent));
+const relationChildSlugs = new Set(ipSystem.relationships.filter((item) => item.type === "brand_parent").map((item) => item.child));
+
+function architectureRolesFor(slug, parentCapable = false) {
+  const roles = [];
+  if (parentCapable || relationParentSlugs.has(slug)) roles.push("parent");
+  if (relationChildSlugs.has(slug)) roles.push("child");
+  return roles.length ? roles : ["standalone"];
+}
 const hubName = "岁知社 IPTrust";
 const hubNameCn = "岁知社";
 const hubNameEn = "IPTrust";
@@ -488,6 +498,8 @@ function apiSchemaPayload() {
       organizations: "api/library/organizations",
       cases: "api/library/cases",
       reports: "api/library/reports",
+      protectedLibraryItem: "api/v2/library/{collection}/{id}",
+      protectedLibraryFile: "api/v2/library/{collection}/{id}/sign",
       datasets: "api/library/datasets",
       relations: "api/library/relations",
       allVersions: "api/versions.json",
@@ -530,6 +542,7 @@ function apiSchemaPayload() {
       moodboard: "Derived colors, keywords, and image assets for visual direction.",
       editablePaths: "Source files editable from admin flow.",
       source: "GitHub source folder and local folder.",
+      sources: "Public provenance records with publisher, URL, verification date, and confidence.",
       version: "Latest build/global version object.",
       history: "Latest per-IP history records.",
       primaryIndustry: "Primary term from the controlled bilingual industry taxonomy.",
@@ -538,6 +551,8 @@ function apiSchemaPayload() {
       recordClass: "owned or reference.",
       lifecycleStatus: "Lifecycle state such as active, draft, archived or retired.",
       guidelineMode: "independent or inherited guideline behavior.",
+      parentCapable: "Whether the IP is explicitly available as a mother IP even before children are linked.",
+      architectureRoles: "Computed roles; an IP can be parent, child, both, or standalone.",
     },
     architecture: {
       primaryParent: "One optional brand_parent relationship; cycles are rejected.",
@@ -599,7 +614,13 @@ if (!assetManifest && existsSync(join(root, "assets/contact/wecom-qr.png"))) {
   await copyFile(join(root, "assets/contact/wecom-qr.png"), join(contactDir, "wecom-qr.png"));
 }
 for (const name of librarySnapshotNames) {
-  await copyFile(join(libraryDataDir, `${name}.json`), join(libraryApiDir, `${name}.json`));
+  if (["cases", "reports", "datasets"].includes(name)) {
+    await writeFile(join(libraryApiDir, `${name}.json`), JSON.stringify(librarySnapshots[name].filter((item) => item.access !== "private"), null, 2));
+  } else if (name === "relations") {
+    await writeFile(join(libraryApiDir, `${name}.json`), JSON.stringify(librarySnapshots[name].filter((item) => !privateLibraryIds.has(item.fromId) && !privateLibraryIds.has(item.toId)), null, 2));
+  } else {
+    await copyFile(join(libraryDataDir, `${name}.json`), join(libraryApiDir, `${name}.json`));
+  }
 }
 await copyFile(join(root, "library/index.html"), join(librarySiteDir, "index.html"));
 await copyFile(join(root, "library/library.css"), join(librarySiteDir, "library.css"));
@@ -755,6 +776,8 @@ for (const brand of brands) {
     ipType: ipSystem.owned[brand.slug]?.ipType || "corporate-brand",
     lifecycleStatus: "active",
     guidelineMode: ipSystem.owned[brand.slug]?.guidelineMode || "independent",
+    parentCapable: Boolean(ipSystem.owned[brand.slug]?.parentCapable),
+    architectureRoles: architectureRolesFor(brand.slug, ipSystem.owned[brand.slug]?.parentCapable),
     version: versions[0] ?? null,
     historyUrl: `api/history/${brand.slug}.json`,
     history: history.slice(0, 6),
@@ -843,7 +866,7 @@ const librarySearchPayload = [
     text: [organization.description, organization.country, organization.headquarters, organization.officialWebsite, organization.sourceUrl].filter(Boolean).join(" "),
     url: `library/?type=organizations&q=${encodeURIComponent(organization.name)}`,
   })),
-  ...["cases", "reports", "datasets"].flatMap((collection) => librarySnapshots[collection].map((item) => ({
+  ...["cases", "reports", "datasets"].flatMap((collection) => librarySnapshots[collection].filter((item) => item.access !== "private").map((item) => ({
     type: item.type || collection.slice(0, -1),
     slug: item.slug || item.id,
     title: item.title?.zh || item.title?.en || item.slug || item.id,
@@ -855,8 +878,8 @@ const librarySearchPayload = [
 const searchPayload = [...brandSearchPayload, ...librarySearchPayload];
 await writeFile(join(apiDir, "brands.json"), JSON.stringify(indexPayload, null, 2));
 const staticIps = [
-  ...indexPayload.map((brand) => ({ slug: brand.slug, recordClass: "owned", ipType: brand.ipType, primaryIndustry: brand.primaryIndustry, industries: brand.industries, names: { zh: brand.display?.zh?.name || brand.nativeName || brand.name, en: brand.display?.en?.name || brand.name }, mainLanguage: brand.mainLanguage, lifecycleStatus: brand.lifecycleStatus, guidelineMode: brand.guidelineMode, sourceUrl: brand.officialWebsite || "", logoUrl: brand.logoUrl || brand.heroImage || "", url: brand.url })),
-  ...ipSystem.references.map((item) => ({ ...item, recordClass: "reference", lifecycleStatus: "active", guidelineMode: "independent", url: `ip?ip=${item.slug}` })),
+  ...indexPayload.map((brand) => ({ slug: brand.slug, recordClass: "owned", ipType: brand.ipType, primaryIndustry: brand.primaryIndustry, industries: brand.industries, names: { zh: brand.display?.zh?.name || brand.name, en: brand.nativeName || (brand.mainLanguage === "en" ? brand.name : "") }, mainLanguage: brand.mainLanguage, lifecycleStatus: brand.lifecycleStatus, guidelineMode: brand.guidelineMode, parentCapable: brand.parentCapable, architectureRoles: brand.architectureRoles, sourceUrl: brand.sources?.[0]?.url || brand.officialWebsite || "", sourcePublisher: brand.sources?.[0]?.publisher || "", verificationStatus: brand.sources?.length ? "source-documented" : "provisional", logoUrl: brand.logoUrl || brand.heroImage || "", url: brand.url })),
+  ...ipSystem.references.map((item) => ({ ...item, recordClass: "reference", lifecycleStatus: "active", guidelineMode: "independent", parentCapable: Boolean(item.parentCapable), architectureRoles: architectureRolesFor(item.slug, item.parentCapable), url: `ip?ip=${item.slug}` })),
 ];
 await writeFile(join(apiDir, "taxonomy.json"), JSON.stringify(ipSystem.taxonomy, null, 2));
 await writeFile(join(apiDir, "ips.json"), JSON.stringify({ items: staticIps, relationships: ipSystem.relationships, applications: ipSystem.applications }, null, 2));
@@ -887,7 +910,7 @@ await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
     transport: "Streamable HTTP",
     protocolVersion: "2025-11-25",
     resources: "api/brands/{slug}.json",
-    tools: ["list_brands", "get_brand", "list_ips", "get_ip_graph", "list_ip_children", "list_ip_applications", "get_application", "search_library", "list_assets", "get_asset", "request_asset_url"],
+    tools: ["list_brands", "get_brand", "list_ips", "get_ip_graph", "list_ip_children", "list_ip_applications", "get_application", "search_library", "get_library_item", "list_assets", "get_asset", "request_asset_url"],
   },
   schema: {
     apiUrl: "api/schema.json",
@@ -910,9 +933,9 @@ await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
     publicMetadata: true,
     counts: {
       organizations: librarySnapshots.organizations.length,
-      cases: librarySnapshots.cases.length,
-      reports: librarySnapshots.reports.length,
-      datasets: librarySnapshots.datasets.length,
+      cases: librarySnapshots.cases.filter((item) => item.access !== "private").length,
+      reports: librarySnapshots.reports.filter((item) => item.access !== "private").length,
+      datasets: librarySnapshots.datasets.filter((item) => item.access !== "private").length,
     },
     endpoints: {
       organizations: "api/library/organizations",
@@ -1132,6 +1155,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${hubName}</title>
   <meta name="description" content="${hubDescription}">
+  <link rel="preconnect" href="https://media.apuch.art" crossorigin>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${siteCssPath}">
   <link rel="stylesheet" href="assets/editorial.css?v=${buildVersion}">
@@ -1262,6 +1286,7 @@ await writeFile(join(siteDir, "ip-evolution"), html`<!doctype html>
   <base href="./">
   <title>IP进化论 | ${hubName}</title>
   <meta name="description" content="IP进化论把品牌架构、内核、表达、资产与治理连接成可持续更新的系统。">
+  <link rel="preconnect" href="https://media.apuch.art" crossorigin>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${siteCssPath}">
   <link rel="stylesheet" href="assets/editorial.css?v=${buildVersion}">
@@ -1347,6 +1372,8 @@ await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brand Guidelines</title>
+  <link rel="preconnect" href="https://media.apuch.art" crossorigin>
+  <script>try{const slug=new URLSearchParams(location.search).get("brand");if(slug){const link=document.createElement("link");link.rel="preload";link.as="fetch";link.href="api/brands/"+encodeURIComponent(slug)+".json";document.head.append(link)}}catch{}</script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${siteCssPath}">
   <link rel="stylesheet" href="assets/editorial.css?v=${buildVersion}">
@@ -1408,6 +1435,7 @@ function directoryPage({ kind, title, mountId }) {
   <base href="../">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${title} · ${hubName}</title>
+  <link rel="preconnect" href="https://media.apuch.art" crossorigin>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${siteCssPath}">
   <link rel="stylesheet" href="assets/editorial.css?v=${buildVersion}">
@@ -1443,6 +1471,7 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
   <base href="../">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin · ${hubName}</title>
+  <link rel="preconnect" href="https://media.apuch.art" crossorigin>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${siteCssPath}">
   <link rel="stylesheet" href="assets/editorial.css?v=${buildVersion}">
@@ -1514,6 +1543,7 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
           <label><span>主语言</span><select id="ipMainLanguage"><option value="zh">中文</option><option value="en">English</option></select></label><label><span>IP 类型</span><select id="ipType"></select></label>
           <label><span>主行业</span><select id="ipPrimaryIndustry"></select></label><label><span>其他行业</span><select id="ipIndustries" multiple></select></label>
           <label><span>生命周期</span><select id="ipLifecycle"><option value="active">Active</option><option value="draft">Draft</option><option value="archived">Archived</option></select></label><label><span>规范模式</span><select id="ipGuideline"><option value="independent">Independent</option><option value="inherit">Inherit</option><option value="extend">Extend</option></select></label>
+          <label><span>品牌架构</span><span class="checkbox-line"><input id="ipParentCapable" type="checkbox"> 可作为母 IP</span></label>
         </div>
         <div class="actions"><button id="saveIp">保存字段</button><button class="ghost" id="saveBrand">保存品牌内容</button></div>
         <details class="advanced-editor"><summary>高级 · Raw JSON</summary><textarea id="editor" spellcheck="false" placeholder="Brand JSON"></textarea></details>
@@ -3016,7 +3046,7 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
 .directory-hero .eyebrow { grid-column: 1 / -1; }
 .directory-hero h1 { max-width: 760px; margin: 0; font-size: clamp(44px, 7vw, 92px); line-height: .92; }
 .directory-hero > p:last-child { color: var(--muted); font: 700 12px/1 ui-monospace, monospace; }
-.directory-filters { display: grid; grid-template-columns: minmax(180px, 1.6fr) repeat(3, minmax(140px, 1fr)) auto; gap: 8px; position: sticky; top: 74px; z-index: 4; padding: 12px 0; background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(14px); }
+.directory-filters { display: grid; grid-template-columns: minmax(180px, 1.6fr) repeat(4, minmax(132px, 1fr)) auto; gap: 8px; position: sticky; top: 74px; z-index: 4; padding: 12px 0; background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(14px); }
 .directory-filters input, .directory-filters select, .directory-filters button { min-height: 42px; margin: 0; border-radius: 2px; }
 .directory-list { border-top: 1px solid var(--line); }
 .directory-row { display: grid; grid-template-columns: minmax(220px, 2fr) 1.15fr 1.15fr 1fr 24px; gap: 16px; align-items: center; min-height: 68px; border-bottom: 1px solid var(--line); text-decoration: none; transition: padding .2s ease, background .2s ease; }
@@ -3589,6 +3619,19 @@ function responsiveImageAttributes(value, widths = [320, 640, 1280], sizes = "10
   const src = mediaPreviewUrl(value, fallback);
   const srcset = normalized.map((width) => mediaPreviewUrl(value, width) + " " + width + "w").join(", ");
   return 'src="' + escapeHtml(src) + '" srcset="' + escapeHtml(srcset) + '" sizes="' + escapeHtml(sizes) + '"';
+}
+
+function imageDimensionAttributes(asset = {}) {
+  let width = Number(asset.width || 0);
+  let height = Number(asset.height || 0);
+  if ((!width || !height) && asset.dimensions) {
+    const match = String(asset.dimensions).match(/(\d+)\s*[x×]\s*(\d+)/i);
+    if (match) {
+      width = Number(match[1]);
+      height = Number(match[2]);
+    }
+  }
+  return width > 0 && height > 0 ? 'width="' + width + '" height="' + height + '"' : "";
 }
 
 function copyIcon() {
@@ -4809,7 +4852,7 @@ async function renderBrand() {
         </div>
         \${hero ? \`
           <div class="brand-visual">
-            <img \${responsiveImageAttributes(hero.sitePath, [640, 1280, 2400], "(max-width: 900px) 100vw, 52vw")} alt="\${escapeHtml(hero.title || display.name)}" decoding="async">
+            <img \${responsiveImageAttributes(hero.sitePath, [640, 1280, 2400], "(max-width: 900px) 100vw, 52vw")} \${imageDimensionAttributes(hero)} alt="\${escapeHtml(hero.title || display.name)}" loading="eager" fetchpriority="high" decoding="async">
             <button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="\${escapeHtml(hero.sitePath)}" aria-label="\${escapeHtml(t("copy.assetUrl"))}">\${copyIcon()}</button>
             <div class="brand-visual-meta">
               <strong>\${escapeHtml(hero.title || display.name)}</strong>
@@ -4899,16 +4942,18 @@ async function renderDirectory() {
   const industry = params.get("industry") || "";
   const ipType = params.get("type") || "";
   const parent = params.get("parent") || "";
+  const architectureRole = params.get("architectureRole") || "";
   const query = (params.get("q") || "").trim().toLowerCase();
   const parents = new Map((data.relationships || []).filter((item) => item.type === "brand_parent" && item.primary).map((item) => [item.child, item.parent]));
-  const filtered = data.ips.filter((ip) => (!industry || ip.primaryIndustry === industry || ip.industries?.includes(industry)) && (!ipType || ip.ipType === ipType) && (!parent || parents.get(ip.slug) === parent) && (!query || [ip.slug, ip.names?.zh, ip.names?.en].join(" ").toLowerCase().includes(query)));
-  const parentIps = data.ips.filter((ip) => (data.relationships || []).some((relation) => relation.parent === ip.slug));
+  const filtered = data.ips.filter((ip) => (!industry || ip.primaryIndustry === industry || ip.industries?.includes(industry)) && (!ipType || ip.ipType === ipType) && (!architectureRole || ip.architectureRoles?.includes(architectureRole)) && (!parent || parents.get(ip.slug) === parent) && (!query || [ip.slug, ip.names?.zh, ip.names?.en].join(" ").toLowerCase().includes(query)));
+  const parentIps = data.ips.filter((ip) => ip.architectureRoles?.includes("parent") || (data.relationships || []).some((relation) => relation.parent === ip.slug));
   page.innerHTML = \`
     <header class="directory-hero"><p class="eyebrow">IPTrust Directory</p><h1>\${currentLocale === "en" ? "IP, clearly structured." : "IP，一目了然。"}</h1><p>\${data.ips.length} IP · \${data.applications.length} \${currentLocale === "en" ? "applications" : "项目应用"}</p></header>
     <form class="directory-filters" id="directoryFilters">
       <input name="q" value="\${escapeHtml(params.get("q") || "")}" placeholder="\${currentLocale === "en" ? "Search IP" : "搜索 IP"}">
       <select name="industry">\${selectOptions(data.taxonomy.industries || [], industry, currentLocale === "en" ? "All industries" : "全部行业")}</select>
       <select name="type">\${selectOptions(data.taxonomy.ipTypes || [], ipType, currentLocale === "en" ? "All IP types" : "全部类型")}</select>
+      <select name="architectureRole"><option value="">\${currentLocale === "en" ? "All architecture roles" : "全部架构"}</option><option value="parent" \${architectureRole === "parent" ? "selected" : ""}>\${currentLocale === "en" ? "Parent IP" : "母 IP"}</option><option value="child" \${architectureRole === "child" ? "selected" : ""}>\${currentLocale === "en" ? "Child IP" : "子 IP"}</option><option value="standalone" \${architectureRole === "standalone" ? "selected" : ""}>\${currentLocale === "en" ? "Standalone" : "独立 IP"}</option></select>
       <select name="parent"><option value="">\${currentLocale === "en" ? "All parent IPs" : "全部母 IP"}</option>\${parentIps.map((ip) => \`<option value="\${ip.slug}" \${parent === ip.slug ? "selected" : ""}>\${escapeHtml(primaryIpName(ip))}</option>\`).join("")}</select>
       <button type="submit">\${currentLocale === "en" ? "Apply" : "筛选"}</button>
     </form>
@@ -4984,6 +5029,37 @@ async function renderBrandArchitecture(slug) {
   node.innerHTML = \`<header><p class="eyebrow">Architecture</p><h2>\${currentLocale === "en" ? "Brand lineage" : "品牌谱系"}</h2></header><div class="lineage-grid">\${graph.parents.map((relation) => \`<a href="ip?ip=\${relation.parent}"><small>Parent IP</small><strong>\${escapeHtml(relation.parentNames?.zh || relation.parentNames?.en || relation.parent)}</strong></a>\`).join("")}\${graph.children.map((relation) => \`<a href="ip?ip=\${relation.child}"><small>Child IP</small><strong>\${escapeHtml(relation.childNames?.zh || relation.childNames?.en || relation.child)}</strong></a>\`).join("")}\${graph.applications.map((app) => \`<a href="application?application=\${app.slug}"><small>Application</small><strong>\${escapeHtml(app.names?.zh || app.names?.en || app.slug)}</strong></a>\`).join("")}</div>\`;
 }
 
+function setupWebVitals() {
+  if (!("PerformanceObserver" in window) || Math.random() > 0.1) return;
+  const metrics = { ttfb: 0, lcp: 0, cls: 0, inp: 0, transferSize: 0 };
+  const navigation = performance.getEntriesByType("navigation")[0];
+  if (navigation) {
+    metrics.ttfb = Math.max(0, navigation.responseStart - navigation.requestStart);
+    metrics.transferSize = navigation.transferSize || 0;
+  }
+  const observe = (type, callback, options = {}) => {
+    if (!PerformanceObserver.supportedEntryTypes?.includes(type)) return;
+    try {
+      const observer = new PerformanceObserver((list) => list.getEntries().forEach(callback));
+      observer.observe({ type, buffered: true, ...options });
+    } catch {}
+  };
+  observe("largest-contentful-paint", (entry) => { metrics.lcp = Math.max(metrics.lcp, entry.startTime || 0); });
+  observe("layout-shift", (entry) => { if (!entry.hadRecentInput) metrics.cls += entry.value || 0; });
+  observe("event", (entry) => { metrics.inp = Math.max(metrics.inp, entry.duration || 0); }, { durationThreshold: 40 });
+  let reported = false;
+  const report = () => {
+    if (reported) return;
+    reported = true;
+    const serverTiming = navigation?.serverTiming || [];
+    const cache = serverTiming.find((item) => item.name === "edge-cache")?.description || "unknown";
+    const body = JSON.stringify({ ...metrics, path: location.pathname, locale: document.documentElement.lang || "und", cache, imageFormat: "negotiated" });
+    navigator.sendBeacon(new URL("/api/v2/metrics/web-vitals", location.origin), new Blob([body], { type: "application/json" }));
+  };
+  addEventListener("pagehide", report, { once: true });
+  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") report(); }, { once: true });
+}
+
 applyI18n();
 setupLanguageToggle();
 setupDirectoryLink();
@@ -4995,7 +5071,8 @@ renderIndex().catch(console.error);
 renderBrand().catch(console.error);
 renderDirectory().catch(console.error);
 renderIpRecord().catch(console.error);
-renderApplicationPage().catch(console.error);`);
+renderApplicationPage().catch(console.error);
+setupWebVitals();`);
 await copyFile(join(assetsDir, "site.js"), join(siteDir, siteJsPath));
 
 await writeFile(join(assetsDir, "admin.js"), html`const $ = (selector) => document.querySelector(selector);
@@ -5081,6 +5158,7 @@ async function loadIp() {
   setSelectValues($("#ipIndustries"), ip.industries || []);
   $("#ipLifecycle").value = ip.lifecycleStatus;
   $("#ipGuideline").value = ip.guidelineMode;
+  $("#ipParentCapable").checked = Boolean(ip.parentCapable);
   $("#editor").value = JSON.stringify(state.brand, null, 2);
   $("#recordVersion").textContent = state.ipEtag;
   status("已载入 " + primaryName(ip));
@@ -5095,6 +5173,7 @@ async function saveIp() {
     industries: [...$("#ipIndustries").selectedOptions].map((option) => option.value),
     lifecycleStatus: $("#ipLifecycle").value,
     guidelineMode: $("#ipGuideline").value,
+    parentCapable: $("#ipParentCapable").checked,
   };
   const result = await api("api/v2/ips/" + encodeURIComponent(state.slug), {
     method: "PATCH",

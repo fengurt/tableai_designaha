@@ -5,9 +5,10 @@
   <base href="../">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin · 岁知社 IPTrust</title>
+  <link rel="preconnect" href="https://media.apuch.art" crossorigin>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site-bc7b985-14ccb74b.css">
-  <link rel="stylesheet" href="assets/editorial.css?v=bc7b985-14ccb74b">
+  <link rel="stylesheet" href="assets/site-f751eee-52f38014.css">
+  <link rel="stylesheet" href="assets/editorial.css?v=f751eee-52f38014">
 </head>
 <body>
   <header class="topbar">
@@ -76,6 +77,7 @@
           <label><span>主语言</span><select id="ipMainLanguage"><option value="zh">中文</option><option value="en">English</option></select></label><label><span>IP 类型</span><select id="ipType"></select></label>
           <label><span>主行业</span><select id="ipPrimaryIndustry"></select></label><label><span>其他行业</span><select id="ipIndustries" multiple></select></label>
           <label><span>生命周期</span><select id="ipLifecycle"><option value="active">Active</option><option value="draft">Draft</option><option value="archived">Archived</option></select></label><label><span>规范模式</span><select id="ipGuideline"><option value="independent">Independent</option><option value="inherit">Inherit</option><option value="extend">Extend</option></select></label>
+          <label><span>品牌架构</span><span class="checkbox-line"><input id="ipParentCapable" type="checkbox"> 可作为母 IP</span></label>
         </div>
         <div class="actions"><button id="saveIp">保存字段</button><button class="ghost" id="saveBrand">保存品牌内容</button></div>
         <details class="advanced-editor"><summary>高级 · Raw JSON</summary><textarea id="editor" spellcheck="false" placeholder="Brand JSON"></textarea></details>
@@ -91,7 +93,7 @@
       <p class="notice" id="editorStatus"></p>
     </section>
   </main>
-  <script src="assets/site-bc7b985-14ccb74b.js" type="module"></script>
+  <script src="assets/site-f751eee-52f38014.js" type="module"></script>
   <script src="assets/admin.js" type="module"></script>
 </body>
 </html>

@@ -161,12 +161,16 @@
     "ipType": "platform-system-ip",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/tableai.json",
     "url": "brand.html?brand=tableai",
@@ -655,12 +659,16 @@
     "ipType": "corporate-brand",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/vanahom.json",
     "url": "brand.html?brand=vanahom",
@@ -1897,12 +1905,16 @@
     "ipType": "product-service-brand",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/sanctem.json",
     "url": "brand.html?brand=sanctem",
@@ -2627,12 +2639,16 @@
     "ipType": "platform-system-ip",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/kind.json",
     "url": "brand.html?brand=kind",
@@ -2967,12 +2983,16 @@
     "ipType": "alliance-community-ip",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/apha.json",
     "url": "brand.html?brand=apha",
@@ -3303,12 +3323,16 @@
     "ipType": "alliance-community-ip",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/manaendless.json",
     "url": "brand.html?brand=manaendless",
@@ -3637,12 +3661,16 @@
     "ipType": "alliance-community-ip",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/opcglobal.json",
     "url": "brand.html?brand=opcglobal",
@@ -3971,12 +3999,16 @@
     "ipType": "platform-system-ip",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/iptrust.json",
     "url": "brand.html?brand=iptrust",
@@ -5246,12 +5278,16 @@
     "ipType": "corporate-brand",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/fengzhi.json",
     "url": "brand.html?brand=fengzhi",
@@ -5757,12 +5793,16 @@
     "ipType": "personal-ip",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/axisee.json",
     "url": "brand.html?brand=axisee",
@@ -6151,12 +6191,16 @@
     "ipType": "content-media-ip",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/sidera.json",
     "url": "brand.html?brand=sidera",
@@ -6486,12 +6530,16 @@
     "ipType": "platform-system-ip",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/1stepmore.json",
     "url": "brand.html?brand=1stepmore",
@@ -6767,12 +6815,16 @@
     "ipType": "alliance-community-ip",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/agem.json",
     "url": "brand.html?brand=agem",
@@ -7046,12 +7098,16 @@
     "ipType": "content-media-ip",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/rgd.json",
     "url": "brand.html?brand=rgd",
@@ -7325,12 +7381,16 @@
     "ipType": "product-service-brand",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/changoods.json",
     "url": "brand.html?brand=changoods",
@@ -7604,12 +7664,16 @@
     "ipType": "corporate-brand",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/boya.json",
     "url": "brand.html?brand=boya",
@@ -7884,12 +7948,16 @@
     "ipType": "content-media-ip",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/apuch.json",
     "url": "brand.html?brand=apuch",
@@ -8166,12 +8234,16 @@
     "ipType": "corporate-brand",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/pam.json",
     "url": "brand.html?brand=pam",
@@ -8450,12 +8522,16 @@
     "ipType": "personal-ip",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/ksamint.json",
     "url": "brand.html?brand=ksamint",
@@ -8706,12 +8782,16 @@
     "ipType": "platform-system-ip",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/inucleus.json",
     "url": "brand.html?brand=inucleus",
@@ -8990,12 +9070,16 @@
     "ipType": "corporate-brand",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/xinzhi-travel.json",
     "url": "brand.html?brand=xinzhi-travel",
@@ -9274,12 +9358,16 @@
     "ipType": "corporate-brand",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/zhongzhiyou.json",
     "url": "brand.html?brand=zhongzhiyou",
@@ -9553,12 +9641,16 @@
     "ipType": "corporate-brand",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/nibiru.json",
     "url": "brand.html?brand=nibiru",
@@ -9837,12 +9929,16 @@
     "ipType": "corporate-brand",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/shenzhen-microsoft-global-center.json",
     "url": "brand.html?brand=shenzhen-microsoft-global-center",
@@ -10146,12 +10242,16 @@
     "ipType": "product-service-brand",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/shanrenjing.json",
     "url": "brand.html?brand=shanrenjing",
@@ -10433,12 +10533,16 @@
     "ipType": "product-service-brand",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/kaoyu-shenhua.json",
     "url": "brand.html?brand=kaoyu-shenhua",
@@ -10986,12 +11090,16 @@
     "ipType": "place-venue-brand",
     "lifecycleStatus": "active",
     "guidelineMode": "independent",
+    "parentCapable": false,
+    "architectureRoles": [
+      "standalone"
+    ],
     "version": {
-      "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "shortHash": "bc7b985",
-      "date": "2026-07-20T08:12:03+08:00",
-      "message": "feat: add IP taxonomy and brand architecture",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
     },
     "historyUrl": "api/history/yanan-shiyao-hotel.json",
     "url": "brand.html?brand=yanan-shiyao-hotel",
@@ -11103,5 +11211,2389 @@
     "adobeAssetCount": 0,
     "heroImage": "",
     "primaryExcerpt": "延安石窑宾馆 中文优先的独立酒店与场所 IP。 基本资料 中文名：延安石窑宾馆 英文名：暂未设定 行业：酒店与住宿、文旅与目的地 IP 类型：场所/空间品牌 品牌状态：建档中 官网、简介、业务、地址、视觉资产与品牌规范暂留空，后续通过管理 API 补充。"
+  },
+  {
+    "slug": "tongli-market",
+    "folder": "TongliMarket",
+    "name": "同里市集",
+    "nativeName": "",
+    "description": "北京顺义后沙峪的社区型餐饮与生活方式市集。",
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "同里市集是位于北京顺义后沙峪的社区型餐饮与生活方式市集，以多元餐饮、社交与社区活动形成邻里共享空间。",
+      "en": ""
+    },
+    "business": {
+      "zh": "餐饮市集、社区生活方式、餐饮品牌运营与线下活动。",
+      "en": ""
+    },
+    "notes": {
+      "zh": "公开简介依据政府与公开媒体资料整理。",
+      "en": ""
+    },
+    "primaryGuide": "TongliMarket/README.md",
+    "sources": [
+      {
+        "title": "顺义消费场景推荐",
+        "publisher": "顺义文明网",
+        "url": "https://www.shywm.gov.cn/newsconsultation/8467.jhtml",
+        "verifiedAt": "2026-07-20",
+        "confidence": "government"
+      },
+      {
+        "title": "有灵魂的市集什么样",
+        "publisher": "澎湃新闻 / 新浪",
+        "url": "https://tech.sina.com.cn/roll/2021-05-06/doc-ikmxzfmm0775758.shtml",
+        "verifiedAt": "2026-07-20",
+        "confidence": "editorial"
+      }
+    ],
+    "theme": {
+      "mode": "light",
+      "primary": "#26483D",
+      "accent": "#C95D3A",
+      "secondary": "#C9A65A",
+      "surface": "#F2F4EF",
+      "paper": "#FFFEFA",
+      "ink": "#18221E",
+      "muted": "#66716B",
+      "line": "rgba(38, 72, 61, 0.18)",
+      "provisional": true,
+      "keywords": [
+        "community market",
+        "food",
+        "neighborhood",
+        "Beijing"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "餐饮市集",
+          "社区商业",
+          "生活方式"
+        ],
+        "en": []
+      },
+      "audiences": {
+        "zh": [
+          "社区居民",
+          "家庭客群",
+          "餐饮消费者",
+          "品牌合作方"
+        ],
+        "en": []
+      },
+      "tags": {
+        "zh": [
+          "北京顺义",
+          "市集",
+          "餐饮",
+          "社区",
+          "线下空间"
+        ],
+        "en": []
+      }
+    },
+    "assetKey": "tongli-market",
+    "mainName": "同里市集",
+    "mainLocale": "CN",
+    "profile": {
+      "officialWebsite": "",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "intro": {
+        "zh": "同里市集是位于北京顺义后沙峪的社区型餐饮与生活方式市集，以多元餐饮、社交与社区活动形成邻里共享空间。",
+        "en": ""
+      },
+      "business": {
+        "zh": "餐饮市集、社区生活方式、餐饮品牌运营与线下活动。",
+        "en": ""
+      },
+      "notes": {
+        "zh": "公开简介依据政府与公开媒体资料整理。",
+        "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "餐饮市集",
+            "社区商业",
+            "生活方式"
+          ],
+          "en": []
+        },
+        "audiences": {
+          "zh": [
+            "社区居民",
+            "家庭客群",
+            "餐饮消费者",
+            "品牌合作方"
+          ],
+          "en": []
+        },
+        "tags": {
+          "zh": [
+            "北京顺义",
+            "市集",
+            "餐饮",
+            "社区",
+            "线下空间"
+          ],
+          "en": []
+        }
+      }
+    },
+    "display": {
+      "default": {
+        "language": "zh",
+        "name": "同里市集"
+      },
+      "zh": {
+        "name": "同里市集",
+        "secondaryName": ""
+      },
+      "en": {
+        "name": "同里市集",
+        "secondaryName": ""
+      }
+    },
+    "recordClass": "owned",
+    "primaryIndustry": "food-beverage",
+    "industries": [
+      "food-beverage",
+      "consumer-lifestyle"
+    ],
+    "ipType": "place-venue-brand",
+    "lifecycleStatus": "active",
+    "guidelineMode": "independent",
+    "parentCapable": true,
+    "architectureRoles": [
+      "parent"
+    ],
+    "version": {
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+    },
+    "historyUrl": "api/history/tongli-market.json",
+    "url": "brand.html?brand=tongli-market",
+    "apiUrl": "api/brands/tongli-market.json",
+    "status": "documented",
+    "assetManifest": [],
+    "logoUrl": "",
+    "assetKit": {
+      "assetKey": "tongli-market",
+      "endpoints": {
+        "brand": "api/brands/tongli-market.json",
+        "logo": "",
+        "images": "api/brands/tongli-market.json#images",
+        "adobe": "",
+        "tokens": "api/brands/tongli-market.json#tokens",
+        "history": "api/history/tongli-market.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#26483D"
+          },
+          {
+            "key": "accent",
+            "value": "#C95D3A"
+          },
+          {
+            "key": "secondary",
+            "value": "#C9A65A"
+          },
+          {
+            "key": "surface",
+            "value": "#F2F4EF"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFEFA"
+          },
+          {
+            "key": "ink",
+            "value": "#18221E"
+          },
+          {
+            "key": "muted",
+            "value": "#66716B"
+          }
+        ],
+        "keywords": [
+          "community market",
+          "food",
+          "neighborhood",
+          "Beijing"
+        ],
+        "images": []
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#26483D"
+        },
+        {
+          "key": "accent",
+          "value": "#C95D3A"
+        },
+        {
+          "key": "secondary",
+          "value": "#C9A65A"
+        },
+        {
+          "key": "surface",
+          "value": "#F2F4EF"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFEFA"
+        },
+        {
+          "key": "ink",
+          "value": "#18221E"
+        },
+        {
+          "key": "muted",
+          "value": "#66716B"
+        }
+      ],
+      "keywords": [
+        "community market",
+        "food",
+        "neighborhood",
+        "Beijing"
+      ],
+      "images": []
+    },
+    "editablePaths": [
+      "TongliMarket/README.md"
+    ],
+    "source": {
+      "github": "https://github.com/fengurt/tableai_designaha/tree/main/TongliMarket",
+      "folder": "TongliMarket"
+    },
+    "guideCount": 1,
+    "tokenCount": 0,
+    "imageCount": 0,
+    "adobeAssetCount": 0,
+    "heroImage": "",
+    "primaryExcerpt": "同里市集 中文优先的社区型餐饮与生活方式市集 IP。 定位：北京顺义后沙峪的社区餐饮与邻里共享空间 业务：餐饮市集、社区生活方式、品牌运营与线下活动 架构：母 IP 视觉状态：Provisional，待官方资产补充"
+  },
+  {
+    "slug": "tongxianghui",
+    "folder": "Tongxianghui",
+    "name": "同香荟",
+    "nativeName": "",
+    "description": "以潮粤菜、港式粉面、打冷和传统风味为核心的餐饮品牌。",
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "同香荟以潮粤菜、港式粉面、打冷和传统风味为核心，在同里市集形成兼顾日常用餐与聚会的餐饮体验。",
+      "en": ""
+    },
+    "business": {
+      "zh": "潮粤菜、港式粉面、烧味、打冷与餐饮门店运营。",
+      "en": ""
+    },
+    "primaryGuide": "Tongxianghui/README.md",
+    "sources": [
+      {
+        "title": "同香荟同里市集店",
+        "publisher": "高德地图",
+        "url": "https://www.amap.com/place/B0FFIPHOK3",
+        "verifiedAt": "2026-07-20",
+        "confidence": "directory"
+      }
+    ],
+    "theme": {
+      "mode": "light",
+      "primary": "#742337",
+      "accent": "#D29A4A",
+      "secondary": "#4E7469",
+      "surface": "#F7F0EE",
+      "paper": "#FFFDFC",
+      "ink": "#24191C",
+      "muted": "#78676B",
+      "line": "rgba(116, 35, 55, 0.18)",
+      "provisional": true,
+      "keywords": [
+        "Cantonese",
+        "Chaozhou",
+        "Hong Kong",
+        "heritage"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "潮粤菜",
+          "港式餐饮",
+          "餐饮门店"
+        ],
+        "en": []
+      },
+      "audiences": {
+        "zh": [
+          "家庭聚餐",
+          "商务宴请",
+          "社区食客"
+        ],
+        "en": []
+      },
+      "tags": {
+        "zh": [
+          "潮粤菜",
+          "港式粉面",
+          "打冷",
+          "烧味"
+        ],
+        "en": []
+      }
+    },
+    "assetKey": "tongxianghui",
+    "mainName": "同香荟",
+    "mainLocale": "CN",
+    "profile": {
+      "officialWebsite": "",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "intro": {
+        "zh": "同香荟以潮粤菜、港式粉面、打冷和传统风味为核心，在同里市集形成兼顾日常用餐与聚会的餐饮体验。",
+        "en": ""
+      },
+      "business": {
+        "zh": "潮粤菜、港式粉面、烧味、打冷与餐饮门店运营。",
+        "en": ""
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "潮粤菜",
+            "港式餐饮",
+            "餐饮门店"
+          ],
+          "en": []
+        },
+        "audiences": {
+          "zh": [
+            "家庭聚餐",
+            "商务宴请",
+            "社区食客"
+          ],
+          "en": []
+        },
+        "tags": {
+          "zh": [
+            "潮粤菜",
+            "港式粉面",
+            "打冷",
+            "烧味"
+          ],
+          "en": []
+        }
+      }
+    },
+    "display": {
+      "default": {
+        "language": "zh",
+        "name": "同香荟"
+      },
+      "zh": {
+        "name": "同香荟",
+        "secondaryName": ""
+      },
+      "en": {
+        "name": "同香荟",
+        "secondaryName": ""
+      }
+    },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
+    "recordClass": "owned",
+    "primaryIndustry": "food-beverage",
+    "industries": [
+      "food-beverage"
+    ],
+    "ipType": "product-service-brand",
+    "lifecycleStatus": "active",
+    "guidelineMode": "extend",
+    "parentCapable": false,
+    "architectureRoles": [
+      "child"
+    ],
+    "version": {
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+    },
+    "historyUrl": "api/history/tongxianghui.json",
+    "url": "brand.html?brand=tongxianghui",
+    "apiUrl": "api/brands/tongxianghui.json",
+    "status": "documented",
+    "assetManifest": [],
+    "logoUrl": "",
+    "assetKit": {
+      "assetKey": "tongxianghui",
+      "endpoints": {
+        "brand": "api/brands/tongxianghui.json",
+        "logo": "",
+        "images": "api/brands/tongxianghui.json#images",
+        "adobe": "",
+        "tokens": "api/brands/tongxianghui.json#tokens",
+        "history": "api/history/tongxianghui.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#742337"
+          },
+          {
+            "key": "accent",
+            "value": "#D29A4A"
+          },
+          {
+            "key": "secondary",
+            "value": "#4E7469"
+          },
+          {
+            "key": "surface",
+            "value": "#F7F0EE"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFDFC"
+          },
+          {
+            "key": "ink",
+            "value": "#24191C"
+          },
+          {
+            "key": "muted",
+            "value": "#78676B"
+          }
+        ],
+        "keywords": [
+          "Cantonese",
+          "Chaozhou",
+          "Hong Kong",
+          "heritage"
+        ],
+        "images": []
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#742337"
+        },
+        {
+          "key": "accent",
+          "value": "#D29A4A"
+        },
+        {
+          "key": "secondary",
+          "value": "#4E7469"
+        },
+        {
+          "key": "surface",
+          "value": "#F7F0EE"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFDFC"
+        },
+        {
+          "key": "ink",
+          "value": "#24191C"
+        },
+        {
+          "key": "muted",
+          "value": "#78676B"
+        }
+      ],
+      "keywords": [
+        "Cantonese",
+        "Chaozhou",
+        "Hong Kong",
+        "heritage"
+      ],
+      "images": []
+    },
+    "editablePaths": [
+      "Tongxianghui/README.md"
+    ],
+    "source": {
+      "github": "https://github.com/fengurt/tableai_designaha/tree/main/Tongxianghui",
+      "folder": "Tongxianghui"
+    },
+    "guideCount": 1,
+    "tokenCount": 0,
+    "imageCount": 0,
+    "adobeAssetCount": 0,
+    "heroImage": "",
+    "primaryExcerpt": "同香荟 中文优先的潮粤与港式餐饮 IP，为同里市集子 IP。 定位：潮粤菜、港式粉面、打冷与传统风味 规范模式：继承并扩展同里市集 视觉状态：Provisional，待官方资产补充"
+  },
+  {
+    "slug": "mutangwan",
+    "folder": "Mutangwan",
+    "name": "睦堂湾",
+    "nativeName": "",
+    "description": "以海鲜打边炉、粤菜和港式风味为核心的餐饮品牌。",
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "睦堂湾以海鲜打边炉、粤菜和港式风味为核心，服务家庭聚餐与社交用餐场景。",
+      "en": ""
+    },
+    "business": {
+      "zh": "海鲜打边炉、粤菜、港式餐饮与门店运营。",
+      "en": ""
+    },
+    "primaryGuide": "Mutangwan/README.md",
+    "sources": [
+      {
+        "title": "新国展周边餐饮参会指南",
+        "publisher": "中国游艺机游乐园协会",
+        "url": "https://npo04307t.npoall.com/news/itemid-234946.html",
+        "verifiedAt": "2026-07-20",
+        "confidence": "directory"
+      }
+    ],
+    "theme": {
+      "mode": "light",
+      "primary": "#174556",
+      "accent": "#C58B4E",
+      "secondary": "#7AA19A",
+      "surface": "#EEF4F3",
+      "paper": "#FFFEFB",
+      "ink": "#16262B",
+      "muted": "#66787B",
+      "line": "rgba(23, 69, 86, 0.18)",
+      "provisional": true,
+      "keywords": [
+        "seafood",
+        "hot pot",
+        "Cantonese",
+        "gathering"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "海鲜餐饮",
+          "粤菜",
+          "港式风味"
+        ],
+        "en": []
+      },
+      "audiences": {
+        "zh": [
+          "家庭聚餐",
+          "朋友聚会",
+          "商务客群"
+        ],
+        "en": []
+      },
+      "tags": {
+        "zh": [
+          "海鲜",
+          "打边炉",
+          "粤菜",
+          "港式"
+        ],
+        "en": []
+      }
+    },
+    "assetKey": "mutangwan",
+    "mainName": "睦堂湾",
+    "mainLocale": "CN",
+    "profile": {
+      "officialWebsite": "",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "intro": {
+        "zh": "睦堂湾以海鲜打边炉、粤菜和港式风味为核心，服务家庭聚餐与社交用餐场景。",
+        "en": ""
+      },
+      "business": {
+        "zh": "海鲜打边炉、粤菜、港式餐饮与门店运营。",
+        "en": ""
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "海鲜餐饮",
+            "粤菜",
+            "港式风味"
+          ],
+          "en": []
+        },
+        "audiences": {
+          "zh": [
+            "家庭聚餐",
+            "朋友聚会",
+            "商务客群"
+          ],
+          "en": []
+        },
+        "tags": {
+          "zh": [
+            "海鲜",
+            "打边炉",
+            "粤菜",
+            "港式"
+          ],
+          "en": []
+        }
+      }
+    },
+    "display": {
+      "default": {
+        "language": "zh",
+        "name": "睦堂湾"
+      },
+      "zh": {
+        "name": "睦堂湾",
+        "secondaryName": ""
+      },
+      "en": {
+        "name": "睦堂湾",
+        "secondaryName": ""
+      }
+    },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
+    "recordClass": "owned",
+    "primaryIndustry": "food-beverage",
+    "industries": [
+      "food-beverage"
+    ],
+    "ipType": "product-service-brand",
+    "lifecycleStatus": "active",
+    "guidelineMode": "extend",
+    "parentCapable": false,
+    "architectureRoles": [
+      "child"
+    ],
+    "version": {
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+    },
+    "historyUrl": "api/history/mutangwan.json",
+    "url": "brand.html?brand=mutangwan",
+    "apiUrl": "api/brands/mutangwan.json",
+    "status": "documented",
+    "assetManifest": [],
+    "logoUrl": "",
+    "assetKit": {
+      "assetKey": "mutangwan",
+      "endpoints": {
+        "brand": "api/brands/mutangwan.json",
+        "logo": "",
+        "images": "api/brands/mutangwan.json#images",
+        "adobe": "",
+        "tokens": "api/brands/mutangwan.json#tokens",
+        "history": "api/history/mutangwan.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#174556"
+          },
+          {
+            "key": "accent",
+            "value": "#C58B4E"
+          },
+          {
+            "key": "secondary",
+            "value": "#7AA19A"
+          },
+          {
+            "key": "surface",
+            "value": "#EEF4F3"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFEFB"
+          },
+          {
+            "key": "ink",
+            "value": "#16262B"
+          },
+          {
+            "key": "muted",
+            "value": "#66787B"
+          }
+        ],
+        "keywords": [
+          "seafood",
+          "hot pot",
+          "Cantonese",
+          "gathering"
+        ],
+        "images": []
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#174556"
+        },
+        {
+          "key": "accent",
+          "value": "#C58B4E"
+        },
+        {
+          "key": "secondary",
+          "value": "#7AA19A"
+        },
+        {
+          "key": "surface",
+          "value": "#EEF4F3"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFEFB"
+        },
+        {
+          "key": "ink",
+          "value": "#16262B"
+        },
+        {
+          "key": "muted",
+          "value": "#66787B"
+        }
+      ],
+      "keywords": [
+        "seafood",
+        "hot pot",
+        "Cantonese",
+        "gathering"
+      ],
+      "images": []
+    },
+    "editablePaths": [
+      "Mutangwan/README.md"
+    ],
+    "source": {
+      "github": "https://github.com/fengurt/tableai_designaha/tree/main/Mutangwan",
+      "folder": "Mutangwan"
+    },
+    "guideCount": 1,
+    "tokenCount": 0,
+    "imageCount": 0,
+    "adobeAssetCount": 0,
+    "heroImage": "",
+    "primaryExcerpt": "睦堂湾 中文优先的海鲜打边炉与粤菜餐饮 IP，为同里市集子 IP。 定位：海鲜打边炉、粤菜与港式风味 规范模式：继承并扩展同里市集 视觉状态：Provisional，待官方资产补充"
+  },
+  {
+    "slug": "shuangxi-shaola",
+    "folder": "ShuangxiShaola",
+    "name": "双囍烧腊",
+    "nativeName": "",
+    "description": "以粤式烧腊和便捷中式餐饮为核心的餐饮品牌。",
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "双囍烧腊以粤式烧腊和便捷中式餐饮为核心，在同里市集设有门店。",
+      "en": ""
+    },
+    "business": {
+      "zh": "粤式烧腊、中式简餐与餐饮门店运营。",
+      "en": ""
+    },
+    "primaryGuide": "ShuangxiShaola/README.md",
+    "sources": [
+      {
+        "title": "双囍烧腊新国展店",
+        "publisher": "携程美食",
+        "url": "https://gs.ctrip.com/html5/you/foods/fooddetail/1/130033671.html",
+        "verifiedAt": "2026-07-20",
+        "confidence": "directory"
+      }
+    ],
+    "theme": {
+      "mode": "light",
+      "primary": "#A92732",
+      "accent": "#D6A33E",
+      "secondary": "#342525",
+      "surface": "#F8F0EC",
+      "paper": "#FFFDFC",
+      "ink": "#24191A",
+      "muted": "#796868",
+      "line": "rgba(169, 39, 50, 0.18)",
+      "provisional": true,
+      "keywords": [
+        "roast meat",
+        "Cantonese",
+        "quick dining",
+        "double happiness"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "粤式烧腊",
+          "中式简餐",
+          "餐饮门店"
+        ],
+        "en": []
+      },
+      "audiences": {
+        "zh": [
+          "社区食客",
+          "上班族",
+          "家庭客群"
+        ],
+        "en": []
+      },
+      "tags": {
+        "zh": [
+          "烧腊",
+          "粤式",
+          "简餐",
+          "同里市集"
+        ],
+        "en": []
+      }
+    },
+    "assetKey": "shuangxi-shaola",
+    "mainName": "双囍烧腊",
+    "mainLocale": "CN",
+    "profile": {
+      "officialWebsite": "",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "intro": {
+        "zh": "双囍烧腊以粤式烧腊和便捷中式餐饮为核心，在同里市集设有门店。",
+        "en": ""
+      },
+      "business": {
+        "zh": "粤式烧腊、中式简餐与餐饮门店运营。",
+        "en": ""
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "粤式烧腊",
+            "中式简餐",
+            "餐饮门店"
+          ],
+          "en": []
+        },
+        "audiences": {
+          "zh": [
+            "社区食客",
+            "上班族",
+            "家庭客群"
+          ],
+          "en": []
+        },
+        "tags": {
+          "zh": [
+            "烧腊",
+            "粤式",
+            "简餐",
+            "同里市集"
+          ],
+          "en": []
+        }
+      }
+    },
+    "display": {
+      "default": {
+        "language": "zh",
+        "name": "双囍烧腊"
+      },
+      "zh": {
+        "name": "双囍烧腊",
+        "secondaryName": ""
+      },
+      "en": {
+        "name": "双囍烧腊",
+        "secondaryName": ""
+      }
+    },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
+    "recordClass": "owned",
+    "primaryIndustry": "food-beverage",
+    "industries": [
+      "food-beverage"
+    ],
+    "ipType": "product-service-brand",
+    "lifecycleStatus": "active",
+    "guidelineMode": "extend",
+    "parentCapable": false,
+    "architectureRoles": [
+      "child"
+    ],
+    "version": {
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+    },
+    "historyUrl": "api/history/shuangxi-shaola.json",
+    "url": "brand.html?brand=shuangxi-shaola",
+    "apiUrl": "api/brands/shuangxi-shaola.json",
+    "status": "documented",
+    "assetManifest": [],
+    "logoUrl": "",
+    "assetKit": {
+      "assetKey": "shuangxi-shaola",
+      "endpoints": {
+        "brand": "api/brands/shuangxi-shaola.json",
+        "logo": "",
+        "images": "api/brands/shuangxi-shaola.json#images",
+        "adobe": "",
+        "tokens": "api/brands/shuangxi-shaola.json#tokens",
+        "history": "api/history/shuangxi-shaola.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#A92732"
+          },
+          {
+            "key": "accent",
+            "value": "#D6A33E"
+          },
+          {
+            "key": "secondary",
+            "value": "#342525"
+          },
+          {
+            "key": "surface",
+            "value": "#F8F0EC"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFDFC"
+          },
+          {
+            "key": "ink",
+            "value": "#24191A"
+          },
+          {
+            "key": "muted",
+            "value": "#796868"
+          }
+        ],
+        "keywords": [
+          "roast meat",
+          "Cantonese",
+          "quick dining",
+          "double happiness"
+        ],
+        "images": []
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#A92732"
+        },
+        {
+          "key": "accent",
+          "value": "#D6A33E"
+        },
+        {
+          "key": "secondary",
+          "value": "#342525"
+        },
+        {
+          "key": "surface",
+          "value": "#F8F0EC"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFDFC"
+        },
+        {
+          "key": "ink",
+          "value": "#24191A"
+        },
+        {
+          "key": "muted",
+          "value": "#796868"
+        }
+      ],
+      "keywords": [
+        "roast meat",
+        "Cantonese",
+        "quick dining",
+        "double happiness"
+      ],
+      "images": []
+    },
+    "editablePaths": [
+      "ShuangxiShaola/README.md"
+    ],
+    "source": {
+      "github": "https://github.com/fengurt/tableai_designaha/tree/main/ShuangxiShaola",
+      "folder": "ShuangxiShaola"
+    },
+    "guideCount": 1,
+    "tokenCount": 0,
+    "imageCount": 0,
+    "adobeAssetCount": 0,
+    "heroImage": "",
+    "primaryExcerpt": "双囍烧腊 中文优先的粤式烧腊餐饮 IP，为同里市集子 IP。 定位：粤式烧腊与便捷中式餐饮 规范模式：继承并扩展同里市集 视觉状态：Provisional，待官方资产补充"
+  },
+  {
+    "slug": "ganglao-baozailu",
+    "folder": "GanglaoBaozailu",
+    "name": "港佬煲仔炉车仔面碟头饭",
+    "nativeName": "",
+    "description": "聚焦煲仔饭、车仔面与碟头饭的港式街坊餐饮品牌。",
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "港佬煲仔炉车仔面碟头饭聚焦煲仔饭、车仔面与碟头饭等港式街坊餐饮，公开资料仍待进一步核验。",
+      "en": ""
+    },
+    "business": {
+      "zh": "煲仔饭、车仔面、碟头饭与港式简餐。",
+      "en": ""
+    },
+    "notes": {
+      "zh": "品牌定位依据现有名称建立，来源状态为 provisional。",
+      "en": ""
+    },
+    "primaryGuide": "GanglaoBaozailu/README.md",
+    "sources": [],
+    "theme": {
+      "mode": "light",
+      "primary": "#25594F",
+      "accent": "#D36B3F",
+      "secondary": "#D0B05A",
+      "surface": "#EEF4F0",
+      "paper": "#FFFEFA",
+      "ink": "#182720",
+      "muted": "#66746E",
+      "line": "rgba(37, 89, 79, 0.18)",
+      "provisional": true,
+      "keywords": [
+        "claypot rice",
+        "cart noodles",
+        "Hong Kong",
+        "street dining"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "港式简餐",
+          "煲仔饭",
+          "车仔面"
+        ],
+        "en": []
+      },
+      "audiences": {
+        "zh": [
+          "社区食客",
+          "上班族",
+          "年轻客群"
+        ],
+        "en": []
+      },
+      "tags": {
+        "zh": [
+          "煲仔饭",
+          "车仔面",
+          "碟头饭",
+          "港式"
+        ],
+        "en": []
+      }
+    },
+    "assetKey": "ganglao-baozailu",
+    "mainName": "港佬煲仔炉车仔面碟头饭",
+    "mainLocale": "CN",
+    "profile": {
+      "officialWebsite": "",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "intro": {
+        "zh": "港佬煲仔炉车仔面碟头饭聚焦煲仔饭、车仔面与碟头饭等港式街坊餐饮，公开资料仍待进一步核验。",
+        "en": ""
+      },
+      "business": {
+        "zh": "煲仔饭、车仔面、碟头饭与港式简餐。",
+        "en": ""
+      },
+      "notes": {
+        "zh": "品牌定位依据现有名称建立，来源状态为 provisional。",
+        "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "港式简餐",
+            "煲仔饭",
+            "车仔面"
+          ],
+          "en": []
+        },
+        "audiences": {
+          "zh": [
+            "社区食客",
+            "上班族",
+            "年轻客群"
+          ],
+          "en": []
+        },
+        "tags": {
+          "zh": [
+            "煲仔饭",
+            "车仔面",
+            "碟头饭",
+            "港式"
+          ],
+          "en": []
+        }
+      }
+    },
+    "display": {
+      "default": {
+        "language": "zh",
+        "name": "港佬煲仔炉车仔面碟头饭"
+      },
+      "zh": {
+        "name": "港佬煲仔炉车仔面碟头饭",
+        "secondaryName": ""
+      },
+      "en": {
+        "name": "港佬煲仔炉车仔面碟头饭",
+        "secondaryName": ""
+      }
+    },
+    "recordClass": "owned",
+    "primaryIndustry": "food-beverage",
+    "industries": [
+      "food-beverage"
+    ],
+    "ipType": "product-service-brand",
+    "lifecycleStatus": "active",
+    "guidelineMode": "extend",
+    "parentCapable": false,
+    "architectureRoles": [
+      "child"
+    ],
+    "version": {
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+    },
+    "historyUrl": "api/history/ganglao-baozailu.json",
+    "url": "brand.html?brand=ganglao-baozailu",
+    "apiUrl": "api/brands/ganglao-baozailu.json",
+    "status": "documented",
+    "assetManifest": [],
+    "logoUrl": "",
+    "assetKit": {
+      "assetKey": "ganglao-baozailu",
+      "endpoints": {
+        "brand": "api/brands/ganglao-baozailu.json",
+        "logo": "",
+        "images": "api/brands/ganglao-baozailu.json#images",
+        "adobe": "",
+        "tokens": "api/brands/ganglao-baozailu.json#tokens",
+        "history": "api/history/ganglao-baozailu.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#25594F"
+          },
+          {
+            "key": "accent",
+            "value": "#D36B3F"
+          },
+          {
+            "key": "secondary",
+            "value": "#D0B05A"
+          },
+          {
+            "key": "surface",
+            "value": "#EEF4F0"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFEFA"
+          },
+          {
+            "key": "ink",
+            "value": "#182720"
+          },
+          {
+            "key": "muted",
+            "value": "#66746E"
+          }
+        ],
+        "keywords": [
+          "claypot rice",
+          "cart noodles",
+          "Hong Kong",
+          "street dining"
+        ],
+        "images": []
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#25594F"
+        },
+        {
+          "key": "accent",
+          "value": "#D36B3F"
+        },
+        {
+          "key": "secondary",
+          "value": "#D0B05A"
+        },
+        {
+          "key": "surface",
+          "value": "#EEF4F0"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFEFA"
+        },
+        {
+          "key": "ink",
+          "value": "#182720"
+        },
+        {
+          "key": "muted",
+          "value": "#66746E"
+        }
+      ],
+      "keywords": [
+        "claypot rice",
+        "cart noodles",
+        "Hong Kong",
+        "street dining"
+      ],
+      "images": []
+    },
+    "editablePaths": [
+      "GanglaoBaozailu/README.md"
+    ],
+    "source": {
+      "github": "https://github.com/fengurt/tableai_designaha/tree/main/GanglaoBaozailu",
+      "folder": "GanglaoBaozailu"
+    },
+    "guideCount": 1,
+    "tokenCount": 0,
+    "imageCount": 0,
+    "adobeAssetCount": 0,
+    "heroImage": "",
+    "primaryExcerpt": "港佬煲仔炉车仔面碟头饭 中文优先的港式街坊餐饮 IP，为同里市集子 IP。 定位：煲仔饭、车仔面、碟头饭与港式简餐 规范模式：继承并扩展同里市集 资料状态：Provisional，待官方资料核验"
+  },
+  {
+    "slug": "xiaotaoyuan",
+    "folder": "Xiaotaoyuan",
+    "name": "小桃园",
+    "nativeName": "",
+    "description": "面向社区早餐与日常简餐的中式餐饮品牌。",
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "小桃园面向社区早餐与日常简餐，提供油条、粢饭团、鸭血粉丝汤和小笼包等中式早点。",
+      "en": ""
+    },
+    "business": {
+      "zh": "中式早餐、社区简餐与门店运营。",
+      "en": ""
+    },
+    "primaryGuide": "Xiaotaoyuan/README.md",
+    "sources": [
+      {
+        "title": "有灵魂的市集什么样",
+        "publisher": "澎湃新闻 / 新浪",
+        "url": "https://tech.sina.com.cn/roll/2021-05-06/doc-ikmxzfmm0775758.shtml",
+        "verifiedAt": "2026-07-20",
+        "confidence": "editorial"
+      }
+    ],
+    "theme": {
+      "mode": "light",
+      "primary": "#8D3F45",
+      "accent": "#E3A15A",
+      "secondary": "#6F8A68",
+      "surface": "#F7F1E9",
+      "paper": "#FFFEFA",
+      "ink": "#2A2020",
+      "muted": "#786B65",
+      "line": "rgba(141, 63, 69, 0.18)",
+      "provisional": true,
+      "keywords": [
+        "breakfast",
+        "neighborhood",
+        "Chinese snacks",
+        "morning"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "中式早餐",
+          "社区简餐",
+          "餐饮门店"
+        ],
+        "en": []
+      },
+      "audiences": {
+        "zh": [
+          "社区居民",
+          "家庭客群",
+          "上班族"
+        ],
+        "en": []
+      },
+      "tags": {
+        "zh": [
+          "早餐",
+          "油条",
+          "粢饭团",
+          "小笼包"
+        ],
+        "en": []
+      }
+    },
+    "assetKey": "xiaotaoyuan",
+    "mainName": "小桃园",
+    "mainLocale": "CN",
+    "profile": {
+      "officialWebsite": "",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "intro": {
+        "zh": "小桃园面向社区早餐与日常简餐，提供油条、粢饭团、鸭血粉丝汤和小笼包等中式早点。",
+        "en": ""
+      },
+      "business": {
+        "zh": "中式早餐、社区简餐与门店运营。",
+        "en": ""
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "中式早餐",
+            "社区简餐",
+            "餐饮门店"
+          ],
+          "en": []
+        },
+        "audiences": {
+          "zh": [
+            "社区居民",
+            "家庭客群",
+            "上班族"
+          ],
+          "en": []
+        },
+        "tags": {
+          "zh": [
+            "早餐",
+            "油条",
+            "粢饭团",
+            "小笼包"
+          ],
+          "en": []
+        }
+      }
+    },
+    "display": {
+      "default": {
+        "language": "zh",
+        "name": "小桃园"
+      },
+      "zh": {
+        "name": "小桃园",
+        "secondaryName": ""
+      },
+      "en": {
+        "name": "小桃园",
+        "secondaryName": ""
+      }
+    },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
+    "recordClass": "owned",
+    "primaryIndustry": "food-beverage",
+    "industries": [
+      "food-beverage"
+    ],
+    "ipType": "product-service-brand",
+    "lifecycleStatus": "active",
+    "guidelineMode": "extend",
+    "parentCapable": false,
+    "architectureRoles": [
+      "child"
+    ],
+    "version": {
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+    },
+    "historyUrl": "api/history/xiaotaoyuan.json",
+    "url": "brand.html?brand=xiaotaoyuan",
+    "apiUrl": "api/brands/xiaotaoyuan.json",
+    "status": "documented",
+    "assetManifest": [],
+    "logoUrl": "",
+    "assetKit": {
+      "assetKey": "xiaotaoyuan",
+      "endpoints": {
+        "brand": "api/brands/xiaotaoyuan.json",
+        "logo": "",
+        "images": "api/brands/xiaotaoyuan.json#images",
+        "adobe": "",
+        "tokens": "api/brands/xiaotaoyuan.json#tokens",
+        "history": "api/history/xiaotaoyuan.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#8D3F45"
+          },
+          {
+            "key": "accent",
+            "value": "#E3A15A"
+          },
+          {
+            "key": "secondary",
+            "value": "#6F8A68"
+          },
+          {
+            "key": "surface",
+            "value": "#F7F1E9"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFEFA"
+          },
+          {
+            "key": "ink",
+            "value": "#2A2020"
+          },
+          {
+            "key": "muted",
+            "value": "#786B65"
+          }
+        ],
+        "keywords": [
+          "breakfast",
+          "neighborhood",
+          "Chinese snacks",
+          "morning"
+        ],
+        "images": []
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#8D3F45"
+        },
+        {
+          "key": "accent",
+          "value": "#E3A15A"
+        },
+        {
+          "key": "secondary",
+          "value": "#6F8A68"
+        },
+        {
+          "key": "surface",
+          "value": "#F7F1E9"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFEFA"
+        },
+        {
+          "key": "ink",
+          "value": "#2A2020"
+        },
+        {
+          "key": "muted",
+          "value": "#786B65"
+        }
+      ],
+      "keywords": [
+        "breakfast",
+        "neighborhood",
+        "Chinese snacks",
+        "morning"
+      ],
+      "images": []
+    },
+    "editablePaths": [
+      "Xiaotaoyuan/README.md"
+    ],
+    "source": {
+      "github": "https://github.com/fengurt/tableai_designaha/tree/main/Xiaotaoyuan",
+      "folder": "Xiaotaoyuan"
+    },
+    "guideCount": 1,
+    "tokenCount": 0,
+    "imageCount": 0,
+    "adobeAssetCount": 0,
+    "heroImage": "",
+    "primaryExcerpt": "小桃园 中文优先的社区早餐与日常简餐 IP，为同里市集子 IP。 定位：中式早餐、社区简餐与日常门店 规范模式：继承并扩展同里市集 视觉状态：Provisional，待官方资产补充"
+  },
+  {
+    "slug": "subangyuan",
+    "folder": "Subangyuan",
+    "name": "苏帮袁",
+    "nativeName": "",
+    "description": "以苏帮菜、淮扬菜和江南饮食文化为核心的中式餐饮品牌。",
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "苏帮袁以苏帮菜、淮扬菜和江南饮食文化为核心，名称中的“袁”取意美食家袁枚。",
+      "en": ""
+    },
+    "business": {
+      "zh": "苏帮菜、淮扬菜、江南餐饮、门店运营与品牌发展。",
+      "en": ""
+    },
+    "notes": {
+      "zh": "内部产品研究作为 API 受限私密 Notes 保存，不公开经营数据。",
+      "en": ""
+    },
+    "primaryGuide": "Subangyuan/README.md",
+    "sources": [
+      {
+        "title": "品味苏帮袁·地道淮扬菜",
+        "publisher": "北京市文化和旅游局",
+        "url": "https://www.visitbeijing.com.cn/article/47ZmEPLFgD4",
+        "verifiedAt": "2026-07-20",
+        "confidence": "government"
+      }
+    ],
+    "theme": {
+      "mode": "light",
+      "primary": "#315849",
+      "accent": "#A84E3E",
+      "secondary": "#B99B64",
+      "surface": "#F2F1E9",
+      "paper": "#FFFEFA",
+      "ink": "#1D2923",
+      "muted": "#68736D",
+      "line": "rgba(49, 88, 73, 0.18)",
+      "provisional": true,
+      "keywords": [
+        "Jiangnan",
+        "Huaiyang cuisine",
+        "Suzhou cuisine",
+        "Chinese dining"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "苏帮菜",
+          "淮扬菜",
+          "江南餐饮",
+          "品牌连锁"
+        ],
+        "en": []
+      },
+      "audiences": {
+        "zh": [
+          "家庭聚餐",
+          "商务用餐",
+          "江南菜消费者"
+        ],
+        "en": []
+      },
+      "tags": {
+        "zh": [
+          "苏帮菜",
+          "淮扬菜",
+          "袁枚",
+          "江南"
+        ],
+        "en": []
+      }
+    },
+    "assetKey": "subangyuan",
+    "mainName": "苏帮袁",
+    "mainLocale": "CN",
+    "profile": {
+      "officialWebsite": "",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "intro": {
+        "zh": "苏帮袁以苏帮菜、淮扬菜和江南饮食文化为核心，名称中的“袁”取意美食家袁枚。",
+        "en": ""
+      },
+      "business": {
+        "zh": "苏帮菜、淮扬菜、江南餐饮、门店运营与品牌发展。",
+        "en": ""
+      },
+      "notes": {
+        "zh": "内部产品研究作为 API 受限私密 Notes 保存，不公开经营数据。",
+        "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "苏帮菜",
+            "淮扬菜",
+            "江南餐饮",
+            "品牌连锁"
+          ],
+          "en": []
+        },
+        "audiences": {
+          "zh": [
+            "家庭聚餐",
+            "商务用餐",
+            "江南菜消费者"
+          ],
+          "en": []
+        },
+        "tags": {
+          "zh": [
+            "苏帮菜",
+            "淮扬菜",
+            "袁枚",
+            "江南"
+          ],
+          "en": []
+        }
+      }
+    },
+    "display": {
+      "default": {
+        "language": "zh",
+        "name": "苏帮袁"
+      },
+      "zh": {
+        "name": "苏帮袁",
+        "secondaryName": ""
+      },
+      "en": {
+        "name": "苏帮袁",
+        "secondaryName": ""
+      }
+    },
+    "recordClass": "owned",
+    "primaryIndustry": "food-beverage",
+    "industries": [
+      "food-beverage"
+    ],
+    "ipType": "product-service-brand",
+    "lifecycleStatus": "active",
+    "guidelineMode": "independent",
+    "parentCapable": true,
+    "architectureRoles": [
+      "parent"
+    ],
+    "version": {
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+    },
+    "historyUrl": "api/history/subangyuan.json",
+    "url": "brand.html?brand=subangyuan",
+    "apiUrl": "api/brands/subangyuan.json",
+    "status": "documented",
+    "assetManifest": [],
+    "logoUrl": "",
+    "assetKit": {
+      "assetKey": "subangyuan",
+      "endpoints": {
+        "brand": "api/brands/subangyuan.json",
+        "logo": "",
+        "images": "api/brands/subangyuan.json#images",
+        "adobe": "",
+        "tokens": "api/brands/subangyuan.json#tokens",
+        "history": "api/history/subangyuan.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#315849"
+          },
+          {
+            "key": "accent",
+            "value": "#A84E3E"
+          },
+          {
+            "key": "secondary",
+            "value": "#B99B64"
+          },
+          {
+            "key": "surface",
+            "value": "#F2F1E9"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFEFA"
+          },
+          {
+            "key": "ink",
+            "value": "#1D2923"
+          },
+          {
+            "key": "muted",
+            "value": "#68736D"
+          }
+        ],
+        "keywords": [
+          "Jiangnan",
+          "Huaiyang cuisine",
+          "Suzhou cuisine",
+          "Chinese dining"
+        ],
+        "images": []
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#315849"
+        },
+        {
+          "key": "accent",
+          "value": "#A84E3E"
+        },
+        {
+          "key": "secondary",
+          "value": "#B99B64"
+        },
+        {
+          "key": "surface",
+          "value": "#F2F1E9"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFEFA"
+        },
+        {
+          "key": "ink",
+          "value": "#1D2923"
+        },
+        {
+          "key": "muted",
+          "value": "#68736D"
+        }
+      ],
+      "keywords": [
+        "Jiangnan",
+        "Huaiyang cuisine",
+        "Suzhou cuisine",
+        "Chinese dining"
+      ],
+      "images": []
+    },
+    "editablePaths": [
+      "Subangyuan/README.md"
+    ],
+    "source": {
+      "github": "https://github.com/fengurt/tableai_designaha/tree/main/Subangyuan",
+      "folder": "Subangyuan"
+    },
+    "guideCount": 1,
+    "tokenCount": 0,
+    "imageCount": 0,
+    "adobeAssetCount": 0,
+    "heroImage": "",
+    "primaryExcerpt": "苏帮袁 中文优先的苏帮菜与淮扬菜餐饮 IP。 定位：苏帮菜、淮扬菜与江南饮食文化 架构：母 IP 私密资料：内部产品研究仅通过授权 API / MCP 访问 视觉状态：Provisional，待官方资产补充"
+  },
+  {
+    "slug": "youyuan-jingmeng",
+    "folder": "YouyuanJingmeng",
+    "name": "游园京梦",
+    "nativeName": "",
+    "description": "将淮扬菜与江南园林、昆曲意象融入城市餐饮场景的品牌。",
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "游园京梦自 2017 年起将淮扬菜与江南园林、昆曲意象融入城市商务与聚餐场景。",
+      "en": ""
+    },
+    "business": {
+      "zh": "淮扬菜、城市商务餐饮、家庭聚餐与门店运营。",
+      "en": ""
+    },
+    "notes": {
+      "zh": "内部产品研究作为 API 受限私密 Notes 保存，不公开经营数据。",
+      "en": ""
+    },
+    "primaryGuide": "YouyuanJingmeng/README.md",
+    "sources": [
+      {
+        "title": "游园京梦品牌与门店资料",
+        "publisher": "Apple Maps",
+        "url": "https://maps.apple.com/place?auid=1118368816552254&lsp=57879",
+        "verifiedAt": "2026-07-20",
+        "confidence": "directory"
+      }
+    ],
+    "theme": {
+      "mode": "light",
+      "primary": "#2E514A",
+      "accent": "#A55764",
+      "secondary": "#BCA169",
+      "surface": "#EEF2ED",
+      "paper": "#FFFEFA",
+      "ink": "#1A2724",
+      "muted": "#68746F",
+      "line": "rgba(46, 81, 74, 0.18)",
+      "provisional": true,
+      "keywords": [
+        "Huaiyang cuisine",
+        "Chinese garden",
+        "Kunqu",
+        "urban dining"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "淮扬菜",
+          "城市餐饮",
+          "江南文化"
+        ],
+        "en": []
+      },
+      "audiences": {
+        "zh": [
+          "商务客群",
+          "家庭聚餐",
+          "城市消费者"
+        ],
+        "en": []
+      },
+      "tags": {
+        "zh": [
+          "淮扬菜",
+          "江南园林",
+          "昆曲",
+          "北京"
+        ],
+        "en": []
+      }
+    },
+    "assetKey": "youyuan-jingmeng",
+    "mainName": "游园京梦",
+    "mainLocale": "CN",
+    "profile": {
+      "officialWebsite": "",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "intro": {
+        "zh": "游园京梦自 2017 年起将淮扬菜与江南园林、昆曲意象融入城市商务与聚餐场景。",
+        "en": ""
+      },
+      "business": {
+        "zh": "淮扬菜、城市商务餐饮、家庭聚餐与门店运营。",
+        "en": ""
+      },
+      "notes": {
+        "zh": "内部产品研究作为 API 受限私密 Notes 保存，不公开经营数据。",
+        "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "淮扬菜",
+            "城市餐饮",
+            "江南文化"
+          ],
+          "en": []
+        },
+        "audiences": {
+          "zh": [
+            "商务客群",
+            "家庭聚餐",
+            "城市消费者"
+          ],
+          "en": []
+        },
+        "tags": {
+          "zh": [
+            "淮扬菜",
+            "江南园林",
+            "昆曲",
+            "北京"
+          ],
+          "en": []
+        }
+      }
+    },
+    "display": {
+      "default": {
+        "language": "zh",
+        "name": "游园京梦"
+      },
+      "zh": {
+        "name": "游园京梦",
+        "secondaryName": ""
+      },
+      "en": {
+        "name": "游园京梦",
+        "secondaryName": ""
+      }
+    },
+    "recordClass": "owned",
+    "primaryIndustry": "food-beverage",
+    "industries": [
+      "food-beverage"
+    ],
+    "ipType": "product-service-brand",
+    "lifecycleStatus": "active",
+    "guidelineMode": "independent",
+    "parentCapable": true,
+    "architectureRoles": [
+      "parent"
+    ],
+    "version": {
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+    },
+    "historyUrl": "api/history/youyuan-jingmeng.json",
+    "url": "brand.html?brand=youyuan-jingmeng",
+    "apiUrl": "api/brands/youyuan-jingmeng.json",
+    "status": "documented",
+    "assetManifest": [],
+    "logoUrl": "",
+    "assetKit": {
+      "assetKey": "youyuan-jingmeng",
+      "endpoints": {
+        "brand": "api/brands/youyuan-jingmeng.json",
+        "logo": "",
+        "images": "api/brands/youyuan-jingmeng.json#images",
+        "adobe": "",
+        "tokens": "api/brands/youyuan-jingmeng.json#tokens",
+        "history": "api/history/youyuan-jingmeng.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#2E514A"
+          },
+          {
+            "key": "accent",
+            "value": "#A55764"
+          },
+          {
+            "key": "secondary",
+            "value": "#BCA169"
+          },
+          {
+            "key": "surface",
+            "value": "#EEF2ED"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFEFA"
+          },
+          {
+            "key": "ink",
+            "value": "#1A2724"
+          },
+          {
+            "key": "muted",
+            "value": "#68746F"
+          }
+        ],
+        "keywords": [
+          "Huaiyang cuisine",
+          "Chinese garden",
+          "Kunqu",
+          "urban dining"
+        ],
+        "images": []
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#2E514A"
+        },
+        {
+          "key": "accent",
+          "value": "#A55764"
+        },
+        {
+          "key": "secondary",
+          "value": "#BCA169"
+        },
+        {
+          "key": "surface",
+          "value": "#EEF2ED"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFEFA"
+        },
+        {
+          "key": "ink",
+          "value": "#1A2724"
+        },
+        {
+          "key": "muted",
+          "value": "#68746F"
+        }
+      ],
+      "keywords": [
+        "Huaiyang cuisine",
+        "Chinese garden",
+        "Kunqu",
+        "urban dining"
+      ],
+      "images": []
+    },
+    "editablePaths": [
+      "YouyuanJingmeng/README.md"
+    ],
+    "source": {
+      "github": "https://github.com/fengurt/tableai_designaha/tree/main/YouyuanJingmeng",
+      "folder": "YouyuanJingmeng"
+    },
+    "guideCount": 1,
+    "tokenCount": 0,
+    "imageCount": 0,
+    "adobeAssetCount": 0,
+    "heroImage": "",
+    "primaryExcerpt": "游园京梦 中文优先的淮扬菜与江南文化餐饮 IP。 定位：淮扬菜、江南园林意象与城市餐饮 架构：母 IP 私密资料：内部产品研究仅通过授权 API / MCP 访问 视觉状态：Provisional，待官方资产补充"
+  },
+  {
+    "slug": "qingshuiting",
+    "folder": "Qingshuiting",
+    "name": "清水亭",
+    "nativeName": "",
+    "description": "围绕丹江口河鲜与湖北风味发展的商场型楚菜品牌。",
+    "officialWebsite": "",
+    "mainLanguage": "zh",
+    "intro": {
+      "zh": "清水亭是围绕丹江口河鲜与湖北风味发展的商场型楚菜品牌，属于丹江渔村相关餐饮品牌矩阵。",
+      "en": ""
+    },
+    "business": {
+      "zh": "楚菜、丹江口河鲜、湖北风味与商场餐饮门店运营。",
+      "en": ""
+    },
+    "primaryGuide": "Qingshuiting/README.md",
+    "sources": [
+      {
+        "title": "丹江渔村多品牌矩阵",
+        "publisher": "餐饮界 / 搜狐",
+        "url": "https://www.sohu.com/a/1003480090_121180127",
+        "verifiedAt": "2026-07-20",
+        "confidence": "editorial"
+      }
+    ],
+    "theme": {
+      "mode": "light",
+      "primary": "#1F5A63",
+      "accent": "#B56E42",
+      "secondary": "#819B72",
+      "surface": "#EEF3F0",
+      "paper": "#FFFEFB",
+      "ink": "#17282B",
+      "muted": "#66787A",
+      "line": "rgba(31, 90, 99, 0.18)",
+      "provisional": true,
+      "keywords": [
+        "Hubei cuisine",
+        "river fish",
+        "Danjiangkou",
+        "mall dining"
+      ]
+    },
+    "classification": {
+      "tracks": {
+        "zh": [
+          "楚菜",
+          "河鲜",
+          "湖北风味",
+          "商场餐饮"
+        ],
+        "en": []
+      },
+      "audiences": {
+        "zh": [
+          "家庭聚餐",
+          "商场客群",
+          "湖北菜消费者"
+        ],
+        "en": []
+      },
+      "tags": {
+        "zh": [
+          "楚菜",
+          "丹江口",
+          "河鲜",
+          "湖北"
+        ],
+        "en": []
+      }
+    },
+    "assetKey": "qingshuiting",
+    "mainName": "清水亭",
+    "mainLocale": "CN",
+    "profile": {
+      "officialWebsite": "",
+      "mainLanguage": "zh",
+      "mainLocale": "CN",
+      "intro": {
+        "zh": "清水亭是围绕丹江口河鲜与湖北风味发展的商场型楚菜品牌，属于丹江渔村相关餐饮品牌矩阵。",
+        "en": ""
+      },
+      "business": {
+        "zh": "楚菜、丹江口河鲜、湖北风味与商场餐饮门店运营。",
+        "en": ""
+      },
+      "notes": {
+        "zh": "",
+        "en": ""
+      },
+      "classification": {
+        "tracks": {
+          "zh": [
+            "楚菜",
+            "河鲜",
+            "湖北风味",
+            "商场餐饮"
+          ],
+          "en": []
+        },
+        "audiences": {
+          "zh": [
+            "家庭聚餐",
+            "商场客群",
+            "湖北菜消费者"
+          ],
+          "en": []
+        },
+        "tags": {
+          "zh": [
+            "楚菜",
+            "丹江口",
+            "河鲜",
+            "湖北"
+          ],
+          "en": []
+        }
+      }
+    },
+    "display": {
+      "default": {
+        "language": "zh",
+        "name": "清水亭"
+      },
+      "zh": {
+        "name": "清水亭",
+        "secondaryName": ""
+      },
+      "en": {
+        "name": "清水亭",
+        "secondaryName": ""
+      }
+    },
+    "notes": {
+      "zh": "",
+      "en": ""
+    },
+    "recordClass": "owned",
+    "primaryIndustry": "food-beverage",
+    "industries": [
+      "food-beverage"
+    ],
+    "ipType": "product-service-brand",
+    "lifecycleStatus": "active",
+    "guidelineMode": "independent",
+    "parentCapable": true,
+    "architectureRoles": [
+      "parent"
+    ],
+    "version": {
+      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
+      "shortHash": "f751eee",
+      "date": "2026-07-20T08:17:19+08:00",
+      "message": "fix: prevent orphaned directory headline",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+    },
+    "historyUrl": "api/history/qingshuiting.json",
+    "url": "brand.html?brand=qingshuiting",
+    "apiUrl": "api/brands/qingshuiting.json",
+    "status": "documented",
+    "assetManifest": [],
+    "logoUrl": "",
+    "assetKit": {
+      "assetKey": "qingshuiting",
+      "endpoints": {
+        "brand": "api/brands/qingshuiting.json",
+        "logo": "",
+        "images": "api/brands/qingshuiting.json#images",
+        "adobe": "",
+        "tokens": "api/brands/qingshuiting.json#tokens",
+        "history": "api/history/qingshuiting.json"
+      },
+      "moodboard": {
+        "colors": [
+          {
+            "key": "primary",
+            "value": "#1F5A63"
+          },
+          {
+            "key": "accent",
+            "value": "#B56E42"
+          },
+          {
+            "key": "secondary",
+            "value": "#819B72"
+          },
+          {
+            "key": "surface",
+            "value": "#EEF3F0"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFEFB"
+          },
+          {
+            "key": "ink",
+            "value": "#17282B"
+          },
+          {
+            "key": "muted",
+            "value": "#66787A"
+          }
+        ],
+        "keywords": [
+          "Hubei cuisine",
+          "river fish",
+          "Danjiangkou",
+          "mall dining"
+        ],
+        "images": []
+      }
+    },
+    "moodboard": {
+      "colors": [
+        {
+          "key": "primary",
+          "value": "#1F5A63"
+        },
+        {
+          "key": "accent",
+          "value": "#B56E42"
+        },
+        {
+          "key": "secondary",
+          "value": "#819B72"
+        },
+        {
+          "key": "surface",
+          "value": "#EEF3F0"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFEFB"
+        },
+        {
+          "key": "ink",
+          "value": "#17282B"
+        },
+        {
+          "key": "muted",
+          "value": "#66787A"
+        }
+      ],
+      "keywords": [
+        "Hubei cuisine",
+        "river fish",
+        "Danjiangkou",
+        "mall dining"
+      ],
+      "images": []
+    },
+    "editablePaths": [
+      "Qingshuiting/README.md"
+    ],
+    "source": {
+      "github": "https://github.com/fengurt/tableai_designaha/tree/main/Qingshuiting",
+      "folder": "Qingshuiting"
+    },
+    "guideCount": 1,
+    "tokenCount": 0,
+    "imageCount": 0,
+    "adobeAssetCount": 0,
+    "heroImage": "",
+    "primaryExcerpt": "清水亭 中文优先的楚菜与丹江口河鲜餐饮 IP。 定位：楚菜、丹江口河鲜、湖北风味与商场餐饮 架构：母 IP 视觉状态：Provisional，待官方资产补充"
   }
 ]

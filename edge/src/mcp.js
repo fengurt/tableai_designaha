@@ -7,12 +7,13 @@ import { json, parseJson } from "./utils.js";
 const TOOLS = [
   { name: "list_brands", description: "List IPTrust brands and their primary identity fields.", inputSchema: { type: "object", properties: {} } },
   { name: "get_brand", description: "Get the current brand record for one IP slug.", inputSchema: { type: "object", required: ["slug"], properties: { slug: { type: "string" } } } },
-  { name: "list_ips", description: "List IPs with industry, IP type, ownership class and primary-language names.", inputSchema: { type: "object", properties: { industry: { type: "string" }, ipType: { type: "string" }, recordClass: { enum: ["owned", "reference"] }, parent: { type: "string" } } } },
+  { name: "list_ips", description: "List IPs with industry, IP type, ownership class, architecture role and primary-language names.", inputSchema: { type: "object", properties: { industry: { type: "string" }, ipType: { type: "string" }, recordClass: { enum: ["owned", "reference"] }, parent: { type: "string" }, architectureRole: { enum: ["parent", "child", "standalone"] } } } },
   { name: "get_ip_graph", description: "Get one IP with its parents, children, relationships and project applications.", inputSchema: { type: "object", required: ["slug"], properties: { slug: { type: "string" } } } },
   { name: "list_ip_children", description: "List the direct child IPs of one mother IP.", inputSchema: { type: "object", required: ["slug"], properties: { slug: { type: "string" } } } },
   { name: "list_ip_applications", description: "List project applications connected to one IP.", inputSchema: { type: "object", required: ["slug"], properties: { slug: { type: "string" } } } },
   { name: "get_application", description: "Get a project application, its primary IP, linked IPs and guideline inheritance.", inputSchema: { type: "object", required: ["slug"], properties: { slug: { type: "string" } } } },
   { name: "search_library", description: "Search IPs, applications, organizations, cases, reports, datasets and assets with lexical, semantic or hybrid retrieval.", inputSchema: { type: "object", required: ["query"], properties: { query: { type: "string" }, mode: { enum: ["lexical", "semantic", "hybrid"] }, limit: { type: "integer", minimum: 1, maximum: 50 }, types: { type: "array", items: { type: "string" } }, ip: { type: "string" }, industry: { type: "string" }, ipType: { type: "string" } } } },
+  { name: "get_library_item", description: "Get a public library item or an authorized private note and optionally request a short-lived file URL.", inputSchema: { type: "object", required: ["id"], properties: { id: { type: "string" }, includeFileUrl: { type: "boolean" }, ttlSeconds: { type: "integer", minimum: 30, maximum: 3600 } } } },
   { name: "list_assets", description: "List public assets, plus authorized private assets when a Bearer API key is supplied.", inputSchema: { type: "object", properties: { ip: { type: "string" }, limit: { type: "integer", minimum: 1, maximum: 200 } } } },
   { name: "get_asset", description: "Get metadata and variants for an asset.", inputSchema: { type: "object", required: ["id"], properties: { id: { type: "string" } } } },
   { name: "request_asset_url", description: "Create a short-lived media.apuch.art URL for an authorized private asset.", inputSchema: { type: "object", required: ["id"], properties: { id: { type: "string" }, ttlSeconds: { type: "integer", minimum: 30, maximum: 3600 } } } },
@@ -39,7 +40,10 @@ async function brand(env, slug) {
 }
 
 function ipValue(row, industries = []) {
-  return { slug: row.slug, recordClass: row.record_class, ipType: row.ip_type, primaryIndustry: row.primary_industry, industries, names: parseJson(row.names_json), mainLanguage: row.main_language, lifecycleStatus: row.lifecycle_status, guidelineMode: row.guideline_mode, sourceUrl: row.source_url, sourcePublisher: row.source_publisher, verificationStatus: row.verification_status, payload: parseJson(row.payload_json), version: row.version, updatedAt: row.updated_at };
+  const architectureRoles = [];
+  if (Boolean(row.parent_capable) || Boolean(row.has_children)) architectureRoles.push("parent");
+  if (Boolean(row.has_parent)) architectureRoles.push("child");
+  return { slug: row.slug, recordClass: row.record_class, ipType: row.ip_type, primaryIndustry: row.primary_industry, industries, names: parseJson(row.names_json), mainLanguage: row.main_language, lifecycleStatus: row.lifecycle_status, guidelineMode: row.guideline_mode, parentCapable: Boolean(row.parent_capable), architectureRoles: architectureRoles.length ? architectureRoles : ["standalone"], sourceUrl: row.source_url, sourcePublisher: row.source_publisher, verificationStatus: row.verification_status, payload: parseJson(row.payload_json), version: row.version, updatedAt: row.updated_at };
 }
 
 async function listIps(env, args = {}) {
@@ -47,7 +51,13 @@ async function listIps(env, args = {}) {
   const bindings = [];
   for (const [key, column] of [["industry", "primary_industry"], ["ipType", "ip_type"], ["recordClass", "record_class"]]) if (args[key]) { where.push(`i.${column}=?`); bindings.push(String(args[key])); }
   if (args.parent) { where.push("EXISTS(SELECT 1 FROM ip_relationships r WHERE r.child_ip_slug=i.slug AND r.parent_ip_slug=? AND r.relation_type='brand_parent')"); bindings.push(String(args.parent)); }
-  const rows = await env.DB.prepare(`SELECT i.* FROM ip_records i WHERE ${where.join(" AND ")} ORDER BY i.record_class,i.slug LIMIT 300`).bind(...bindings).all();
+  if (args.architectureRole === "parent") where.push("(i.parent_capable=1 OR EXISTS(SELECT 1 FROM ip_relationships r WHERE r.parent_ip_slug=i.slug AND r.relation_type='brand_parent'))");
+  if (args.architectureRole === "child") where.push("EXISTS(SELECT 1 FROM ip_relationships r WHERE r.child_ip_slug=i.slug AND r.relation_type='brand_parent')");
+  if (args.architectureRole === "standalone") where.push("i.parent_capable=0 AND NOT EXISTS(SELECT 1 FROM ip_relationships r WHERE (r.parent_ip_slug=i.slug OR r.child_ip_slug=i.slug) AND r.relation_type='brand_parent')");
+  const rows = await env.DB.prepare(`SELECT i.*,
+    EXISTS(SELECT 1 FROM ip_relationships r WHERE r.child_ip_slug=i.slug AND r.relation_type='brand_parent') has_parent,
+    EXISTS(SELECT 1 FROM ip_relationships r WHERE r.parent_ip_slug=i.slug AND r.relation_type='brand_parent') has_children
+    FROM ip_records i WHERE ${where.join(" AND ")} ORDER BY i.record_class,i.slug LIMIT 300`).bind(...bindings).all();
   const items = [];
   for (const row of rows.results) {
     const taxonomy = await env.DB.prepare("SELECT term_id FROM ip_taxonomy JOIN taxonomy_terms ON taxonomy_terms.id=ip_taxonomy.term_id WHERE ip_slug=? AND taxonomy_terms.dimension='industry' ORDER BY is_primary DESC,taxonomy_terms.sort_order").bind(row.slug).all();
@@ -111,6 +121,17 @@ async function callTool(env, actor, name, args = {}) {
   if (name === "search_library") {
     const items = await search(env, actor, { query: String(args.query || "").slice(0, 500), mode: args.mode || "hybrid", limit: args.limit || 20, types: args.types || [], ip: args.ip || "", industry: args.industry || "", ipType: args.ipType || "" });
     return result({ query: args.query, items });
+  }
+  if (name === "get_library_item") {
+    const row = await env.DB.prepare("SELECT * FROM library_items WHERE id=?").bind(String(args.id || "")).first();
+    if (!row) return result({ error: "not_found" }, true);
+    const metadata = parseJson(row.metadata_json);
+    const relation = metadata.ipSlug ? null : await env.DB.prepare("SELECT to_id FROM library_relations WHERE from_type=? AND from_id=? AND to_type IN ('owned-ip','ip') LIMIT 1").bind(row.type, row.id).first();
+    const ipSlug = metadata.ipSlug || relation?.to_id || "";
+    if (row.access === "private" && (!hasScope(actor, "library:read_private") || !hasIpScope(actor, ipSlug))) return result({ error: "forbidden" }, true);
+    const item = { id: row.id, slug: row.slug, type: row.type, title: { zh: row.title_zh, en: row.title_en }, summary: { zh: row.summary_zh, en: row.summary_en }, access: row.access, sourceUrl: row.source_url, sourcePublisher: row.source_publisher, publishedAt: row.published_at, verificationStatus: row.verification_status, metadata, ipSlug, version: row.version };
+    if (args.includeFileUrl && row.file_key) item.file = row.access === "private" ? await signMediaPath(env, `/${row.file_key}`, args.ttlSeconds) : { url: `${env.MEDIA_BASE_URL}/${row.file_key}`, expiresAt: null };
+    return result(item);
   }
   if (name === "list_assets") {
     const clauses = ["deleted_at IS NULL"];

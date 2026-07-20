@@ -16,7 +16,13 @@
       "mainLanguage": "en",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "https://media.apuch.art/public/tableai/tableai-logo-tableai-a2a-logo-transparent-c1e7752b39f5/c1e7752b39f5607594e40f701395a0f6ef3addb8b5a964880408e522fe34c210/original.png",
       "url": "brand.html?brand=tableai"
     },
@@ -32,12 +38,18 @@
       ],
       "names": {
         "zh": "凡纳弘途",
-        "en": "VANAHOM"
+        "en": "凡纳弘途"
       },
       "mainLanguage": "zh",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-logo-red-30e1cf3ac718/30e1cf3ac718bac77ac730c09f514b6f68a7f30fb763d7fa58fb6d96531862fc/original.png",
       "url": "brand.html?brand=vanahom"
     },
@@ -52,12 +64,18 @@
       ],
       "names": {
         "zh": "东方康养疗愈品牌",
-        "en": "Sanctem"
+        "en": "东方康养疗愈品牌"
       },
       "mainLanguage": "en",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "https://media.apuch.art/public/sanctem/sanctem-logo-sanctem-logo-color-dc34ba67f3af/dc34ba67f3af31597b6f03e8fd4890320676451d08cf17c48cb9ca650fa62cde/original.png",
       "url": "brand.html?brand=sanctem"
     },
@@ -72,12 +90,18 @@
       ],
       "names": {
         "zh": "善渡科技",
-        "en": "KiND"
+        "en": "善渡科技"
       },
       "mainLanguage": "en",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "https://media.apuch.art/public/kind/kind-hero-kind-brand-hero-c7224d4b8fb7/c7224d4b8fb7d8058636e35bc4df2c7f0dec0baf8968da57f533a6918cf33ee3/original.png",
       "url": "brand.html?brand=kind"
     },
@@ -94,12 +118,18 @@
       ],
       "names": {
         "zh": "亚太艺术疗愈联盟",
-        "en": "APHA"
+        "en": "亚太艺术疗愈联盟"
       },
       "mainLanguage": "zh",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "https://media.apuch.art/public/apha/apha-hero-apha-brand-hero-fc9496d55971/fc9496d5597101a9cacd136c43a3ecd5be168fe488fff2abb925fb8e1de061bc/original.png",
       "url": "brand.html?brand=apha"
     },
@@ -114,12 +144,18 @@
       ],
       "names": {
         "zh": "无魔协会",
-        "en": "MANA Endless"
+        "en": "无魔协会"
       },
       "mainLanguage": "zh",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "https://media.apuch.art/public/manaendless/manaendless-hero-manaendless-brand-hero-58a52f2e1748/58a52f2e174817fe795761cd6688f944bd266782a5468c7448d70ed11b40952c/original.png",
       "url": "brand.html?brand=manaendless"
     },
@@ -134,12 +170,18 @@
       ],
       "names": {
         "zh": "欧匹赛全球联盟",
-        "en": "OPC Global"
+        "en": "欧匹赛全球联盟"
       },
       "mainLanguage": "en",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "https://opcglobal.ai",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "https://media.apuch.art/public/opcglobal/opcglobal-hero-opcglobal-brand-hero-8351935e9abc/8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40/original.png",
       "url": "brand.html?brand=opcglobal"
     },
@@ -159,7 +201,13 @@
       "mainLanguage": "zh",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-iptrust-logo-black-4a253cbe0faa/4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64/original.png",
       "url": "brand.html?brand=iptrust"
     },
@@ -179,7 +227,13 @@
       "mainLanguage": "zh",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-mono-d7b2e1dc871a/d7b2e1dc871abb01b9d9cb8eaf26a19217b2a84cbae87412dc1475839d91001d/original.svg",
       "url": "brand.html?brand=fengzhi"
     },
@@ -194,12 +248,18 @@
       ],
       "names": {
         "zh": "酒店盈利大师",
-        "en": "Axisee"
+        "en": "酒店盈利大师"
       },
       "mainLanguage": "en",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "https://media.apuch.art/public/axisee/axisee-logo-axisee-logo-5f1cfebfc5b9/5f1cfebfc5b92db2708c2957b47419a456de13e78c20ddab4973056b08cafe3b/original.png",
       "url": "brand.html?brand=axisee"
     },
@@ -220,7 +280,13 @@
       "mainLanguage": "zh",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "https://media.apuch.art/public/sidera/sidera-hero-sidera-brand-hero-3501c8d23cb5/3501c8d23cb5507005b8d8dea3904e72dbc849783b039a90406b976f7fbf7672/original.png",
       "url": "brand.html?brand=sidera"
     },
@@ -234,12 +300,18 @@
       ],
       "names": {
         "zh": "壹目贯维",
-        "en": "1stepmore"
+        "en": "壹目贯维"
       },
       "mainLanguage": "en",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "",
       "url": "brand.html?brand=1stepmore"
     },
@@ -255,12 +327,18 @@
       ],
       "names": {
         "zh": "游赋社",
-        "en": "AGEM"
+        "en": "游赋社"
       },
       "mainLanguage": "zh",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "",
       "url": "brand.html?brand=agem"
     },
@@ -274,12 +352,18 @@
       ],
       "names": {
         "zh": "燃古豋",
-        "en": "RGD"
+        "en": "燃古豋"
       },
       "mainLanguage": "zh",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "",
       "url": "brand.html?brand=rgd"
     },
@@ -293,12 +377,18 @@
       ],
       "names": {
         "zh": "常幸",
-        "en": "Changoods"
+        "en": "常幸"
       },
       "mainLanguage": "zh",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "",
       "url": "brand.html?brand=changoods"
     },
@@ -312,12 +402,18 @@
       ],
       "names": {
         "zh": "博雅问渠书院",
-        "en": "PKU BOYA Academy"
+        "en": "博雅问渠书院"
       },
       "mainLanguage": "zh",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "",
       "url": "brand.html?brand=boya"
     },
@@ -337,7 +433,13 @@
       "mainLanguage": "en",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "",
       "url": "brand.html?brand=apuch"
     },
@@ -357,7 +459,13 @@
       "mainLanguage": "zh",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "",
       "url": "brand.html?brand=pam"
     },
@@ -372,12 +480,18 @@
       ],
       "names": {
         "zh": "查明",
-        "en": "ksamint"
+        "en": "查明"
       },
       "mainLanguage": "en",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "",
       "url": "brand.html?brand=ksamint"
     },
@@ -396,7 +510,13 @@
       "mainLanguage": "en",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "",
       "url": "brand.html?brand=inucleus"
     },
@@ -416,7 +536,13 @@
       "mainLanguage": "zh",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "",
       "url": "brand.html?brand=xinzhi-travel"
     },
@@ -436,7 +562,13 @@
       "mainLanguage": "zh",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "",
       "url": "brand.html?brand=zhongzhiyou"
     },
@@ -450,12 +582,18 @@
       ],
       "names": {
         "zh": "睿悦科技",
-        "en": "Nibiru"
+        "en": "睿悦科技"
       },
       "mainLanguage": "en",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "",
       "url": "brand.html?brand=nibiru"
     },
@@ -475,7 +613,13 @@
       "mainLanguage": "zh",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "",
       "url": "brand.html?brand=shenzhen-microsoft-global-center"
     },
@@ -496,7 +640,13 @@
       "mainLanguage": "zh",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "",
       "url": "brand.html?brand=shanrenjing"
     },
@@ -515,7 +665,13 @@
       "mainLanguage": "zh",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
       "url": "brand.html?brand=kaoyu-shenhua"
     },
@@ -530,14 +686,246 @@
       ],
       "names": {
         "zh": "延安石窑宾馆",
-        "en": "延安石窑宾馆"
+        "en": ""
       },
       "mainLanguage": "zh",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "standalone"
+      ],
       "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
       "logoUrl": "",
       "url": "brand.html?brand=yanan-shiyao-hotel"
+    },
+    {
+      "slug": "tongli-market",
+      "recordClass": "owned",
+      "ipType": "place-venue-brand",
+      "primaryIndustry": "food-beverage",
+      "industries": [
+        "food-beverage",
+        "consumer-lifestyle"
+      ],
+      "names": {
+        "zh": "同里市集",
+        "en": ""
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "parentCapable": true,
+      "architectureRoles": [
+        "parent"
+      ],
+      "sourceUrl": "https://www.shywm.gov.cn/newsconsultation/8467.jhtml",
+      "sourcePublisher": "顺义文明网",
+      "verificationStatus": "source-documented",
+      "logoUrl": "",
+      "url": "brand.html?brand=tongli-market"
+    },
+    {
+      "slug": "tongxianghui",
+      "recordClass": "owned",
+      "ipType": "product-service-brand",
+      "primaryIndustry": "food-beverage",
+      "industries": [
+        "food-beverage"
+      ],
+      "names": {
+        "zh": "同香荟",
+        "en": ""
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "extend",
+      "parentCapable": false,
+      "architectureRoles": [
+        "child"
+      ],
+      "sourceUrl": "https://www.amap.com/place/B0FFIPHOK3",
+      "sourcePublisher": "高德地图",
+      "verificationStatus": "source-documented",
+      "logoUrl": "",
+      "url": "brand.html?brand=tongxianghui"
+    },
+    {
+      "slug": "mutangwan",
+      "recordClass": "owned",
+      "ipType": "product-service-brand",
+      "primaryIndustry": "food-beverage",
+      "industries": [
+        "food-beverage"
+      ],
+      "names": {
+        "zh": "睦堂湾",
+        "en": ""
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "extend",
+      "parentCapable": false,
+      "architectureRoles": [
+        "child"
+      ],
+      "sourceUrl": "https://npo04307t.npoall.com/news/itemid-234946.html",
+      "sourcePublisher": "中国游艺机游乐园协会",
+      "verificationStatus": "source-documented",
+      "logoUrl": "",
+      "url": "brand.html?brand=mutangwan"
+    },
+    {
+      "slug": "shuangxi-shaola",
+      "recordClass": "owned",
+      "ipType": "product-service-brand",
+      "primaryIndustry": "food-beverage",
+      "industries": [
+        "food-beverage"
+      ],
+      "names": {
+        "zh": "双囍烧腊",
+        "en": ""
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "extend",
+      "parentCapable": false,
+      "architectureRoles": [
+        "child"
+      ],
+      "sourceUrl": "https://gs.ctrip.com/html5/you/foods/fooddetail/1/130033671.html",
+      "sourcePublisher": "携程美食",
+      "verificationStatus": "source-documented",
+      "logoUrl": "",
+      "url": "brand.html?brand=shuangxi-shaola"
+    },
+    {
+      "slug": "ganglao-baozailu",
+      "recordClass": "owned",
+      "ipType": "product-service-brand",
+      "primaryIndustry": "food-beverage",
+      "industries": [
+        "food-beverage"
+      ],
+      "names": {
+        "zh": "港佬煲仔炉车仔面碟头饭",
+        "en": ""
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "extend",
+      "parentCapable": false,
+      "architectureRoles": [
+        "child"
+      ],
+      "sourceUrl": "",
+      "sourcePublisher": "",
+      "verificationStatus": "provisional",
+      "logoUrl": "",
+      "url": "brand.html?brand=ganglao-baozailu"
+    },
+    {
+      "slug": "xiaotaoyuan",
+      "recordClass": "owned",
+      "ipType": "product-service-brand",
+      "primaryIndustry": "food-beverage",
+      "industries": [
+        "food-beverage"
+      ],
+      "names": {
+        "zh": "小桃园",
+        "en": ""
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "extend",
+      "parentCapable": false,
+      "architectureRoles": [
+        "child"
+      ],
+      "sourceUrl": "https://tech.sina.com.cn/roll/2021-05-06/doc-ikmxzfmm0775758.shtml",
+      "sourcePublisher": "澎湃新闻 / 新浪",
+      "verificationStatus": "source-documented",
+      "logoUrl": "",
+      "url": "brand.html?brand=xiaotaoyuan"
+    },
+    {
+      "slug": "subangyuan",
+      "recordClass": "owned",
+      "ipType": "product-service-brand",
+      "primaryIndustry": "food-beverage",
+      "industries": [
+        "food-beverage"
+      ],
+      "names": {
+        "zh": "苏帮袁",
+        "en": ""
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "parentCapable": true,
+      "architectureRoles": [
+        "parent"
+      ],
+      "sourceUrl": "https://www.visitbeijing.com.cn/article/47ZmEPLFgD4",
+      "sourcePublisher": "北京市文化和旅游局",
+      "verificationStatus": "source-documented",
+      "logoUrl": "",
+      "url": "brand.html?brand=subangyuan"
+    },
+    {
+      "slug": "youyuan-jingmeng",
+      "recordClass": "owned",
+      "ipType": "product-service-brand",
+      "primaryIndustry": "food-beverage",
+      "industries": [
+        "food-beverage"
+      ],
+      "names": {
+        "zh": "游园京梦",
+        "en": ""
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "parentCapable": true,
+      "architectureRoles": [
+        "parent"
+      ],
+      "sourceUrl": "https://maps.apple.com/place?auid=1118368816552254&lsp=57879",
+      "sourcePublisher": "Apple Maps",
+      "verificationStatus": "source-documented",
+      "logoUrl": "",
+      "url": "brand.html?brand=youyuan-jingmeng"
+    },
+    {
+      "slug": "qingshuiting",
+      "recordClass": "owned",
+      "ipType": "product-service-brand",
+      "primaryIndustry": "food-beverage",
+      "industries": [
+        "food-beverage"
+      ],
+      "names": {
+        "zh": "清水亭",
+        "en": ""
+      },
+      "mainLanguage": "zh",
+      "lifecycleStatus": "active",
+      "guidelineMode": "independent",
+      "parentCapable": true,
+      "architectureRoles": [
+        "parent"
+      ],
+      "sourceUrl": "https://www.sohu.com/a/1003480090_121180127",
+      "sourcePublisher": "餐饮界 / 搜狐",
+      "verificationStatus": "source-documented",
+      "logoUrl": "",
+      "url": "brand.html?brand=qingshuiting"
     },
     {
       "slug": "wyndham-hotels-resorts",
@@ -557,6 +945,10 @@
       "recordClass": "reference",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "parent"
+      ],
       "url": "ip?ip=wyndham-hotels-resorts"
     },
     {
@@ -577,6 +969,10 @@
       "recordClass": "reference",
       "lifecycleStatus": "active",
       "guidelineMode": "independent",
+      "parentCapable": false,
+      "architectureRoles": [
+        "child"
+      ],
       "url": "ip?ip=days-inn-by-wyndham"
     }
   ],
@@ -585,6 +981,41 @@
       "id": "rel-wyndham-days-inn",
       "parent": "wyndham-hotels-resorts",
       "child": "days-inn-by-wyndham",
+      "type": "brand_parent",
+      "primary": true
+    },
+    {
+      "id": "rel-tongli-market-tongxianghui",
+      "parent": "tongli-market",
+      "child": "tongxianghui",
+      "type": "brand_parent",
+      "primary": true
+    },
+    {
+      "id": "rel-tongli-market-mutangwan",
+      "parent": "tongli-market",
+      "child": "mutangwan",
+      "type": "brand_parent",
+      "primary": true
+    },
+    {
+      "id": "rel-tongli-market-shuangxi-shaola",
+      "parent": "tongli-market",
+      "child": "shuangxi-shaola",
+      "type": "brand_parent",
+      "primary": true
+    },
+    {
+      "id": "rel-tongli-market-ganglao-baozailu",
+      "parent": "tongli-market",
+      "child": "ganglao-baozailu",
+      "type": "brand_parent",
+      "primary": true
+    },
+    {
+      "id": "rel-tongli-market-xiaotaoyuan",
+      "parent": "tongli-market",
+      "child": "xiaotaoyuan",
       "type": "brand_parent",
       "primary": true
     }
