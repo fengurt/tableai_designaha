@@ -1,8 +1,9 @@
 const EDGE_ORIGIN = "https://edge.apuch.art";
 
 export default {
-  async fetch(request) {
+  async fetch(request, env) {
     const incoming = new URL(request.url);
+    if (incoming.hostname.endsWith(".pages.dev")) return env.ASSETS.fetch(request);
     const upstream = new URL(`${incoming.pathname}${incoming.search}`, EDGE_ORIGIN);
     const headers = new Headers(request.headers);
     headers.delete("host");

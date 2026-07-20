@@ -1053,21 +1053,16 @@ await writeFile(join(siteDir, "_redirects"), [
 
 await writeFile(join(siteDir, "_routes.json"), JSON.stringify({
   version: 1,
-  include: [
-    "/api/v2/*",
-    "/mcp",
-    "/assets/brand-images/*",
-    "/assets/adobe/*",
-    "/assets/contact/*",
-  ],
+  include: ["/*"],
   exclude: [],
 }, null, 2));
 
 await writeFile(join(siteDir, "_worker.js"), `const EDGE_ORIGIN = "https://edge.apuch.art";
 
 export default {
-  async fetch(request) {
+  async fetch(request, env) {
     const incoming = new URL(request.url);
+    if (incoming.hostname.endsWith(".pages.dev")) return env.ASSETS.fetch(request);
     const upstream = new URL(\`${'${incoming.pathname}${incoming.search}'}\`, EDGE_ORIGIN);
     const headers = new Headers(request.headers);
     headers.delete("host");
