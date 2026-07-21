@@ -782,18 +782,18 @@
     "primaryGuide": "Sidera/sidera_design.md",
     "theme": {
       "mode": "dark",
-      "primary": "#B58B4C",
-      "accent": "#D4A862",
+      "primary": "#EFE6D2",
+      "accent": "#B58B4C",
       "secondary": "#9E3B2E",
       "surface": "#14100A",
       "paper": "#18130B",
       "ink": "#EFE6D2",
       "muted": "#A99B7E",
-      "line": "rgba(181, 139, 76, 0.32)",
+      "line": "rgba(239, 230, 210, 0.24)",
       "keywords": [
-        "ink",
+        "ink ivory",
+        "night",
         "earth gold",
-        "cream",
         "vermillion",
         "wisdom navigator"
       ]

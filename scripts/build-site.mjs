@@ -2737,6 +2737,123 @@ p { line-height: 1.65; }
   padding: clamp(18px, 4vw, 54px);
   box-sizing: border-box;
 }
+.brand-sidera {
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", STSong, serif;
+  background: #14100a;
+}
+.brand-sidera .brand-hero {
+  min-height: min(680px, calc(100dvh - 150px));
+  padding: clamp(30px, 5vw, 72px) 0;
+  border-bottom: 1px solid var(--brand-line);
+  grid-template-columns: minmax(0, .9fr) minmax(320px, 1.1fr);
+}
+.brand-sidera .brand-hero > div:first-child { max-width: 620px; }
+.brand-sidera .brand-hero h1 {
+  max-width: 7ch;
+  margin: 10px 0 18px;
+  font-size: clamp(72px, 10vw, 138px);
+  font-weight: 600;
+  line-height: .96;
+  letter-spacing: 0;
+}
+.brand-sidera .brand-hero .eyebrow {
+  color: var(--brand-accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: 0;
+}
+.brand-sidera .brand-hero .alt-name {
+  color: var(--brand-primary);
+  font-size: clamp(18px, 2vw, 26px);
+}
+.brand-sidera .profile-tags span,
+.brand-sidera .pill {
+  border-radius: 2px;
+  background: transparent;
+}
+.brand-sidera .brand-visual,
+.brand-sidera .asset-hub,
+.brand-sidera .mood-board,
+.brand-sidera .profile-editor,
+.brand-sidera .ip-system-panel {
+  border-radius: 2px;
+}
+.sidera-compass-visual {
+  position: relative;
+  min-height: clamp(360px, 42vw, 520px);
+  background: var(--brand-paper);
+  isolation: isolate;
+}
+.sidera-compass-ring {
+  position: relative;
+  display: grid;
+  width: min(66%, 340px);
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid var(--brand-primary);
+  border-radius: 50%;
+}
+.sidera-compass-ring::before,
+.sidera-compass-ring::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  background: var(--brand-line);
+}
+.sidera-compass-ring::before { width: 146%; height: 1px; }
+.sidera-compass-ring::after { width: 1px; height: 146%; }
+.sidera-compass-core {
+  display: grid;
+  width: 64%;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid var(--brand-accent);
+  border-radius: 50%;
+}
+.sidera-compass-mark {
+  color: var(--brand-primary);
+  font-size: clamp(74px, 10vw, 126px);
+  font-weight: 600;
+  line-height: 1;
+}
+.sidera-compass-caption {
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  margin: 0;
+  color: var(--brand-muted);
+  font: 650 11px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: 0;
+}
+.sidera-seal {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: grid;
+  width: 52px;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--brand-secondary) 72%, white);
+  background: var(--brand-secondary);
+  color: var(--brand-primary);
+  font-size: 13px;
+  font-weight: 700;
+}
+.sidera-principles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 0 30px;
+  border-bottom: 1px solid var(--brand-line);
+}
+.sidera-principles span {
+  padding: 18px 0;
+  color: var(--brand-primary);
+  font-size: clamp(18px, 2vw, 27px);
+  font-weight: 600;
+}
+.sidera-principles span + span {
+  padding-left: 22px;
+  border-left: 1px solid var(--brand-line);
+}
 .brand-assets {
   display: grid;
   gap: 10px;
@@ -3107,6 +3224,11 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .admin-toolbar { align-items: stretch; flex-direction: column; }
   .admin-toolbar label { min-width: 0; width: 100%; }
   .hub-hero, .brand-hero, .form-grid { grid-template-columns: 1fr; }
+  .brand-sidera .brand-hero { min-height: auto; padding-top: 26px; grid-template-columns: minmax(0, 1fr); }
+  .brand-sidera .brand-hero h1 { max-width: none; font-size: clamp(64px, 24vw, 94px); }
+  .sidera-compass-visual { min-height: 340px; }
+  .sidera-principles { grid-template-columns: 1fr; }
+  .sidera-principles span + span { padding-left: 0; border-top: 1px solid var(--brand-line); border-left: 0; }
   .resource-grid { grid-template-columns: 1fr; }
   .endpoint-grid, .mood-grid { grid-template-columns: 1fr; }
   .profile-form-grid { grid-template-columns: 1fr; }
@@ -4849,17 +4971,22 @@ async function renderBrand() {
   const brand = await loadJson(\`api/brands/\${slug}.json\`);
   const display = mainBrand(brand);
   const localized = localizedBrand(brand);
+  const isSidera = brand.slug === "sidera";
+  const heroName = isSidera ? "侍天" : display.name;
+  const heroSecondaryName = isSidera ? "智慧餐饮 · Sidera" : display.secondaryName;
+  const heroEyebrow = isSidera ? "智慧领航者 · WISDOM NAVIGATOR" : statusLabel(brand.status);
+  const sideraPrinciples = currentLocale === "en" ? ["SEE CLEARLY", "MOVE DECISIVELY", "COMPOUND VALUE"] : ["看得清", "改得动", "能复利"];
   document.title = \`\${display.name} · Brand Guidelines\`;
   const hero = brand.adobeAssets?.[0]?.hero?.sitePath
     ? brand.adobeAssets[0].hero
     : preferredBrandImage(brand.images || []);
   page.innerHTML = \`
-    <div class="brand-shell \${themeClass(brand.theme)}" style="\${themeStyle(brand.theme)}">
+    <div class="brand-shell \${themeClass(brand.theme)} brand-\${escapeHtml(brand.slug)}" style="\${themeStyle(brand.theme)}">
       <section class="brand-hero">
         <div>
-          <p class="eyebrow">\${escapeHtml(statusLabel(brand.status))}</p>
-          <h1>\${escapeHtml(display.name)}</h1>
-          <p class="muted alt-name">\${escapeHtml(display.secondaryName || "")}</p>
+          <p class="eyebrow">\${escapeHtml(heroEyebrow)}</p>
+          <h1>\${escapeHtml(heroName)}</h1>
+          <p class="muted alt-name">\${escapeHtml(heroSecondaryName || "")}</p>
           <p>\${escapeHtml(localized.intro)}</p>
           <div class="profile-tags">
             \${display.classification.tracks.map((item) => \`<span>\${escapeHtml(item)}</span>\`).join("")}
@@ -4881,8 +5008,15 @@ async function renderBrand() {
               \${hero.dimensions ? \`<span>\${escapeHtml(hero.dimensions.replace(" x ", " × "))}</span>\` : ""}
             </div>
           </div>
+        \` : isSidera ? \`
+          <div class="brand-visual sidera-compass-visual" role="img" aria-label="侍天智慧领航罗盘">
+            <div class="sidera-compass-ring" aria-hidden="true"><div class="sidera-compass-core"><span class="sidera-compass-mark">侍</span></div></div>
+            <span class="sidera-seal" aria-hidden="true">侍天</span>
+            <p class="sidera-compass-caption">SIDERA / WISDOM NAVIGATOR</p>
+          </div>
         \` : ""}
       </section>
+      \${isSidera ? \`<section class="sidera-principles">\${sideraPrinciples.map((item) => \`<span>\${escapeHtml(item)}</span>\`).join("")}</section>\` : ""}
       \${profileEditor(brand)}
       <section class="brand-architecture" id="brandArchitecture" aria-live="polite"></section>
       \${ipSystemPanel(brand)}
