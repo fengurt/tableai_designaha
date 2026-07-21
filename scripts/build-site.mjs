@@ -975,22 +975,22 @@ await writeFile(join(siteDir, "_headers"), [
   "  Permissions-Policy: camera=(), microphone=(), geolocation=()",
   "",
   "/",
-  "  Cache-Control: public, max-age=0, s-maxage=300, stale-while-revalidate=86400",
+  "  Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=86400",
   "",
   "/brand",
-  "  Cache-Control: public, max-age=0, s-maxage=300, stale-while-revalidate=86400",
+  "  Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=86400",
   "",
   "/directory/*",
-  "  Cache-Control: public, max-age=0, s-maxage=300, stale-while-revalidate=86400",
+  "  Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=86400",
   "",
   "/ip/*",
-  "  Cache-Control: public, max-age=0, s-maxage=300, stale-while-revalidate=86400",
+  "  Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=86400",
   "",
   "/application/*",
-  "  Cache-Control: public, max-age=0, s-maxage=300, stale-while-revalidate=86400",
+  "  Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=86400",
   "",
   "/*.html",
-  "  Cache-Control: public, max-age=0, s-maxage=300, stale-while-revalidate=86400",
+  "  Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=86400",
   "",
   "/admin",
   "  Cache-Control: private, no-store",
@@ -1000,10 +1000,10 @@ await writeFile(join(siteDir, "_headers"), [
   "",
   "/ip-evolution",
   "  Content-Type: text/html; charset=utf-8",
-  "  Cache-Control: public, max-age=0, s-maxage=300, stale-while-revalidate=86400",
+  "  Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=86400",
   "",
   "/library/*",
-  "  Cache-Control: public, max-age=0, s-maxage=300, stale-while-revalidate=86400",
+  "  Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=86400",
   "",
   "/assets/site-*.css",
   "  Cache-Control: public, max-age=31536000, immutable",
@@ -3602,7 +3602,7 @@ function setupSearch() {
 async function loadJson(path) {
   const url = path.startsWith("api/") ? new URL("../" + path, import.meta.url) : new URL(path, location.href);
   url.searchParams.set("v", BUILD_VERSION);
-  const res = await fetch(url, { cache: "no-cache" });
+  const res = await fetch(url, { cache: "force-cache" });
   if (!res.ok) throw new Error(\`Could not load \${path}\`);
   return res.json();
 }

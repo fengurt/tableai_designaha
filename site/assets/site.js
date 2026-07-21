@@ -424,7 +424,7 @@ function setupSearch() {
 async function loadJson(path) {
   const url = path.startsWith("api/") ? new URL("../" + path, import.meta.url) : new URL(path, location.href);
   url.searchParams.set("v", BUILD_VERSION);
-  const res = await fetch(url, { cache: "no-cache" });
+  const res = await fetch(url, { cache: "force-cache" });
   if (!res.ok) throw new Error(`Could not load ${path}`);
   return res.json();
 }
