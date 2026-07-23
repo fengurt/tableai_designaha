@@ -1,8 +1,8 @@
 # Sidera 侍天 — Design System
 
 > Build-ready brand & visual spec for agents producing on-brand 侍天 work.
-> 一句话：**素墨为声、玄夜为底、土金为骨；沉稳敢言、有据可依。**
-> Ink is the voice, night is the ground, gold is the structure — composed, forthright, evidence-based.
+> 一句话：**素墨为纸、玄墨为字、土金为骨；沉稳敢言、有据可依。**
+> Ink is the paper, charcoal is the voice, gold is the structure — composed, forthright, evidence-based.
 
 **Sidera 侍天** — 智慧领航者 · *Wisdom Navigator* for premium F&B chains.
 We equip every valuable mid-to-high-end F&B chain with a "see-clearly, move-betably, compound-easily" smart navigation system: 海图 Chart · 罗盘 Compass · 航线 Route · 校正 Correction.
@@ -13,8 +13,8 @@ We equip every valuable mid-to-high-end F&B chain with a "see-clearly, move-beta
 
 ## 0. Operating rules / 总则
 
-- **Always dark.** Base canvas is 玄夜 `#14100A`. Never a white page.
-- **Ink `#EFE6D2` is the primary brand color.** Gold provides structure; vermillion is the seal. 朱红仅作印记，≤ 5% of any view.
+- **Always pale.** Base canvas is 淡墨纸 `#F4F0E7`; raised content uses `#FFFDF8`. Avoid pure white.
+- **Ink `#EFE6D2` is the primary brand color.** It carries fields and key actions; deep charcoal carries text. Gold provides structure; vermillion is the seal. 朱红仅作印记，≤ 5% of any view.
 - **Serif everywhere** (Noto Serif SC / Noto Serif). Mono (IBM Plex Mono) **only** for hex, tokens, data, prices.
 - **Bilingual.** CN primary in 思源宋体 (600 / 400 / 300). EN as UPPERCASE, letter-spaced captions/labels.
 - **Density follows content.** Ceremonial / low-density for foundations & covers; technical / high-density for tokens & data.
@@ -28,24 +28,27 @@ We equip every valuable mid-to-high-end F&B chain with a "see-clearly, move-beta
 
 | token | name 名称 | hex | usage 用途 |
 |---|---|---|---|
-| `--night` | 玄夜 Night | `#14100A` | base background / canvas 底色 |
-| `--ink` | 素墨 Ink | `#EFE6D2` | **primary brand color** — titles, primary text, key actions 主色·标题·正文·关键操作 |
-| `--gold` | 土金 Earth Gold | `#B58B4C` | structural accent — rules, strokes, navigation 描边·结构·导航 |
+| `--surface` | 淡墨纸 Pale Manuscript | `#F4F0E7` | base background / canvas 页面底色 |
+| `--paper` | 宣纸 Paper | `#FFFDF8` | raised content / image surround 内容层 |
+| `--ink-primary` | 素墨 Ink | `#EFE6D2` | **primary brand color** — fields, key actions, highlights 主色·色块·关键操作 |
+| `--charcoal` | 玄墨 Charcoal | `#17130D` | titles and primary text 标题·正文 |
+| `--gold` | 土金 Earth Gold | `#76551F` | structural accent — rules, strokes, navigation 描边·结构·导航 |
 | `--gold-hi` | 明金 Bright Gold | `#D4A862` | highlight — active state, key numbers 高光·关键数字 |
-| `--gold-deep` | 深金 Deep Gold | `#8A6A38` | captions, EN labels, muted gold 题注·英文标识 |
-| `--ink-muted` | 素墨灰 Ink Muted | `#A99B7E` | secondary / supporting text 辅助文字 |
-| `--seal` | 朱红 Vermillion | `#9E3B2E` | seal, negation (✕), warnings — ≤5% 印章·否定 |
+| `--gold-deep` | 深金 Deep Gold | `#76551F` | captions, EN labels, muted gold 题注·英文标识 |
+| `--ink-muted` | 素墨灰 Ink Muted | `#706758` | secondary / supporting text 辅助文字 |
+| `--seal` | 朱红 Vermillion | `#8C3228` | seal, negation (✕), warnings — ≤5% 印章·否定 |
 
-**Surfaces (derived, on night):**
-- panel / raised: `#18130B`
-- sunken / console: `#120E07`
-- hairline: `rgba(239,230,210,0.24)` · hairline-strong: `rgba(239,230,210,0.42)`
-- card border: `rgba(181,139,76,0.4)`
+**Surfaces (derived, on pale manuscript):**
+- panel / raised: `#FFFDF8`
+- primary field: `#EFE6D2`
+- hairline: `rgba(23,19,13,0.18)` · hairline-strong: `rgba(23,19,13,0.34)`
+- card border: `rgba(118,85,31,0.34)`
 
 **Rule ratios (≈ ):**
-- `--night` background ≈ 80% of any view.
-- `--gold` strokes / rules ≈ 12%.
-- `--ink` text and primary actions ≈ 7%.
+- pale surfaces ≈ 78% of any view.
+- deep charcoal text ≈ 12%.
+- `--ink-primary` fields and key actions ≈ 7%.
+- `--gold` strokes / rules ≈ 3%.
 - `--seal` (vermillion) ≤ 5%, the seal spark, never a field.
 
 ---
@@ -82,7 +85,7 @@ We equip every valuable mid-to-high-end F&B chain with a "see-clearly, move-beta
 
 ## 3. The Mark / 标志
 
-- **主标志 — 罗盘印:** compass ring + 侍. Concentric circles + crosshair lines, `--ink` on `--night`.
+- **主标志 — 罗盘印:** compass ring + 侍. Concentric circles + crosshair lines, `--charcoal` on `--ink-primary` or `--paper`.
 - **朱印:** vermillion square seal containing 侍 / 侍天 — covers, back covers, sign-offs only.
 - **Misuse ✕:** never rotate, never recolor, never stretch.
 - **Clear space:** at least one full compass-ring radius on all sides.
@@ -115,16 +118,16 @@ We equip every valuable mid-to-high-end F&B chain with a "see-clearly, move-beta
 
 ## 5. Components / 组件
 
-- **Card:** panel `#18130B`, border `1px` gold@28–40%, **radius 2px** (never round), pad 20–28px. Title 18–20 / 600 `--ink`; meta = caption in `--gold-deep`. Optional 天干 index (壹 / 贰 / 叁…) in `--seal`, top-right.
+- **Card:** panel `#FFFDF8`, border `1px` charcoal@18%, **radius 2px** (never round), pad 20–28px. Title 18–20 / 600 `--charcoal`; meta = caption in `--gold-deep`. Optional 天干 index (壹 / 贰 / 叁…) in `--seal`, top-right.
 - **Token / table row:** hairline top border, swatch 30–34px (radius 2), mono hex in `--gold-hi`, usage in `--ink-muted`.
-- **Badge — filled:** `--gold-hi` fill, `--night` text, radius 2, mono — for prices / tiers (`¥1,999 / 月`).
+- **Badge — filled:** `--ink-primary` fill, `--charcoal` text, radius 2, mono — for prices / tiers (`¥1,999 / 月`).
 - **Badge — outline:** gold border + `--gold-hi` text, pill — for status (`现役 10 / 28`).
 - **✓ / ✕ list:** ✓ in `--gold-hi`, ✕ in `--seal`.
 - **Framing:** thin gold rules, double-rule borders, and corner ticks for "manuscript" gravitas. Low-opacity compass-ring watermark behind heroes / section heads.
-- **Print/PDF-ready:** dark background bleeds full-page; all glyphs converted to outline at export.
+- **Print/PDF-ready:** pale manuscript background bleeds full-page; all glyphs converted to outline at export.
 
 **Charts / data viz:**
-- 1 color series = `--gold-hi`; 2 = `--gold-hi` + `--ink`; 3 = `--gold-hi` + `--ink` + `--seal`.
+- 1 color series = `--gold-hi`; 2 = `--gold-hi` + `--charcoal`; 3 = `--gold-hi` + `--charcoal` + `--seal`.
 - Always label axis ticks in `--ink-muted`; never use `--seal` for positive data points.
 
 ---
@@ -145,10 +148,10 @@ We equip every valuable mid-to-high-end F&B chain with a "see-clearly, move-beta
 
 ## 7. Layout / 版式
 
-- Generous negative space on night; center key lockups, left-align dense spec content.
-- 1–2 background tones max (`--night` + a panel tone). Vermillion is a spark, never a field.
+- Generous negative space on pale manuscript; center key lockups, left-align dense spec content.
+- 1–2 background tones max (`--surface` + `--paper`). Vermillion is a spark, never a field.
 - Cover pattern: EN caption → 侍天 display lockup → gold divider → tagline (0.5em) → CN sub-line, compass watermark behind.
-- Print/PDF-ready: fixed canvas, dark background bleeds full-page.
+- Print/PDF-ready: fixed canvas, pale manuscript background bleeds full-page.
 - Grid: 12-column; max content width 1280px; side gutter 48px desktop / 24px mobile.
 - Section rhythm: 96px desktop / 64px mobile; card inner padding 24–32px.
 
@@ -158,7 +161,7 @@ We equip every valuable mid-to-high-end F&B chain with a "see-clearly, move-beta
 
 **Do:**
 - Use serif end-to-end. Pair CN headings with UPPERCASE EN captions in `--gold-deep`.
-- Let night dominate; ink speaks first and gold gives structure.
+- Let pale manuscript dominate; charcoal speaks first and gold gives structure.
 - Cite real numbers, real shop names (with permission), and the boundary conditions of every claim.
 - Treat every chart as a decision aid, not decoration — every series labeled, every axis tick visible.
 - Keep vermillion to the seal and to negation/warning moments.
@@ -175,7 +178,7 @@ We equip every valuable mid-to-high-end F&B chain with a "see-clearly, move-beta
 
 A Sidera artifact is "done" when:
 
-1. **Ink first.** `#EFE6D2` carries identity and legibility. Gold remains structure, never a crutch.
+1. **Ink first.** `#EFE6D2` carries identity as the primary field and key action color; `#17130D` carries legibility. Gold remains structure, never a crutch.
 2. **Manuscript feel.** It looks at home on a fine-paper spread — generous margins, hairline rules, handcrafted seal moments.
 3. **Numbered honesty.** Every claim has a boundary and a source. The book is open to being overturned.
 4. **Calm authority.** The voice is patient, precise, forthright — never a hype deck.
@@ -185,4 +188,4 @@ A Sidera artifact is "done" when:
 
 ---
 
-*Sidera 侍天 Design System · 数字员工 · 餐饮陪跑 · A Member of the Table AI Alliance · v0.5 · Hong Kong*
+*Sidera 侍天 Design System · 数字员工 · 餐饮陪跑 · A Member of the Table AI Alliance · v0.6 · Hong Kong*

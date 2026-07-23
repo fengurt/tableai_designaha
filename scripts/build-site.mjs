@@ -1897,6 +1897,8 @@ p { line-height: 1.65; }
   gap: 5px;
 }
 .hero-index-row .icon-copy { flex: 0 0 auto; }
+.hero-index-row[data-brand="sidera"] { color: var(--brand-ink); }
+.hero-index-row[data-brand="sidera"] .icon-copy { color: var(--brand-ink); }
 .color-dot {
   width: 18px;
   height: 18px;
@@ -2736,7 +2738,20 @@ p { line-height: 1.65; }
 }
 .brand-sidera {
   font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", STSong, serif;
-  background: #14100a;
+  background: var(--brand-surface);
+  color: var(--brand-ink);
+}
+.brand-sidera p,
+.brand-sidera .muted { color: var(--brand-muted); }
+.brand-sidera .button {
+  border-color: var(--brand-accent);
+  background: var(--brand-primary);
+  color: var(--brand-button-text);
+}
+.brand-sidera .button.ghost {
+  border-color: var(--brand-ink);
+  background: transparent;
+  color: var(--brand-ink);
 }
 .brand-sidera .brand-hero {
   min-height: min(680px, calc(100dvh - 150px));
@@ -2759,13 +2774,14 @@ p { line-height: 1.65; }
   letter-spacing: 0;
 }
 .brand-sidera .brand-hero .alt-name {
-  color: var(--brand-primary);
+  color: var(--brand-ink);
   font-size: clamp(18px, 2vw, 26px);
 }
 .brand-sidera .profile-tags span,
 .brand-sidera .pill {
   border-radius: 2px;
   background: transparent;
+  color: var(--brand-ink);
 }
 .brand-sidera .brand-visual,
 .brand-sidera .asset-hub,
@@ -2773,6 +2789,13 @@ p { line-height: 1.65; }
 .brand-sidera .profile-editor,
 .brand-sidera .ip-system-panel {
   border-radius: 2px;
+}
+.brand-sidera .brand-visual { background: var(--brand-primary); }
+.brand-sidera .brand-visual img {
+  height: 100%;
+  max-height: none;
+  padding: 0;
+  object-fit: cover;
 }
 .sidera-compass-visual {
   position: relative;
@@ -2807,7 +2830,7 @@ p { line-height: 1.65; }
   border-radius: 50%;
 }
 .sidera-compass-mark {
-  color: var(--brand-primary);
+  color: var(--brand-ink);
   font-size: clamp(74px, 10vw, 126px);
   font-weight: 600;
   line-height: 1;
@@ -2831,7 +2854,7 @@ p { line-height: 1.65; }
   place-items: center;
   border: 1px solid color-mix(in srgb, var(--brand-secondary) 72%, white);
   background: var(--brand-secondary);
-  color: var(--brand-primary);
+  color: var(--brand-paper);
   font-size: 13px;
   font-weight: 700;
 }
@@ -2843,7 +2866,7 @@ p { line-height: 1.65; }
 }
 .sidera-principles span {
   padding: 18px 0;
-  color: var(--brand-primary);
+  color: var(--brand-ink);
   font-size: clamp(18px, 2vw, 27px);
   font-weight: 600;
 }
@@ -3780,7 +3803,7 @@ function copyIcon() {
 
 function themeStyle(theme = {}) {
   const isDark = theme.mode === "dark";
-  const buttonText = isDark ? theme.surface || "#14100A" : "#ffffff";
+  const buttonText = theme.buttonText || (isDark ? theme.surface || "#14100A" : "#ffffff");
   const vars = {
     "--brand-primary": theme.primary,
     "--brand-accent": theme.accent,
