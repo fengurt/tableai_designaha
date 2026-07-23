@@ -1231,10 +1231,10 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
         <h1 data-i18n="hub.name">${hubNameCn}</h1>
         <p data-i18n="home.lead">高楼宾客似曾识，日光底下无新事。</p>
       </div>
-      <div class="hero-index" id="heroIndex" aria-live="polite">${initialHeroIndexHtml}</div>
+      <div class="hero-index" id="heroIndex" role="region" tabindex="0" aria-label="可滚动 IP 名录 / Scrollable IP directory" aria-live="polite">${initialHeroIndexHtml}</div>
     </section>
-    <section class="evolution-entry" id="ip-evolution" aria-labelledby="evolutionTitle">
-      <a href="ip-evolution" class="evolution-link">
+    <section class="system-entry" id="ip-evolution" aria-label="IPTrust system">
+      <a href="ip-evolution" class="system-entry-main" aria-labelledby="evolutionTitle">
         <div class="evolution-copy">
           <p class="eyebrow" data-i18n="evolution.label">IP进化论</p>
           <h2 id="evolutionTitle" data-i18n="evolution.title">让品牌成为可管理的系统。</h2>
@@ -1248,18 +1248,15 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
         </div>
         <span class="evolution-open" aria-hidden="true">&#8599;</span>
       </a>
-    </section>
-    <section class="library-entry" id="knowledge-library" aria-labelledby="libraryTitle">
-      <a href="library/" class="library-entry-link">
+      <a href="library/" class="system-entry-library" id="knowledge-library" aria-labelledby="libraryTitle">
         <div class="library-entry-copy">
-          <p class="eyebrow" data-i18n="library.label">公共知识库</p>
-          <h2 id="libraryTitle" data-i18n="library.title">让出处、案例与数据彼此连接。</h2>
+          <p class="eyebrow" data-i18n="library.label">知名品牌资产</p>
+          <h2 id="libraryTitle" data-i18n="library.title">权威品牌、案例与数据。</h2>
         </div>
         <div class="library-entry-stats" aria-label="Library coverage">
           <span><strong>${publicOrganizationCount}</strong><small data-i18n="library.organizations">组织</small></span>
           <span><strong>${fortuneCount}</strong><small>Fortune 500</small></span>
           <span><strong>${sasacCount}</strong><small data-i18n="library.centralEnterprises">中央企业</small></span>
-          <span><strong>4</strong><small data-i18n="library.modules">关联模块</small></span>
         </div>
         <span class="library-entry-open" aria-hidden="true">&#8599;</span>
       </a>
@@ -3317,8 +3314,8 @@ const i18n = {
     "home.sectionTitle": "IP",
     "home.searchPlaceholder": "搜索 IP / Asset Key",
     "home.noResults": "没有匹配的 IP。",
-    "library.label": "公共知识库",
-    "library.title": "让出处、案例与数据彼此连接。",
+    "library.label": "知名品牌资产",
+    "library.title": "权威品牌、案例与数据。",
     "library.organizations": "组织",
     "library.centralEnterprises": "中央企业",
     "library.modules": "关联模块",
@@ -3476,8 +3473,8 @@ const i18n = {
     "home.sectionTitle": "IP",
     "home.searchPlaceholder": "Search IP / Asset Key",
     "home.noResults": "No matching IP.",
-    "library.label": "PUBLIC LIBRARY",
-    "library.title": "Connect every source, case, and dataset.",
+    "library.label": "KNOWN BRAND ASSETS",
+    "library.title": "Authoritative brands, cases, and data.",
     "library.organizations": "Organizations",
     "library.centralEnterprises": "Central enterprises",
     "library.modules": "Linked modules",
