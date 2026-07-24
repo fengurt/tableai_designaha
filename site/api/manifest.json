@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-20T05:55:00.529Z",
+  "generatedAt": "2026-07-24T01:22:40.421Z",
   "version": {
-    "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-    "shortHash": "f751eee",
-    "date": "2026-07-20T08:17:19+08:00",
-    "message": "fix: prevent orphaned directory headline",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+    "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+    "shortHash": "fa30da1",
+    "date": "2026-07-23T09:50:41+08:00",
+    "message": "feat: move Sidera to pale manuscript theme",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
   },
   "brands": [
     {
@@ -435,11 +435,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     }
   },
   "sync": {

@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brand Guidelines</title>
   <link rel="preconnect" href="https://media.apuch.art" crossorigin>
-  <script>try{const slug=new URLSearchParams(location.search).get("brand");if(slug){const link=document.createElement("link");link.rel="preload";link.as="fetch";link.href="api/brands/"+encodeURIComponent(slug)+".json";document.head.append(link)}}catch{}</script>
+  <script>try{const slug=new URLSearchParams(location.search).get("brand");if(slug){const link=document.createElement("link");link.rel="preload";link.as="fetch";link.href="api/brands/"+encodeURIComponent(slug)+".json?v=fa30da1-2d91bed8";link.fetchPriority="high";document.head.append(link)}}catch{}</script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site-f751eee-52f38014.css">
-  <link rel="stylesheet" href="assets/editorial.css?v=f751eee-52f38014">
+  <link rel="stylesheet" href="assets/site-fa30da1-2d91bed8.css">
+  <link rel="modulepreload" href="assets/site-fa30da1-2d91bed8.js">
 </head>
 <body>
   <header class="topbar">
@@ -54,7 +54,13 @@
       <pre class="api-resource-summary hidden" id="apiResourceSummary"></pre>
     </div>
   </section>
-  <main id="brandPage" class="brand-page" aria-live="polite"></main>
-  <script src="assets/site-f751eee-52f38014.js" type="module"></script>
+  <main id="brandPage" class="brand-page" aria-live="polite" aria-busy="true">
+    <section class="brand-loading" role="status">
+      <p>IPTrust</p>
+      <strong>正在载入 · Loading</strong>
+      <span aria-hidden="true"></span>
+    </section>
+  </main>
+  <script src="assets/site-fa30da1-2d91bed8.js" type="module"></script>
 </body>
 </html>

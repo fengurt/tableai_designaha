@@ -172,14 +172,50 @@
     "standalone"
   ],
   "version": {
-    "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-    "shortHash": "f751eee",
-    "date": "2026-07-20T08:17:19+08:00",
-    "message": "fix: prevent orphaned directory headline",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+    "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+    "shortHash": "fa30da1",
+    "date": "2026-07-23T09:50:41+08:00",
+    "message": "feat: move Sidera to pale manuscript theme",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
   },
   "historyUrl": "api/history/kaoyu-shenhua.json",
   "history": [
+    {
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "sourcePaths": [
+        "config/brands.json",
+        "KaoyuShenhua",
+        "KaoyuShenhua/README.md"
+      ]
+    },
+    {
+      "hash": "6f63b2069bcdacfd11655b35e842197792c58bb2",
+      "shortHash": "6f63b20",
+      "date": "2026-07-21T14:05:18+08:00",
+      "message": "feat: refine Sidera ink identity",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/6f63b2069bcdacfd11655b35e842197792c58bb2",
+      "sourcePaths": [
+        "config/brands.json",
+        "KaoyuShenhua",
+        "KaoyuShenhua/README.md"
+      ]
+    },
+    {
+      "hash": "5f6dced3cbe228a68c1519b403401944a42d0c5d",
+      "shortHash": "5f6dced",
+      "date": "2026-07-20T13:58:19+08:00",
+      "message": "feat: add food brand architecture and edge performance",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5f6dced3cbe228a68c1519b403401944a42d0c5d",
+      "sourcePaths": [
+        "config/brands.json",
+        "KaoyuShenhua",
+        "KaoyuShenhua/README.md"
+      ]
+    },
     {
       "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
       "shortHash": "bc7b985",
@@ -215,42 +251,6 @@
         "KaoyuShenhua",
         "KaoyuShenhua/README.md"
       ]
-    },
-    {
-      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
-      "shortHash": "b0056d3",
-      "date": "2026-07-12T21:39:51+08:00",
-      "message": "Rename Shanrenjing English brand to shanpass",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12",
-      "sourcePaths": [
-        "config/brands.json",
-        "KaoyuShenhua",
-        "KaoyuShenhua/README.md"
-      ]
-    },
-    {
-      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
-      "shortHash": "a5bf7cf",
-      "date": "2026-07-10T20:21:24+08:00",
-      "message": "Replace contrast-template brand copy",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
-      "sourcePaths": [
-        "config/brands.json",
-        "KaoyuShenhua",
-        "KaoyuShenhua/README.md"
-      ]
-    },
-    {
-      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
-      "shortHash": "ed33a8b",
-      "date": "2026-07-10T18:44:20+08:00",
-      "message": "Add Shanrenjing journey safety IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
-      "sourcePaths": [
-        "config/brands.json",
-        "KaoyuShenhua",
-        "KaoyuShenhua/README.md"
-      ]
     }
   ],
   "url": "brand.html?brand=kaoyu-shenhua",
@@ -281,7 +281,9 @@
       "height": 744,
       "dimensions": "1488 x 744 px",
       "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc",
@@ -295,7 +297,9 @@
       "height": 744,
       "dimensions": "1488 x 744 px",
       "sha256": "8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49",
@@ -309,7 +313,9 @@
       "height": 744,
       "dimensions": "1488 x 744 px",
       "sha256": "81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea",
@@ -323,7 +329,9 @@
       "height": 744,
       "dimensions": "1488 x 744 px",
       "sha256": "25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7",
@@ -337,7 +345,9 @@
       "height": 744,
       "dimensions": "1488 x 744 px",
       "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     }
   ],
   "assetManifest": [
@@ -367,28 +377,28 @@
       "version": 1
     },
     {
-      "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc",
+      "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0",
       "ownerType": "owned-ip",
       "ownerId": "kaoyu-shenhua",
       "role": "logo",
-      "title": "kaoyu shenhua logo page 01",
-      "access": "public",
-      "sourcePath": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.jpg",
-      "sourceFilename": "kaoyu-shenhua-logo-page-01.jpg",
-      "sha256": "8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c",
-      "mimeType": "image/jpeg",
-      "extension": "jpg",
-      "bytes": 123391,
-      "size": "120.5 KB",
-      "width": 1488,
-      "height": 744,
-      "dimensions": "1488 x 744 px",
-      "objectKey": "public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
-      "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
+      "title": "kaoyu shenhua logo",
+      "access": "private",
+      "sourcePath": "KaoyuShenhua/assets/source/kaoyu-shenhua-logo.ai",
+      "sourceFilename": "kaoyu-shenhua-logo.ai",
+      "sha256": "e7f64c62b8b04bfca4eaf1ebd523b29a1822969d6942ae5645e6081475e63cc6",
+      "mimeType": "application/illustrator",
+      "extension": "ai",
+      "bytes": 1635017,
+      "size": "1.56 MB",
+      "width": null,
+      "height": null,
+      "dimensions": "",
+      "objectKey": "private/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0/e7f64c62b8b04bfca4eaf1ebd523b29a1822969d6942ae5645e6081475e63cc6/source.ai",
+      "mediaUrl": "https://media.apuch.art/private/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0/e7f64c62b8b04bfca4eaf1ebd523b29a1822969d6942ae5645e6081475e63cc6/source.ai",
       "legacyUrls": [
-        "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.jpg"
+        "/assets/adobe/kaoyu-shenhua/kaoyu-shenhua-logo.ai"
       ],
-      "status": "ready",
+      "status": "processing",
       "version": 1
     },
     {
@@ -412,6 +422,31 @@
       "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49/81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c/original.png",
       "legacyUrls": [
         "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.png"
+      ],
+      "status": "ready",
+      "version": 1
+    },
+    {
+      "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc",
+      "ownerType": "owned-ip",
+      "ownerId": "kaoyu-shenhua",
+      "role": "logo",
+      "title": "kaoyu shenhua logo page 01",
+      "access": "public",
+      "sourcePath": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.jpg",
+      "sourceFilename": "kaoyu-shenhua-logo-page-01.jpg",
+      "sha256": "8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c",
+      "mimeType": "image/jpeg",
+      "extension": "jpg",
+      "bytes": 123391,
+      "size": "120.5 KB",
+      "width": 1488,
+      "height": 744,
+      "dimensions": "1488 x 744 px",
+      "objectKey": "public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
+      "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
+      "legacyUrls": [
+        "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.jpg"
       ],
       "status": "ready",
       "version": 1
@@ -464,31 +499,6 @@
         "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.png"
       ],
       "status": "ready",
-      "version": 1
-    },
-    {
-      "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0",
-      "ownerType": "owned-ip",
-      "ownerId": "kaoyu-shenhua",
-      "role": "logo",
-      "title": "kaoyu shenhua logo",
-      "access": "private",
-      "sourcePath": "KaoyuShenhua/assets/source/kaoyu-shenhua-logo.ai",
-      "sourceFilename": "kaoyu-shenhua-logo.ai",
-      "sha256": "e7f64c62b8b04bfca4eaf1ebd523b29a1822969d6942ae5645e6081475e63cc6",
-      "mimeType": "application/illustrator",
-      "extension": "ai",
-      "bytes": 1635017,
-      "size": "1.56 MB",
-      "width": null,
-      "height": null,
-      "dimensions": "",
-      "objectKey": "private/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0/e7f64c62b8b04bfca4eaf1ebd523b29a1822969d6942ae5645e6081475e63cc6/source.ai",
-      "mediaUrl": "https://media.apuch.art/private/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0/e7f64c62b8b04bfca4eaf1ebd523b29a1822969d6942ae5645e6081475e63cc6/source.ai",
-      "legacyUrls": [
-        "/assets/adobe/kaoyu-shenhua/kaoyu-shenhua-logo.ai"
-      ],
-      "status": "processing",
       "version": 1
     }
   ],
@@ -647,7 +657,9 @@
           "height": 744,
           "dimensions": "1488 x 744 px",
           "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc",
@@ -661,7 +673,9 @@
           "height": 744,
           "dimensions": "1488 x 744 px",
           "sha256": "8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49",
@@ -675,7 +689,9 @@
           "height": 744,
           "dimensions": "1488 x 744 px",
           "sha256": "81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea",
@@ -689,7 +705,9 @@
           "height": 744,
           "dimensions": "1488 x 744 px",
           "sha256": "25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7",
@@ -703,7 +721,9 @@
           "height": 744,
           "dimensions": "1488 x 744 px",
           "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         }
       ]
     }
@@ -759,7 +779,9 @@
         "height": 744,
         "dimensions": "1488 x 744 px",
         "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc",
@@ -773,7 +795,9 @@
         "height": 744,
         "dimensions": "1488 x 744 px",
         "sha256": "8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49",
@@ -787,7 +811,9 @@
         "height": 744,
         "dimensions": "1488 x 744 px",
         "sha256": "81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea",
@@ -801,7 +827,9 @@
         "height": 744,
         "dimensions": "1488 x 744 px",
         "sha256": "25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7",
@@ -815,7 +843,9 @@
         "height": 744,
         "dimensions": "1488 x 744 px",
         "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       }
     ]
   },

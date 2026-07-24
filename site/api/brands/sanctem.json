@@ -165,14 +165,50 @@
     "standalone"
   ],
   "version": {
-    "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-    "shortHash": "f751eee",
-    "date": "2026-07-20T08:17:19+08:00",
-    "message": "fix: prevent orphaned directory headline",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+    "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+    "shortHash": "fa30da1",
+    "date": "2026-07-23T09:50:41+08:00",
+    "message": "feat: move Sidera to pale manuscript theme",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
   },
   "historyUrl": "api/history/sanctem.json",
   "history": [
+    {
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "sourcePaths": [
+        "config/brands.json",
+        "Sanctem",
+        "Sanctem/README.md"
+      ]
+    },
+    {
+      "hash": "6f63b2069bcdacfd11655b35e842197792c58bb2",
+      "shortHash": "6f63b20",
+      "date": "2026-07-21T14:05:18+08:00",
+      "message": "feat: refine Sidera ink identity",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/6f63b2069bcdacfd11655b35e842197792c58bb2",
+      "sourcePaths": [
+        "config/brands.json",
+        "Sanctem",
+        "Sanctem/README.md"
+      ]
+    },
+    {
+      "hash": "5f6dced3cbe228a68c1519b403401944a42d0c5d",
+      "shortHash": "5f6dced",
+      "date": "2026-07-20T13:58:19+08:00",
+      "message": "feat: add food brand architecture and edge performance",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5f6dced3cbe228a68c1519b403401944a42d0c5d",
+      "sourcePaths": [
+        "config/brands.json",
+        "Sanctem",
+        "Sanctem/README.md"
+      ]
+    },
     {
       "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
       "shortHash": "bc7b985",
@@ -208,42 +244,6 @@
         "Sanctem",
         "Sanctem/README.md"
       ]
-    },
-    {
-      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
-      "shortHash": "b0056d3",
-      "date": "2026-07-12T21:39:51+08:00",
-      "message": "Rename Shanrenjing English brand to shanpass",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12",
-      "sourcePaths": [
-        "config/brands.json",
-        "Sanctem",
-        "Sanctem/README.md"
-      ]
-    },
-    {
-      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
-      "shortHash": "a5bf7cf",
-      "date": "2026-07-10T20:21:24+08:00",
-      "message": "Replace contrast-template brand copy",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
-      "sourcePaths": [
-        "config/brands.json",
-        "Sanctem",
-        "Sanctem/README.md"
-      ]
-    },
-    {
-      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
-      "shortHash": "ed33a8b",
-      "date": "2026-07-10T18:44:20+08:00",
-      "message": "Add Shanrenjing journey safety IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
-      "sourcePaths": [
-        "config/brands.json",
-        "Sanctem",
-        "Sanctem/README.md"
-      ]
     }
   ],
   "url": "brand.html?brand=sanctem",
@@ -274,7 +274,9 @@
       "height": 540,
       "dimensions": "1920 x 540 px",
       "sha256": "dc34ba67f3af31597b6f03e8fd4890320676451d08cf17c48cb9ca650fa62cde",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "sanctem-logo-sanctem-logo-black-alt-592a2bac1aee",
@@ -288,7 +290,9 @@
       "height": 2250,
       "dimensions": "8000 x 2250 px",
       "sha256": "592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "sanctem-logo-sanctem-logo-black-1857cc80cd4b",
@@ -302,7 +306,9 @@
       "height": 540,
       "dimensions": "1920 x 540 px",
       "sha256": "1857cc80cd4bdf4b70812e2530e4e8c0af9eb43c6585add5ef953d285441b91e",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "sanctem-logo-sanctem-logo-color-6c9467089bab",
@@ -316,7 +322,9 @@
       "height": 1091,
       "dimensions": "6490 x 1091 px",
       "sha256": "6c9467089bab66fb225de66c0cb03ae035df61205db6fd6568054093d7912175",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "sanctem-logo-sanctem-logo-color-dc34ba67f3af",
@@ -330,7 +338,9 @@
       "height": 540,
       "dimensions": "1920 x 540 px",
       "sha256": "dc34ba67f3af31597b6f03e8fd4890320676451d08cf17c48cb9ca650fa62cde",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "sanctem-logo-sanctem-logo-white-black-alt-592a2bac1aee",
@@ -344,7 +354,9 @@
       "height": 2250,
       "dimensions": "8000 x 2250 px",
       "sha256": "592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "sanctem-logo-sanctem-logo-white-black-8a50506dc636",
@@ -358,7 +370,9 @@
       "height": 2250,
       "dimensions": "8000 x 2250 px",
       "sha256": "8a50506dc6360ed521fb23e4adfd046924792908e3070ae606ce55e69a5c1e95",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "sanctem-logo-sanctem-logo-white-5045acdbe817",
@@ -372,7 +386,9 @@
       "height": 540,
       "dimensions": "1920 x 540 px",
       "sha256": "5045acdbe817e5a03a8ba97b492f785c2e6c72bc9cb1b9984e1a2f8ccdf164a0",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     }
   ],
   "assetManifest": [
@@ -402,28 +418,26 @@
       "version": 1
     },
     {
-      "id": "sanctem-logo-sanctem-logo-black-alt-592a2bac1aee",
+      "id": "sanctem-logo-sanctem-ce4ee817a3f7",
       "ownerType": "owned-ip",
       "ownerId": "sanctem",
       "role": "logo",
-      "title": "sanctem logo black alt",
-      "access": "public",
-      "sourcePath": "Sanctem/assets/brand-images/sanctem-logo-black-alt.jpg",
-      "sourceFilename": "sanctem-logo-black-alt.jpg",
-      "sha256": "592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82",
-      "mimeType": "image/jpeg",
-      "extension": "jpg",
-      "bytes": 474946,
-      "size": "463.8 KB",
-      "width": 8000,
-      "height": 2250,
-      "dimensions": "8000 x 2250 px",
-      "objectKey": "public/sanctem/sanctem-logo-sanctem-logo-black-alt-592a2bac1aee/592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82/original.jpg",
-      "mediaUrl": "https://media.apuch.art/public/sanctem/sanctem-logo-sanctem-logo-black-alt-592a2bac1aee/592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82/original.jpg",
-      "legacyUrls": [
-        "/assets/brand-images/sanctem-sanctem-logo-black-alt.jpg"
-      ],
-      "status": "ready",
+      "title": "sanctem",
+      "access": "private",
+      "sourcePath": "Sanctem/assets/logos/sanctem.ai",
+      "sourceFilename": "sanctem.ai",
+      "sha256": "ce4ee817a3f7fab9ceba17ada0e8fcb38cc9a124cd621c6098da0e3959c94608",
+      "mimeType": "application/illustrator",
+      "extension": "ai",
+      "bytes": 58946,
+      "size": "57.6 KB",
+      "width": null,
+      "height": null,
+      "dimensions": "",
+      "objectKey": "private/sanctem/sanctem-logo-sanctem-ce4ee817a3f7/ce4ee817a3f7fab9ceba17ada0e8fcb38cc9a124cd621c6098da0e3959c94608/source.ai",
+      "mediaUrl": "https://media.apuch.art/private/sanctem/sanctem-logo-sanctem-ce4ee817a3f7/ce4ee817a3f7fab9ceba17ada0e8fcb38cc9a124cd621c6098da0e3959c94608/source.ai",
+      "legacyUrls": [],
+      "status": "processing",
       "version": 1
     },
     {
@@ -447,6 +461,31 @@
       "mediaUrl": "https://media.apuch.art/public/sanctem/sanctem-logo-sanctem-logo-black-1857cc80cd4b/1857cc80cd4bdf4b70812e2530e4e8c0af9eb43c6585add5ef953d285441b91e/original.png",
       "legacyUrls": [
         "/assets/brand-images/sanctem-sanctem-logo-black.png"
+      ],
+      "status": "ready",
+      "version": 1
+    },
+    {
+      "id": "sanctem-logo-sanctem-logo-black-alt-592a2bac1aee",
+      "ownerType": "owned-ip",
+      "ownerId": "sanctem",
+      "role": "logo",
+      "title": "sanctem logo black alt",
+      "access": "public",
+      "sourcePath": "Sanctem/assets/brand-images/sanctem-logo-black-alt.jpg",
+      "sourceFilename": "sanctem-logo-black-alt.jpg",
+      "sha256": "592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82",
+      "mimeType": "image/jpeg",
+      "extension": "jpg",
+      "bytes": 474946,
+      "size": "463.8 KB",
+      "width": 8000,
+      "height": 2250,
+      "dimensions": "8000 x 2250 px",
+      "objectKey": "public/sanctem/sanctem-logo-sanctem-logo-black-alt-592a2bac1aee/592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82/original.jpg",
+      "mediaUrl": "https://media.apuch.art/public/sanctem/sanctem-logo-sanctem-logo-black-alt-592a2bac1aee/592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82/original.jpg",
+      "legacyUrls": [
+        "/assets/brand-images/sanctem-sanctem-logo-black-alt.jpg"
       ],
       "status": "ready",
       "version": 1
@@ -502,26 +541,26 @@
       "version": 1
     },
     {
-      "id": "sanctem-logo-sanctem-logo-white-black-alt-592a2bac1aee",
+      "id": "sanctem-logo-sanctem-logo-white-5045acdbe817",
       "ownerType": "owned-ip",
       "ownerId": "sanctem",
       "role": "logo",
-      "title": "sanctem logo white black alt",
+      "title": "sanctem logo white",
       "access": "public",
-      "sourcePath": "Sanctem/assets/brand-images/sanctem-logo-white-black-alt.jpg",
-      "sourceFilename": "sanctem-logo-white-black-alt.jpg",
-      "sha256": "592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82",
-      "mimeType": "image/jpeg",
-      "extension": "jpg",
-      "bytes": 474946,
-      "size": "463.8 KB",
-      "width": 8000,
-      "height": 2250,
-      "dimensions": "8000 x 2250 px",
-      "objectKey": "public/sanctem/sanctem-logo-sanctem-logo-white-black-alt-592a2bac1aee/592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82/original.jpg",
-      "mediaUrl": "https://media.apuch.art/public/sanctem/sanctem-logo-sanctem-logo-white-black-alt-592a2bac1aee/592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82/original.jpg",
+      "sourcePath": "Sanctem/assets/brand-images/sanctem-logo-white.png",
+      "sourceFilename": "sanctem-logo-white.png",
+      "sha256": "5045acdbe817e5a03a8ba97b492f785c2e6c72bc9cb1b9984e1a2f8ccdf164a0",
+      "mimeType": "image/png",
+      "extension": "png",
+      "bytes": 22626,
+      "size": "22.1 KB",
+      "width": 1920,
+      "height": 540,
+      "dimensions": "1920 x 540 px",
+      "objectKey": "public/sanctem/sanctem-logo-sanctem-logo-white-5045acdbe817/5045acdbe817e5a03a8ba97b492f785c2e6c72bc9cb1b9984e1a2f8ccdf164a0/original.png",
+      "mediaUrl": "https://media.apuch.art/public/sanctem/sanctem-logo-sanctem-logo-white-5045acdbe817/5045acdbe817e5a03a8ba97b492f785c2e6c72bc9cb1b9984e1a2f8ccdf164a0/original.png",
       "legacyUrls": [
-        "/assets/brand-images/sanctem-sanctem-logo-white-black-alt.jpg"
+        "/assets/brand-images/sanctem-sanctem-logo-white.png"
       ],
       "status": "ready",
       "version": 1
@@ -552,51 +591,28 @@
       "version": 1
     },
     {
-      "id": "sanctem-logo-sanctem-logo-white-5045acdbe817",
+      "id": "sanctem-logo-sanctem-logo-white-black-alt-592a2bac1aee",
       "ownerType": "owned-ip",
       "ownerId": "sanctem",
       "role": "logo",
-      "title": "sanctem logo white",
+      "title": "sanctem logo white black alt",
       "access": "public",
-      "sourcePath": "Sanctem/assets/brand-images/sanctem-logo-white.png",
-      "sourceFilename": "sanctem-logo-white.png",
-      "sha256": "5045acdbe817e5a03a8ba97b492f785c2e6c72bc9cb1b9984e1a2f8ccdf164a0",
-      "mimeType": "image/png",
-      "extension": "png",
-      "bytes": 22626,
-      "size": "22.1 KB",
-      "width": 1920,
-      "height": 540,
-      "dimensions": "1920 x 540 px",
-      "objectKey": "public/sanctem/sanctem-logo-sanctem-logo-white-5045acdbe817/5045acdbe817e5a03a8ba97b492f785c2e6c72bc9cb1b9984e1a2f8ccdf164a0/original.png",
-      "mediaUrl": "https://media.apuch.art/public/sanctem/sanctem-logo-sanctem-logo-white-5045acdbe817/5045acdbe817e5a03a8ba97b492f785c2e6c72bc9cb1b9984e1a2f8ccdf164a0/original.png",
+      "sourcePath": "Sanctem/assets/brand-images/sanctem-logo-white-black-alt.jpg",
+      "sourceFilename": "sanctem-logo-white-black-alt.jpg",
+      "sha256": "592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82",
+      "mimeType": "image/jpeg",
+      "extension": "jpg",
+      "bytes": 474946,
+      "size": "463.8 KB",
+      "width": 8000,
+      "height": 2250,
+      "dimensions": "8000 x 2250 px",
+      "objectKey": "public/sanctem/sanctem-logo-sanctem-logo-white-black-alt-592a2bac1aee/592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82/original.jpg",
+      "mediaUrl": "https://media.apuch.art/public/sanctem/sanctem-logo-sanctem-logo-white-black-alt-592a2bac1aee/592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82/original.jpg",
       "legacyUrls": [
-        "/assets/brand-images/sanctem-sanctem-logo-white.png"
+        "/assets/brand-images/sanctem-sanctem-logo-white-black-alt.jpg"
       ],
       "status": "ready",
-      "version": 1
-    },
-    {
-      "id": "sanctem-logo-sanctem-ce4ee817a3f7",
-      "ownerType": "owned-ip",
-      "ownerId": "sanctem",
-      "role": "logo",
-      "title": "sanctem",
-      "access": "private",
-      "sourcePath": "Sanctem/assets/logos/sanctem.ai",
-      "sourceFilename": "sanctem.ai",
-      "sha256": "ce4ee817a3f7fab9ceba17ada0e8fcb38cc9a124cd621c6098da0e3959c94608",
-      "mimeType": "application/illustrator",
-      "extension": "ai",
-      "bytes": 58946,
-      "size": "57.6 KB",
-      "width": null,
-      "height": null,
-      "dimensions": "",
-      "objectKey": "private/sanctem/sanctem-logo-sanctem-ce4ee817a3f7/ce4ee817a3f7fab9ceba17ada0e8fcb38cc9a124cd621c6098da0e3959c94608/source.ai",
-      "mediaUrl": "https://media.apuch.art/private/sanctem/sanctem-logo-sanctem-ce4ee817a3f7/ce4ee817a3f7fab9ceba17ada0e8fcb38cc9a124cd621c6098da0e3959c94608/source.ai",
-      "legacyUrls": [],
-      "status": "processing",
       "version": 1
     }
   ],
@@ -663,7 +679,9 @@
           "height": 540,
           "dimensions": "1920 x 540 px",
           "sha256": "dc34ba67f3af31597b6f03e8fd4890320676451d08cf17c48cb9ca650fa62cde",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "sanctem-logo-sanctem-logo-black-alt-592a2bac1aee",
@@ -677,7 +695,9 @@
           "height": 2250,
           "dimensions": "8000 x 2250 px",
           "sha256": "592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "sanctem-logo-sanctem-logo-black-1857cc80cd4b",
@@ -691,7 +711,9 @@
           "height": 540,
           "dimensions": "1920 x 540 px",
           "sha256": "1857cc80cd4bdf4b70812e2530e4e8c0af9eb43c6585add5ef953d285441b91e",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "sanctem-logo-sanctem-logo-color-6c9467089bab",
@@ -705,7 +727,9 @@
           "height": 1091,
           "dimensions": "6490 x 1091 px",
           "sha256": "6c9467089bab66fb225de66c0cb03ae035df61205db6fd6568054093d7912175",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "sanctem-logo-sanctem-logo-color-dc34ba67f3af",
@@ -719,7 +743,9 @@
           "height": 540,
           "dimensions": "1920 x 540 px",
           "sha256": "dc34ba67f3af31597b6f03e8fd4890320676451d08cf17c48cb9ca650fa62cde",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "sanctem-logo-sanctem-logo-white-black-alt-592a2bac1aee",
@@ -733,7 +759,9 @@
           "height": 2250,
           "dimensions": "8000 x 2250 px",
           "sha256": "592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "sanctem-logo-sanctem-logo-white-black-8a50506dc636",
@@ -747,7 +775,9 @@
           "height": 2250,
           "dimensions": "8000 x 2250 px",
           "sha256": "8a50506dc6360ed521fb23e4adfd046924792908e3070ae606ce55e69a5c1e95",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "sanctem-logo-sanctem-logo-white-5045acdbe817",
@@ -761,7 +791,9 @@
           "height": 540,
           "dimensions": "1920 x 540 px",
           "sha256": "5045acdbe817e5a03a8ba97b492f785c2e6c72bc9cb1b9984e1a2f8ccdf164a0",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         }
       ]
     }
@@ -817,7 +849,9 @@
         "height": 540,
         "dimensions": "1920 x 540 px",
         "sha256": "dc34ba67f3af31597b6f03e8fd4890320676451d08cf17c48cb9ca650fa62cde",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "sanctem-logo-sanctem-logo-black-alt-592a2bac1aee",
@@ -831,7 +865,9 @@
         "height": 2250,
         "dimensions": "8000 x 2250 px",
         "sha256": "592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "sanctem-logo-sanctem-logo-black-1857cc80cd4b",
@@ -845,7 +881,9 @@
         "height": 540,
         "dimensions": "1920 x 540 px",
         "sha256": "1857cc80cd4bdf4b70812e2530e4e8c0af9eb43c6585add5ef953d285441b91e",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "sanctem-logo-sanctem-logo-color-6c9467089bab",
@@ -859,7 +897,9 @@
         "height": 1091,
         "dimensions": "6490 x 1091 px",
         "sha256": "6c9467089bab66fb225de66c0cb03ae035df61205db6fd6568054093d7912175",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "sanctem-logo-sanctem-logo-color-dc34ba67f3af",
@@ -873,7 +913,9 @@
         "height": 540,
         "dimensions": "1920 x 540 px",
         "sha256": "dc34ba67f3af31597b6f03e8fd4890320676451d08cf17c48cb9ca650fa62cde",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "sanctem-logo-sanctem-logo-white-black-alt-592a2bac1aee",
@@ -887,7 +929,9 @@
         "height": 2250,
         "dimensions": "8000 x 2250 px",
         "sha256": "592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "sanctem-logo-sanctem-logo-white-black-8a50506dc636",
@@ -901,7 +945,9 @@
         "height": 2250,
         "dimensions": "8000 x 2250 px",
         "sha256": "8a50506dc6360ed521fb23e4adfd046924792908e3070ae606ce55e69a5c1e95",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "sanctem-logo-sanctem-logo-white-5045acdbe817",
@@ -915,7 +961,9 @@
         "height": 540,
         "dimensions": "1920 x 540 px",
         "sha256": "5045acdbe817e5a03a8ba97b492f785c2e6c72bc9cb1b9984e1a2f8ccdf164a0",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       }
     ]
   },

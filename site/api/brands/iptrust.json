@@ -165,14 +165,47 @@
     "standalone"
   ],
   "version": {
-    "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-    "shortHash": "f751eee",
-    "date": "2026-07-20T08:17:19+08:00",
-    "message": "fix: prevent orphaned directory headline",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+    "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+    "shortHash": "fa30da1",
+    "date": "2026-07-23T09:50:41+08:00",
+    "message": "feat: move Sidera to pale manuscript theme",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
   },
   "historyUrl": "api/history/iptrust.json",
   "history": [
+    {
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "sourcePaths": [
+        "config/brands.json",
+        "IPTRUST"
+      ]
+    },
+    {
+      "hash": "6f63b2069bcdacfd11655b35e842197792c58bb2",
+      "shortHash": "6f63b20",
+      "date": "2026-07-21T14:05:18+08:00",
+      "message": "feat: refine Sidera ink identity",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/6f63b2069bcdacfd11655b35e842197792c58bb2",
+      "sourcePaths": [
+        "config/brands.json",
+        "IPTRUST"
+      ]
+    },
+    {
+      "hash": "5f6dced3cbe228a68c1519b403401944a42d0c5d",
+      "shortHash": "5f6dced",
+      "date": "2026-07-20T13:58:19+08:00",
+      "message": "feat: add food brand architecture and edge performance",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5f6dced3cbe228a68c1519b403401944a42d0c5d",
+      "sourcePaths": [
+        "config/brands.json",
+        "IPTRUST"
+      ]
+    },
     {
       "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
       "shortHash": "bc7b985",
@@ -205,39 +238,6 @@
         "config/brands.json",
         "IPTRUST"
       ]
-    },
-    {
-      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
-      "shortHash": "b0056d3",
-      "date": "2026-07-12T21:39:51+08:00",
-      "message": "Rename Shanrenjing English brand to shanpass",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12",
-      "sourcePaths": [
-        "config/brands.json",
-        "IPTRUST"
-      ]
-    },
-    {
-      "hash": "307513830db51470695adf67b4da3df8b2d669bb",
-      "shortHash": "3075138",
-      "date": "2026-07-10T22:06:39+08:00",
-      "message": "Redesign IPTrust and publish brand assets",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/307513830db51470695adf67b4da3df8b2d669bb",
-      "sourcePaths": [
-        "config/brands.json",
-        "IPTRUST"
-      ]
-    },
-    {
-      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
-      "shortHash": "a5bf7cf",
-      "date": "2026-07-10T20:21:24+08:00",
-      "message": "Replace contrast-template brand copy",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
-      "sourcePaths": [
-        "config/brands.json",
-        "IPTRUST"
-      ]
     }
   ],
   "url": "brand.html?brand=iptrust",
@@ -258,7 +258,9 @@
       "height": 941,
       "dimensions": "1672 x 941 px",
       "sha256": "63c7b53792f9a8f56ee0f0b2bfaad3705c4895fed8d0ba6c687c750e9fdc5eb1",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "iptrust-logo-iptrust-logo-black-4a253cbe0faa",
@@ -272,7 +274,9 @@
       "height": 915,
       "dimensions": "915 x 915 px",
       "sha256": "4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "iptrust-image-iptrust-wide-black-f61b168f6766",
@@ -286,7 +290,9 @@
       "height": 2160,
       "dimensions": "3840 x 2160 px",
       "sha256": "f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "iptrust-image-iptrust-wide-white-5e6f803129e8",
@@ -300,7 +306,9 @@
       "height": 2160,
       "dimensions": "3840 x 2160 px",
       "sha256": "5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "iptrust-logo-wideblack-f61b168f6766",
@@ -314,7 +322,9 @@
       "height": 2160,
       "dimensions": "3840 x 2160 px",
       "sha256": "f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "iptrust-logo-widewhite-5e6f803129e8",
@@ -328,7 +338,9 @@
       "height": 2160,
       "dimensions": "3840 x 2160 px",
       "sha256": "5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "iptrust-logo-logo-logo-687e84896c21",
@@ -342,7 +354,9 @@
       "height": null,
       "dimensions": "",
       "sha256": "687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "iptrust-logo-logo-0a15e78e0a37",
@@ -356,7 +370,9 @@
       "height": 2539,
       "dimensions": "2539 x 2539 px",
       "sha256": "0a15e78e0a37949254ad500a9c83802f48d0f2f2039c2856e7f40d176e60f254",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "iptrust-logo-logo-d50caec22786",
@@ -370,7 +386,9 @@
       "height": 915,
       "dimensions": "915 x 915 px",
       "sha256": "d50caec22786b6b1fd6f8e7b4e6fd9d3a2f366684308deaec96408fbe6b37529",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "iptrust-logo-logo-logo-34178b12bc90",
@@ -384,7 +402,9 @@
       "height": 2540,
       "dimensions": "2540 x 2540 px",
       "sha256": "34178b12bc90ce079e0304f43b0ee6b35952a8230aae0ad30c516dfd25e861b2",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "iptrust-logo-logo-logo-ae217dbf366f",
@@ -398,7 +418,9 @@
       "height": 2540,
       "dimensions": "2540 x 2540 px",
       "sha256": "ae217dbf366f5e6a149fed179e126da3620e42e85d6fb2197de710cceb6ca595",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "iptrust-logo-logo-logo-3a0b20c18a58",
@@ -412,7 +434,9 @@
       "height": null,
       "dimensions": "",
       "sha256": "3a0b20c18a587240e50379c842b7cf36bb8e97940bbfb09cfebad32ea2198489",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "iptrust-logo-logo-logo-9043654071cb",
@@ -426,7 +450,9 @@
       "height": 2540,
       "dimensions": "2540 x 2540 px",
       "sha256": "9043654071cb9443d555c06c33f696dbe8b17e4b59e12ad1b3380db4dd421210",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "iptrust-logo-logo-logo-3b5bda396c04",
@@ -440,7 +466,9 @@
       "height": 2540,
       "dimensions": "2540 x 2540 px",
       "sha256": "3b5bda396c0426d723aaecb178ebfec5b28e04de79b82aaacb52159c7a4b7705",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "iptrust-logo-logo-logo-6c27005c50a2",
@@ -454,7 +482,9 @@
       "height": null,
       "dimensions": "",
       "sha256": "6c27005c50a296eb02ccbc3c69aeed7b94b0f346d5c8973f2ae887f0b7dc2be0",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "iptrust-logo-logo-logo-7e72d10a5d55",
@@ -468,7 +498,9 @@
       "height": 2539,
       "dimensions": "2539 x 2539 px",
       "sha256": "7e72d10a5d5583ae67e3019c5bf08cee636c5b656342aa6fcb69201004ce2a20",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "iptrust-logo-logo-logo-943c106495e0",
@@ -482,7 +514,9 @@
       "height": null,
       "dimensions": "",
       "sha256": "943c106495e0ef5e27af4e93578568a25abfbed6a80950c077cc94493604f663",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "iptrust-logo-logohdpi-4a253cbe0faa",
@@ -496,7 +530,9 @@
       "height": 915,
       "dimensions": "915 x 915 px",
       "sha256": "4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     }
   ],
   "assetManifest": [
@@ -546,31 +582,6 @@
       "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-hero-iptrust-brand-hero-63c7b53792f9/63c7b53792f9a8f56ee0f0b2bfaad3705c4895fed8d0ba6c687c750e9fdc5eb1/original.png",
       "legacyUrls": [
         "/assets/brand-images/iptrust.png"
-      ],
-      "status": "ready",
-      "version": 1
-    },
-    {
-      "id": "iptrust-logo-iptrust-logo-black-4a253cbe0faa",
-      "ownerType": "owned-ip",
-      "ownerId": "iptrust",
-      "role": "logo",
-      "title": "iptrust logo black",
-      "access": "public",
-      "sourcePath": "IPTRUST/assets/brand-images/iptrust-logo-black.png",
-      "sourceFilename": "iptrust-logo-black.png",
-      "sha256": "4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64",
-      "mimeType": "image/png",
-      "extension": "png",
-      "bytes": 43190,
-      "size": "42.2 KB",
-      "width": 915,
-      "height": 915,
-      "dimensions": "915 x 915 px",
-      "objectKey": "public/iptrust/iptrust-logo-iptrust-logo-black-4a253cbe0faa/4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64/original.png",
-      "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-iptrust-logo-black-4a253cbe0faa/4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64/original.png",
-      "legacyUrls": [
-        "/assets/brand-images/iptrust-logo-black.png"
       ],
       "status": "ready",
       "version": 1
@@ -626,98 +637,27 @@
       "version": 1
     },
     {
-      "id": "iptrust-logo-logo-35c437df08fc",
+      "id": "iptrust-logo-iptrust-logo-black-4a253cbe0faa",
       "ownerType": "owned-ip",
       "ownerId": "iptrust",
       "role": "logo",
-      "title": "logo",
-      "access": "private",
-      "sourcePath": "IPTRUST/assets/brand-images/logo-set/logo.ai",
-      "sourceFilename": "logo.ai",
-      "sha256": "35c437df08fcd01d10438aa05e04bc33195f3f04b6bc5dd4610a1810cbe23126",
-      "mimeType": "application/illustrator",
-      "extension": "ai",
-      "bytes": 1204421,
-      "size": "1.15 MB",
-      "width": null,
-      "height": null,
-      "dimensions": "",
-      "objectKey": "private/iptrust/iptrust-logo-logo-35c437df08fc/35c437df08fcd01d10438aa05e04bc33195f3f04b6bc5dd4610a1810cbe23126/source.ai",
-      "mediaUrl": "https://media.apuch.art/private/iptrust/iptrust-logo-logo-35c437df08fc/35c437df08fcd01d10438aa05e04bc33195f3f04b6bc5dd4610a1810cbe23126/source.ai",
-      "legacyUrls": [],
-      "status": "processing",
-      "version": 1
-    },
-    {
-      "id": "iptrust-logo-wideblack-f61b168f6766",
-      "ownerType": "owned-ip",
-      "ownerId": "iptrust",
-      "role": "logo",
-      "title": "岁知社wideblack",
+      "title": "iptrust logo black",
       "access": "public",
-      "sourcePath": "IPTRUST/assets/brand-images/logo-set/岁知社wideblack.png",
-      "sourceFilename": "岁知社wideblack.png",
-      "sha256": "f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4",
+      "sourcePath": "IPTRUST/assets/brand-images/iptrust-logo-black.png",
+      "sourceFilename": "iptrust-logo-black.png",
+      "sha256": "4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64",
       "mimeType": "image/png",
       "extension": "png",
-      "bytes": 137631,
-      "size": "134.4 KB",
-      "width": 3840,
-      "height": 2160,
-      "dimensions": "3840 x 2160 px",
-      "objectKey": "public/iptrust/iptrust-logo-wideblack-f61b168f6766/f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4/original.png",
-      "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-wideblack-f61b168f6766/f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4/original.png",
+      "bytes": 43190,
+      "size": "42.2 KB",
+      "width": 915,
+      "height": 915,
+      "dimensions": "915 x 915 px",
+      "objectKey": "public/iptrust/iptrust-logo-iptrust-logo-black-4a253cbe0faa/4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64/original.png",
+      "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-iptrust-logo-black-4a253cbe0faa/4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64/original.png",
       "legacyUrls": [
-        "/assets/brand-images/iptrust-logo-set-wideblack.png"
+        "/assets/brand-images/iptrust-logo-black.png"
       ],
-      "status": "ready",
-      "version": 1
-    },
-    {
-      "id": "iptrust-logo-widewhite-5e6f803129e8",
-      "ownerType": "owned-ip",
-      "ownerId": "iptrust",
-      "role": "logo",
-      "title": "岁知社widewhite",
-      "access": "public",
-      "sourcePath": "IPTRUST/assets/brand-images/logo-set/岁知社widewhite.png",
-      "sourceFilename": "岁知社widewhite.png",
-      "sha256": "5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920",
-      "mimeType": "image/png",
-      "extension": "png",
-      "bytes": 141288,
-      "size": "138.0 KB",
-      "width": 3840,
-      "height": 2160,
-      "dimensions": "3840 x 2160 px",
-      "objectKey": "public/iptrust/iptrust-logo-widewhite-5e6f803129e8/5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920/original.png",
-      "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-widewhite-5e6f803129e8/5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920/original.png",
-      "legacyUrls": [
-        "/assets/brand-images/iptrust-logo-set-widewhite.png"
-      ],
-      "status": "ready",
-      "version": 1
-    },
-    {
-      "id": "iptrust-logo-logo-logo-687e84896c21",
-      "ownerType": "owned-ip",
-      "ownerId": "iptrust",
-      "role": "logo",
-      "title": "logo logo",
-      "access": "public",
-      "sourcePath": "IPTRUST/assets/brand-images/logo-set/白色/logo_logo.svg",
-      "sourceFilename": "logo_logo.svg",
-      "sha256": "687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca",
-      "mimeType": "image/svg+xml",
-      "extension": "svg",
-      "bytes": 3791,
-      "size": "3.70 KB",
-      "width": null,
-      "height": null,
-      "dimensions": "",
-      "objectKey": "public/iptrust/iptrust-logo-logo-logo-687e84896c21/687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca/original.svg",
-      "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-687e84896c21/687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca/original.svg",
-      "legacyUrls": [],
       "status": "ready",
       "version": 1
     },
@@ -744,6 +684,29 @@
         "/assets/brand-images/iptrust-logo.jpg"
       ],
       "status": "ready",
+      "version": 1
+    },
+    {
+      "id": "iptrust-logo-logo-35c437df08fc",
+      "ownerType": "owned-ip",
+      "ownerId": "iptrust",
+      "role": "logo",
+      "title": "logo",
+      "access": "private",
+      "sourcePath": "IPTRUST/assets/brand-images/logo-set/logo.ai",
+      "sourceFilename": "logo.ai",
+      "sha256": "35c437df08fcd01d10438aa05e04bc33195f3f04b6bc5dd4610a1810cbe23126",
+      "mimeType": "application/illustrator",
+      "extension": "ai",
+      "bytes": 1204421,
+      "size": "1.15 MB",
+      "width": null,
+      "height": null,
+      "dimensions": "",
+      "objectKey": "private/iptrust/iptrust-logo-logo-35c437df08fc/35c437df08fcd01d10438aa05e04bc33195f3f04b6bc5dd4610a1810cbe23126/source.ai",
+      "mediaUrl": "https://media.apuch.art/private/iptrust/iptrust-logo-logo-35c437df08fc/35c437df08fcd01d10438aa05e04bc33195f3f04b6bc5dd4610a1810cbe23126/source.ai",
+      "legacyUrls": [],
+      "status": "processing",
       "version": 1
     },
     {
@@ -797,31 +760,6 @@
       "version": 1
     },
     {
-      "id": "iptrust-logo-logo-logo-ae217dbf366f",
-      "ownerType": "owned-ip",
-      "ownerId": "iptrust",
-      "role": "logo",
-      "title": "logo logo",
-      "access": "public",
-      "sourcePath": "IPTRUST/assets/brand-images/logo-set/蓝色/logo_logo.png",
-      "sourceFilename": "logo_logo.png",
-      "sha256": "ae217dbf366f5e6a149fed179e126da3620e42e85d6fb2197de710cceb6ca595",
-      "mimeType": "image/png",
-      "extension": "png",
-      "bytes": 45334,
-      "size": "44.3 KB",
-      "width": 2540,
-      "height": 2540,
-      "dimensions": "2540 x 2540 px",
-      "objectKey": "public/iptrust/iptrust-logo-logo-logo-ae217dbf366f/ae217dbf366f5e6a149fed179e126da3620e42e85d6fb2197de710cceb6ca595/original.png",
-      "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-ae217dbf366f/ae217dbf366f5e6a149fed179e126da3620e42e85d6fb2197de710cceb6ca595/original.png",
-      "legacyUrls": [
-        "/assets/brand-images/iptrust-logo-logo.png"
-      ],
-      "status": "ready",
-      "version": 1
-    },
-    {
       "id": "iptrust-logo-logo-logo-3a0b20c18a58",
       "ownerType": "owned-ip",
       "ownerId": "iptrust",
@@ -841,31 +779,6 @@
       "objectKey": "public/iptrust/iptrust-logo-logo-logo-3a0b20c18a58/3a0b20c18a587240e50379c842b7cf36bb8e97940bbfb09cfebad32ea2198489/original.svg",
       "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-3a0b20c18a58/3a0b20c18a587240e50379c842b7cf36bb8e97940bbfb09cfebad32ea2198489/original.svg",
       "legacyUrls": [],
-      "status": "ready",
-      "version": 1
-    },
-    {
-      "id": "iptrust-logo-logo-logo-9043654071cb",
-      "ownerType": "owned-ip",
-      "ownerId": "iptrust",
-      "role": "logo",
-      "title": "logo logo",
-      "access": "public",
-      "sourcePath": "IPTRUST/assets/brand-images/logo-set/金色/logo_logo.jpg",
-      "sourceFilename": "logo_logo.jpg",
-      "sha256": "9043654071cb9443d555c06c33f696dbe8b17e4b59e12ad1b3380db4dd421210",
-      "mimeType": "image/jpeg",
-      "extension": "jpg",
-      "bytes": 146164,
-      "size": "142.7 KB",
-      "width": 2540,
-      "height": 2540,
-      "dimensions": "2540 x 2540 px",
-      "objectKey": "public/iptrust/iptrust-logo-logo-logo-9043654071cb/9043654071cb9443d555c06c33f696dbe8b17e4b59e12ad1b3380db4dd421210/original.jpg",
-      "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-9043654071cb/9043654071cb9443d555c06c33f696dbe8b17e4b59e12ad1b3380db4dd421210/original.jpg",
-      "legacyUrls": [
-        "/assets/brand-images/iptrust-logo-logo-2.jpg"
-      ],
       "status": "ready",
       "version": 1
     },
@@ -891,6 +804,29 @@
       "legacyUrls": [
         "/assets/brand-images/iptrust-logo-logo-2.png"
       ],
+      "status": "ready",
+      "version": 1
+    },
+    {
+      "id": "iptrust-logo-logo-logo-687e84896c21",
+      "ownerType": "owned-ip",
+      "ownerId": "iptrust",
+      "role": "logo",
+      "title": "logo logo",
+      "access": "public",
+      "sourcePath": "IPTRUST/assets/brand-images/logo-set/白色/logo_logo.svg",
+      "sourceFilename": "logo_logo.svg",
+      "sha256": "687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca",
+      "mimeType": "image/svg+xml",
+      "extension": "svg",
+      "bytes": 3791,
+      "size": "3.70 KB",
+      "width": null,
+      "height": null,
+      "dimensions": "",
+      "objectKey": "public/iptrust/iptrust-logo-logo-logo-687e84896c21/687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca/original.svg",
+      "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-687e84896c21/687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca/original.svg",
+      "legacyUrls": [],
       "status": "ready",
       "version": 1
     },
@@ -943,6 +879,31 @@
       "version": 1
     },
     {
+      "id": "iptrust-logo-logo-logo-9043654071cb",
+      "ownerType": "owned-ip",
+      "ownerId": "iptrust",
+      "role": "logo",
+      "title": "logo logo",
+      "access": "public",
+      "sourcePath": "IPTRUST/assets/brand-images/logo-set/金色/logo_logo.jpg",
+      "sourceFilename": "logo_logo.jpg",
+      "sha256": "9043654071cb9443d555c06c33f696dbe8b17e4b59e12ad1b3380db4dd421210",
+      "mimeType": "image/jpeg",
+      "extension": "jpg",
+      "bytes": 146164,
+      "size": "142.7 KB",
+      "width": 2540,
+      "height": 2540,
+      "dimensions": "2540 x 2540 px",
+      "objectKey": "public/iptrust/iptrust-logo-logo-logo-9043654071cb/9043654071cb9443d555c06c33f696dbe8b17e4b59e12ad1b3380db4dd421210/original.jpg",
+      "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-9043654071cb/9043654071cb9443d555c06c33f696dbe8b17e4b59e12ad1b3380db4dd421210/original.jpg",
+      "legacyUrls": [
+        "/assets/brand-images/iptrust-logo-logo-2.jpg"
+      ],
+      "status": "ready",
+      "version": 1
+    },
+    {
       "id": "iptrust-logo-logo-logo-943c106495e0",
       "ownerType": "owned-ip",
       "ownerId": "iptrust",
@@ -962,6 +923,31 @@
       "objectKey": "public/iptrust/iptrust-logo-logo-logo-943c106495e0/943c106495e0ef5e27af4e93578568a25abfbed6a80950c077cc94493604f663/original.svg",
       "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-943c106495e0/943c106495e0ef5e27af4e93578568a25abfbed6a80950c077cc94493604f663/original.svg",
       "legacyUrls": [],
+      "status": "ready",
+      "version": 1
+    },
+    {
+      "id": "iptrust-logo-logo-logo-ae217dbf366f",
+      "ownerType": "owned-ip",
+      "ownerId": "iptrust",
+      "role": "logo",
+      "title": "logo logo",
+      "access": "public",
+      "sourcePath": "IPTRUST/assets/brand-images/logo-set/蓝色/logo_logo.png",
+      "sourceFilename": "logo_logo.png",
+      "sha256": "ae217dbf366f5e6a149fed179e126da3620e42e85d6fb2197de710cceb6ca595",
+      "mimeType": "image/png",
+      "extension": "png",
+      "bytes": 45334,
+      "size": "44.3 KB",
+      "width": 2540,
+      "height": 2540,
+      "dimensions": "2540 x 2540 px",
+      "objectKey": "public/iptrust/iptrust-logo-logo-logo-ae217dbf366f/ae217dbf366f5e6a149fed179e126da3620e42e85d6fb2197de710cceb6ca595/original.png",
+      "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-ae217dbf366f/ae217dbf366f5e6a149fed179e126da3620e42e85d6fb2197de710cceb6ca595/original.png",
+      "legacyUrls": [
+        "/assets/brand-images/iptrust-logo-logo.png"
+      ],
       "status": "ready",
       "version": 1
     },
@@ -986,6 +972,56 @@
       "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logohdpi-4a253cbe0faa/4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64/original.png",
       "legacyUrls": [
         "/assets/brand-images/iptrust-logohdpi.png"
+      ],
+      "status": "ready",
+      "version": 1
+    },
+    {
+      "id": "iptrust-logo-wideblack-f61b168f6766",
+      "ownerType": "owned-ip",
+      "ownerId": "iptrust",
+      "role": "logo",
+      "title": "岁知社wideblack",
+      "access": "public",
+      "sourcePath": "IPTRUST/assets/brand-images/logo-set/岁知社wideblack.png",
+      "sourceFilename": "岁知社wideblack.png",
+      "sha256": "f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4",
+      "mimeType": "image/png",
+      "extension": "png",
+      "bytes": 137631,
+      "size": "134.4 KB",
+      "width": 3840,
+      "height": 2160,
+      "dimensions": "3840 x 2160 px",
+      "objectKey": "public/iptrust/iptrust-logo-wideblack-f61b168f6766/f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4/original.png",
+      "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-wideblack-f61b168f6766/f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4/original.png",
+      "legacyUrls": [
+        "/assets/brand-images/iptrust-logo-set-wideblack.png"
+      ],
+      "status": "ready",
+      "version": 1
+    },
+    {
+      "id": "iptrust-logo-widewhite-5e6f803129e8",
+      "ownerType": "owned-ip",
+      "ownerId": "iptrust",
+      "role": "logo",
+      "title": "岁知社widewhite",
+      "access": "public",
+      "sourcePath": "IPTRUST/assets/brand-images/logo-set/岁知社widewhite.png",
+      "sourceFilename": "岁知社widewhite.png",
+      "sha256": "5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920",
+      "mimeType": "image/png",
+      "extension": "png",
+      "bytes": 141288,
+      "size": "138.0 KB",
+      "width": 3840,
+      "height": 2160,
+      "dimensions": "3840 x 2160 px",
+      "objectKey": "public/iptrust/iptrust-logo-widewhite-5e6f803129e8/5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920/original.png",
+      "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-widewhite-5e6f803129e8/5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920/original.png",
+      "legacyUrls": [
+        "/assets/brand-images/iptrust-logo-set-widewhite.png"
       ],
       "status": "ready",
       "version": 1
@@ -1054,7 +1090,9 @@
           "height": 941,
           "dimensions": "1672 x 941 px",
           "sha256": "63c7b53792f9a8f56ee0f0b2bfaad3705c4895fed8d0ba6c687c750e9fdc5eb1",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-iptrust-logo-black-4a253cbe0faa",
@@ -1068,7 +1106,9 @@
           "height": 915,
           "dimensions": "915 x 915 px",
           "sha256": "4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-image-iptrust-wide-black-f61b168f6766",
@@ -1082,7 +1122,9 @@
           "height": 2160,
           "dimensions": "3840 x 2160 px",
           "sha256": "f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-image-iptrust-wide-white-5e6f803129e8",
@@ -1096,7 +1138,9 @@
           "height": 2160,
           "dimensions": "3840 x 2160 px",
           "sha256": "5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-wideblack-f61b168f6766",
@@ -1110,7 +1154,9 @@
           "height": 2160,
           "dimensions": "3840 x 2160 px",
           "sha256": "f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-widewhite-5e6f803129e8",
@@ -1124,7 +1170,9 @@
           "height": 2160,
           "dimensions": "3840 x 2160 px",
           "sha256": "5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-687e84896c21",
@@ -1138,7 +1186,9 @@
           "height": null,
           "dimensions": "",
           "sha256": "687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logo-0a15e78e0a37",
@@ -1152,7 +1202,9 @@
           "height": 2539,
           "dimensions": "2539 x 2539 px",
           "sha256": "0a15e78e0a37949254ad500a9c83802f48d0f2f2039c2856e7f40d176e60f254",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logo-d50caec22786",
@@ -1166,7 +1218,9 @@
           "height": 915,
           "dimensions": "915 x 915 px",
           "sha256": "d50caec22786b6b1fd6f8e7b4e6fd9d3a2f366684308deaec96408fbe6b37529",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-34178b12bc90",
@@ -1180,7 +1234,9 @@
           "height": 2540,
           "dimensions": "2540 x 2540 px",
           "sha256": "34178b12bc90ce079e0304f43b0ee6b35952a8230aae0ad30c516dfd25e861b2",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-ae217dbf366f",
@@ -1194,7 +1250,9 @@
           "height": 2540,
           "dimensions": "2540 x 2540 px",
           "sha256": "ae217dbf366f5e6a149fed179e126da3620e42e85d6fb2197de710cceb6ca595",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-3a0b20c18a58",
@@ -1208,7 +1266,9 @@
           "height": null,
           "dimensions": "",
           "sha256": "3a0b20c18a587240e50379c842b7cf36bb8e97940bbfb09cfebad32ea2198489",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-9043654071cb",
@@ -1222,7 +1282,9 @@
           "height": 2540,
           "dimensions": "2540 x 2540 px",
           "sha256": "9043654071cb9443d555c06c33f696dbe8b17e4b59e12ad1b3380db4dd421210",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-3b5bda396c04",
@@ -1236,7 +1298,9 @@
           "height": 2540,
           "dimensions": "2540 x 2540 px",
           "sha256": "3b5bda396c0426d723aaecb178ebfec5b28e04de79b82aaacb52159c7a4b7705",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-6c27005c50a2",
@@ -1250,7 +1314,9 @@
           "height": null,
           "dimensions": "",
           "sha256": "6c27005c50a296eb02ccbc3c69aeed7b94b0f346d5c8973f2ae887f0b7dc2be0",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-7e72d10a5d55",
@@ -1264,7 +1330,9 @@
           "height": 2539,
           "dimensions": "2539 x 2539 px",
           "sha256": "7e72d10a5d5583ae67e3019c5bf08cee636c5b656342aa6fcb69201004ce2a20",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-943c106495e0",
@@ -1278,7 +1346,9 @@
           "height": null,
           "dimensions": "",
           "sha256": "943c106495e0ef5e27af4e93578568a25abfbed6a80950c077cc94493604f663",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logohdpi-4a253cbe0faa",
@@ -1292,7 +1362,9 @@
           "height": 915,
           "dimensions": "915 x 915 px",
           "sha256": "4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         }
       ]
     }
@@ -1348,7 +1420,9 @@
         "height": 941,
         "dimensions": "1672 x 941 px",
         "sha256": "63c7b53792f9a8f56ee0f0b2bfaad3705c4895fed8d0ba6c687c750e9fdc5eb1",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "iptrust-logo-iptrust-logo-black-4a253cbe0faa",
@@ -1362,7 +1436,9 @@
         "height": 915,
         "dimensions": "915 x 915 px",
         "sha256": "4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "iptrust-image-iptrust-wide-black-f61b168f6766",
@@ -1376,7 +1452,9 @@
         "height": 2160,
         "dimensions": "3840 x 2160 px",
         "sha256": "f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "iptrust-image-iptrust-wide-white-5e6f803129e8",
@@ -1390,7 +1468,9 @@
         "height": 2160,
         "dimensions": "3840 x 2160 px",
         "sha256": "5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "iptrust-logo-wideblack-f61b168f6766",
@@ -1404,7 +1484,9 @@
         "height": 2160,
         "dimensions": "3840 x 2160 px",
         "sha256": "f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "iptrust-logo-widewhite-5e6f803129e8",
@@ -1418,7 +1500,9 @@
         "height": 2160,
         "dimensions": "3840 x 2160 px",
         "sha256": "5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "iptrust-logo-logo-logo-687e84896c21",
@@ -1432,7 +1516,9 @@
         "height": null,
         "dimensions": "",
         "sha256": "687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "iptrust-logo-logo-0a15e78e0a37",
@@ -1446,7 +1532,9 @@
         "height": 2539,
         "dimensions": "2539 x 2539 px",
         "sha256": "0a15e78e0a37949254ad500a9c83802f48d0f2f2039c2856e7f40d176e60f254",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "iptrust-logo-logo-d50caec22786",
@@ -1460,7 +1548,9 @@
         "height": 915,
         "dimensions": "915 x 915 px",
         "sha256": "d50caec22786b6b1fd6f8e7b4e6fd9d3a2f366684308deaec96408fbe6b37529",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "iptrust-logo-logo-logo-34178b12bc90",
@@ -1474,7 +1564,9 @@
         "height": 2540,
         "dimensions": "2540 x 2540 px",
         "sha256": "34178b12bc90ce079e0304f43b0ee6b35952a8230aae0ad30c516dfd25e861b2",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "iptrust-logo-logo-logo-ae217dbf366f",
@@ -1488,7 +1580,9 @@
         "height": 2540,
         "dimensions": "2540 x 2540 px",
         "sha256": "ae217dbf366f5e6a149fed179e126da3620e42e85d6fb2197de710cceb6ca595",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "iptrust-logo-logo-logo-3a0b20c18a58",
@@ -1502,7 +1596,9 @@
         "height": null,
         "dimensions": "",
         "sha256": "3a0b20c18a587240e50379c842b7cf36bb8e97940bbfb09cfebad32ea2198489",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "iptrust-logo-logo-logo-9043654071cb",
@@ -1516,7 +1612,9 @@
         "height": 2540,
         "dimensions": "2540 x 2540 px",
         "sha256": "9043654071cb9443d555c06c33f696dbe8b17e4b59e12ad1b3380db4dd421210",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "iptrust-logo-logo-logo-3b5bda396c04",
@@ -1530,7 +1628,9 @@
         "height": 2540,
         "dimensions": "2540 x 2540 px",
         "sha256": "3b5bda396c0426d723aaecb178ebfec5b28e04de79b82aaacb52159c7a4b7705",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "iptrust-logo-logo-logo-6c27005c50a2",
@@ -1544,7 +1644,9 @@
         "height": null,
         "dimensions": "",
         "sha256": "6c27005c50a296eb02ccbc3c69aeed7b94b0f346d5c8973f2ae887f0b7dc2be0",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "iptrust-logo-logo-logo-7e72d10a5d55",
@@ -1558,7 +1660,9 @@
         "height": 2539,
         "dimensions": "2539 x 2539 px",
         "sha256": "7e72d10a5d5583ae67e3019c5bf08cee636c5b656342aa6fcb69201004ce2a20",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "iptrust-logo-logo-logo-943c106495e0",
@@ -1572,7 +1676,9 @@
         "height": null,
         "dimensions": "",
         "sha256": "943c106495e0ef5e27af4e93578568a25abfbed6a80950c077cc94493604f663",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "iptrust-logo-logohdpi-4a253cbe0faa",
@@ -1586,7 +1692,9 @@
         "height": 915,
         "dimensions": "915 x 915 px",
         "sha256": "4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       }
     ]
   },

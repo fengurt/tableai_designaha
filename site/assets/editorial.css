@@ -105,17 +105,27 @@ button:active { transform: translateY(1px); }
   align-self: center;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(13, minmax(0, 1fr));
-  grid-auto-flow: column;
+  grid-auto-flow: row;
+  grid-auto-rows: minmax(34px, auto);
   column-gap: clamp(18px, 2.5vw, 36px);
   row-gap: 0;
   width: 100%;
   height: 476px;
   max-height: none;
-  overflow: hidden;
-  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(13, 17, 16, .25) transparent;
+  padding: 0 8px 0 0;
   mask-image: none;
+  contain: layout paint;
 }
+.hero-index::-webkit-scrollbar { display: block; width: 3px; }
+.hero-index::-webkit-scrollbar-track { background: transparent; }
+.hero-index::-webkit-scrollbar-thumb { background: rgba(13, 17, 16, .25); }
+.hero-index:focus-visible { outline: 1px solid var(--ink); outline-offset: 8px; }
 .hero-index-row {
   min-width: 0;
   min-height: 0;
@@ -129,6 +139,8 @@ button:active { transform: translateY(1px); }
   opacity: 1;
   animation: none;
   transform: none;
+  content-visibility: auto;
+  contain-intrinsic-size: 34px;
 }
 .hero-index-row:hover {
   padding-left: 8px;
@@ -153,13 +165,28 @@ button:active { transform: translateY(1px); }
   background: transparent;
 }
 
-.evolution-entry { padding: 22px 0 72px; }
-.evolution-link {
-  min-height: 208px;
-  grid-template-columns: minmax(360px, .95fr) minmax(420px, 1.05fr) 64px;
-  padding: 36px 0;
+.system-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(300px, .72fr);
+  margin: 22px 0 72px;
   border-top: 2px solid var(--ink);
-  border-bottom-color: var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+.system-entry-main {
+  display: grid;
+  grid-template-columns: minmax(320px, .9fr) minmax(360px, 1.1fr) 64px;
+  align-items: center;
+  gap: clamp(22px, 3vw, 48px);
+  min-height: 208px;
+  padding: 36px clamp(24px, 3vw, 44px) 36px 0;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color .2s ease, padding .28s cubic-bezier(.2,.8,.2,1);
+}
+.system-entry-main:hover,
+.system-entry-main:focus-visible {
+  color: var(--blue);
+  padding-left: 10px;
 }
 .evolution-copy h2 {
   max-width: 9em;
@@ -172,6 +199,64 @@ button:active { transform: translateY(1px); }
 }
 .evolution-path { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; }
 .evolution-open { width: 58px; height: 58px; border-radius: 50%; }
+.system-entry-main:hover .evolution-open,
+.system-entry-main:focus-visible .evolution-open {
+  transform: translate(2px, -2px);
+  background: var(--blue);
+  color: var(--paper);
+}
+
+.system-entry-library {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-width: 0;
+  padding: 34px 62px 28px 28px;
+  border-left: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+  transition: background .2s ease, color .2s ease;
+}
+.system-entry-library:hover,
+.system-entry-library:focus-visible {
+  background: var(--ink);
+  color: var(--paper);
+}
+.system-entry-library .library-entry-copy { padding: 0; }
+.system-entry-library .library-entry-copy h2 {
+  max-width: 12em;
+  margin: 8px 0 0;
+  font-size: clamp(24px, 2.3vw, 34px);
+  line-height: 1.02;
+}
+.system-entry-library .library-entry-stats {
+  display: flex;
+  gap: clamp(14px, 2vw, 24px);
+  border: 0;
+}
+.system-entry-library .library-entry-stats span {
+  display: grid;
+  gap: 3px;
+  padding: 0;
+  border: 0;
+}
+.system-entry-library .library-entry-stats strong {
+  font: 800 clamp(18px, 2vw, 27px)/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.system-entry-library .library-entry-stats small {
+  color: currentColor;
+  font-size: 9px;
+  opacity: .62;
+}
+.system-entry-library .library-entry-open {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  width: 38px;
+  height: 38px;
+}
+.system-entry-library:hover .eyebrow,
+.system-entry-library:focus-visible .eyebrow { color: currentColor; }
 
 .entry-portals {
   grid-template-columns: repeat(3, 1fr);
@@ -424,6 +509,8 @@ button:active { transform: translateY(1px); }
   .hub-hero { grid-template-columns: 1fr; min-height: auto; padding-top: 44px; }
   .hero-copy h1 { font-size: clamp(64px, 11vw, 96px); }
   .hero-index { height: 442px; max-height: none; }
+  .system-entry { grid-template-columns: 1fr; }
+  .system-entry-library { min-height: 190px; border-top: 1px solid var(--line); border-left: 0; }
   .ip-card,
   .ip-card:nth-child(7n + 1),
   .ip-card:nth-child(7n + 5) { grid-column: span 6; min-height: 360px; }
@@ -466,22 +553,22 @@ button:active { transform: translateY(1px); }
   .hero-copy h1 { font-size: clamp(54px, 17vw, 72px); }
   .hub-hero p:not(.eyebrow) { margin-top: 12px; font-size: 14px; }
   .hero-index {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: repeat(13, minmax(0, 1fr));
-    height: 416px;
+    grid-template-columns: 1fr;
+    height: 316px;
     max-height: none;
-    column-gap: 12px;
-    padding: 0;
+    column-gap: 0;
+    padding-right: 5px;
   }
   .hero-index-row { min-height: 0; padding: 3px 0; font-size: 11px; }
   .hero-index-secondary { display: none; }
   .hero-index-colors { display: none; }
   .hero-index .icon-copy { width: 22px; height: 22px; min-height: 22px; }
-  .evolution-entry { padding: 16px 0 48px; }
-  .evolution-link { grid-template-columns: minmax(0, 1fr) 48px; min-height: 184px; padding: 28px 0; }
+  .system-entry { margin: 16px 0 48px; }
+  .system-entry-main { grid-template-columns: minmax(0, 1fr) 48px; min-height: 184px; padding: 28px 0; }
   .evolution-copy h2 { max-width: 9em; font-size: 36px; line-height: .98; }
   .evolution-open { width: 44px; height: 44px; }
   .evolution-path { grid-template-columns: repeat(5, max-content); overflow-x: auto; justify-content: start; gap: 16px; }
+  .system-entry-library { min-height: 176px; padding: 24px 56px 22px 0; }
   .entry-portals { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; padding-bottom: 42px; }
   .portal {
     min-height: 96px;

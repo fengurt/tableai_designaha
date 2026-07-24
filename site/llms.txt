@@ -33,7 +33,7 @@ Brands:
 - 岁知社 (iptrust): /api/brands/iptrust.json · mainLocale CN · palette #10263D / #B99B5B
 - 峰值永造局 (fengzhi): /api/brands/fengzhi.json · mainLocale CN · palette #1A1714 / #A47B36
 - Axisee (axisee): /api/brands/axisee.json · mainLocale EN · palette #1A2B4A / #B12137
-- 侍天 - 智慧餐饮 (sidera): /api/brands/sidera.json · mainLocale CN · palette #B58B4C / #D4A862
+- 侍天 - 智慧餐饮 (sidera): /api/brands/sidera.json · mainLocale CN · palette #EFE6D2 / #76551F
 - 1stepmore (1stepmore): /api/brands/1stepmore.json · mainLocale EN · palette #123047 / #C89B3C
 - 游赋社 (agem): /api/brands/agem.json · mainLocale CN · palette #155E75 / #D9823B
 - 燃古豋 (rgd): /api/brands/rgd.json · mainLocale CN · palette #E06B3A / #C8A15A

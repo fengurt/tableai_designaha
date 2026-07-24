@@ -16,6 +16,7 @@
     "assets:migrate:dry": "node scripts/migrate-assets-to-r2.mjs",
     "assets:migrate:upload": "node scripts/migrate-assets-to-r2.mjs --upload",
     "assets:migrate:verify": "node scripts/migrate-assets-to-r2.mjs --verify",
+    "assets:import:opcglobal": "node scripts/import-opcglobal-assets.mjs",
     "validate:assets": "node scripts/validate-asset-policy.mjs",
     "validate:ip": "node scripts/validate-ip-system.mjs",
     "seed:platform": "node scripts/build-platform-seed.mjs",

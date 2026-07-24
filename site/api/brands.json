@@ -166,17 +166,42 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/tableai.json",
     "url": "brand.html?brand=tableai",
     "apiUrl": "api/brands/tableai.json",
     "status": "documented",
     "assetManifest": [
+      {
+        "id": "tableai-hero-tableai-brand-hero-df017e1f0d5d",
+        "ownerType": "owned-ip",
+        "ownerId": "tableai",
+        "role": "hero",
+        "title": "tableai brand hero",
+        "access": "public",
+        "sourcePath": "TABLEAI/assets/brand-images/tableai-brand-hero.png",
+        "sourceFilename": "tableai-brand-hero.png",
+        "sha256": "df017e1f0d5dd4d71f6d6ea84f93038aa0ed682aa228bf4268b9e64d0eb3f537",
+        "mimeType": "image/png",
+        "extension": "png",
+        "bytes": 1614214,
+        "size": "1.54 MB",
+        "width": 1672,
+        "height": 941,
+        "dimensions": "1672 x 941 px",
+        "objectKey": "public/tableai/tableai-hero-tableai-brand-hero-df017e1f0d5d/df017e1f0d5dd4d71f6d6ea84f93038aa0ed682aa228bf4268b9e64d0eb3f537/original.png",
+        "mediaUrl": "https://media.apuch.art/public/tableai/tableai-hero-tableai-brand-hero-df017e1f0d5d/df017e1f0d5dd4d71f6d6ea84f93038aa0ed682aa228bf4268b9e64d0eb3f537/original.png",
+        "legacyUrls": [
+          "/assets/brand-images/tableai.png"
+        ],
+        "status": "ready",
+        "version": 1
+      },
       {
         "id": "tableai-logo-a2a-logo-2054a6a35cb0",
         "ownerType": "owned-ip",
@@ -197,31 +222,6 @@
         "objectKey": "public/tableai/tableai-logo-a2a-logo-2054a6a35cb0/2054a6a35cb07ef17fae5fd4a1498db4e5eabc9c62a248ff2ea65f2b6e65453a/original.png",
         "mediaUrl": "https://media.apuch.art/public/tableai/tableai-logo-a2a-logo-2054a6a35cb0/2054a6a35cb07ef17fae5fd4a1498db4e5eabc9c62a248ff2ea65f2b6e65453a/original.png",
         "legacyUrls": [],
-        "status": "ready",
-        "version": 1
-      },
-      {
-        "id": "tableai-logo-tableai-a2a-logo-transparent-c1e7752b39f5",
-        "ownerType": "owned-ip",
-        "ownerId": "tableai",
-        "role": "logo",
-        "title": "tableai a2a logo transparent",
-        "access": "public",
-        "sourcePath": "TABLEAI/assets/brand-images/tableai-a2a-logo-transparent.png",
-        "sourceFilename": "tableai-a2a-logo-transparent.png",
-        "sha256": "c1e7752b39f5607594e40f701395a0f6ef3addb8b5a964880408e522fe34c210",
-        "mimeType": "image/png",
-        "extension": "png",
-        "bytes": 60647,
-        "size": "59.2 KB",
-        "width": 1024,
-        "height": 1024,
-        "dimensions": "1024 x 1024 px",
-        "objectKey": "public/tableai/tableai-logo-tableai-a2a-logo-transparent-c1e7752b39f5/c1e7752b39f5607594e40f701395a0f6ef3addb8b5a964880408e522fe34c210/original.png",
-        "mediaUrl": "https://media.apuch.art/public/tableai/tableai-logo-tableai-a2a-logo-transparent-c1e7752b39f5/c1e7752b39f5607594e40f701395a0f6ef3addb8b5a964880408e522fe34c210/original.png",
-        "legacyUrls": [
-          "/assets/brand-images/tableai-tableai-a2a-logo-transparent.png"
-        ],
         "status": "ready",
         "version": 1
       },
@@ -251,26 +251,26 @@
         "version": 1
       },
       {
-        "id": "tableai-hero-tableai-brand-hero-df017e1f0d5d",
+        "id": "tableai-logo-tableai-a2a-logo-transparent-c1e7752b39f5",
         "ownerType": "owned-ip",
         "ownerId": "tableai",
-        "role": "hero",
-        "title": "tableai brand hero",
+        "role": "logo",
+        "title": "tableai a2a logo transparent",
         "access": "public",
-        "sourcePath": "TABLEAI/assets/brand-images/tableai-brand-hero.png",
-        "sourceFilename": "tableai-brand-hero.png",
-        "sha256": "df017e1f0d5dd4d71f6d6ea84f93038aa0ed682aa228bf4268b9e64d0eb3f537",
+        "sourcePath": "TABLEAI/assets/brand-images/tableai-a2a-logo-transparent.png",
+        "sourceFilename": "tableai-a2a-logo-transparent.png",
+        "sha256": "c1e7752b39f5607594e40f701395a0f6ef3addb8b5a964880408e522fe34c210",
         "mimeType": "image/png",
         "extension": "png",
-        "bytes": 1614214,
-        "size": "1.54 MB",
-        "width": 1672,
-        "height": 941,
-        "dimensions": "1672 x 941 px",
-        "objectKey": "public/tableai/tableai-hero-tableai-brand-hero-df017e1f0d5d/df017e1f0d5dd4d71f6d6ea84f93038aa0ed682aa228bf4268b9e64d0eb3f537/original.png",
-        "mediaUrl": "https://media.apuch.art/public/tableai/tableai-hero-tableai-brand-hero-df017e1f0d5d/df017e1f0d5dd4d71f6d6ea84f93038aa0ed682aa228bf4268b9e64d0eb3f537/original.png",
+        "bytes": 60647,
+        "size": "59.2 KB",
+        "width": 1024,
+        "height": 1024,
+        "dimensions": "1024 x 1024 px",
+        "objectKey": "public/tableai/tableai-logo-tableai-a2a-logo-transparent-c1e7752b39f5/c1e7752b39f5607594e40f701395a0f6ef3addb8b5a964880408e522fe34c210/original.png",
+        "mediaUrl": "https://media.apuch.art/public/tableai/tableai-logo-tableai-a2a-logo-transparent-c1e7752b39f5/c1e7752b39f5607594e40f701395a0f6ef3addb8b5a964880408e522fe34c210/original.png",
         "legacyUrls": [
-          "/assets/brand-images/tableai.png"
+          "/assets/brand-images/tableai-tableai-a2a-logo-transparent.png"
         ],
         "status": "ready",
         "version": 1
@@ -338,7 +338,9 @@
             "height": 941,
             "dimensions": "1672 x 941 px",
             "sha256": "df017e1f0d5dd4d71f6d6ea84f93038aa0ed682aa228bf4268b9e64d0eb3f537",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "tableai-logo-a2a-logo-2054a6a35cb0",
@@ -352,7 +354,9 @@
             "height": 1024,
             "dimensions": "1024 x 1024 px",
             "sha256": "2054a6a35cb07ef17fae5fd4a1498db4e5eabc9c62a248ff2ea65f2b6e65453a",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "tableai-logo-tableai-a2a-logo-transparent-c1e7752b39f5",
@@ -366,7 +370,9 @@
             "height": 1024,
             "dimensions": "1024 x 1024 px",
             "sha256": "c1e7752b39f5607594e40f701395a0f6ef3addb8b5a964880408e522fe34c210",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "tableai-logo-tableai-a2a-logo-2054a6a35cb0",
@@ -380,7 +386,9 @@
             "height": 1024,
             "dimensions": "1024 x 1024 px",
             "sha256": "2054a6a35cb07ef17fae5fd4a1498db4e5eabc9c62a248ff2ea65f2b6e65453a",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           }
         ]
       }
@@ -436,7 +444,9 @@
           "height": 941,
           "dimensions": "1672 x 941 px",
           "sha256": "df017e1f0d5dd4d71f6d6ea84f93038aa0ed682aa228bf4268b9e64d0eb3f537",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "tableai-logo-a2a-logo-2054a6a35cb0",
@@ -450,7 +460,9 @@
           "height": 1024,
           "dimensions": "1024 x 1024 px",
           "sha256": "2054a6a35cb07ef17fae5fd4a1498db4e5eabc9c62a248ff2ea65f2b6e65453a",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "tableai-logo-tableai-a2a-logo-transparent-c1e7752b39f5",
@@ -464,7 +476,9 @@
           "height": 1024,
           "dimensions": "1024 x 1024 px",
           "sha256": "c1e7752b39f5607594e40f701395a0f6ef3addb8b5a964880408e522fe34c210",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "tableai-logo-tableai-a2a-logo-2054a6a35cb0",
@@ -478,7 +492,9 @@
           "height": 1024,
           "dimensions": "1024 x 1024 px",
           "sha256": "2054a6a35cb07ef17fae5fd4a1498db4e5eabc9c62a248ff2ea65f2b6e65453a",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         }
       ]
     },
@@ -664,11 +680,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/vanahom.json",
     "url": "brand.html?brand=vanahom",
@@ -701,27 +717,163 @@
         "version": 1
       },
       {
-        "id": "vanahom-logo-vanahom-logo-black-df26455cffee",
+        "id": "vanahom-logo-sanctem-grey-11625d517dc0",
         "ownerType": "owned-ip",
         "ownerId": "vanahom",
         "role": "logo",
-        "title": "vanahom logo black",
+        "title": "Sanctem Grey",
         "access": "public",
-        "sourcePath": "VANAHOM/assets/brand-images/vanahom-logo-black.jpg",
-        "sourceFilename": "vanahom-logo-black.jpg",
-        "sha256": "df26455cffeef034a2803294f017c201a1216d8ef442952f50b200780ed1d5c2",
-        "mimeType": "image/jpeg",
-        "extension": "jpg",
-        "bytes": 376303,
-        "size": "367.5 KB",
-        "width": 6729,
-        "height": 1048,
-        "dimensions": "6729 x 1048 px",
-        "objectKey": "public/vanahom/vanahom-logo-vanahom-logo-black-df26455cffee/df26455cffeef034a2803294f017c201a1216d8ef442952f50b200780ed1d5c2/original.jpg",
-        "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-logo-black-df26455cffee/df26455cffeef034a2803294f017c201a1216d8ef442952f50b200780ed1d5c2/original.jpg",
-        "legacyUrls": [
-          "/assets/brand-images/vanahom-vanahom-logo-black.jpg"
-        ],
+        "sourcePath": "VANAHOM/vanahom_logo/Sanctem_Grey.png",
+        "sourceFilename": "Sanctem_Grey.png",
+        "sha256": "11625d517dc05c9a1c4b0d96e094df1bb5fd8e44506b99de22c0216a32057b65",
+        "mimeType": "image/png",
+        "extension": "png",
+        "bytes": 329367,
+        "size": "321.6 KB",
+        "width": 6000,
+        "height": 1687,
+        "dimensions": "6000 x 1687 px",
+        "objectKey": "public/vanahom/vanahom-logo-sanctem-grey-11625d517dc0/11625d517dc05c9a1c4b0d96e094df1bb5fd8e44506b99de22c0216a32057b65/original.png",
+        "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-sanctem-grey-11625d517dc0/11625d517dc05c9a1c4b0d96e094df1bb5fd8e44506b99de22c0216a32057b65/original.png",
+        "legacyUrls": [],
+        "status": "ready",
+        "version": 1
+      },
+      {
+        "id": "vanahom-logo-sanctem-grey-868e91d64b3b",
+        "ownerType": "owned-ip",
+        "ownerId": "vanahom",
+        "role": "logo",
+        "title": "sanctem grey",
+        "access": "public",
+        "sourcePath": "VANAHOM/vanahom_logo/svg/sanctem-grey.svg",
+        "sourceFilename": "sanctem-grey.svg",
+        "sha256": "868e91d64b3b276c948ef090d8f8d4995e6dc5ff631bb8b30afab7d93aa079a6",
+        "mimeType": "image/svg+xml",
+        "extension": "svg",
+        "bytes": 6907,
+        "size": "6.75 KB",
+        "width": null,
+        "height": null,
+        "dimensions": "",
+        "objectKey": "public/vanahom/vanahom-logo-sanctem-grey-868e91d64b3b/868e91d64b3b276c948ef090d8f8d4995e6dc5ff631bb8b30afab7d93aa079a6/original.svg",
+        "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-sanctem-grey-868e91d64b3b/868e91d64b3b276c948ef090d8f8d4995e6dc5ff631bb8b30afab7d93aa079a6/original.svg",
+        "legacyUrls": [],
+        "status": "ready",
+        "version": 1
+      },
+      {
+        "id": "vanahom-logo-sanctem-square-d8bf86799be1",
+        "ownerType": "owned-ip",
+        "ownerId": "vanahom",
+        "role": "logo",
+        "title": "sanctem square",
+        "access": "public",
+        "sourcePath": "VANAHOM/vanahom_logo/sanctem-square.png",
+        "sourceFilename": "sanctem-square.png",
+        "sha256": "d8bf86799be14adb5933c9de96a2cb614b6f92ee8f0000d692b84de7bcca3116",
+        "mimeType": "image/png",
+        "extension": "png",
+        "bytes": 17491,
+        "size": "17.1 KB",
+        "width": 500,
+        "height": 500,
+        "dimensions": "500 x 500 px",
+        "objectKey": "public/vanahom/vanahom-logo-sanctem-square-d8bf86799be1/d8bf86799be14adb5933c9de96a2cb614b6f92ee8f0000d692b84de7bcca3116/original.png",
+        "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-sanctem-square-d8bf86799be1/d8bf86799be14adb5933c9de96a2cb614b6f92ee8f0000d692b84de7bcca3116/original.png",
+        "legacyUrls": [],
+        "status": "ready",
+        "version": 1
+      },
+      {
+        "id": "vanahom-logo-vanahom-grey-6f8004ae00d1",
+        "ownerType": "owned-ip",
+        "ownerId": "vanahom",
+        "role": "logo",
+        "title": "vanahom grey",
+        "access": "public",
+        "sourcePath": "VANAHOM/vanahom_logo/svg/vanahom-grey.svg",
+        "sourceFilename": "vanahom-grey.svg",
+        "sha256": "6f8004ae00d10085af2207fdbf7604ee9dbac1cb1331cec32a1fe95df0fbbda6",
+        "mimeType": "image/svg+xml",
+        "extension": "svg",
+        "bytes": 5386,
+        "size": "5.26 KB",
+        "width": null,
+        "height": null,
+        "dimensions": "",
+        "objectKey": "public/vanahom/vanahom-logo-vanahom-grey-6f8004ae00d1/6f8004ae00d10085af2207fdbf7604ee9dbac1cb1331cec32a1fe95df0fbbda6/original.svg",
+        "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-grey-6f8004ae00d1/6f8004ae00d10085af2207fdbf7604ee9dbac1cb1331cec32a1fe95df0fbbda6/original.svg",
+        "legacyUrls": [],
+        "status": "ready",
+        "version": 1
+      },
+      {
+        "id": "vanahom-logo-vanahom-grey-7cef9ef2e3e2",
+        "ownerType": "owned-ip",
+        "ownerId": "vanahom",
+        "role": "logo",
+        "title": "vanahom grey",
+        "access": "private",
+        "sourcePath": "VANAHOM/assets/logos/vanahom-grey.ai",
+        "sourceFilename": "vanahom-grey.ai",
+        "sha256": "7cef9ef2e3e201f0c0a49de5cff1b9b1ce5ff93cc6b88288a86ee31881ba73ba",
+        "mimeType": "application/illustrator",
+        "extension": "ai",
+        "bytes": 55739,
+        "size": "54.4 KB",
+        "width": null,
+        "height": null,
+        "dimensions": "",
+        "objectKey": "private/vanahom/vanahom-logo-vanahom-grey-7cef9ef2e3e2/7cef9ef2e3e201f0c0a49de5cff1b9b1ce5ff93cc6b88288a86ee31881ba73ba/source.ai",
+        "mediaUrl": "https://media.apuch.art/private/vanahom/vanahom-logo-vanahom-grey-7cef9ef2e3e2/7cef9ef2e3e201f0c0a49de5cff1b9b1ce5ff93cc6b88288a86ee31881ba73ba/source.ai",
+        "legacyUrls": [],
+        "status": "processing",
+        "version": 1
+      },
+      {
+        "id": "vanahom-logo-vanahom-grey-be3801b3cee7",
+        "ownerType": "owned-ip",
+        "ownerId": "vanahom",
+        "role": "logo",
+        "title": "VANAHOM Grey",
+        "access": "public",
+        "sourcePath": "VANAHOM/vanahom_logo/VANAHOM_Grey.png",
+        "sourceFilename": "VANAHOM_Grey.png",
+        "sha256": "be3801b3cee7bcf8fffad8e4d5dc0b9b7594bccc9f6ea6badbd6fbe7e566e78f",
+        "mimeType": "image/png",
+        "extension": "png",
+        "bytes": 384278,
+        "size": "375.3 KB",
+        "width": 6000,
+        "height": 1687,
+        "dimensions": "6000 x 1687 px",
+        "objectKey": "public/vanahom/vanahom-logo-vanahom-grey-be3801b3cee7/be3801b3cee7bcf8fffad8e4d5dc0b9b7594bccc9f6ea6badbd6fbe7e566e78f/original.png",
+        "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-grey-be3801b3cee7/be3801b3cee7bcf8fffad8e4d5dc0b9b7594bccc9f6ea6badbd6fbe7e566e78f/original.png",
+        "legacyUrls": [],
+        "status": "ready",
+        "version": 1
+      },
+      {
+        "id": "vanahom-logo-vanahom-grey-square-f7b913bf77e5",
+        "ownerType": "owned-ip",
+        "ownerId": "vanahom",
+        "role": "logo",
+        "title": "vanahom grey square",
+        "access": "public",
+        "sourcePath": "VANAHOM/vanahom_logo/vanahom-grey-square.png",
+        "sourceFilename": "vanahom-grey-square.png",
+        "sha256": "f7b913bf77e5c7f240a4b7edc95c3fead0cef6008820a59a58892f8073c7c3e0",
+        "mimeType": "image/png",
+        "extension": "png",
+        "bytes": 19368,
+        "size": "18.9 KB",
+        "width": 500,
+        "height": 500,
+        "dimensions": "500 x 500 px",
+        "objectKey": "public/vanahom/vanahom-logo-vanahom-grey-square-f7b913bf77e5/f7b913bf77e5c7f240a4b7edc95c3fead0cef6008820a59a58892f8073c7c3e0/original.png",
+        "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-grey-square-f7b913bf77e5/f7b913bf77e5c7f240a4b7edc95c3fead0cef6008820a59a58892f8073c7c3e0/original.png",
+        "legacyUrls": [],
         "status": "ready",
         "version": 1
       },
@@ -746,6 +898,31 @@
         "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-logo-black-66b6749dd5bc/66b6749dd5bc270d9bcd677efef60b9ccc154bb1d5186f3e38e7f11beeaf804f/original.png",
         "legacyUrls": [
           "/assets/brand-images/vanahom-vanahom-logo-black.png"
+        ],
+        "status": "ready",
+        "version": 1
+      },
+      {
+        "id": "vanahom-logo-vanahom-logo-black-df26455cffee",
+        "ownerType": "owned-ip",
+        "ownerId": "vanahom",
+        "role": "logo",
+        "title": "vanahom logo black",
+        "access": "public",
+        "sourcePath": "VANAHOM/assets/brand-images/vanahom-logo-black.jpg",
+        "sourceFilename": "vanahom-logo-black.jpg",
+        "sha256": "df26455cffeef034a2803294f017c201a1216d8ef442952f50b200780ed1d5c2",
+        "mimeType": "image/jpeg",
+        "extension": "jpg",
+        "bytes": 376303,
+        "size": "367.5 KB",
+        "width": 6729,
+        "height": 1048,
+        "dimensions": "6729 x 1048 px",
+        "objectKey": "public/vanahom/vanahom-logo-vanahom-logo-black-df26455cffee/df26455cffeef034a2803294f017c201a1216d8ef442952f50b200780ed1d5c2/original.jpg",
+        "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-logo-black-df26455cffee/df26455cffeef034a2803294f017c201a1216d8ef442952f50b200780ed1d5c2/original.jpg",
+        "legacyUrls": [
+          "/assets/brand-images/vanahom-vanahom-logo-black.jpg"
         ],
         "status": "ready",
         "version": 1
@@ -801,31 +978,6 @@
         "version": 1
       },
       {
-        "id": "vanahom-logo-vanahom-logo-red-3a4ea7360403",
-        "ownerType": "owned-ip",
-        "ownerId": "vanahom",
-        "role": "logo",
-        "title": "vanahom logo red",
-        "access": "public",
-        "sourcePath": "VANAHOM/assets/brand-images/vanahom-logo-red.jpg",
-        "sourceFilename": "vanahom-logo-red.jpg",
-        "sha256": "3a4ea73604031bb37c39091fe9ec56d3a31aba361d0e64b6643c702effa42c3b",
-        "mimeType": "image/jpeg",
-        "extension": "jpg",
-        "bytes": 761183,
-        "size": "743.3 KB",
-        "width": 8000,
-        "height": 2250,
-        "dimensions": "8000 x 2250 px",
-        "objectKey": "public/vanahom/vanahom-logo-vanahom-logo-red-3a4ea7360403/3a4ea73604031bb37c39091fe9ec56d3a31aba361d0e64b6643c702effa42c3b/original.jpg",
-        "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-logo-red-3a4ea7360403/3a4ea73604031bb37c39091fe9ec56d3a31aba361d0e64b6643c702effa42c3b/original.jpg",
-        "legacyUrls": [
-          "/assets/brand-images/vanahom-vanahom-logo-red.jpg"
-        ],
-        "status": "ready",
-        "version": 1
-      },
-      {
         "id": "vanahom-logo-vanahom-logo-red-30e1cf3ac718",
         "ownerType": "owned-ip",
         "ownerId": "vanahom",
@@ -851,26 +1003,26 @@
         "version": 1
       },
       {
-        "id": "vanahom-logo-vanahom-logo-white-ea52341e2e3c",
+        "id": "vanahom-logo-vanahom-logo-red-3a4ea7360403",
         "ownerType": "owned-ip",
         "ownerId": "vanahom",
         "role": "logo",
-        "title": "vanahom logo white",
+        "title": "vanahom logo red",
         "access": "public",
-        "sourcePath": "VANAHOM/assets/brand-images/vanahom-logo-white.jpg",
-        "sourceFilename": "vanahom-logo-white.jpg",
-        "sha256": "ea52341e2e3c0cadecc69574b99bb400d6cdfd5674f3a11bb227f2bd4e315236",
+        "sourcePath": "VANAHOM/assets/brand-images/vanahom-logo-red.jpg",
+        "sourceFilename": "vanahom-logo-red.jpg",
+        "sha256": "3a4ea73604031bb37c39091fe9ec56d3a31aba361d0e64b6643c702effa42c3b",
         "mimeType": "image/jpeg",
         "extension": "jpg",
-        "bytes": 511799,
-        "size": "499.8 KB",
+        "bytes": 761183,
+        "size": "743.3 KB",
         "width": 8000,
         "height": 2250,
         "dimensions": "8000 x 2250 px",
-        "objectKey": "public/vanahom/vanahom-logo-vanahom-logo-white-ea52341e2e3c/ea52341e2e3c0cadecc69574b99bb400d6cdfd5674f3a11bb227f2bd4e315236/original.jpg",
-        "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-logo-white-ea52341e2e3c/ea52341e2e3c0cadecc69574b99bb400d6cdfd5674f3a11bb227f2bd4e315236/original.jpg",
+        "objectKey": "public/vanahom/vanahom-logo-vanahom-logo-red-3a4ea7360403/3a4ea73604031bb37c39091fe9ec56d3a31aba361d0e64b6643c702effa42c3b/original.jpg",
+        "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-logo-red-3a4ea7360403/3a4ea73604031bb37c39091fe9ec56d3a31aba361d0e64b6643c702effa42c3b/original.jpg",
         "legacyUrls": [
-          "/assets/brand-images/vanahom-vanahom-logo-white.jpg"
+          "/assets/brand-images/vanahom-vanahom-logo-red.jpg"
         ],
         "status": "ready",
         "version": 1
@@ -901,163 +1053,27 @@
         "version": 1
       },
       {
-        "id": "vanahom-logo-vanahom-grey-7cef9ef2e3e2",
+        "id": "vanahom-logo-vanahom-logo-white-ea52341e2e3c",
         "ownerType": "owned-ip",
         "ownerId": "vanahom",
         "role": "logo",
-        "title": "vanahom grey",
-        "access": "private",
-        "sourcePath": "VANAHOM/assets/logos/vanahom-grey.ai",
-        "sourceFilename": "vanahom-grey.ai",
-        "sha256": "7cef9ef2e3e201f0c0a49de5cff1b9b1ce5ff93cc6b88288a86ee31881ba73ba",
-        "mimeType": "application/illustrator",
-        "extension": "ai",
-        "bytes": 55739,
-        "size": "54.4 KB",
-        "width": null,
-        "height": null,
-        "dimensions": "",
-        "objectKey": "private/vanahom/vanahom-logo-vanahom-grey-7cef9ef2e3e2/7cef9ef2e3e201f0c0a49de5cff1b9b1ce5ff93cc6b88288a86ee31881ba73ba/source.ai",
-        "mediaUrl": "https://media.apuch.art/private/vanahom/vanahom-logo-vanahom-grey-7cef9ef2e3e2/7cef9ef2e3e201f0c0a49de5cff1b9b1ce5ff93cc6b88288a86ee31881ba73ba/source.ai",
-        "legacyUrls": [],
-        "status": "processing",
-        "version": 1
-      },
-      {
-        "id": "vanahom-logo-sanctem-grey-11625d517dc0",
-        "ownerType": "owned-ip",
-        "ownerId": "vanahom",
-        "role": "logo",
-        "title": "Sanctem Grey",
+        "title": "vanahom logo white",
         "access": "public",
-        "sourcePath": "VANAHOM/vanahom_logo/Sanctem_Grey.png",
-        "sourceFilename": "Sanctem_Grey.png",
-        "sha256": "11625d517dc05c9a1c4b0d96e094df1bb5fd8e44506b99de22c0216a32057b65",
-        "mimeType": "image/png",
-        "extension": "png",
-        "bytes": 329367,
-        "size": "321.6 KB",
-        "width": 6000,
-        "height": 1687,
-        "dimensions": "6000 x 1687 px",
-        "objectKey": "public/vanahom/vanahom-logo-sanctem-grey-11625d517dc0/11625d517dc05c9a1c4b0d96e094df1bb5fd8e44506b99de22c0216a32057b65/original.png",
-        "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-sanctem-grey-11625d517dc0/11625d517dc05c9a1c4b0d96e094df1bb5fd8e44506b99de22c0216a32057b65/original.png",
-        "legacyUrls": [],
-        "status": "ready",
-        "version": 1
-      },
-      {
-        "id": "vanahom-logo-sanctem-square-d8bf86799be1",
-        "ownerType": "owned-ip",
-        "ownerId": "vanahom",
-        "role": "logo",
-        "title": "sanctem square",
-        "access": "public",
-        "sourcePath": "VANAHOM/vanahom_logo/sanctem-square.png",
-        "sourceFilename": "sanctem-square.png",
-        "sha256": "d8bf86799be14adb5933c9de96a2cb614b6f92ee8f0000d692b84de7bcca3116",
-        "mimeType": "image/png",
-        "extension": "png",
-        "bytes": 17491,
-        "size": "17.1 KB",
-        "width": 500,
-        "height": 500,
-        "dimensions": "500 x 500 px",
-        "objectKey": "public/vanahom/vanahom-logo-sanctem-square-d8bf86799be1/d8bf86799be14adb5933c9de96a2cb614b6f92ee8f0000d692b84de7bcca3116/original.png",
-        "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-sanctem-square-d8bf86799be1/d8bf86799be14adb5933c9de96a2cb614b6f92ee8f0000d692b84de7bcca3116/original.png",
-        "legacyUrls": [],
-        "status": "ready",
-        "version": 1
-      },
-      {
-        "id": "vanahom-logo-sanctem-grey-868e91d64b3b",
-        "ownerType": "owned-ip",
-        "ownerId": "vanahom",
-        "role": "logo",
-        "title": "sanctem grey",
-        "access": "public",
-        "sourcePath": "VANAHOM/vanahom_logo/svg/sanctem-grey.svg",
-        "sourceFilename": "sanctem-grey.svg",
-        "sha256": "868e91d64b3b276c948ef090d8f8d4995e6dc5ff631bb8b30afab7d93aa079a6",
-        "mimeType": "image/svg+xml",
-        "extension": "svg",
-        "bytes": 6907,
-        "size": "6.75 KB",
-        "width": null,
-        "height": null,
-        "dimensions": "",
-        "objectKey": "public/vanahom/vanahom-logo-sanctem-grey-868e91d64b3b/868e91d64b3b276c948ef090d8f8d4995e6dc5ff631bb8b30afab7d93aa079a6/original.svg",
-        "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-sanctem-grey-868e91d64b3b/868e91d64b3b276c948ef090d8f8d4995e6dc5ff631bb8b30afab7d93aa079a6/original.svg",
-        "legacyUrls": [],
-        "status": "ready",
-        "version": 1
-      },
-      {
-        "id": "vanahom-logo-vanahom-grey-6f8004ae00d1",
-        "ownerType": "owned-ip",
-        "ownerId": "vanahom",
-        "role": "logo",
-        "title": "vanahom grey",
-        "access": "public",
-        "sourcePath": "VANAHOM/vanahom_logo/svg/vanahom-grey.svg",
-        "sourceFilename": "vanahom-grey.svg",
-        "sha256": "6f8004ae00d10085af2207fdbf7604ee9dbac1cb1331cec32a1fe95df0fbbda6",
-        "mimeType": "image/svg+xml",
-        "extension": "svg",
-        "bytes": 5386,
-        "size": "5.26 KB",
-        "width": null,
-        "height": null,
-        "dimensions": "",
-        "objectKey": "public/vanahom/vanahom-logo-vanahom-grey-6f8004ae00d1/6f8004ae00d10085af2207fdbf7604ee9dbac1cb1331cec32a1fe95df0fbbda6/original.svg",
-        "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-grey-6f8004ae00d1/6f8004ae00d10085af2207fdbf7604ee9dbac1cb1331cec32a1fe95df0fbbda6/original.svg",
-        "legacyUrls": [],
-        "status": "ready",
-        "version": 1
-      },
-      {
-        "id": "vanahom-logo-vanahom-red-bc1229feaa16",
-        "ownerType": "owned-ip",
-        "ownerId": "vanahom",
-        "role": "logo",
-        "title": "vanahom red",
-        "access": "public",
-        "sourcePath": "VANAHOM/vanahom_logo/svg/vanahom-red.svg",
-        "sourceFilename": "vanahom-red.svg",
-        "sha256": "bc1229feaa169e426a7efa797d18a9a63c902e0ea4528f963653bb2296149c69",
-        "mimeType": "image/svg+xml",
-        "extension": "svg",
-        "bytes": 5386,
-        "size": "5.26 KB",
-        "width": null,
-        "height": null,
-        "dimensions": "",
-        "objectKey": "public/vanahom/vanahom-logo-vanahom-red-bc1229feaa16/bc1229feaa169e426a7efa797d18a9a63c902e0ea4528f963653bb2296149c69/original.svg",
-        "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-red-bc1229feaa16/bc1229feaa169e426a7efa797d18a9a63c902e0ea4528f963653bb2296149c69/original.svg",
-        "legacyUrls": [],
-        "status": "ready",
-        "version": 1
-      },
-      {
-        "id": "vanahom-logo-vanahom-grey-be3801b3cee7",
-        "ownerType": "owned-ip",
-        "ownerId": "vanahom",
-        "role": "logo",
-        "title": "VANAHOM Grey",
-        "access": "public",
-        "sourcePath": "VANAHOM/vanahom_logo/VANAHOM_Grey.png",
-        "sourceFilename": "VANAHOM_Grey.png",
-        "sha256": "be3801b3cee7bcf8fffad8e4d5dc0b9b7594bccc9f6ea6badbd6fbe7e566e78f",
-        "mimeType": "image/png",
-        "extension": "png",
-        "bytes": 384278,
-        "size": "375.3 KB",
-        "width": 6000,
-        "height": 1687,
-        "dimensions": "6000 x 1687 px",
-        "objectKey": "public/vanahom/vanahom-logo-vanahom-grey-be3801b3cee7/be3801b3cee7bcf8fffad8e4d5dc0b9b7594bccc9f6ea6badbd6fbe7e566e78f/original.png",
-        "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-grey-be3801b3cee7/be3801b3cee7bcf8fffad8e4d5dc0b9b7594bccc9f6ea6badbd6fbe7e566e78f/original.png",
-        "legacyUrls": [],
+        "sourcePath": "VANAHOM/assets/brand-images/vanahom-logo-white.jpg",
+        "sourceFilename": "vanahom-logo-white.jpg",
+        "sha256": "ea52341e2e3c0cadecc69574b99bb400d6cdfd5674f3a11bb227f2bd4e315236",
+        "mimeType": "image/jpeg",
+        "extension": "jpg",
+        "bytes": 511799,
+        "size": "499.8 KB",
+        "width": 8000,
+        "height": 2250,
+        "dimensions": "8000 x 2250 px",
+        "objectKey": "public/vanahom/vanahom-logo-vanahom-logo-white-ea52341e2e3c/ea52341e2e3c0cadecc69574b99bb400d6cdfd5674f3a11bb227f2bd4e315236/original.jpg",
+        "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-logo-white-ea52341e2e3c/ea52341e2e3c0cadecc69574b99bb400d6cdfd5674f3a11bb227f2bd4e315236/original.jpg",
+        "legacyUrls": [
+          "/assets/brand-images/vanahom-vanahom-logo-white.jpg"
+        ],
         "status": "ready",
         "version": 1
       },
@@ -1085,24 +1101,24 @@
         "version": 1
       },
       {
-        "id": "vanahom-logo-vanahom-grey-square-f7b913bf77e5",
+        "id": "vanahom-logo-vanahom-red-bc1229feaa16",
         "ownerType": "owned-ip",
         "ownerId": "vanahom",
         "role": "logo",
-        "title": "vanahom grey square",
+        "title": "vanahom red",
         "access": "public",
-        "sourcePath": "VANAHOM/vanahom_logo/vanahom-grey-square.png",
-        "sourceFilename": "vanahom-grey-square.png",
-        "sha256": "f7b913bf77e5c7f240a4b7edc95c3fead0cef6008820a59a58892f8073c7c3e0",
-        "mimeType": "image/png",
-        "extension": "png",
-        "bytes": 19368,
-        "size": "18.9 KB",
-        "width": 500,
-        "height": 500,
-        "dimensions": "500 x 500 px",
-        "objectKey": "public/vanahom/vanahom-logo-vanahom-grey-square-f7b913bf77e5/f7b913bf77e5c7f240a4b7edc95c3fead0cef6008820a59a58892f8073c7c3e0/original.png",
-        "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-grey-square-f7b913bf77e5/f7b913bf77e5c7f240a4b7edc95c3fead0cef6008820a59a58892f8073c7c3e0/original.png",
+        "sourcePath": "VANAHOM/vanahom_logo/svg/vanahom-red.svg",
+        "sourceFilename": "vanahom-red.svg",
+        "sha256": "bc1229feaa169e426a7efa797d18a9a63c902e0ea4528f963653bb2296149c69",
+        "mimeType": "image/svg+xml",
+        "extension": "svg",
+        "bytes": 5386,
+        "size": "5.26 KB",
+        "width": null,
+        "height": null,
+        "dimensions": "",
+        "objectKey": "public/vanahom/vanahom-logo-vanahom-red-bc1229feaa16/bc1229feaa169e426a7efa797d18a9a63c902e0ea4528f963653bb2296149c69/original.svg",
+        "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-red-bc1229feaa16/bc1229feaa169e426a7efa797d18a9a63c902e0ea4528f963653bb2296149c69/original.svg",
         "legacyUrls": [],
         "status": "ready",
         "version": 1
@@ -1193,7 +1209,9 @@
             "height": 941,
             "dimensions": "1672 x 941 px",
             "sha256": "536bd937417d4002ef9d30d7aa2231c42425ef4ee96e77eb8a09083468b35936",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "vanahom-logo-vanahom-logo-black-df26455cffee",
@@ -1207,7 +1225,9 @@
             "height": 1048,
             "dimensions": "6729 x 1048 px",
             "sha256": "df26455cffeef034a2803294f017c201a1216d8ef442952f50b200780ed1d5c2",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "vanahom-logo-vanahom-logo-black-66b6749dd5bc",
@@ -1221,7 +1241,9 @@
             "height": 540,
             "dimensions": "1920 x 540 px",
             "sha256": "66b6749dd5bc270d9bcd677efef60b9ccc154bb1d5186f3e38e7f11beeaf804f",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "vanahom-logo-vanahom-logo-grey-04526fd5fec0",
@@ -1235,7 +1257,9 @@
             "height": 2250,
             "dimensions": "8000 x 2250 px",
             "sha256": "04526fd5fec022bedff984a47af22b5d9aa177a01203c49c00dd09749568327c",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "vanahom-logo-vanahom-logo-grey-1d786386b770",
@@ -1249,7 +1273,9 @@
             "height": 540,
             "dimensions": "1920 x 540 px",
             "sha256": "1d786386b7703e88def27656f4c139bdf93ed60bf47d5a074bcf95e1a9537cb6",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "vanahom-logo-vanahom-logo-red-3a4ea7360403",
@@ -1263,7 +1289,9 @@
             "height": 2250,
             "dimensions": "8000 x 2250 px",
             "sha256": "3a4ea73604031bb37c39091fe9ec56d3a31aba361d0e64b6643c702effa42c3b",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "vanahom-logo-vanahom-logo-red-30e1cf3ac718",
@@ -1277,7 +1305,9 @@
             "height": 540,
             "dimensions": "1920 x 540 px",
             "sha256": "30e1cf3ac718bac77ac730c09f514b6f68a7f30fb763d7fa58fb6d96531862fc",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "vanahom-logo-vanahom-logo-white-ea52341e2e3c",
@@ -1291,7 +1321,9 @@
             "height": 2250,
             "dimensions": "8000 x 2250 px",
             "sha256": "ea52341e2e3c0cadecc69574b99bb400d6cdfd5674f3a11bb227f2bd4e315236",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "vanahom-logo-vanahom-logo-white-34644c520c8a",
@@ -1305,7 +1337,9 @@
             "height": 540,
             "dimensions": "1920 x 540 px",
             "sha256": "34644c520c8a510d76f2cba8b7fc555980935555395061e0b4243e7dd810454d",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "vanahom-logo-sanctem-grey-11625d517dc0",
@@ -1319,7 +1353,9 @@
             "height": 1687,
             "dimensions": "6000 x 1687 px",
             "sha256": "11625d517dc05c9a1c4b0d96e094df1bb5fd8e44506b99de22c0216a32057b65",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "vanahom-logo-sanctem-square-d8bf86799be1",
@@ -1333,7 +1369,9 @@
             "height": 500,
             "dimensions": "500 x 500 px",
             "sha256": "d8bf86799be14adb5933c9de96a2cb614b6f92ee8f0000d692b84de7bcca3116",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "vanahom-logo-sanctem-grey-868e91d64b3b",
@@ -1347,7 +1385,9 @@
             "height": null,
             "dimensions": "",
             "sha256": "868e91d64b3b276c948ef090d8f8d4995e6dc5ff631bb8b30afab7d93aa079a6",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "vanahom-logo-vanahom-grey-6f8004ae00d1",
@@ -1361,7 +1401,9 @@
             "height": null,
             "dimensions": "",
             "sha256": "6f8004ae00d10085af2207fdbf7604ee9dbac1cb1331cec32a1fe95df0fbbda6",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "vanahom-logo-vanahom-red-bc1229feaa16",
@@ -1375,7 +1417,9 @@
             "height": null,
             "dimensions": "",
             "sha256": "bc1229feaa169e426a7efa797d18a9a63c902e0ea4528f963653bb2296149c69",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "vanahom-logo-vanahom-grey-be3801b3cee7",
@@ -1389,7 +1433,9 @@
             "height": 1687,
             "dimensions": "6000 x 1687 px",
             "sha256": "be3801b3cee7bcf8fffad8e4d5dc0b9b7594bccc9f6ea6badbd6fbe7e566e78f",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "vanahom-logo-vanahom-red-ae206d679bd8",
@@ -1403,7 +1449,9 @@
             "height": 1687,
             "dimensions": "6000 x 1687 px",
             "sha256": "ae206d679bd8f5de8cbe63dfff015035e71dd6cc3cd20178f68f6c84fde59197",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "vanahom-logo-vanahom-grey-square-f7b913bf77e5",
@@ -1417,7 +1465,9 @@
             "height": 500,
             "dimensions": "500 x 500 px",
             "sha256": "f7b913bf77e5c7f240a4b7edc95c3fead0cef6008820a59a58892f8073c7c3e0",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "vanahom-logo-vanahom-red-square-668e241a4114",
@@ -1431,7 +1481,9 @@
             "height": 500,
             "dimensions": "500 x 500 px",
             "sha256": "668e241a4114e0b6339bf987cb8df7b823f078386f5ea107678766ab5bcf3a3f",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           }
         ]
       }
@@ -1487,7 +1539,9 @@
           "height": 941,
           "dimensions": "1672 x 941 px",
           "sha256": "536bd937417d4002ef9d30d7aa2231c42425ef4ee96e77eb8a09083468b35936",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "vanahom-logo-vanahom-logo-black-df26455cffee",
@@ -1501,7 +1555,9 @@
           "height": 1048,
           "dimensions": "6729 x 1048 px",
           "sha256": "df26455cffeef034a2803294f017c201a1216d8ef442952f50b200780ed1d5c2",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "vanahom-logo-vanahom-logo-black-66b6749dd5bc",
@@ -1515,7 +1571,9 @@
           "height": 540,
           "dimensions": "1920 x 540 px",
           "sha256": "66b6749dd5bc270d9bcd677efef60b9ccc154bb1d5186f3e38e7f11beeaf804f",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "vanahom-logo-vanahom-logo-grey-04526fd5fec0",
@@ -1529,7 +1587,9 @@
           "height": 2250,
           "dimensions": "8000 x 2250 px",
           "sha256": "04526fd5fec022bedff984a47af22b5d9aa177a01203c49c00dd09749568327c",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "vanahom-logo-vanahom-logo-grey-1d786386b770",
@@ -1543,7 +1603,9 @@
           "height": 540,
           "dimensions": "1920 x 540 px",
           "sha256": "1d786386b7703e88def27656f4c139bdf93ed60bf47d5a074bcf95e1a9537cb6",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "vanahom-logo-vanahom-logo-red-3a4ea7360403",
@@ -1557,7 +1619,9 @@
           "height": 2250,
           "dimensions": "8000 x 2250 px",
           "sha256": "3a4ea73604031bb37c39091fe9ec56d3a31aba361d0e64b6643c702effa42c3b",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "vanahom-logo-vanahom-logo-red-30e1cf3ac718",
@@ -1571,7 +1635,9 @@
           "height": 540,
           "dimensions": "1920 x 540 px",
           "sha256": "30e1cf3ac718bac77ac730c09f514b6f68a7f30fb763d7fa58fb6d96531862fc",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "vanahom-logo-vanahom-logo-white-ea52341e2e3c",
@@ -1585,7 +1651,9 @@
           "height": 2250,
           "dimensions": "8000 x 2250 px",
           "sha256": "ea52341e2e3c0cadecc69574b99bb400d6cdfd5674f3a11bb227f2bd4e315236",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "vanahom-logo-vanahom-logo-white-34644c520c8a",
@@ -1599,7 +1667,9 @@
           "height": 540,
           "dimensions": "1920 x 540 px",
           "sha256": "34644c520c8a510d76f2cba8b7fc555980935555395061e0b4243e7dd810454d",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "vanahom-logo-sanctem-grey-11625d517dc0",
@@ -1613,7 +1683,9 @@
           "height": 1687,
           "dimensions": "6000 x 1687 px",
           "sha256": "11625d517dc05c9a1c4b0d96e094df1bb5fd8e44506b99de22c0216a32057b65",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "vanahom-logo-sanctem-square-d8bf86799be1",
@@ -1627,7 +1699,9 @@
           "height": 500,
           "dimensions": "500 x 500 px",
           "sha256": "d8bf86799be14adb5933c9de96a2cb614b6f92ee8f0000d692b84de7bcca3116",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "vanahom-logo-sanctem-grey-868e91d64b3b",
@@ -1641,7 +1715,9 @@
           "height": null,
           "dimensions": "",
           "sha256": "868e91d64b3b276c948ef090d8f8d4995e6dc5ff631bb8b30afab7d93aa079a6",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "vanahom-logo-vanahom-grey-6f8004ae00d1",
@@ -1655,7 +1731,9 @@
           "height": null,
           "dimensions": "",
           "sha256": "6f8004ae00d10085af2207fdbf7604ee9dbac1cb1331cec32a1fe95df0fbbda6",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "vanahom-logo-vanahom-red-bc1229feaa16",
@@ -1669,7 +1747,9 @@
           "height": null,
           "dimensions": "",
           "sha256": "bc1229feaa169e426a7efa797d18a9a63c902e0ea4528f963653bb2296149c69",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "vanahom-logo-vanahom-grey-be3801b3cee7",
@@ -1683,7 +1763,9 @@
           "height": 1687,
           "dimensions": "6000 x 1687 px",
           "sha256": "be3801b3cee7bcf8fffad8e4d5dc0b9b7594bccc9f6ea6badbd6fbe7e566e78f",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "vanahom-logo-vanahom-red-ae206d679bd8",
@@ -1697,7 +1779,9 @@
           "height": 1687,
           "dimensions": "6000 x 1687 px",
           "sha256": "ae206d679bd8f5de8cbe63dfff015035e71dd6cc3cd20178f68f6c84fde59197",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "vanahom-logo-vanahom-grey-square-f7b913bf77e5",
@@ -1711,7 +1795,9 @@
           "height": 500,
           "dimensions": "500 x 500 px",
           "sha256": "f7b913bf77e5c7f240a4b7edc95c3fead0cef6008820a59a58892f8073c7c3e0",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "vanahom-logo-vanahom-red-square-668e241a4114",
@@ -1725,7 +1811,9 @@
           "height": 500,
           "dimensions": "500 x 500 px",
           "sha256": "668e241a4114e0b6339bf987cb8df7b823f078386f5ea107678766ab5bcf3a3f",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         }
       ]
     },
@@ -1910,11 +1998,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/sanctem.json",
     "url": "brand.html?brand=sanctem",
@@ -1947,28 +2035,26 @@
         "version": 1
       },
       {
-        "id": "sanctem-logo-sanctem-logo-black-alt-592a2bac1aee",
+        "id": "sanctem-logo-sanctem-ce4ee817a3f7",
         "ownerType": "owned-ip",
         "ownerId": "sanctem",
         "role": "logo",
-        "title": "sanctem logo black alt",
-        "access": "public",
-        "sourcePath": "Sanctem/assets/brand-images/sanctem-logo-black-alt.jpg",
-        "sourceFilename": "sanctem-logo-black-alt.jpg",
-        "sha256": "592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82",
-        "mimeType": "image/jpeg",
-        "extension": "jpg",
-        "bytes": 474946,
-        "size": "463.8 KB",
-        "width": 8000,
-        "height": 2250,
-        "dimensions": "8000 x 2250 px",
-        "objectKey": "public/sanctem/sanctem-logo-sanctem-logo-black-alt-592a2bac1aee/592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82/original.jpg",
-        "mediaUrl": "https://media.apuch.art/public/sanctem/sanctem-logo-sanctem-logo-black-alt-592a2bac1aee/592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82/original.jpg",
-        "legacyUrls": [
-          "/assets/brand-images/sanctem-sanctem-logo-black-alt.jpg"
-        ],
-        "status": "ready",
+        "title": "sanctem",
+        "access": "private",
+        "sourcePath": "Sanctem/assets/logos/sanctem.ai",
+        "sourceFilename": "sanctem.ai",
+        "sha256": "ce4ee817a3f7fab9ceba17ada0e8fcb38cc9a124cd621c6098da0e3959c94608",
+        "mimeType": "application/illustrator",
+        "extension": "ai",
+        "bytes": 58946,
+        "size": "57.6 KB",
+        "width": null,
+        "height": null,
+        "dimensions": "",
+        "objectKey": "private/sanctem/sanctem-logo-sanctem-ce4ee817a3f7/ce4ee817a3f7fab9ceba17ada0e8fcb38cc9a124cd621c6098da0e3959c94608/source.ai",
+        "mediaUrl": "https://media.apuch.art/private/sanctem/sanctem-logo-sanctem-ce4ee817a3f7/ce4ee817a3f7fab9ceba17ada0e8fcb38cc9a124cd621c6098da0e3959c94608/source.ai",
+        "legacyUrls": [],
+        "status": "processing",
         "version": 1
       },
       {
@@ -1992,6 +2078,31 @@
         "mediaUrl": "https://media.apuch.art/public/sanctem/sanctem-logo-sanctem-logo-black-1857cc80cd4b/1857cc80cd4bdf4b70812e2530e4e8c0af9eb43c6585add5ef953d285441b91e/original.png",
         "legacyUrls": [
           "/assets/brand-images/sanctem-sanctem-logo-black.png"
+        ],
+        "status": "ready",
+        "version": 1
+      },
+      {
+        "id": "sanctem-logo-sanctem-logo-black-alt-592a2bac1aee",
+        "ownerType": "owned-ip",
+        "ownerId": "sanctem",
+        "role": "logo",
+        "title": "sanctem logo black alt",
+        "access": "public",
+        "sourcePath": "Sanctem/assets/brand-images/sanctem-logo-black-alt.jpg",
+        "sourceFilename": "sanctem-logo-black-alt.jpg",
+        "sha256": "592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82",
+        "mimeType": "image/jpeg",
+        "extension": "jpg",
+        "bytes": 474946,
+        "size": "463.8 KB",
+        "width": 8000,
+        "height": 2250,
+        "dimensions": "8000 x 2250 px",
+        "objectKey": "public/sanctem/sanctem-logo-sanctem-logo-black-alt-592a2bac1aee/592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82/original.jpg",
+        "mediaUrl": "https://media.apuch.art/public/sanctem/sanctem-logo-sanctem-logo-black-alt-592a2bac1aee/592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82/original.jpg",
+        "legacyUrls": [
+          "/assets/brand-images/sanctem-sanctem-logo-black-alt.jpg"
         ],
         "status": "ready",
         "version": 1
@@ -2047,26 +2158,26 @@
         "version": 1
       },
       {
-        "id": "sanctem-logo-sanctem-logo-white-black-alt-592a2bac1aee",
+        "id": "sanctem-logo-sanctem-logo-white-5045acdbe817",
         "ownerType": "owned-ip",
         "ownerId": "sanctem",
         "role": "logo",
-        "title": "sanctem logo white black alt",
+        "title": "sanctem logo white",
         "access": "public",
-        "sourcePath": "Sanctem/assets/brand-images/sanctem-logo-white-black-alt.jpg",
-        "sourceFilename": "sanctem-logo-white-black-alt.jpg",
-        "sha256": "592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82",
-        "mimeType": "image/jpeg",
-        "extension": "jpg",
-        "bytes": 474946,
-        "size": "463.8 KB",
-        "width": 8000,
-        "height": 2250,
-        "dimensions": "8000 x 2250 px",
-        "objectKey": "public/sanctem/sanctem-logo-sanctem-logo-white-black-alt-592a2bac1aee/592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82/original.jpg",
-        "mediaUrl": "https://media.apuch.art/public/sanctem/sanctem-logo-sanctem-logo-white-black-alt-592a2bac1aee/592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82/original.jpg",
+        "sourcePath": "Sanctem/assets/brand-images/sanctem-logo-white.png",
+        "sourceFilename": "sanctem-logo-white.png",
+        "sha256": "5045acdbe817e5a03a8ba97b492f785c2e6c72bc9cb1b9984e1a2f8ccdf164a0",
+        "mimeType": "image/png",
+        "extension": "png",
+        "bytes": 22626,
+        "size": "22.1 KB",
+        "width": 1920,
+        "height": 540,
+        "dimensions": "1920 x 540 px",
+        "objectKey": "public/sanctem/sanctem-logo-sanctem-logo-white-5045acdbe817/5045acdbe817e5a03a8ba97b492f785c2e6c72bc9cb1b9984e1a2f8ccdf164a0/original.png",
+        "mediaUrl": "https://media.apuch.art/public/sanctem/sanctem-logo-sanctem-logo-white-5045acdbe817/5045acdbe817e5a03a8ba97b492f785c2e6c72bc9cb1b9984e1a2f8ccdf164a0/original.png",
         "legacyUrls": [
-          "/assets/brand-images/sanctem-sanctem-logo-white-black-alt.jpg"
+          "/assets/brand-images/sanctem-sanctem-logo-white.png"
         ],
         "status": "ready",
         "version": 1
@@ -2097,51 +2208,28 @@
         "version": 1
       },
       {
-        "id": "sanctem-logo-sanctem-logo-white-5045acdbe817",
+        "id": "sanctem-logo-sanctem-logo-white-black-alt-592a2bac1aee",
         "ownerType": "owned-ip",
         "ownerId": "sanctem",
         "role": "logo",
-        "title": "sanctem logo white",
+        "title": "sanctem logo white black alt",
         "access": "public",
-        "sourcePath": "Sanctem/assets/brand-images/sanctem-logo-white.png",
-        "sourceFilename": "sanctem-logo-white.png",
-        "sha256": "5045acdbe817e5a03a8ba97b492f785c2e6c72bc9cb1b9984e1a2f8ccdf164a0",
-        "mimeType": "image/png",
-        "extension": "png",
-        "bytes": 22626,
-        "size": "22.1 KB",
-        "width": 1920,
-        "height": 540,
-        "dimensions": "1920 x 540 px",
-        "objectKey": "public/sanctem/sanctem-logo-sanctem-logo-white-5045acdbe817/5045acdbe817e5a03a8ba97b492f785c2e6c72bc9cb1b9984e1a2f8ccdf164a0/original.png",
-        "mediaUrl": "https://media.apuch.art/public/sanctem/sanctem-logo-sanctem-logo-white-5045acdbe817/5045acdbe817e5a03a8ba97b492f785c2e6c72bc9cb1b9984e1a2f8ccdf164a0/original.png",
+        "sourcePath": "Sanctem/assets/brand-images/sanctem-logo-white-black-alt.jpg",
+        "sourceFilename": "sanctem-logo-white-black-alt.jpg",
+        "sha256": "592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82",
+        "mimeType": "image/jpeg",
+        "extension": "jpg",
+        "bytes": 474946,
+        "size": "463.8 KB",
+        "width": 8000,
+        "height": 2250,
+        "dimensions": "8000 x 2250 px",
+        "objectKey": "public/sanctem/sanctem-logo-sanctem-logo-white-black-alt-592a2bac1aee/592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82/original.jpg",
+        "mediaUrl": "https://media.apuch.art/public/sanctem/sanctem-logo-sanctem-logo-white-black-alt-592a2bac1aee/592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82/original.jpg",
         "legacyUrls": [
-          "/assets/brand-images/sanctem-sanctem-logo-white.png"
+          "/assets/brand-images/sanctem-sanctem-logo-white-black-alt.jpg"
         ],
         "status": "ready",
-        "version": 1
-      },
-      {
-        "id": "sanctem-logo-sanctem-ce4ee817a3f7",
-        "ownerType": "owned-ip",
-        "ownerId": "sanctem",
-        "role": "logo",
-        "title": "sanctem",
-        "access": "private",
-        "sourcePath": "Sanctem/assets/logos/sanctem.ai",
-        "sourceFilename": "sanctem.ai",
-        "sha256": "ce4ee817a3f7fab9ceba17ada0e8fcb38cc9a124cd621c6098da0e3959c94608",
-        "mimeType": "application/illustrator",
-        "extension": "ai",
-        "bytes": 58946,
-        "size": "57.6 KB",
-        "width": null,
-        "height": null,
-        "dimensions": "",
-        "objectKey": "private/sanctem/sanctem-logo-sanctem-ce4ee817a3f7/ce4ee817a3f7fab9ceba17ada0e8fcb38cc9a124cd621c6098da0e3959c94608/source.ai",
-        "mediaUrl": "https://media.apuch.art/private/sanctem/sanctem-logo-sanctem-ce4ee817a3f7/ce4ee817a3f7fab9ceba17ada0e8fcb38cc9a124cd621c6098da0e3959c94608/source.ai",
-        "legacyUrls": [],
-        "status": "processing",
         "version": 1
       }
     ],
@@ -2207,7 +2295,9 @@
             "height": 540,
             "dimensions": "1920 x 540 px",
             "sha256": "dc34ba67f3af31597b6f03e8fd4890320676451d08cf17c48cb9ca650fa62cde",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "sanctem-logo-sanctem-logo-black-alt-592a2bac1aee",
@@ -2221,7 +2311,9 @@
             "height": 2250,
             "dimensions": "8000 x 2250 px",
             "sha256": "592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "sanctem-logo-sanctem-logo-black-1857cc80cd4b",
@@ -2235,7 +2327,9 @@
             "height": 540,
             "dimensions": "1920 x 540 px",
             "sha256": "1857cc80cd4bdf4b70812e2530e4e8c0af9eb43c6585add5ef953d285441b91e",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "sanctem-logo-sanctem-logo-color-6c9467089bab",
@@ -2249,7 +2343,9 @@
             "height": 1091,
             "dimensions": "6490 x 1091 px",
             "sha256": "6c9467089bab66fb225de66c0cb03ae035df61205db6fd6568054093d7912175",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "sanctem-logo-sanctem-logo-color-dc34ba67f3af",
@@ -2263,7 +2359,9 @@
             "height": 540,
             "dimensions": "1920 x 540 px",
             "sha256": "dc34ba67f3af31597b6f03e8fd4890320676451d08cf17c48cb9ca650fa62cde",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "sanctem-logo-sanctem-logo-white-black-alt-592a2bac1aee",
@@ -2277,7 +2375,9 @@
             "height": 2250,
             "dimensions": "8000 x 2250 px",
             "sha256": "592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "sanctem-logo-sanctem-logo-white-black-8a50506dc636",
@@ -2291,7 +2391,9 @@
             "height": 2250,
             "dimensions": "8000 x 2250 px",
             "sha256": "8a50506dc6360ed521fb23e4adfd046924792908e3070ae606ce55e69a5c1e95",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "sanctem-logo-sanctem-logo-white-5045acdbe817",
@@ -2305,7 +2407,9 @@
             "height": 540,
             "dimensions": "1920 x 540 px",
             "sha256": "5045acdbe817e5a03a8ba97b492f785c2e6c72bc9cb1b9984e1a2f8ccdf164a0",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           }
         ]
       }
@@ -2361,7 +2465,9 @@
           "height": 540,
           "dimensions": "1920 x 540 px",
           "sha256": "dc34ba67f3af31597b6f03e8fd4890320676451d08cf17c48cb9ca650fa62cde",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "sanctem-logo-sanctem-logo-black-alt-592a2bac1aee",
@@ -2375,7 +2481,9 @@
           "height": 2250,
           "dimensions": "8000 x 2250 px",
           "sha256": "592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "sanctem-logo-sanctem-logo-black-1857cc80cd4b",
@@ -2389,7 +2497,9 @@
           "height": 540,
           "dimensions": "1920 x 540 px",
           "sha256": "1857cc80cd4bdf4b70812e2530e4e8c0af9eb43c6585add5ef953d285441b91e",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "sanctem-logo-sanctem-logo-color-6c9467089bab",
@@ -2403,7 +2513,9 @@
           "height": 1091,
           "dimensions": "6490 x 1091 px",
           "sha256": "6c9467089bab66fb225de66c0cb03ae035df61205db6fd6568054093d7912175",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "sanctem-logo-sanctem-logo-color-dc34ba67f3af",
@@ -2417,7 +2529,9 @@
           "height": 540,
           "dimensions": "1920 x 540 px",
           "sha256": "dc34ba67f3af31597b6f03e8fd4890320676451d08cf17c48cb9ca650fa62cde",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "sanctem-logo-sanctem-logo-white-black-alt-592a2bac1aee",
@@ -2431,7 +2545,9 @@
           "height": 2250,
           "dimensions": "8000 x 2250 px",
           "sha256": "592a2bac1aee24c333962a81e3613d01506463b2c1511309c7d002db95d08b82",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "sanctem-logo-sanctem-logo-white-black-8a50506dc636",
@@ -2445,7 +2561,9 @@
           "height": 2250,
           "dimensions": "8000 x 2250 px",
           "sha256": "8a50506dc6360ed521fb23e4adfd046924792908e3070ae606ce55e69a5c1e95",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "sanctem-logo-sanctem-logo-white-5045acdbe817",
@@ -2459,7 +2577,9 @@
           "height": 540,
           "dimensions": "1920 x 540 px",
           "sha256": "5045acdbe817e5a03a8ba97b492f785c2e6c72bc9cb1b9984e1a2f8ccdf164a0",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         }
       ]
     },
@@ -2644,11 +2764,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/kind.json",
     "url": "brand.html?brand=kind",
@@ -2743,7 +2863,9 @@
             "height": 941,
             "dimensions": "1672 x 941 px",
             "sha256": "c7224d4b8fb7d8058636e35bc4df2c7f0dec0baf8968da57f533a6918cf33ee3",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           }
         ]
       }
@@ -2799,7 +2921,9 @@
           "height": 941,
           "dimensions": "1672 x 941 px",
           "sha256": "c7224d4b8fb7d8058636e35bc4df2c7f0dec0baf8968da57f533a6918cf33ee3",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         }
       ]
     },
@@ -2988,11 +3112,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/apha.json",
     "url": "brand.html?brand=apha",
@@ -3087,7 +3211,9 @@
             "height": 941,
             "dimensions": "1672 x 941 px",
             "sha256": "fc9496d5597101a9cacd136c43a3ecd5be168fe488fff2abb925fb8e1de061bc",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           }
         ]
       }
@@ -3143,7 +3269,9 @@
           "height": 941,
           "dimensions": "1672 x 941 px",
           "sha256": "fc9496d5597101a9cacd136c43a3ecd5be168fe488fff2abb925fb8e1de061bc",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         }
       ]
     },
@@ -3328,11 +3456,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/manaendless.json",
     "url": "brand.html?brand=manaendless",
@@ -3427,7 +3555,9 @@
             "height": 941,
             "dimensions": "1672 x 941 px",
             "sha256": "58a52f2e174817fe795761cd6688f944bd266782a5468c7448d70ed11b40952c",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           }
         ]
       }
@@ -3483,7 +3613,9 @@
           "height": 941,
           "dimensions": "1672 x 941 px",
           "sha256": "58a52f2e174817fe795761cd6688f944bd266782a5468c7448d70ed11b40952c",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         }
       ]
     },
@@ -3666,11 +3798,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/opcglobal.json",
     "url": "brand.html?brand=opcglobal",
@@ -3701,16 +3833,306 @@
         ],
         "status": "ready",
         "version": 1
+      },
+      {
+        "id": "opcglobal-hero-primary-blue-c970696e04ab",
+        "ownerType": "owned-ip",
+        "ownerId": "opcglobal",
+        "role": "hero",
+        "title": "OPC Global primary blue logo",
+        "access": "public",
+        "sourcePath": "OPCGLOBAL/assets/brand-images/primary-blue.png",
+        "sourceFilename": "蓝色.png",
+        "sha256": "c970696e04ab2859dd66c7b85c2c1b461d06ede4e2d65ec6a97d9c11db1396b3",
+        "mimeType": "image/png",
+        "extension": "png",
+        "bytes": 4172,
+        "size": "4.07 KB",
+        "width": 256,
+        "height": 256,
+        "dimensions": "256 x 256 px",
+        "objectKey": "public/opcglobal/opcglobal-hero-primary-blue-c970696e04ab/c970696e04ab2859dd66c7b85c2c1b461d06ede4e2d65ec6a97d9c11db1396b3/original.png",
+        "mediaUrl": "https://media.apuch.art/public/opcglobal/opcglobal-hero-primary-blue-c970696e04ab/c970696e04ab2859dd66c7b85c2c1b461d06ede4e2d65ec6a97d9c11db1396b3/original.png",
+        "legacyUrls": [],
+        "status": "ready",
+        "version": 1,
+        "metadata": {
+          "importGroup": "opcglobal-official-logo-set",
+          "colorway": "blue",
+          "primary": true,
+          "originalRelativePath": "蓝色/蓝色.png"
+        }
+      },
+      {
+        "id": "opcglobal-logo-black-jpg-76a48309a215",
+        "ownerType": "owned-ip",
+        "ownerId": "opcglobal",
+        "role": "logo",
+        "title": "OPC Global black logo",
+        "access": "public",
+        "sourcePath": "OPCGLOBAL/assets/brand-images/black-jpg.jpg",
+        "sourceFilename": "黑色.jpg",
+        "sha256": "76a48309a2156fdf1f1918955f202a1533bc708bec99c0bb65351942a6d169fa",
+        "mimeType": "image/jpeg",
+        "extension": "jpg",
+        "bytes": 79558,
+        "size": "77.7 KB",
+        "width": 1063,
+        "height": 1063,
+        "dimensions": "1063 x 1063 px",
+        "objectKey": "public/opcglobal/opcglobal-logo-black-jpg-76a48309a215/76a48309a2156fdf1f1918955f202a1533bc708bec99c0bb65351942a6d169fa/original.jpg",
+        "mediaUrl": "https://media.apuch.art/public/opcglobal/opcglobal-logo-black-jpg-76a48309a215/76a48309a2156fdf1f1918955f202a1533bc708bec99c0bb65351942a6d169fa/original.jpg",
+        "legacyUrls": [],
+        "status": "ready",
+        "version": 1,
+        "metadata": {
+          "importGroup": "opcglobal-official-logo-set",
+          "colorway": "black",
+          "primary": false,
+          "originalRelativePath": "黑色/黑色.jpg"
+        }
+      },
+      {
+        "id": "opcglobal-logo-black-transparent-ca9f06b66f58",
+        "ownerType": "owned-ip",
+        "ownerId": "opcglobal",
+        "role": "logo",
+        "title": "OPC Global black transparent logo",
+        "access": "public",
+        "sourcePath": "OPCGLOBAL/assets/brand-images/black-transparent.png",
+        "sourceFilename": "黑色透明.png",
+        "sha256": "ca9f06b66f583a3c3eb8261316dfd299790f1f614fdcdf7a7d3965f3fd8000ed",
+        "mimeType": "image/png",
+        "extension": "png",
+        "bytes": 3932,
+        "size": "3.84 KB",
+        "width": 256,
+        "height": 256,
+        "dimensions": "256 x 256 px",
+        "objectKey": "public/opcglobal/opcglobal-logo-black-transparent-ca9f06b66f58/ca9f06b66f583a3c3eb8261316dfd299790f1f614fdcdf7a7d3965f3fd8000ed/original.png",
+        "mediaUrl": "https://media.apuch.art/public/opcglobal/opcglobal-logo-black-transparent-ca9f06b66f58/ca9f06b66f583a3c3eb8261316dfd299790f1f614fdcdf7a7d3965f3fd8000ed/original.png",
+        "legacyUrls": [],
+        "status": "ready",
+        "version": 1,
+        "metadata": {
+          "importGroup": "opcglobal-official-logo-set",
+          "colorway": "black",
+          "primary": false,
+          "originalRelativePath": "黑色/黑色透明.png"
+        }
+      },
+      {
+        "id": "opcglobal-logo-blue-jpg-78995d0f5c1e",
+        "ownerType": "owned-ip",
+        "ownerId": "opcglobal",
+        "role": "logo",
+        "title": "OPC Global blue logo",
+        "access": "public",
+        "sourcePath": "OPCGLOBAL/assets/brand-images/blue-jpg.jpg",
+        "sourceFilename": "蓝色蓝色_白色透明.jpg",
+        "sha256": "78995d0f5c1e8a84b6cab4fbac635261a5c078b342dc14805547b18edae565a4",
+        "mimeType": "image/jpeg",
+        "extension": "jpg",
+        "bytes": 98119,
+        "size": "95.8 KB",
+        "width": 1063,
+        "height": 1063,
+        "dimensions": "1063 x 1063 px",
+        "objectKey": "public/opcglobal/opcglobal-logo-blue-jpg-78995d0f5c1e/78995d0f5c1e8a84b6cab4fbac635261a5c078b342dc14805547b18edae565a4/original.jpg",
+        "mediaUrl": "https://media.apuch.art/public/opcglobal/opcglobal-logo-blue-jpg-78995d0f5c1e/78995d0f5c1e8a84b6cab4fbac635261a5c078b342dc14805547b18edae565a4/original.jpg",
+        "legacyUrls": [],
+        "status": "ready",
+        "version": 1,
+        "metadata": {
+          "importGroup": "opcglobal-official-logo-set",
+          "colorway": "blue",
+          "primary": false,
+          "originalRelativePath": "蓝色/蓝色蓝色_白色透明.jpg"
+        }
+      },
+      {
+        "id": "opcglobal-logo-vector-b58c3be7390a",
+        "ownerType": "owned-ip",
+        "ownerId": "opcglobal",
+        "role": "logo",
+        "title": "OPC Global vector logo",
+        "access": "public",
+        "sourcePath": "OPCGLOBAL/assets/brand-images/vector.svg",
+        "sourceFilename": "logo-svg.svg",
+        "sha256": "b58c3be7390a1b625de8ad7d5c953fe8b95d1467692977c338c9b255f266502c",
+        "mimeType": "image/svg+xml",
+        "extension": "svg",
+        "bytes": 1603,
+        "size": "1.57 KB",
+        "width": 255,
+        "height": 255,
+        "dimensions": "255 x 255 px",
+        "objectKey": "public/opcglobal/opcglobal-logo-vector-b58c3be7390a/b58c3be7390a1b625de8ad7d5c953fe8b95d1467692977c338c9b255f266502c/original.svg",
+        "mediaUrl": "https://media.apuch.art/public/opcglobal/opcglobal-logo-vector-b58c3be7390a/b58c3be7390a1b625de8ad7d5c953fe8b95d1467692977c338c9b255f266502c/original.svg",
+        "legacyUrls": [],
+        "status": "ready",
+        "version": 1,
+        "metadata": {
+          "importGroup": "opcglobal-official-logo-set",
+          "colorway": "monochrome",
+          "primary": false,
+          "originalRelativePath": "logo-svg.svg"
+        }
+      },
+      {
+        "id": "opcglobal-logo-white-jpg-d5eff2b4da39",
+        "ownerType": "owned-ip",
+        "ownerId": "opcglobal",
+        "role": "logo",
+        "title": "OPC Global white logo",
+        "access": "public",
+        "sourcePath": "OPCGLOBAL/assets/brand-images/white-jpg.jpg",
+        "sourceFilename": "白色.jpg",
+        "sha256": "d5eff2b4da3934baa24e81764426d26de564afd1b050fad8e36eacda40633da5",
+        "mimeType": "image/jpeg",
+        "extension": "jpg",
+        "bytes": 79832,
+        "size": "78.0 KB",
+        "width": 1063,
+        "height": 1063,
+        "dimensions": "1063 x 1063 px",
+        "objectKey": "public/opcglobal/opcglobal-logo-white-jpg-d5eff2b4da39/d5eff2b4da3934baa24e81764426d26de564afd1b050fad8e36eacda40633da5/original.jpg",
+        "mediaUrl": "https://media.apuch.art/public/opcglobal/opcglobal-logo-white-jpg-d5eff2b4da39/d5eff2b4da3934baa24e81764426d26de564afd1b050fad8e36eacda40633da5/original.jpg",
+        "legacyUrls": [],
+        "status": "ready",
+        "version": 1,
+        "metadata": {
+          "importGroup": "opcglobal-official-logo-set",
+          "colorway": "white",
+          "primary": false,
+          "originalRelativePath": "白色/白色.jpg"
+        }
+      },
+      {
+        "id": "opcglobal-logo-white-transparent-f1f76209c767",
+        "ownerType": "owned-ip",
+        "ownerId": "opcglobal",
+        "role": "logo",
+        "title": "OPC Global white transparent logo",
+        "access": "public",
+        "sourcePath": "OPCGLOBAL/assets/brand-images/white-transparent.png",
+        "sourceFilename": "白色透明.png",
+        "sha256": "f1f76209c76744d1e9f7b4b692ab6f3b01e4df4e0e3b2a3cbb6e310be02dc8fe",
+        "mimeType": "image/png",
+        "extension": "png",
+        "bytes": 4194,
+        "size": "4.10 KB",
+        "width": 256,
+        "height": 256,
+        "dimensions": "256 x 256 px",
+        "objectKey": "public/opcglobal/opcglobal-logo-white-transparent-f1f76209c767/f1f76209c76744d1e9f7b4b692ab6f3b01e4df4e0e3b2a3cbb6e310be02dc8fe/original.png",
+        "mediaUrl": "https://media.apuch.art/public/opcglobal/opcglobal-logo-white-transparent-f1f76209c767/f1f76209c76744d1e9f7b4b692ab6f3b01e4df4e0e3b2a3cbb6e310be02dc8fe/original.png",
+        "legacyUrls": [],
+        "status": "ready",
+        "version": 1,
+        "metadata": {
+          "importGroup": "opcglobal-official-logo-set",
+          "colorway": "white",
+          "primary": false,
+          "originalRelativePath": "白色/白色透明.png"
+        }
+      },
+      {
+        "id": "opcglobal-logo-yellow-jpg-0c3d48dedef6",
+        "ownerType": "owned-ip",
+        "ownerId": "opcglobal",
+        "role": "logo",
+        "title": "OPC Global yellow logo",
+        "access": "public",
+        "sourcePath": "OPCGLOBAL/assets/brand-images/yellow-jpg.jpg",
+        "sourceFilename": "黄色白色透明.jpg",
+        "sha256": "0c3d48dedef6da1720ab08fe37784b2e173503066821ebb0531cf15561fa481b",
+        "mimeType": "image/jpeg",
+        "extension": "jpg",
+        "bytes": 134717,
+        "size": "132 KB",
+        "width": 1063,
+        "height": 1063,
+        "dimensions": "1063 x 1063 px",
+        "objectKey": "public/opcglobal/opcglobal-logo-yellow-jpg-0c3d48dedef6/0c3d48dedef6da1720ab08fe37784b2e173503066821ebb0531cf15561fa481b/original.jpg",
+        "mediaUrl": "https://media.apuch.art/public/opcglobal/opcglobal-logo-yellow-jpg-0c3d48dedef6/0c3d48dedef6da1720ab08fe37784b2e173503066821ebb0531cf15561fa481b/original.jpg",
+        "legacyUrls": [],
+        "status": "ready",
+        "version": 1,
+        "metadata": {
+          "importGroup": "opcglobal-official-logo-set",
+          "colorway": "yellow",
+          "primary": false,
+          "originalRelativePath": "黄色/黄色白色透明.jpg"
+        }
+      },
+      {
+        "id": "opcglobal-logo-yellow-transparent-9f71f58faaf3",
+        "ownerType": "owned-ip",
+        "ownerId": "opcglobal",
+        "role": "logo",
+        "title": "OPC Global yellow transparent logo",
+        "access": "public",
+        "sourcePath": "OPCGLOBAL/assets/brand-images/yellow-transparent.png",
+        "sourceFilename": "黄色.png",
+        "sha256": "9f71f58faaf3a693e9777af9cd6401cf46d927e7f78effd5b0a4d1eb1a9ba87d",
+        "mimeType": "image/png",
+        "extension": "png",
+        "bytes": 6355,
+        "size": "6.21 KB",
+        "width": 256,
+        "height": 256,
+        "dimensions": "256 x 256 px",
+        "objectKey": "public/opcglobal/opcglobal-logo-yellow-transparent-9f71f58faaf3/9f71f58faaf3a693e9777af9cd6401cf46d927e7f78effd5b0a4d1eb1a9ba87d/original.png",
+        "mediaUrl": "https://media.apuch.art/public/opcglobal/opcglobal-logo-yellow-transparent-9f71f58faaf3/9f71f58faaf3a693e9777af9cd6401cf46d927e7f78effd5b0a4d1eb1a9ba87d/original.png",
+        "legacyUrls": [],
+        "status": "ready",
+        "version": 1,
+        "metadata": {
+          "importGroup": "opcglobal-official-logo-set",
+          "colorway": "yellow",
+          "primary": false,
+          "originalRelativePath": "黄色/黄色.png"
+        }
+      },
+      {
+        "id": "opcglobal-source-master-ai-79d455673610",
+        "ownerType": "owned-ip",
+        "ownerId": "opcglobal",
+        "role": "source",
+        "title": "OPC Global master artwork",
+        "access": "private",
+        "sourcePath": "OPCGLOBAL/assets/source/master-ai.ai",
+        "sourceFilename": "源文件.ai",
+        "sha256": "79d4556736109d27d5c78feb04f71f712fadc3b36ee6e60c00ffa4cdb793d72e",
+        "mimeType": "application/illustrator",
+        "extension": "ai",
+        "bytes": 223934,
+        "size": "219 KB",
+        "width": null,
+        "height": null,
+        "dimensions": "",
+        "objectKey": "private/opcglobal/opcglobal-source-master-ai-79d455673610/79d4556736109d27d5c78feb04f71f712fadc3b36ee6e60c00ffa4cdb793d72e/source.ai",
+        "mediaUrl": "https://media.apuch.art/private/opcglobal/opcglobal-source-master-ai-79d455673610/79d4556736109d27d5c78feb04f71f712fadc3b36ee6e60c00ffa4cdb793d72e/source.ai",
+        "legacyUrls": [],
+        "status": "ready",
+        "version": 1,
+        "metadata": {
+          "importGroup": "opcglobal-official-logo-set",
+          "colorway": "source",
+          "primary": false,
+          "originalRelativePath": "源文件.ai"
+        }
       }
     ],
-    "logoUrl": "https://media.apuch.art/public/opcglobal/opcglobal-hero-opcglobal-brand-hero-8351935e9abc/8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40/original.png",
+    "logoUrl": "https://media.apuch.art/public/opcglobal/opcglobal-hero-primary-blue-c970696e04ab/c970696e04ab2859dd66c7b85c2c1b461d06ede4e2d65ec6a97d9c11db1396b3/original.png",
     "assetKit": {
       "assetKey": "opcglobal",
       "endpoints": {
         "brand": "api/brands/opcglobal.json",
-        "logo": "https://media.apuch.art/public/opcglobal/opcglobal-hero-opcglobal-brand-hero-8351935e9abc/8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40/original.png",
+        "logo": "https://media.apuch.art/public/opcglobal/opcglobal-hero-primary-blue-c970696e04ab/c970696e04ab2859dd66c7b85c2c1b461d06ede4e2d65ec6a97d9c11db1396b3/original.png",
         "images": "api/brands/opcglobal.json#images",
-        "adobe": "",
+        "adobe": "api/brands/opcglobal.json#adobeAssets",
         "tokens": "api/brands/opcglobal.json#tokens",
         "history": "api/history/opcglobal.json"
       },
@@ -3765,7 +4187,153 @@
             "height": 941,
             "dimensions": "1672 x 941 px",
             "sha256": "8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
+          },
+          {
+            "assetId": "opcglobal-logo-black-jpg-76a48309a215",
+            "path": "OPCGLOBAL/assets/brand-images/black-jpg.jpg",
+            "sitePath": "https://media.apuch.art/public/opcglobal/opcglobal-logo-black-jpg-76a48309a215/76a48309a2156fdf1f1918955f202a1533bc708bec99c0bb65351942a6d169fa/original.jpg",
+            "title": "OPC Global black logo",
+            "format": "JPG",
+            "bytes": 79558,
+            "size": "77.7 KB",
+            "width": 1063,
+            "height": 1063,
+            "dimensions": "1063 x 1063 px",
+            "sha256": "76a48309a2156fdf1f1918955f202a1533bc708bec99c0bb65351942a6d169fa",
+            "access": "public",
+            "colorway": "black",
+            "primaryAsset": false
+          },
+          {
+            "assetId": "opcglobal-logo-black-transparent-ca9f06b66f58",
+            "path": "OPCGLOBAL/assets/brand-images/black-transparent.png",
+            "sitePath": "https://media.apuch.art/public/opcglobal/opcglobal-logo-black-transparent-ca9f06b66f58/ca9f06b66f583a3c3eb8261316dfd299790f1f614fdcdf7a7d3965f3fd8000ed/original.png",
+            "title": "OPC Global black transparent logo",
+            "format": "PNG",
+            "bytes": 3932,
+            "size": "3.84 KB",
+            "width": 256,
+            "height": 256,
+            "dimensions": "256 x 256 px",
+            "sha256": "ca9f06b66f583a3c3eb8261316dfd299790f1f614fdcdf7a7d3965f3fd8000ed",
+            "access": "public",
+            "colorway": "black",
+            "primaryAsset": false
+          },
+          {
+            "assetId": "opcglobal-logo-blue-jpg-78995d0f5c1e",
+            "path": "OPCGLOBAL/assets/brand-images/blue-jpg.jpg",
+            "sitePath": "https://media.apuch.art/public/opcglobal/opcglobal-logo-blue-jpg-78995d0f5c1e/78995d0f5c1e8a84b6cab4fbac635261a5c078b342dc14805547b18edae565a4/original.jpg",
+            "title": "OPC Global blue logo",
+            "format": "JPG",
+            "bytes": 98119,
+            "size": "95.8 KB",
+            "width": 1063,
+            "height": 1063,
+            "dimensions": "1063 x 1063 px",
+            "sha256": "78995d0f5c1e8a84b6cab4fbac635261a5c078b342dc14805547b18edae565a4",
+            "access": "public",
+            "colorway": "blue",
+            "primaryAsset": false
+          },
+          {
+            "assetId": "opcglobal-hero-primary-blue-c970696e04ab",
+            "path": "OPCGLOBAL/assets/brand-images/primary-blue.png",
+            "sitePath": "https://media.apuch.art/public/opcglobal/opcglobal-hero-primary-blue-c970696e04ab/c970696e04ab2859dd66c7b85c2c1b461d06ede4e2d65ec6a97d9c11db1396b3/original.png",
+            "title": "OPC Global primary blue logo",
+            "format": "PNG",
+            "bytes": 4172,
+            "size": "4.07 KB",
+            "width": 256,
+            "height": 256,
+            "dimensions": "256 x 256 px",
+            "sha256": "c970696e04ab2859dd66c7b85c2c1b461d06ede4e2d65ec6a97d9c11db1396b3",
+            "access": "public",
+            "colorway": "blue",
+            "primaryAsset": true
+          },
+          {
+            "assetId": "opcglobal-logo-vector-b58c3be7390a",
+            "path": "OPCGLOBAL/assets/brand-images/vector.svg",
+            "sitePath": "https://media.apuch.art/public/opcglobal/opcglobal-logo-vector-b58c3be7390a/b58c3be7390a1b625de8ad7d5c953fe8b95d1467692977c338c9b255f266502c/original.svg",
+            "title": "OPC Global vector logo",
+            "format": "SVG",
+            "bytes": 1603,
+            "size": "1.57 KB",
+            "width": 255,
+            "height": 255,
+            "dimensions": "255 x 255 px",
+            "sha256": "b58c3be7390a1b625de8ad7d5c953fe8b95d1467692977c338c9b255f266502c",
+            "access": "public",
+            "colorway": "monochrome",
+            "primaryAsset": false
+          },
+          {
+            "assetId": "opcglobal-logo-white-jpg-d5eff2b4da39",
+            "path": "OPCGLOBAL/assets/brand-images/white-jpg.jpg",
+            "sitePath": "https://media.apuch.art/public/opcglobal/opcglobal-logo-white-jpg-d5eff2b4da39/d5eff2b4da3934baa24e81764426d26de564afd1b050fad8e36eacda40633da5/original.jpg",
+            "title": "OPC Global white logo",
+            "format": "JPG",
+            "bytes": 79832,
+            "size": "78.0 KB",
+            "width": 1063,
+            "height": 1063,
+            "dimensions": "1063 x 1063 px",
+            "sha256": "d5eff2b4da3934baa24e81764426d26de564afd1b050fad8e36eacda40633da5",
+            "access": "public",
+            "colorway": "white",
+            "primaryAsset": false
+          },
+          {
+            "assetId": "opcglobal-logo-white-transparent-f1f76209c767",
+            "path": "OPCGLOBAL/assets/brand-images/white-transparent.png",
+            "sitePath": "https://media.apuch.art/public/opcglobal/opcglobal-logo-white-transparent-f1f76209c767/f1f76209c76744d1e9f7b4b692ab6f3b01e4df4e0e3b2a3cbb6e310be02dc8fe/original.png",
+            "title": "OPC Global white transparent logo",
+            "format": "PNG",
+            "bytes": 4194,
+            "size": "4.10 KB",
+            "width": 256,
+            "height": 256,
+            "dimensions": "256 x 256 px",
+            "sha256": "f1f76209c76744d1e9f7b4b692ab6f3b01e4df4e0e3b2a3cbb6e310be02dc8fe",
+            "access": "public",
+            "colorway": "white",
+            "primaryAsset": false
+          },
+          {
+            "assetId": "opcglobal-logo-yellow-jpg-0c3d48dedef6",
+            "path": "OPCGLOBAL/assets/brand-images/yellow-jpg.jpg",
+            "sitePath": "https://media.apuch.art/public/opcglobal/opcglobal-logo-yellow-jpg-0c3d48dedef6/0c3d48dedef6da1720ab08fe37784b2e173503066821ebb0531cf15561fa481b/original.jpg",
+            "title": "OPC Global yellow logo",
+            "format": "JPG",
+            "bytes": 134717,
+            "size": "132 KB",
+            "width": 1063,
+            "height": 1063,
+            "dimensions": "1063 x 1063 px",
+            "sha256": "0c3d48dedef6da1720ab08fe37784b2e173503066821ebb0531cf15561fa481b",
+            "access": "public",
+            "colorway": "yellow",
+            "primaryAsset": false
+          },
+          {
+            "assetId": "opcglobal-logo-yellow-transparent-9f71f58faaf3",
+            "path": "OPCGLOBAL/assets/brand-images/yellow-transparent.png",
+            "sitePath": "https://media.apuch.art/public/opcglobal/opcglobal-logo-yellow-transparent-9f71f58faaf3/9f71f58faaf3a693e9777af9cd6401cf46d927e7f78effd5b0a4d1eb1a9ba87d/original.png",
+            "title": "OPC Global yellow transparent logo",
+            "format": "PNG",
+            "bytes": 6355,
+            "size": "6.21 KB",
+            "width": 256,
+            "height": 256,
+            "dimensions": "256 x 256 px",
+            "sha256": "9f71f58faaf3a693e9777af9cd6401cf46d927e7f78effd5b0a4d1eb1a9ba87d",
+            "access": "public",
+            "colorway": "yellow",
+            "primaryAsset": false
           }
         ]
       }
@@ -3821,7 +4389,153 @@
           "height": 941,
           "dimensions": "1672 x 941 px",
           "sha256": "8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
+        },
+        {
+          "assetId": "opcglobal-logo-black-jpg-76a48309a215",
+          "path": "OPCGLOBAL/assets/brand-images/black-jpg.jpg",
+          "sitePath": "https://media.apuch.art/public/opcglobal/opcglobal-logo-black-jpg-76a48309a215/76a48309a2156fdf1f1918955f202a1533bc708bec99c0bb65351942a6d169fa/original.jpg",
+          "title": "OPC Global black logo",
+          "format": "JPG",
+          "bytes": 79558,
+          "size": "77.7 KB",
+          "width": 1063,
+          "height": 1063,
+          "dimensions": "1063 x 1063 px",
+          "sha256": "76a48309a2156fdf1f1918955f202a1533bc708bec99c0bb65351942a6d169fa",
+          "access": "public",
+          "colorway": "black",
+          "primaryAsset": false
+        },
+        {
+          "assetId": "opcglobal-logo-black-transparent-ca9f06b66f58",
+          "path": "OPCGLOBAL/assets/brand-images/black-transparent.png",
+          "sitePath": "https://media.apuch.art/public/opcglobal/opcglobal-logo-black-transparent-ca9f06b66f58/ca9f06b66f583a3c3eb8261316dfd299790f1f614fdcdf7a7d3965f3fd8000ed/original.png",
+          "title": "OPC Global black transparent logo",
+          "format": "PNG",
+          "bytes": 3932,
+          "size": "3.84 KB",
+          "width": 256,
+          "height": 256,
+          "dimensions": "256 x 256 px",
+          "sha256": "ca9f06b66f583a3c3eb8261316dfd299790f1f614fdcdf7a7d3965f3fd8000ed",
+          "access": "public",
+          "colorway": "black",
+          "primaryAsset": false
+        },
+        {
+          "assetId": "opcglobal-logo-blue-jpg-78995d0f5c1e",
+          "path": "OPCGLOBAL/assets/brand-images/blue-jpg.jpg",
+          "sitePath": "https://media.apuch.art/public/opcglobal/opcglobal-logo-blue-jpg-78995d0f5c1e/78995d0f5c1e8a84b6cab4fbac635261a5c078b342dc14805547b18edae565a4/original.jpg",
+          "title": "OPC Global blue logo",
+          "format": "JPG",
+          "bytes": 98119,
+          "size": "95.8 KB",
+          "width": 1063,
+          "height": 1063,
+          "dimensions": "1063 x 1063 px",
+          "sha256": "78995d0f5c1e8a84b6cab4fbac635261a5c078b342dc14805547b18edae565a4",
+          "access": "public",
+          "colorway": "blue",
+          "primaryAsset": false
+        },
+        {
+          "assetId": "opcglobal-hero-primary-blue-c970696e04ab",
+          "path": "OPCGLOBAL/assets/brand-images/primary-blue.png",
+          "sitePath": "https://media.apuch.art/public/opcglobal/opcglobal-hero-primary-blue-c970696e04ab/c970696e04ab2859dd66c7b85c2c1b461d06ede4e2d65ec6a97d9c11db1396b3/original.png",
+          "title": "OPC Global primary blue logo",
+          "format": "PNG",
+          "bytes": 4172,
+          "size": "4.07 KB",
+          "width": 256,
+          "height": 256,
+          "dimensions": "256 x 256 px",
+          "sha256": "c970696e04ab2859dd66c7b85c2c1b461d06ede4e2d65ec6a97d9c11db1396b3",
+          "access": "public",
+          "colorway": "blue",
+          "primaryAsset": true
+        },
+        {
+          "assetId": "opcglobal-logo-vector-b58c3be7390a",
+          "path": "OPCGLOBAL/assets/brand-images/vector.svg",
+          "sitePath": "https://media.apuch.art/public/opcglobal/opcglobal-logo-vector-b58c3be7390a/b58c3be7390a1b625de8ad7d5c953fe8b95d1467692977c338c9b255f266502c/original.svg",
+          "title": "OPC Global vector logo",
+          "format": "SVG",
+          "bytes": 1603,
+          "size": "1.57 KB",
+          "width": 255,
+          "height": 255,
+          "dimensions": "255 x 255 px",
+          "sha256": "b58c3be7390a1b625de8ad7d5c953fe8b95d1467692977c338c9b255f266502c",
+          "access": "public",
+          "colorway": "monochrome",
+          "primaryAsset": false
+        },
+        {
+          "assetId": "opcglobal-logo-white-jpg-d5eff2b4da39",
+          "path": "OPCGLOBAL/assets/brand-images/white-jpg.jpg",
+          "sitePath": "https://media.apuch.art/public/opcglobal/opcglobal-logo-white-jpg-d5eff2b4da39/d5eff2b4da3934baa24e81764426d26de564afd1b050fad8e36eacda40633da5/original.jpg",
+          "title": "OPC Global white logo",
+          "format": "JPG",
+          "bytes": 79832,
+          "size": "78.0 KB",
+          "width": 1063,
+          "height": 1063,
+          "dimensions": "1063 x 1063 px",
+          "sha256": "d5eff2b4da3934baa24e81764426d26de564afd1b050fad8e36eacda40633da5",
+          "access": "public",
+          "colorway": "white",
+          "primaryAsset": false
+        },
+        {
+          "assetId": "opcglobal-logo-white-transparent-f1f76209c767",
+          "path": "OPCGLOBAL/assets/brand-images/white-transparent.png",
+          "sitePath": "https://media.apuch.art/public/opcglobal/opcglobal-logo-white-transparent-f1f76209c767/f1f76209c76744d1e9f7b4b692ab6f3b01e4df4e0e3b2a3cbb6e310be02dc8fe/original.png",
+          "title": "OPC Global white transparent logo",
+          "format": "PNG",
+          "bytes": 4194,
+          "size": "4.10 KB",
+          "width": 256,
+          "height": 256,
+          "dimensions": "256 x 256 px",
+          "sha256": "f1f76209c76744d1e9f7b4b692ab6f3b01e4df4e0e3b2a3cbb6e310be02dc8fe",
+          "access": "public",
+          "colorway": "white",
+          "primaryAsset": false
+        },
+        {
+          "assetId": "opcglobal-logo-yellow-jpg-0c3d48dedef6",
+          "path": "OPCGLOBAL/assets/brand-images/yellow-jpg.jpg",
+          "sitePath": "https://media.apuch.art/public/opcglobal/opcglobal-logo-yellow-jpg-0c3d48dedef6/0c3d48dedef6da1720ab08fe37784b2e173503066821ebb0531cf15561fa481b/original.jpg",
+          "title": "OPC Global yellow logo",
+          "format": "JPG",
+          "bytes": 134717,
+          "size": "132 KB",
+          "width": 1063,
+          "height": 1063,
+          "dimensions": "1063 x 1063 px",
+          "sha256": "0c3d48dedef6da1720ab08fe37784b2e173503066821ebb0531cf15561fa481b",
+          "access": "public",
+          "colorway": "yellow",
+          "primaryAsset": false
+        },
+        {
+          "assetId": "opcglobal-logo-yellow-transparent-9f71f58faaf3",
+          "path": "OPCGLOBAL/assets/brand-images/yellow-transparent.png",
+          "sitePath": "https://media.apuch.art/public/opcglobal/opcglobal-logo-yellow-transparent-9f71f58faaf3/9f71f58faaf3a693e9777af9cd6401cf46d927e7f78effd5b0a4d1eb1a9ba87d/original.png",
+          "title": "OPC Global yellow transparent logo",
+          "format": "PNG",
+          "bytes": 6355,
+          "size": "6.21 KB",
+          "width": 256,
+          "height": 256,
+          "dimensions": "256 x 256 px",
+          "sha256": "9f71f58faaf3a693e9777af9cd6401cf46d927e7f78effd5b0a4d1eb1a9ba87d",
+          "access": "public",
+          "colorway": "yellow",
+          "primaryAsset": false
         }
       ]
     },
@@ -3832,8 +4546,8 @@
     },
     "guideCount": 0,
     "tokenCount": 0,
-    "imageCount": 1,
-    "adobeAssetCount": 0,
+    "imageCount": 10,
+    "adobeAssetCount": 1,
     "heroImage": "https://media.apuch.art/public/opcglobal/opcglobal-hero-opcglobal-brand-hero-8351935e9abc/8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40/original.png",
     "primaryExcerpt": "OPC Global is a global alliance IP for collaboration, standards, and resource connection."
   },
@@ -4004,11 +4718,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/iptrust.json",
     "url": "brand.html?brand=iptrust",
@@ -4066,31 +4780,6 @@
         "version": 1
       },
       {
-        "id": "iptrust-logo-iptrust-logo-black-4a253cbe0faa",
-        "ownerType": "owned-ip",
-        "ownerId": "iptrust",
-        "role": "logo",
-        "title": "iptrust logo black",
-        "access": "public",
-        "sourcePath": "IPTRUST/assets/brand-images/iptrust-logo-black.png",
-        "sourceFilename": "iptrust-logo-black.png",
-        "sha256": "4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64",
-        "mimeType": "image/png",
-        "extension": "png",
-        "bytes": 43190,
-        "size": "42.2 KB",
-        "width": 915,
-        "height": 915,
-        "dimensions": "915 x 915 px",
-        "objectKey": "public/iptrust/iptrust-logo-iptrust-logo-black-4a253cbe0faa/4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64/original.png",
-        "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-iptrust-logo-black-4a253cbe0faa/4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64/original.png",
-        "legacyUrls": [
-          "/assets/brand-images/iptrust-logo-black.png"
-        ],
-        "status": "ready",
-        "version": 1
-      },
-      {
         "id": "iptrust-image-iptrust-wide-black-f61b168f6766",
         "ownerType": "owned-ip",
         "ownerId": "iptrust",
@@ -4141,98 +4830,27 @@
         "version": 1
       },
       {
-        "id": "iptrust-logo-logo-35c437df08fc",
+        "id": "iptrust-logo-iptrust-logo-black-4a253cbe0faa",
         "ownerType": "owned-ip",
         "ownerId": "iptrust",
         "role": "logo",
-        "title": "logo",
-        "access": "private",
-        "sourcePath": "IPTRUST/assets/brand-images/logo-set/logo.ai",
-        "sourceFilename": "logo.ai",
-        "sha256": "35c437df08fcd01d10438aa05e04bc33195f3f04b6bc5dd4610a1810cbe23126",
-        "mimeType": "application/illustrator",
-        "extension": "ai",
-        "bytes": 1204421,
-        "size": "1.15 MB",
-        "width": null,
-        "height": null,
-        "dimensions": "",
-        "objectKey": "private/iptrust/iptrust-logo-logo-35c437df08fc/35c437df08fcd01d10438aa05e04bc33195f3f04b6bc5dd4610a1810cbe23126/source.ai",
-        "mediaUrl": "https://media.apuch.art/private/iptrust/iptrust-logo-logo-35c437df08fc/35c437df08fcd01d10438aa05e04bc33195f3f04b6bc5dd4610a1810cbe23126/source.ai",
-        "legacyUrls": [],
-        "status": "processing",
-        "version": 1
-      },
-      {
-        "id": "iptrust-logo-wideblack-f61b168f6766",
-        "ownerType": "owned-ip",
-        "ownerId": "iptrust",
-        "role": "logo",
-        "title": "岁知社wideblack",
+        "title": "iptrust logo black",
         "access": "public",
-        "sourcePath": "IPTRUST/assets/brand-images/logo-set/岁知社wideblack.png",
-        "sourceFilename": "岁知社wideblack.png",
-        "sha256": "f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4",
+        "sourcePath": "IPTRUST/assets/brand-images/iptrust-logo-black.png",
+        "sourceFilename": "iptrust-logo-black.png",
+        "sha256": "4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64",
         "mimeType": "image/png",
         "extension": "png",
-        "bytes": 137631,
-        "size": "134.4 KB",
-        "width": 3840,
-        "height": 2160,
-        "dimensions": "3840 x 2160 px",
-        "objectKey": "public/iptrust/iptrust-logo-wideblack-f61b168f6766/f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4/original.png",
-        "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-wideblack-f61b168f6766/f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4/original.png",
+        "bytes": 43190,
+        "size": "42.2 KB",
+        "width": 915,
+        "height": 915,
+        "dimensions": "915 x 915 px",
+        "objectKey": "public/iptrust/iptrust-logo-iptrust-logo-black-4a253cbe0faa/4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64/original.png",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-iptrust-logo-black-4a253cbe0faa/4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64/original.png",
         "legacyUrls": [
-          "/assets/brand-images/iptrust-logo-set-wideblack.png"
+          "/assets/brand-images/iptrust-logo-black.png"
         ],
-        "status": "ready",
-        "version": 1
-      },
-      {
-        "id": "iptrust-logo-widewhite-5e6f803129e8",
-        "ownerType": "owned-ip",
-        "ownerId": "iptrust",
-        "role": "logo",
-        "title": "岁知社widewhite",
-        "access": "public",
-        "sourcePath": "IPTRUST/assets/brand-images/logo-set/岁知社widewhite.png",
-        "sourceFilename": "岁知社widewhite.png",
-        "sha256": "5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920",
-        "mimeType": "image/png",
-        "extension": "png",
-        "bytes": 141288,
-        "size": "138.0 KB",
-        "width": 3840,
-        "height": 2160,
-        "dimensions": "3840 x 2160 px",
-        "objectKey": "public/iptrust/iptrust-logo-widewhite-5e6f803129e8/5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920/original.png",
-        "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-widewhite-5e6f803129e8/5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920/original.png",
-        "legacyUrls": [
-          "/assets/brand-images/iptrust-logo-set-widewhite.png"
-        ],
-        "status": "ready",
-        "version": 1
-      },
-      {
-        "id": "iptrust-logo-logo-logo-687e84896c21",
-        "ownerType": "owned-ip",
-        "ownerId": "iptrust",
-        "role": "logo",
-        "title": "logo logo",
-        "access": "public",
-        "sourcePath": "IPTRUST/assets/brand-images/logo-set/白色/logo_logo.svg",
-        "sourceFilename": "logo_logo.svg",
-        "sha256": "687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca",
-        "mimeType": "image/svg+xml",
-        "extension": "svg",
-        "bytes": 3791,
-        "size": "3.70 KB",
-        "width": null,
-        "height": null,
-        "dimensions": "",
-        "objectKey": "public/iptrust/iptrust-logo-logo-logo-687e84896c21/687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca/original.svg",
-        "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-687e84896c21/687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca/original.svg",
-        "legacyUrls": [],
         "status": "ready",
         "version": 1
       },
@@ -4259,6 +4877,29 @@
           "/assets/brand-images/iptrust-logo.jpg"
         ],
         "status": "ready",
+        "version": 1
+      },
+      {
+        "id": "iptrust-logo-logo-35c437df08fc",
+        "ownerType": "owned-ip",
+        "ownerId": "iptrust",
+        "role": "logo",
+        "title": "logo",
+        "access": "private",
+        "sourcePath": "IPTRUST/assets/brand-images/logo-set/logo.ai",
+        "sourceFilename": "logo.ai",
+        "sha256": "35c437df08fcd01d10438aa05e04bc33195f3f04b6bc5dd4610a1810cbe23126",
+        "mimeType": "application/illustrator",
+        "extension": "ai",
+        "bytes": 1204421,
+        "size": "1.15 MB",
+        "width": null,
+        "height": null,
+        "dimensions": "",
+        "objectKey": "private/iptrust/iptrust-logo-logo-35c437df08fc/35c437df08fcd01d10438aa05e04bc33195f3f04b6bc5dd4610a1810cbe23126/source.ai",
+        "mediaUrl": "https://media.apuch.art/private/iptrust/iptrust-logo-logo-35c437df08fc/35c437df08fcd01d10438aa05e04bc33195f3f04b6bc5dd4610a1810cbe23126/source.ai",
+        "legacyUrls": [],
+        "status": "processing",
         "version": 1
       },
       {
@@ -4312,31 +4953,6 @@
         "version": 1
       },
       {
-        "id": "iptrust-logo-logo-logo-ae217dbf366f",
-        "ownerType": "owned-ip",
-        "ownerId": "iptrust",
-        "role": "logo",
-        "title": "logo logo",
-        "access": "public",
-        "sourcePath": "IPTRUST/assets/brand-images/logo-set/蓝色/logo_logo.png",
-        "sourceFilename": "logo_logo.png",
-        "sha256": "ae217dbf366f5e6a149fed179e126da3620e42e85d6fb2197de710cceb6ca595",
-        "mimeType": "image/png",
-        "extension": "png",
-        "bytes": 45334,
-        "size": "44.3 KB",
-        "width": 2540,
-        "height": 2540,
-        "dimensions": "2540 x 2540 px",
-        "objectKey": "public/iptrust/iptrust-logo-logo-logo-ae217dbf366f/ae217dbf366f5e6a149fed179e126da3620e42e85d6fb2197de710cceb6ca595/original.png",
-        "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-ae217dbf366f/ae217dbf366f5e6a149fed179e126da3620e42e85d6fb2197de710cceb6ca595/original.png",
-        "legacyUrls": [
-          "/assets/brand-images/iptrust-logo-logo.png"
-        ],
-        "status": "ready",
-        "version": 1
-      },
-      {
         "id": "iptrust-logo-logo-logo-3a0b20c18a58",
         "ownerType": "owned-ip",
         "ownerId": "iptrust",
@@ -4356,31 +4972,6 @@
         "objectKey": "public/iptrust/iptrust-logo-logo-logo-3a0b20c18a58/3a0b20c18a587240e50379c842b7cf36bb8e97940bbfb09cfebad32ea2198489/original.svg",
         "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-3a0b20c18a58/3a0b20c18a587240e50379c842b7cf36bb8e97940bbfb09cfebad32ea2198489/original.svg",
         "legacyUrls": [],
-        "status": "ready",
-        "version": 1
-      },
-      {
-        "id": "iptrust-logo-logo-logo-9043654071cb",
-        "ownerType": "owned-ip",
-        "ownerId": "iptrust",
-        "role": "logo",
-        "title": "logo logo",
-        "access": "public",
-        "sourcePath": "IPTRUST/assets/brand-images/logo-set/金色/logo_logo.jpg",
-        "sourceFilename": "logo_logo.jpg",
-        "sha256": "9043654071cb9443d555c06c33f696dbe8b17e4b59e12ad1b3380db4dd421210",
-        "mimeType": "image/jpeg",
-        "extension": "jpg",
-        "bytes": 146164,
-        "size": "142.7 KB",
-        "width": 2540,
-        "height": 2540,
-        "dimensions": "2540 x 2540 px",
-        "objectKey": "public/iptrust/iptrust-logo-logo-logo-9043654071cb/9043654071cb9443d555c06c33f696dbe8b17e4b59e12ad1b3380db4dd421210/original.jpg",
-        "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-9043654071cb/9043654071cb9443d555c06c33f696dbe8b17e4b59e12ad1b3380db4dd421210/original.jpg",
-        "legacyUrls": [
-          "/assets/brand-images/iptrust-logo-logo-2.jpg"
-        ],
         "status": "ready",
         "version": 1
       },
@@ -4406,6 +4997,29 @@
         "legacyUrls": [
           "/assets/brand-images/iptrust-logo-logo-2.png"
         ],
+        "status": "ready",
+        "version": 1
+      },
+      {
+        "id": "iptrust-logo-logo-logo-687e84896c21",
+        "ownerType": "owned-ip",
+        "ownerId": "iptrust",
+        "role": "logo",
+        "title": "logo logo",
+        "access": "public",
+        "sourcePath": "IPTRUST/assets/brand-images/logo-set/白色/logo_logo.svg",
+        "sourceFilename": "logo_logo.svg",
+        "sha256": "687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca",
+        "mimeType": "image/svg+xml",
+        "extension": "svg",
+        "bytes": 3791,
+        "size": "3.70 KB",
+        "width": null,
+        "height": null,
+        "dimensions": "",
+        "objectKey": "public/iptrust/iptrust-logo-logo-logo-687e84896c21/687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca/original.svg",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-687e84896c21/687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca/original.svg",
+        "legacyUrls": [],
         "status": "ready",
         "version": 1
       },
@@ -4458,6 +5072,31 @@
         "version": 1
       },
       {
+        "id": "iptrust-logo-logo-logo-9043654071cb",
+        "ownerType": "owned-ip",
+        "ownerId": "iptrust",
+        "role": "logo",
+        "title": "logo logo",
+        "access": "public",
+        "sourcePath": "IPTRUST/assets/brand-images/logo-set/金色/logo_logo.jpg",
+        "sourceFilename": "logo_logo.jpg",
+        "sha256": "9043654071cb9443d555c06c33f696dbe8b17e4b59e12ad1b3380db4dd421210",
+        "mimeType": "image/jpeg",
+        "extension": "jpg",
+        "bytes": 146164,
+        "size": "142.7 KB",
+        "width": 2540,
+        "height": 2540,
+        "dimensions": "2540 x 2540 px",
+        "objectKey": "public/iptrust/iptrust-logo-logo-logo-9043654071cb/9043654071cb9443d555c06c33f696dbe8b17e4b59e12ad1b3380db4dd421210/original.jpg",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-9043654071cb/9043654071cb9443d555c06c33f696dbe8b17e4b59e12ad1b3380db4dd421210/original.jpg",
+        "legacyUrls": [
+          "/assets/brand-images/iptrust-logo-logo-2.jpg"
+        ],
+        "status": "ready",
+        "version": 1
+      },
+      {
         "id": "iptrust-logo-logo-logo-943c106495e0",
         "ownerType": "owned-ip",
         "ownerId": "iptrust",
@@ -4477,6 +5116,31 @@
         "objectKey": "public/iptrust/iptrust-logo-logo-logo-943c106495e0/943c106495e0ef5e27af4e93578568a25abfbed6a80950c077cc94493604f663/original.svg",
         "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-943c106495e0/943c106495e0ef5e27af4e93578568a25abfbed6a80950c077cc94493604f663/original.svg",
         "legacyUrls": [],
+        "status": "ready",
+        "version": 1
+      },
+      {
+        "id": "iptrust-logo-logo-logo-ae217dbf366f",
+        "ownerType": "owned-ip",
+        "ownerId": "iptrust",
+        "role": "logo",
+        "title": "logo logo",
+        "access": "public",
+        "sourcePath": "IPTRUST/assets/brand-images/logo-set/蓝色/logo_logo.png",
+        "sourceFilename": "logo_logo.png",
+        "sha256": "ae217dbf366f5e6a149fed179e126da3620e42e85d6fb2197de710cceb6ca595",
+        "mimeType": "image/png",
+        "extension": "png",
+        "bytes": 45334,
+        "size": "44.3 KB",
+        "width": 2540,
+        "height": 2540,
+        "dimensions": "2540 x 2540 px",
+        "objectKey": "public/iptrust/iptrust-logo-logo-logo-ae217dbf366f/ae217dbf366f5e6a149fed179e126da3620e42e85d6fb2197de710cceb6ca595/original.png",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-ae217dbf366f/ae217dbf366f5e6a149fed179e126da3620e42e85d6fb2197de710cceb6ca595/original.png",
+        "legacyUrls": [
+          "/assets/brand-images/iptrust-logo-logo.png"
+        ],
         "status": "ready",
         "version": 1
       },
@@ -4501,6 +5165,56 @@
         "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logohdpi-4a253cbe0faa/4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64/original.png",
         "legacyUrls": [
           "/assets/brand-images/iptrust-logohdpi.png"
+        ],
+        "status": "ready",
+        "version": 1
+      },
+      {
+        "id": "iptrust-logo-wideblack-f61b168f6766",
+        "ownerType": "owned-ip",
+        "ownerId": "iptrust",
+        "role": "logo",
+        "title": "岁知社wideblack",
+        "access": "public",
+        "sourcePath": "IPTRUST/assets/brand-images/logo-set/岁知社wideblack.png",
+        "sourceFilename": "岁知社wideblack.png",
+        "sha256": "f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4",
+        "mimeType": "image/png",
+        "extension": "png",
+        "bytes": 137631,
+        "size": "134.4 KB",
+        "width": 3840,
+        "height": 2160,
+        "dimensions": "3840 x 2160 px",
+        "objectKey": "public/iptrust/iptrust-logo-wideblack-f61b168f6766/f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4/original.png",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-wideblack-f61b168f6766/f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4/original.png",
+        "legacyUrls": [
+          "/assets/brand-images/iptrust-logo-set-wideblack.png"
+        ],
+        "status": "ready",
+        "version": 1
+      },
+      {
+        "id": "iptrust-logo-widewhite-5e6f803129e8",
+        "ownerType": "owned-ip",
+        "ownerId": "iptrust",
+        "role": "logo",
+        "title": "岁知社widewhite",
+        "access": "public",
+        "sourcePath": "IPTRUST/assets/brand-images/logo-set/岁知社widewhite.png",
+        "sourceFilename": "岁知社widewhite.png",
+        "sha256": "5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920",
+        "mimeType": "image/png",
+        "extension": "png",
+        "bytes": 141288,
+        "size": "138.0 KB",
+        "width": 3840,
+        "height": 2160,
+        "dimensions": "3840 x 2160 px",
+        "objectKey": "public/iptrust/iptrust-logo-widewhite-5e6f803129e8/5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920/original.png",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-widewhite-5e6f803129e8/5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920/original.png",
+        "legacyUrls": [
+          "/assets/brand-images/iptrust-logo-set-widewhite.png"
         ],
         "status": "ready",
         "version": 1
@@ -4568,7 +5282,9 @@
             "height": 941,
             "dimensions": "1672 x 941 px",
             "sha256": "63c7b53792f9a8f56ee0f0b2bfaad3705c4895fed8d0ba6c687c750e9fdc5eb1",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "iptrust-logo-iptrust-logo-black-4a253cbe0faa",
@@ -4582,7 +5298,9 @@
             "height": 915,
             "dimensions": "915 x 915 px",
             "sha256": "4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "iptrust-image-iptrust-wide-black-f61b168f6766",
@@ -4596,7 +5314,9 @@
             "height": 2160,
             "dimensions": "3840 x 2160 px",
             "sha256": "f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "iptrust-image-iptrust-wide-white-5e6f803129e8",
@@ -4610,7 +5330,9 @@
             "height": 2160,
             "dimensions": "3840 x 2160 px",
             "sha256": "5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "iptrust-logo-wideblack-f61b168f6766",
@@ -4624,7 +5346,9 @@
             "height": 2160,
             "dimensions": "3840 x 2160 px",
             "sha256": "f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "iptrust-logo-widewhite-5e6f803129e8",
@@ -4638,7 +5362,9 @@
             "height": 2160,
             "dimensions": "3840 x 2160 px",
             "sha256": "5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "iptrust-logo-logo-logo-687e84896c21",
@@ -4652,7 +5378,9 @@
             "height": null,
             "dimensions": "",
             "sha256": "687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "iptrust-logo-logo-0a15e78e0a37",
@@ -4666,7 +5394,9 @@
             "height": 2539,
             "dimensions": "2539 x 2539 px",
             "sha256": "0a15e78e0a37949254ad500a9c83802f48d0f2f2039c2856e7f40d176e60f254",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "iptrust-logo-logo-d50caec22786",
@@ -4680,7 +5410,9 @@
             "height": 915,
             "dimensions": "915 x 915 px",
             "sha256": "d50caec22786b6b1fd6f8e7b4e6fd9d3a2f366684308deaec96408fbe6b37529",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "iptrust-logo-logo-logo-34178b12bc90",
@@ -4694,7 +5426,9 @@
             "height": 2540,
             "dimensions": "2540 x 2540 px",
             "sha256": "34178b12bc90ce079e0304f43b0ee6b35952a8230aae0ad30c516dfd25e861b2",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "iptrust-logo-logo-logo-ae217dbf366f",
@@ -4708,7 +5442,9 @@
             "height": 2540,
             "dimensions": "2540 x 2540 px",
             "sha256": "ae217dbf366f5e6a149fed179e126da3620e42e85d6fb2197de710cceb6ca595",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "iptrust-logo-logo-logo-3a0b20c18a58",
@@ -4722,7 +5458,9 @@
             "height": null,
             "dimensions": "",
             "sha256": "3a0b20c18a587240e50379c842b7cf36bb8e97940bbfb09cfebad32ea2198489",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "iptrust-logo-logo-logo-9043654071cb",
@@ -4736,7 +5474,9 @@
             "height": 2540,
             "dimensions": "2540 x 2540 px",
             "sha256": "9043654071cb9443d555c06c33f696dbe8b17e4b59e12ad1b3380db4dd421210",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "iptrust-logo-logo-logo-3b5bda396c04",
@@ -4750,7 +5490,9 @@
             "height": 2540,
             "dimensions": "2540 x 2540 px",
             "sha256": "3b5bda396c0426d723aaecb178ebfec5b28e04de79b82aaacb52159c7a4b7705",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "iptrust-logo-logo-logo-6c27005c50a2",
@@ -4764,7 +5506,9 @@
             "height": null,
             "dimensions": "",
             "sha256": "6c27005c50a296eb02ccbc3c69aeed7b94b0f346d5c8973f2ae887f0b7dc2be0",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "iptrust-logo-logo-logo-7e72d10a5d55",
@@ -4778,7 +5522,9 @@
             "height": 2539,
             "dimensions": "2539 x 2539 px",
             "sha256": "7e72d10a5d5583ae67e3019c5bf08cee636c5b656342aa6fcb69201004ce2a20",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "iptrust-logo-logo-logo-943c106495e0",
@@ -4792,7 +5538,9 @@
             "height": null,
             "dimensions": "",
             "sha256": "943c106495e0ef5e27af4e93578568a25abfbed6a80950c077cc94493604f663",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "iptrust-logo-logohdpi-4a253cbe0faa",
@@ -4806,7 +5554,9 @@
             "height": 915,
             "dimensions": "915 x 915 px",
             "sha256": "4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           }
         ]
       }
@@ -4862,7 +5612,9 @@
           "height": 941,
           "dimensions": "1672 x 941 px",
           "sha256": "63c7b53792f9a8f56ee0f0b2bfaad3705c4895fed8d0ba6c687c750e9fdc5eb1",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-iptrust-logo-black-4a253cbe0faa",
@@ -4876,7 +5628,9 @@
           "height": 915,
           "dimensions": "915 x 915 px",
           "sha256": "4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-image-iptrust-wide-black-f61b168f6766",
@@ -4890,7 +5644,9 @@
           "height": 2160,
           "dimensions": "3840 x 2160 px",
           "sha256": "f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-image-iptrust-wide-white-5e6f803129e8",
@@ -4904,7 +5660,9 @@
           "height": 2160,
           "dimensions": "3840 x 2160 px",
           "sha256": "5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-wideblack-f61b168f6766",
@@ -4918,7 +5676,9 @@
           "height": 2160,
           "dimensions": "3840 x 2160 px",
           "sha256": "f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-widewhite-5e6f803129e8",
@@ -4932,7 +5692,9 @@
           "height": 2160,
           "dimensions": "3840 x 2160 px",
           "sha256": "5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-687e84896c21",
@@ -4946,7 +5708,9 @@
           "height": null,
           "dimensions": "",
           "sha256": "687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logo-0a15e78e0a37",
@@ -4960,7 +5724,9 @@
           "height": 2539,
           "dimensions": "2539 x 2539 px",
           "sha256": "0a15e78e0a37949254ad500a9c83802f48d0f2f2039c2856e7f40d176e60f254",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logo-d50caec22786",
@@ -4974,7 +5740,9 @@
           "height": 915,
           "dimensions": "915 x 915 px",
           "sha256": "d50caec22786b6b1fd6f8e7b4e6fd9d3a2f366684308deaec96408fbe6b37529",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-34178b12bc90",
@@ -4988,7 +5756,9 @@
           "height": 2540,
           "dimensions": "2540 x 2540 px",
           "sha256": "34178b12bc90ce079e0304f43b0ee6b35952a8230aae0ad30c516dfd25e861b2",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-ae217dbf366f",
@@ -5002,7 +5772,9 @@
           "height": 2540,
           "dimensions": "2540 x 2540 px",
           "sha256": "ae217dbf366f5e6a149fed179e126da3620e42e85d6fb2197de710cceb6ca595",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-3a0b20c18a58",
@@ -5016,7 +5788,9 @@
           "height": null,
           "dimensions": "",
           "sha256": "3a0b20c18a587240e50379c842b7cf36bb8e97940bbfb09cfebad32ea2198489",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-9043654071cb",
@@ -5030,7 +5804,9 @@
           "height": 2540,
           "dimensions": "2540 x 2540 px",
           "sha256": "9043654071cb9443d555c06c33f696dbe8b17e4b59e12ad1b3380db4dd421210",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-3b5bda396c04",
@@ -5044,7 +5820,9 @@
           "height": 2540,
           "dimensions": "2540 x 2540 px",
           "sha256": "3b5bda396c0426d723aaecb178ebfec5b28e04de79b82aaacb52159c7a4b7705",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-6c27005c50a2",
@@ -5058,7 +5836,9 @@
           "height": null,
           "dimensions": "",
           "sha256": "6c27005c50a296eb02ccbc3c69aeed7b94b0f346d5c8973f2ae887f0b7dc2be0",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-7e72d10a5d55",
@@ -5072,7 +5852,9 @@
           "height": 2539,
           "dimensions": "2539 x 2539 px",
           "sha256": "7e72d10a5d5583ae67e3019c5bf08cee636c5b656342aa6fcb69201004ce2a20",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-943c106495e0",
@@ -5086,7 +5868,9 @@
           "height": null,
           "dimensions": "",
           "sha256": "943c106495e0ef5e27af4e93578568a25abfbed6a80950c077cc94493604f663",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "iptrust-logo-logohdpi-4a253cbe0faa",
@@ -5100,7 +5884,9 @@
           "height": 915,
           "dimensions": "915 x 915 px",
           "sha256": "4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         }
       ]
     },
@@ -5283,11 +6069,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/fengzhi.json",
     "url": "brand.html?brand=fengzhi",
@@ -5316,6 +6102,29 @@
         "legacyUrls": [
           "/assets/brand-images/fengzhi.png"
         ],
+        "status": "ready",
+        "version": 1
+      },
+      {
+        "id": "fengzhi-image-jiege-mark-2e5746a16797",
+        "ownerType": "owned-ip",
+        "ownerId": "fengzhi",
+        "role": "image",
+        "title": "jiege mark",
+        "access": "public",
+        "sourcePath": "FENGZHI/assets/jiege-mark.svg",
+        "sourceFilename": "jiege-mark.svg",
+        "sha256": "2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3",
+        "mimeType": "image/svg+xml",
+        "extension": "svg",
+        "bytes": 370,
+        "size": "370 B",
+        "width": null,
+        "height": null,
+        "dimensions": "",
+        "objectKey": "public/fengzhi/fengzhi-image-jiege-mark-2e5746a16797/2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3/original.svg",
+        "mediaUrl": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-2e5746a16797/2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3/original.svg",
+        "legacyUrls": [],
         "status": "ready",
         "version": 1
       },
@@ -5361,29 +6170,6 @@
         "dimensions": "",
         "objectKey": "public/fengzhi/fengzhi-image-jiege-mark-reversed-e8792c4ac6fa/e8792c4ac6fa70a515099352396d145c4b0d072376aae3d4840a3a2b26c970d5/original.svg",
         "mediaUrl": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-reversed-e8792c4ac6fa/e8792c4ac6fa70a515099352396d145c4b0d072376aae3d4840a3a2b26c970d5/original.svg",
-        "legacyUrls": [],
-        "status": "ready",
-        "version": 1
-      },
-      {
-        "id": "fengzhi-image-jiege-mark-2e5746a16797",
-        "ownerType": "owned-ip",
-        "ownerId": "fengzhi",
-        "role": "image",
-        "title": "jiege mark",
-        "access": "public",
-        "sourcePath": "FENGZHI/assets/jiege-mark.svg",
-        "sourceFilename": "jiege-mark.svg",
-        "sha256": "2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3",
-        "mimeType": "image/svg+xml",
-        "extension": "svg",
-        "bytes": 370,
-        "size": "370 B",
-        "width": null,
-        "height": null,
-        "dimensions": "",
-        "objectKey": "public/fengzhi/fengzhi-image-jiege-mark-2e5746a16797/2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3/original.svg",
-        "mediaUrl": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-2e5746a16797/2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3/original.svg",
         "legacyUrls": [],
         "status": "ready",
         "version": 1
@@ -5451,7 +6237,9 @@
             "height": 941,
             "dimensions": "1672 x 941 px",
             "sha256": "fe388cc906c9dfb10ceedeb83b772dd02c22c0f5801739d56e6354c728749fd8",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "fengzhi-image-jiege-mark-mono-d7b2e1dc871a",
@@ -5465,7 +6253,9 @@
             "height": null,
             "dimensions": "",
             "sha256": "d7b2e1dc871abb01b9d9cb8eaf26a19217b2a84cbae87412dc1475839d91001d",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "fengzhi-image-jiege-mark-reversed-e8792c4ac6fa",
@@ -5479,7 +6269,9 @@
             "height": null,
             "dimensions": "",
             "sha256": "e8792c4ac6fa70a515099352396d145c4b0d072376aae3d4840a3a2b26c970d5",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "fengzhi-image-jiege-mark-2e5746a16797",
@@ -5493,7 +6285,9 @@
             "height": null,
             "dimensions": "",
             "sha256": "2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           }
         ]
       }
@@ -5549,7 +6343,9 @@
           "height": 941,
           "dimensions": "1672 x 941 px",
           "sha256": "fe388cc906c9dfb10ceedeb83b772dd02c22c0f5801739d56e6354c728749fd8",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "fengzhi-image-jiege-mark-mono-d7b2e1dc871a",
@@ -5563,7 +6359,9 @@
           "height": null,
           "dimensions": "",
           "sha256": "d7b2e1dc871abb01b9d9cb8eaf26a19217b2a84cbae87412dc1475839d91001d",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "fengzhi-image-jiege-mark-reversed-e8792c4ac6fa",
@@ -5577,7 +6375,9 @@
           "height": null,
           "dimensions": "",
           "sha256": "e8792c4ac6fa70a515099352396d145c4b0d072376aae3d4840a3a2b26c970d5",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "fengzhi-image-jiege-mark-2e5746a16797",
@@ -5591,7 +6391,9 @@
           "height": null,
           "dimensions": "",
           "sha256": "2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         }
       ]
     },
@@ -5798,11 +6600,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/axisee.json",
     "url": "brand.html?brand=axisee",
@@ -5922,7 +6724,9 @@
             "height": 941,
             "dimensions": "1672 x 941 px",
             "sha256": "3c42c46656933438947f69248397748722fd580e006146938a77fb7aceb76e4f",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "axisee-logo-axisee-logo-5f1cfebfc5b9",
@@ -5936,7 +6740,9 @@
             "height": 1500,
             "dimensions": "1500 x 1500 px",
             "sha256": "5f1cfebfc5b92db2708c2957b47419a456de13e78c20ddab4973056b08cafe3b",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           }
         ]
       }
@@ -5992,7 +6798,9 @@
           "height": 941,
           "dimensions": "1672 x 941 px",
           "sha256": "3c42c46656933438947f69248397748722fd580e006146938a77fb7aceb76e4f",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "axisee-logo-axisee-logo-5f1cfebfc5b9",
@@ -6006,7 +6814,9 @@
           "height": 1500,
           "dimensions": "1500 x 1500 px",
           "sha256": "5f1cfebfc5b92db2708c2957b47419a456de13e78c20ddab4973056b08cafe3b",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         }
       ]
     },
@@ -6046,19 +6856,20 @@
     },
     "primaryGuide": "Sidera/sidera_design.md",
     "theme": {
-      "mode": "dark",
-      "primary": "#B58B4C",
-      "accent": "#D4A862",
-      "secondary": "#9E3B2E",
-      "surface": "#14100A",
-      "paper": "#18130B",
-      "ink": "#EFE6D2",
-      "muted": "#A99B7E",
-      "line": "rgba(181, 139, 76, 0.32)",
+      "mode": "light",
+      "primary": "#EFE6D2",
+      "accent": "#76551F",
+      "secondary": "#8C3228",
+      "surface": "#F4F0E7",
+      "paper": "#FFFDF8",
+      "ink": "#17130D",
+      "muted": "#706758",
+      "line": "rgba(23, 19, 13, 0.18)",
+      "buttonText": "#17130D",
       "keywords": [
-        "ink",
+        "ink ivory",
+        "pale manuscript",
         "earth gold",
-        "cream",
         "vermillion",
         "wisdom navigator"
       ]
@@ -6196,11 +7007,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/sidera.json",
     "url": "brand.html?brand=sidera",
@@ -6248,37 +7059,37 @@
         "colors": [
           {
             "key": "primary",
-            "value": "#B58B4C"
-          },
-          {
-            "key": "accent",
-            "value": "#D4A862"
-          },
-          {
-            "key": "secondary",
-            "value": "#9E3B2E"
-          },
-          {
-            "key": "surface",
-            "value": "#14100A"
-          },
-          {
-            "key": "paper",
-            "value": "#18130B"
-          },
-          {
-            "key": "ink",
             "value": "#EFE6D2"
           },
           {
+            "key": "accent",
+            "value": "#76551F"
+          },
+          {
+            "key": "secondary",
+            "value": "#8C3228"
+          },
+          {
+            "key": "surface",
+            "value": "#F4F0E7"
+          },
+          {
+            "key": "paper",
+            "value": "#FFFDF8"
+          },
+          {
+            "key": "ink",
+            "value": "#17130D"
+          },
+          {
             "key": "muted",
-            "value": "#A99B7E"
+            "value": "#706758"
           }
         ],
         "keywords": [
-          "ink",
+          "ink ivory",
+          "pale manuscript",
           "earth gold",
-          "cream",
           "vermillion",
           "wisdom navigator"
         ],
@@ -6295,7 +7106,9 @@
             "height": 941,
             "dimensions": "1672 x 941 px",
             "sha256": "3501c8d23cb5507005b8d8dea3904e72dbc849783b039a90406b976f7fbf7672",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           }
         ]
       }
@@ -6304,37 +7117,37 @@
       "colors": [
         {
           "key": "primary",
-          "value": "#B58B4C"
-        },
-        {
-          "key": "accent",
-          "value": "#D4A862"
-        },
-        {
-          "key": "secondary",
-          "value": "#9E3B2E"
-        },
-        {
-          "key": "surface",
-          "value": "#14100A"
-        },
-        {
-          "key": "paper",
-          "value": "#18130B"
-        },
-        {
-          "key": "ink",
           "value": "#EFE6D2"
         },
         {
+          "key": "accent",
+          "value": "#76551F"
+        },
+        {
+          "key": "secondary",
+          "value": "#8C3228"
+        },
+        {
+          "key": "surface",
+          "value": "#F4F0E7"
+        },
+        {
+          "key": "paper",
+          "value": "#FFFDF8"
+        },
+        {
+          "key": "ink",
+          "value": "#17130D"
+        },
+        {
           "key": "muted",
-          "value": "#A99B7E"
+          "value": "#706758"
         }
       ],
       "keywords": [
-        "ink",
+        "ink ivory",
+        "pale manuscript",
         "earth gold",
-        "cream",
         "vermillion",
         "wisdom navigator"
       ],
@@ -6351,7 +7164,9 @@
           "height": 941,
           "dimensions": "1672 x 941 px",
           "sha256": "3501c8d23cb5507005b8d8dea3904e72dbc849783b039a90406b976f7fbf7672",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         }
       ]
     },
@@ -6367,7 +7182,7 @@
     "imageCount": 1,
     "adobeAssetCount": 0,
     "heroImage": "https://media.apuch.art/public/sidera/sidera-hero-sidera-brand-hero-3501c8d23cb5/3501c8d23cb5507005b8d8dea3904e72dbc849783b039a90406b976f7fbf7672/original.png",
-    "primaryExcerpt": "Sidera 侍天 — Design System Build ready brand & visual spec for agents producing on brand 侍天 work. 一句话： 土金为骨、玄墨为底、思源宋体为肉；沉稳敢言、有据可依。 Gold is the bones, ink is the ground, serif is the flesh — composed, forthright, evidence based. Sidera 侍天 — 智慧领航者 · Wisdom Navigator for premium F&B chains. We equip every valuable mid to high end F&B chain with a \"see clearly, move betably, compound easily\" smart navigation system: 海图 Ch"
+    "primaryExcerpt": "Sidera 侍天 — Design System Build ready brand & visual spec for agents producing on brand 侍天 work. 一句话： 素墨为纸、玄墨为字、土金为骨；沉稳敢言、有据可依。 Ink is the paper, charcoal is the voice, gold is the structure — composed, forthright, evidence based. Sidera 侍天 — 智慧领航者 · Wisdom Navigator for premium F&B chains. We equip every valuable mid to high end F&B chain with a \"see clearly, move betably, compound easily\" smart navigation system: 海"
   },
   {
     "slug": "1stepmore",
@@ -6535,11 +7350,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/1stepmore.json",
     "url": "brand.html?brand=1stepmore",
@@ -6820,11 +7635,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/agem.json",
     "url": "brand.html?brand=agem",
@@ -7103,11 +7918,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/rgd.json",
     "url": "brand.html?brand=rgd",
@@ -7386,11 +8201,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/changoods.json",
     "url": "brand.html?brand=changoods",
@@ -7669,11 +8484,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/boya.json",
     "url": "brand.html?brand=boya",
@@ -7953,11 +8768,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/apuch.json",
     "url": "brand.html?brand=apuch",
@@ -8239,11 +9054,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/pam.json",
     "url": "brand.html?brand=pam",
@@ -8527,11 +9342,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/ksamint.json",
     "url": "brand.html?brand=ksamint",
@@ -8787,11 +9602,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/inucleus.json",
     "url": "brand.html?brand=inucleus",
@@ -9075,11 +9890,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/xinzhi-travel.json",
     "url": "brand.html?brand=xinzhi-travel",
@@ -9363,11 +10178,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/zhongzhiyou.json",
     "url": "brand.html?brand=zhongzhiyou",
@@ -9646,11 +10461,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/nibiru.json",
     "url": "brand.html?brand=nibiru",
@@ -9934,11 +10749,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/shenzhen-microsoft-global-center.json",
     "url": "brand.html?brand=shenzhen-microsoft-global-center",
@@ -10247,11 +11062,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/shanrenjing.json",
     "url": "brand.html?brand=shanrenjing",
@@ -10538,11 +11353,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/kaoyu-shenhua.json",
     "url": "brand.html?brand=kaoyu-shenhua",
@@ -10575,28 +11390,28 @@
         "version": 1
       },
       {
-        "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc",
+        "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0",
         "ownerType": "owned-ip",
         "ownerId": "kaoyu-shenhua",
         "role": "logo",
-        "title": "kaoyu shenhua logo page 01",
-        "access": "public",
-        "sourcePath": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.jpg",
-        "sourceFilename": "kaoyu-shenhua-logo-page-01.jpg",
-        "sha256": "8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c",
-        "mimeType": "image/jpeg",
-        "extension": "jpg",
-        "bytes": 123391,
-        "size": "120.5 KB",
-        "width": 1488,
-        "height": 744,
-        "dimensions": "1488 x 744 px",
-        "objectKey": "public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
-        "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
+        "title": "kaoyu shenhua logo",
+        "access": "private",
+        "sourcePath": "KaoyuShenhua/assets/source/kaoyu-shenhua-logo.ai",
+        "sourceFilename": "kaoyu-shenhua-logo.ai",
+        "sha256": "e7f64c62b8b04bfca4eaf1ebd523b29a1822969d6942ae5645e6081475e63cc6",
+        "mimeType": "application/illustrator",
+        "extension": "ai",
+        "bytes": 1635017,
+        "size": "1.56 MB",
+        "width": null,
+        "height": null,
+        "dimensions": "",
+        "objectKey": "private/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0/e7f64c62b8b04bfca4eaf1ebd523b29a1822969d6942ae5645e6081475e63cc6/source.ai",
+        "mediaUrl": "https://media.apuch.art/private/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0/e7f64c62b8b04bfca4eaf1ebd523b29a1822969d6942ae5645e6081475e63cc6/source.ai",
         "legacyUrls": [
-          "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.jpg"
+          "/assets/adobe/kaoyu-shenhua/kaoyu-shenhua-logo.ai"
         ],
-        "status": "ready",
+        "status": "processing",
         "version": 1
       },
       {
@@ -10620,6 +11435,31 @@
         "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49/81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c/original.png",
         "legacyUrls": [
           "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.png"
+        ],
+        "status": "ready",
+        "version": 1
+      },
+      {
+        "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc",
+        "ownerType": "owned-ip",
+        "ownerId": "kaoyu-shenhua",
+        "role": "logo",
+        "title": "kaoyu shenhua logo page 01",
+        "access": "public",
+        "sourcePath": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.jpg",
+        "sourceFilename": "kaoyu-shenhua-logo-page-01.jpg",
+        "sha256": "8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c",
+        "mimeType": "image/jpeg",
+        "extension": "jpg",
+        "bytes": 123391,
+        "size": "120.5 KB",
+        "width": 1488,
+        "height": 744,
+        "dimensions": "1488 x 744 px",
+        "objectKey": "public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
+        "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
+        "legacyUrls": [
+          "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.jpg"
         ],
         "status": "ready",
         "version": 1
@@ -10672,31 +11512,6 @@
           "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.png"
         ],
         "status": "ready",
-        "version": 1
-      },
-      {
-        "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0",
-        "ownerType": "owned-ip",
-        "ownerId": "kaoyu-shenhua",
-        "role": "logo",
-        "title": "kaoyu shenhua logo",
-        "access": "private",
-        "sourcePath": "KaoyuShenhua/assets/source/kaoyu-shenhua-logo.ai",
-        "sourceFilename": "kaoyu-shenhua-logo.ai",
-        "sha256": "e7f64c62b8b04bfca4eaf1ebd523b29a1822969d6942ae5645e6081475e63cc6",
-        "mimeType": "application/illustrator",
-        "extension": "ai",
-        "bytes": 1635017,
-        "size": "1.56 MB",
-        "width": null,
-        "height": null,
-        "dimensions": "",
-        "objectKey": "private/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0/e7f64c62b8b04bfca4eaf1ebd523b29a1822969d6942ae5645e6081475e63cc6/source.ai",
-        "mediaUrl": "https://media.apuch.art/private/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0/e7f64c62b8b04bfca4eaf1ebd523b29a1822969d6942ae5645e6081475e63cc6/source.ai",
-        "legacyUrls": [
-          "/assets/adobe/kaoyu-shenhua/kaoyu-shenhua-logo.ai"
-        ],
-        "status": "processing",
         "version": 1
       }
     ],
@@ -10762,7 +11577,9 @@
             "height": 744,
             "dimensions": "1488 x 744 px",
             "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc",
@@ -10776,7 +11593,9 @@
             "height": 744,
             "dimensions": "1488 x 744 px",
             "sha256": "8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49",
@@ -10790,7 +11609,9 @@
             "height": 744,
             "dimensions": "1488 x 744 px",
             "sha256": "81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea",
@@ -10804,7 +11625,9 @@
             "height": 744,
             "dimensions": "1488 x 744 px",
             "sha256": "25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           },
           {
             "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7",
@@ -10818,7 +11641,9 @@
             "height": 744,
             "dimensions": "1488 x 744 px",
             "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
-            "access": "public"
+            "access": "public",
+            "colorway": "",
+            "primaryAsset": false
           }
         ]
       }
@@ -10874,7 +11699,9 @@
           "height": 744,
           "dimensions": "1488 x 744 px",
           "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc",
@@ -10888,7 +11715,9 @@
           "height": 744,
           "dimensions": "1488 x 744 px",
           "sha256": "8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49",
@@ -10902,7 +11731,9 @@
           "height": 744,
           "dimensions": "1488 x 744 px",
           "sha256": "81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea",
@@ -10916,7 +11747,9 @@
           "height": 744,
           "dimensions": "1488 x 744 px",
           "sha256": "25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7",
@@ -10930,7 +11763,9 @@
           "height": 744,
           "dimensions": "1488 x 744 px",
           "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         }
       ]
     },
@@ -11095,11 +11930,11 @@
       "standalone"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/yanan-shiyao-hotel.json",
     "url": "brand.html?brand=yanan-shiyao-hotel",
@@ -11373,11 +12208,11 @@
       "parent"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/tongli-market.json",
     "url": "brand.html?brand=tongli-market",
@@ -11637,11 +12472,11 @@
       "child"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/tongxianghui.json",
     "url": "brand.html?brand=tongxianghui",
@@ -11901,11 +12736,11 @@
       "child"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/mutangwan.json",
     "url": "brand.html?brand=mutangwan",
@@ -12165,11 +13000,11 @@
       "child"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/shuangxi-shaola.json",
     "url": "brand.html?brand=shuangxi-shaola",
@@ -12421,11 +13256,11 @@
       "child"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/ganglao-baozailu.json",
     "url": "brand.html?brand=ganglao-baozailu",
@@ -12685,11 +13520,11 @@
       "child"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/xiaotaoyuan.json",
     "url": "brand.html?brand=xiaotaoyuan",
@@ -12951,11 +13786,11 @@
       "parent"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/subangyuan.json",
     "url": "brand.html?brand=subangyuan",
@@ -13215,11 +14050,11 @@
       "parent"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/youyuan-jingmeng.json",
     "url": "brand.html?brand=youyuan-jingmeng",
@@ -13481,11 +14316,11 @@
       "parent"
     ],
     "version": {
-      "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-      "shortHash": "f751eee",
-      "date": "2026-07-20T08:17:19+08:00",
-      "message": "fix: prevent orphaned directory headline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
     },
     "historyUrl": "api/history/qingshuiting.json",
     "url": "brand.html?brand=qingshuiting",

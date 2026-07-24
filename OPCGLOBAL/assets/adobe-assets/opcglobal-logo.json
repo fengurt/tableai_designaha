@@ -1,0 +1,32 @@
+{
+  "id": "opcglobal-logo-source",
+  "slug": "opcglobal",
+  "title": "OPC Global master artwork",
+  "source": {
+    "path": "OPCGLOBAL/assets/source/master-ai.ai",
+    "format": "AI",
+    "bytes": 223934,
+    "size": "219 KB"
+  },
+  "preview": {
+    "path": "OPCGLOBAL/assets/brand-images/primary-blue.png",
+    "format": "PNG",
+    "bytes": 4172,
+    "size": "4.07 KB",
+    "width": 256,
+    "height": 256,
+    "dimensions": "256 x 256 px"
+  },
+  "hero": {
+    "path": "OPCGLOBAL/assets/brand-images/primary-blue.png",
+    "format": "PNG",
+    "bytes": 4172,
+    "size": "4.07 KB",
+    "width": 256,
+    "height": 256,
+    "dimensions": "256 x 256 px"
+  },
+  "exports": [],
+  "generatedAt": "2026-07-24T01:11:48.549Z",
+  "pipeline": "official-source"
+}

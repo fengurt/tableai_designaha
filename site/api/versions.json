@@ -1,5 +1,68 @@
 [
   {
+    "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+    "shortHash": "fa30da1",
+    "date": "2026-07-23T09:50:41+08:00",
+    "message": "feat: move Sidera to pale manuscript theme",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
+  },
+  {
+    "hash": "e5029a71a21490b114fdb27e2ebea1a5b1ac0132",
+    "shortHash": "e5029a7",
+    "date": "2026-07-23T08:17:39+08:00",
+    "message": "feat: streamline homepage system entries",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/e5029a71a21490b114fdb27e2ebea1a5b1ac0132"
+  },
+  {
+    "hash": "6f63b2069bcdacfd11655b35e842197792c58bb2",
+    "shortHash": "6f63b20",
+    "date": "2026-07-21T14:05:18+08:00",
+    "message": "feat: refine Sidera ink identity",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/6f63b2069bcdacfd11655b35e842197792c58bb2"
+  },
+  {
+    "hash": "b110959b9d9b8d9ca8a98c74709d21a4289cb856",
+    "shortHash": "b110959",
+    "date": "2026-07-21T11:38:35+08:00",
+    "message": "perf: cache public shell and versioned data",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/b110959b9d9b8d9ca8a98c74709d21a4289cb856"
+  },
+  {
+    "hash": "e20dcbb9374ada65c1185e12b8310467e215e3fd",
+    "shortHash": "e20dcbb",
+    "date": "2026-07-20T19:19:21+08:00",
+    "message": "fix: restore direct Pages delivery",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/e20dcbb9374ada65c1185e12b8310467e215e3fd"
+  },
+  {
+    "hash": "b682d02c4c810b8cd42fcafe3dfdbc020c374115",
+    "shortHash": "b682d02",
+    "date": "2026-07-20T14:17:32+08:00",
+    "message": "fix: proxy Pages through cached edge",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/b682d02c4c810b8cd42fcafe3dfdbc020c374115"
+  },
+  {
+    "hash": "362d8736b279a864d8fdcaf633c1706941dad6a0",
+    "shortHash": "362d873",
+    "date": "2026-07-20T14:13:03+08:00",
+    "message": "fix: cache Pages HTML without zone routes",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/362d8736b279a864d8fdcaf633c1706941dad6a0"
+  },
+  {
+    "hash": "a2b75c2e09f125e2697ae8409c0316758a82ee3a",
+    "shortHash": "a2b75c2",
+    "date": "2026-07-20T14:05:40+08:00",
+    "message": "fix: route apex through edge cache",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a2b75c2e09f125e2697ae8409c0316758a82ee3a"
+  },
+  {
+    "hash": "5f6dced3cbe228a68c1519b403401944a42d0c5d",
+    "shortHash": "5f6dced",
+    "date": "2026-07-20T13:58:19+08:00",
+    "message": "feat: add food brand architecture and edge performance",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/5f6dced3cbe228a68c1519b403401944a42d0c5d"
+  },
+  {
     "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
     "shortHash": "f751eee",
     "date": "2026-07-20T08:17:19+08:00",
@@ -75,54 +138,5 @@
     "date": "2026-07-12T21:39:51+08:00",
     "message": "Rename Shanrenjing English brand to shanpass",
     "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
-  },
-  {
-    "hash": "4227557eea0802a842f26347067752b7c7ea67d9",
-    "shortHash": "4227557",
-    "date": "2026-07-12T08:54:21+08:00",
-    "message": "Promote IP Evolution and expose asset URLs",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4227557eea0802a842f26347067752b7c7ea67d9"
-  },
-  {
-    "hash": "bb4944e27a17d275715e16863fd91e6ba19d358c",
-    "shortHash": "bb4944e",
-    "date": "2026-07-12T08:23:07+08:00",
-    "message": "Pre-render the complete IP directory",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/bb4944e27a17d275715e16863fd91e6ba19d358c"
-  },
-  {
-    "hash": "b468412a912963294944493e1e326943a4721951",
-    "shortHash": "b468412",
-    "date": "2026-07-12T08:20:37+08:00",
-    "message": "Show the full IP directory immediately",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/b468412a912963294944493e1e326943a4721951"
-  },
-  {
-    "hash": "e09374c99d2186bc57954895120282abd43eaee4",
-    "shortHash": "e09374c",
-    "date": "2026-07-12T08:18:18+08:00",
-    "message": "Keep IP directory complete and aligned",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/e09374c99d2186bc57954895120282abd43eaee4"
-  },
-  {
-    "hash": "6f0d28b10ae106649819acdfcbbc51bf8f4b5b76",
-    "shortHash": "6f0d28b",
-    "date": "2026-07-10T22:27:54+08:00",
-    "message": "Version design system assets",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/6f0d28b10ae106649819acdfcbbc51bf8f4b5b76"
-  },
-  {
-    "hash": "3acbecff8f78733a9e82eab937d3ff83c5e6959b",
-    "shortHash": "3acbecf",
-    "date": "2026-07-10T22:25:26+08:00",
-    "message": "Tighten IPTrust interface density",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3acbecff8f78733a9e82eab937d3ff83c5e6959b"
-  },
-  {
-    "hash": "307513830db51470695adf67b4da3df8b2d669bb",
-    "shortHash": "3075138",
-    "date": "2026-07-10T22:06:39+08:00",
-    "message": "Redesign IPTrust and publish brand assets",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/307513830db51470695adf67b4da3df8b2d669bb"
   }
 ]

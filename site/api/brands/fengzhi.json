@@ -165,14 +165,50 @@
     "standalone"
   ],
   "version": {
-    "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-    "shortHash": "f751eee",
-    "date": "2026-07-20T08:17:19+08:00",
-    "message": "fix: prevent orphaned directory headline",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
+    "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+    "shortHash": "fa30da1",
+    "date": "2026-07-23T09:50:41+08:00",
+    "message": "feat: move Sidera to pale manuscript theme",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
   },
   "historyUrl": "api/history/fengzhi.json",
   "history": [
+    {
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "sourcePaths": [
+        "config/brands.json",
+        "FENGZHI",
+        "FENGZHI/readme.md"
+      ]
+    },
+    {
+      "hash": "6f63b2069bcdacfd11655b35e842197792c58bb2",
+      "shortHash": "6f63b20",
+      "date": "2026-07-21T14:05:18+08:00",
+      "message": "feat: refine Sidera ink identity",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/6f63b2069bcdacfd11655b35e842197792c58bb2",
+      "sourcePaths": [
+        "config/brands.json",
+        "FENGZHI",
+        "FENGZHI/readme.md"
+      ]
+    },
+    {
+      "hash": "5f6dced3cbe228a68c1519b403401944a42d0c5d",
+      "shortHash": "5f6dced",
+      "date": "2026-07-20T13:58:19+08:00",
+      "message": "feat: add food brand architecture and edge performance",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5f6dced3cbe228a68c1519b403401944a42d0c5d",
+      "sourcePaths": [
+        "config/brands.json",
+        "FENGZHI",
+        "FENGZHI/readme.md"
+      ]
+    },
     {
       "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
       "shortHash": "bc7b985",
@@ -203,42 +239,6 @@
       "date": "2026-07-19T14:13:21+08:00",
       "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
       "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86",
-      "sourcePaths": [
-        "config/brands.json",
-        "FENGZHI",
-        "FENGZHI/readme.md"
-      ]
-    },
-    {
-      "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
-      "shortHash": "b0056d3",
-      "date": "2026-07-12T21:39:51+08:00",
-      "message": "Rename Shanrenjing English brand to shanpass",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12",
-      "sourcePaths": [
-        "config/brands.json",
-        "FENGZHI",
-        "FENGZHI/readme.md"
-      ]
-    },
-    {
-      "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
-      "shortHash": "a5bf7cf",
-      "date": "2026-07-10T20:21:24+08:00",
-      "message": "Replace contrast-template brand copy",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
-      "sourcePaths": [
-        "config/brands.json",
-        "FENGZHI",
-        "FENGZHI/readme.md"
-      ]
-    },
-    {
-      "hash": "ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
-      "shortHash": "ed33a8b",
-      "date": "2026-07-10T18:44:20+08:00",
-      "message": "Add Shanrenjing journey safety IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/ed33a8b7b6283c8917f1809089fb0acdedca5f1c",
       "sourcePaths": [
         "config/brands.json",
         "FENGZHI",
@@ -497,7 +497,9 @@
       "height": 941,
       "dimensions": "1672 x 941 px",
       "sha256": "fe388cc906c9dfb10ceedeb83b772dd02c22c0f5801739d56e6354c728749fd8",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "fengzhi-image-jiege-mark-mono-d7b2e1dc871a",
@@ -511,7 +513,9 @@
       "height": null,
       "dimensions": "",
       "sha256": "d7b2e1dc871abb01b9d9cb8eaf26a19217b2a84cbae87412dc1475839d91001d",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "fengzhi-image-jiege-mark-reversed-e8792c4ac6fa",
@@ -525,7 +529,9 @@
       "height": null,
       "dimensions": "",
       "sha256": "e8792c4ac6fa70a515099352396d145c4b0d072376aae3d4840a3a2b26c970d5",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     },
     {
       "assetId": "fengzhi-image-jiege-mark-2e5746a16797",
@@ -539,7 +545,9 @@
       "height": null,
       "dimensions": "",
       "sha256": "2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3",
-      "access": "public"
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false
     }
   ],
   "assetManifest": [
@@ -565,6 +573,29 @@
       "legacyUrls": [
         "/assets/brand-images/fengzhi.png"
       ],
+      "status": "ready",
+      "version": 1
+    },
+    {
+      "id": "fengzhi-image-jiege-mark-2e5746a16797",
+      "ownerType": "owned-ip",
+      "ownerId": "fengzhi",
+      "role": "image",
+      "title": "jiege mark",
+      "access": "public",
+      "sourcePath": "FENGZHI/assets/jiege-mark.svg",
+      "sourceFilename": "jiege-mark.svg",
+      "sha256": "2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3",
+      "mimeType": "image/svg+xml",
+      "extension": "svg",
+      "bytes": 370,
+      "size": "370 B",
+      "width": null,
+      "height": null,
+      "dimensions": "",
+      "objectKey": "public/fengzhi/fengzhi-image-jiege-mark-2e5746a16797/2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3/original.svg",
+      "mediaUrl": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-2e5746a16797/2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3/original.svg",
+      "legacyUrls": [],
       "status": "ready",
       "version": 1
     },
@@ -610,29 +641,6 @@
       "dimensions": "",
       "objectKey": "public/fengzhi/fengzhi-image-jiege-mark-reversed-e8792c4ac6fa/e8792c4ac6fa70a515099352396d145c4b0d072376aae3d4840a3a2b26c970d5/original.svg",
       "mediaUrl": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-reversed-e8792c4ac6fa/e8792c4ac6fa70a515099352396d145c4b0d072376aae3d4840a3a2b26c970d5/original.svg",
-      "legacyUrls": [],
-      "status": "ready",
-      "version": 1
-    },
-    {
-      "id": "fengzhi-image-jiege-mark-2e5746a16797",
-      "ownerType": "owned-ip",
-      "ownerId": "fengzhi",
-      "role": "image",
-      "title": "jiege mark",
-      "access": "public",
-      "sourcePath": "FENGZHI/assets/jiege-mark.svg",
-      "sourceFilename": "jiege-mark.svg",
-      "sha256": "2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3",
-      "mimeType": "image/svg+xml",
-      "extension": "svg",
-      "bytes": 370,
-      "size": "370 B",
-      "width": null,
-      "height": null,
-      "dimensions": "",
-      "objectKey": "public/fengzhi/fengzhi-image-jiege-mark-2e5746a16797/2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3/original.svg",
-      "mediaUrl": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-2e5746a16797/2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3/original.svg",
       "legacyUrls": [],
       "status": "ready",
       "version": 1
@@ -701,7 +709,9 @@
           "height": 941,
           "dimensions": "1672 x 941 px",
           "sha256": "fe388cc906c9dfb10ceedeb83b772dd02c22c0f5801739d56e6354c728749fd8",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "fengzhi-image-jiege-mark-mono-d7b2e1dc871a",
@@ -715,7 +725,9 @@
           "height": null,
           "dimensions": "",
           "sha256": "d7b2e1dc871abb01b9d9cb8eaf26a19217b2a84cbae87412dc1475839d91001d",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "fengzhi-image-jiege-mark-reversed-e8792c4ac6fa",
@@ -729,7 +741,9 @@
           "height": null,
           "dimensions": "",
           "sha256": "e8792c4ac6fa70a515099352396d145c4b0d072376aae3d4840a3a2b26c970d5",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         },
         {
           "assetId": "fengzhi-image-jiege-mark-2e5746a16797",
@@ -743,7 +757,9 @@
           "height": null,
           "dimensions": "",
           "sha256": "2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3",
-          "access": "public"
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false
         }
       ]
     }
@@ -799,7 +815,9 @@
         "height": 941,
         "dimensions": "1672 x 941 px",
         "sha256": "fe388cc906c9dfb10ceedeb83b772dd02c22c0f5801739d56e6354c728749fd8",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "fengzhi-image-jiege-mark-mono-d7b2e1dc871a",
@@ -813,7 +831,9 @@
         "height": null,
         "dimensions": "",
         "sha256": "d7b2e1dc871abb01b9d9cb8eaf26a19217b2a84cbae87412dc1475839d91001d",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "fengzhi-image-jiege-mark-reversed-e8792c4ac6fa",
@@ -827,7 +847,9 @@
         "height": null,
         "dimensions": "",
         "sha256": "e8792c4ac6fa70a515099352396d145c4b0d072376aae3d4840a3a2b26c970d5",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       },
       {
         "assetId": "fengzhi-image-jiege-mark-2e5746a16797",
@@ -841,7 +863,9 @@
         "height": null,
         "dimensions": "",
         "sha256": "2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3",
-        "access": "public"
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false
       }
     ]
   },

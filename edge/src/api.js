@@ -221,7 +221,8 @@ async function startUpload(request, env, actor) {
   const role = cleanSegment(body.role || "source") || "source";
   const access = sourceAsset ? "public" : body.access === "public" && !["ai", "psd"].includes(extension) ? "public" : "private";
   const assetId = sourceAsset?.id || cleanSegment(body.assetId || `${ownerId}-${role}-${sha.slice(0, 12)}`);
-  const objectKey = `${access}/${ownerId}/${assetId}/${sha}/${sourceAsset ? role : role === "source" ? "source" : role}.${extension}`;
+  const objectName = sourceAsset ? role : access === "private" ? "source" : "original";
+  const objectKey = `${access}/${ownerId}/${assetId}/${sha}/${objectName}.${extension}`;
   const bucket = access === "private" ? env.ORIGINALS : env.PREVIEWS;
   const upload = await bucket.createMultipartUpload(objectKey, { httpMetadata: { contentType: mime, cacheControl: access === "public" ? "public, max-age=31536000, immutable" : "private, no-store" }, customMetadata: { sha256: sha, ownerId, assetId, role, access, filename } });
   const jobId = crypto.randomUUID();

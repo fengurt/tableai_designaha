@@ -594,6 +594,37 @@ const ipSystemMarkdown = await readFile(join(root, "IP-System/ip_sys.md"), "utf8
 const ipSystemDocumentHtml = renderMarkdownDocument(ipSystemMarkdown, "ip-system");
 const ipSystemTocHtml = markdownToc(ipSystemMarkdown, "ip-system");
 
+const retainedVersionedAssets = [];
+const previousIndexPath = join(siteDir, "index.html");
+const previousIndexes = [];
+if (existsSync(previousIndexPath)) previousIndexes.push(await readFile(previousIndexPath, "utf8"));
+for (const revision of ["HEAD", "HEAD^"]) {
+  try {
+    previousIndexes.push(execFileSync("git", ["show", `${revision}:site/index.html`], { cwd: root, encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }));
+  } catch {
+    // The first commit or a source-only checkout may not have a previous site build.
+  }
+}
+for (const previousIndex of previousIndexes) {
+  const referenced = [...previousIndex.matchAll(/assets\/(site-[a-z0-9-]+\.(?:css|js))/g)].map((match) => match[1]);
+  for (const filename of new Set(referenced)) {
+    if (retainedVersionedAssets.some((asset) => asset.filename === filename)) continue;
+    const path = join(assetsDir, filename);
+    if (existsSync(path)) {
+      retainedVersionedAssets.push({ filename, data: await readFile(path) });
+      continue;
+    }
+    for (const revision of ["HEAD", "HEAD^"]) {
+      try {
+        retainedVersionedAssets.push({ filename, data: execFileSync("git", ["show", `${revision}:site/assets/${filename}`], { cwd: root, stdio: ["ignore", "pipe", "ignore"] }) });
+        break;
+      } catch {
+        // Try the next retained deployment.
+      }
+    }
+  }
+}
+
 await rm(siteDir, { recursive: true, force: true });
 await mkdir(brandApiDir, { recursive: true });
 await mkdir(historyApiDir, { recursive: true });
@@ -603,6 +634,7 @@ await mkdir(adobeDir, { recursive: true });
 await mkdir(contactDir, { recursive: true });
 await mkdir(librarySiteDir, { recursive: true });
 await mkdir(join(siteDir, "skills", "iptrust-live-update"), { recursive: true });
+for (const asset of retainedVersionedAssets) await writeFile(join(assetsDir, asset.filename), asset.data);
 await copyFile(join(root, "styles/editorial.css"), join(assetsDir, "editorial.css"));
 if (existsSync(join(root, "skills/iptrust-live-update/SKILL.md"))) {
   await copyFile(join(root, "skills/iptrust-live-update/SKILL.md"), join(siteDir, "skills/iptrust-live-update/SKILL.md"));
@@ -649,6 +681,8 @@ for (const brand of brands) {
       dimensions: item.dimensions,
       sha256: item.sha256,
       access: item.access,
+      colorway: item.metadata?.colorway || "",
+      primaryAsset: Boolean(item.metadata?.primary),
     }));
   const adobeManifests = [];
   const usedImageNames = new Set();
@@ -1179,7 +1213,7 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
   <link rel="preconnect" href="https://media.apuch.art" crossorigin>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${siteCssPath}">
-  <link rel="stylesheet" href="assets/editorial.css?v=${buildVersion}">
+  <link rel="modulepreload" href="${siteJsPath}">
 </head>
 <body class="hub-home">
   <header class="topbar">
@@ -1307,7 +1341,7 @@ await writeFile(join(siteDir, "ip-evolution"), html`<!doctype html>
   <link rel="preconnect" href="https://media.apuch.art" crossorigin>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${siteCssPath}">
-  <link rel="stylesheet" href="assets/editorial.css?v=${buildVersion}">
+  <link rel="modulepreload" href="${siteJsPath}">
 </head>
 <body class="ip-system-page">
   <header class="topbar">
@@ -1391,10 +1425,10 @@ await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brand Guidelines</title>
   <link rel="preconnect" href="https://media.apuch.art" crossorigin>
-  <script>try{const slug=new URLSearchParams(location.search).get("brand");if(slug){const link=document.createElement("link");link.rel="preload";link.as="fetch";link.href="api/brands/"+encodeURIComponent(slug)+".json";document.head.append(link)}}catch{}</script>
+  <script>try{const slug=new URLSearchParams(location.search).get("brand");if(slug){const link=document.createElement("link");link.rel="preload";link.as="fetch";link.href="api/brands/"+encodeURIComponent(slug)+".json?v=${buildVersion}";link.fetchPriority="high";document.head.append(link)}}catch{}</script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${siteCssPath}">
-  <link rel="stylesheet" href="assets/editorial.css?v=${buildVersion}">
+  <link rel="modulepreload" href="${siteJsPath}">
 </head>
 <body>
   <header class="topbar">
@@ -1440,7 +1474,13 @@ await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
       <pre class="api-resource-summary hidden" id="apiResourceSummary"></pre>
     </div>
   </section>
-  <main id="brandPage" class="brand-page" aria-live="polite"></main>
+  <main id="brandPage" class="brand-page" aria-live="polite" aria-busy="true">
+    <section class="brand-loading" role="status">
+      <p>IPTrust</p>
+      <strong>正在载入 · Loading</strong>
+      <span aria-hidden="true"></span>
+    </section>
+  </main>
   <script src="${siteJsPath}" type="module"></script>
 </body>
 </html>`);
@@ -1456,7 +1496,7 @@ function directoryPage({ kind, title, mountId }) {
   <link rel="preconnect" href="https://media.apuch.art" crossorigin>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${siteCssPath}">
-  <link rel="stylesheet" href="assets/editorial.css?v=${buildVersion}">
+  <link rel="modulepreload" href="${siteJsPath}">
 </head>
 <body data-page="${kind}">
   <header class="topbar">
@@ -1492,7 +1532,7 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
   <link rel="preconnect" href="https://media.apuch.art" crossorigin>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${siteCssPath}">
-  <link rel="stylesheet" href="assets/editorial.css?v=${buildVersion}">
+  <link rel="modulepreload" href="${siteJsPath}">
 </head>
 <body>
   <header class="topbar">
@@ -3052,6 +3092,9 @@ p { line-height: 1.65; }
   height: 116px;
   border-bottom: 1px solid var(--brand-line, var(--line));
 }
+.brand-asset-link.asset-colorway-white {
+  background: #162130;
+}
 .brand-asset img {
   width: 100%;
   height: 100%;
@@ -3315,7 +3358,67 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
 @media (min-width: 761px) and (max-width: 1080px) {
   .hub-hero { grid-template-columns: 1fr; min-height: auto; }
   .ip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.brand-loading,
+.brand-load-error {
+  width: min(100% - 44px, 1320px);
+  min-height: calc(100dvh - 68px);
+  margin: 0 auto;
+  padding: clamp(36px, 7vw, 96px) 0;
+  display: grid;
+  align-content: end;
+  border-bottom: 1px solid #151515;
+}
+.brand-loading p,
+.brand-load-error p {
+  margin: 0 0 12px;
+  color: #6b6b66;
+  font-size: 12px;
+  font-weight: 700;
+}
+.brand-loading strong,
+.brand-load-error h1 {
+  max-width: 16ch;
+  margin: 0;
+  font-size: clamp(32px, 5vw, 72px);
+  line-height: 1;
+}
+.brand-loading > span {
+  position: relative;
+  height: 2px;
+  margin-top: 32px;
+  overflow: hidden;
+  background: #deded8;
+}
+.brand-loading > span::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 38%;
+  background: #151515;
+  animation: brand-load-progress 1.1s ease-in-out infinite alternate;
+}
+.brand-load-error button {
+  width: max-content;
+  margin-top: 28px;
+}
+.brand-shell > section:not(.brand-hero),
+.brand-shell > article {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 680px;
+}
+@keyframes brand-load-progress {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(260%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-loading > span::after { animation: none; transform: none; width: 100%; }
+}
+@media (max-width: 760px) {
+  .brand-loading,
+  .brand-load-error { width: min(100% - 28px, 1320px); min-height: calc(100dvh - 58px); }
 }`);
+await writeFile(join(assetsDir, "site.css"), `${(await readFile(join(assetsDir, "site.css"), "utf8")).trimEnd()}\n${(await readFile(join(root, "styles", "editorial.css"), "utf8")).trimEnd()}\n`);
 await copyFile(join(assetsDir, "site.css"), join(siteDir, siteCssPath));
 
 await writeFile(join(assetsDir, "site.js"), html`const $ = (selector) => document.querySelector(selector);
@@ -3744,9 +3847,22 @@ function setupSearch() {
 async function loadJson(path) {
   const url = path.startsWith("api/") ? new URL("../" + path, import.meta.url) : new URL(path, location.href);
   url.searchParams.set("v", BUILD_VERSION);
-  const res = await fetch(url, { cache: "force-cache" });
-  if (!res.ok) throw new Error(\`Could not load \${path}\`);
-  return res.json();
+  let lastError;
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), attempt ? 9000 : 6500);
+    try {
+      const res = await fetch(url, { cache: attempt ? "reload" : "force-cache", signal: controller.signal });
+      if (!res.ok) throw new Error(\`Could not load \${path}: \${res.status}\`);
+      return await res.json();
+    } catch (error) {
+      lastError = error;
+      if (!attempt) await new Promise((resolve) => setTimeout(resolve, 240));
+    } finally {
+      clearTimeout(timeout);
+    }
+  }
+  throw lastError || new Error(\`Could not load \${path}\`);
 }
 
 async function loadSearch() {
@@ -4032,9 +4148,11 @@ function referenceText(brand = {}) {
   const schemaUrl = new URL("api/schema.json", location.href).href;
   const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", document.baseURI).href;
   const mcpSource = new URL("api/manifest.json", location.href).href;
+  const assetApiUrl = new URL(\`api/v2/assets?ownerType=owned-ip&ownerId=\${encodeURIComponent(brand.slug)}\`, location.href).href;
   const preferredLogo = preferredBrandImage(brand.images || []);
   const logoPath = brand.logoUrl || preferredLogo?.sitePath || brand.heroImage || "";
   const logoUrl = logoPath ? new URL(logoPath, location.href).href : "TBD";
+  const publicAssetUrls = (brand.images || []).map((image) => image.sitePath).filter(Boolean).map((path) => new URL(path, location.href).href);
   const colors = palette(brand.theme)
     .map(([label, value]) => \`\${label}: \${value} / \${rgbValue(value)}\`)
     .join("\\n");
@@ -4052,10 +4170,12 @@ function referenceText(brand = {}) {
     \`Logo URL: \${logoUrl}\`,
     \`Official website: \${brand.officialWebsite || "TBD"}\`,
     \`Brand API: \${apiUrl}\`,
+    \`Assets API: \${assetApiUrl}\`,
     \`History API: \${historyUrl}\`,
     \`Field schema: \${schemaUrl}\`,
     \`IPTrust Skill: \${skillUrl}\`,
     \`MCP manifest: \${mcpSource}\`,
+    publicAssetUrls.length ? \`Public assets:\\n\${publicAssetUrls.map((url) => "- " + url).join("\\n")}\` : "",
     "",
     "[Core]",
     \`Intro: \${localized.intro || "TBD"}\`,
@@ -4679,7 +4799,7 @@ function brandAssetStrip(images = []) {
       <div class="brand-asset-strip">
         \${images.map((image) => \`
           <div class="brand-asset" title="\${escapeHtml(image.title || image.path || "")}">
-            <a class="brand-asset-link" href="\${escapeHtml(image.sitePath)}">
+            <a class="brand-asset-link \${image.colorway ? \`asset-colorway-\${escapeHtml(image.colorway)}\` : ""}" href="\${escapeHtml(image.sitePath)}">
               <img \${responsiveImageAttributes(image.sitePath, [320, 640, 1280], "(max-width: 760px) 54vw, 240px")} alt="\${escapeHtml(image.title || "")}" loading="lazy" decoding="async">
             </a>
             <button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="\${escapeHtml(image.sitePath)}" aria-label="\${escapeHtml(t("copy.assetUrl"))}">\${copyIcon()}</button>
@@ -5066,10 +5186,27 @@ async function renderBrand() {
       \`).join("") || ""}
     </div>
   \`;
+  page.setAttribute("aria-busy", "false");
   setupProfileEditor(brand);
   setupIpSystemPanel(brand);
   setupAssetCopyButtons();
   renderBrandArchitecture(slug).catch(console.error);
+}
+
+function renderBrandFailure(error) {
+  console.error(error);
+  const page = $("#brandPage");
+  if (!page) return;
+  page.setAttribute("aria-busy", "false");
+  page.innerHTML = \`
+    <section class="brand-load-error" role="alert">
+      <p>IPTrust · Connection</p>
+      <h1>载入中断。</h1>
+      <p>Brand data could not be loaded.</p>
+      <button class="button" type="button" id="brandReload">重新载入 · Retry</button>
+    </section>
+  \`;
+  $("#brandReload")?.addEventListener("click", () => location.reload());
 }
 
 function primaryIpName(ip = {}) {
@@ -5243,7 +5380,7 @@ setupPortalActions();
 setupApiConnect();
 renderHeroIndex().catch(console.error);
 renderIndex().catch(console.error);
-renderBrand().catch(console.error);
+renderBrand().catch(renderBrandFailure);
 renderDirectory().catch(console.error);
 renderIpRecord().catch(console.error);
 renderApplicationPage().catch(console.error);

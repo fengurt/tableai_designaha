@@ -7,8 +7,8 @@
   <meta name="description" content="岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。">
   <link rel="preconnect" href="https://media.apuch.art" crossorigin>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site-f751eee-52f38014.css">
-  <link rel="stylesheet" href="assets/editorial.css?v=f751eee-52f38014">
+  <link rel="stylesheet" href="assets/site-fa30da1-2d91bed8.css">
+  <link rel="modulepreload" href="assets/site-fa30da1-2d91bed8.js">
 </head>
 <body class="hub-home">
   <header class="topbar">
@@ -60,7 +60,7 @@
         <h1 data-i18n="hub.name">岁知社</h1>
         <p data-i18n="home.lead">高楼宾客似曾识，日光底下无新事。</p>
       </div>
-      <div class="hero-index" id="heroIndex" aria-live="polite"><div class="hero-index-row" data-brand="tableai" style="--brand-primary:#0A1626;--brand-accent:#A88B52;--brand-secondary:#545F72;--brand-surface:#FBF9FA;--brand-paper:#FFFFFF;--brand-ink:#1B1B1D;--row-index:0">
+      <div class="hero-index" id="heroIndex" role="region" tabindex="0" aria-label="可滚动 IP 名录 / Scrollable IP directory" aria-live="polite"><div class="hero-index-row" data-brand="tableai" style="--brand-primary:#0A1626;--brand-accent:#A88B52;--brand-secondary:#545F72;--brand-surface:#FBF9FA;--brand-paper:#FFFFFF;--brand-ink:#1B1B1D;--row-index:0">
     <a class="hero-index-link" href="brand.html?brand=tableai">
       <span class="hero-index-title">Table AI</span>
     </a>
@@ -120,11 +120,11 @@
     </a>
     <span class="hero-index-colors" aria-hidden="true"><span class="color-dot" style="--dot:#1A2B4A"></span><span class="color-dot" style="--dot:#B12137"></span><span class="color-dot" style="--dot:#D4AF37"></span></span>
     <span class="icon-copy" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="10" height="10" rx="2"></rect><path d="M5 15V7a2 2 0 0 1 2-2h8"></path></svg></span>
-  </div><div class="hero-index-row" data-brand="sidera" style="--brand-primary:#B58B4C;--brand-accent:#D4A862;--brand-secondary:#9E3B2E;--brand-surface:#14100A;--brand-paper:#18130B;--brand-ink:#EFE6D2;--row-index:10">
+  </div><div class="hero-index-row" data-brand="sidera" style="--brand-primary:#EFE6D2;--brand-accent:#76551F;--brand-secondary:#8C3228;--brand-surface:#F4F0E7;--brand-paper:#FFFDF8;--brand-ink:#17130D;--row-index:10">
     <a class="hero-index-link" href="brand.html?brand=sidera">
       <span class="hero-index-title">侍天 - 智慧餐饮 <span class="hero-index-secondary">· Sidera</span></span>
     </a>
-    <span class="hero-index-colors" aria-hidden="true"><span class="color-dot" style="--dot:#B58B4C"></span><span class="color-dot" style="--dot:#D4A862"></span><span class="color-dot" style="--dot:#9E3B2E"></span></span>
+    <span class="hero-index-colors" aria-hidden="true"><span class="color-dot" style="--dot:#EFE6D2"></span><span class="color-dot" style="--dot:#76551F"></span><span class="color-dot" style="--dot:#8C3228"></span></span>
     <span class="icon-copy" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="10" height="10" rx="2"></rect><path d="M5 15V7a2 2 0 0 1 2-2h8"></path></svg></span>
   </div><div class="hero-index-row" data-brand="1stepmore" style="--brand-primary:#123047;--brand-accent:#C89B3C;--brand-secondary:#5A7184;--brand-surface:#F4F1EA;--brand-paper:#FFFFFF;--brand-ink:#17212A;--row-index:11">
     <a class="hero-index-link" href="brand.html?brand=1stepmore">
@@ -278,8 +278,8 @@
     <span class="icon-copy" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="10" height="10" rx="2"></rect><path d="M5 15V7a2 2 0 0 1 2-2h8"></path></svg></span>
   </div></div>
     </section>
-    <section class="evolution-entry" id="ip-evolution" aria-labelledby="evolutionTitle">
-      <a href="ip-evolution" class="evolution-link">
+    <section class="system-entry" id="ip-evolution" aria-label="IPTrust system">
+      <a href="ip-evolution" class="system-entry-main" aria-labelledby="evolutionTitle">
         <div class="evolution-copy">
           <p class="eyebrow" data-i18n="evolution.label">IP进化论</p>
           <h2 id="evolutionTitle" data-i18n="evolution.title">让品牌成为可管理的系统。</h2>
@@ -293,18 +293,15 @@
         </div>
         <span class="evolution-open" aria-hidden="true">&#8599;</span>
       </a>
-    </section>
-    <section class="library-entry" id="knowledge-library" aria-labelledby="libraryTitle">
-      <a href="library/" class="library-entry-link">
+      <a href="library/" class="system-entry-library" id="knowledge-library" aria-labelledby="libraryTitle">
         <div class="library-entry-copy">
-          <p class="eyebrow" data-i18n="library.label">公共知识库</p>
-          <h2 id="libraryTitle" data-i18n="library.title">让出处、案例与数据彼此连接。</h2>
+          <p class="eyebrow" data-i18n="library.label">知名品牌资产</p>
+          <h2 id="libraryTitle" data-i18n="library.title">权威品牌、案例与数据。</h2>
         </div>
         <div class="library-entry-stats" aria-label="Library coverage">
           <span><strong>599</strong><small data-i18n="library.organizations">组织</small></span>
           <span><strong>500</strong><small>Fortune 500</small></span>
           <span><strong>99</strong><small data-i18n="library.centralEnterprises">中央企业</small></span>
-          <span><strong>4</strong><small data-i18n="library.modules">关联模块</small></span>
         </div>
         <span class="library-entry-open" aria-hidden="true">&#8599;</span>
       </a>
@@ -340,6 +337,6 @@
     </section>
     <section class="ip-grid" id="brandGrid" aria-live="polite"></section>
   </main>
-  <script src="assets/site-f751eee-52f38014.js" type="module"></script>
+  <script src="assets/site-fa30da1-2d91bed8.js" type="module"></script>
 </body>
 </html>

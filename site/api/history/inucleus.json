@@ -13,11 +13,11 @@
     "iNucleus/README.md"
   ],
   "latest": {
-    "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-    "shortHash": "bc7b985",
-    "date": "2026-07-20T08:12:03+08:00",
-    "message": "feat: add IP taxonomy and brand architecture",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
+    "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+    "shortHash": "fa30da1",
+    "date": "2026-07-23T09:50:41+08:00",
+    "message": "feat: move Sidera to pale manuscript theme",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f",
     "sourcePaths": [
       "config/brands.json",
       "iNucleus",
@@ -25,6 +25,42 @@
     ]
   },
   "versions": [
+    {
+      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "shortHash": "fa30da1",
+      "date": "2026-07-23T09:50:41+08:00",
+      "message": "feat: move Sidera to pale manuscript theme",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f",
+      "sourcePaths": [
+        "config/brands.json",
+        "iNucleus",
+        "iNucleus/README.md"
+      ]
+    },
+    {
+      "hash": "6f63b2069bcdacfd11655b35e842197792c58bb2",
+      "shortHash": "6f63b20",
+      "date": "2026-07-21T14:05:18+08:00",
+      "message": "feat: refine Sidera ink identity",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/6f63b2069bcdacfd11655b35e842197792c58bb2",
+      "sourcePaths": [
+        "config/brands.json",
+        "iNucleus",
+        "iNucleus/README.md"
+      ]
+    },
+    {
+      "hash": "5f6dced3cbe228a68c1519b403401944a42d0c5d",
+      "shortHash": "5f6dced",
+      "date": "2026-07-20T13:58:19+08:00",
+      "message": "feat: add food brand architecture and edge performance",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/5f6dced3cbe228a68c1519b403401944a42d0c5d",
+      "sourcePaths": [
+        "config/brands.json",
+        "iNucleus",
+        "iNucleus/README.md"
+      ]
+    },
     {
       "hash": "bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
       "shortHash": "bc7b985",
@@ -223,42 +259,6 @@
       "date": "2026-07-04T16:01:00+08:00",
       "message": "Add IP profile fields and main language display",
       "url": "https://github.com/fengurt/tableai_designaha/commit/1f20db30a5e970cf81e24c76e4613bc7e0036f09",
-      "sourcePaths": [
-        "config/brands.json",
-        "iNucleus",
-        "iNucleus/README.md"
-      ]
-    },
-    {
-      "hash": "088ab8909a2d4284cd64d7924cc60fa39b8eb206",
-      "shortHash": "088ab89",
-      "date": "2026-07-04T11:59:40+08:00",
-      "message": "Add APUCH IP to IPTrust",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/088ab8909a2d4284cd64d7924cc60fa39b8eb206",
-      "sourcePaths": [
-        "config/brands.json",
-        "iNucleus",
-        "iNucleus/README.md"
-      ]
-    },
-    {
-      "hash": "c723f8453cb7795108b51880986e7d9a664da5b1",
-      "shortHash": "c723f84",
-      "date": "2026-07-04T10:52:32+08:00",
-      "message": "Add global search and version history",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/c723f8453cb7795108b51880986e7d9a664da5b1",
-      "sourcePaths": [
-        "config/brands.json",
-        "iNucleus",
-        "iNucleus/README.md"
-      ]
-    },
-    {
-      "hash": "a550421605e0fadecfb30c3fd5066754feda54d7",
-      "shortHash": "a550421",
-      "date": "2026-07-04T07:52:24+08:00",
-      "message": "Add IPTrust brand systems",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/a550421605e0fadecfb30c3fd5066754feda54d7",
       "sourcePaths": [
         "config/brands.json",
         "iNucleus",
