@@ -763,13 +763,13 @@
     "slug": "sidera",
     "folder": "Sidera",
     "name": "侍天 - 智慧餐饮",
-    "nativeName": "Sidera",
+    "nativeName": "tiansight",
     "description": "侍天是面向智慧餐饮、饮食知识与餐饮品牌内容系统的中文优先 IP。",
     "officialWebsite": "",
     "mainLanguage": "zh",
     "intro": {
       "zh": "侍天是面向智慧餐饮、饮食知识与餐饮品牌内容系统的中文优先 IP。",
-      "en": "Sidera is a Chinese-first IP for smart dining, food knowledge, and food brand content systems."
+      "en": "tiansight is a Chinese-first IP for smart dining, food knowledge, and food brand content systems."
     },
     "business": {
       "zh": "智慧餐饮、饮食知识、料理内容、美食体验与餐饮品牌内容系统。",
@@ -1949,20 +1949,20 @@
     "folder": "KaoyuShenhua",
     "name": "烤鱼神话",
     "nativeName": "KAOYUSHENHUA",
-    "description": "烤鱼神话是以烤鱼与川湘菜为核心的餐饮品牌。",
+    "description": "三十多年老灶火，盐城大丰源头活鱼现点现烤，全店无预制菜的川湘烤鱼品牌。",
     "officialWebsite": "",
     "mainLanguage": "zh",
     "intro": {
-      "zh": "烤鱼神话以烤鱼与川湘菜为核心，通过鲜明符号、门店体验与稳定出品建立可识别的餐饮品牌。",
-      "en": "KAOYUSHENHUA is a Chinese dining brand centered on grilled fish and Sichuan-Hunan cuisine, shaped through a distinctive symbol, restaurant experience, and consistent food quality."
+      "zh": "三十多年老灶火，盐城大丰源头活鱼现点现烤，全店无预制菜。川湘家常味，街坊的老熟人。高兴了来，不高兴了更要来。",
+      "en": "Thirty-plus years of charcoal fire; live fish from Dafeng, Yancheng, grilled to order; no prefab dishes. Sichuan-Hunan home cooking — the neighborhood regular. Come when you're happy; come especially when you're not."
     },
     "business": {
       "zh": "烤鱼、川湘菜、餐饮门店运营、品牌连锁与供应链协同。",
       "en": "Grilled fish, Sichuan-Hunan cuisine, restaurant operations, brand franchising, and supply-chain coordination."
     },
     "notes": {
-      "zh": "已归档 Adobe Illustrator 原始标志文件，并提供网页预览与 PNG/JPG 导出版本。",
-      "en": "The original Adobe Illustrator logo is archived with browser previews and PNG/JPG exports."
+      "zh": "叙事与物料文案见 KaoyuShenhua/README.md。主口号：把实话坚持三十多年，就成了神话。已归档 Adobe Illustrator 原始标志，并提供网页预览与 PNG/JPG 导出。",
+      "en": "Narrative and store copy live in KaoyuShenhua/README.md. Primary slogan: thirty-plus years of plain truth becomes the myth. Original Illustrator logo archived with browser previews and PNG/JPG exports."
     },
     "primaryGuide": "KaoyuShenhua/README.md",
     "theme": {
@@ -1980,7 +1980,12 @@
         "Sichuan-Hunan cuisine",
         "fire red",
         "restaurant symbol",
-        "Chinese dining"
+        "Chinese dining",
+        "live fish",
+        "charcoal fire",
+        "no prefab",
+        "三十多年",
+        "橙红"
       ]
     },
     "classification": {

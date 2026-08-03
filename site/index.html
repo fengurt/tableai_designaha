@@ -5,10 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>岁知社 IPTrust</title>
   <meta name="description" content="岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。">
+  <link rel="canonical" href="https://apuch.art/">
   <link rel="preconnect" href="https://media.apuch.art" crossorigin>
+  <meta name="theme-color" content="#FFFEFA">
+  <meta name="color-scheme" content="light">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site-fa30da1-2d91bed8.css">
-  <link rel="modulepreload" href="assets/site-fa30da1-2d91bed8.js">
+  <link rel="apple-touch-icon" href="https://media.apuch.art/public/iptrust/iptrust-logo-logohdpi-4a253cbe0faa/4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64/original.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="alternate" href="agent.json" type="application/json" title="IPTrust Agent Entry">
+  <link rel="alternate" href="llms.txt" type="text/plain" title="IPTrust LLM Guide">
+  <link rel="alternate" href="api/openapi.json" type="application/vnd.oai.openapi+json" title="IPTrust OpenAPI">
+  <link rel="stylesheet" href="assets/site-735ff5e-4d805672.css">
+  <link rel="modulepreload" href="assets/site-735ff5e-4d805672.js">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"岁知社 IPTrust","alternateName":"IPTrust","url":"https://apuch.art/","logo":"https://media.apuch.art/public/iptrust/iptrust-logo-logohdpi-4a253cbe0faa/4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64/original.png","description":"岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。","sameAs":["https://github.com/fengurt/tableai_designaha"],"subjectOf":[{"@type":"DataCatalog","name":"IPTrust Brand Directory","url":"https://apuch.art/api/brands.json"},{"@type":"WebAPI","name":"IPTrust MCP","url":"https://apuch.art/mcp","documentation":"https://apuch.art/agent.json"}]}</script>
 </head>
 <body class="hub-home">
   <header class="topbar">
@@ -122,7 +131,7 @@
     <span class="icon-copy" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="10" height="10" rx="2"></rect><path d="M5 15V7a2 2 0 0 1 2-2h8"></path></svg></span>
   </div><div class="hero-index-row" data-brand="sidera" style="--brand-primary:#EFE6D2;--brand-accent:#76551F;--brand-secondary:#8C3228;--brand-surface:#F4F0E7;--brand-paper:#FFFDF8;--brand-ink:#17130D;--row-index:10">
     <a class="hero-index-link" href="brand.html?brand=sidera">
-      <span class="hero-index-title">侍天 - 智慧餐饮 <span class="hero-index-secondary">· Sidera</span></span>
+      <span class="hero-index-title">侍天 - 智慧餐饮 <span class="hero-index-secondary">· tiansight</span></span>
     </a>
     <span class="hero-index-colors" aria-hidden="true"><span class="color-dot" style="--dot:#EFE6D2"></span><span class="color-dot" style="--dot:#76551F"></span><span class="color-dot" style="--dot:#8C3228"></span></span>
     <span class="icon-copy" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="10" height="10" rx="2"></rect><path d="M5 15V7a2 2 0 0 1 2-2h8"></path></svg></span>
@@ -307,11 +316,23 @@
       </a>
     </section>
     <section class="entry-portals" aria-label="IPTrust entries">
-      <article class="portal" id="agent-entry">
-        <p class="eyebrow">Agent</p>
-        <h3 data-i18n="portal.agentTitle">我是 Agent</h3>
-        <p data-i18n="portal.agentBody">复制 Skill。</p>
-        <button class="portal-action" type="button" data-portal-action="agent" data-portal-href="skills/iptrust-live-update/SKILL.md" data-i18n="portal.agentAction">Skill</button>
+      <article class="portal portal-agent" id="agent-entry">
+        <div class="portal-agent-copy">
+          <div class="agent-access-label">
+            <p class="eyebrow">Agent Access</p>
+            <span class="agent-health" data-agent-health aria-live="polite"><i></i><span data-i18n="portal.agentChecking">Checking MCP</span></span>
+          </div>
+          <h3 data-i18n="portal.agentTitle">调用品牌标准。</h3>
+          <p data-i18n="portal.agentBody">通过 MCP 或 JSON 获取主名称、品牌色、Logo、素材与出处。</p>
+          <div class="agent-protocols" aria-label="Agent endpoints">
+            <code>/mcp</code><code>/agent.json</code><code>/api/brands/{slug}.json</code>
+          </div>
+        </div>
+        <div class="agent-actions">
+          <button class="portal-action" type="button" data-portal-action="agent" data-i18n="portal.agentAction">复制 Agent Pack</button>
+          <button class="portal-secondary" type="button" data-copy-mcp-config data-i18n="portal.copyMcp">复制 MCP 配置</button>
+          <a class="portal-secondary" href="agent.json" data-i18n="portal.openAgentGuide">Agent 指南</a>
+        </div>
         <p class="portal-status" data-portal-status="agent" aria-live="polite"></p>
       </article>
       <article class="portal" id="partner-entry">
@@ -337,6 +358,6 @@
     </section>
     <section class="ip-grid" id="brandGrid" aria-live="polite"></section>
   </main>
-  <script src="assets/site-fa30da1-2d91bed8.js" type="module"></script>
+  <script src="assets/site-735ff5e-4d805672.js" type="module"></script>
 </body>
 </html>

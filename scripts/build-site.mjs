@@ -26,6 +26,7 @@ const assetManifest = existsSync(assetManifestPath)
   ? JSON.parse(await readFile(assetManifestPath, "utf8"))
   : null;
 const hubLogoUrl = assetManifest?.items?.find((item) => item.sourcePath === "IPTRUST/assets/brand-images/iptrust-logo-black.png")?.mediaUrl || "assets/brand-images/iptrust-logo-black.png";
+const hubTouchIconUrl = assetManifest?.items?.find((item) => item.sourcePath === "IPTRUST/assets/brand-images/logo-set/黑色/logohdpi.png")?.mediaUrl || hubLogoUrl;
 const librarySnapshotNames = ["sources", "organizations", "cases", "reports", "datasets", "relations", "sync"];
 const librarySnapshots = Object.fromEntries(await Promise.all(librarySnapshotNames.map(async (name) => [
   name,
@@ -47,6 +48,18 @@ const hubNameEn = "IPTrust";
 const repository = { owner: "fengurt", repo: "tableai_designaha", branch: "main" };
 const hubDescription = "岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。";
 const hubDescriptionEn = "IPTrust is an IP trust hub for people and agents.";
+const publicOrigin = "https://apuch.art";
+
+function commonDiscoveryHead(prefix = "") {
+  return html`  <meta name="theme-color" content="#FFFEFA">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="${prefix}favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="${hubTouchIconUrl}">
+  <link rel="manifest" href="${prefix}site.webmanifest">
+  <link rel="alternate" href="${prefix}agent.json" type="application/json" title="IPTrust Agent Entry">
+  <link rel="alternate" href="${prefix}llms.txt" type="text/plain" title="IPTrust LLM Guide">
+  <link rel="alternate" href="${prefix}api/openapi.json" type="application/vnd.oai.openapi+json" title="IPTrust OpenAPI">`;
+}
 
 async function walk(dir) {
   if (!existsSync(dir)) return [];
@@ -483,6 +496,8 @@ function apiSchemaPayload() {
     version: "2.0.0",
     description: "IPTrust exposes brands, IP taxonomy, brand architecture, project applications, assets and history through REST and MCP.",
     endpoints: {
+      agentEntry: "agent.json",
+      openapi: "api/openapi.json",
       manifest: "api/manifest.json",
       allBrands: "api/brands.json",
       taxonomy: "api/v2/taxonomy",
@@ -510,6 +525,14 @@ function apiSchemaPayload() {
       llms: "llms.txt",
       remoteMcp: "mcp",
       directory: "directory/",
+    },
+    agentConventions: {
+      identity: "Use slug or assetKey as the stable IP identifier.",
+      naming: "Always display mainName in mainLanguage; display alternate-language names only as secondary labels.",
+      colors: "Use theme token values exactly. Do not infer replacement colors from screenshots.",
+      logo: "Use logoUrl as the canonical logo. Use images[] when a specific format or colorway is required.",
+      provenance: "Prefer sources[] and version/history fields when citing or applying a standard.",
+      privateAccess: "Public brand metadata and public assets require no key. Private files require an authorized Bearer API key.",
     },
     brandFields: {
       slug: "Stable IP ID / asset key used by URLs and agent calls.",
@@ -539,6 +562,7 @@ function apiSchemaPayload() {
       adobeAssets: "Adobe source files, preview images, page exports, formats, file sizes, and public URLs.",
       logoUrl: "Canonical public URL path for the preferred IP logo, blank when no verified logo asset exists.",
       assetKit: "Unified callable IP asset endpoints, colors, images, and moodboard source.",
+      agent: "Agent bootstrap metadata with MCP endpoint, recommended tool call and field conventions.",
       moodboard: "Derived colors, keywords, and image assets for visual direction.",
       editablePaths: "Source files editable from admin flow.",
       source: "GitHub source folder and local folder.",
@@ -666,12 +690,22 @@ for (const brand of brands) {
   const guides = [];
   const tokens = [];
   const manifestAssets = assetManifest?.items?.filter((item) => item.ownerId === brand.slug) || [];
-  const images = manifestAssets
-    .filter((item) => item.access === "public" && ["hero", "logo", "image"].includes(item.role))
-    .map((item) => ({
+  const adobeManifests = [];
+  const usedImageNames = new Set();
+  const images = [];
+  for (const item of manifestAssets.filter((entry) => entry.access === "public" && ["hero", "logo", "image"].includes(entry.role))) {
+    const localSource = item.sourcePath ? join(root, item.sourcePath) : "";
+    let sitePath = item.mediaUrl;
+    if (localSource && existsSync(localSource)) {
+      const outputName = brandImageOutputName(brand, item.sourcePath, usedImageNames);
+      await copyFile(localSource, join(imageDir, outputName));
+      sitePath = `assets/brand-images/${outputName}`;
+    }
+    images.push({
       assetId: item.id,
       path: item.sourcePath,
-      sitePath: item.mediaUrl,
+      sitePath,
+      mediaUrl: item.mediaUrl,
       title: item.title,
       format: item.extension === "jpg" ? "JPG" : item.extension.toUpperCase(),
       bytes: item.bytes,
@@ -683,9 +717,8 @@ for (const brand of brands) {
       access: item.access,
       colorway: item.metadata?.colorway || "",
       primaryAsset: Boolean(item.metadata?.primary),
-    }));
-  const adobeManifests = [];
-  const usedImageNames = new Set();
+    });
+  }
 
   for (const full of files) {
     const rel = relative(root, full).replaceAll("\\", "/");
@@ -825,6 +858,20 @@ for (const brand of brands) {
     adobeAssets,
     logoUrl: logoImage?.sitePath ?? "",
     assetKit,
+    agent: {
+      entry: `${publicOrigin}/agent.json`,
+      mcp: `${publicOrigin}/mcp`,
+      recommendedTool: "get_guideline",
+      arguments: { assetKey: brand.slug },
+      conventions: {
+        primaryNameField: "mainName",
+        primaryLanguageField: "mainLanguage",
+        exactColorField: "theme",
+        canonicalLogoField: "logoUrl",
+        publicAssetField: "images",
+        provenanceField: "sources",
+      },
+    },
     moodboard,
     editablePaths: guides.map((g) => g.path),
     source: {
@@ -910,6 +957,162 @@ const librarySearchPayload = [
   }))),
 ];
 const searchPayload = [...brandSearchPayload, ...librarySearchPayload];
+const agentEntryPayload = {
+  schemaVersion: "1.0",
+  name: hubName,
+  canonicalUrl: `${publicOrigin}/`,
+  purpose: "Retrieve current IP names, brand guidelines, exact color tokens, canonical logos, public assets, provenance and version history.",
+  publicAccess: true,
+  authentication: {
+    public: "No API key is required for public brand records, public assets, search and MCP reads.",
+    private: "Use an authorized Bearer API key for private assets, protected notes and write operations.",
+  },
+  recommendedWorkflow: [
+    "Read this entry document once.",
+    "Resolve an IP slug with the brand index, directory or MCP list_ips.",
+    "Read the current IP through MCP get_brand/get_guideline or GET /api/brands/{slug}.json.",
+    "Use mainName in mainLanguage. Treat alternate names as secondary labels.",
+    "Use theme values exactly and use logoUrl as the canonical logo.",
+    "Use images[] or MCP list_assets for format, size, dimensions, access and copyable asset URLs.",
+    "Check sources[] and history before citing or applying a standard.",
+  ],
+  mcp: {
+    endpoint: `${publicOrigin}/mcp`,
+    transport: "Streamable HTTP",
+    protocolVersion: "2025-11-25",
+    config: {
+      mcpServers: {
+        iptrust: {
+          type: "http",
+          url: `${publicOrigin}/mcp`,
+        },
+      },
+    },
+    coreTools: [
+      "list_ips",
+      "get_brand",
+      "get_guideline",
+      "list_tokens",
+      "list_assets",
+      "get_asset",
+      "search_library",
+    ],
+  },
+  rest: {
+    openapi: `${publicOrigin}/api/openapi.json`,
+    manifest: `${publicOrigin}/api/manifest.json`,
+    index: `${publicOrigin}/api/brands.json`,
+    brand: `${publicOrigin}/api/brands/{slug}.json`,
+    assets: `${publicOrigin}/api/v2/assets?ownerType=owned-ip&ownerId={slug}`,
+    search: `${publicOrigin}/api/v2/search?q={query}`,
+    history: `${publicOrigin}/api/history/{slug}.json`,
+  },
+  fieldGuide: {
+    mainName: "Primary public IP name selected by mainLanguage.",
+    mainLanguage: "The language that controls the primary displayed name.",
+    theme: "Exact callable brand color tokens and visual keywords.",
+    logoUrl: "Canonical public logo URL.",
+    images: "Public image assets with format, byte size, dimensions, SHA-256 and URL.",
+    guides: "Rendered and source brand guideline content.",
+    sources: "Provenance and verification records.",
+    history: "Version records for change-aware use.",
+  },
+  examples: {
+    getBrand: { tool: "get_brand", arguments: { assetKey: "opcglobal" } },
+    getGuideline: { tool: "get_guideline", arguments: { assetKey: "opcglobal" } },
+    listAssets: { tool: "list_assets", arguments: { ip: "opcglobal", limit: 50 } },
+  },
+  generatedAt: new Date().toISOString(),
+  version: versions[0] ?? null,
+};
+const openApiPayload = {
+  openapi: "3.1.0",
+  info: {
+    title: "IPTrust Public Brand API",
+    version: "2.0.0",
+    description: "Read current IP identity, guidelines, color tokens, canonical logos, public assets and history.",
+  },
+  servers: [{ url: publicOrigin }],
+  paths: {
+    "/agent.json": {
+      get: {
+        operationId: "getAgentEntry",
+        summary: "Get the recommended Agent bootstrap document",
+        responses: { 200: { description: "Agent entry document", content: { "application/json": { schema: { type: "object" } } } } },
+      },
+    },
+    "/api/brands.json": {
+      get: {
+        operationId: "listBrands",
+        summary: "List all current IP records",
+        responses: { 200: { description: "Brand index", content: { "application/json": { schema: { type: "array", items: { $ref: "#/components/schemas/BrandSummary" } } } } } },
+      },
+    },
+    "/api/brands/{slug}.json": {
+      get: {
+        operationId: "getBrand",
+        summary: "Get one complete IP record, including colors, logo, assets and guidelines",
+        parameters: [{ name: "slug", in: "path", required: true, schema: { type: "string" } }],
+        responses: {
+          200: { description: "Complete brand record", content: { "application/json": { schema: { $ref: "#/components/schemas/Brand" } } } },
+          404: { description: "IP not found" },
+        },
+      },
+    },
+    "/api/v2/assets": {
+      get: {
+        operationId: "listAssets",
+        summary: "List public assets and authorized private assets",
+        parameters: [
+          { name: "ownerType", in: "query", schema: { type: "string", default: "owned-ip" } },
+          { name: "ownerId", in: "query", schema: { type: "string" } },
+          { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 200 } },
+        ],
+        responses: { 200: { description: "Asset list", content: { "application/json": { schema: { type: "object" } } } } },
+      },
+    },
+    "/api/history/{slug}.json": {
+      get: {
+        operationId: "getBrandHistory",
+        summary: "Get Git-backed version history for one IP",
+        parameters: [{ name: "slug", in: "path", required: true, schema: { type: "string" } }],
+        responses: { 200: { description: "Version history", content: { "application/json": { schema: { type: "object" } } } } },
+      },
+    },
+  },
+  components: {
+    schemas: {
+      BrandSummary: {
+        type: "object",
+        required: ["slug", "mainName", "mainLanguage", "apiUrl"],
+        properties: {
+          slug: { type: "string" },
+          mainName: { type: "string" },
+          mainLanguage: { enum: ["zh", "en"] },
+          logoUrl: { type: "string" },
+          apiUrl: { type: "string" },
+        },
+      },
+      Brand: {
+        allOf: [
+          { $ref: "#/components/schemas/BrandSummary" },
+          {
+            type: "object",
+            properties: {
+              intro: { type: "object" },
+              business: { type: "object" },
+              theme: { type: "object" },
+              images: { type: "array", items: { type: "object" } },
+              guides: { type: "array", items: { type: "object" } },
+              sources: { type: "array", items: { type: "object" } },
+              history: { type: "array", items: { type: "object" } },
+            },
+          },
+        ],
+      },
+    },
+  },
+};
 await writeFile(join(apiDir, "brands.json"), JSON.stringify(indexPayload, null, 2));
 const staticIps = [
   ...indexPayload.map((brand) => ({ slug: brand.slug, recordClass: "owned", ipType: brand.ipType, primaryIndustry: brand.primaryIndustry, industries: brand.industries, names: { zh: brand.display?.zh?.name || brand.name, en: brand.nativeName || (brand.mainLanguage === "en" ? brand.name : "") }, mainLanguage: brand.mainLanguage, lifecycleStatus: brand.lifecycleStatus, guidelineMode: brand.guidelineMode, parentCapable: brand.parentCapable, architectureRoles: brand.architectureRoles, sourceUrl: brand.sources?.[0]?.url || brand.officialWebsite || "", sourcePublisher: brand.sources?.[0]?.publisher || "", verificationStatus: brand.sources?.length ? "source-documented" : "provisional", logoUrl: brand.logoUrl || brand.heroImage || "", url: brand.url })),
@@ -920,6 +1123,12 @@ await writeFile(join(apiDir, "ips.json"), JSON.stringify({ items: staticIps, rel
 await writeFile(join(apiDir, "search.json"), JSON.stringify(searchPayload, null, 2));
 await writeFile(join(apiDir, "versions.json"), JSON.stringify(versions, null, 2));
 await writeFile(join(apiDir, "schema.json"), JSON.stringify(apiSchemaPayload(), null, 2));
+await writeFile(join(apiDir, "agent.json"), JSON.stringify(agentEntryPayload, null, 2));
+await writeFile(join(apiDir, "openapi.json"), JSON.stringify(openApiPayload, null, 2));
+await writeFile(join(siteDir, "agent.json"), JSON.stringify(agentEntryPayload, null, 2));
+await mkdir(join(siteDir, ".well-known"), { recursive: true });
+await writeFile(join(siteDir, ".well-known", "iptrust.json"), JSON.stringify(agentEntryPayload, null, 2));
+await writeFile(join(siteDir, ".well-known", "mcp.json"), JSON.stringify(agentEntryPayload.mcp, null, 2));
 await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
   name: hubName,
   description: hubDescription,
@@ -940,11 +1149,18 @@ await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
   })),
   mcp: {
     local: "mcp/src/index.ts",
-    remote: "mcp",
+    remote: `${publicOrigin}/mcp`,
     transport: "Streamable HTTP",
     protocolVersion: "2025-11-25",
     resources: "api/brands/{slug}.json",
-    tools: ["list_brands", "get_brand", "list_ips", "get_ip_graph", "list_ip_children", "list_ip_applications", "get_application", "search_library", "get_library_item", "list_assets", "get_asset", "request_asset_url"],
+    tools: ["list_brands", "get_brand", "get_guideline", "list_tokens", "validate_color", "list_ips", "get_ip_graph", "list_ip_children", "list_ip_applications", "get_application", "search_library", "get_library_item", "list_assets", "get_asset", "request_asset_url"],
+  },
+  agent: {
+    entry: "agent.json",
+    wellKnown: ".well-known/iptrust.json",
+    llms: "llms.txt",
+    openapi: "api/openapi.json",
+    recommendedTransport: "MCP",
   },
   schema: {
     apiUrl: "api/schema.json",
@@ -1069,6 +1285,18 @@ await writeFile(join(siteDir, "_headers"), [
   "/llms.txt",
   "  Cache-Control: public, max-age=300, stale-while-revalidate=86400",
   "",
+  "/agent.json",
+  "  Cache-Control: public, max-age=300, stale-while-revalidate=86400",
+  "",
+  "/.well-known/*",
+  "  Cache-Control: public, max-age=300, stale-while-revalidate=86400",
+  "",
+  "/site.webmanifest",
+  "  Cache-Control: public, max-age=3600, stale-while-revalidate=86400",
+  "",
+  "/favicon.svg",
+  "  Cache-Control: public, max-age=86400, stale-while-revalidate=604800",
+  "",
   "/skills/*",
   "  Cache-Control: public, max-age=300, stale-while-revalidate=86400",
   "",
@@ -1078,6 +1306,8 @@ await writeFile(join(siteDir, "_redirects"), [
   "/llms  /llms.txt  200",
   "/manifest  /api/manifest.json  200",
   "/schema  /api/schema.json  200",
+  "/agent  /agent.json  200",
+  "/openapi  /api/openapi.json  200",
   "/brands  /api/brands.json  200",
   "/knowledge  /library/index.html  200",
   "/library  /library/index.html  200",
@@ -1130,37 +1360,79 @@ await writeFile(join(siteDir, "llms.txt"), [
   `English name: ${hubNameEn}`,
   `English: ${hubDescriptionEn}`,
   "",
+  "Recommended Agent workflow:",
+  "1. Read https://apuch.art/agent.json for the current capability map and examples.",
+  "2. Resolve the stable IP slug through https://apuch.art/api/brands.json or MCP list_ips.",
+  "3. Prefer MCP get_brand and get_guideline for live use; fall back to GET /api/brands/{slug}.json.",
+  "4. Keep mainName in mainLanguage. Alternate-language names remain secondary labels.",
+  "5. Use theme values exactly. Do not infer replacement colors from screenshots.",
+  "6. Use logoUrl as the canonical logo and images[] for a requested format or colorway.",
+  "7. Check sources[] and history before citing or applying a standard.",
+  "",
+  "Public access:",
+  "- Public brand records, public assets, search and MCP reads require no API key.",
+  "- Private assets, protected notes and writes require an authorized Bearer API key.",
+  "",
   "Machine-readable entry points:",
-  "- /api/manifest.json",
-  "- /api/schema.json",
-  "- /api/brands.json",
-  "- /api/brands/{slug}.json",
-  "- /api/history/{slug}.json",
-  "- /api/search.json",
-  "- /api/versions.json",
-  "- /api/library/organizations",
-  "- /api/library/cases",
-  "- /api/library/reports",
-  "- /api/library/datasets",
-  "- /api/library/relations",
-  "- /library/",
-  "- /mcp (MCP Streamable HTTP, protocol 2025-11-25)",
-  "- /ip_sys.md",
-  "- /skills/iptrust-live-update/SKILL.md",
+  "- https://apuch.art/agent.json",
+  "- https://apuch.art/.well-known/iptrust.json",
+  "- https://apuch.art/api/openapi.json",
+  "- https://apuch.art/api/manifest.json",
+  "- https://apuch.art/api/schema.json",
+  "- https://apuch.art/api/brands.json",
+  "- https://apuch.art/api/brands/{slug}.json",
+  "- https://apuch.art/api/history/{slug}.json",
+  "- https://apuch.art/api/v2/assets?ownerType=owned-ip&ownerId={slug}",
+  "- https://apuch.art/mcp (MCP Streamable HTTP, protocol 2025-11-25)",
+  "- https://apuch.art/skills/iptrust-live-update/SKILL.md",
+  "",
+  "MCP configuration:",
+  '{"mcpServers":{"iptrust":{"type":"http","url":"https://apuch.art/mcp"}}}',
   "",
   "Brands:",
   ...indexPayload.map((brand) => `- ${brand.mainName} (${brand.slug}): /api/brands/${brand.slug}.json · mainLocale ${brand.mainLocale} · palette ${brand.theme?.primary ?? "n/a"} / ${brand.theme?.accent ?? "n/a"}`),
-  "",
-  "Admin workflow:",
-  "- /admin.html unlocks with the generated admin key.",
-  "- Edits are committed back to GitHub via the GitHub Contents API.",
-  "- GitHub Pages rebuilds from main after changes land.",
 ].join("\n"));
 
-await writeFile(join(siteDir, "favicon.svg"), html`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="10" fill="#0A1626"/>
-  <path d="M16 18h32v28H16z" fill="none" stroke="#A88B52" stroke-width="3"/>
-  <path d="M24 26h16M24 34h16M24 42h10" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"/>
+await writeFile(join(siteDir, "site.webmanifest"), JSON.stringify({
+  name: hubName,
+  short_name: hubNameCn,
+  description: hubDescription,
+  start_url: "/",
+  display: "standalone",
+  background_color: "#FFFEFA",
+  theme_color: "#10263D",
+  icons: [{
+    src: hubTouchIconUrl,
+    sizes: "915x915",
+    type: "image/png",
+    purpose: "any",
+  }],
+}, null, 2));
+await writeFile(join(siteDir, "robots.txt"), [
+  "User-agent: *",
+  "Allow: /",
+  "Sitemap: https://apuch.art/sitemap.xml",
+  "",
+  "AI-Agent: https://apuch.art/agent.json",
+  "LLMs-Txt: https://apuch.art/llms.txt",
+].join("\n"));
+await writeFile(join(siteDir, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>${publicOrigin}/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>${publicOrigin}/directory</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>${publicOrigin}/ip-evolution</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>${publicOrigin}/library/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+${indexPayload.map((brand) => `  <url><loc>${publicOrigin}/brand?brand=${encodeURIComponent(brand.slug)}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`).join("\n")}
+</urlset>`);
+
+await writeFile(join(siteDir, "favicon.svg"), html`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 609.45 609.45">
+  <rect width="609.45" height="609.45" rx="72" fill="#FFFEFA"/>
+  <g fill="#10263D">
+    <path d="m232.86,240.62c6.38-.33,12.9-.97,19.42-.95,9.76.03,19.53.43,29.29.91,1.8.09,4.07.89,5.19,2.18,1.52,1.76,3.23,4.52,2.82,6.42-.33,1.58-3.49,3.37-5.59,3.65-17.46,2.33-34.97,4.32-54.38,6.65,2.38,12.82,3.82,24.15,6.65,35.13,11.95,46.36,24.43,92.59,36.4,138.95,1.63,6.32,1.64,13.09,2.03,19.67.14,2.32-.85,4.71-1.32,7.07-.76.3-1.51.59-2.27.89-2.5-3.37-5.83-6.4-7.37-10.17-6.84-16.73-13.74-33.48-19.53-50.59-7.57-22.36-14.1-45.07-21.1-67.62-.68-2.2-1.57-4.34-3.53-6.57-2.15,9.69-4.02,19.46-6.51,29.07-5.66,21.81-11.47,43.58-17.61,65.26-1.31,4.61-3.98,8.96-6.67,13-1.18,1.77-3.99,2.45-6.05,3.62-.77-2.08-2.35-4.24-2.18-6.24,1.03-11.68,2.14-23.36,3.84-34.96,3.94-26.75,8.05-53.47,12.5-80.14,1.68-10.05,4.88-19.85,6.63-29.9,1.41-8.11,1.68-16.41,2.49-25.08-11.42-1.04-22-1.7-32.5-3.05-12.78-1.65-26.27-.51-37.72-8.1-3.34-2.21-6.07-5.34-9.08-8.06.32-.59.64-1.18.96-1.77h78.9c-1.02-26.32-2.01-52.19-3.07-79.74-5.65,4.33-9.9,7.41-13.96,10.72-14.36,11.71-30.43,20.39-47.78,26.68-3.91,1.42-8.21,1.76-12.34,2.6-.37-.84-.74-1.67-1.11-2.51,3.53-3.18,6.95-6.5,10.62-9.51,11.37-9.3,23.67-17.65,34.04-27.94,10.38-10.3,19.98-21.8,27.73-34.15,3.79-6.04,3.21-15.17,3.55-22.95.47-10.86-.08-21.77-.15-32.65-.05-8.05,2.23-9.55,9.57-5.87,3.79,1.9,7.93,3.81,10.7,6.83,2.64,2.88,4.48,7.03,5.3,10.92,1.14,5.37,1.13,11.01,1.37,16.55.36,8.4,4.15,14.78,10.07,20.64,5.1,5.06,8.65,11.66,13.67,16.83,13.45,13.87,27.36,27.28,40.98,40.99,2.64,2.66,4.76,5.82,6.23,9.81-27.56-2.58-49.37-15.83-69.17-34.42v87.88Z"/>
+    <path d="m410.21,322.93c-2.34,9.78-4.02,18.15-6.38,26.31-4.23,14.61-1.28,27.92,6.95,40.16,9.41,14,15.93,29.05,18.95,45.67,4.01,22.06-.34,43.06-9.39,62.89-19.78,43.3-53.91,70.38-98.86,84.51-1.73.55-3.62.62-5.43.91-.38-.53-.75-1.06-1.13-1.6,2.07-2.1,4.01-4.34,6.23-6.27,14.01-12.12,28.8-23.44,41.96-36.42,18.9-18.63,30.77-41.87,37.7-67.29,5.68-20.83,2.41-41.04-8.38-59.8-4.88-8.49-10.28-16.69-15.53-24.96-4.13-6.51-4.18-13.02-2.9-20.69,2.22-13.34,2.55-27.02,3.18-40.58.07-1.41-3.01-3.88-4.96-4.31-8.52-1.87-17.2-2.97-25.75-4.74-3.9-.81-7.73-2.28-11.37-3.93-1.25-.56-1.84-2.57-2.73-3.92,1.33-.86,2.6-2.36,3.99-2.48,10.19-.86,20.41-1.39,30.61-2.12,17.2-1.22,34.38-2.66,51.59-3.66,4.83-.28,9.73.71,14.61,1.03,12.96.86,25.92,1.65,38.88,2.52,1.26.08,2.81.14,3.68.87,2.48,2.07,4.68,4.49,6.99,6.76-2.26,1.93-4.34,5.25-6.82,5.58-14.34,1.9-28.76,3.24-43.18,4.49-7.58.66-15.21.74-22.51,1.07Z"/>
+    <path d="m471.01,196.41c-19.54-6.09-38.44-.8-57.46.96-5.49.51-11.09-.22-16.62.04-11.21.54-22.43,1.08-33.6,2.19-7.27.72-23.33-6.77-26.09-13.25-.68-1.59-.85-3.96-.14-5.45,2.81-5.95,5.63-11.97,9.22-17.46,16.69-25.51,33.6-50.88,50.5-76.25,5.1-7.65,9.13-15.42,6.2-25.05-.42-1.37-.2-2.97-.13-4.46.21-4.66,3.4-6.21,6.17-3.21,4.34,4.68,9.26,10.09,10.7,15.98,6.88,28.07,19.77,53.85,29.88,80.65,4.38,11.6,13.67,21.35,20.81,31.89,1.31,1.93,3.3,3.43,4.44,5.43.96,1.68,2.12,4.34,1.42,5.59-.76,1.39-3.53,1.68-5.3,2.39Zm-42.46-23.21c-7.91-20.83-15.31-40.34-23.17-61.04-11.89,21.58-23.17,42.06-35.05,63.62,20.28-.9,39.12-1.73,58.22-2.58Z"/>
+    <path d="m329.41,240.7c3.59-.68,5.6-1.36,7.62-1.41,25.76-.62,51.53-1.36,77.3-1.61,12.95-.12,25.98.03,38.84,1.38,6.07.64,11.96,4.1,17.65,6.85,4.14,2,4.28,5.84.37,7.87-4.8,2.49-10.17,4.73-15.48,5.24-33.64,3.25-67.29,2.52-100.67-2.7-7.05-1.1-13.72-5.25-20.27-8.57-2.04-1.03-3.11-3.98-5.36-7.06Z"/>
+  </g>
 </svg>`);
 
 const topbarIcon = {
@@ -1210,10 +1482,25 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${hubName}</title>
   <meta name="description" content="${hubDescription}">
+  <link rel="canonical" href="${publicOrigin}/">
   <link rel="preconnect" href="https://media.apuch.art" crossorigin>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+${commonDiscoveryHead()}
   <link rel="stylesheet" href="${siteCssPath}">
   <link rel="modulepreload" href="${siteJsPath}">
+  <script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: hubName,
+    alternateName: hubNameEn,
+    url: `${publicOrigin}/`,
+    logo: hubTouchIconUrl,
+    description: hubDescription,
+    sameAs: [`https://github.com/${repository.owner}/${repository.repo}`],
+    subjectOf: [
+      { "@type": "DataCatalog", name: "IPTrust Brand Directory", url: `${publicOrigin}/api/brands.json` },
+      { "@type": "WebAPI", name: "IPTrust MCP", url: `${publicOrigin}/mcp`, documentation: `${publicOrigin}/agent.json` },
+    ],
+  })}</script>
 </head>
 <body class="hub-home">
   <header class="topbar">
@@ -1296,11 +1583,23 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
       </a>
     </section>
     <section class="entry-portals" aria-label="IPTrust entries">
-      <article class="portal" id="agent-entry">
-        <p class="eyebrow">Agent</p>
-        <h3 data-i18n="portal.agentTitle">我是 Agent</h3>
-        <p data-i18n="portal.agentBody">复制 Skill。</p>
-        <button class="portal-action" type="button" data-portal-action="agent" data-portal-href="skills/iptrust-live-update/SKILL.md" data-i18n="portal.agentAction">Skill</button>
+      <article class="portal portal-agent" id="agent-entry">
+        <div class="portal-agent-copy">
+          <div class="agent-access-label">
+            <p class="eyebrow">Agent Access</p>
+            <span class="agent-health" data-agent-health aria-live="polite"><i></i><span data-i18n="portal.agentChecking">Checking MCP</span></span>
+          </div>
+          <h3 data-i18n="portal.agentTitle">调用品牌标准。</h3>
+          <p data-i18n="portal.agentBody">通过 MCP 或 JSON 获取主名称、品牌色、Logo、素材与出处。</p>
+          <div class="agent-protocols" aria-label="Agent endpoints">
+            <code>/mcp</code><code>/agent.json</code><code>/api/brands/{slug}.json</code>
+          </div>
+        </div>
+        <div class="agent-actions">
+          <button class="portal-action" type="button" data-portal-action="agent" data-i18n="portal.agentAction">复制 Agent Pack</button>
+          <button class="portal-secondary" type="button" data-copy-mcp-config data-i18n="portal.copyMcp">复制 MCP 配置</button>
+          <a class="portal-secondary" href="agent.json" data-i18n="portal.openAgentGuide">Agent 指南</a>
+        </div>
         <p class="portal-status" data-portal-status="agent" aria-live="polite"></p>
       </article>
       <article class="portal" id="partner-entry">
@@ -1338,8 +1637,9 @@ await writeFile(join(siteDir, "ip-evolution"), html`<!doctype html>
   <base href="./">
   <title>IP进化论 | ${hubName}</title>
   <meta name="description" content="IP进化论把品牌架构、内核、表达、资产与治理连接成可持续更新的系统。">
+  <link rel="canonical" href="${publicOrigin}/ip-evolution">
   <link rel="preconnect" href="https://media.apuch.art" crossorigin>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+${commonDiscoveryHead()}
   <link rel="stylesheet" href="${siteCssPath}">
   <link rel="modulepreload" href="${siteJsPath}">
 </head>
@@ -1424,9 +1724,11 @@ await writeFile(join(siteDir, "brand.html"), html`<!doctype html>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brand Guidelines</title>
+  <meta name="description" content="IPTrust current IP guideline, exact brand colors, canonical logo, public assets and Agent-readable source.">
+  <link rel="canonical" href="${publicOrigin}/brand">
   <link rel="preconnect" href="https://media.apuch.art" crossorigin>
   <script>try{const slug=new URLSearchParams(location.search).get("brand");if(slug){const link=document.createElement("link");link.rel="preload";link.as="fetch";link.href="api/brands/"+encodeURIComponent(slug)+".json?v=${buildVersion}";link.fetchPriority="high";document.head.append(link)}}catch{}</script>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+${commonDiscoveryHead()}
   <link rel="stylesheet" href="${siteCssPath}">
   <link rel="modulepreload" href="${siteJsPath}">
 </head>
@@ -1494,7 +1796,7 @@ function directoryPage({ kind, title, mountId }) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${title} · ${hubName}</title>
   <link rel="preconnect" href="https://media.apuch.art" crossorigin>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+${commonDiscoveryHead()}
   <link rel="stylesheet" href="${siteCssPath}">
   <link rel="modulepreload" href="${siteJsPath}">
 </head>
@@ -1530,7 +1832,7 @@ await writeFile(join(siteDir, "admin.html"), html`<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin · ${hubName}</title>
   <link rel="preconnect" href="https://media.apuch.art" crossorigin>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+${commonDiscoveryHead()}
   <link rel="stylesheet" href="${siteCssPath}">
   <link rel="modulepreload" href="${siteJsPath}">
 </head>
@@ -1637,12 +1939,20 @@ await writeFile(join(assetsDir, "site.css"), html`:root {
   --green: #0e8c7b;
 }
 * { box-sizing: border-box; }
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+}
 body {
   margin: 0;
+  min-width: 320px;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: var(--ink);
   background: var(--bg);
 }
+img { display: block; max-width: 100%; }
 .hub-home {
   background:
     linear-gradient(180deg, rgba(255, 254, 250, .92), rgba(242, 240, 235, .98) 42%),
@@ -1658,6 +1968,7 @@ a { color: inherit; }
   border-bottom: 1px solid var(--line);
   background: rgba(255, 254, 250, .82);
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -2096,7 +2407,7 @@ p { line-height: 1.65; }
 .library-entry-link:focus-visible .library-entry-copy h2 { color: var(--blue); }
 .entry-portals {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1.55fr) repeat(2, minmax(0, .72fr));
   gap: clamp(12px, 2vw, 20px);
   padding: 8px 0 34px;
 }
@@ -2107,6 +2418,81 @@ p { line-height: 1.65; }
   display: grid;
   align-content: start;
 }
+.portal-agent {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px 24px;
+  min-height: 164px;
+  border-top-color: var(--ink);
+}
+.portal-agent-copy { min-width: 0; }
+.agent-access-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.agent-access-label .eyebrow { margin: 0; }
+.agent-health {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 720;
+}
+.agent-health i {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 12%, transparent);
+}
+.agent-health.is-online { color: #0B7567; }
+.agent-health.is-online i {
+  background: #0E8C7B;
+  box-shadow: 0 0 0 3px rgba(14, 140, 123, .12);
+}
+.agent-protocols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 14px;
+}
+.agent-protocols code {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 8px;
+  color: var(--blue);
+  background: rgba(255, 254, 250, .64);
+  font-size: 11px;
+}
+.agent-actions {
+  display: grid;
+  align-content: start;
+  justify-items: stretch;
+  gap: 8px;
+  min-width: 156px;
+}
+.agent-actions .portal-action { width: 100%; margin-top: 0; }
+.portal-secondary {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 7px 10px;
+  color: var(--ink);
+  background: transparent;
+  font-size: 12px;
+  font-weight: 720;
+  text-decoration: none;
+}
+.portal-secondary:hover,
+.portal-secondary:focus-visible {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+.portal-agent .portal-status { grid-column: 1 / -1; margin-top: -8px !important; }
 .portal h3 {
   font-size: 21px;
   line-height: 1.1;
@@ -2914,6 +3300,136 @@ p { line-height: 1.65; }
   padding-left: 22px;
   border-left: 1px solid var(--brand-line);
 }
+.brand-kaoyu-shenhua {
+  background: var(--brand-paper);
+  color: var(--brand-ink);
+}
+.brand-kaoyu-shenhua p,
+.brand-kaoyu-shenhua .muted { color: var(--brand-muted); }
+.brand-kaoyu-shenhua .button {
+  border-color: var(--brand-accent);
+  background: var(--brand-accent);
+  color: #fffdfc;
+}
+.brand-kaoyu-shenhua .button.ghost {
+  border-color: var(--brand-primary);
+  background: transparent;
+  color: var(--brand-ink);
+}
+.brand-kaoyu-shenhua .brand-hero {
+  min-height: min(640px, calc(100dvh - 150px));
+  padding: clamp(30px, 5vw, 72px) 0;
+  border-bottom: 1px solid var(--brand-line);
+  grid-template-columns: minmax(0, 1fr) minmax(280px, .9fr);
+}
+.brand-kaoyu-shenhua .brand-hero h1 {
+  max-width: 6ch;
+  margin: 10px 0 16px;
+  font-size: clamp(56px, 9vw, 112px);
+  font-weight: 700;
+  line-height: .98;
+  letter-spacing: -.02em;
+  color: var(--brand-primary);
+}
+.brand-kaoyu-shenhua .brand-hero .eyebrow {
+  color: var(--brand-accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: .04em;
+}
+.brand-kaoyu-shenhua .brand-hero .alt-name {
+  color: var(--brand-ink);
+  font-size: clamp(16px, 1.8vw, 22px);
+}
+.brand-kaoyu-shenhua .brand-visual { background: var(--brand-primary); }
+.kaoyu-fire-visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: clamp(320px, 38vw, 480px);
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 78%, color-mix(in srgb, var(--brand-accent) 55%, transparent) 0%, transparent 52%),
+    radial-gradient(ellipse at 42% 60%, color-mix(in srgb, var(--brand-secondary) 28%, transparent) 0%, transparent 40%),
+    linear-gradient(180deg, #2a1a16 0%, var(--brand-primary) 100%);
+  isolation: isolate;
+}
+.kaoyu-fire-visual::before {
+  position: absolute;
+  inset: 18% 28% auto;
+  height: 52%;
+  content: "";
+  background: radial-gradient(ellipse at 50% 100%, #e85a3a 0%, #b33a2b 42%, transparent 70%);
+  filter: blur(2px);
+  opacity: .9;
+  animation: kaoyu-ember 4.8s ease-in-out infinite alternate;
+}
+.kaoyu-fire-mark {
+  position: relative;
+  z-index: 1;
+  color: #fffdfc;
+  font-size: clamp(88px, 14vw, 148px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+.kaoyu-fire-caption {
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  margin: 0;
+  color: color-mix(in srgb, #fffdfc 72%, var(--brand-secondary));
+  font: 650 11px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+@keyframes kaoyu-ember {
+  from { transform: translateY(6px) scale(.96); opacity: .78; }
+  to { transform: translateY(-4px) scale(1.04); opacity: 1; }
+}
+.kaoyu-principles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 0 28px;
+  border-bottom: 1px solid var(--brand-line);
+}
+.kaoyu-principles span {
+  padding: 18px 0;
+  color: var(--brand-ink);
+  font-size: clamp(16px, 1.8vw, 22px);
+  font-weight: 600;
+}
+.kaoyu-principles span + span {
+  padding-left: 22px;
+  border-left: 1px solid var(--brand-line);
+}
+.kaoyu-story {
+  margin: 0 0 30px;
+  padding: 28px 0 32px;
+  border-bottom: 1px solid var(--brand-line);
+}
+.kaoyu-story h2 {
+  margin: 0 0 14px;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.15;
+  color: var(--brand-primary);
+}
+.kaoyu-story .lead {
+  max-width: 46rem;
+  margin: 0 0 18px;
+  color: var(--brand-ink);
+  font-size: clamp(17px, 1.6vw, 20px);
+  line-height: 1.7;
+}
+.kaoyu-story .slogan {
+  margin: 0 0 20px;
+  color: var(--brand-accent);
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 700;
+  line-height: 1.45;
+}
+.kaoyu-story-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 .brand-assets {
   display: grid;
   gap: 10px;
@@ -3292,6 +3808,11 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .sidera-compass-visual { min-height: 340px; }
   .sidera-principles { grid-template-columns: 1fr; }
   .sidera-principles span + span { padding-left: 0; border-top: 1px solid var(--brand-line); border-left: 0; }
+  .brand-kaoyu-shenhua .brand-hero { min-height: auto; padding-top: 26px; grid-template-columns: 1fr; }
+  .brand-kaoyu-shenhua .brand-hero h1 { max-width: none; font-size: clamp(52px, 18vw, 88px); }
+  .kaoyu-fire-visual { min-height: 300px; }
+  .kaoyu-principles { grid-template-columns: 1fr; }
+  .kaoyu-principles span + span { padding-left: 0; border-top: 1px solid var(--brand-line); border-left: 0; }
   .resource-grid { grid-template-columns: 1fr; }
   .endpoint-grid, .mood-grid { grid-template-columns: 1fr; }
   .profile-form-grid { grid-template-columns: 1fr; }
@@ -3302,6 +3823,9 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .hero-index-row { grid-template-columns: minmax(0, 1fr) auto; }
   .hero-index-colors { display: none; }
   .entry-portals { grid-template-columns: 1fr; }
+  .portal-agent { grid-template-columns: 1fr; }
+  .agent-actions { grid-template-columns: 1fr 1fr; min-width: 0; }
+  .agent-actions .portal-action { grid-column: 1 / -1; }
   .evolution-link { grid-template-columns: 1fr auto; gap: 18px; }
   .evolution-path { grid-column: 1 / -1; grid-row: 2; grid-template-columns: repeat(5, auto); justify-content: space-between; }
   .evolution-open { grid-column: 2; grid-row: 1; }
@@ -3412,6 +3936,17 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   to { transform: translateX(260%); }
 }
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-index-row,
+  .ip-card,
+  .evolution-open,
+  .library-entry-open,
+  .toast {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+  .hero-index-row { opacity: 1; }
   .brand-loading > span::after { animation: none; transform: none; width: 100%; }
 }
 @media (max-width: 760px) {
@@ -3450,6 +3985,7 @@ const i18n = {
     "meta.guides": "规范",
     "copy.reference": "复制",
     "copy.done": "已复制",
+    "copy.copying": "正在复制…",
     "copy.selected": "已选中，请按 ⌘C / Ctrl+C 复制",
     "copy.fail": "复制失败",
     "copy.referenceDone": "已复制 IP Agent Reference",
@@ -3458,6 +3994,7 @@ const i18n = {
     "copy.colorDone": "已复制色值",
     "copy.pantoneDone": "已复制 Pantone 近似值",
     "brand.openJson": "打开 JSON",
+    "brand.copyAgentPack": "复制 Agent Pack",
     "brand.source": "源文件",
     "brand.colors": "品牌颜色",
     "brand.website": "官网",
@@ -3506,10 +4043,16 @@ const i18n = {
     "brand.saving": "保存中...",
     "brand.savedProfile": "已保存，等待部署。",
     "brand.saveFailed": "保存失败。",
-    "portal.agentTitle": "我是 Agent",
-    "portal.agentBody": "复制 Skill。",
-    "portal.agentAction": "Skill",
-    "portal.agentCopied": "已复制。打开 Skill。",
+    "portal.agentTitle": "调用品牌标准。",
+    "portal.agentBody": "通过 MCP 或 JSON 获取主名称、品牌色、Logo、素材与出处。",
+    "portal.agentAction": "复制 Agent Pack",
+    "portal.agentCopied": "Agent Pack 已复制",
+    "portal.copyMcp": "复制 MCP 配置",
+    "portal.mcpCopied": "MCP 配置已复制",
+    "portal.openAgentGuide": "Agent 指南",
+    "portal.agentChecking": "检查 MCP",
+    "portal.agentOnline": "MCP 在线",
+    "portal.agentOffline": "REST 可用",
     "portal.partnerTitle": "我是合伙人",
     "portal.partnerBody": "Key first.",
     "portal.partnerAction": "Key first",
@@ -3609,6 +4152,7 @@ const i18n = {
     "meta.guides": "guides",
     "copy.reference": "Copy",
     "copy.done": "Copied",
+    "copy.copying": "Copying…",
     "copy.selected": "Selected. Press Cmd/Ctrl+C to copy.",
     "copy.fail": "Failed",
     "copy.referenceDone": "IP Agent Reference copied",
@@ -3617,6 +4161,7 @@ const i18n = {
     "copy.colorDone": "Color copied",
     "copy.pantoneDone": "Pantone approximation copied",
     "brand.openJson": "Open JSON",
+    "brand.copyAgentPack": "Copy Agent Pack",
     "brand.source": "Source",
     "brand.colors": "Brand colors",
     "brand.website": "Website",
@@ -3665,10 +4210,16 @@ const i18n = {
     "brand.saving": "Saving...",
     "brand.savedProfile": "Saved. Deploying.",
     "brand.saveFailed": "Save failed.",
-    "portal.agentTitle": "I am an Agent",
-    "portal.agentBody": "Copy Skill.",
-    "portal.agentAction": "Skill",
-    "portal.agentCopied": "Copied. Opening Skill.",
+    "portal.agentTitle": "Call the brand standard.",
+    "portal.agentBody": "Use MCP or JSON for the primary name, exact colors, logo, assets, and provenance.",
+    "portal.agentAction": "Copy Agent Pack",
+    "portal.agentCopied": "Agent Pack copied",
+    "portal.copyMcp": "Copy MCP config",
+    "portal.mcpCopied": "MCP config copied",
+    "portal.openAgentGuide": "Agent guide",
+    "portal.agentChecking": "Checking MCP",
+    "portal.agentOnline": "MCP online",
+    "portal.agentOffline": "REST available",
     "portal.partnerTitle": "I am a Partner",
     "portal.partnerBody": "Key first.",
     "portal.partnerAction": "Key first",
@@ -3799,6 +4350,7 @@ function applyI18n() {
   document.querySelectorAll("[data-i18n-placeholder]").forEach((node) => {
     node.setAttribute("placeholder", t(node.dataset.i18nPlaceholder));
   });
+  setupAgentGateway();
 }
 
 function setupLanguageToggle() {
@@ -4019,6 +4571,7 @@ function miniPalette(theme = {}) {
 function brandInitial(brand = {}) {
   if (brand.slug === "fengzhi") return "界";
   if (brand.slug === "sidera") return "侍";
+  if (brand.slug === "kaoyu-shenhua") return "火";
   if (brand.slug === "vanahom") return "V";
   if (brand.slug === "kind") return "K";
   if (brand.slug === "tableai") return "AI";
@@ -4117,7 +4670,8 @@ function skillBaseText(skill = "") {
   const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", document.baseURI).href;
   return [
     "IPTrust Skill ✦",
-    "Hub: " + location.origin + location.pathname,
+    "Hub: " + new URL("/", location.origin).href,
+    "Agent Entry: " + new URL("agent.json", location.origin + "/").href,
     "Manifest: " + new URL("api/manifest.json", location.href).href,
     "Search API: " + new URL("api/search.json", location.href).href,
     "MCP: " + new URL("mcp", location.href).href,
@@ -4147,7 +4701,7 @@ function referenceText(brand = {}) {
   const historyUrl = new URL(brand.historyUrl || \`api/history/\${brand.slug}.json\`, location.href).href;
   const schemaUrl = new URL("api/schema.json", location.href).href;
   const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", document.baseURI).href;
-  const mcpSource = new URL("api/manifest.json", location.href).href;
+  const mcpSource = new URL("mcp", location.origin + "/").href;
   const assetApiUrl = new URL(\`api/v2/assets?ownerType=owned-ip&ownerId=\${encodeURIComponent(brand.slug)}\`, location.href).href;
   const preferredLogo = preferredBrandImage(brand.images || []);
   const logoPath = brand.logoUrl || preferredLogo?.sitePath || brand.heroImage || "";
@@ -4174,7 +4728,7 @@ function referenceText(brand = {}) {
     \`History API: \${historyUrl}\`,
     \`Field schema: \${schemaUrl}\`,
     \`IPTrust Skill: \${skillUrl}\`,
-    \`MCP manifest: \${mcpSource}\`,
+    \`MCP endpoint: \${mcpSource}\`,
     publicAssetUrls.length ? \`Public assets:\\n\${publicAssetUrls.map((url) => "- " + url).join("\\n")}\` : "",
     "",
     "[Core]",
@@ -4301,18 +4855,75 @@ async function writeClipboardText(text) {
 }
 
 async function copyReference(brand, button) {
-  const result = await writeClipboardText(referenceText(brand));
   const previous = button.textContent;
+  if (!button.dataset.iconOnly) button.textContent = t("copy.copying");
+  button.classList.add("copying");
+  button.setAttribute("aria-busy", "true");
+  const result = await writeClipboardText(referenceText(brand));
   const message = feedbackMessage(result, "copy.referenceDone");
   if (!button.dataset.iconOnly) button.textContent = message;
+  button.classList.remove("copying");
   button.dataset.feedback = message;
   button.classList.add("copied");
+  button.removeAttribute("aria-busy");
   showToast(message);
   setTimeout(() => {
     if (!button.dataset.iconOnly) button.textContent = previous || t("copy.reference");
     button.classList.remove("copied");
     delete button.dataset.feedback;
   }, 1200);
+}
+
+function mcpConfigText() {
+  return JSON.stringify({
+    mcpServers: {
+      iptrust: {
+        type: "http",
+        url: new URL("mcp", location.origin + "/").href,
+      },
+    },
+  }, null, 2);
+}
+
+function setupAgentGateway() {
+  const copyButton = document.querySelector("[data-copy-mcp-config]");
+  if (copyButton && !copyButton.dataset.ready) {
+    copyButton.dataset.ready = "true";
+    copyButton.addEventListener("click", async () => {
+      const result = await writeClipboardText(mcpConfigText());
+      const message = result === "selected" ? t("copy.selected") : t("portal.mcpCopied");
+      copyButton.classList.add("copied");
+      showToast(message);
+      const statusNode = document.querySelector('[data-portal-status="agent"]');
+      if (statusNode) statusNode.textContent = message;
+      setTimeout(() => copyButton.classList.remove("copied"), 1000);
+    });
+  }
+  const health = document.querySelector("[data-agent-health]");
+  if (!health) return;
+  const label = health.querySelector("span");
+  if (health.dataset.state === "online" && label) label.textContent = t("portal.agentOnline");
+  if (health.dataset.state === "fallback" && label) label.textContent = t("portal.agentOffline");
+  if (health.dataset.ready) return;
+  health.dataset.ready = "true";
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 3600);
+  fetch(new URL("mcp", location.origin + "/"), {
+    headers: { Accept: "application/json" },
+    cache: "no-store",
+    signal: controller.signal,
+  })
+    .then((response) => {
+      if (!response.ok) throw new Error("MCP unavailable");
+      health.dataset.state = "online";
+      health.classList.add("is-online");
+      if (label) label.textContent = t("portal.agentOnline");
+    })
+    .catch(() => {
+      health.dataset.state = "fallback";
+      if (label) label.textContent = t("portal.agentOffline");
+    })
+    .finally(() => clearTimeout(timeout));
 }
 
 function setupPortalActions() {
@@ -4755,8 +5366,13 @@ function setupAssetCopyButtons() {
     button.addEventListener("click", async (event) => {
       event.preventDefault();
       event.stopPropagation();
+      button.classList.add("copying");
+      button.setAttribute("aria-busy", "true");
+      button.title = t("copy.copying");
       const assetUrl = new URL(button.dataset.copyAssetUrl, location.href).href;
       const result = await writeClipboardText(assetUrl);
+      button.classList.remove("copying");
+      button.removeAttribute("aria-busy");
       showToast(feedbackMessage(result, "copy.assetDone"));
       button.classList.add("copied");
       button.title = result === "selected" ? t("copy.selected") : t("copy.done");
@@ -5112,11 +5728,25 @@ async function renderBrand() {
   const display = mainBrand(brand);
   const localized = localizedBrand(brand);
   const isSidera = brand.slug === "sidera";
+  const isKaoyu = brand.slug === "kaoyu-shenhua";
   const heroName = isSidera ? "侍天" : display.name;
-  const heroSecondaryName = isSidera ? "智慧餐饮 · Sidera" : display.secondaryName;
-  const heroEyebrow = isSidera ? "智慧领航者 · WISDOM NAVIGATOR" : statusLabel(brand.status);
+  const heroSecondaryName = isSidera ? "智慧餐饮 · tiansight" : isKaoyu ? "KAOYUSHENHUA · 一炉火，烧了三十多年" : display.secondaryName;
+  const heroEyebrow = isSidera ? "智慧领航者 · WISDOM NAVIGATOR" : isKaoyu ? (currentLocale === "en" ? "Charcoal fire · Live fish · No prefab" : "老灶火 · 活鱼现烤 · 无预制") : statusLabel(brand.status);
   const sideraPrinciples = currentLocale === "en" ? ["SEE CLEARLY", "MOVE DECISIVELY", "COMPOUND VALUE"] : ["看得清", "改得动", "能复利"];
+  const kaoyuPrinciples = currentLocale === "en"
+    ? ["Live fish, grilled to order", "Home cooking, wok-hot", "No prefab dishes"]
+    : ["活鱼现点现烤", "家常菜现炒现做", "全店无预制菜"];
+  const kaoyuSlogan = currentLocale === "en"
+    ? "Thirty-plus years of plain truth becomes the myth."
+    : "把实话坚持三十多年，就成了神话。";
+  const kaoyuStoryLead = currentLocale === "en"
+    ? "Since 1990 at the stove, since 2015 in Changping, Beijing — one live fish, one charcoal fire, one plain promise for the neighborhood."
+    : "1990年入行，2015年落地北京昌平。一条活鱼，一炉旺火，一句实在话——让街坊吃口新鲜的、热乎的。";
   document.title = \`\${display.name} · Brand Guidelines\`;
+  const descriptionMeta = document.querySelector('meta[name="description"]');
+  if (descriptionMeta) descriptionMeta.setAttribute("content", localized.intro || brand.description || "IPTrust brand guideline and assets.");
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.setAttribute("href", new URL(\`brand?brand=\${encodeURIComponent(brand.slug)}\`, location.origin + "/").href);
   const hero = brand.adobeAssets?.[0]?.hero?.sitePath
     ? brand.adobeAssets[0].hero
     : preferredBrandImage(brand.images || []);
@@ -5134,7 +5764,9 @@ async function renderBrand() {
           </div>
           \${swatches(brand.theme, true)}
           <div class="actions">
-            <a class="button" href="\${brand.apiUrl}">\${t("brand.openJson")}</a>
+            \${isKaoyu ? \`<a class="button" href="kaoyu-shenhua/">\${currentLocale === "en" ? "Brand story" : "品牌故事"}</a>\` : ""}
+            <button class="button" type="button" data-copy-brand="\${escapeHtml(brand.slug)}">\${escapeHtml(t("brand.copyAgentPack"))}</button>
+            <a class="button\${isKaoyu ? " ghost" : ""}" href="\${brand.apiUrl}">\${t("brand.openJson")}</a>
             <a class="button ghost" href="\${brand.source.github}">\${t("brand.source")}</a>
           </div>
         </div>
@@ -5152,11 +5784,28 @@ async function renderBrand() {
           <div class="brand-visual sidera-compass-visual" role="img" aria-label="侍天智慧领航罗盘">
             <div class="sidera-compass-ring" aria-hidden="true"><div class="sidera-compass-core"><span class="sidera-compass-mark">侍</span></div></div>
             <span class="sidera-seal" aria-hidden="true">侍天</span>
-            <p class="sidera-compass-caption">SIDERA / WISDOM NAVIGATOR</p>
+            <p class="sidera-compass-caption">TIANSIGHT / WISDOM NAVIGATOR</p>
+          </div>
+        \` : isKaoyu ? \`
+          <div class="brand-visual kaoyu-fire-visual" role="img" aria-label="烤鱼神话炉火">
+            <span class="kaoyu-fire-mark">火</span>
+            <p class="kaoyu-fire-caption">KAOYUSHENHUA / CHARCOAL FIRE</p>
           </div>
         \` : ""}
       </section>
       \${isSidera ? \`<section class="sidera-principles">\${sideraPrinciples.map((item) => \`<span>\${escapeHtml(item)}</span>\`).join("")}</section>\` : ""}
+      \${isKaoyu ? \`
+        <section class="kaoyu-principles">\${kaoyuPrinciples.map((item) => \`<span>\${escapeHtml(item)}</span>\`).join("")}</section>
+        <section class="kaoyu-story" id="kaoyu-story">
+          <h2>\${currentLocale === "en" ? "One fire, thirty-plus years" : "一炉火，烧了三十多年"}</h2>
+          <p class="lead">\${escapeHtml(kaoyuStoryLead)}</p>
+          <p class="slogan">\${escapeHtml(kaoyuSlogan)}</p>
+          <div class="kaoyu-story-links actions">
+            <a class="button" href="kaoyu-shenhua/">\${currentLocale === "en" ? "Open story page" : "打开故事页"}</a>
+            <a class="button ghost" href="#kaoyu-shenhua-guide-1-品牌叙事-完整版">\${currentLocale === "en" ? "Full narrative" : "完整版叙事"}</a>
+          </div>
+        </section>
+      \` : ""}
       \${profileEditor(brand)}
       <section class="brand-architecture" id="brandArchitecture" aria-live="polite"></section>
       \${ipSystemPanel(brand)}
@@ -5187,6 +5836,7 @@ async function renderBrand() {
     </div>
   \`;
   page.setAttribute("aria-busy", "false");
+  setupCopyButtons([brand]);
   setupProfileEditor(brand);
   setupIpSystemPanel(brand);
   setupAssetCopyButtons();
@@ -5377,6 +6027,7 @@ setupLanguageToggle();
 setupDirectoryLink();
 setupSearch();
 setupPortalActions();
+setupAgentGateway();
 setupApiConnect();
 renderHeroIndex().catch(console.error);
 renderIndex().catch(console.error);
@@ -5681,5 +6332,106 @@ $("#keyForm")?.addEventListener("submit", (event) => createKey(event).catch((err
 $("#stepUpButton")?.addEventListener("click", () => stepUp().catch((error) => status(error.message, true)));
 restoreSession().catch(() => {});
 `);
+
+const kaoyuBrand = brandPayloads.find((brand) => brand.slug === "kaoyu-shenhua");
+if (kaoyuBrand) {
+  const kaoyuStoryDir = join(siteDir, "kaoyu-shenhua");
+  await mkdir(kaoyuStoryDir, { recursive: true });
+  const kaoyuGuideHtml = kaoyuBrand.guides?.find((guide) => guide.primary)?.html
+    || kaoyuBrand.guides?.[0]?.html
+    || "<p>烤鱼神话品牌叙事见 KaoyuShenhua/README.md。</p>";
+  await writeFile(join(kaoyuStoryDir, "index.html"), html`<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>烤鱼神话 · 一炉火，烧了三十多年</title>
+  <meta name="description" content="三十多年老灶火，盐城大丰源头活鱼现点现烤，全店无预制菜。把实话坚持三十多年，就成了神话。">
+${commonDiscoveryHead("../")}
+  <link rel="stylesheet" href="../${siteCssPath}">
+  <style>
+    .kaoyu-story-page {
+      --brand-primary: #241714;
+      --brand-accent: #B33A2B;
+      --brand-secondary: #C89B58;
+      --brand-paper: #FFFDFC;
+      --brand-ink: #181312;
+      --brand-muted: #6C625E;
+      --brand-line: rgba(36, 23, 20, 0.18);
+      min-height: 100dvh;
+      background:
+        radial-gradient(ellipse at 12% 0%, color-mix(in srgb, #B33A2B 14%, transparent), transparent 42%),
+        linear-gradient(180deg, #FFFDFC 0%, #F5F2EE 100%);
+      color: var(--brand-ink);
+    }
+    .kaoyu-story-page .story-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 22px 20px 0;
+    }
+    .kaoyu-story-page .story-top a {
+      color: var(--brand-accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .kaoyu-story-page .story-hero {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: clamp(36px, 8vw, 88px) 20px 28px;
+    }
+    .kaoyu-story-page .story-hero .eyebrow {
+      margin: 0 0 12px;
+      color: var(--brand-accent);
+      font: 650 12px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      letter-spacing: .06em;
+    }
+    .kaoyu-story-page .story-hero h1 {
+      margin: 0 0 14px;
+      max-width: 10ch;
+      color: var(--brand-primary);
+      font-size: clamp(42px, 8vw, 72px);
+      line-height: 1.05;
+      letter-spacing: -.02em;
+    }
+    .kaoyu-story-page .story-hero .tagline {
+      margin: 0;
+      max-width: 36rem;
+      color: var(--brand-muted);
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.65;
+    }
+    .kaoyu-story-page .story-body {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 20px 72px;
+    }
+    .kaoyu-story-page .story-body .rendered-document {
+      border-top: 1px solid var(--brand-line);
+      padding-top: 28px;
+    }
+    .kaoyu-story-page .story-body h1 { display: none; }
+  </style>
+</head>
+<body class="kaoyu-story-page">
+  <header class="story-top">
+    <a href="../brand.html?brand=kaoyu-shenhua">← 烤鱼神话 IP</a>
+    <a href="../brand.html?brand=kaoyu-shenhua#kaoyu-story">IP 页故事区</a>
+  </header>
+  <section class="story-hero">
+    <p class="eyebrow">KAOYUSHENHUA</p>
+    <h1>一炉火，烧了三十多年</h1>
+    <p class="tagline">把实话坚持三十多年，就成了神话。</p>
+  </section>
+  <main class="story-body">
+    <article class="rendered-document brand-guide-document">${kaoyuGuideHtml}</article>
+  </main>
+</body>
+</html>`);
+}
 
 console.log(`Built site with ${brandPayloads.length} brands at ${relative(root, siteDir)}`);

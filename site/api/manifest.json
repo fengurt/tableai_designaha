@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-07-24T01:22:40.421Z",
+  "generatedAt": "2026-08-03T22:00:11.076Z",
   "version": {
-    "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
-    "shortHash": "fa30da1",
-    "date": "2026-07-23T09:50:41+08:00",
-    "message": "feat: move Sidera to pale manuscript theme",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
+    "hash": "735ff5e693bb2ee2fe4dbd66a2aa337e1d8368bf",
+    "shortHash": "735ff5e",
+    "date": "2026-07-24T09:25:16+08:00",
+    "message": "feat: publish OPC Global brand assets",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/735ff5e693bb2ee2fe4dbd66a2aa337e1d8368bf"
   },
   "brands": [
     {
@@ -347,13 +347,16 @@
   ],
   "mcp": {
     "local": "mcp/src/index.ts",
-    "remote": "mcp",
+    "remote": "https://apuch.art/mcp",
     "transport": "Streamable HTTP",
     "protocolVersion": "2025-11-25",
     "resources": "api/brands/{slug}.json",
     "tools": [
       "list_brands",
       "get_brand",
+      "get_guideline",
+      "list_tokens",
+      "validate_color",
       "list_ips",
       "get_ip_graph",
       "list_ip_children",
@@ -365,6 +368,13 @@
       "get_asset",
       "request_asset_url"
     ]
+  },
+  "agent": {
+    "entry": "agent.json",
+    "wellKnown": ".well-known/iptrust.json",
+    "llms": "llms.txt",
+    "openapi": "api/openapi.json",
+    "recommendedTransport": "MCP"
   },
   "schema": {
     "apiUrl": "api/schema.json",
@@ -435,11 +445,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
-      "shortHash": "fa30da1",
-      "date": "2026-07-23T09:50:41+08:00",
-      "message": "feat: move Sidera to pale manuscript theme",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
+      "hash": "735ff5e693bb2ee2fe4dbd66a2aa337e1d8368bf",
+      "shortHash": "735ff5e",
+      "date": "2026-07-24T09:25:16+08:00",
+      "message": "feat: publish OPC Global brand assets",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/735ff5e693bb2ee2fe4dbd66a2aa337e1d8368bf"
     }
   },
   "sync": {

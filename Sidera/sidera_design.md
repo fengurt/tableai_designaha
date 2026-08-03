@@ -1,10 +1,10 @@
-# Sidera 侍天 — Design System
+# tiansight 侍天 — Design System
 
 > Build-ready brand & visual spec for agents producing on-brand 侍天 work.
 > 一句话：**素墨为纸、玄墨为字、土金为骨；沉稳敢言、有据可依。**
 > Ink is the paper, charcoal is the voice, gold is the structure — composed, forthright, evidence-based.
 
-**Sidera 侍天** — 智慧领航者 · *Wisdom Navigator* for premium F&B chains.
+**tiansight 侍天** — 智慧领航者 · *Wisdom Navigator* for premium F&B chains.
 We equip every valuable mid-to-high-end F&B chain with a "see-clearly, move-betably, compound-easily" smart navigation system: 海图 Chart · 罗盘 Compass · 航线 Route · 校正 Correction.
 
 > A Member of the Table AI Alliance · 数字员工 · 餐饮陪跑
@@ -87,10 +87,11 @@ We equip every valuable mid-to-high-end F&B chain with a "see-clearly, move-beta
 
 - **主标志 — 罗盘印:** compass ring + 侍. Concentric circles + crosshair lines, `--charcoal` on `--ink-primary` or `--paper`.
 - **朱印:** vermillion square seal containing 侍 / 侍天 — covers, back covers, sign-offs only.
+- **Archived logo files:** `Sidera/assets/brand-images/sidera-logo.png` (2000×2000) · `Sidera/assets/brand-images/sidera-logo-small.jpeg` (320×320). Prefer the PNG for print/web; small JPEG for avatars / favicon-adjacent use.
 - **Misuse ✕:** never rotate, never recolor, never stretch.
 - **Clear space:** at least one full compass-ring radius on all sides.
 - **Minimum size:** 24px height for inline; 64px for hero placement.
-- **No third-party mark coupling** in a single lockup; pair Sidera marks only with Table AI Alliance wordmark, separated by a 1px `--gold` rule.
+- **No third-party mark coupling** in a single lockup; pair tiansight marks only with Table AI Alliance wordmark, separated by a 1px `--gold` rule.
 
 ---
 
@@ -170,13 +171,13 @@ We equip every valuable mid-to-high-end F&B chain with a "see-clearly, move-beta
 - No emoji, no gradient-as-decoration, no Inter/Roboto.
 - No rounded-corner cards with a colored left accent strip.
 - No stock SaaS hero illustrations; if an image is needed, use real restaurant interiors, POS data, or hand-drawn compass/seal elements.
-- Don't repaint Sidera into "warm" sunset palettes or "futuristic" neon — the register is manuscript, not UI.
+- Don't repaint tiansight into "warm" sunset palettes or "futuristic" neon — the register is manuscript, not UI.
 
 ---
 
 ## 9. The world-class bar / 验收标尺
 
-A Sidera artifact is "done" when:
+A tiansight artifact is "done" when:
 
 1. **Ink first.** `#EFE6D2` carries identity as the primary field and key action color; `#17130D` carries legibility. Gold remains structure, never a crutch.
 2. **Manuscript feel.** It looks at home on a fine-paper spread — generous margins, hairline rules, handcrafted seal moments.
@@ -188,4 +189,4 @@ A Sidera artifact is "done" when:
 
 ---
 
-*Sidera 侍天 Design System · 数字员工 · 餐饮陪跑 · A Member of the Table AI Alliance · v0.6 · Hong Kong*
+*tiansight 侍天 Design System · 数字员工 · 餐饮陪跑 · A Member of the Table AI Alliance · v0.6 · Hong Kong*
