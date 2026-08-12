@@ -1308,6 +1308,11 @@ await writeFile(join(siteDir, "_headers"), [
   "  Content-Type: text/html; charset=utf-8",
   "  Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=86400",
   "",
+  "/ip-evolution-repair",
+  "  Content-Type: text/html; charset=utf-8",
+  "  Cache-Control: private, no-store",
+  '  Clear-Site-Data: "cache"',
+  "",
   "/library/*",
   "  Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=86400",
   "",
@@ -1359,8 +1364,8 @@ await writeFile(join(siteDir, "_headers"), [
 ].join("\n"));
 
 await writeFile(join(siteDir, "_redirects"), [
-  "/ip-evolution/  /ip-evolution  308",
-  "/ip-evolution%EF%BC%9F  /ip-evolution  308",
+  "/ip-evolution/  /ip-evolution  302",
+  "/ip-evolution%EF%BC%9F  /ip-evolution  302",
   "/llms  /llms.txt  200",
   "/manifest  /api/manifest.json  200",
   "/schema  /api/schema.json  200",
@@ -1399,10 +1404,10 @@ function canonicalIpEvolution(request) {
   if (pathname !== "/ip-evolution/" && pathname !== "/ip-evolution？") return null;
   url.pathname = "/ip-evolution";
   return new Response(null, {
-    status: 308,
+    status: 302,
     headers: {
       Location: url.toString(),
-      "Cache-Control": "public, max-age=31536000, immutable",
+      "Cache-Control": "private, no-store",
       "X-IPTrust-Route": "canonical-ip-evolution",
     },
   });
@@ -1830,7 +1835,27 @@ ${commonDiscoveryHead()}
     </section>
     <noscript><p class="ip-system-noscript">页面内容可正常阅读；开启 JavaScript 后可使用字体筛选、样张加载与复制功能。</p></noscript>
   </main>
+  <script>
+    const repairUrl = new URL(location.href);
+    if (repairUrl.searchParams.delete("repaired")) history.replaceState(null, "", repairUrl.pathname + repairUrl.search + repairUrl.hash);
+  </script>
   <script src="${siteJsPath}" type="module"></script>
+</body>
+</html>`);
+
+await writeFile(join(siteDir, "ip-evolution-repair"), html`<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Repairing IP Evolution | ${hubName}</title>
+  <link rel="canonical" href="${publicOrigin}/ip-evolution">
+</head>
+<body>
+  <p>正在恢复 IP进化论 / Repairing IP Evolution...</p>
+  <p><a href="/ip-evolution?repaired=1">继续 / Continue</a></p>
+  <script>setTimeout(() => location.replace("/ip-evolution?repaired=1"), 80);</script>
 </body>
 </html>`);
 

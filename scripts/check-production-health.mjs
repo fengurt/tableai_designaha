@@ -26,7 +26,16 @@ const checks = [
     name: "canonical-fullwidth-question",
     url: "https://apuch.art/ip-evolution%EF%BC%9F",
     redirect: "manual",
-    expect: (response) => response.status === 308 && new URL(response.headers.get("location"), "https://apuch.art").pathname === "/ip-evolution",
+    expect: (response) => response.status === 302
+      && new URL(response.headers.get("location"), "https://apuch.art").pathname === "/ip-evolution"
+      && /no-store/i.test(response.headers.get("cache-control") || ""),
+  },
+  {
+    name: "ip-evolution-cache-repair",
+    url: "https://apuch.art/ip-evolution-repair",
+    expect: (response, body) => response.ok
+      && response.headers.has("clear-site-data")
+      && /ip-evolution\?repaired=1/.test(body),
   },
 ];
 

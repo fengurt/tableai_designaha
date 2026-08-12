@@ -12,10 +12,10 @@ function canonicalIpEvolution(request) {
   if (pathname !== "/ip-evolution/" && pathname !== "/ip-evolution？") return null;
   url.pathname = "/ip-evolution";
   return new Response(null, {
-    status: 308,
+    status: 302,
     headers: {
       Location: url.toString(),
-      "Cache-Control": "public, max-age=31536000, immutable",
+      "Cache-Control": "private, no-store",
       "X-IPTrust-Route": "canonical-ip-evolution",
     },
   });

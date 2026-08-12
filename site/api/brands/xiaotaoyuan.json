@@ -147,11 +147,11 @@
     "child"
   ],
   "version": {
-    "hash": "bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
-    "shortHash": "bcd28bc",
-    "date": "2026-08-04T06:00:43+08:00",
-    "message": "Rename 侍天 English brand name to tiansight",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6"
+    "hash": "142064cd93616dc3758cd67a052ee364e2aed9a4",
+    "shortHash": "142064c",
+    "date": "2026-08-12T12:18:22+08:00",
+    "message": "feat: reconcile IPTrust platform and production baseline",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/142064cd93616dc3758cd67a052ee364e2aed9a4"
   },
   "historyUrl": "api/history/xiaotaoyuan.json",
   "history": [

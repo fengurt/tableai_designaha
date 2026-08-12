@@ -1,5 +1,12 @@
 [
   {
+    "hash": "142064cd93616dc3758cd67a052ee364e2aed9a4",
+    "shortHash": "142064c",
+    "date": "2026-08-12T12:18:22+08:00",
+    "message": "feat: reconcile IPTrust platform and production baseline",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/142064cd93616dc3758cd67a052ee364e2aed9a4"
+  },
+  {
     "hash": "bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
     "shortHash": "bcd28bc",
     "date": "2026-08-04T06:00:43+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-07-19T14:13:21+08:00",
     "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
     "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86"
-  },
-  {
-    "hash": "a92c3f25ee6c61875e3356cd843a7582eaa8ef00",
-    "shortHash": "a92c3f2",
-    "date": "2026-07-14T16:56:44+08:00",
-    "message": "Show metadata on brand hero assets",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a92c3f25ee6c61875e3356cd843a7582eaa8ef00"
   }
 ]

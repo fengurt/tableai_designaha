@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Repairing IP Evolution | 岁知社 IPTrust</title>
+  <link rel="canonical" href="https://apuch.art/ip-evolution">
+</head>
+<body>
+  <p>正在恢复 IP进化论 / Repairing IP Evolution...</p>
+  <p><a href="/ip-evolution?repaired=1">继续 / Continue</a></p>
+  <script>setTimeout(() => location.replace("/ip-evolution?repaired=1"), 80);</script>
+</body>
+</html>

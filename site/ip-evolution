@@ -17,8 +17,8 @@
   <link rel="alternate" href="llms.txt" type="text/plain" title="IPTrust LLM Guide">
   <link rel="alternate" href="api/openapi.json" type="application/vnd.oai.openapi+json" title="IPTrust OpenAPI">
   <link rel="alternate" href="api/fonts.json" type="application/json" title="IPTrust Open-source Type Library">
-  <link rel="stylesheet" href="assets/site-bcd28bc-446d4675.css">
-  <link rel="modulepreload" href="assets/site-bcd28bc-446d4675.js">
+  <link rel="stylesheet" href="assets/site-142064c-b620c77e.css">
+  <link rel="modulepreload" href="assets/site-142064c-b620c77e.js">
 </head>
 <body class="ip-system-page">
   <header class="topbar">
@@ -606,6 +606,10 @@
     </section>
     <noscript><p class="ip-system-noscript">页面内容可正常阅读；开启 JavaScript 后可使用字体筛选、样张加载与复制功能。</p></noscript>
   </main>
-  <script src="assets/site-bcd28bc-446d4675.js" type="module"></script>
+  <script>
+    const repairUrl = new URL(location.href);
+    if (repairUrl.searchParams.delete("repaired")) history.replaceState(null, "", repairUrl.pathname + repairUrl.search + repairUrl.hash);
+  </script>
+  <script src="assets/site-142064c-b620c77e.js" type="module"></script>
 </body>
 </html>
