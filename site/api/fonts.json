@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-12T10:55:14.535Z",
+  "generatedAt": "2026-08-12T11:29:26.541Z",
   "verifiedAt": "2026-08-12",
   "name": "IPTrust Open-source Type Library",
   "description": {
@@ -11,6 +11,38 @@
     "zh": "字体版权归各自作者所有。商业使用、嵌入、修改与再分发须遵守对应许可证；字体文件不可单独售卖。",
     "en": "Copyright remains with each font author. Commercial use, embedding, modification and redistribution must follow the applicable license; font files may not be sold by themselves."
   },
+  "licenseTypes": [
+    {
+      "spdx": "OFL-1.1",
+      "name": "SIL Open Font License 1.1",
+      "commercial": true,
+      "url": "https://openfontlicense.org/",
+      "note": {
+        "zh": "允许商业使用、网页嵌入、修改与再分发；字体文件不可单独售卖，修改字体还须留意保留字体名称条款。",
+        "en": "Allows commercial use, web embedding, modification and redistribution. Font files may not be sold by themselves; Reserved Font Names may restrict modified naming."
+      }
+    },
+    {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "commercial": true,
+      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "note": {
+        "zh": "允许商业使用、修改与分发；再分发时须保留许可证与适用声明，商标权不随许可证授予。",
+        "en": "Allows commercial use, modification and distribution. Redistributions must retain the license and applicable notices; trademark rights are not granted."
+      }
+    },
+    {
+      "spdx": "UFL-1.0",
+      "name": "Ubuntu Font Licence 1.0",
+      "commercial": true,
+      "url": "https://ubuntu.com/legal/font-licence",
+      "note": {
+        "zh": "允许商业使用、嵌入、修改与分发；修改版本的命名与再分发须遵守原许可证。",
+        "en": "Allows commercial use, embedding, modification and distribution. Modified naming and redistribution remain subject to the original license."
+      }
+    }
+  ],
   "directories": [
     {
       "id": "google-fonts",
@@ -28,6 +60,15 @@
       "note": {
         "zh": "字体文件、元数据和逐字体许可证的官方仓库。",
         "en": "Official repository for files, metadata and per-family licenses."
+      }
+    },
+    {
+      "id": "fontsource",
+      "name": "Fontsource",
+      "url": "https://fontsource.org/fonts",
+      "note": {
+        "zh": "大型开源字体包与可检索目录，提供自托管文件和逐字体许可证信息。",
+        "en": "Large searchable open-source catalog with self-hosting packages and per-family license data."
       }
     },
     {
@@ -56,6 +97,33 @@
         "zh": "由 SIL 维护、覆盖多语种的 OFL 字体目录。",
         "en": "SIL-maintained OFL catalog with broad script coverage."
       }
+    },
+    {
+      "id": "adobe-fonts",
+      "name": "Adobe Open Source Fonts",
+      "url": "https://github.com/adobe-fonts",
+      "note": {
+        "zh": "Adobe Source 系列等开源字体的原始项目与发布文件。",
+        "en": "Original projects and releases for Adobe's open-source Source families and more."
+      }
+    },
+    {
+      "id": "league",
+      "name": "The League of Moveable Type",
+      "url": "https://www.theleagueofmoveabletype.com/",
+      "note": {
+        "zh": "独立设计师开源字体合集，使用前查看每个项目的许可证。",
+        "en": "Independent open-source type foundry; check each project's license before use."
+      }
+    },
+    {
+      "id": "velvetyne",
+      "name": "Velvetyne Type Foundry",
+      "url": "https://velvetyne.fr/",
+      "note": {
+        "zh": "实验性自由字体合集，提供项目源文件与许可证。",
+        "en": "Experimental libre type catalog with project sources and licenses."
+      }
     }
   ],
   "fonts": [
@@ -78,7 +146,7 @@
         "zh": "界面、正文、品牌规范",
         "en": "UI, body copy, brand guidelines"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事。让品牌成为可管理、可调用、可持续进化的系统。中文字体参考 0123456789 IPTrust Agent API MCP",
+      "sample": "高楼宾客似曾识，日光底下无新事",
       "cssStack": "\"Noto Sans SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
       "weights": [
         "100 900"
@@ -129,7 +197,7 @@
         "zh": "标题、出版、文化叙事",
         "en": "Display, publishing, cultural narratives"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事。让品牌成为可管理、可调用、可持续进化的系统。中文字体参考 0123456789 IPTrust Agent API MCP",
+      "sample": "高楼宾客似曾识，日光底下无新事",
       "cssStack": "\"Noto Serif SC\", \"Songti SC\", SimSun, serif",
       "weights": [
         "100 900"
@@ -180,7 +248,7 @@
         "zh": "科技品牌、数据界面、专业文档",
         "en": "Technology brands, data UI, professional documents"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事。让品牌成为可管理、可调用、可持续进化的系统。中文字体参考 0123456789 IPTrust Agent API MCP",
+      "sample": "高楼宾客似曾识，日光底下无新事",
       "cssStack": "\"IBM Plex Sans SC\", \"PingFang SC\", sans-serif",
       "weights": [
         "400",
@@ -245,7 +313,7 @@
         "zh": "英文界面、产品、屏幕正文",
         "en": "Product UI and screen typography"
       },
-      "sample": "Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP",
+      "sample": "高楼宾客似曾识，日光底下无新事",
       "cssStack": "Inter, \"Helvetica Neue\", Arial, sans-serif",
       "weights": [
         "100 900"
@@ -297,7 +365,7 @@
         "zh": "API、数据、代码、资产编号",
         "en": "APIs, data, code, asset identifiers"
       },
-      "sample": "IPTrust / Agent / API / MCP / #EFE6D2 / 0123456789 / brand.system.evolve()",
+      "sample": "高楼宾客似曾识，日光底下无新事",
       "cssStack": "\"IBM Plex Mono\", \"SFMono-Regular\", Consolas, monospace",
       "weights": [
         "400",
@@ -362,7 +430,7 @@
         "zh": "出版、长文、文化与高端品牌",
         "en": "Publishing, long-form, cultural and premium brands"
       },
-      "sample": "Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP",
+      "sample": "高楼宾客似曾识，日光底下无新事",
       "cssStack": "\"EB Garamond\", Garamond, Georgia, serif",
       "weights": [
         "400 800"
@@ -413,7 +481,7 @@
         "zh": "文化标题、包装、短句展示",
         "en": "Cultural display, packaging and short headlines"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事。让品牌成为可管理、可调用、可持续进化的系统。中文字体参考 0123456789 IPTrust Agent API MCP",
+      "sample": "高楼宾客似曾识，日光底下无新事",
       "cssStack": "\"ZCOOL XiaoWei\", Georgia, serif",
       "weights": [
         "400"
@@ -464,7 +532,7 @@
         "zh": "海报、餐饮、活动与年轻品牌",
         "en": "Posters, food brands, events and youth culture"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事。让品牌成为可管理、可调用、可持续进化的系统。中文字体参考 0123456789 IPTrust Agent API MCP",
+      "sample": "高楼宾客似曾识，日光底下无新事",
       "cssStack": "\"ZCOOL QingKe HuangYou\", \"Helvetica Neue\", Arial, sans-serif",
       "weights": [
         "400"
@@ -515,7 +583,7 @@
         "zh": "文化项目、标题与有限字数的品牌表达",
         "en": "Cultural projects, titles and short-form brand expression"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事。让品牌成为可管理、可调用、可持续进化的系统。中文字体参考 0123456789 IPTrust Agent API MCP",
+      "sample": "高楼宾客似曾识，日光底下无新事",
       "cssStack": "\"Ma Shan Zheng\", \"Helvetica Neue\", Arial, sans-serif",
       "weights": [
         "400"
@@ -566,7 +634,7 @@
         "zh": "传统文化、餐饮题字与短标题",
         "en": "Heritage, food branding and short calligraphic titles"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事。让品牌成为可管理、可调用、可持续进化的系统。中文字体参考 0123456789 IPTrust Agent API MCP",
+      "sample": "高楼宾客似曾识，日光底下无新事",
       "cssStack": "\"Long Cang\", \"Helvetica Neue\", Arial, sans-serif",
       "weights": [
         "400"
@@ -616,7 +684,7 @@
         "zh": "响应式界面、产品与复杂排版系统",
         "en": "Responsive UI, products and complex type systems"
       },
-      "sample": "Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP",
+      "sample": "高楼宾客似曾识，日光底下无新事",
       "cssStack": "\"Roboto Flex\", \"Helvetica Neue\", Arial, sans-serif",
       "weights": [
         "100 900"
@@ -669,7 +737,7 @@
         "zh": "长正文、界面与公共信息",
         "en": "Long-form copy, UI and public information"
       },
-      "sample": "Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP",
+      "sample": "高楼宾客似曾识，日光底下无新事",
       "cssStack": "\"Open Sans\", \"Helvetica Neue\", Arial, sans-serif",
       "weights": [
         "100 900"
@@ -721,7 +789,7 @@
         "zh": "品牌系统、编辑排版与数字产品",
         "en": "Brand systems, editorial layouts and digital products"
       },
-      "sample": "Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP",
+      "sample": "高楼宾客似曾识，日光底下无新事",
       "cssStack": "\"Source Sans 3\", \"Helvetica Neue\", Arial, sans-serif",
       "weights": [
         "100 900"
@@ -771,7 +839,7 @@
         "zh": "消费品牌、产品界面与短标题",
         "en": "Consumer brands, product UI and short display"
       },
-      "sample": "Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP",
+      "sample": "高楼宾客似曾识，日光底下无新事",
       "cssStack": "\"DM Sans\", \"Helvetica Neue\", Arial, sans-serif",
       "weights": [
         "100 900"
@@ -821,7 +889,7 @@
         "zh": "界面、信息设计与品牌正文",
         "en": "UI, information design and brand copy"
       },
-      "sample": "Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP",
+      "sample": "高楼宾客似曾识，日光底下无新事",
       "cssStack": "\"Work Sans\", \"Helvetica Neue\", Arial, sans-serif",
       "weights": [
         "100 900"
@@ -871,7 +939,7 @@
         "zh": "科技品牌、标题与数据产品",
         "en": "Technology brands, headlines and data products"
       },
-      "sample": "Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP",
+      "sample": "高楼宾客似曾识，日光底下无新事",
       "cssStack": "\"Space Grotesk\", \"Helvetica Neue\", Arial, sans-serif",
       "weights": [
         "300 700"
@@ -922,7 +990,7 @@
         "zh": "出版、文化、酒店与编辑标题",
         "en": "Publishing, culture, hospitality and editorial display"
       },
-      "sample": "Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP",
+      "sample": "高楼宾客似曾识，日光底下无新事",
       "cssStack": "\"Playfair Display\", Georgia, serif",
       "weights": [
         "400 900"
@@ -974,7 +1042,7 @@
         "zh": "报告、长文、出版与规范文件",
         "en": "Reports, long-form, publishing and guidelines"
       },
-      "sample": "Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP",
+      "sample": "高楼宾客似曾识，日光底下无新事",
       "cssStack": "\"Source Serif 4\", Georgia, serif",
       "weights": [
         "200 900"
@@ -1026,7 +1094,7 @@
         "zh": "代码、API 文档、数据和开发工具",
         "en": "Code, API docs, data and developer tools"
       },
-      "sample": "IPTrust / Agent / API / MCP / #EFE6D2 / 0123456789 / brand.system.evolve()",
+      "sample": "高楼宾客似曾识，日光底下无新事",
       "cssStack": "\"JetBrains Mono\", \"SFMono-Regular\", Consolas, monospace",
       "weights": [
         "100 800"
@@ -1078,7 +1146,7 @@
         "zh": "技术品牌、资产编号、代码与表格",
         "en": "Technical brands, identifiers, code and tables"
       },
-      "sample": "IPTrust / Agent / API / MCP / #EFE6D2 / 0123456789 / brand.system.evolve()",
+      "sample": "高楼宾客似曾识，日光底下无新事",
       "cssStack": "\"Source Code Pro\", \"SFMono-Regular\", Consolas, monospace",
       "weights": [
         "200 900"
@@ -1130,7 +1198,7 @@
         "zh": "代码、Agent 输出与技术界面",
         "en": "Code, agent output and technical interfaces"
       },
-      "sample": "IPTrust / Agent / API / MCP / #EFE6D2 / 0123456789 / brand.system.evolve()",
+      "sample": "高楼宾客似曾识，日光底下无新事",
       "cssStack": "\"Google Sans Code\", \"SFMono-Regular\", Consolas, monospace",
       "weights": [
         "300 800"

@@ -428,7 +428,7 @@ function fontLibraryRows(catalog) {
       <div class="font-specimen-use" data-font-zh="${escapeBuildHtml(font.useCases.zh)}" data-font-en="${escapeBuildHtml(font.useCases.en)}">${escapeBuildHtml(font.useCases.zh)}</div>
       <div class="font-specimen-actions">
         <a href="${escapeBuildHtml(font.source.projectUrl)}" target="_blank" rel="noreferrer" data-i18n="fonts.source">官方出处</a>
-        <a href="${escapeBuildHtml(font.license.url)}" target="_blank" rel="noreferrer" data-i18n="fonts.license">许可证</a>
+        <a href="${escapeBuildHtml(font.license.url)}" target="_blank" rel="noreferrer">${escapeBuildHtml(font.license.spdx)} · <span data-i18n="fonts.commercial">可商用</span></a>
         <button type="button" data-copy-font="${escapeBuildHtml(font.id)}" data-i18n="fonts.copyCss">复制 CSS</button>
       </div>
     </header>
@@ -1878,6 +1878,7 @@ ${commonDiscoveryHead()}
       <div class="font-directory-summary">
         <p data-i18n="fonts.directoryLead">从官方项目核验许可证、语言覆盖与网页演示。用于品牌、产品、出版与 Agent 选型。</p>
         <p class="font-directory-count"><strong data-font-result-count>${fontCatalog.fonts.length}</strong><span data-i18n="fonts.families">字体家族</span></p>
+        <p class="font-directory-scope" data-i18n="fonts.scope">这是本站已核验并自托管演示的精选集，不是开源字体总量。</p>
       </div>
     </section>
     <section class="font-license-callout" aria-label="Google Fonts license note">
@@ -1914,6 +1915,11 @@ ${commonDiscoveryHead()}
     <section class="font-sources" aria-labelledby="fontSourcesTitle">
       <header><p class="eyebrow" data-i18n="fonts.moreSources">更多官方字体来源</p><h2 id="fontSourcesTitle" data-i18n="fonts.findMore">去哪里找更多字体。</h2></header>
       <div>${(fontCatalog.directories || []).map((directory) => `<a href="${escapeBuildHtml(directory.url)}" target="_blank" rel="noreferrer"><strong>${escapeBuildHtml(directory.name)}</strong><span data-font-zh="${escapeBuildHtml(directory.note.zh)}" data-font-en="${escapeBuildHtml(directory.note.en)}">${escapeBuildHtml(directory.note.zh)}</span><i aria-hidden="true">↗</i></a>`).join("")}</div>
+    </section>
+    <section class="font-license-types" aria-labelledby="fontLicenseTypesTitle">
+      <header><p class="eyebrow" data-i18n="fonts.licenseTypes">许可证商用类型</p><h2 id="fontLicenseTypesTitle" data-i18n="fonts.readLicense">先看类型，再看原文。</h2></header>
+      <div>${(fontCatalog.licenseTypes || []).map((license) => `<article><div><strong>${escapeBuildHtml(license.spdx)}</strong><span>${escapeBuildHtml(license.name)}</span></div><p data-font-zh="${escapeBuildHtml(license.note.zh)}" data-font-en="${escapeBuildHtml(license.note.en)}">${escapeBuildHtml(license.note.zh)}</p><a href="${escapeBuildHtml(license.url)}" target="_blank" rel="noreferrer"><span data-i18n="fonts.originalLicense">许可证原文</span> ↗</a></article>`).join("")}</div>
+      <p class="font-license-disclaimer" data-i18n="fonts.licenseDisclaimer">这里是选型摘要，不替代许可证原文。正式发布前仍需核对具体字体版本及其随附许可证。</p>
     </section>
     <footer class="font-library-license">
       <strong data-i18n="fonts.licenseNote">授权说明</strong>
@@ -2876,6 +2882,7 @@ p { line-height: 1.65; }
 .font-license-callout { display: grid; grid-template-columns: 180px minmax(0, 1fr) auto; gap: 30px; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--line); }
 .font-license-callout p { max-width: 800px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
 .font-license-callout a { color: var(--ink); font-size: 12px; font-weight: 760; text-decoration: none; border-bottom: 1px solid var(--line); }
+.font-directory-scope { grid-column: 1 / -1; margin: 4px 0 0; color: var(--muted); font-size: 11px; }
 .font-directory-toolbar { position: sticky; top: 67px; z-index: 16; display: grid; grid-template-columns: minmax(220px, 1fr) auto minmax(190px, .42fr) auto; gap: 20px; align-items: end; padding: 14px 0; border-bottom: 1px solid var(--ink); background: color-mix(in srgb, var(--paper) 94%, transparent); backdrop-filter: blur(14px); }
 .font-directory-toolbar label { display: flex; align-items: center; gap: 10px; margin: 0; color: var(--muted); font-size: 11px; font-weight: 720; }
 .font-directory-toolbar input[type="search"] { width: 100%; min-height: 38px; padding: 7px 2px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; color: var(--ink); }
@@ -3020,6 +3027,18 @@ p { line-height: 1.65; }
   align-items: start;
   padding-top: 24px;
 }
+.font-license-types { padding: clamp(54px, 7vw, 88px) 0 18px; border-bottom: 1px solid var(--line); }
+.font-license-types > header { display: grid; grid-template-columns: minmax(180px, .35fr) 1fr; gap: 28px; align-items: end; margin-bottom: 24px; }
+.font-license-types h2 { margin: 0; font-size: clamp(26px, 3.4vw, 44px); line-height: 1.05; }
+.font-license-types > div { border-top: 1px solid var(--ink); }
+.font-license-types article { display: grid; grid-template-columns: minmax(210px, .6fr) minmax(0, 1fr) auto; gap: 28px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.font-license-types article div { display: grid; gap: 4px; }
+.font-license-types article span,
+.font-license-types article p,
+.font-license-types article a,
+.font-license-disclaimer { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.65; }
+.font-license-types article a { color: var(--ink); font-weight: 760; text-decoration: none; white-space: nowrap; }
+.font-license-disclaimer { max-width: 760px; padding-top: 18px; }
 .font-library-license strong { font-size: 13px; }
 .font-library-license p { max-width: 700px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
 .font-library-license a { color: var(--ink); font-size: 12px; font-weight: 760; text-decoration: none; border-bottom: 1px solid var(--line); }
@@ -4267,6 +4286,9 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .font-specimen-head { grid-template-columns: 1fr; gap: 12px; }
   .font-specimen-actions { justify-content: flex-start; }
   .font-specimen-sample { margin-top: 24px; }
+  .font-license-types > header,
+  .font-license-types article { grid-template-columns: 1fr; gap: 10px; }
+  .font-license-types article a { justify-self: start; }
   .font-library-license { grid-template-columns: 1fr; gap: 10px; }
   .font-library-license a { justify-self: start; }
   .ip-system-content-shell { grid-template-columns: 1fr; gap: 36px; }
@@ -4529,6 +4551,7 @@ const i18n = {
     "fonts.weight": "字重",
     "fonts.source": "官方出处",
     "fonts.license": "许可证",
+    "fonts.commercial": "可商用",
     "fonts.copyCss": "复制 CSS",
     "fonts.cssCopied": "已复制字体 CSS",
     "fonts.ready": "滚动到此处加载真实字体",
@@ -4541,6 +4564,7 @@ const i18n = {
     "fonts.directoryTitle": "开源可商用字体。",
     "fonts.directoryLead": "从官方项目核验许可证、语言覆盖与网页演示。用于品牌、产品、出版与 Agent 选型。",
     "fonts.families": "字体家族",
+    "fonts.scope": "这是本站已核验并自托管演示的精选集，不是开源字体总量。",
     "fonts.googleNote": "Google Fonts 收录字体均以开源许可证发布，可用于商业项目；具体使用、修改与再分发仍应遵守每款字体的许可证。",
     "fonts.googleOfficial": "Google 官方说明 ↗",
     "fonts.searchLabel": "搜索字体",
@@ -4554,6 +4578,10 @@ const i18n = {
     "fonts.empty": "没有匹配字体。",
     "fonts.moreSources": "更多官方字体来源",
     "fonts.findMore": "去哪里找更多字体。",
+    "fonts.licenseTypes": "许可证商用类型",
+    "fonts.readLicense": "先看类型，再看原文。",
+    "fonts.originalLicense": "许可证原文",
+    "fonts.licenseDisclaimer": "这里是选型摘要，不替代许可证原文。正式发布前仍需核对具体字体版本及其随附许可证。",
     "api.title": "System API",
     "api.key": "System API Key",
     "api.connect": "Connect",
@@ -4729,6 +4757,7 @@ const i18n = {
     "fonts.weight": "Weight",
     "fonts.source": "Official source",
     "fonts.license": "License",
+    "fonts.commercial": "Commercial use",
     "fonts.copyCss": "Copy CSS",
     "fonts.cssCopied": "Font CSS copied",
     "fonts.ready": "Scroll here to load the live font",
@@ -4741,6 +4770,7 @@ const i18n = {
     "fonts.directoryTitle": "Open fonts for commercial use.",
     "fonts.directoryLead": "Official projects, verified licenses, script coverage and real web specimens for brands, products, publishing and agents.",
     "fonts.families": "font families",
+    "fonts.scope": "This is the site's verified, self-hosted selection, not the full universe of open-source fonts.",
     "fonts.googleNote": "Google Fonts families are released under open-source licenses and may be used commercially. Use, modification and redistribution still follow each family's license.",
     "fonts.googleOfficial": "Google's official guidance ↗",
     "fonts.searchLabel": "Search fonts",
@@ -4754,6 +4784,10 @@ const i18n = {
     "fonts.empty": "No matching fonts.",
     "fonts.moreSources": "More official font sources",
     "fonts.findMore": "Where to find more fonts.",
+    "fonts.licenseTypes": "Commercial license types",
+    "fonts.readLicense": "Read the type, then the source.",
+    "fonts.originalLicense": "Original license",
+    "fonts.licenseDisclaimer": "This is a selection summary, not a substitute for the license text. Verify the exact font version and bundled license before release.",
     "api.title": "System API",
     "api.key": "System API Key",
     "api.connect": "Connect",

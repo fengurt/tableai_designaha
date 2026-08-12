@@ -165,11 +165,11 @@
     "standalone"
   ],
   "version": {
-    "hash": "6dcfe1b5b512897b87a5cf4ec93256c77576c60c",
-    "shortHash": "6dcfe1b",
-    "date": "2026-08-12T15:58:44+08:00",
-    "message": "fix: canonicalize repaired IP Evolution history",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/6dcfe1b5b512897b87a5cf4ec93256c77576c60c"
+    "hash": "6d44c62ed6e687de9930f8eeb1ac99d1f24d19f8",
+    "shortHash": "6d44c62",
+    "date": "2026-08-12T19:03:13+08:00",
+    "message": "feat: launch searchable open font directory",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/6d44c62ed6e687de9930f8eeb1ac99d1f24d19f8"
   },
   "historyUrl": "api/history/fengzhi.json",
   "history": [

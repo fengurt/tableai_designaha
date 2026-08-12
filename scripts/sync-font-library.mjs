@@ -15,6 +15,13 @@ const upload = process.argv.includes("--upload");
 const verifiedAt = process.env.FONT_VERIFIED_AT || new Date().toISOString().slice(0, 10);
 
 const samples = {
+  zh: "高楼宾客似曾识，日光底下无新事",
+  en: "高楼宾客似曾识，日光底下无新事",
+  mono: "高楼宾客似曾识，日光底下无新事",
+};
+
+// Keep the existing broad glyph subset stable while presenting a concise specimen.
+const subsetSamples = {
   zh: "高楼宾客似曾识，日光底下无新事。让品牌成为可管理、可调用、可持续进化的系统。中文字体参考 0123456789 IPTrust Agent API MCP",
   en: "Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP",
   mono: "IPTrust / Agent / API / MCP / #EFE6D2 / 0123456789 / brand.system.evolve()",
@@ -282,7 +289,7 @@ for (const definition of definitions) {
     const sourceBuffer = await download(sourceUrl, sourcePath);
     const subsetPath = join(outputDir, `${definition.id}-${String(file.weight).replaceAll(" ", "-")}.woff2`);
     const samplePath = join(workDir, `${definition.group}.txt`);
-    await writeFile(samplePath, definition.sample);
+    await writeFile(samplePath, subsetSamples[definition.group] || subsetSamples.en);
     await rm(subsetPath, { force: true });
     run(process.env.PYFTSUBSET || "pyftsubset", [
       sourcePath,
@@ -356,12 +363,48 @@ const payload = {
     zh: "字体版权归各自作者所有。商业使用、嵌入、修改与再分发须遵守对应许可证；字体文件不可单独售卖。",
     en: "Copyright remains with each font author. Commercial use, embedding, modification and redistribution must follow the applicable license; font files may not be sold by themselves.",
   },
+  licenseTypes: [
+    {
+      spdx: "OFL-1.1",
+      name: "SIL Open Font License 1.1",
+      commercial: true,
+      url: "https://openfontlicense.org/",
+      note: {
+        zh: "允许商业使用、网页嵌入、修改与再分发；字体文件不可单独售卖，修改字体还须留意保留字体名称条款。",
+        en: "Allows commercial use, web embedding, modification and redistribution. Font files may not be sold by themselves; Reserved Font Names may restrict modified naming.",
+      },
+    },
+    {
+      spdx: "Apache-2.0",
+      name: "Apache License 2.0",
+      commercial: true,
+      url: "https://www.apache.org/licenses/LICENSE-2.0",
+      note: {
+        zh: "允许商业使用、修改与分发；再分发时须保留许可证与适用声明，商标权不随许可证授予。",
+        en: "Allows commercial use, modification and distribution. Redistributions must retain the license and applicable notices; trademark rights are not granted.",
+      },
+    },
+    {
+      spdx: "UFL-1.0",
+      name: "Ubuntu Font Licence 1.0",
+      commercial: true,
+      url: "https://ubuntu.com/legal/font-licence",
+      note: {
+        zh: "允许商业使用、嵌入、修改与分发；修改版本的命名与再分发须遵守原许可证。",
+        en: "Allows commercial use, embedding, modification and distribution. Modified naming and redistribution remain subject to the original license.",
+      },
+    },
+  ],
   directories: [
     { id: "google-fonts", name: "Google Fonts", url: "https://fonts.google.com/", note: { zh: "大规模开源字体目录，可按语言、分类与可变轴筛选。", en: "Large open-source catalog with language, category and variable-axis filters." } },
     { id: "google-fonts-source", name: "Google Fonts Source", url: "https://github.com/google/fonts", note: { zh: "字体文件、元数据和逐字体许可证的官方仓库。", en: "Official repository for files, metadata and per-family licenses." } },
+    { id: "fontsource", name: "Fontsource", url: "https://fontsource.org/fonts", note: { zh: "大型开源字体包与可检索目录，提供自托管文件和逐字体许可证信息。", en: "Large searchable open-source catalog with self-hosting packages and per-family license data." } },
     { id: "noto", name: "Noto Fonts", url: "https://fonts.google.com/noto", note: { zh: "覆盖多语言与多书写系统的官方字体集合。", en: "Official collection spanning languages and writing systems." } },
     { id: "ibm-plex", name: "IBM Plex", url: "https://github.com/IBM/plex", note: { zh: "IBM 维护的开源字体家族与源文件。", en: "IBM-maintained open-source family and sources." } },
     { id: "sil-fonts", name: "SIL Fonts", url: "https://software.sil.org/fonts/", note: { zh: "由 SIL 维护、覆盖多语种的 OFL 字体目录。", en: "SIL-maintained OFL catalog with broad script coverage." } },
+    { id: "adobe-fonts", name: "Adobe Open Source Fonts", url: "https://github.com/adobe-fonts", note: { zh: "Adobe Source 系列等开源字体的原始项目与发布文件。", en: "Original projects and releases for Adobe's open-source Source families and more." } },
+    { id: "league", name: "The League of Moveable Type", url: "https://www.theleagueofmoveabletype.com/", note: { zh: "独立设计师开源字体合集，使用前查看每个项目的许可证。", en: "Independent open-source type foundry; check each project's license before use." } },
+    { id: "velvetyne", name: "Velvetyne Type Foundry", url: "https://velvetyne.fr/", note: { zh: "实验性自由字体合集，提供项目源文件与许可证。", en: "Experimental libre type catalog with project sources and licenses." } },
   ],
   fonts,
 };

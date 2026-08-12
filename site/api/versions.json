@@ -1,5 +1,12 @@
 [
   {
+    "hash": "6d44c62ed6e687de9930f8eeb1ac99d1f24d19f8",
+    "shortHash": "6d44c62",
+    "date": "2026-08-12T19:03:13+08:00",
+    "message": "feat: launch searchable open font directory",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/6d44c62ed6e687de9930f8eeb1ac99d1f24d19f8"
+  },
+  {
     "hash": "6dcfe1b5b512897b87a5cf4ec93256c77576c60c",
     "shortHash": "6dcfe1b",
     "date": "2026-08-12T15:58:44+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-07-19T21:37:44+08:00",
     "message": "perf: serve responsive brand media",
     "url": "https://github.com/fengurt/tableai_designaha/commit/f00a7899dc5da392abf1d4153c8eee3930bd9495"
-  },
-  {
-    "hash": "3a5f1658229c4ddfc9c789795f13f1f862315902",
-    "shortHash": "3a5f165",
-    "date": "2026-07-19T21:28:22+08:00",
-    "message": "fix: make asset malware scans reliable",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/3a5f1658229c4ddfc9c789795f13f1f862315902"
   }
 ]
