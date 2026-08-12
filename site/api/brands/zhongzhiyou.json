@@ -169,11 +169,11 @@
     "standalone"
   ],
   "version": {
-    "hash": "142064cd93616dc3758cd67a052ee364e2aed9a4",
-    "shortHash": "142064c",
-    "date": "2026-08-12T12:18:22+08:00",
-    "message": "feat: reconcile IPTrust platform and production baseline",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/142064cd93616dc3758cd67a052ee364e2aed9a4"
+    "hash": "b60797e79deb0f37cae96466bf7fc70987b506c2",
+    "shortHash": "b60797e",
+    "date": "2026-08-12T15:57:02+08:00",
+    "message": "test: accept uncached temporary route recovery",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/b60797e79deb0f37cae96466bf7fc70987b506c2"
   },
   "historyUrl": "api/history/zhongzhiyou.json",
   "history": [

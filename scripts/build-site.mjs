@@ -1837,7 +1837,10 @@ ${commonDiscoveryHead()}
   </main>
   <script>
     const repairUrl = new URL(location.href);
-    if (repairUrl.searchParams.delete("repaired")) history.replaceState(null, "", repairUrl.pathname + repairUrl.search + repairUrl.hash);
+    if (repairUrl.searchParams.has("repaired")) {
+      repairUrl.searchParams.delete("repaired");
+      history.replaceState(null, "", repairUrl.pathname + repairUrl.search + repairUrl.hash);
+    }
   </script>
   <script src="${siteJsPath}" type="module"></script>
 </body>

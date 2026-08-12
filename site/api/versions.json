@@ -1,5 +1,19 @@
 [
   {
+    "hash": "b60797e79deb0f37cae96466bf7fc70987b506c2",
+    "shortHash": "b60797e",
+    "date": "2026-08-12T15:57:02+08:00",
+    "message": "test: accept uncached temporary route recovery",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/b60797e79deb0f37cae96466bf7fc70987b506c2"
+  },
+  {
+    "hash": "3a5ea82404be5ce329ea34e550f2d3e315e6782a",
+    "shortHash": "3a5ea82",
+    "date": "2026-08-12T15:53:45+08:00",
+    "message": "fix: recover IP Evolution from cached redirect loops",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/3a5ea82404be5ce329ea34e550f2d3e315e6782a"
+  },
+  {
     "hash": "142064cd93616dc3758cd67a052ee364e2aed9a4",
     "shortHash": "142064c",
     "date": "2026-08-12T12:18:22+08:00",
@@ -124,19 +138,5 @@
     "date": "2026-07-19T21:20:43+08:00",
     "message": "feat: move IPTrust platform to Cloudflare edge storage",
     "url": "https://github.com/fengurt/tableai_designaha/commit/6e096d2f1250e265b38f71788760071c1a31c469"
-  },
-  {
-    "hash": "4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9",
-    "shortHash": "4d8fc4d",
-    "date": "2026-07-19T14:16:14+08:00",
-    "message": "Fix GitHub Pages dependency install",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/4d8fc4d1ea33111a20c1f2c3f472a7b790f501c9"
-  },
-  {
-    "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
-    "shortHash": "eaf4320",
-    "date": "2026-07-19T14:13:21+08:00",
-    "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86"
   }
 ]
