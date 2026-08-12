@@ -18,8 +18,11 @@
 .organization-card:hover { background: #111514; color: white; }
 .organization-card:active { transform: translateY(1px); }
 .organization-card-head { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
-.organization-mark { width: 44px; height: 44px; display: grid; place-items: center; overflow: hidden; border: 1px solid currentColor; background: #fff; color: #111514; font-weight: 800; }
-.organization-mark img { width: 100%; height: 100%; object-fit: contain; padding: 5px; }
+.organization-mark { width: 54px; height: 54px; display: grid; place-items: center; overflow: hidden; border: 1px solid #cfd3cf; background: #fff; color: #111514; font-weight: 800; letter-spacing: .04em; }
+.organization-mark.is-fallback { background: #edf0ed; border-color: #d8ddda; }
+.organization-mark img { width: 100%; height: 100%; object-fit: contain; padding: 7px; }
+.organization-card:hover .organization-mark { border-color: #6b756f; }
+.organization-card:hover .organization-mark.is-fallback { background: #28312d; color: #fff; border-color: #65716a; }
 .organization-rank { font: 700 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
 .organization-card h2 { margin: 32px 0 8px; font-size: clamp(20px,2vw,28px); line-height: 1.02; }
 .organization-card p { margin: 0; color: #686f6b; font-size: 12px; line-height: 1.45; display: -webkit-box; overflow: hidden; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
@@ -34,6 +37,7 @@
 .detail-close { position: absolute; top: 18px; right: 20px; width: 36px; height: 36px; border: 1px solid #626965; border-radius: 0; background: transparent; color: white; font-size: 22px; }
 .detail-mark { width: 100px; height: 100px; display: grid; place-items: center; margin-bottom: 40px; border: 1px solid #59615d; background: white; color: #111514; font-size: 28px; font-weight: 800; }
 .detail-mark img { width: 100%; height: 100%; object-fit: contain; padding: 12px; }
+.detail-mark.is-fallback { background: #edf0ed; color: #111514; border-color: #d8ddda; }
 .library-detail h2 { margin: 0 0 14px; font-size: clamp(36px,5vw,62px); line-height: .92; }
 .library-detail p { color: #c3c9c5; line-height: 1.65; }
 .detail-data { display: grid; grid-template-columns: 1fr 1fr; margin: 34px 0; border-top: 1px solid #4b524e; }

@@ -1,5 +1,8 @@
 .DS_Store
 node_modules/
+KiND/dist/
+KiND/*.zip
+Sidera/assets/
 mcp/dist/
 .wrangler/
 .tmp/

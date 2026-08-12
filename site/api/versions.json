@@ -1,5 +1,19 @@
 [
   {
+    "hash": "bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
+    "shortHash": "bcd28bc",
+    "date": "2026-08-04T06:00:43+08:00",
+    "message": "Rename 侍天 English brand name to tiansight",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6"
+  },
+  {
+    "hash": "735ff5e693bb2ee2fe4dbd66a2aa337e1d8368bf",
+    "shortHash": "735ff5e",
+    "date": "2026-07-24T09:25:16+08:00",
+    "message": "feat: publish OPC Global brand assets",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/735ff5e693bb2ee2fe4dbd66a2aa337e1d8368bf"
+  },
+  {
     "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
     "shortHash": "fa30da1",
     "date": "2026-07-23T09:50:41+08:00",
@@ -124,19 +138,5 @@
     "date": "2026-07-14T16:56:44+08:00",
     "message": "Show metadata on brand hero assets",
     "url": "https://github.com/fengurt/tableai_designaha/commit/a92c3f25ee6c61875e3356cd843a7582eaa8ef00"
-  },
-  {
-    "hash": "6521ac39eaa48af9c74a3a82708c4735b7a00044",
-    "shortHash": "6521ac3",
-    "date": "2026-07-14T16:50:28+08:00",
-    "message": "Expose image asset metadata",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/6521ac39eaa48af9c74a3a82708c4735b7a00044"
-  },
-  {
-    "hash": "b0056d358b18aca3cf5259d4813e3f1641121a12",
-    "shortHash": "b0056d3",
-    "date": "2026-07-12T21:39:51+08:00",
-    "message": "Rename Shanrenjing English brand to shanpass",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/b0056d358b18aca3cf5259d4813e3f1641121a12"
   }
 ]

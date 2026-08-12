@@ -72,7 +72,7 @@ async function materializeSearchDocument(env, payload, deferVector = false) {
   } else if (type === "organization") {
     const row = await env.DB.prepare("SELECT * FROM organizations WHERE id=?").bind(id).first();
     if (!row) return null;
-    document = { id: `organization:${id}`, entityType: "organization", entityId: id, ipSlug: "", language: row.main_language || "und", access: "public", title: row.native_name || row.name, body: [row.name, row.native_name, row.description, row.industry, row.country, row.headquarters].filter(Boolean).join("\n"), metadata: { website: row.official_website, sourceUrl: row.source_url, sourcePublisher: row.source_publisher, logoUrl: row.logo_url }, authority: row.verification_status === "source-verified" ? 1.35 : 1, version: 1 };
+    document = { id: `organization:${id}`, entityType: "organization", entityId: id, ipSlug: "", language: row.main_language || "und", access: "public", title: row.native_name || row.name, body: [row.name, row.native_name, row.description, row.industry, row.country, row.headquarters].filter(Boolean).join("\n"), metadata: { website: row.official_website, sourceUrl: row.source_url, sourcePublisher: row.source_publisher, logoUrl: row.logo_url, logoSource: row.logo_source || "monogram", logoProvider: row.logo_provider || "", logoQuality: row.logo_quality || "fallback", logoStatus: row.logo_status || "pending", logoProvenanceUrl: row.logo_provenance_url || "" }, authority: row.verification_status === "source-verified" ? 1.35 : 1, version: 1 };
   } else if (type === "asset") {
     const row = await env.DB.prepare("SELECT * FROM assets WHERE id=? AND deleted_at IS NULL").bind(id).first();
     if (!row) return null;

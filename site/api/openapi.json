@@ -1,0 +1,253 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "IPTrust Public Brand API",
+    "version": "2.0.0",
+    "description": "Read current IP identity, guidelines, color tokens, canonical logos, public assets and history."
+  },
+  "servers": [
+    {
+      "url": "https://apuch.art"
+    }
+  ],
+  "paths": {
+    "/agent.json": {
+      "get": {
+        "operationId": "getAgentEntry",
+        "summary": "Get the recommended Agent bootstrap document",
+        "responses": {
+          "200": {
+            "description": "Agent entry document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/brands.json": {
+      "get": {
+        "operationId": "listBrands",
+        "summary": "List all current IP records",
+        "responses": {
+          "200": {
+            "description": "Brand index",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BrandSummary"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/brands/{slug}.json": {
+      "get": {
+        "operationId": "getBrand",
+        "summary": "Get one complete IP record, including colors, logo, assets and guidelines",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Complete brand record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Brand"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "IP not found"
+          }
+        }
+      }
+    },
+    "/api/fonts.json": {
+      "get": {
+        "operationId": "listOpenSourceFonts",
+        "summary": "List verified open-source commercial-use fonts and specimen assets",
+        "responses": {
+          "200": {
+            "description": "Font reference catalog",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/assets": {
+      "get": {
+        "operationId": "listAssets",
+        "summary": "List public assets and authorized private assets",
+        "parameters": [
+          {
+            "name": "ownerType",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "owned-ip"
+            }
+          },
+          {
+            "name": "ownerId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 200
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Asset list",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/history/{slug}.json": {
+      "get": {
+        "operationId": "getBrandHistory",
+        "summary": "Get Git-backed version history for one IP",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Version history",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BrandSummary": {
+        "type": "object",
+        "required": [
+          "slug",
+          "mainName",
+          "mainLanguage",
+          "apiUrl"
+        ],
+        "properties": {
+          "slug": {
+            "type": "string"
+          },
+          "mainName": {
+            "type": "string"
+          },
+          "mainLanguage": {
+            "enum": [
+              "zh",
+              "en"
+            ]
+          },
+          "logoUrl": {
+            "type": "string"
+          },
+          "apiUrl": {
+            "type": "string"
+          }
+        }
+      },
+      "Brand": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BrandSummary"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "intro": {
+                "type": "object"
+              },
+              "business": {
+                "type": "object"
+              },
+              "theme": {
+                "type": "object"
+              },
+              "images": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              },
+              "guides": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              },
+              "sources": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              },
+              "history": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

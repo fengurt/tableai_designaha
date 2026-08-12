@@ -165,14 +165,26 @@
     "standalone"
   ],
   "version": {
-    "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
-    "shortHash": "fa30da1",
-    "date": "2026-07-23T09:50:41+08:00",
-    "message": "feat: move Sidera to pale manuscript theme",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
+    "hash": "bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
+    "shortHash": "bcd28bc",
+    "date": "2026-08-04T06:00:43+08:00",
+    "message": "Rename 侍天 English brand name to tiansight",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6"
   },
   "historyUrl": "api/history/fengzhi.json",
   "history": [
+    {
+      "hash": "bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
+      "shortHash": "bcd28bc",
+      "date": "2026-08-04T06:00:43+08:00",
+      "message": "Rename 侍天 English brand name to tiansight",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
+      "sourcePaths": [
+        "config/brands.json",
+        "FENGZHI",
+        "FENGZHI/readme.md"
+      ]
+    },
     {
       "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
       "shortHash": "fa30da1",
@@ -227,18 +239,6 @@
       "date": "2026-07-19T21:20:43+08:00",
       "message": "feat: move IPTrust platform to Cloudflare edge storage",
       "url": "https://github.com/fengurt/tableai_designaha/commit/6e096d2f1250e265b38f71788760071c1a31c469",
-      "sourcePaths": [
-        "config/brands.json",
-        "FENGZHI",
-        "FENGZHI/readme.md"
-      ]
-    },
-    {
-      "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
-      "shortHash": "eaf4320",
-      "date": "2026-07-19T14:13:21+08:00",
-      "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86",
       "sourcePaths": [
         "config/brands.json",
         "FENGZHI",
@@ -489,6 +489,7 @@
       "assetId": "fengzhi-hero-fengzhi-brand-hero-fe388cc906c9",
       "path": "FENGZHI/assets/brand-images/fengzhi-brand-hero.png",
       "sitePath": "https://media.apuch.art/public/fengzhi/fengzhi-hero-fengzhi-brand-hero-fe388cc906c9/fe388cc906c9dfb10ceedeb83b772dd02c22c0f5801739d56e6354c728749fd8/original.png",
+      "mediaUrl": "https://media.apuch.art/public/fengzhi/fengzhi-hero-fengzhi-brand-hero-fe388cc906c9/fe388cc906c9dfb10ceedeb83b772dd02c22c0f5801739d56e6354c728749fd8/original.png",
       "title": "fengzhi brand hero",
       "format": "PNG",
       "bytes": 2079681,
@@ -505,6 +506,7 @@
       "assetId": "fengzhi-image-jiege-mark-mono-d7b2e1dc871a",
       "path": "FENGZHI/assets/jiege-mark-mono.svg",
       "sitePath": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-mono-d7b2e1dc871a/d7b2e1dc871abb01b9d9cb8eaf26a19217b2a84cbae87412dc1475839d91001d/original.svg",
+      "mediaUrl": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-mono-d7b2e1dc871a/d7b2e1dc871abb01b9d9cb8eaf26a19217b2a84cbae87412dc1475839d91001d/original.svg",
       "title": "jiege mark mono",
       "format": "SVG",
       "bytes": 370,
@@ -521,6 +523,7 @@
       "assetId": "fengzhi-image-jiege-mark-reversed-e8792c4ac6fa",
       "path": "FENGZHI/assets/jiege-mark-reversed.svg",
       "sitePath": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-reversed-e8792c4ac6fa/e8792c4ac6fa70a515099352396d145c4b0d072376aae3d4840a3a2b26c970d5/original.svg",
+      "mediaUrl": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-reversed-e8792c4ac6fa/e8792c4ac6fa70a515099352396d145c4b0d072376aae3d4840a3a2b26c970d5/original.svg",
       "title": "jiege mark reversed",
       "format": "SVG",
       "bytes": 370,
@@ -537,6 +540,7 @@
       "assetId": "fengzhi-image-jiege-mark-2e5746a16797",
       "path": "FENGZHI/assets/jiege-mark.svg",
       "sitePath": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-2e5746a16797/2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3/original.svg",
+      "mediaUrl": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-2e5746a16797/2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3/original.svg",
       "title": "jiege mark",
       "format": "SVG",
       "bytes": 370,
@@ -573,29 +577,6 @@
       "legacyUrls": [
         "/assets/brand-images/fengzhi.png"
       ],
-      "status": "ready",
-      "version": 1
-    },
-    {
-      "id": "fengzhi-image-jiege-mark-2e5746a16797",
-      "ownerType": "owned-ip",
-      "ownerId": "fengzhi",
-      "role": "image",
-      "title": "jiege mark",
-      "access": "public",
-      "sourcePath": "FENGZHI/assets/jiege-mark.svg",
-      "sourceFilename": "jiege-mark.svg",
-      "sha256": "2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3",
-      "mimeType": "image/svg+xml",
-      "extension": "svg",
-      "bytes": 370,
-      "size": "370 B",
-      "width": null,
-      "height": null,
-      "dimensions": "",
-      "objectKey": "public/fengzhi/fengzhi-image-jiege-mark-2e5746a16797/2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3/original.svg",
-      "mediaUrl": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-2e5746a16797/2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3/original.svg",
-      "legacyUrls": [],
       "status": "ready",
       "version": 1
     },
@@ -641,6 +622,29 @@
       "dimensions": "",
       "objectKey": "public/fengzhi/fengzhi-image-jiege-mark-reversed-e8792c4ac6fa/e8792c4ac6fa70a515099352396d145c4b0d072376aae3d4840a3a2b26c970d5/original.svg",
       "mediaUrl": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-reversed-e8792c4ac6fa/e8792c4ac6fa70a515099352396d145c4b0d072376aae3d4840a3a2b26c970d5/original.svg",
+      "legacyUrls": [],
+      "status": "ready",
+      "version": 1
+    },
+    {
+      "id": "fengzhi-image-jiege-mark-2e5746a16797",
+      "ownerType": "owned-ip",
+      "ownerId": "fengzhi",
+      "role": "image",
+      "title": "jiege mark",
+      "access": "public",
+      "sourcePath": "FENGZHI/assets/jiege-mark.svg",
+      "sourceFilename": "jiege-mark.svg",
+      "sha256": "2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3",
+      "mimeType": "image/svg+xml",
+      "extension": "svg",
+      "bytes": 370,
+      "size": "370 B",
+      "width": null,
+      "height": null,
+      "dimensions": "",
+      "objectKey": "public/fengzhi/fengzhi-image-jiege-mark-2e5746a16797/2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3/original.svg",
+      "mediaUrl": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-2e5746a16797/2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3/original.svg",
       "legacyUrls": [],
       "status": "ready",
       "version": 1
@@ -701,6 +705,7 @@
           "assetId": "fengzhi-hero-fengzhi-brand-hero-fe388cc906c9",
           "path": "FENGZHI/assets/brand-images/fengzhi-brand-hero.png",
           "sitePath": "https://media.apuch.art/public/fengzhi/fengzhi-hero-fengzhi-brand-hero-fe388cc906c9/fe388cc906c9dfb10ceedeb83b772dd02c22c0f5801739d56e6354c728749fd8/original.png",
+          "mediaUrl": "https://media.apuch.art/public/fengzhi/fengzhi-hero-fengzhi-brand-hero-fe388cc906c9/fe388cc906c9dfb10ceedeb83b772dd02c22c0f5801739d56e6354c728749fd8/original.png",
           "title": "fengzhi brand hero",
           "format": "PNG",
           "bytes": 2079681,
@@ -717,6 +722,7 @@
           "assetId": "fengzhi-image-jiege-mark-mono-d7b2e1dc871a",
           "path": "FENGZHI/assets/jiege-mark-mono.svg",
           "sitePath": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-mono-d7b2e1dc871a/d7b2e1dc871abb01b9d9cb8eaf26a19217b2a84cbae87412dc1475839d91001d/original.svg",
+          "mediaUrl": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-mono-d7b2e1dc871a/d7b2e1dc871abb01b9d9cb8eaf26a19217b2a84cbae87412dc1475839d91001d/original.svg",
           "title": "jiege mark mono",
           "format": "SVG",
           "bytes": 370,
@@ -733,6 +739,7 @@
           "assetId": "fengzhi-image-jiege-mark-reversed-e8792c4ac6fa",
           "path": "FENGZHI/assets/jiege-mark-reversed.svg",
           "sitePath": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-reversed-e8792c4ac6fa/e8792c4ac6fa70a515099352396d145c4b0d072376aae3d4840a3a2b26c970d5/original.svg",
+          "mediaUrl": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-reversed-e8792c4ac6fa/e8792c4ac6fa70a515099352396d145c4b0d072376aae3d4840a3a2b26c970d5/original.svg",
           "title": "jiege mark reversed",
           "format": "SVG",
           "bytes": 370,
@@ -749,6 +756,7 @@
           "assetId": "fengzhi-image-jiege-mark-2e5746a16797",
           "path": "FENGZHI/assets/jiege-mark.svg",
           "sitePath": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-2e5746a16797/2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3/original.svg",
+          "mediaUrl": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-2e5746a16797/2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3/original.svg",
           "title": "jiege mark",
           "format": "SVG",
           "bytes": 370,
@@ -762,6 +770,22 @@
           "primaryAsset": false
         }
       ]
+    }
+  },
+  "agent": {
+    "entry": "https://apuch.art/agent.json",
+    "mcp": "https://apuch.art/mcp",
+    "recommendedTool": "get_guideline",
+    "arguments": {
+      "assetKey": "fengzhi"
+    },
+    "conventions": {
+      "primaryNameField": "mainName",
+      "primaryLanguageField": "mainLanguage",
+      "exactColorField": "theme",
+      "canonicalLogoField": "logoUrl",
+      "publicAssetField": "images",
+      "provenanceField": "sources"
     }
   },
   "moodboard": {
@@ -807,6 +831,7 @@
         "assetId": "fengzhi-hero-fengzhi-brand-hero-fe388cc906c9",
         "path": "FENGZHI/assets/brand-images/fengzhi-brand-hero.png",
         "sitePath": "https://media.apuch.art/public/fengzhi/fengzhi-hero-fengzhi-brand-hero-fe388cc906c9/fe388cc906c9dfb10ceedeb83b772dd02c22c0f5801739d56e6354c728749fd8/original.png",
+        "mediaUrl": "https://media.apuch.art/public/fengzhi/fengzhi-hero-fengzhi-brand-hero-fe388cc906c9/fe388cc906c9dfb10ceedeb83b772dd02c22c0f5801739d56e6354c728749fd8/original.png",
         "title": "fengzhi brand hero",
         "format": "PNG",
         "bytes": 2079681,
@@ -823,6 +848,7 @@
         "assetId": "fengzhi-image-jiege-mark-mono-d7b2e1dc871a",
         "path": "FENGZHI/assets/jiege-mark-mono.svg",
         "sitePath": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-mono-d7b2e1dc871a/d7b2e1dc871abb01b9d9cb8eaf26a19217b2a84cbae87412dc1475839d91001d/original.svg",
+        "mediaUrl": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-mono-d7b2e1dc871a/d7b2e1dc871abb01b9d9cb8eaf26a19217b2a84cbae87412dc1475839d91001d/original.svg",
         "title": "jiege mark mono",
         "format": "SVG",
         "bytes": 370,
@@ -839,6 +865,7 @@
         "assetId": "fengzhi-image-jiege-mark-reversed-e8792c4ac6fa",
         "path": "FENGZHI/assets/jiege-mark-reversed.svg",
         "sitePath": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-reversed-e8792c4ac6fa/e8792c4ac6fa70a515099352396d145c4b0d072376aae3d4840a3a2b26c970d5/original.svg",
+        "mediaUrl": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-reversed-e8792c4ac6fa/e8792c4ac6fa70a515099352396d145c4b0d072376aae3d4840a3a2b26c970d5/original.svg",
         "title": "jiege mark reversed",
         "format": "SVG",
         "bytes": 370,
@@ -855,6 +882,7 @@
         "assetId": "fengzhi-image-jiege-mark-2e5746a16797",
         "path": "FENGZHI/assets/jiege-mark.svg",
         "sitePath": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-2e5746a16797/2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3/original.svg",
+        "mediaUrl": "https://media.apuch.art/public/fengzhi/fengzhi-image-jiege-mark-2e5746a16797/2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3/original.svg",
         "title": "jiege mark",
         "format": "SVG",
         "bytes": 370,

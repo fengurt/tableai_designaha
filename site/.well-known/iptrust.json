@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "1.0",
+  "name": "岁知社 IPTrust",
+  "canonicalUrl": "https://apuch.art/",
+  "purpose": "Retrieve current IP names, brand guidelines, exact color tokens, canonical logos, public assets, provenance and version history.",
+  "publicAccess": true,
+  "authentication": {
+    "public": "No API key is required for public brand records, public assets, search and MCP reads.",
+    "private": "Use an authorized Bearer API key for private assets, protected notes and write operations."
+  },
+  "recommendedWorkflow": [
+    "Read this entry document once.",
+    "Resolve an IP slug with the brand index, directory or MCP list_ips.",
+    "Read the current IP through MCP get_brand/get_guideline or GET /api/brands/{slug}.json.",
+    "Use mainName in mainLanguage. Treat alternate names as secondary labels.",
+    "Use theme values exactly and use logoUrl as the canonical logo.",
+    "Use images[] or MCP list_assets for format, size, dimensions, access and copyable asset URLs.",
+    "Check sources[] and history before citing or applying a standard."
+  ],
+  "mcp": {
+    "endpoint": "https://apuch.art/mcp",
+    "transport": "Streamable HTTP",
+    "protocolVersion": "2025-11-25",
+    "config": {
+      "mcpServers": {
+        "iptrust": {
+          "type": "http",
+          "url": "https://apuch.art/mcp"
+        }
+      }
+    },
+    "coreTools": [
+      "list_ips",
+      "get_brand",
+      "get_guideline",
+      "list_tokens",
+      "list_assets",
+      "get_asset",
+      "search_library"
+    ]
+  },
+  "rest": {
+    "openapi": "https://apuch.art/api/openapi.json",
+    "manifest": "https://apuch.art/api/manifest.json",
+    "index": "https://apuch.art/api/brands.json",
+    "brand": "https://apuch.art/api/brands/{slug}.json",
+    "assets": "https://apuch.art/api/v2/assets?ownerType=owned-ip&ownerId={slug}",
+    "search": "https://apuch.art/api/v2/search?q={query}",
+    "fonts": "https://apuch.art/api/fonts.json",
+    "history": "https://apuch.art/api/history/{slug}.json"
+  },
+  "fieldGuide": {
+    "mainName": "Primary public IP name selected by mainLanguage.",
+    "mainLanguage": "The language that controls the primary displayed name.",
+    "theme": "Exact callable brand color tokens and visual keywords.",
+    "logoUrl": "Canonical public logo URL.",
+    "images": "Public image assets with format, byte size, dimensions, SHA-256 and URL.",
+    "guides": "Rendered and source brand guideline content.",
+    "sources": "Provenance and verification records.",
+    "history": "Version records for change-aware use.",
+    "fonts": "Open-source commercial-use font references with official provenance, licenses, CSS stacks and R2-hosted web specimens."
+  },
+  "examples": {
+    "getBrand": {
+      "tool": "get_brand",
+      "arguments": {
+        "assetKey": "opcglobal"
+      }
+    },
+    "getGuideline": {
+      "tool": "get_guideline",
+      "arguments": {
+        "assetKey": "opcglobal"
+      }
+    },
+    "listAssets": {
+      "tool": "list_assets",
+      "arguments": {
+        "ip": "opcglobal",
+        "limit": 50
+      }
+    }
+  },
+  "generatedAt": "2026-08-12T04:17:59.026Z",
+  "version": {
+    "hash": "bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
+    "shortHash": "bcd28bc",
+    "date": "2026-08-04T06:00:43+08:00",
+    "message": "Rename 侍天 English brand name to tiansight",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6"
+  }
+}

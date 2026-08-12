@@ -19,6 +19,20 @@ function escapeHtml(value = "") {
 
 function copy(cn, en) { return state.locale === "en" ? en : cn; }
 function initials(name = "") { return name.trim().split(/\s+/).slice(0, 2).map((x) => x[0]).join("").slice(0, 2).toUpperCase() || "IP"; }
+function logoStatus(item) {
+  if (item.logoStatus === "verified" && item.logoQuality === "vector") return copy("矢量已核验", "Verified vector");
+  if (item.logoStatus === "verified") return copy("官方已核验", "Officially verified");
+  return copy("字标待核验", "Monogram pending");
+}
+
+function bindLogoFallbacks(root) {
+  root.querySelectorAll("img[data-logo-fallback]").forEach((image) => image.addEventListener("error", () => {
+    const markNode = image.parentElement;
+    markNode.classList.remove("has-logo");
+    markNode.classList.add("is-fallback");
+    markNode.replaceChildren(document.createTextNode(image.dataset.logoFallback || "IP"));
+  }, { once: true }));
+}
 
 async function fetchLibrary() {
   const params = new URLSearchParams({ limit: state.limit, offset: state.offset });
@@ -39,8 +53,10 @@ async function fetchLibrary() {
 }
 
 function mark(item) {
-  const src = item.logoUrl || item.logoSourceUrl;
-  return `<span class="organization-mark">${src ? `<img src="${escapeHtml(src)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove();this.parentElement.textContent='${escapeHtml(initials(item.name))}'">` : escapeHtml(initials(item.name))}</span>`;
+  const src = item.logoStatus === "verified" && item.logoUrl ? item.logoUrl : "";
+  const fallback = initials(item.name);
+  const status = logoStatus(item);
+  return `<span class="organization-mark ${src ? "has-logo" : "is-fallback"}" data-logo-status="${escapeHtml(item.logoStatus || "pending")}" title="${escapeHtml(status)}">${src ? `<img src="${escapeHtml(src)}" alt="${escapeHtml(item.name)} logo" width="44" height="44" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-logo-fallback="${escapeHtml(fallback)}">` : escapeHtml(fallback)}</span>`;
 }
 
 function organizationCard(item) {
@@ -68,6 +84,7 @@ function render() {
   } else {
     grid.innerHTML = state.items.map(state.type === "organizations" ? organizationCard : itemCard).join("");
   }
+  bindLogoFallbacks(grid);
   $("#libraryCount").textContent = state.total.toLocaleString();
   $("#libraryMore").classList.toggle("hidden", state.items.length >= state.total);
   grid.querySelectorAll("[data-library-id]").forEach((button) => button.addEventListener("click", () => openDetail(button.dataset.libraryId)));
@@ -95,12 +112,15 @@ function openDetail(id) {
         <div><span>${copy("国家", "Country")}</span>${escapeHtml(item.country || "—")}</div>
         <div><span>${copy("总部", "Headquarters")}</span>${escapeHtml(item.headquarters || "—")}</div>
         <div><span>${copy("核验", "Verification")}</span>${escapeHtml(item.verificationStatus || "—")}</div>
-      </div><div class="detail-links">${item.officialWebsite ? `<a href="${escapeHtml(item.officialWebsite)}" target="_blank" rel="noreferrer">${copy("官网", "Website")}</a>` : ""}<a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noreferrer">${copy("出处", "Source")}</a></div>`;
+        <div><span>${copy("Logo 状态", "Logo status")}</span>${escapeHtml(logoStatus(item))}</div>
+        <div><span>${copy("Logo 来源", "Logo provenance")}</span>${escapeHtml(item.logoProvider || (item.logoStatus === "verified" ? "Official asset registry" : copy("待补充", "Pending")))}</div>
+      </div><div class="detail-links">${item.officialWebsite ? `<a href="${escapeHtml(item.officialWebsite)}" target="_blank" rel="noreferrer">${copy("官网", "Website")}</a>` : ""}${item.logoProvenanceUrl ? `<a href="${escapeHtml(item.logoProvenanceUrl)}" target="_blank" rel="noreferrer">${copy("Logo 出处", "Logo source")}</a>` : ""}<a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noreferrer">${copy("资料出处", "Source")}</a></div>`;
   } else {
     const title = item.title?.[state.locale === "en" ? "en" : "zh"] || item.title?.zh || item.title?.en || item.slug;
     const summary = item.summary?.[state.locale === "en" ? "en" : "zh"] || item.summary?.zh || item.summary?.en || "";
     $("#libraryDetailContent").innerHTML = `<p class="eyebrow">${escapeHtml(item.type)}</p><h2>${escapeHtml(title)}</h2><p>${escapeHtml(summary)}</p><div class="detail-links">${item.sourceUrl ? `<a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noreferrer">${copy("出处", "Source")}</a>` : ""}${item.fileUrl ? `<a href="${escapeHtml(item.fileUrl)}">${copy("文件", "File")}</a>` : ""}</div>`;
   }
+  bindLogoFallbacks(detail);
   detail.classList.remove("hidden"); $("#detailScrim").classList.remove("hidden");
 }
 

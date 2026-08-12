@@ -3,6 +3,8 @@
   "version": "2.0.0",
   "description": "IPTrust exposes brands, IP taxonomy, brand architecture, project applications, assets and history through REST and MCP.",
   "endpoints": {
+    "agentEntry": "agent.json",
+    "openapi": "api/openapi.json",
     "manifest": "api/manifest.json",
     "allBrands": "api/brands.json",
     "taxonomy": "api/v2/taxonomy",
@@ -22,6 +24,7 @@
     "protectedLibraryFile": "api/v2/library/{collection}/{id}/sign",
     "datasets": "api/library/datasets",
     "relations": "api/library/relations",
+    "fonts": "api/fonts.json",
     "allVersions": "api/versions.json",
     "brand": "api/brands/{slug}.json",
     "brandHistory": "api/history/{slug}.json",
@@ -30,6 +33,14 @@
     "llms": "llms.txt",
     "remoteMcp": "mcp",
     "directory": "directory/"
+  },
+  "agentConventions": {
+    "identity": "Use slug or assetKey as the stable IP identifier.",
+    "naming": "Always display mainName in mainLanguage; display alternate-language names only as secondary labels.",
+    "colors": "Use theme token values exactly. Do not infer replacement colors from screenshots.",
+    "logo": "Use logoUrl as the canonical logo. Use images[] when a specific format or colorway is required.",
+    "provenance": "Prefer sources[] and version/history fields when citing or applying a standard.",
+    "privateAccess": "Public brand metadata and public assets require no key. Private files require an authorized Bearer API key."
   },
   "brandFields": {
     "slug": "Stable IP ID / asset key used by URLs and agent calls.",
@@ -59,6 +70,7 @@
     "adobeAssets": "Adobe source files, preview images, page exports, formats, file sizes, and public URLs.",
     "logoUrl": "Canonical public URL path for the preferred IP logo, blank when no verified logo asset exists.",
     "assetKit": "Unified callable IP asset endpoints, colors, images, and moodboard source.",
+    "agent": "Agent bootstrap metadata with MCP endpoint, recommended tool call and field conventions.",
     "moodboard": "Derived colors, keywords, and image assets for visual direction.",
     "editablePaths": "Source files editable from admin flow.",
     "source": "GitHub source folder and local folder.",

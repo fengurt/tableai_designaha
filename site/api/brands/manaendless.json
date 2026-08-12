@@ -165,14 +165,25 @@
     "standalone"
   ],
   "version": {
-    "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
-    "shortHash": "fa30da1",
-    "date": "2026-07-23T09:50:41+08:00",
-    "message": "feat: move Sidera to pale manuscript theme",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
+    "hash": "bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
+    "shortHash": "bcd28bc",
+    "date": "2026-08-04T06:00:43+08:00",
+    "message": "Rename 侍天 English brand name to tiansight",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6"
   },
   "historyUrl": "api/history/manaendless.json",
   "history": [
+    {
+      "hash": "bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
+      "shortHash": "bcd28bc",
+      "date": "2026-08-04T06:00:43+08:00",
+      "message": "Rename 侍天 English brand name to tiansight",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
+      "sourcePaths": [
+        "config/brands.json",
+        "MANAENDLESS"
+      ]
+    },
     {
       "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
       "shortHash": "fa30da1",
@@ -227,17 +238,6 @@
         "config/brands.json",
         "MANAENDLESS"
       ]
-    },
-    {
-      "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
-      "shortHash": "eaf4320",
-      "date": "2026-07-19T14:13:21+08:00",
-      "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86",
-      "sourcePaths": [
-        "config/brands.json",
-        "MANAENDLESS"
-      ]
     }
   ],
   "url": "brand.html?brand=manaendless",
@@ -250,6 +250,7 @@
       "assetId": "manaendless-hero-manaendless-brand-hero-58a52f2e1748",
       "path": "MANAENDLESS/assets/brand-images/manaendless-brand-hero.png",
       "sitePath": "https://media.apuch.art/public/manaendless/manaendless-hero-manaendless-brand-hero-58a52f2e1748/58a52f2e174817fe795761cd6688f944bd266782a5468c7448d70ed11b40952c/original.png",
+      "mediaUrl": "https://media.apuch.art/public/manaendless/manaendless-hero-manaendless-brand-hero-58a52f2e1748/58a52f2e174817fe795761cd6688f944bd266782a5468c7448d70ed11b40952c/original.png",
       "title": "manaendless brand hero",
       "format": "PNG",
       "bytes": 1890717,
@@ -345,6 +346,7 @@
           "assetId": "manaendless-hero-manaendless-brand-hero-58a52f2e1748",
           "path": "MANAENDLESS/assets/brand-images/manaendless-brand-hero.png",
           "sitePath": "https://media.apuch.art/public/manaendless/manaendless-hero-manaendless-brand-hero-58a52f2e1748/58a52f2e174817fe795761cd6688f944bd266782a5468c7448d70ed11b40952c/original.png",
+          "mediaUrl": "https://media.apuch.art/public/manaendless/manaendless-hero-manaendless-brand-hero-58a52f2e1748/58a52f2e174817fe795761cd6688f944bd266782a5468c7448d70ed11b40952c/original.png",
           "title": "manaendless brand hero",
           "format": "PNG",
           "bytes": 1890717,
@@ -358,6 +360,22 @@
           "primaryAsset": false
         }
       ]
+    }
+  },
+  "agent": {
+    "entry": "https://apuch.art/agent.json",
+    "mcp": "https://apuch.art/mcp",
+    "recommendedTool": "get_guideline",
+    "arguments": {
+      "assetKey": "manaendless"
+    },
+    "conventions": {
+      "primaryNameField": "mainName",
+      "primaryLanguageField": "mainLanguage",
+      "exactColorField": "theme",
+      "canonicalLogoField": "logoUrl",
+      "publicAssetField": "images",
+      "provenanceField": "sources"
     }
   },
   "moodboard": {
@@ -403,6 +421,7 @@
         "assetId": "manaendless-hero-manaendless-brand-hero-58a52f2e1748",
         "path": "MANAENDLESS/assets/brand-images/manaendless-brand-hero.png",
         "sitePath": "https://media.apuch.art/public/manaendless/manaendless-hero-manaendless-brand-hero-58a52f2e1748/58a52f2e174817fe795761cd6688f944bd266782a5468c7448d70ed11b40952c/original.png",
+        "mediaUrl": "https://media.apuch.art/public/manaendless/manaendless-hero-manaendless-brand-hero-58a52f2e1748/58a52f2e174817fe795761cd6688f944bd266782a5468c7448d70ed11b40952c/original.png",
         "title": "manaendless brand hero",
         "format": "PNG",
         "bytes": 1890717,

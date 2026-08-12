@@ -42,7 +42,7 @@ jobs:
         if: steps.cloudflare.outputs.enabled == 'true'
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version-file: .node-version
           cache: npm
       - name: Install dependencies
         if: steps.cloudflare.outputs.enabled == 'true'
@@ -94,3 +94,6 @@ jobs:
           apiToken: ${{ env.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ env.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy site --project-name=${{ steps.cloudflare.outputs.project }} --branch=main
+      - name: Verify production
+        if: steps.cloudflare.outputs.enabled == 'true'
+        run: npm run check:production

@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "735ff5e-4d805672";
+const BUILD_VERSION = "bcd28bc-446d4675";
 
 const i18n = {
   cn: {
@@ -131,6 +131,22 @@ const i18n = {
     "evolution.frameworkTitle": "完整系统",
     "evolution.applyToIp": "选择一个 IP",
     "evolution.loop": "识别品牌，建立系统，生成资产，回收反馈，再次进化。",
+    "fonts.label": "字体参考",
+    "fonts.title": "开源可商用字体。",
+    "fonts.lead": "官方来源、明确许可证与真实网页样张，供品牌表达和 Agent 调用参考。",
+    "fonts.chinese": "中文",
+    "fonts.size": "字号",
+    "fonts.weight": "字重",
+    "fonts.source": "官方出处",
+    "fonts.license": "许可证",
+    "fonts.copyCss": "复制 CSS",
+    "fonts.cssCopied": "已复制字体 CSS",
+    "fonts.ready": "滚动到此处加载真实字体",
+    "fonts.loading": "正在加载真实字体…",
+    "fonts.loaded": "真实字体已加载",
+    "fonts.fallback": "字体加载失败，已使用系统字体",
+    "fonts.licenseNote": "授权说明",
+    "fonts.openApi": "打开字体 JSON",
     "api.title": "System API",
     "api.key": "System API Key",
     "api.connect": "Connect",
@@ -298,6 +314,22 @@ const i18n = {
     "evolution.frameworkTitle": "System contents",
     "evolution.applyToIp": "Choose an IP",
     "evolution.loop": "Identify the brand. Build the system. Create assets. Learn from feedback. Evolve again.",
+    "fonts.label": "TYPE REFERENCE",
+    "fonts.title": "Open-source commercial-use fonts.",
+    "fonts.lead": "Official provenance, explicit licenses and live web specimens for brand work and Agent use.",
+    "fonts.chinese": "Chinese",
+    "fonts.size": "Size",
+    "fonts.weight": "Weight",
+    "fonts.source": "Official source",
+    "fonts.license": "License",
+    "fonts.copyCss": "Copy CSS",
+    "fonts.cssCopied": "Font CSS copied",
+    "fonts.ready": "Scroll here to load the live font",
+    "fonts.loading": "Loading live font…",
+    "fonts.loaded": "Live font loaded",
+    "fonts.fallback": "Font failed to load; using the system fallback",
+    "fonts.licenseNote": "License note",
+    "fonts.openApi": "Open font JSON",
     "api.title": "System API",
     "api.key": "System API Key",
     "api.connect": "Connect",
@@ -355,6 +387,8 @@ let cachedSearch = null;
 let cachedVersions = null;
 let currentQuery = "";
 let cachedPortalSkillText = "";
+let fontCatalogCache = null;
+let fontSpecimenObserver = null;
 
 function contentLang(locale = currentLocale) {
   return localeMeta[locale]?.contentLang || "zh";
@@ -392,6 +426,7 @@ function applyI18n() {
   document.querySelectorAll("[data-i18n-placeholder]").forEach((node) => {
     node.setAttribute("placeholder", t(node.dataset.i18nPlaceholder));
   });
+  applyFontLibraryLocale();
   setupAgentGateway();
 }
 
@@ -894,6 +929,124 @@ async function writeClipboardText(text) {
   }
   showManualCopy(text);
   return "selected";
+}
+
+function fontCatalogData() {
+  if (fontCatalogCache) return fontCatalogCache;
+  const node = $("#fontCatalogData");
+  if (!node) return null;
+  try {
+    fontCatalogCache = JSON.parse(node.textContent || "{}");
+  } catch (error) {
+    console.warn("Font catalog could not be parsed.", error);
+    fontCatalogCache = { fonts: [] };
+  }
+  return fontCatalogCache;
+}
+
+function applyFontLibraryLocale() {
+  document.querySelectorAll("[data-font-zh][data-font-en]").forEach((node) => {
+    node.textContent = currentLocale === "en" ? node.dataset.fontEn : node.dataset.fontZh;
+  });
+  document.querySelectorAll("[data-font-load-state]").forEach((node) => {
+    node.textContent = t(node.dataset.fontState || "fonts.ready");
+  });
+}
+
+function setFontLoadState(article, key) {
+  const state = article.querySelector("[data-font-load-state]");
+  if (!state) return;
+  state.dataset.fontState = key;
+  state.textContent = t(key);
+}
+
+async function loadFontSpecimen(article) {
+  if (article.dataset.fontLoaded || article.hidden) return;
+  const catalog = fontCatalogData();
+  const font = catalog?.fonts?.find((item) => item.id === article.dataset.fontId);
+  if (!font) {
+    article.classList.add("is-fallback");
+    setFontLoadState(article, "fonts.fallback");
+    return;
+  }
+  article.dataset.fontLoaded = "loading";
+  setFontLoadState(article, "fonts.loading");
+  const alias = `IPTrustDemo-${font.id}`;
+  const style = document.createElement("style");
+  style.dataset.fontFace = font.id;
+  style.textContent = font.assets.map((asset) => `@font-face{font-family:"${alias}";src:url("${String(asset.mediaUrl).replaceAll('"', "%22")}") format("woff2");font-style:${asset.style || "normal"};font-weight:${asset.weight};font-display:swap;}`).join("\\n");
+  document.head.appendChild(style);
+  article.style.setProperty("--demo-font", `"${alias}", ${font.cssStack}`);
+  try {
+    if (document.fonts?.load) {
+      const weight = $("[data-font-weight]")?.value || "400";
+      await Promise.race([
+        document.fonts.load(`${weight} 32px "${alias}"`, font.sample.slice(0, 80)),
+        new Promise((_, reject) => setTimeout(() => reject(new Error("font_timeout")), 7000)),
+      ]);
+    }
+    article.dataset.fontLoaded = "true";
+    article.classList.add("is-loaded");
+    setFontLoadState(article, "fonts.loaded");
+  } catch (error) {
+    article.dataset.fontLoaded = "fallback";
+    article.classList.add("is-fallback");
+    setFontLoadState(article, "fonts.fallback");
+    console.warn(`Font specimen failed: ${font.id}`, error);
+  }
+}
+
+function setupFontLibrary() {
+  const root = $("#open-source-type");
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = "true";
+  const catalog = fontCatalogData();
+  const specimens = [...root.querySelectorAll(".font-specimen")];
+  const filterButtons = [...root.querySelectorAll("[data-font-filter]")];
+  const size = root.querySelector("[data-font-size]");
+  const sizeOutput = root.querySelector("[data-font-size-output]");
+  const weight = root.querySelector("[data-font-weight]");
+
+  const applyFilter = (group) => {
+    filterButtons.forEach((button) => button.setAttribute("aria-selected", String(button.dataset.fontFilter === group)));
+    specimens.forEach((article) => {
+      article.hidden = article.dataset.fontGroup !== group;
+      if (!article.hidden && !fontSpecimenObserver) loadFontSpecimen(article);
+    });
+  };
+
+  filterButtons.forEach((button) => button.addEventListener("click", () => applyFilter(button.dataset.fontFilter)));
+  size?.addEventListener("input", () => {
+    root.style.setProperty("--font-demo-size", `${size.value}px`);
+    if (sizeOutput) sizeOutput.textContent = size.value;
+  });
+  weight?.addEventListener("change", () => root.style.setProperty("--font-demo-weight", weight.value));
+  root.addEventListener("click", async (event) => {
+    const button = event.target.closest("[data-copy-font]");
+    if (!button) return;
+    const font = catalog?.fonts?.find((item) => item.id === button.dataset.copyFont);
+    if (!font) return;
+    const result = await writeClipboardText(`font-family: ${font.cssStack};\nfont-weight: ${weight?.value || "400"};`);
+    const message = result === "selected" ? t("copy.selected") : t("fonts.cssCopied");
+    showToast(message);
+    const previous = button.textContent;
+    button.textContent = message;
+    setTimeout(() => { button.textContent = previous; }, 1600);
+  });
+
+  if ("IntersectionObserver" in window) {
+    fontSpecimenObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        loadFontSpecimen(entry.target);
+        fontSpecimenObserver.unobserve(entry.target);
+      });
+    }, { rootMargin: "240px 0px" });
+    specimens.forEach((article) => fontSpecimenObserver.observe(article));
+  }
+
+  applyFilter("zh");
+  applyFontLibraryLocale();
 }
 
 async function copyReference(brand, button) {
@@ -2071,6 +2224,7 @@ setupSearch();
 setupPortalActions();
 setupAgentGateway();
 setupApiConnect();
+setupFontLibrary();
 renderHeroIndex().catch(console.error);
 renderIndex().catch(console.error);
 renderBrand().catch(renderBrandFailure);

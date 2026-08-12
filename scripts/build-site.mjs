@@ -19,12 +19,15 @@ const contactDir = join(assetsDir, "contact");
 const librarySiteDir = join(siteDir, "library");
 const libraryDataDir = join(root, "data", "library");
 const assetManifestPath = join(root, "data", "assets", "manifest.json");
+const fontCatalogPath = join(root, "data", "fonts.json");
 
 const brands = JSON.parse(await readFile(join(root, "config/brands.json"), "utf8"));
 const ipSystem = JSON.parse(await readFile(join(root, "config/ip-system.json"), "utf8"));
 const assetManifest = existsSync(assetManifestPath)
   ? JSON.parse(await readFile(assetManifestPath, "utf8"))
   : null;
+const fontCatalog = JSON.parse(await readFile(fontCatalogPath, "utf8"));
+const fontCatalogEmbeddedJson = JSON.stringify(fontCatalog).replaceAll("<", "\\u003c");
 const hubLogoUrl = assetManifest?.items?.find((item) => item.sourcePath === "IPTRUST/assets/brand-images/iptrust-logo-black.png")?.mediaUrl || "assets/brand-images/iptrust-logo-black.png";
 const hubTouchIconUrl = assetManifest?.items?.find((item) => item.sourcePath === "IPTRUST/assets/brand-images/logo-set/黑色/logohdpi.png")?.mediaUrl || hubLogoUrl;
 const librarySnapshotNames = ["sources", "organizations", "cases", "reports", "datasets", "relations", "sync"];
@@ -58,7 +61,8 @@ function commonDiscoveryHead(prefix = "") {
   <link rel="manifest" href="${prefix}site.webmanifest">
   <link rel="alternate" href="${prefix}agent.json" type="application/json" title="IPTrust Agent Entry">
   <link rel="alternate" href="${prefix}llms.txt" type="text/plain" title="IPTrust LLM Guide">
-  <link rel="alternate" href="${prefix}api/openapi.json" type="application/vnd.oai.openapi+json" title="IPTrust OpenAPI">`;
+  <link rel="alternate" href="${prefix}api/openapi.json" type="application/vnd.oai.openapi+json" title="IPTrust OpenAPI">
+  <link rel="alternate" href="${prefix}api/fonts.json" type="application/json" title="IPTrust Open-source Type Library">`;
 }
 
 async function walk(dir) {
@@ -412,6 +416,25 @@ function markdownToc(markdown = "", prefix = "document") {
     .join("\n");
 }
 
+function fontLibraryRows(catalog) {
+  return catalog.fonts.map((font) => `<article class="font-specimen" data-font-id="${escapeBuildHtml(font.id)}" data-font-group="${escapeBuildHtml(font.group)}">
+    <header class="font-specimen-head">
+      <div>
+        <p class="font-specimen-name">${escapeBuildHtml(font.name)}${font.nameZh && font.nameZh !== font.name ? ` <span>${escapeBuildHtml(font.nameZh)}</span>` : ""}</p>
+        <p class="font-specimen-meta"><span data-font-zh="${escapeBuildHtml(font.category.zh)}" data-font-en="${escapeBuildHtml(font.category.en)}">${escapeBuildHtml(font.category.zh)}</span> · ${escapeBuildHtml(font.license.spdx)} · ${escapeBuildHtml(catalog.verifiedAt)}</p>
+      </div>
+      <div class="font-specimen-use" data-font-zh="${escapeBuildHtml(font.useCases.zh)}" data-font-en="${escapeBuildHtml(font.useCases.en)}">${escapeBuildHtml(font.useCases.zh)}</div>
+      <div class="font-specimen-actions">
+        <a href="${escapeBuildHtml(font.source.projectUrl)}" target="_blank" rel="noreferrer" data-i18n="fonts.source">官方出处</a>
+        <a href="${escapeBuildHtml(font.license.url)}" target="_blank" rel="noreferrer" data-i18n="fonts.license">许可证</a>
+        <button type="button" data-copy-font="${escapeBuildHtml(font.id)}" data-i18n="fonts.copyCss">复制 CSS</button>
+      </div>
+    </header>
+    <p class="font-specimen-sample" lang="${font.group === "zh" ? "zh-CN" : "en"}">${escapeBuildHtml(font.sample)}</p>
+    <p class="font-load-state" data-font-load-state aria-live="polite" data-i18n="fonts.ready">滚动到此处加载真实字体</p>
+  </article>`).join("\n");
+}
+
 function loadVersions() {
   try {
     const out = execFileSync("git", ["log", "-12", "--date=iso-strict", "--pretty=format:%H%x09%h%x09%cI%x09%s"], {
@@ -517,6 +540,7 @@ function apiSchemaPayload() {
       protectedLibraryFile: "api/v2/library/{collection}/{id}/sign",
       datasets: "api/library/datasets",
       relations: "api/library/relations",
+      fonts: "api/fonts.json",
       allVersions: "api/versions.json",
       brand: "api/brands/{slug}.json",
       brandHistory: "api/history/{slug}.json",
@@ -608,7 +632,7 @@ const previousHistoryBySlug = new Map(await Promise.all(brands.map(async (brand)
 })));
 const versions = mergeVersionHistory(loadVersions(), previousVersions, 20);
 const buildFingerprint = createHash("sha256");
-for (const inputPath of ["scripts/build-site.mjs", "styles/editorial.css", "config/brands.json", "config/ip-system.json", "package.json", "IP-System/ip_sys.md", "data/library/sync.json", "library/library.css", "library/library.js"]) {
+for (const inputPath of ["scripts/build-site.mjs", "styles/editorial.css", "config/brands.json", "config/ip-system.json", "package.json", "IP-System/ip_sys.md", "data/fonts.json", "data/library/sync.json", "library/library.css", "library/library.js"]) {
   buildFingerprint.update(await readFile(join(root, inputPath)));
 }
 const buildVersion = `${versions[0]?.shortHash ?? "dev"}-${buildFingerprint.digest("hex").slice(0, 8)}`;
@@ -621,6 +645,12 @@ const ipSystemTocHtml = markdownToc(ipSystemMarkdown, "ip-system");
 const retainedVersionedAssets = [];
 const previousIndexPath = join(siteDir, "index.html");
 const previousIndexes = [];
+if (existsSync(assetsDir)) {
+  const existingVersioned = (await readdir(assetsDir)).filter((filename) => /^site-[a-z0-9-]+\.(?:css|js)$/.test(filename));
+  for (const filename of existingVersioned) {
+    retainedVersionedAssets.push({ filename, data: await readFile(join(assetsDir, filename)) });
+  }
+}
 if (existsSync(previousIndexPath)) previousIndexes.push(await readFile(previousIndexPath, "utf8"));
 for (const revision of ["HEAD", "HEAD^"]) {
   try {
@@ -696,7 +726,7 @@ for (const brand of brands) {
   for (const item of manifestAssets.filter((entry) => entry.access === "public" && ["hero", "logo", "image"].includes(entry.role))) {
     const localSource = item.sourcePath ? join(root, item.sourcePath) : "";
     let sitePath = item.mediaUrl;
-    if (localSource && existsSync(localSource)) {
+    if (!sitePath && localSource && existsSync(localSource)) {
       const outputName = brandImageOutputName(brand, item.sourcePath, usedImageNames);
       await copyFile(localSource, join(imageDir, outputName));
       sitePath = `assets/brand-images/${outputName}`;
@@ -956,7 +986,15 @@ const librarySearchPayload = [
     url: `library/?type=${collection}&q=${encodeURIComponent(item.title?.zh || item.title?.en || item.slug || item.id)}`,
   }))),
 ];
-const searchPayload = [...brandSearchPayload, ...librarySearchPayload];
+const fontSearchPayload = fontCatalog.fonts.map((font) => ({
+  type: "font",
+  slug: font.id,
+  title: font.name,
+  subtitle: [font.nameZh !== font.name ? font.nameZh : "", font.license.spdx, font.category.zh].filter(Boolean).join(" · "),
+  text: [font.category.zh, font.category.en, font.useCases.zh, font.useCases.en, font.scripts.join(" "), font.cssStack, font.source.publisher].filter(Boolean).join(" "),
+  url: "ip-evolution#open-source-type",
+}));
+const searchPayload = [...brandSearchPayload, ...librarySearchPayload, ...fontSearchPayload];
 const agentEntryPayload = {
   schemaVersion: "1.0",
   name: hubName,
@@ -1005,6 +1043,7 @@ const agentEntryPayload = {
     brand: `${publicOrigin}/api/brands/{slug}.json`,
     assets: `${publicOrigin}/api/v2/assets?ownerType=owned-ip&ownerId={slug}`,
     search: `${publicOrigin}/api/v2/search?q={query}`,
+    fonts: `${publicOrigin}/api/fonts.json`,
     history: `${publicOrigin}/api/history/{slug}.json`,
   },
   fieldGuide: {
@@ -1016,6 +1055,7 @@ const agentEntryPayload = {
     guides: "Rendered and source brand guideline content.",
     sources: "Provenance and verification records.",
     history: "Version records for change-aware use.",
+    fonts: "Open-source commercial-use font references with official provenance, licenses, CSS stacks and R2-hosted web specimens.",
   },
   examples: {
     getBrand: { tool: "get_brand", arguments: { assetKey: "opcglobal" } },
@@ -1057,6 +1097,13 @@ const openApiPayload = {
           200: { description: "Complete brand record", content: { "application/json": { schema: { $ref: "#/components/schemas/Brand" } } } },
           404: { description: "IP not found" },
         },
+      },
+    },
+    "/api/fonts.json": {
+      get: {
+        operationId: "listOpenSourceFonts",
+        summary: "List verified open-source commercial-use fonts and specimen assets",
+        responses: { 200: { description: "Font reference catalog", content: { "application/json": { schema: { type: "object" } } } } },
       },
     },
     "/api/v2/assets": {
@@ -1120,6 +1167,7 @@ const staticIps = [
 ];
 await writeFile(join(apiDir, "taxonomy.json"), JSON.stringify(ipSystem.taxonomy, null, 2));
 await writeFile(join(apiDir, "ips.json"), JSON.stringify({ items: staticIps, relationships: ipSystem.relationships, applications: ipSystem.applications }, null, 2));
+await writeFile(join(apiDir, "fonts.json"), JSON.stringify(fontCatalog, null, 2));
 await writeFile(join(apiDir, "search.json"), JSON.stringify(searchPayload, null, 2));
 await writeFile(join(apiDir, "versions.json"), JSON.stringify(versions, null, 2));
 await writeFile(join(apiDir, "schema.json"), JSON.stringify(apiSchemaPayload(), null, 2));
@@ -1176,6 +1224,14 @@ await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
     ips: "api/v2/ips",
     relations: "api/v2/ip-relations",
     applications: "api/v2/applications",
+  },
+  fontLibrary: {
+    page: "ip-evolution#open-source-type",
+    api: "api/fonts.json",
+    licensePolicy: "Open-source licenses that permit commercial use and web embedding; each record carries its official source and license.",
+    delivery: "Official font sources are subset to WOFF2, stored as immutable R2 objects and loaded only when specimens enter the viewport.",
+    count: fontCatalog.fonts.length,
+    verifiedAt: fontCatalog.verifiedAt,
   },
   library: {
     page: "library/",
@@ -1303,6 +1359,8 @@ await writeFile(join(siteDir, "_headers"), [
 ].join("\n"));
 
 await writeFile(join(siteDir, "_redirects"), [
+  "/ip-evolution/  /ip-evolution  308",
+  "/ip-evolution%EF%BC%9F  /ip-evolution  308",
   "/llms  /llms.txt  200",
   "/manifest  /api/manifest.json  200",
   "/schema  /api/schema.json  200",
@@ -1329,8 +1387,31 @@ await writeFile(join(siteDir, "_routes.json"), JSON.stringify({
 
 await writeFile(join(siteDir, "_worker.js"), `const EDGE_ORIGIN = "https://edge.apuch.art";
 
+function canonicalIpEvolution(request) {
+  if (!["GET", "HEAD"].includes(request.method)) return null;
+  const url = new URL(request.url);
+  let pathname;
+  try {
+    pathname = decodeURIComponent(url.pathname);
+  } catch {
+    return null;
+  }
+  if (pathname !== "/ip-evolution/" && pathname !== "/ip-evolution？") return null;
+  url.pathname = "/ip-evolution";
+  return new Response(null, {
+    status: 308,
+    headers: {
+      Location: url.toString(),
+      "Cache-Control": "public, max-age=31536000, immutable",
+      "X-IPTrust-Route": "canonical-ip-evolution",
+    },
+  });
+}
+
 export default {
   async fetch(request) {
+    const canonical = canonicalIpEvolution(request);
+    if (canonical) return canonical;
     const incoming = new URL(request.url);
     const upstream = new URL(\`${'${incoming.pathname}${incoming.search}'}\`, EDGE_ORIGIN);
     const headers = new Headers(request.headers);
@@ -1382,12 +1463,19 @@ await writeFile(join(siteDir, "llms.txt"), [
   "- https://apuch.art/api/brands.json",
   "- https://apuch.art/api/brands/{slug}.json",
   "- https://apuch.art/api/history/{slug}.json",
+  "- https://apuch.art/api/fonts.json",
   "- https://apuch.art/api/v2/assets?ownerType=owned-ip&ownerId={slug}",
   "- https://apuch.art/mcp (MCP Streamable HTTP, protocol 2025-11-25)",
   "- https://apuch.art/skills/iptrust-live-update/SKILL.md",
   "",
   "MCP configuration:",
   '{"mcpServers":{"iptrust":{"type":"http","url":"https://apuch.art/mcp"}}}',
+  "",
+  "Open-source type library:",
+  `- Page: https://apuch.art/ip-evolution#open-source-type`,
+  `- API: https://apuch.art/api/fonts.json`,
+  `- Policy: ${fontCatalog.licenseNotice.en}`,
+  ...fontCatalog.fonts.map((font) => `- ${font.name}${font.nameZh && font.nameZh !== font.name ? ` / ${font.nameZh}` : ""}: ${font.license.spdx} · ${font.source.projectUrl}`),
   "",
   "Brands:",
   ...indexPayload.map((brand) => `- ${brand.mainName} (${brand.slug}): /api/brands/${brand.slug}.json · mainLocale ${brand.mainLocale} · palette ${brand.theme?.primary ?? "n/a"} / ${brand.theme?.accent ?? "n/a"}`),
@@ -1701,6 +1789,33 @@ ${commonDiscoveryHead()}
       <article><strong data-i18n="evolution.assets">资产</strong><p data-i18n="evolution.assetsBody">把系统转化为人和 Agent 可调用的资产。</p></article>
       <article><strong data-i18n="evolution.governance">治理</strong><p data-i18n="evolution.governanceBody">记录版本、衡量偏差并持续回修。</p></article>
     </section>
+    <section class="font-library" id="open-source-type" aria-labelledby="fontLibraryTitle">
+      <header class="font-library-head">
+        <div>
+          <p class="eyebrow" data-i18n="fonts.label">字体参考</p>
+          <h2 id="fontLibraryTitle" data-i18n="fonts.title">开源可商用字体。</h2>
+        </div>
+        <p data-i18n="fonts.lead">官方来源、明确许可证与真实网页样张，供品牌表达和 Agent 调用参考。</p>
+      </header>
+      <div class="font-library-controls" aria-label="Font specimen controls">
+        <div class="font-filter" role="tablist" aria-label="Font groups">
+          <button type="button" role="tab" aria-selected="true" data-font-filter="zh" data-i18n="fonts.chinese">中文</button>
+          <button type="button" role="tab" aria-selected="false" data-font-filter="en">English</button>
+          <button type="button" role="tab" aria-selected="false" data-font-filter="mono">Mono</button>
+        </div>
+        <label class="font-control-size"><span data-i18n="fonts.size">字号</span><input type="range" min="28" max="72" value="48" step="2" data-font-size><output data-font-size-output>48</output></label>
+        <label><span data-i18n="fonts.weight">字重</span><select data-font-weight><option value="400">400</option><option value="600">600</option></select></label>
+      </div>
+      <div class="font-specimen-list">
+        ${fontLibraryRows(fontCatalog)}
+      </div>
+      <footer class="font-library-license">
+        <strong data-i18n="fonts.licenseNote">授权说明</strong>
+        <p data-font-zh="${escapeBuildHtml(fontCatalog.licenseNotice.zh)}" data-font-en="${escapeBuildHtml(fontCatalog.licenseNotice.en)}">${escapeBuildHtml(fontCatalog.licenseNotice.zh)}</p>
+        <a href="api/fonts.json" data-i18n="fonts.openApi">打开字体 JSON</a>
+      </footer>
+      <script type="application/json" id="fontCatalogData">${fontCatalogEmbeddedJson}</script>
+    </section>
     <section class="ip-system-content-shell" id="framework">
       <aside class="ip-system-toc" aria-label="IP System contents">
         <strong data-i18n="evolution.frameworkTitle">完整系统</strong>
@@ -1713,6 +1828,7 @@ ${commonDiscoveryHead()}
     <section class="ip-system-loop">
       <p data-i18n="evolution.loop">识别品牌，建立系统，生成资产，回收反馈，再次进化。</p>
     </section>
+    <noscript><p class="ip-system-noscript">页面内容可正常阅读；开启 JavaScript 后可使用字体筛选、样张加载与复制功能。</p></noscript>
   </main>
   <script src="${siteJsPath}" type="module"></script>
 </body>
@@ -2620,6 +2736,143 @@ p { line-height: 1.65; }
   color: var(--muted);
   font-size: 16px;
 }
+.font-library {
+  --font-demo-size: 48px;
+  --font-demo-weight: 400;
+  padding: 92px 0 76px;
+  border-bottom: 1px solid var(--ink);
+}
+.font-library-head {
+  display: grid;
+  grid-template-columns: minmax(260px, .8fr) minmax(320px, 1fr);
+  gap: 64px;
+  align-items: end;
+  padding-bottom: 34px;
+}
+.font-library-head h2 {
+  max-width: 640px;
+  margin: 8px 0 0;
+  font-size: 48px;
+  line-height: 1.05;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+.font-library-head > p {
+  max-width: 620px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.65;
+  text-wrap: pretty;
+}
+.font-library-controls {
+  display: grid;
+  grid-template-columns: auto minmax(240px, 1fr) minmax(112px, auto);
+  gap: 24px;
+  align-items: center;
+  padding: 14px 0;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+.font-library-controls label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 720;
+}
+.font-library-controls input[type="range"] { min-width: 150px; padding: 0; accent-color: var(--ink); }
+.font-library-controls select { width: 78px; min-height: 34px; padding: 6px 8px; background: transparent; }
+.font-library-controls output { min-width: 2.5ch; color: var(--ink); font: 700 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.font-filter {
+  display: inline-flex;
+  width: max-content;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.font-filter button {
+  min-height: 34px;
+  padding: 7px 12px;
+  border: 0;
+  border-right: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 760;
+}
+.font-filter button:last-child { border-right: 0; }
+.font-filter button[aria-selected="true"] { background: var(--ink); color: var(--paper); }
+.font-specimen[hidden] { display: none; }
+.font-specimen {
+  min-height: 248px;
+  padding: 24px 0 28px;
+  border-bottom: 1px solid var(--line);
+  content-visibility: auto;
+  contain-intrinsic-size: auto 248px;
+}
+.font-specimen-head {
+  display: grid;
+  grid-template-columns: minmax(220px, .75fr) minmax(260px, 1fr) auto;
+  gap: 28px;
+  align-items: start;
+}
+.font-specimen-name { margin: 0; font-size: 18px; font-weight: 820; line-height: 1.25; }
+.font-specimen-name span { color: var(--muted); font-size: 13px; font-weight: 600; }
+.font-specimen-meta,
+.font-specimen-use,
+.font-load-state {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+.font-specimen-use { margin: 0; font-size: 13px; }
+.font-specimen-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px 12px; }
+.font-specimen-actions a,
+.font-specimen-actions button {
+  min-height: 28px;
+  padding: 4px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 760;
+  text-decoration: none;
+}
+.font-specimen-actions a:hover,
+.font-specimen-actions button:hover { border-bottom-color: var(--ink); }
+.font-specimen-sample {
+  min-height: 2.7em;
+  margin: 30px 0 0;
+  font-family: var(--demo-font, ui-sans-serif, system-ui, sans-serif);
+  font-size: var(--font-demo-size);
+  font-weight: var(--font-demo-weight);
+  font-synthesis: none;
+  line-height: 1.32;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+}
+.font-load-state { min-height: 17px; margin-top: 14px; }
+.font-specimen.is-loaded .font-load-state { color: var(--green); }
+.font-specimen.is-fallback .font-load-state { color: #9b5b2f; }
+.font-library-license {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: start;
+  padding-top: 24px;
+}
+.font-library-license strong { font-size: 13px; }
+.font-library-license p { max-width: 700px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.font-library-license a { color: var(--ink); font-size: 12px; font-weight: 760; text-decoration: none; border-bottom: 1px solid var(--line); }
+.ip-system-noscript { padding: 18px 0; color: var(--muted); font-size: 13px; }
 .ip-system-content-shell {
   display: grid;
   grid-template-columns: minmax(170px, .28fr) minmax(0, 1fr);
@@ -3837,6 +4090,18 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .library-entry-open { grid-column: 2; grid-row: 1; }
   .ip-system-hero { min-height: auto; }
   .ip-system-layers article { grid-template-columns: 1fr; gap: 8px; }
+  .font-library { --font-demo-size: 38px; padding: 64px 0 54px; }
+  .font-library-head { grid-template-columns: 1fr; gap: 14px; }
+  .font-library-head h2 { font-size: 36px; }
+  .font-library-controls { grid-template-columns: 1fr; gap: 12px; }
+  .font-library-controls label { width: 100%; justify-content: space-between; }
+  .font-library-controls input[type="range"] { flex: 1; }
+  .font-specimen { min-height: 300px; }
+  .font-specimen-head { grid-template-columns: 1fr; gap: 12px; }
+  .font-specimen-actions { justify-content: flex-start; }
+  .font-specimen-sample { margin-top: 24px; }
+  .font-library-license { grid-template-columns: 1fr; gap: 10px; }
+  .font-library-license a { justify-self: start; }
   .ip-system-content-shell { grid-template-columns: 1fr; gap: 36px; }
   .ip-system-toc {
     position: static;
@@ -4089,6 +4354,22 @@ const i18n = {
     "evolution.frameworkTitle": "完整系统",
     "evolution.applyToIp": "选择一个 IP",
     "evolution.loop": "识别品牌，建立系统，生成资产，回收反馈，再次进化。",
+    "fonts.label": "字体参考",
+    "fonts.title": "开源可商用字体。",
+    "fonts.lead": "官方来源、明确许可证与真实网页样张，供品牌表达和 Agent 调用参考。",
+    "fonts.chinese": "中文",
+    "fonts.size": "字号",
+    "fonts.weight": "字重",
+    "fonts.source": "官方出处",
+    "fonts.license": "许可证",
+    "fonts.copyCss": "复制 CSS",
+    "fonts.cssCopied": "已复制字体 CSS",
+    "fonts.ready": "滚动到此处加载真实字体",
+    "fonts.loading": "正在加载真实字体…",
+    "fonts.loaded": "真实字体已加载",
+    "fonts.fallback": "字体加载失败，已使用系统字体",
+    "fonts.licenseNote": "授权说明",
+    "fonts.openApi": "打开字体 JSON",
     "api.title": "System API",
     "api.key": "System API Key",
     "api.connect": "Connect",
@@ -4256,6 +4537,22 @@ const i18n = {
     "evolution.frameworkTitle": "System contents",
     "evolution.applyToIp": "Choose an IP",
     "evolution.loop": "Identify the brand. Build the system. Create assets. Learn from feedback. Evolve again.",
+    "fonts.label": "TYPE REFERENCE",
+    "fonts.title": "Open-source commercial-use fonts.",
+    "fonts.lead": "Official provenance, explicit licenses and live web specimens for brand work and Agent use.",
+    "fonts.chinese": "Chinese",
+    "fonts.size": "Size",
+    "fonts.weight": "Weight",
+    "fonts.source": "Official source",
+    "fonts.license": "License",
+    "fonts.copyCss": "Copy CSS",
+    "fonts.cssCopied": "Font CSS copied",
+    "fonts.ready": "Scroll here to load the live font",
+    "fonts.loading": "Loading live font…",
+    "fonts.loaded": "Live font loaded",
+    "fonts.fallback": "Font failed to load; using the system fallback",
+    "fonts.licenseNote": "License note",
+    "fonts.openApi": "Open font JSON",
     "api.title": "System API",
     "api.key": "System API Key",
     "api.connect": "Connect",
@@ -4313,6 +4610,8 @@ let cachedSearch = null;
 let cachedVersions = null;
 let currentQuery = "";
 let cachedPortalSkillText = "";
+let fontCatalogCache = null;
+let fontSpecimenObserver = null;
 
 function contentLang(locale = currentLocale) {
   return localeMeta[locale]?.contentLang || "zh";
@@ -4350,6 +4649,7 @@ function applyI18n() {
   document.querySelectorAll("[data-i18n-placeholder]").forEach((node) => {
     node.setAttribute("placeholder", t(node.dataset.i18nPlaceholder));
   });
+  applyFontLibraryLocale();
   setupAgentGateway();
 }
 
@@ -4852,6 +5152,124 @@ async function writeClipboardText(text) {
   }
   showManualCopy(text);
   return "selected";
+}
+
+function fontCatalogData() {
+  if (fontCatalogCache) return fontCatalogCache;
+  const node = $("#fontCatalogData");
+  if (!node) return null;
+  try {
+    fontCatalogCache = JSON.parse(node.textContent || "{}");
+  } catch (error) {
+    console.warn("Font catalog could not be parsed.", error);
+    fontCatalogCache = { fonts: [] };
+  }
+  return fontCatalogCache;
+}
+
+function applyFontLibraryLocale() {
+  document.querySelectorAll("[data-font-zh][data-font-en]").forEach((node) => {
+    node.textContent = currentLocale === "en" ? node.dataset.fontEn : node.dataset.fontZh;
+  });
+  document.querySelectorAll("[data-font-load-state]").forEach((node) => {
+    node.textContent = t(node.dataset.fontState || "fonts.ready");
+  });
+}
+
+function setFontLoadState(article, key) {
+  const state = article.querySelector("[data-font-load-state]");
+  if (!state) return;
+  state.dataset.fontState = key;
+  state.textContent = t(key);
+}
+
+async function loadFontSpecimen(article) {
+  if (article.dataset.fontLoaded || article.hidden) return;
+  const catalog = fontCatalogData();
+  const font = catalog?.fonts?.find((item) => item.id === article.dataset.fontId);
+  if (!font) {
+    article.classList.add("is-fallback");
+    setFontLoadState(article, "fonts.fallback");
+    return;
+  }
+  article.dataset.fontLoaded = "loading";
+  setFontLoadState(article, "fonts.loading");
+  const alias = \`IPTrustDemo-\${font.id}\`;
+  const style = document.createElement("style");
+  style.dataset.fontFace = font.id;
+  style.textContent = font.assets.map((asset) => \`@font-face{font-family:"\${alias}";src:url("\${String(asset.mediaUrl).replaceAll('"', "%22")}") format("woff2");font-style:\${asset.style || "normal"};font-weight:\${asset.weight};font-display:swap;}\`).join("\\\\n");
+  document.head.appendChild(style);
+  article.style.setProperty("--demo-font", \`"\${alias}", \${font.cssStack}\`);
+  try {
+    if (document.fonts?.load) {
+      const weight = $("[data-font-weight]")?.value || "400";
+      await Promise.race([
+        document.fonts.load(\`\${weight} 32px "\${alias}"\`, font.sample.slice(0, 80)),
+        new Promise((_, reject) => setTimeout(() => reject(new Error("font_timeout")), 7000)),
+      ]);
+    }
+    article.dataset.fontLoaded = "true";
+    article.classList.add("is-loaded");
+    setFontLoadState(article, "fonts.loaded");
+  } catch (error) {
+    article.dataset.fontLoaded = "fallback";
+    article.classList.add("is-fallback");
+    setFontLoadState(article, "fonts.fallback");
+    console.warn(\`Font specimen failed: \${font.id}\`, error);
+  }
+}
+
+function setupFontLibrary() {
+  const root = $("#open-source-type");
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = "true";
+  const catalog = fontCatalogData();
+  const specimens = [...root.querySelectorAll(".font-specimen")];
+  const filterButtons = [...root.querySelectorAll("[data-font-filter]")];
+  const size = root.querySelector("[data-font-size]");
+  const sizeOutput = root.querySelector("[data-font-size-output]");
+  const weight = root.querySelector("[data-font-weight]");
+
+  const applyFilter = (group) => {
+    filterButtons.forEach((button) => button.setAttribute("aria-selected", String(button.dataset.fontFilter === group)));
+    specimens.forEach((article) => {
+      article.hidden = article.dataset.fontGroup !== group;
+      if (!article.hidden && !fontSpecimenObserver) loadFontSpecimen(article);
+    });
+  };
+
+  filterButtons.forEach((button) => button.addEventListener("click", () => applyFilter(button.dataset.fontFilter)));
+  size?.addEventListener("input", () => {
+    root.style.setProperty("--font-demo-size", \`\${size.value}px\`);
+    if (sizeOutput) sizeOutput.textContent = size.value;
+  });
+  weight?.addEventListener("change", () => root.style.setProperty("--font-demo-weight", weight.value));
+  root.addEventListener("click", async (event) => {
+    const button = event.target.closest("[data-copy-font]");
+    if (!button) return;
+    const font = catalog?.fonts?.find((item) => item.id === button.dataset.copyFont);
+    if (!font) return;
+    const result = await writeClipboardText(\`font-family: \${font.cssStack};\\nfont-weight: \${weight?.value || "400"};\`);
+    const message = result === "selected" ? t("copy.selected") : t("fonts.cssCopied");
+    showToast(message);
+    const previous = button.textContent;
+    button.textContent = message;
+    setTimeout(() => { button.textContent = previous; }, 1600);
+  });
+
+  if ("IntersectionObserver" in window) {
+    fontSpecimenObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        loadFontSpecimen(entry.target);
+        fontSpecimenObserver.unobserve(entry.target);
+      });
+    }, { rootMargin: "240px 0px" });
+    specimens.forEach((article) => fontSpecimenObserver.observe(article));
+  }
+
+  applyFilter("zh");
+  applyFontLibraryLocale();
 }
 
 async function copyReference(brand, button) {
@@ -6029,6 +6447,7 @@ setupSearch();
 setupPortalActions();
 setupAgentGateway();
 setupApiConnect();
+setupFontLibrary();
 renderHeroIndex().catch(console.error);
 renderIndex().catch(console.error);
 renderBrand().catch(renderBrandFailure);

@@ -90,13 +90,19 @@ async function enrichFortune(item) {
     const company = nextData(html)?.props?.pageProps?.company;
     const info = company?.companyInfo || {};
     const website = info.Website || "";
-    let logoSourceUrl = "";
-    try { logoSourceUrl = website ? new URL("/favicon.ico", website).href : ""; } catch {}
+    let fallbackLogoUrl = "";
+    try { fallbackLogoUrl = website ? new URL("/favicon.ico", website).href : ""; } catch {}
     return {
       ...item,
       description: stripHtml(company?.description || company?.metaDescription || ""),
       officialWebsite: website,
-      logoSourceUrl,
+      logoSourceUrl: "",
+      logoSource: "monogram",
+      logoProvider: "",
+      logoQuality: "fallback",
+      logoStatus: "pending",
+      logoProvenanceUrl: website,
+      fallbackLogoUrl,
       country: info.Country || "",
       headquarters: info.Headquarters || "",
       industry: info.Industry || "",
@@ -109,19 +115,30 @@ async function enrichFortune(item) {
 }
 
 await mkdir(dataDir, { recursive: true });
+let previousOrganizations = [];
+try { previousOrganizations = JSON.parse(await readFile(join(dataDir, "organizations.json"), "utf8")); } catch {}
+const previousById = new Map(previousOrganizations.map((item) => [item.id, item]));
 const rankingHtml = await fetchText(fortuneUrl);
 const fortune = rankingItems(rankingHtml).slice(0, 500).map((entry) => {
   const name = entry.item?.name || `Global 500 #${entry.position}`;
+  const id = `fortune-${slugify(name)}`;
+  const previous = previousById.get(id) || {};
   return {
-    id: `fortune-${slugify(name)}`,
+    id,
     slug: slugify(name),
     name,
     nativeName: "",
     mainLanguage: "en",
     description: "",
     officialWebsite: "",
-    logoUrl: "",
-    logoSourceUrl: "",
+    logoUrl: previous.logoUrl || "",
+    logoSourceUrl: previous.logoSourceUrl || "",
+    logoSource: previous.logoSource || "monogram",
+    logoProvider: previous.logoProvider || "",
+    logoQuality: previous.logoQuality || "fallback",
+    logoStatus: previous.logoStatus || "pending",
+    logoProvenanceUrl: previous.logoProvenanceUrl || "",
+    fallbackLogoUrl: previous.fallbackLogoUrl || "",
     country: "",
     headquarters: "",
     industry: "",
@@ -139,16 +156,25 @@ const fortune = rankingItems(rankingHtml).slice(0, 500).map((entry) => {
 });
 
 const fortuneRecords = enrich ? await mapLimit(fortune, 6, enrichFortune) : fortune;
-const sasacRecords = sasacNames.map((name, index) => ({
-  id: `sasac-${String(index + 1).padStart(3, "0")}`,
+const sasacRecords = sasacNames.map((name, index) => {
+  const id = `sasac-${String(index + 1).padStart(3, "0")}`;
+  const previous = previousById.get(id) || {};
+  return ({
+  id,
   slug: `sasac-${String(index + 1).padStart(3, "0")}`,
   name,
   nativeName: "",
   mainLanguage: "zh",
   description: "国务院国资委履行出资人职责的中央企业。",
   officialWebsite: "",
-  logoUrl: "",
-  logoSourceUrl: "",
+  logoUrl: previous.logoUrl || "",
+  logoSourceUrl: previous.logoSourceUrl || "",
+  logoSource: previous.logoSource || "monogram",
+  logoProvider: previous.logoProvider || "",
+  logoQuality: previous.logoQuality || "fallback",
+  logoStatus: previous.logoStatus || "pending",
+  logoProvenanceUrl: previous.logoProvenanceUrl || sasacUrl,
+  fallbackLogoUrl: previous.fallbackLogoUrl || "",
   country: "中国",
   headquarters: "",
   industry: "中央企业",
@@ -162,7 +188,8 @@ const sasacRecords = sasacNames.map((name, index) => ({
   rank: index + 1,
   year: 2026,
   metadata: {},
-}));
+  });
+});
 
 const records = [...fortuneRecords, ...sasacRecords];
 await writeFile(join(dataDir, "organizations.json"), `${JSON.stringify(records, null, 2)}\n`);

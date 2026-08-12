@@ -1,6 +1,10 @@
+/ip-evolution/  /ip-evolution  308
+/ip-evolution%EF%BC%9F  /ip-evolution  308
 /llms  /llms.txt  200
 /manifest  /api/manifest.json  200
 /schema  /api/schema.json  200
+/agent  /agent.json  200
+/openapi  /api/openapi.json  200
 /brands  /api/brands.json  200
 /knowledge  /library/index.html  200
 /library  /library/index.html  200

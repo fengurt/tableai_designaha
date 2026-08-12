@@ -569,7 +569,7 @@ button:active { transform: translateY(1px); }
   .evolution-open { width: 44px; height: 44px; }
   .evolution-path { grid-template-columns: repeat(5, max-content); overflow-x: auto; justify-content: start; gap: 16px; }
   .system-entry-library { min-height: 176px; padding: 24px 56px 22px 0; }
-  .entry-portals { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; padding-bottom: 42px; }
+  .entry-portals { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 16px; padding-bottom: 42px; }
   .portal {
     min-height: 96px;
     display: flex;
@@ -582,6 +582,25 @@ button:active { transform: translateY(1px); }
   .portal h3 { font-size: 15px; white-space: nowrap; }
   .portal-action { width: 100%; min-height: 28px; margin-top: auto; padding: 5px 7px; font-size: 11px; }
   .portal-status { font-size: 10px; }
+  .portal-agent {
+    grid-column: 1 / -1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    padding: 14px 0 18px;
+  }
+  .portal-agent .agent-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-self: start;
+    width: 100%;
+    min-width: 0;
+  }
+  .portal-agent .agent-actions .portal-action { grid-column: 1 / -1; }
+  .portal-agent .agent-protocols { gap: 5px; margin-top: 10px; }
+  .portal-agent .agent-protocols code { padding: 4px 6px; font-size: 9px; }
+  .portal-agent .portal-status { grid-column: 1 / -1; }
   .ip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding-bottom: 56px; }
   .ip-card,
   .ip-card:nth-child(7n + 1),

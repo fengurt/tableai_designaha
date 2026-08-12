@@ -33,9 +33,10 @@ for (const source of sources) {
 
 for (const org of organizations) {
   const now = org.fetchedAt || new Date().toISOString();
-  lines.push(`INSERT INTO organizations (id,slug,name,native_name,main_language,description,official_website,logo_url,logo_source_url,country,headquarters,industry,ticker,verification_status,source_url,source_publisher,source_date,fetched_at,updated_at) VALUES (${[
+  lines.push(`INSERT INTO organizations (id,slug,name,native_name,main_language,description,official_website,logo_url,logo_source_url,logo_source,logo_provider,logo_quality,logo_status,logo_provenance_url,fallback_logo_url,logo_checked_at,country,headquarters,industry,ticker,verification_status,source_url,source_publisher,source_date,fetched_at,updated_at) VALUES (${[
     org.id, org.slug, org.name, org.nativeName || "", org.mainLanguage || "en", org.description || "", org.officialWebsite || "",
-    org.logoUrl || "", org.logoSourceUrl || "", org.country || "", org.headquarters || "", org.industry || "", org.ticker || "",
+    org.logoUrl || "", org.logoSourceUrl || "", org.logoSource || "monogram", org.logoProvider || "", org.logoQuality || "fallback", org.logoStatus || "pending",
+    org.logoProvenanceUrl || "", org.fallbackLogoUrl || "", org.logoCheckedAt || null, org.country || "", org.headquarters || "", org.industry || "", org.ticker || "",
     org.verificationStatus || "source-verified", org.sourceUrl, org.sourcePublisher, org.sourceDate || null, now, now,
   ].map(sql).join(",")});`);
   lines.push(`INSERT INTO organization_collections (organization_id,source_id,rank,year,metadata_json) VALUES (${[

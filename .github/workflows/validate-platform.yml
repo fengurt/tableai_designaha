@@ -16,12 +16,14 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version-file: .node-version
           cache: npm
       - run: npm ci
       - run: npm run build:site
       - run: npm run validate:assets
       - run: npm run validate:ip
+      - run: npm run validate:fonts
+      - run: npm run validate:routes
       - run: |
           node --check edge/src/index.js
           node --check edge/src/api.js

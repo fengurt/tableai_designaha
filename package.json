@@ -4,12 +4,18 @@
   "private": true,
   "description": "Design systems for Table AI Alliance brands — DTCG tokens, build pipeline, and agent integrations.",
   "type": "module",
+  "engines": {
+    "node": ">=24.19.0 <25",
+    "npm": ">=11.17.0 <12"
+  },
+  "packageManager": "npm@11.17.0",
   "scripts": {
     "build:tokens": "node build-tokens.mjs",
     "build:site": "node scripts/build-site.mjs",
     "sync:site": "node scripts/sync-site.mjs",
     "sync:cloud-resources": "node scripts/sync-cloud-resources.mjs",
     "sync:library": "node scripts/sync-public-library.mjs --enrich",
+    "enrich:library-logos": "node scripts/enrich-library-logos.mjs --write",
     "seed:library": "node scripts/build-library-seed.mjs",
     "process:adobe-assets": "node scripts/process-adobe-assets.mjs",
     "assets:manifest": "node scripts/build-asset-manifest.mjs",
@@ -19,14 +25,20 @@
     "assets:import:opcglobal": "node scripts/import-opcglobal-assets.mjs",
     "validate:assets": "node scripts/validate-asset-policy.mjs",
     "validate:ip": "node scripts/validate-ip-system.mjs",
+    "validate:fonts": "node scripts/validate-font-library.mjs",
+    "validate:routes": "node scripts/validate-routes.mjs",
+    "check:production": "node scripts/check-production-health.mjs",
+    "sync:fonts": "node scripts/sync-font-library.mjs",
+    "sync:fonts:upload": "node scripts/sync-font-library.mjs --upload",
     "seed:platform": "node scripts/build-platform-seed.mjs",
     "encrypt:ksamint-skills": "node scripts/encrypt-private-skills.mjs",
     "sync:skill": "cp KiND/tokens/kind.tokens.json .cursor/skills/kind-design/tokens.json"
   },
   "devDependencies": {
-    "style-dictionary": "^4.3.0"
+    "style-dictionary": "5.5.1",
+    "wrangler": "4.121.0"
   },
   "dependencies": {
-    "marked": "^18.0.6"
+    "marked": "18.0.9"
   }
 }

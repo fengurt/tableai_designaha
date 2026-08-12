@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://apuch.art/sitemap.xml
+
+AI-Agent: https://apuch.art/agent.json
+LLMs-Txt: https://apuch.art/llms.txt

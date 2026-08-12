@@ -33,6 +33,27 @@ function hasCredentials(request) {
   return Boolean(request.headers.get("authorization") || request.headers.get("cookie") || request.headers.get("x-admin-key"));
 }
 
+export function canonicalSiteRedirect(request) {
+  if (!["GET", "HEAD"].includes(request.method)) return null;
+  const url = new URL(request.url);
+  let pathname;
+  try {
+    pathname = decodeURIComponent(url.pathname);
+  } catch {
+    return null;
+  }
+  if (pathname !== "/ip-evolution/" && pathname !== "/ip-evolution？") return null;
+  url.pathname = "/ip-evolution";
+  return new Response(null, {
+    status: 308,
+    headers: {
+      Location: url.toString(),
+      "Cache-Control": "public, max-age=31536000, immutable",
+      "X-IPTrust-Route": "canonical-ip-evolution",
+    },
+  });
+}
+
 async function serveSite(request, env, ctx) {
   const startedAt = Date.now();
   const incoming = new URL(request.url);
@@ -97,7 +118,7 @@ export default {
     else if (/^\/assets\/(?:brand-images|adobe|contact)\//.test(url.pathname)) response = await serveLegacyAsset(request, env);
     else if (url.pathname === "/mcp") response = await handleMcp(request, env);
     else if (url.pathname.startsWith("/api/v2/")) response = await serveApi(request, env, ctx);
-    else response = await serveSite(request, env, ctx);
+    else response = canonicalSiteRedirect(request) || await serveSite(request, env, ctx);
     return secure(response);
   },
   queue: handleQueue,

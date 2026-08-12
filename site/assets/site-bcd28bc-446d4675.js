@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "f751eee-52f38014";
+const BUILD_VERSION = "bcd28bc-446d4675";
 
 const i18n = {
   cn: {
@@ -17,8 +17,8 @@ const i18n = {
     "home.sectionTitle": "IP",
     "home.searchPlaceholder": "搜索 IP / Asset Key",
     "home.noResults": "没有匹配的 IP。",
-    "library.label": "公共知识库",
-    "library.title": "让出处、案例与数据彼此连接。",
+    "library.label": "知名品牌资产",
+    "library.title": "权威品牌、案例与数据。",
     "library.organizations": "组织",
     "library.centralEnterprises": "中央企业",
     "library.modules": "关联模块",
@@ -27,6 +27,7 @@ const i18n = {
     "meta.guides": "规范",
     "copy.reference": "复制",
     "copy.done": "已复制",
+    "copy.copying": "正在复制…",
     "copy.selected": "已选中，请按 ⌘C / Ctrl+C 复制",
     "copy.fail": "复制失败",
     "copy.referenceDone": "已复制 IP Agent Reference",
@@ -35,6 +36,7 @@ const i18n = {
     "copy.colorDone": "已复制色值",
     "copy.pantoneDone": "已复制 Pantone 近似值",
     "brand.openJson": "打开 JSON",
+    "brand.copyAgentPack": "复制 Agent Pack",
     "brand.source": "源文件",
     "brand.colors": "品牌颜色",
     "brand.website": "官网",
@@ -83,10 +85,16 @@ const i18n = {
     "brand.saving": "保存中...",
     "brand.savedProfile": "已保存，等待部署。",
     "brand.saveFailed": "保存失败。",
-    "portal.agentTitle": "我是 Agent",
-    "portal.agentBody": "复制 Skill。",
-    "portal.agentAction": "Skill",
-    "portal.agentCopied": "已复制。打开 Skill。",
+    "portal.agentTitle": "调用品牌标准。",
+    "portal.agentBody": "通过 MCP 或 JSON 获取主名称、品牌色、Logo、素材与出处。",
+    "portal.agentAction": "复制 Agent Pack",
+    "portal.agentCopied": "Agent Pack 已复制",
+    "portal.copyMcp": "复制 MCP 配置",
+    "portal.mcpCopied": "MCP 配置已复制",
+    "portal.openAgentGuide": "Agent 指南",
+    "portal.agentChecking": "检查 MCP",
+    "portal.agentOnline": "MCP 在线",
+    "portal.agentOffline": "REST 可用",
     "portal.partnerTitle": "我是合伙人",
     "portal.partnerBody": "Key first.",
     "portal.partnerAction": "Key first",
@@ -123,6 +131,22 @@ const i18n = {
     "evolution.frameworkTitle": "完整系统",
     "evolution.applyToIp": "选择一个 IP",
     "evolution.loop": "识别品牌，建立系统，生成资产，回收反馈，再次进化。",
+    "fonts.label": "字体参考",
+    "fonts.title": "开源可商用字体。",
+    "fonts.lead": "官方来源、明确许可证与真实网页样张，供品牌表达和 Agent 调用参考。",
+    "fonts.chinese": "中文",
+    "fonts.size": "字号",
+    "fonts.weight": "字重",
+    "fonts.source": "官方出处",
+    "fonts.license": "许可证",
+    "fonts.copyCss": "复制 CSS",
+    "fonts.cssCopied": "已复制字体 CSS",
+    "fonts.ready": "滚动到此处加载真实字体",
+    "fonts.loading": "正在加载真实字体…",
+    "fonts.loaded": "真实字体已加载",
+    "fonts.fallback": "字体加载失败，已使用系统字体",
+    "fonts.licenseNote": "授权说明",
+    "fonts.openApi": "打开字体 JSON",
     "api.title": "System API",
     "api.key": "System API Key",
     "api.connect": "Connect",
@@ -176,8 +200,8 @@ const i18n = {
     "home.sectionTitle": "IP",
     "home.searchPlaceholder": "Search IP / Asset Key",
     "home.noResults": "No matching IP.",
-    "library.label": "PUBLIC LIBRARY",
-    "library.title": "Connect every source, case, and dataset.",
+    "library.label": "KNOWN BRAND ASSETS",
+    "library.title": "Authoritative brands, cases, and data.",
     "library.organizations": "Organizations",
     "library.centralEnterprises": "Central enterprises",
     "library.modules": "Linked modules",
@@ -186,6 +210,7 @@ const i18n = {
     "meta.guides": "guides",
     "copy.reference": "Copy",
     "copy.done": "Copied",
+    "copy.copying": "Copying…",
     "copy.selected": "Selected. Press Cmd/Ctrl+C to copy.",
     "copy.fail": "Failed",
     "copy.referenceDone": "IP Agent Reference copied",
@@ -194,6 +219,7 @@ const i18n = {
     "copy.colorDone": "Color copied",
     "copy.pantoneDone": "Pantone approximation copied",
     "brand.openJson": "Open JSON",
+    "brand.copyAgentPack": "Copy Agent Pack",
     "brand.source": "Source",
     "brand.colors": "Brand colors",
     "brand.website": "Website",
@@ -242,10 +268,16 @@ const i18n = {
     "brand.saving": "Saving...",
     "brand.savedProfile": "Saved. Deploying.",
     "brand.saveFailed": "Save failed.",
-    "portal.agentTitle": "I am an Agent",
-    "portal.agentBody": "Copy Skill.",
-    "portal.agentAction": "Skill",
-    "portal.agentCopied": "Copied. Opening Skill.",
+    "portal.agentTitle": "Call the brand standard.",
+    "portal.agentBody": "Use MCP or JSON for the primary name, exact colors, logo, assets, and provenance.",
+    "portal.agentAction": "Copy Agent Pack",
+    "portal.agentCopied": "Agent Pack copied",
+    "portal.copyMcp": "Copy MCP config",
+    "portal.mcpCopied": "MCP config copied",
+    "portal.openAgentGuide": "Agent guide",
+    "portal.agentChecking": "Checking MCP",
+    "portal.agentOnline": "MCP online",
+    "portal.agentOffline": "REST available",
     "portal.partnerTitle": "I am a Partner",
     "portal.partnerBody": "Key first.",
     "portal.partnerAction": "Key first",
@@ -282,6 +314,22 @@ const i18n = {
     "evolution.frameworkTitle": "System contents",
     "evolution.applyToIp": "Choose an IP",
     "evolution.loop": "Identify the brand. Build the system. Create assets. Learn from feedback. Evolve again.",
+    "fonts.label": "TYPE REFERENCE",
+    "fonts.title": "Open-source commercial-use fonts.",
+    "fonts.lead": "Official provenance, explicit licenses and live web specimens for brand work and Agent use.",
+    "fonts.chinese": "Chinese",
+    "fonts.size": "Size",
+    "fonts.weight": "Weight",
+    "fonts.source": "Official source",
+    "fonts.license": "License",
+    "fonts.copyCss": "Copy CSS",
+    "fonts.cssCopied": "Font CSS copied",
+    "fonts.ready": "Scroll here to load the live font",
+    "fonts.loading": "Loading live font…",
+    "fonts.loaded": "Live font loaded",
+    "fonts.fallback": "Font failed to load; using the system fallback",
+    "fonts.licenseNote": "License note",
+    "fonts.openApi": "Open font JSON",
     "api.title": "System API",
     "api.key": "System API Key",
     "api.connect": "Connect",
@@ -339,6 +387,8 @@ let cachedSearch = null;
 let cachedVersions = null;
 let currentQuery = "";
 let cachedPortalSkillText = "";
+let fontCatalogCache = null;
+let fontSpecimenObserver = null;
 
 function contentLang(locale = currentLocale) {
   return localeMeta[locale]?.contentLang || "zh";
@@ -376,6 +426,8 @@ function applyI18n() {
   document.querySelectorAll("[data-i18n-placeholder]").forEach((node) => {
     node.setAttribute("placeholder", t(node.dataset.i18nPlaceholder));
   });
+  applyFontLibraryLocale();
+  setupAgentGateway();
 }
 
 function setupLanguageToggle() {
@@ -424,9 +476,22 @@ function setupSearch() {
 async function loadJson(path) {
   const url = path.startsWith("api/") ? new URL("../" + path, import.meta.url) : new URL(path, location.href);
   url.searchParams.set("v", BUILD_VERSION);
-  const res = await fetch(url, { cache: "no-cache" });
-  if (!res.ok) throw new Error(`Could not load ${path}`);
-  return res.json();
+  let lastError;
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), attempt ? 9000 : 6500);
+    try {
+      const res = await fetch(url, { cache: attempt ? "reload" : "force-cache", signal: controller.signal });
+      if (!res.ok) throw new Error(`Could not load ${path}: ${res.status}`);
+      return await res.json();
+    } catch (error) {
+      lastError = error;
+      if (!attempt) await new Promise((resolve) => setTimeout(resolve, 240));
+    } finally {
+      clearTimeout(timeout);
+    }
+  }
+  throw lastError || new Error(`Could not load ${path}`);
 }
 
 async function loadSearch() {
@@ -483,7 +548,7 @@ function copyIcon() {
 
 function themeStyle(theme = {}) {
   const isDark = theme.mode === "dark";
-  const buttonText = isDark ? theme.surface || "#14100A" : "#ffffff";
+  const buttonText = theme.buttonText || (isDark ? theme.surface || "#14100A" : "#ffffff");
   const vars = {
     "--brand-primary": theme.primary,
     "--brand-accent": theme.accent,
@@ -583,6 +648,7 @@ function miniPalette(theme = {}) {
 function brandInitial(brand = {}) {
   if (brand.slug === "fengzhi") return "界";
   if (brand.slug === "sidera") return "侍";
+  if (brand.slug === "kaoyu-shenhua") return "火";
   if (brand.slug === "vanahom") return "V";
   if (brand.slug === "kind") return "K";
   if (brand.slug === "tableai") return "AI";
@@ -681,7 +747,8 @@ function skillBaseText(skill = "") {
   const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", document.baseURI).href;
   return [
     "IPTrust Skill ✦",
-    "Hub: " + location.origin + location.pathname,
+    "Hub: " + new URL("/", location.origin).href,
+    "Agent Entry: " + new URL("agent.json", location.origin + "/").href,
     "Manifest: " + new URL("api/manifest.json", location.href).href,
     "Search API: " + new URL("api/search.json", location.href).href,
     "MCP: " + new URL("mcp", location.href).href,
@@ -711,10 +778,12 @@ function referenceText(brand = {}) {
   const historyUrl = new URL(brand.historyUrl || `api/history/${brand.slug}.json`, location.href).href;
   const schemaUrl = new URL("api/schema.json", location.href).href;
   const skillUrl = new URL("skills/iptrust-live-update/SKILL.md", document.baseURI).href;
-  const mcpSource = new URL("api/manifest.json", location.href).href;
+  const mcpSource = new URL("mcp", location.origin + "/").href;
+  const assetApiUrl = new URL(`api/v2/assets?ownerType=owned-ip&ownerId=${encodeURIComponent(brand.slug)}`, location.href).href;
   const preferredLogo = preferredBrandImage(brand.images || []);
   const logoPath = brand.logoUrl || preferredLogo?.sitePath || brand.heroImage || "";
   const logoUrl = logoPath ? new URL(logoPath, location.href).href : "TBD";
+  const publicAssetUrls = (brand.images || []).map((image) => image.sitePath).filter(Boolean).map((path) => new URL(path, location.href).href);
   const colors = palette(brand.theme)
     .map(([label, value]) => `${label}: ${value} / ${rgbValue(value)}`)
     .join("\n");
@@ -732,10 +801,12 @@ function referenceText(brand = {}) {
     `Logo URL: ${logoUrl}`,
     `Official website: ${brand.officialWebsite || "TBD"}`,
     `Brand API: ${apiUrl}`,
+    `Assets API: ${assetApiUrl}`,
     `History API: ${historyUrl}`,
     `Field schema: ${schemaUrl}`,
     `IPTrust Skill: ${skillUrl}`,
-    `MCP manifest: ${mcpSource}`,
+    `MCP endpoint: ${mcpSource}`,
+    publicAssetUrls.length ? `Public assets:\n${publicAssetUrls.map((url) => "- " + url).join("\n")}` : "",
     "",
     "[Core]",
     `Intro: ${localized.intro || "TBD"}`,
@@ -860,19 +931,194 @@ async function writeClipboardText(text) {
   return "selected";
 }
 
+function fontCatalogData() {
+  if (fontCatalogCache) return fontCatalogCache;
+  const node = $("#fontCatalogData");
+  if (!node) return null;
+  try {
+    fontCatalogCache = JSON.parse(node.textContent || "{}");
+  } catch (error) {
+    console.warn("Font catalog could not be parsed.", error);
+    fontCatalogCache = { fonts: [] };
+  }
+  return fontCatalogCache;
+}
+
+function applyFontLibraryLocale() {
+  document.querySelectorAll("[data-font-zh][data-font-en]").forEach((node) => {
+    node.textContent = currentLocale === "en" ? node.dataset.fontEn : node.dataset.fontZh;
+  });
+  document.querySelectorAll("[data-font-load-state]").forEach((node) => {
+    node.textContent = t(node.dataset.fontState || "fonts.ready");
+  });
+}
+
+function setFontLoadState(article, key) {
+  const state = article.querySelector("[data-font-load-state]");
+  if (!state) return;
+  state.dataset.fontState = key;
+  state.textContent = t(key);
+}
+
+async function loadFontSpecimen(article) {
+  if (article.dataset.fontLoaded || article.hidden) return;
+  const catalog = fontCatalogData();
+  const font = catalog?.fonts?.find((item) => item.id === article.dataset.fontId);
+  if (!font) {
+    article.classList.add("is-fallback");
+    setFontLoadState(article, "fonts.fallback");
+    return;
+  }
+  article.dataset.fontLoaded = "loading";
+  setFontLoadState(article, "fonts.loading");
+  const alias = `IPTrustDemo-${font.id}`;
+  const style = document.createElement("style");
+  style.dataset.fontFace = font.id;
+  style.textContent = font.assets.map((asset) => `@font-face{font-family:"${alias}";src:url("${String(asset.mediaUrl).replaceAll('"', "%22")}") format("woff2");font-style:${asset.style || "normal"};font-weight:${asset.weight};font-display:swap;}`).join("\\n");
+  document.head.appendChild(style);
+  article.style.setProperty("--demo-font", `"${alias}", ${font.cssStack}`);
+  try {
+    if (document.fonts?.load) {
+      const weight = $("[data-font-weight]")?.value || "400";
+      await Promise.race([
+        document.fonts.load(`${weight} 32px "${alias}"`, font.sample.slice(0, 80)),
+        new Promise((_, reject) => setTimeout(() => reject(new Error("font_timeout")), 7000)),
+      ]);
+    }
+    article.dataset.fontLoaded = "true";
+    article.classList.add("is-loaded");
+    setFontLoadState(article, "fonts.loaded");
+  } catch (error) {
+    article.dataset.fontLoaded = "fallback";
+    article.classList.add("is-fallback");
+    setFontLoadState(article, "fonts.fallback");
+    console.warn(`Font specimen failed: ${font.id}`, error);
+  }
+}
+
+function setupFontLibrary() {
+  const root = $("#open-source-type");
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = "true";
+  const catalog = fontCatalogData();
+  const specimens = [...root.querySelectorAll(".font-specimen")];
+  const filterButtons = [...root.querySelectorAll("[data-font-filter]")];
+  const size = root.querySelector("[data-font-size]");
+  const sizeOutput = root.querySelector("[data-font-size-output]");
+  const weight = root.querySelector("[data-font-weight]");
+
+  const applyFilter = (group) => {
+    filterButtons.forEach((button) => button.setAttribute("aria-selected", String(button.dataset.fontFilter === group)));
+    specimens.forEach((article) => {
+      article.hidden = article.dataset.fontGroup !== group;
+      if (!article.hidden && !fontSpecimenObserver) loadFontSpecimen(article);
+    });
+  };
+
+  filterButtons.forEach((button) => button.addEventListener("click", () => applyFilter(button.dataset.fontFilter)));
+  size?.addEventListener("input", () => {
+    root.style.setProperty("--font-demo-size", `${size.value}px`);
+    if (sizeOutput) sizeOutput.textContent = size.value;
+  });
+  weight?.addEventListener("change", () => root.style.setProperty("--font-demo-weight", weight.value));
+  root.addEventListener("click", async (event) => {
+    const button = event.target.closest("[data-copy-font]");
+    if (!button) return;
+    const font = catalog?.fonts?.find((item) => item.id === button.dataset.copyFont);
+    if (!font) return;
+    const result = await writeClipboardText(`font-family: ${font.cssStack};\nfont-weight: ${weight?.value || "400"};`);
+    const message = result === "selected" ? t("copy.selected") : t("fonts.cssCopied");
+    showToast(message);
+    const previous = button.textContent;
+    button.textContent = message;
+    setTimeout(() => { button.textContent = previous; }, 1600);
+  });
+
+  if ("IntersectionObserver" in window) {
+    fontSpecimenObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        loadFontSpecimen(entry.target);
+        fontSpecimenObserver.unobserve(entry.target);
+      });
+    }, { rootMargin: "240px 0px" });
+    specimens.forEach((article) => fontSpecimenObserver.observe(article));
+  }
+
+  applyFilter("zh");
+  applyFontLibraryLocale();
+}
+
 async function copyReference(brand, button) {
-  const result = await writeClipboardText(referenceText(brand));
   const previous = button.textContent;
+  if (!button.dataset.iconOnly) button.textContent = t("copy.copying");
+  button.classList.add("copying");
+  button.setAttribute("aria-busy", "true");
+  const result = await writeClipboardText(referenceText(brand));
   const message = feedbackMessage(result, "copy.referenceDone");
   if (!button.dataset.iconOnly) button.textContent = message;
+  button.classList.remove("copying");
   button.dataset.feedback = message;
   button.classList.add("copied");
+  button.removeAttribute("aria-busy");
   showToast(message);
   setTimeout(() => {
     if (!button.dataset.iconOnly) button.textContent = previous || t("copy.reference");
     button.classList.remove("copied");
     delete button.dataset.feedback;
   }, 1200);
+}
+
+function mcpConfigText() {
+  return JSON.stringify({
+    mcpServers: {
+      iptrust: {
+        type: "http",
+        url: new URL("mcp", location.origin + "/").href,
+      },
+    },
+  }, null, 2);
+}
+
+function setupAgentGateway() {
+  const copyButton = document.querySelector("[data-copy-mcp-config]");
+  if (copyButton && !copyButton.dataset.ready) {
+    copyButton.dataset.ready = "true";
+    copyButton.addEventListener("click", async () => {
+      const result = await writeClipboardText(mcpConfigText());
+      const message = result === "selected" ? t("copy.selected") : t("portal.mcpCopied");
+      copyButton.classList.add("copied");
+      showToast(message);
+      const statusNode = document.querySelector('[data-portal-status="agent"]');
+      if (statusNode) statusNode.textContent = message;
+      setTimeout(() => copyButton.classList.remove("copied"), 1000);
+    });
+  }
+  const health = document.querySelector("[data-agent-health]");
+  if (!health) return;
+  const label = health.querySelector("span");
+  if (health.dataset.state === "online" && label) label.textContent = t("portal.agentOnline");
+  if (health.dataset.state === "fallback" && label) label.textContent = t("portal.agentOffline");
+  if (health.dataset.ready) return;
+  health.dataset.ready = "true";
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 3600);
+  fetch(new URL("mcp", location.origin + "/"), {
+    headers: { Accept: "application/json" },
+    cache: "no-store",
+    signal: controller.signal,
+  })
+    .then((response) => {
+      if (!response.ok) throw new Error("MCP unavailable");
+      health.dataset.state = "online";
+      health.classList.add("is-online");
+      if (label) label.textContent = t("portal.agentOnline");
+    })
+    .catch(() => {
+      health.dataset.state = "fallback";
+      if (label) label.textContent = t("portal.agentOffline");
+    })
+    .finally(() => clearTimeout(timeout));
 }
 
 function setupPortalActions() {
@@ -1315,8 +1561,13 @@ function setupAssetCopyButtons() {
     button.addEventListener("click", async (event) => {
       event.preventDefault();
       event.stopPropagation();
+      button.classList.add("copying");
+      button.setAttribute("aria-busy", "true");
+      button.title = t("copy.copying");
       const assetUrl = new URL(button.dataset.copyAssetUrl, location.href).href;
       const result = await writeClipboardText(assetUrl);
+      button.classList.remove("copying");
+      button.removeAttribute("aria-busy");
       showToast(feedbackMessage(result, "copy.assetDone"));
       button.classList.add("copied");
       button.title = result === "selected" ? t("copy.selected") : t("copy.done");
@@ -1359,7 +1610,7 @@ function brandAssetStrip(images = []) {
       <div class="brand-asset-strip">
         ${images.map((image) => `
           <div class="brand-asset" title="${escapeHtml(image.title || image.path || "")}">
-            <a class="brand-asset-link" href="${escapeHtml(image.sitePath)}">
+            <a class="brand-asset-link ${image.colorway ? `asset-colorway-${escapeHtml(image.colorway)}` : ""}" href="${escapeHtml(image.sitePath)}">
               <img ${responsiveImageAttributes(image.sitePath, [320, 640, 1280], "(max-width: 760px) 54vw, 240px")} alt="${escapeHtml(image.title || "")}" loading="lazy" decoding="async">
             </a>
             <button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="${escapeHtml(image.sitePath)}" aria-label="${escapeHtml(t("copy.assetUrl"))}">${copyIcon()}</button>
@@ -1671,17 +1922,36 @@ async function renderBrand() {
   const brand = await loadJson(`api/brands/${slug}.json`);
   const display = mainBrand(brand);
   const localized = localizedBrand(brand);
+  const isSidera = brand.slug === "sidera";
+  const isKaoyu = brand.slug === "kaoyu-shenhua";
+  const heroName = isSidera ? "侍天" : display.name;
+  const heroSecondaryName = isSidera ? "智慧餐饮 · tiansight" : isKaoyu ? "KAOYUSHENHUA · 一炉火，烧了三十多年" : display.secondaryName;
+  const heroEyebrow = isSidera ? "智慧领航者 · WISDOM NAVIGATOR" : isKaoyu ? (currentLocale === "en" ? "Charcoal fire · Live fish · No prefab" : "老灶火 · 活鱼现烤 · 无预制") : statusLabel(brand.status);
+  const sideraPrinciples = currentLocale === "en" ? ["SEE CLEARLY", "MOVE DECISIVELY", "COMPOUND VALUE"] : ["看得清", "改得动", "能复利"];
+  const kaoyuPrinciples = currentLocale === "en"
+    ? ["Live fish, grilled to order", "Home cooking, wok-hot", "No prefab dishes"]
+    : ["活鱼现点现烤", "家常菜现炒现做", "全店无预制菜"];
+  const kaoyuSlogan = currentLocale === "en"
+    ? "Thirty-plus years of plain truth becomes the myth."
+    : "把实话坚持三十多年，就成了神话。";
+  const kaoyuStoryLead = currentLocale === "en"
+    ? "Since 1990 at the stove, since 2015 in Changping, Beijing — one live fish, one charcoal fire, one plain promise for the neighborhood."
+    : "1990年入行，2015年落地北京昌平。一条活鱼，一炉旺火，一句实在话——让街坊吃口新鲜的、热乎的。";
   document.title = `${display.name} · Brand Guidelines`;
+  const descriptionMeta = document.querySelector('meta[name="description"]');
+  if (descriptionMeta) descriptionMeta.setAttribute("content", localized.intro || brand.description || "IPTrust brand guideline and assets.");
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.setAttribute("href", new URL(`brand?brand=${encodeURIComponent(brand.slug)}`, location.origin + "/").href);
   const hero = brand.adobeAssets?.[0]?.hero?.sitePath
     ? brand.adobeAssets[0].hero
     : preferredBrandImage(brand.images || []);
   page.innerHTML = `
-    <div class="brand-shell ${themeClass(brand.theme)}" style="${themeStyle(brand.theme)}">
+    <div class="brand-shell ${themeClass(brand.theme)} brand-${escapeHtml(brand.slug)}" style="${themeStyle(brand.theme)}">
       <section class="brand-hero">
         <div>
-          <p class="eyebrow">${escapeHtml(statusLabel(brand.status))}</p>
-          <h1>${escapeHtml(display.name)}</h1>
-          <p class="muted alt-name">${escapeHtml(display.secondaryName || "")}</p>
+          <p class="eyebrow">${escapeHtml(heroEyebrow)}</p>
+          <h1>${escapeHtml(heroName)}</h1>
+          <p class="muted alt-name">${escapeHtml(heroSecondaryName || "")}</p>
           <p>${escapeHtml(localized.intro)}</p>
           <div class="profile-tags">
             ${display.classification.tracks.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}
@@ -1689,7 +1959,9 @@ async function renderBrand() {
           </div>
           ${swatches(brand.theme, true)}
           <div class="actions">
-            <a class="button" href="${brand.apiUrl}">${t("brand.openJson")}</a>
+            ${isKaoyu ? `<a class="button" href="kaoyu-shenhua/">${currentLocale === "en" ? "Brand story" : "品牌故事"}</a>` : ""}
+            <button class="button" type="button" data-copy-brand="${escapeHtml(brand.slug)}">${escapeHtml(t("brand.copyAgentPack"))}</button>
+            <a class="button${isKaoyu ? " ghost" : ""}" href="${brand.apiUrl}">${t("brand.openJson")}</a>
             <a class="button ghost" href="${brand.source.github}">${t("brand.source")}</a>
           </div>
         </div>
@@ -1703,8 +1975,32 @@ async function renderBrand() {
               ${hero.dimensions ? `<span>${escapeHtml(hero.dimensions.replace(" x ", " × "))}</span>` : ""}
             </div>
           </div>
+        ` : isSidera ? `
+          <div class="brand-visual sidera-compass-visual" role="img" aria-label="侍天智慧领航罗盘">
+            <div class="sidera-compass-ring" aria-hidden="true"><div class="sidera-compass-core"><span class="sidera-compass-mark">侍</span></div></div>
+            <span class="sidera-seal" aria-hidden="true">侍天</span>
+            <p class="sidera-compass-caption">TIANSIGHT / WISDOM NAVIGATOR</p>
+          </div>
+        ` : isKaoyu ? `
+          <div class="brand-visual kaoyu-fire-visual" role="img" aria-label="烤鱼神话炉火">
+            <span class="kaoyu-fire-mark">火</span>
+            <p class="kaoyu-fire-caption">KAOYUSHENHUA / CHARCOAL FIRE</p>
+          </div>
         ` : ""}
       </section>
+      ${isSidera ? `<section class="sidera-principles">${sideraPrinciples.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}</section>` : ""}
+      ${isKaoyu ? `
+        <section class="kaoyu-principles">${kaoyuPrinciples.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}</section>
+        <section class="kaoyu-story" id="kaoyu-story">
+          <h2>${currentLocale === "en" ? "One fire, thirty-plus years" : "一炉火，烧了三十多年"}</h2>
+          <p class="lead">${escapeHtml(kaoyuStoryLead)}</p>
+          <p class="slogan">${escapeHtml(kaoyuSlogan)}</p>
+          <div class="kaoyu-story-links actions">
+            <a class="button" href="kaoyu-shenhua/">${currentLocale === "en" ? "Open story page" : "打开故事页"}</a>
+            <a class="button ghost" href="#kaoyu-shenhua-guide-1-品牌叙事-完整版">${currentLocale === "en" ? "Full narrative" : "完整版叙事"}</a>
+          </div>
+        </section>
+      ` : ""}
       ${profileEditor(brand)}
       <section class="brand-architecture" id="brandArchitecture" aria-live="polite"></section>
       ${ipSystemPanel(brand)}
@@ -1734,10 +2030,28 @@ async function renderBrand() {
       `).join("") || ""}
     </div>
   `;
+  page.setAttribute("aria-busy", "false");
+  setupCopyButtons([brand]);
   setupProfileEditor(brand);
   setupIpSystemPanel(brand);
   setupAssetCopyButtons();
   renderBrandArchitecture(slug).catch(console.error);
+}
+
+function renderBrandFailure(error) {
+  console.error(error);
+  const page = $("#brandPage");
+  if (!page) return;
+  page.setAttribute("aria-busy", "false");
+  page.innerHTML = `
+    <section class="brand-load-error" role="alert">
+      <p>IPTrust · Connection</p>
+      <h1>载入中断。</h1>
+      <p>Brand data could not be loaded.</p>
+      <button class="button" type="button" id="brandReload">重新载入 · Retry</button>
+    </section>
+  `;
+  $("#brandReload")?.addEventListener("click", () => location.reload());
 }
 
 function primaryIpName(ip = {}) {
@@ -1908,10 +2222,12 @@ setupLanguageToggle();
 setupDirectoryLink();
 setupSearch();
 setupPortalActions();
+setupAgentGateway();
 setupApiConnect();
+setupFontLibrary();
 renderHeroIndex().catch(console.error);
 renderIndex().catch(console.error);
-renderBrand().catch(console.error);
+renderBrand().catch(renderBrandFailure);
 renderDirectory().catch(console.error);
 renderIpRecord().catch(console.error);
 renderApplicationPage().catch(console.error);

@@ -3,20 +3,20 @@
   "folder": "KaoyuShenhua",
   "name": "烤鱼神话",
   "nativeName": "KAOYUSHENHUA",
-  "description": "烤鱼神话是以烤鱼与川湘菜为核心的餐饮品牌。",
+  "description": "三十多年老灶火，盐城大丰源头活鱼现点现烤，全店无预制菜的川湘烤鱼品牌。",
   "officialWebsite": "",
   "mainLanguage": "zh",
   "intro": {
-    "zh": "烤鱼神话以烤鱼与川湘菜为核心，通过鲜明符号、门店体验与稳定出品建立可识别的餐饮品牌。",
-    "en": "KAOYUSHENHUA is a Chinese dining brand centered on grilled fish and Sichuan-Hunan cuisine, shaped through a distinctive symbol, restaurant experience, and consistent foo…"
+    "zh": "三十多年老灶火，盐城大丰源头活鱼现点现烤，全店无预制菜。川湘家常味，街坊的老熟人。高兴了来，不高兴了更要来。",
+    "en": "Thirty-plus years of charcoal fire; live fish from Dafeng, Yancheng, grilled to order; no prefab dishes. Sichuan-Hunan home cooking — the neighborhood regular."
   },
   "business": {
     "zh": "烤鱼、川湘菜、餐饮门店运营、品牌连锁与供应链协同。",
     "en": "Grilled fish, Sichuan-Hunan cuisine, restaurant operations, brand franchising, and supply-chain coordination."
   },
   "notes": {
-    "zh": "已归档 Adobe Illustrator 原始标志文件，并提供网页预览与 PNG/JPG 导出版本。",
-    "en": "The original Adobe Illustrator logo is archived with browser previews and PNG/JPG exports."
+    "zh": "叙事与物料文案见 KaoyuShenhua/README.md。主口号：把实话坚持三十多年，就成了神话。已归档 Adobe Illustrator 原始标志，并提供网页预览与 PNG/JPG 导出。",
+    "en": "Narrative and store copy live in KaoyuShenhua/README.md. Primary slogan: thirty-plus years of plain truth becomes the myth. Original Illustrator logo archived with browser previews and PNG/JPG exports."
   },
   "primaryGuide": "KaoyuShenhua/README.md",
   "theme": {
@@ -34,7 +34,12 @@
       "Sichuan-Hunan cuisine",
       "fire red",
       "restaurant symbol",
-      "Chinese dining"
+      "Chinese dining",
+      "live fish",
+      "charcoal fire",
+      "no prefab",
+      "三十多年",
+      "橙红"
     ]
   },
   "classification": {
@@ -89,16 +94,16 @@
     "mainLanguage": "zh",
     "mainLocale": "CN",
     "intro": {
-      "zh": "烤鱼神话以烤鱼与川湘菜为核心，通过鲜明符号、门店体验与稳定出品建立可识别的餐饮品牌。",
-      "en": "KAOYUSHENHUA is a Chinese dining brand centered on grilled fish and Sichuan-Hunan cuisine, shaped through a distinctive symbol, restaurant experience, and consistent food quality."
+      "zh": "三十多年老灶火，盐城大丰源头活鱼现点现烤，全店无预制菜。川湘家常味，街坊的老熟人。高兴了来，不高兴了更要来。",
+      "en": "Thirty-plus years of charcoal fire; live fish from Dafeng, Yancheng, grilled to order; no prefab dishes. Sichuan-Hunan home cooking — the neighborhood regular. Come when you're happy; come especially when you're not."
     },
     "business": {
       "zh": "烤鱼、川湘菜、餐饮门店运营、品牌连锁与供应链协同。",
       "en": "Grilled fish, Sichuan-Hunan cuisine, restaurant operations, brand franchising, and supply-chain coordination."
     },
     "notes": {
-      "zh": "已归档 Adobe Illustrator 原始标志文件，并提供网页预览与 PNG/JPG 导出版本。",
-      "en": "The original Adobe Illustrator logo is archived with browser previews and PNG/JPG exports."
+      "zh": "叙事与物料文案见 KaoyuShenhua/README.md。主口号：把实话坚持三十多年，就成了神话。已归档 Adobe Illustrator 原始标志，并提供网页预览与 PNG/JPG 导出。",
+      "en": "Narrative and store copy live in KaoyuShenhua/README.md. Primary slogan: thirty-plus years of plain truth becomes the myth. Original Illustrator logo archived with browser previews and PNG/JPG exports."
     },
     "classification": {
       "tracks": {
@@ -172,14 +177,26 @@
     "standalone"
   ],
   "version": {
-    "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
-    "shortHash": "fa30da1",
-    "date": "2026-07-23T09:50:41+08:00",
-    "message": "feat: move Sidera to pale manuscript theme",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
+    "hash": "bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
+    "shortHash": "bcd28bc",
+    "date": "2026-08-04T06:00:43+08:00",
+    "message": "Rename 侍天 English brand name to tiansight",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6"
   },
   "historyUrl": "api/history/kaoyu-shenhua.json",
   "history": [
+    {
+      "hash": "bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
+      "shortHash": "bcd28bc",
+      "date": "2026-08-04T06:00:43+08:00",
+      "message": "Rename 侍天 English brand name to tiansight",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
+      "sourcePaths": [
+        "config/brands.json",
+        "KaoyuShenhua",
+        "KaoyuShenhua/README.md"
+      ]
+    },
     {
       "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
       "shortHash": "fa30da1",
@@ -239,18 +256,6 @@
         "KaoyuShenhua",
         "KaoyuShenhua/README.md"
       ]
-    },
-    {
-      "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
-      "shortHash": "eaf4320",
-      "date": "2026-07-19T14:13:21+08:00",
-      "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86",
-      "sourcePaths": [
-        "config/brands.json",
-        "KaoyuShenhua",
-        "KaoyuShenhua/README.md"
-      ]
     }
   ],
   "url": "brand.html?brand=kaoyu-shenhua",
@@ -262,9 +267,9 @@
       "title": "README",
       "format": "md",
       "primary": true,
-      "excerpt": "烤鱼神话 品牌定位 烤鱼神话是以烤鱼与川湘菜为核心的餐饮品牌，通过鲜明符号、门店体验与稳定出品建立可识别、可扩展的品牌系统。 品牌名称 中文主名称：烤鱼神话 英文名称：KAOYUSHENHUA 主语言：中文 业务 烤鱼与川湘菜 餐饮门店运营 品牌连锁 供应链协同 视觉资产 原始标志以 Adobe Illustrator 文件归档。网站提供逐页 PNG/JPG 预览与导出版本；原始文件、导出文件、格式、尺寸、文件大小及公开地址均通过品牌 API 的 adobeAssets 与 images 字段调用。 使用原则 优先使用原始矢量标志或透明背景 PNG。 不拉伸、不描边、不改变标志比例。 门店与餐饮场景以深墨、火红与暖金为核心色彩。 中文主名称始终优先显示，英文名称作为辅助识别。",
-      "text": "# 烤鱼神话\n\n## 品牌定位\n\n烤鱼神话是以烤鱼与川湘菜为核心的餐饮品牌，通过鲜明符号、门店体验与稳定出品建立可识别、可扩展的品牌系统。\n\n## 品牌名称\n\n- 中文主名称：烤鱼神话\n- 英文名称：KAOYUSHENHUA\n- 主语言：中文\n\n## 业务\n\n- 烤鱼与川湘菜\n- 餐饮门店运营\n- 品牌连锁\n- 供应链协同\n\n## 视觉资产\n\n原始标志以 Adobe Illustrator 文件归档。网站提供逐页 PNG/JPG 预览与导出版本；原始文件、导出文件、格式、尺寸、文件大小及公开地址均通过品牌 API 的 `adobeAssets` 与 `images` 字段调用。\n\n## 使用原则\n\n- 优先使用原始矢量标志或透明背景 PNG。\n- 不拉伸、不描边、不改变标志比例。\n- 门店与餐饮场景以深墨、火红与暖金为核心色彩。\n- 中文主名称始终优先显示，英文名称作为辅助识别。\n",
-      "html": "<h1 id=\"kaoyu-shenhua-guide-1-烤鱼神话\">烤鱼神话</h1>\n<h2 id=\"kaoyu-shenhua-guide-1-品牌定位\">品牌定位</h2>\n<p>烤鱼神话是以烤鱼与川湘菜为核心的餐饮品牌，通过鲜明符号、门店体验与稳定出品建立可识别、可扩展的品牌系统。</p>\n<h2 id=\"kaoyu-shenhua-guide-1-品牌名称\">品牌名称</h2>\n<ul>\n<li>中文主名称：烤鱼神话</li>\n<li>英文名称：KAOYUSHENHUA</li>\n<li>主语言：中文</li>\n</ul>\n<h2 id=\"kaoyu-shenhua-guide-1-业务\">业务</h2>\n<ul>\n<li>烤鱼与川湘菜</li>\n<li>餐饮门店运营</li>\n<li>品牌连锁</li>\n<li>供应链协同</li>\n</ul>\n<h2 id=\"kaoyu-shenhua-guide-1-视觉资产\">视觉资产</h2>\n<p>原始标志以 Adobe Illustrator 文件归档。网站提供逐页 PNG/JPG 预览与导出版本；原始文件、导出文件、格式、尺寸、文件大小及公开地址均通过品牌 API 的 <code>adobeAssets</code> 与 <code>images</code> 字段调用。</p>\n<h2 id=\"kaoyu-shenhua-guide-1-使用原则\">使用原则</h2>\n<ul>\n<li>优先使用原始矢量标志或透明背景 PNG。</li>\n<li>不拉伸、不描边、不改变标志比例。</li>\n<li>门店与餐饮场景以深墨、火红与暖金为核心色彩。</li>\n<li>中文主名称始终优先显示，英文名称作为辅助识别。</li>\n</ul>\n"
+      "excerpt": "烤鱼神话 品牌定位 烤鱼神话是以烤鱼与川湘菜为核心的餐饮品牌，通过鲜明符号、门店体验与稳定出品建立可识别、可扩展的品牌系统。 事实锚点：三十多年老灶火；盐城大丰源头活鱼，现点现烤；川湘家常味，当日鲜料；全店无预制菜。 品牌名称 中文主名称：烤鱼神话 英文名称：KAOYUSHENHUA 主语言：中文 业务 烤鱼与川湘菜 餐饮门店运营 品牌连锁 供应链协同 视觉资产 原始标志以 Adobe Illustrator 文件归档。网站提供逐页 PNG/JPG 预览与导出版本；原始文件、导出文件、格式、尺寸、文件大小及公开地址均通过品牌 API 的 adobeAssets 与 images 字段调用。 使用原则 优先使用原始矢量标志或透明背景 PNG。 不拉伸、不描边、不改变标志比例。 门店与餐饮场景以深墨、火红与暖金为核心色彩。 中文主名称始终优先显示，英文名称作为辅助识别。 Voice 实在、暖、不绕。街坊口气，不营销腔。火与桌是主语；",
+      "text": "# 烤鱼神话\n\n## 品牌定位\n\n烤鱼神话是以烤鱼与川湘菜为核心的餐饮品牌，通过鲜明符号、门店体验与稳定出品建立可识别、可扩展的品牌系统。\n\n事实锚点：三十多年老灶火；盐城大丰源头活鱼，现点现烤；川湘家常味，当日鲜料；全店无预制菜。\n\n## 品牌名称\n\n- 中文主名称：烤鱼神话\n- 英文名称：KAOYUSHENHUA\n- 主语言：中文\n\n## 业务\n\n- 烤鱼与川湘菜\n- 餐饮门店运营\n- 品牌连锁\n- 供应链协同\n\n## 视觉资产\n\n原始标志以 Adobe Illustrator 文件归档。网站提供逐页 PNG/JPG 预览与导出版本；原始文件、导出文件、格式、尺寸、文件大小及公开地址均通过品牌 API 的 `adobeAssets` 与 `images` 字段调用。\n\n## 使用原则\n\n- 优先使用原始矢量标志或透明背景 PNG。\n- 不拉伸、不描边、不改变标志比例。\n- 门店与餐饮场景以深墨、火红与暖金为核心色彩。\n- 中文主名称始终优先显示，英文名称作为辅助识别。\n\n## Voice\n\n实在、暖、不绕。街坊口气，不营销腔。火与桌是主语；不堆形容词，不绕弯子。\n\n### Say\n\n- 活鱼现点现烤 · 家常菜现炒现做 · 全店无预制菜\n- 盐城大丰源头活鱼 · 当日鲜料 · 锅气十足\n- 高兴了来，不高兴了更要来\n- 火不问你为什么来，它只负责一直烧着\n- 把实话坚持三十多年，就成了神话\n\n### Don't\n\n- 「所谓神话，不过是……」类绕法（新物料不用）\n- 网红腔、夸张神话话术、空洞「匠心/极致/赋能」\n- 预制菜暗示、隔夜鱼、加热即食对标话术（可对比，但不嘲讽）\n\n### 口号资产\n\n| 角色 | 句子 | 用途 |\n|---|---|---|\n| **主口号（新）** | 把实话坚持三十多年，就成了神话。 | 手册收束、新物料、线上 |\n| **场景句** | 火不问你为什么来，它只负责一直烧着。 | 海报 / 灯箱 / 情绪锚点 |\n| **兼容旧句** | 所谓神话，不过是把实话坚持了三十多年。 | 仅已印物料；新印统一主口号 |\n\n## 品牌叙事 · 完整版\n\n### 一炉火，烧了三十多年\n\n1990年，创始人第一次系上围裙，站到灶火前。这一站，三十多年。\n\n2015年，北京昌平，第一炉炭火点燃。没有剪彩，没有锣鼓。一条活鱼，一炉旺火，一句实在话——让街坊吃口新鲜的、热乎的。\n\n规矩到今天没改过。\n\n鱼只认盐城大丰源头活鱼，现点现烤，绝不隔夜。\n菜是川湘人家的家常味，当日鲜料，现切现炒，锅气十足。\n全店没有一道预制菜。每一道菜都在你点单之后，才从生变熟。\n\n如今一顿饭都能加热即食。还肯守着炭火烤一条活鱼，认认真真炒好一盘家常菜，这件事本身就够神话了。\n\n**火烧得久了，慢慢烧出了另一件事。**\n\n这些年这张桌子坐过太多人。有人升职了来开一瓶，有人失恋了来点最辣的，有人感冒了来出一身汗，有人加班到十点进门先问一句还有鱼吗。也有人什么事都没有，就是不想一个人吃饭。\n\n**火不问你为什么来。它只负责一直烧着。**\n\n高兴的时候，它让这顿饭更热闹。不痛快的时候，它让你先吃口热的，别的慢慢说。三十多年，它没为哪一天特意烧旺过，也没为哪一天灭过。\n\n一炉火，一条鱼，一桌人。橙红烧的是新鲜，暖的是团聚。\n\n神话就在这一炉现烤的活鱼里，在每一顿踏实的家常饭里，在那句\"来啦\"和\"下回来啊\"里。\n\n**把实话坚持三十多年，就成了神话。**\n\n## 菜谱版（约200字）\n\n### 一炉火，烧了三十多年\n\n1990年创始人入行，2015年在北京昌平开起第一家烤鱼店，只为让街坊吃口新鲜热乎的。\n\n盐城大丰源头活鱼，现点现烤。川湘小菜当日鲜料，现炒现做。全店无预制菜。\n\n橙红，是炉火的颜色，辣椒的颜色，烤鱼端上桌那一刻的颜色。\n\n这炉火烧了三十多年，没为哪一天特意烧旺过，也没为哪一天灭过。高兴了来，不高兴了更要来。\n\n**把实话坚持三十多年，就成了神话。**\n\n## 精简版（海报 / 灯箱）\n\n1990年入行，2015年落地北京昌平。\n三十多年只认一个理：活鱼现点现烤，家常菜现炒现做，全店无预制菜。\n\n**火不问你为什么来，它只负责一直烧着。**\n\n## 线上简介（点评 / 美团 / 外卖，60字内）\n\n三十多年老灶火，盐城大丰源头活鱼现点现烤，全店无预制菜。川湘家常味，街坊的老熟人。高兴了来，不高兴了更要来。\n\n## 门店物料\n\n### 收银背景墙\n\n火一直烧着，位子一直留着\n\n### 桌卡 / 餐纸套（一物一句）\n\n- 发工资了，来。被扣工资了，更得来。\n- 加班到十点，锅还热着\n- 一个人来也行，我们给你上小份\n- 没什么事，也是来的理由\n\n### 打包袋 / 外卖卡\n\n火在这儿，什么时候回来都行\n\n## 文案落点约定\n\n| 用途 | 使用版本 |\n|---|---|\n| 品牌手册 / 长页 | 完整版 |\n| 菜单背页 / 小册 | 菜谱版 |\n| 海报 / 灯箱 | 精简版 |\n| 点评 / 美团 / 外卖 | 线上简介 |\n| 收银墙 / 桌卡 / 打包袋 | 门店物料句 |\n| 收束口号 | 把实话坚持三十多年，就成了神话。 |\n",
+      "html": "<h1 id=\"kaoyu-shenhua-guide-1-烤鱼神话\">烤鱼神话</h1>\n<h2 id=\"kaoyu-shenhua-guide-1-品牌定位\">品牌定位</h2>\n<p>烤鱼神话是以烤鱼与川湘菜为核心的餐饮品牌，通过鲜明符号、门店体验与稳定出品建立可识别、可扩展的品牌系统。</p>\n<p>事实锚点：三十多年老灶火；盐城大丰源头活鱼，现点现烤；川湘家常味，当日鲜料；全店无预制菜。</p>\n<h2 id=\"kaoyu-shenhua-guide-1-品牌名称\">品牌名称</h2>\n<ul>\n<li>中文主名称：烤鱼神话</li>\n<li>英文名称：KAOYUSHENHUA</li>\n<li>主语言：中文</li>\n</ul>\n<h2 id=\"kaoyu-shenhua-guide-1-业务\">业务</h2>\n<ul>\n<li>烤鱼与川湘菜</li>\n<li>餐饮门店运营</li>\n<li>品牌连锁</li>\n<li>供应链协同</li>\n</ul>\n<h2 id=\"kaoyu-shenhua-guide-1-视觉资产\">视觉资产</h2>\n<p>原始标志以 Adobe Illustrator 文件归档。网站提供逐页 PNG/JPG 预览与导出版本；原始文件、导出文件、格式、尺寸、文件大小及公开地址均通过品牌 API 的 <code>adobeAssets</code> 与 <code>images</code> 字段调用。</p>\n<h2 id=\"kaoyu-shenhua-guide-1-使用原则\">使用原则</h2>\n<ul>\n<li>优先使用原始矢量标志或透明背景 PNG。</li>\n<li>不拉伸、不描边、不改变标志比例。</li>\n<li>门店与餐饮场景以深墨、火红与暖金为核心色彩。</li>\n<li>中文主名称始终优先显示，英文名称作为辅助识别。</li>\n</ul>\n<h2 id=\"kaoyu-shenhua-guide-1-voice\">Voice</h2>\n<p>实在、暖、不绕。街坊口气，不营销腔。火与桌是主语；不堆形容词，不绕弯子。</p>\n<h3 id=\"kaoyu-shenhua-guide-1-say\">Say</h3>\n<ul>\n<li>活鱼现点现烤 · 家常菜现炒现做 · 全店无预制菜</li>\n<li>盐城大丰源头活鱼 · 当日鲜料 · 锅气十足</li>\n<li>高兴了来，不高兴了更要来</li>\n<li>火不问你为什么来，它只负责一直烧着</li>\n<li>把实话坚持三十多年，就成了神话</li>\n</ul>\n<h3 id=\"kaoyu-shenhua-guide-1-don-t\">Don&#39;t</h3>\n<ul>\n<li>「所谓神话，不过是……」类绕法（新物料不用）</li>\n<li>网红腔、夸张神话话术、空洞「匠心/极致/赋能」</li>\n<li>预制菜暗示、隔夜鱼、加热即食对标话术（可对比，但不嘲讽）</li>\n</ul>\n<h3 id=\"kaoyu-shenhua-guide-1-口号资产\">口号资产</h3>\n<table>\n<thead>\n<tr>\n<th>角色</th>\n<th>句子</th>\n<th>用途</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><strong>主口号（新）</strong></td>\n<td>把实话坚持三十多年，就成了神话。</td>\n<td>手册收束、新物料、线上</td>\n</tr>\n<tr>\n<td><strong>场景句</strong></td>\n<td>火不问你为什么来，它只负责一直烧着。</td>\n<td>海报 / 灯箱 / 情绪锚点</td>\n</tr>\n<tr>\n<td><strong>兼容旧句</strong></td>\n<td>所谓神话，不过是把实话坚持了三十多年。</td>\n<td>仅已印物料；新印统一主口号</td>\n</tr>\n</tbody></table>\n<h2 id=\"kaoyu-shenhua-guide-1-品牌叙事-完整版\">品牌叙事 · 完整版</h2>\n<h3 id=\"kaoyu-shenhua-guide-1-一炉火-烧了三十多年\">一炉火，烧了三十多年</h3>\n<p>1990年，创始人第一次系上围裙，站到灶火前。这一站，三十多年。</p>\n<p>2015年，北京昌平，第一炉炭火点燃。没有剪彩，没有锣鼓。一条活鱼，一炉旺火，一句实在话——让街坊吃口新鲜的、热乎的。</p>\n<p>规矩到今天没改过。</p>\n<p>鱼只认盐城大丰源头活鱼，现点现烤，绝不隔夜。\n菜是川湘人家的家常味，当日鲜料，现切现炒，锅气十足。\n全店没有一道预制菜。每一道菜都在你点单之后，才从生变熟。</p>\n<p>如今一顿饭都能加热即食。还肯守着炭火烤一条活鱼，认认真真炒好一盘家常菜，这件事本身就够神话了。</p>\n<p><strong>火烧得久了，慢慢烧出了另一件事。</strong></p>\n<p>这些年这张桌子坐过太多人。有人升职了来开一瓶，有人失恋了来点最辣的，有人感冒了来出一身汗，有人加班到十点进门先问一句还有鱼吗。也有人什么事都没有，就是不想一个人吃饭。</p>\n<p><strong>火不问你为什么来。它只负责一直烧着。</strong></p>\n<p>高兴的时候，它让这顿饭更热闹。不痛快的时候，它让你先吃口热的，别的慢慢说。三十多年，它没为哪一天特意烧旺过，也没为哪一天灭过。</p>\n<p>一炉火，一条鱼，一桌人。橙红烧的是新鲜，暖的是团聚。</p>\n<p>神话就在这一炉现烤的活鱼里，在每一顿踏实的家常饭里，在那句&quot;来啦&quot;和&quot;下回来啊&quot;里。</p>\n<p><strong>把实话坚持三十多年，就成了神话。</strong></p>\n<h2 id=\"kaoyu-shenhua-guide-1-菜谱版-约200字\">菜谱版（约200字）</h2>\n<h3 id=\"kaoyu-shenhua-guide-1-一炉火-烧了三十多年-2\">一炉火，烧了三十多年</h3>\n<p>1990年创始人入行，2015年在北京昌平开起第一家烤鱼店，只为让街坊吃口新鲜热乎的。</p>\n<p>盐城大丰源头活鱼，现点现烤。川湘小菜当日鲜料，现炒现做。全店无预制菜。</p>\n<p>橙红，是炉火的颜色，辣椒的颜色，烤鱼端上桌那一刻的颜色。</p>\n<p>这炉火烧了三十多年，没为哪一天特意烧旺过，也没为哪一天灭过。高兴了来，不高兴了更要来。</p>\n<p><strong>把实话坚持三十多年，就成了神话。</strong></p>\n<h2 id=\"kaoyu-shenhua-guide-1-精简版-海报-灯箱\">精简版（海报 / 灯箱）</h2>\n<p>1990年入行，2015年落地北京昌平。\n三十多年只认一个理：活鱼现点现烤，家常菜现炒现做，全店无预制菜。</p>\n<p><strong>火不问你为什么来，它只负责一直烧着。</strong></p>\n<h2 id=\"kaoyu-shenhua-guide-1-线上简介-点评-美团-外卖-60字内\">线上简介（点评 / 美团 / 外卖，60字内）</h2>\n<p>三十多年老灶火，盐城大丰源头活鱼现点现烤，全店无预制菜。川湘家常味，街坊的老熟人。高兴了来，不高兴了更要来。</p>\n<h2 id=\"kaoyu-shenhua-guide-1-门店物料\">门店物料</h2>\n<h3 id=\"kaoyu-shenhua-guide-1-收银背景墙\">收银背景墙</h3>\n<p>火一直烧着，位子一直留着</p>\n<h3 id=\"kaoyu-shenhua-guide-1-桌卡-餐纸套-一物一句\">桌卡 / 餐纸套（一物一句）</h3>\n<ul>\n<li>发工资了，来。被扣工资了，更得来。</li>\n<li>加班到十点，锅还热着</li>\n<li>一个人来也行，我们给你上小份</li>\n<li>没什么事，也是来的理由</li>\n</ul>\n<h3 id=\"kaoyu-shenhua-guide-1-打包袋-外卖卡\">打包袋 / 外卖卡</h3>\n<p>火在这儿，什么时候回来都行</p>\n<h2 id=\"kaoyu-shenhua-guide-1-文案落点约定\">文案落点约定</h2>\n<table>\n<thead>\n<tr>\n<th>用途</th>\n<th>使用版本</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>品牌手册 / 长页</td>\n<td>完整版</td>\n</tr>\n<tr>\n<td>菜单背页 / 小册</td>\n<td>菜谱版</td>\n</tr>\n<tr>\n<td>海报 / 灯箱</td>\n<td>精简版</td>\n</tr>\n<tr>\n<td>点评 / 美团 / 外卖</td>\n<td>线上简介</td>\n</tr>\n<tr>\n<td>收银墙 / 桌卡 / 打包袋</td>\n<td>门店物料句</td>\n</tr>\n<tr>\n<td>收束口号</td>\n<td>把实话坚持三十多年，就成了神话。</td>\n</tr>\n</tbody></table>\n"
     }
   ],
   "tokens": [],
@@ -273,6 +278,7 @@
       "assetId": "kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7",
       "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-brand-hero.png",
       "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
+      "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
       "title": "kaoyu shenhua brand hero",
       "format": "PNG",
       "bytes": 23456,
@@ -289,6 +295,7 @@
       "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc",
       "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.jpg",
       "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
+      "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
       "title": "kaoyu shenhua logo page 01",
       "format": "JPG",
       "bytes": 123391,
@@ -305,6 +312,7 @@
       "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49",
       "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.png",
       "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49/81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c/original.png",
+      "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49/81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c/original.png",
       "title": "kaoyu shenhua logo page 01",
       "format": "PNG",
       "bytes": 50420,
@@ -321,6 +329,7 @@
       "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea",
       "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.jpg",
       "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea/25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033/original.jpg",
+      "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea/25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033/original.jpg",
       "title": "kaoyu shenhua logo page 02",
       "format": "JPG",
       "bytes": 58912,
@@ -337,6 +346,7 @@
       "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7",
       "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.png",
       "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
+      "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
       "title": "kaoyu shenhua logo page 02",
       "format": "PNG",
       "bytes": 23456,
@@ -377,28 +387,28 @@
       "version": 1
     },
     {
-      "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0",
+      "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc",
       "ownerType": "owned-ip",
       "ownerId": "kaoyu-shenhua",
       "role": "logo",
-      "title": "kaoyu shenhua logo",
-      "access": "private",
-      "sourcePath": "KaoyuShenhua/assets/source/kaoyu-shenhua-logo.ai",
-      "sourceFilename": "kaoyu-shenhua-logo.ai",
-      "sha256": "e7f64c62b8b04bfca4eaf1ebd523b29a1822969d6942ae5645e6081475e63cc6",
-      "mimeType": "application/illustrator",
-      "extension": "ai",
-      "bytes": 1635017,
-      "size": "1.56 MB",
-      "width": null,
-      "height": null,
-      "dimensions": "",
-      "objectKey": "private/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0/e7f64c62b8b04bfca4eaf1ebd523b29a1822969d6942ae5645e6081475e63cc6/source.ai",
-      "mediaUrl": "https://media.apuch.art/private/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0/e7f64c62b8b04bfca4eaf1ebd523b29a1822969d6942ae5645e6081475e63cc6/source.ai",
+      "title": "kaoyu shenhua logo page 01",
+      "access": "public",
+      "sourcePath": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.jpg",
+      "sourceFilename": "kaoyu-shenhua-logo-page-01.jpg",
+      "sha256": "8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c",
+      "mimeType": "image/jpeg",
+      "extension": "jpg",
+      "bytes": 123391,
+      "size": "120.5 KB",
+      "width": 1488,
+      "height": 744,
+      "dimensions": "1488 x 744 px",
+      "objectKey": "public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
+      "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
       "legacyUrls": [
-        "/assets/adobe/kaoyu-shenhua/kaoyu-shenhua-logo.ai"
+        "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.jpg"
       ],
-      "status": "processing",
+      "status": "ready",
       "version": 1
     },
     {
@@ -422,31 +432,6 @@
       "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49/81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c/original.png",
       "legacyUrls": [
         "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.png"
-      ],
-      "status": "ready",
-      "version": 1
-    },
-    {
-      "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc",
-      "ownerType": "owned-ip",
-      "ownerId": "kaoyu-shenhua",
-      "role": "logo",
-      "title": "kaoyu shenhua logo page 01",
-      "access": "public",
-      "sourcePath": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.jpg",
-      "sourceFilename": "kaoyu-shenhua-logo-page-01.jpg",
-      "sha256": "8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c",
-      "mimeType": "image/jpeg",
-      "extension": "jpg",
-      "bytes": 123391,
-      "size": "120.5 KB",
-      "width": 1488,
-      "height": 744,
-      "dimensions": "1488 x 744 px",
-      "objectKey": "public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
-      "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
-      "legacyUrls": [
-        "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.jpg"
       ],
       "status": "ready",
       "version": 1
@@ -499,6 +484,31 @@
         "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.png"
       ],
       "status": "ready",
+      "version": 1
+    },
+    {
+      "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0",
+      "ownerType": "owned-ip",
+      "ownerId": "kaoyu-shenhua",
+      "role": "logo",
+      "title": "kaoyu shenhua logo",
+      "access": "private",
+      "sourcePath": "KaoyuShenhua/assets/source/kaoyu-shenhua-logo.ai",
+      "sourceFilename": "kaoyu-shenhua-logo.ai",
+      "sha256": "e7f64c62b8b04bfca4eaf1ebd523b29a1822969d6942ae5645e6081475e63cc6",
+      "mimeType": "application/illustrator",
+      "extension": "ai",
+      "bytes": 1635017,
+      "size": "1.56 MB",
+      "width": null,
+      "height": null,
+      "dimensions": "",
+      "objectKey": "private/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0/e7f64c62b8b04bfca4eaf1ebd523b29a1822969d6942ae5645e6081475e63cc6/source.ai",
+      "mediaUrl": "https://media.apuch.art/private/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0/e7f64c62b8b04bfca4eaf1ebd523b29a1822969d6942ae5645e6081475e63cc6/source.ai",
+      "legacyUrls": [
+        "/assets/adobe/kaoyu-shenhua/kaoyu-shenhua-logo.ai"
+      ],
+      "status": "processing",
       "version": 1
     }
   ],
@@ -642,13 +652,19 @@
         "Sichuan-Hunan cuisine",
         "fire red",
         "restaurant symbol",
-        "Chinese dining"
+        "Chinese dining",
+        "live fish",
+        "charcoal fire",
+        "no prefab",
+        "三十多年",
+        "橙红"
       ],
       "images": [
         {
           "assetId": "kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7",
           "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-brand-hero.png",
           "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
+          "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
           "title": "kaoyu shenhua brand hero",
           "format": "PNG",
           "bytes": 23456,
@@ -665,6 +681,7 @@
           "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc",
           "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.jpg",
           "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
+          "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
           "title": "kaoyu shenhua logo page 01",
           "format": "JPG",
           "bytes": 123391,
@@ -681,6 +698,7 @@
           "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49",
           "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.png",
           "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49/81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c/original.png",
+          "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49/81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c/original.png",
           "title": "kaoyu shenhua logo page 01",
           "format": "PNG",
           "bytes": 50420,
@@ -697,6 +715,7 @@
           "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea",
           "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.jpg",
           "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea/25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033/original.jpg",
+          "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea/25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033/original.jpg",
           "title": "kaoyu shenhua logo page 02",
           "format": "JPG",
           "bytes": 58912,
@@ -713,6 +732,7 @@
           "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7",
           "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.png",
           "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
+          "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
           "title": "kaoyu shenhua logo page 02",
           "format": "PNG",
           "bytes": 23456,
@@ -726,6 +746,22 @@
           "primaryAsset": false
         }
       ]
+    }
+  },
+  "agent": {
+    "entry": "https://apuch.art/agent.json",
+    "mcp": "https://apuch.art/mcp",
+    "recommendedTool": "get_guideline",
+    "arguments": {
+      "assetKey": "kaoyu-shenhua"
+    },
+    "conventions": {
+      "primaryNameField": "mainName",
+      "primaryLanguageField": "mainLanguage",
+      "exactColorField": "theme",
+      "canonicalLogoField": "logoUrl",
+      "publicAssetField": "images",
+      "provenanceField": "sources"
     }
   },
   "moodboard": {
@@ -764,13 +800,19 @@
       "Sichuan-Hunan cuisine",
       "fire red",
       "restaurant symbol",
-      "Chinese dining"
+      "Chinese dining",
+      "live fish",
+      "charcoal fire",
+      "no prefab",
+      "三十多年",
+      "橙红"
     ],
     "images": [
       {
         "assetId": "kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7",
         "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-brand-hero.png",
         "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
+        "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
         "title": "kaoyu shenhua brand hero",
         "format": "PNG",
         "bytes": 23456,
@@ -787,6 +829,7 @@
         "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc",
         "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.jpg",
         "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
+        "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc/8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c/original.jpg",
         "title": "kaoyu shenhua logo page 01",
         "format": "JPG",
         "bytes": 123391,
@@ -803,6 +846,7 @@
         "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49",
         "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-01.png",
         "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49/81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c/original.png",
+        "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49/81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c/original.png",
         "title": "kaoyu shenhua logo page 01",
         "format": "PNG",
         "bytes": 50420,
@@ -819,6 +863,7 @@
         "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea",
         "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.jpg",
         "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea/25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033/original.jpg",
+        "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea/25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033/original.jpg",
         "title": "kaoyu shenhua logo page 02",
         "format": "JPG",
         "bytes": 58912,
@@ -835,6 +880,7 @@
         "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7",
         "path": "KaoyuShenhua/assets/brand-images/kaoyu-shenhua-logo-page-02.png",
         "sitePath": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
+        "mediaUrl": "https://media.apuch.art/public/kaoyu-shenhua/kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7/a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0/original.png",
         "title": "kaoyu shenhua logo page 02",
         "format": "PNG",
         "bytes": 23456,

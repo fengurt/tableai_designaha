@@ -13,11 +13,11 @@
     "Sanctem/README.md"
   ],
   "latest": {
-    "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
-    "shortHash": "fa30da1",
-    "date": "2026-07-23T09:50:41+08:00",
-    "message": "feat: move Sidera to pale manuscript theme",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f",
+    "hash": "bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
+    "shortHash": "bcd28bc",
+    "date": "2026-08-04T06:00:43+08:00",
+    "message": "Rename 侍天 English brand name to tiansight",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
     "sourcePaths": [
       "config/brands.json",
       "Sanctem",
@@ -25,6 +25,18 @@
     ]
   },
   "versions": [
+    {
+      "hash": "bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
+      "shortHash": "bcd28bc",
+      "date": "2026-08-04T06:00:43+08:00",
+      "message": "Rename 侍天 English brand name to tiansight",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
+      "sourcePaths": [
+        "config/brands.json",
+        "Sanctem",
+        "Sanctem/README.md"
+      ]
+    },
     {
       "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
       "shortHash": "fa30da1",
@@ -247,18 +259,6 @@
       "date": "2026-07-04T21:38:07+08:00",
       "message": "Add PaM Design Office IP",
       "url": "https://github.com/fengurt/tableai_designaha/commit/0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
-      "sourcePaths": [
-        "config/brands.json",
-        "Sanctem",
-        "Sanctem/README.md"
-      ]
-    },
-    {
-      "hash": "534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
-      "shortHash": "534c825",
-      "date": "2026-07-04T16:34:09+08:00",
-      "message": "Correct APUCH language and IPTrust naming",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/534c825eb34e08787dc724f7a1d1e19e1bafdfb3",
       "sourcePaths": [
         "config/brands.json",
         "Sanctem",

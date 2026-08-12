@@ -6,7 +6,10 @@ import { json, parseJson } from "./utils.js";
 
 const TOOLS = [
   { name: "list_brands", description: "List IPTrust brands and their primary identity fields.", inputSchema: { type: "object", properties: {} } },
-  { name: "get_brand", description: "Get the current brand record for one IP slug.", inputSchema: { type: "object", required: ["slug"], properties: { slug: { type: "string" } } } },
+  { name: "get_brand", description: "Get the complete current IP record, including primary-language name, exact theme colors, canonical logo, assets, guidelines, provenance and history.", inputSchema: { type: "object", properties: { assetKey: { type: "string", description: "Stable IP ID, for example opcglobal." }, slug: { type: "string", description: "Alias for assetKey." } }, anyOf: [{ required: ["assetKey"] }, { required: ["slug"] }] } },
+  { name: "get_guideline", description: "Get an Agent-ready brand guideline for one IP: identity, primary language, intro, business, exact colors, canonical logo, public assets, guideline source content and provenance.", inputSchema: { type: "object", properties: { assetKey: { type: "string" }, slug: { type: "string" }, includeSourceText: { type: "boolean", default: true } }, anyOf: [{ required: ["assetKey"] }, { required: ["slug"] }] } },
+  { name: "list_tokens", description: "List exact callable brand color tokens and any source token files for one IP.", inputSchema: { type: "object", properties: { assetKey: { type: "string" }, slug: { type: "string" } }, anyOf: [{ required: ["assetKey"] }, { required: ["slug"] }] } },
+  { name: "validate_color", description: "Validate a hex color against one IP's exact theme tokens and return the matching token when present.", inputSchema: { type: "object", required: ["hex"], properties: { assetKey: { type: "string" }, slug: { type: "string" }, hex: { type: "string", pattern: "^#[0-9A-Fa-f]{6}$" } }, anyOf: [{ required: ["assetKey", "hex"] }, { required: ["slug", "hex"] }] } },
   { name: "list_ips", description: "List IPs with industry, IP type, ownership class, architecture role and primary-language names.", inputSchema: { type: "object", properties: { industry: { type: "string" }, ipType: { type: "string" }, recordClass: { enum: ["owned", "reference"] }, parent: { type: "string" }, architectureRole: { enum: ["parent", "child", "standalone"] } } } },
   { name: "get_ip_graph", description: "Get one IP with its parents, children, relationships and project applications.", inputSchema: { type: "object", required: ["slug"], properties: { slug: { type: "string" } } } },
   { name: "list_ip_children", description: "List the direct child IPs of one mother IP.", inputSchema: { type: "object", required: ["slug"], properties: { slug: { type: "string" } } } },
@@ -26,7 +29,7 @@ function result(value, isError = false) {
 async function brands(env) {
   const records = await env.DB.prepare("SELECT slug,payload_json,version,updated_at FROM brand_records ORDER BY slug").all();
   if (records.results.length) return records.results.map((row) => ({ slug: row.slug, ...parseJson(row.payload_json), version: row.version, updatedAt: row.updated_at }));
-  const response = await fetch(`${env.PUBLIC_SITE_URL}/api/brands/index.json`);
+  const response = await fetch(`${env.PUBLIC_SITE_URL}/api/brands.json`);
   if (!response.ok) return [];
   const body = await response.json();
   return body.brands || body.items || body;
@@ -37,6 +40,58 @@ async function brand(env, slug) {
   if (row) return { slug, ...parseJson(row.payload_json), version: row.version, updatedAt: row.updated_at };
   const response = await fetch(`${env.PUBLIC_SITE_URL}/api/brands/${encodeURIComponent(slug)}.json`);
   return response.ok ? response.json() : null;
+}
+
+function brandKey(args = {}) {
+  return String(args.assetKey || args.slug || "").trim();
+}
+
+function themeTokens(theme = {}) {
+  return Object.entries(theme)
+    .filter(([key, value]) => ["primary", "accent", "secondary", "surface", "paper", "ink", "muted", "line"].includes(key) && typeof value === "string" && value)
+    .map(([key, value]) => ({ key, value }));
+}
+
+function guidelineValue(value, includeSourceText = true) {
+  const guides = (value.guides || []).map((guide) => ({
+    path: guide.path,
+    title: guide.title,
+    format: guide.format,
+    primary: Boolean(guide.primary),
+    excerpt: guide.excerpt || "",
+    ...(includeSourceText ? { text: guide.text || "" } : {}),
+  }));
+  return {
+    assetKey: value.assetKey || value.slug,
+    slug: value.slug,
+    mainName: value.mainName || value.display?.default?.name || value.name,
+    mainLanguage: value.mainLanguage,
+    alternateNames: {
+      zh: value.display?.zh?.name || "",
+      en: value.display?.en?.name || "",
+    },
+    officialWebsite: value.officialWebsite || "",
+    intro: value.intro || value.profile?.intro || {},
+    business: value.business || value.profile?.business || {},
+    classification: value.classification || value.profile?.classification || {},
+    theme: value.theme || {},
+    tokens: themeTokens(value.theme),
+    logoUrl: value.logoUrl || "",
+    publicAssets: (value.images || []).map((asset) => ({
+      id: asset.assetId || asset.id,
+      title: asset.title,
+      format: asset.format,
+      bytes: asset.bytes,
+      width: asset.width,
+      height: asset.height,
+      sha256: asset.sha256,
+      url: asset.sitePath || asset.url,
+    })),
+    guides,
+    sources: value.sources || [],
+    version: value.version || null,
+    historyUrl: value.historyUrl || "",
+  };
 }
 
 function ipValue(row, industries = []) {
@@ -102,8 +157,34 @@ function assetValue(row, env, actor, variants = [], scopeSlug = row.owner_id) {
 
 async function callTool(env, actor, name, args = {}) {
   if (name === "list_brands") return result({ items: await brands(env) });
-  if (name === "get_brand") {
-    const value = await brand(env, String(args.slug || ""));
+  if (["get_brand", "get_guideline", "list_tokens", "validate_color"].includes(name)) {
+    const key = brandKey(args);
+    if (!key) return result({ error: "missing_asset_key", hint: "Pass assetKey or slug." }, true);
+    const value = await brand(env, key);
+    if (!value) return result({ error: "not_found", assetKey: key }, true);
+    if (name === "get_guideline") return result(guidelineValue(value, args.includeSourceText !== false));
+    if (name === "list_tokens") {
+      return result({
+        assetKey: value.assetKey || value.slug,
+        mainName: value.mainName || value.display?.default?.name || value.name,
+        theme: value.theme || {},
+        tokens: themeTokens(value.theme),
+        sourceFiles: value.tokens || [],
+      });
+    }
+    if (name === "validate_color") {
+      const requested = String(args.hex || "").toUpperCase();
+      if (!/^#[0-9A-F]{6}$/.test(requested)) return result({ error: "invalid_hex", expected: "#RRGGBB" }, true);
+      const tokens = themeTokens(value.theme);
+      const matches = tokens.filter((token) => String(token.value).toUpperCase() === requested);
+      return result({
+        assetKey: value.assetKey || value.slug,
+        requested,
+        valid: matches.length > 0,
+        matches,
+        guidance: matches.length ? "Use the matching token exactly." : "This color is not an exact theme token. Do not substitute it without an approved guideline update.",
+      });
+    }
     return value ? result(value) : result({ error: "not_found" }, true);
   }
   if (name === "list_ips") return result({ items: await listIps(env, args) });
@@ -164,13 +245,26 @@ async function callTool(env, actor, name, args = {}) {
 }
 
 export async function handleMcp(request, env) {
-  if (request.method === "GET") return json(request, { name: "IPTrust MCP", protocolVersion: "2025-11-25", endpoint: "/mcp", tools: TOOLS.map(({ name, description }) => ({ name, description })) });
+  if (request.method === "GET") return json(request, {
+    name: "IPTrust MCP",
+    protocolVersion: "2025-11-25",
+    endpoint: `${env.PUBLIC_SITE_URL || "https://apuch.art"}/mcp`,
+    agentEntry: `${env.PUBLIC_SITE_URL || "https://apuch.art"}/agent.json`,
+    authentication: "Public reads require no key. Private assets and protected notes require an authorized Bearer API key.",
+    instructions: "Resolve an IP with list_ips, then use get_guideline for identity, exact colors, canonical logo, assets, source guideline content and provenance.",
+    tools: TOOLS.map(({ name, description }) => ({ name, description })),
+  });
   if (request.method !== "POST") return json(request, { error: "method_not_allowed" }, { status: 405 });
   const actor = await authenticate(request, env);
   const message = await request.json().catch(() => null);
   if (!message || message.jsonrpc !== "2.0") return json(request, { jsonrpc: "2.0", id: message?.id ?? null, error: { code: -32600, message: "Invalid Request" } }, { status: 400 }, Boolean(actor));
   let value;
-  if (message.method === "initialize") value = { protocolVersion: "2025-11-25", capabilities: { tools: { listChanged: false } }, serverInfo: { name: "iptrust", version: "2.0.0" } };
+  if (message.method === "initialize") value = {
+    protocolVersion: "2025-11-25",
+    capabilities: { tools: { listChanged: false } },
+    serverInfo: { name: "iptrust", version: "2.1.0" },
+    instructions: "Resolve an IP with list_ips. Use get_guideline for the primary-language name, exact colors, canonical logo, assets, source content and provenance. Public reads require no key.",
+  };
   else if (message.method === "notifications/initialized") return new Response(null, { status: 202 });
   else if (message.method === "ping") value = {};
   else if (message.method === "tools/list") value = { tools: TOOLS };

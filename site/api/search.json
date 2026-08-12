@@ -5542,5 +5542,53 @@
     "subtitle": "国务院国有资产监督管理委员会 · #99 · 中央企业",
     "text": "国务院国资委履行出资人职责的中央企业。 中国 https://wap.sasac.gov.cn/n2588045/n27271785/n27271792/c14159097/content.html",
     "url": "library/?type=organizations&q=%E4%B8%AD%E5%9B%BD%E6%A3%80%E9%AA%8C%E8%AE%A4%E8%AF%81%EF%BC%88%E9%9B%86%E5%9B%A2%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8"
+  },
+  {
+    "type": "font",
+    "slug": "noto-sans-sc",
+    "title": "Noto Sans SC",
+    "subtitle": "思源黑体 · OFL-1.1 · 中文无衬线",
+    "text": "中文无衬线 Simplified Chinese sans serif 界面、正文、品牌规范 UI, body copy, brand guidelines Hans Latin \"Noto Sans SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif Noto Fonts",
+    "url": "ip-evolution#open-source-type"
+  },
+  {
+    "type": "font",
+    "slug": "noto-serif-sc",
+    "title": "Noto Serif SC",
+    "subtitle": "思源宋体 · OFL-1.1 · 中文衬线",
+    "text": "中文衬线 Simplified Chinese serif 标题、出版、文化叙事 Display, publishing, cultural narratives Hans Latin \"Noto Serif SC\", \"Songti SC\", SimSun, serif Noto Fonts",
+    "url": "ip-evolution#open-source-type"
+  },
+  {
+    "type": "font",
+    "slug": "ibm-plex-sans-sc",
+    "title": "IBM Plex Sans SC",
+    "subtitle": "IBM Plex 简体中文 · OFL-1.1 · 中文现代无衬线",
+    "text": "中文现代无衬线 Modern Simplified Chinese sans serif 科技品牌、数据界面、专业文档 Technology brands, data UI, professional documents Hans Latin \"IBM Plex Sans SC\", \"PingFang SC\", sans-serif IBM",
+    "url": "ip-evolution#open-source-type"
+  },
+  {
+    "type": "font",
+    "slug": "inter",
+    "title": "Inter",
+    "subtitle": "OFL-1.1 · 英文界面无衬线",
+    "text": "英文界面无衬线 Latin UI sans serif 英文界面、产品、屏幕正文 Product UI and screen typography Latin Greek Cyrillic Inter, \"Helvetica Neue\", Arial, sans-serif Rasmus Andersson",
+    "url": "ip-evolution#open-source-type"
+  },
+  {
+    "type": "font",
+    "slug": "ibm-plex-mono",
+    "title": "IBM Plex Mono",
+    "subtitle": "IBM Plex 等宽 · OFL-1.1 · 英文等宽",
+    "text": "英文等宽 Latin monospace API、数据、代码、资产编号 APIs, data, code, asset identifiers Latin Greek Cyrillic \"IBM Plex Mono\", \"SFMono-Regular\", Consolas, monospace IBM",
+    "url": "ip-evolution#open-source-type"
+  },
+  {
+    "type": "font",
+    "slug": "eb-garamond",
+    "title": "EB Garamond",
+    "subtitle": "OFL-1.1 · 英文人文衬线",
+    "text": "英文人文衬线 Humanist Latin serif 出版、长文、文化与高端品牌 Publishing, long-form, cultural and premium brands Latin Greek Cyrillic \"EB Garamond\", Garamond, Georgia, serif Octavio Pardo / Google Fonts",
+    "url": "ip-evolution#open-source-type"
   }
 ]

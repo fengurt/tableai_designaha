@@ -1,7 +1,30 @@
 const EDGE_ORIGIN = "https://edge.apuch.art";
 
+function canonicalIpEvolution(request) {
+  if (!["GET", "HEAD"].includes(request.method)) return null;
+  const url = new URL(request.url);
+  let pathname;
+  try {
+    pathname = decodeURIComponent(url.pathname);
+  } catch {
+    return null;
+  }
+  if (pathname !== "/ip-evolution/" && pathname !== "/ip-evolution？") return null;
+  url.pathname = "/ip-evolution";
+  return new Response(null, {
+    status: 308,
+    headers: {
+      Location: url.toString(),
+      "Cache-Control": "public, max-age=31536000, immutable",
+      "X-IPTrust-Route": "canonical-ip-evolution",
+    },
+  });
+}
+
 export default {
   async fetch(request) {
+    const canonical = canonicalIpEvolution(request);
+    if (canonical) return canonical;
     const incoming = new URL(request.url);
     const upstream = new URL(`${incoming.pathname}${incoming.search}`, EDGE_ORIGIN);
     const headers = new Headers(request.headers);

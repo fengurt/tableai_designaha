@@ -1,55 +1,38 @@
-# Deployment and Sync
+# Deployment and sync
 
-This repo is the canonical source of truth for Table AI Alliance brand design
-guidelines.
+Production is `https://apuch.art`, served by Cloudflare Pages and the
+`iptrust-edge` Worker. GitHub `main` is the auditable source for code,
+configuration, guidelines and manifests. D1 and R2 hold runtime state and
+binary assets as described in `docs/stack-baseline.md`.
 
-## One-way sync: GitHub to website
+## Normal release
 
-1. Edit source files in brand folders.
-2. Run `npm run build:site` locally to preview generated output in `site/`.
-3. Push to `main`.
-4. `.github/workflows/deploy-pages.yml` builds `site/` and deploys it to GitHub
-   Pages.
+1. Start from current `origin/main` and preserve unrelated local work.
+2. Run `npm ci` and `npm run build:site`.
+3. Run `npm run validate:assets`, `validate:ip`, `validate:fonts` and
+   `validate:routes`.
+4. Run JavaScript syntax checks and Wrangler dry-run validation.
+5. Commit source and reproducible generated output together.
+6. Push `main`. `.github/workflows/deploy-cloudflare-pages.yml` applies D1
+   changes, deploys the Worker and then deploys Pages from the same commit.
+7. Run `npm run check:production` after the workflow succeeds.
 
-The expected Pages URL is:
+`.github/workflows/deploy-pages.yml` publishes the GitHub Pages fallback at
+`https://fengurt.github.io/tableai_designaha/`. It is not the production
+origin and must not be treated as the latest operational state.
 
-```text
-https://fengurt.github.io/tableai_designaha/
-```
+## Emergency deployment
 
-If Pages is not enabled yet, enable it in GitHub repository settings with
-**Build and deployment: GitHub Actions**.
+A direct Wrangler deploy is allowed only to restore service. Immediately
+rebuild and commit the exact source so `main`, Pages and Worker production no
+longer diverge. Record the deployed Worker version and Pages deployment URL in
+the incident notes.
 
-## Website to GitHub sync
+## Admin writes
 
-The generated `site/admin.html` editor:
+The admin UI writes authenticated updates to D1, records history and audit
+events, and emits Git outbox work. D1 is authoritative for newer runtime
+versions; an older Git snapshot must never overwrite a newer D1 record.
 
-1. Unlocks with the generated admin key.
-2. Loads editable guideline files from the GitHub Contents API.
-3. Saves edits as commits back to the configured branch.
-4. GitHub Pages rebuilds after the commit lands.
-
-The static admin key is a browser-side unlock gate. It is useful for shared
-operator workflow, but it is not a replacement for server-side authentication.
-Saving still requires a GitHub token with write access.
-
-## Admin key
-
-Generate or rotate the admin key:
-
-```bash
-SAVE_TO_1PASSWORD=1 npm run provision:admin-key
-npm run build:site
-```
-
-The raw key is saved in 1Password. The repo only stores
-`config/site-admin.public.json`, which contains the SHA-256 hash.
-
-## Manual local sync helper
-
-```bash
-npm run sync:site
-```
-
-This pulls `origin/main`, rebuilds `site/`, commits generated output if needed,
-and pushes back to `origin/main`.
+Secrets belong in 1Password and GitHub Actions secrets. Never save API keys,
+TOTP seeds, Cloudflare tokens or signing keys in Git or generated site files.

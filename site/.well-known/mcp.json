@@ -1,0 +1,22 @@
+{
+  "endpoint": "https://apuch.art/mcp",
+  "transport": "Streamable HTTP",
+  "protocolVersion": "2025-11-25",
+  "config": {
+    "mcpServers": {
+      "iptrust": {
+        "type": "http",
+        "url": "https://apuch.art/mcp"
+      }
+    }
+  },
+  "coreTools": [
+    "list_ips",
+    "get_brand",
+    "get_guideline",
+    "list_tokens",
+    "list_assets",
+    "get_asset",
+    "search_library"
+  ]
+}

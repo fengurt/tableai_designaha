@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-08-03T22:00:11.076Z",
+  "generatedAt": "2026-08-12T04:17:59.032Z",
   "version": {
-    "hash": "735ff5e693bb2ee2fe4dbd66a2aa337e1d8368bf",
-    "shortHash": "735ff5e",
-    "date": "2026-07-24T09:25:16+08:00",
-    "message": "feat: publish OPC Global brand assets",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/735ff5e693bb2ee2fe4dbd66a2aa337e1d8368bf"
+    "hash": "bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
+    "shortHash": "bcd28bc",
+    "date": "2026-08-04T06:00:43+08:00",
+    "message": "Rename 侍天 English brand name to tiansight",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6"
   },
   "brands": [
     {
@@ -391,6 +391,14 @@
     "relations": "api/v2/ip-relations",
     "applications": "api/v2/applications"
   },
+  "fontLibrary": {
+    "page": "ip-evolution#open-source-type",
+    "api": "api/fonts.json",
+    "licensePolicy": "Open-source licenses that permit commercial use and web embedding; each record carries its official source and license.",
+    "delivery": "Official font sources are subset to WOFF2, stored as immutable R2 objects and loaded only when specimens enter the viewport.",
+    "count": 6,
+    "verifiedAt": "2026-08-11"
+  },
   "library": {
     "page": "library/",
     "storage": "Cloudflare D1 with Git snapshots and R2 file objects",
@@ -445,11 +453,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "735ff5e693bb2ee2fe4dbd66a2aa337e1d8368bf",
-      "shortHash": "735ff5e",
-      "date": "2026-07-24T09:25:16+08:00",
-      "message": "feat: publish OPC Global brand assets",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/735ff5e693bb2ee2fe4dbd66a2aa337e1d8368bf"
+      "hash": "bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
+      "shortHash": "bcd28bc",
+      "date": "2026-08-04T06:00:43+08:00",
+      "message": "Rename 侍天 English brand name to tiansight",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6"
     }
   },
   "sync": {

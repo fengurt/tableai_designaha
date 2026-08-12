@@ -4,23 +4,46 @@
 English name: IPTrust
 English: IPTrust is an IP trust hub for people and agents.
 
+Recommended Agent workflow:
+1. Read https://apuch.art/agent.json for the current capability map and examples.
+2. Resolve the stable IP slug through https://apuch.art/api/brands.json or MCP list_ips.
+3. Prefer MCP get_brand and get_guideline for live use; fall back to GET /api/brands/{slug}.json.
+4. Keep mainName in mainLanguage. Alternate-language names remain secondary labels.
+5. Use theme values exactly. Do not infer replacement colors from screenshots.
+6. Use logoUrl as the canonical logo and images[] for a requested format or colorway.
+7. Check sources[] and history before citing or applying a standard.
+
+Public access:
+- Public brand records, public assets, search and MCP reads require no API key.
+- Private assets, protected notes and writes require an authorized Bearer API key.
+
 Machine-readable entry points:
-- /api/manifest.json
-- /api/schema.json
-- /api/brands.json
-- /api/brands/{slug}.json
-- /api/history/{slug}.json
-- /api/search.json
-- /api/versions.json
-- /api/library/organizations
-- /api/library/cases
-- /api/library/reports
-- /api/library/datasets
-- /api/library/relations
-- /library/
-- /mcp (MCP Streamable HTTP, protocol 2025-11-25)
-- /ip_sys.md
-- /skills/iptrust-live-update/SKILL.md
+- https://apuch.art/agent.json
+- https://apuch.art/.well-known/iptrust.json
+- https://apuch.art/api/openapi.json
+- https://apuch.art/api/manifest.json
+- https://apuch.art/api/schema.json
+- https://apuch.art/api/brands.json
+- https://apuch.art/api/brands/{slug}.json
+- https://apuch.art/api/history/{slug}.json
+- https://apuch.art/api/fonts.json
+- https://apuch.art/api/v2/assets?ownerType=owned-ip&ownerId={slug}
+- https://apuch.art/mcp (MCP Streamable HTTP, protocol 2025-11-25)
+- https://apuch.art/skills/iptrust-live-update/SKILL.md
+
+MCP configuration:
+{"mcpServers":{"iptrust":{"type":"http","url":"https://apuch.art/mcp"}}}
+
+Open-source type library:
+- Page: https://apuch.art/ip-evolution#open-source-type
+- API: https://apuch.art/api/fonts.json
+- Policy: Copyright remains with each font author. Commercial use, embedding, modification and redistribution must follow the applicable license; font files may not be sold by themselves.
+- Noto Sans SC / 思源黑体: OFL-1.1 · https://github.com/notofonts/noto-cjk/tree/main/Sans
+- Noto Serif SC / 思源宋体: OFL-1.1 · https://github.com/notofonts/noto-cjk/tree/main/Serif
+- IBM Plex Sans SC / IBM Plex 简体中文: OFL-1.1 · https://github.com/IBM/plex
+- Inter: OFL-1.1 · https://github.com/rsms/inter
+- IBM Plex Mono / IBM Plex 等宽: OFL-1.1 · https://github.com/IBM/plex
+- EB Garamond: OFL-1.1 · https://github.com/octaviopardo/EBGaramond12
 
 Brands:
 - Table AI (tableai): /api/brands/tableai.json · mainLocale EN · palette #0A1626 / #A88B52
@@ -59,8 +82,3 @@ Brands:
 - 苏帮袁 (subangyuan): /api/brands/subangyuan.json · mainLocale CN · palette #315849 / #A84E3E
 - 游园京梦 (youyuan-jingmeng): /api/brands/youyuan-jingmeng.json · mainLocale CN · palette #2E514A / #A55764
 - 清水亭 (qingshuiting): /api/brands/qingshuiting.json · mainLocale CN · palette #1F5A63 / #B56E42
-
-Admin workflow:
-- /admin.html unlocks with the generated admin key.
-- Edits are committed back to GitHub via the GitHub Contents API.
-- GitHub Pages rebuilds from main after changes land.

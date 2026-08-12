@@ -165,14 +165,26 @@
     "standalone"
   ],
   "version": {
-    "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
-    "shortHash": "fa30da1",
-    "date": "2026-07-23T09:50:41+08:00",
-    "message": "feat: move Sidera to pale manuscript theme",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
+    "hash": "bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
+    "shortHash": "bcd28bc",
+    "date": "2026-08-04T06:00:43+08:00",
+    "message": "Rename 侍天 English brand name to tiansight",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6"
   },
   "historyUrl": "api/history/kind.json",
   "history": [
+    {
+      "hash": "bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
+      "shortHash": "bcd28bc",
+      "date": "2026-08-04T06:00:43+08:00",
+      "message": "Rename 侍天 English brand name to tiansight",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
+      "sourcePaths": [
+        "config/brands.json",
+        "KiND",
+        "KiND/KiND Design.md"
+      ]
+    },
     {
       "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
       "shortHash": "fa30da1",
@@ -232,18 +244,6 @@
         "KiND",
         "KiND/KiND Design.md"
       ]
-    },
-    {
-      "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
-      "shortHash": "eaf4320",
-      "date": "2026-07-19T14:13:21+08:00",
-      "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86",
-      "sourcePaths": [
-        "config/brands.json",
-        "KiND",
-        "KiND/KiND Design.md"
-      ]
     }
   ],
   "url": "brand.html?brand=kind",
@@ -291,6 +291,7 @@
       "assetId": "kind-hero-kind-brand-hero-c7224d4b8fb7",
       "path": "KiND/assets/brand-images/kind-brand-hero.png",
       "sitePath": "https://media.apuch.art/public/kind/kind-hero-kind-brand-hero-c7224d4b8fb7/c7224d4b8fb7d8058636e35bc4df2c7f0dec0baf8968da57f533a6918cf33ee3/original.png",
+      "mediaUrl": "https://media.apuch.art/public/kind/kind-hero-kind-brand-hero-c7224d4b8fb7/c7224d4b8fb7d8058636e35bc4df2c7f0dec0baf8968da57f533a6918cf33ee3/original.png",
       "title": "kind brand hero",
       "format": "PNG",
       "bytes": 2190640,
@@ -386,6 +387,7 @@
           "assetId": "kind-hero-kind-brand-hero-c7224d4b8fb7",
           "path": "KiND/assets/brand-images/kind-brand-hero.png",
           "sitePath": "https://media.apuch.art/public/kind/kind-hero-kind-brand-hero-c7224d4b8fb7/c7224d4b8fb7d8058636e35bc4df2c7f0dec0baf8968da57f533a6918cf33ee3/original.png",
+          "mediaUrl": "https://media.apuch.art/public/kind/kind-hero-kind-brand-hero-c7224d4b8fb7/c7224d4b8fb7d8058636e35bc4df2c7f0dec0baf8968da57f533a6918cf33ee3/original.png",
           "title": "kind brand hero",
           "format": "PNG",
           "bytes": 2190640,
@@ -399,6 +401,22 @@
           "primaryAsset": false
         }
       ]
+    }
+  },
+  "agent": {
+    "entry": "https://apuch.art/agent.json",
+    "mcp": "https://apuch.art/mcp",
+    "recommendedTool": "get_guideline",
+    "arguments": {
+      "assetKey": "kind"
+    },
+    "conventions": {
+      "primaryNameField": "mainName",
+      "primaryLanguageField": "mainLanguage",
+      "exactColorField": "theme",
+      "canonicalLogoField": "logoUrl",
+      "publicAssetField": "images",
+      "provenanceField": "sources"
     }
   },
   "moodboard": {
@@ -444,6 +462,7 @@
         "assetId": "kind-hero-kind-brand-hero-c7224d4b8fb7",
         "path": "KiND/assets/brand-images/kind-brand-hero.png",
         "sitePath": "https://media.apuch.art/public/kind/kind-hero-kind-brand-hero-c7224d4b8fb7/c7224d4b8fb7d8058636e35bc4df2c7f0dec0baf8968da57f533a6918cf33ee3/original.png",
+        "mediaUrl": "https://media.apuch.art/public/kind/kind-hero-kind-brand-hero-c7224d4b8fb7/c7224d4b8fb7d8058636e35bc4df2c7f0dec0baf8968da57f533a6918cf33ee3/original.png",
         "title": "kind brand hero",
         "format": "PNG",
         "bytes": 2190640,

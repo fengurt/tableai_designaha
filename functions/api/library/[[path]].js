@@ -118,7 +118,9 @@ function rowToOrganization(row) {
   return {
     id: row.id, slug: row.slug, name: row.name, nativeName: row.native_name, mainLanguage: row.main_language,
     description: row.description, officialWebsite: row.official_website, logoUrl: row.logo_url,
-    logoSourceUrl: row.logo_source_url, country: row.country, headquarters: row.headquarters, industry: row.industry,
+    logoSourceUrl: row.logo_source_url, logoSource: row.logo_source || "monogram", logoProvider: row.logo_provider || "",
+    logoQuality: row.logo_quality || "fallback", logoStatus: row.logo_status || "pending", logoProvenanceUrl: row.logo_provenance_url || "",
+    fallbackLogoUrl: row.fallback_logo_url || "", logoCheckedAt: row.logo_checked_at || null, country: row.country, headquarters: row.headquarters, industry: row.industry,
     ticker: row.ticker, verificationStatus: row.verification_status, sourceUrl: row.source_url,
     sourcePublisher: row.source_publisher, sourceDate: row.source_date, fetchedAt: row.fetched_at, updatedAt: row.updated_at,
     sourceId: row.source_id, rank: row.rank, year: row.year,

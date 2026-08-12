@@ -26,6 +26,10 @@ function variantKey(key, size, format) {
 
 function cacheResult(response, state, timing = "", method = "GET") {
   const headers = new Headers(response.headers);
+  if (!/\bprivate\b/i.test(headers.get("Cache-Control") || "")) {
+    headers.set("Access-Control-Allow-Origin", "*");
+    headers.set("Cross-Origin-Resource-Policy", "cross-origin");
+  }
   headers.set("X-IPTrust-Cache", state);
   headers.set("Server-Timing", `edge-cache;desc=${state}${timing ? `, ${timing}` : ""}`);
   headers.set("Timing-Allow-Origin", "*");

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "slug": "sidera",
-  "count": 1,
+  "count": 3,
   "items": [
     {
       "id": "sidera-hero-sidera-brand-hero-3501c8d23cb5",
@@ -25,6 +25,52 @@
       "legacyUrls": [
         "/assets/brand-images/sidera.png"
       ],
+      "status": "ready",
+      "version": 1
+    },
+    {
+      "id": "sidera-logo-sidera-logo-small-5b6faaba06bd",
+      "ownerType": "owned-ip",
+      "ownerId": "sidera",
+      "role": "logo",
+      "title": "sidera logo small",
+      "access": "public",
+      "sourcePath": "Sidera/assets/brand-images/sidera-logo-small.jpeg",
+      "sourceFilename": "sidera-logo-small.jpeg",
+      "sha256": "5b6faaba06bdd791c480b94aeb0e0d0face1ae67eca65d12334c036828c72149",
+      "mimeType": "image/jpeg",
+      "extension": "jpg",
+      "bytes": 15016,
+      "size": "14.7 KB",
+      "width": 320,
+      "height": 320,
+      "dimensions": "320 x 320 px",
+      "objectKey": "public/sidera/sidera-logo-sidera-logo-small-5b6faaba06bd/5b6faaba06bdd791c480b94aeb0e0d0face1ae67eca65d12334c036828c72149/original.jpg",
+      "mediaUrl": "https://media.apuch.art/public/sidera/sidera-logo-sidera-logo-small-5b6faaba06bd/5b6faaba06bdd791c480b94aeb0e0d0face1ae67eca65d12334c036828c72149/original.jpg",
+      "legacyUrls": [],
+      "status": "ready",
+      "version": 1
+    },
+    {
+      "id": "sidera-logo-sidera-logo-220079a53598",
+      "ownerType": "owned-ip",
+      "ownerId": "sidera",
+      "role": "logo",
+      "title": "sidera logo",
+      "access": "public",
+      "sourcePath": "Sidera/assets/brand-images/sidera-logo.png",
+      "sourceFilename": "sidera-logo.png",
+      "sha256": "220079a535987196ce0567964022154788e52c0bb22ec5c2b05e99a5cfa34658",
+      "mimeType": "image/png",
+      "extension": "png",
+      "bytes": 105714,
+      "size": "103.2 KB",
+      "width": 2000,
+      "height": 2000,
+      "dimensions": "2000 x 2000 px",
+      "objectKey": "public/sidera/sidera-logo-sidera-logo-220079a53598/220079a535987196ce0567964022154788e52c0bb22ec5c2b05e99a5cfa34658/original.png",
+      "mediaUrl": "https://media.apuch.art/public/sidera/sidera-logo-sidera-logo-220079a53598/220079a535987196ce0567964022154788e52c0bb22ec5c2b05e99a5cfa34658/original.png",
+      "legacyUrls": [],
       "status": "ready",
       "version": 1
     }
