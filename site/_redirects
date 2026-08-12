@@ -8,4 +8,6 @@
 /brands  /api/brands.json  200
 /knowledge  /library/index.html  200
 /library  /library/index.html  200
+/fonts/  /fonts  302
+/type  /fonts  302
 /ip-system  /ip_sys.md  200

@@ -18,6 +18,11 @@ const checks = [
     expect: (response, body) => response.ok && Array.isArray(JSON.parse(body).fonts),
   },
   {
+    name: "font-directory",
+    url: "https://apuch.art/fonts",
+    expect: (response, body) => response.ok && /font-directory-page/.test(body) && /data-font-search/.test(body),
+  },
+  {
     name: "edge-health",
     url: "https://edge.apuch.art/api/v2/health",
     expect: (response, body) => response.ok && JSON.parse(body).ok === true,

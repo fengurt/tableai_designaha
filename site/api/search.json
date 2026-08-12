@@ -5549,7 +5549,7 @@
     "title": "Noto Sans SC",
     "subtitle": "思源黑体 · OFL-1.1 · 中文无衬线",
     "text": "中文无衬线 Simplified Chinese sans serif 界面、正文、品牌规范 UI, body copy, brand guidelines Hans Latin \"Noto Sans SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif Noto Fonts",
-    "url": "ip-evolution#open-source-type"
+    "url": "fonts?q=Noto%20Sans%20SC#font-noto-sans-sc"
   },
   {
     "type": "font",
@@ -5557,7 +5557,7 @@
     "title": "Noto Serif SC",
     "subtitle": "思源宋体 · OFL-1.1 · 中文衬线",
     "text": "中文衬线 Simplified Chinese serif 标题、出版、文化叙事 Display, publishing, cultural narratives Hans Latin \"Noto Serif SC\", \"Songti SC\", SimSun, serif Noto Fonts",
-    "url": "ip-evolution#open-source-type"
+    "url": "fonts?q=Noto%20Serif%20SC#font-noto-serif-sc"
   },
   {
     "type": "font",
@@ -5565,7 +5565,7 @@
     "title": "IBM Plex Sans SC",
     "subtitle": "IBM Plex 简体中文 · OFL-1.1 · 中文现代无衬线",
     "text": "中文现代无衬线 Modern Simplified Chinese sans serif 科技品牌、数据界面、专业文档 Technology brands, data UI, professional documents Hans Latin \"IBM Plex Sans SC\", \"PingFang SC\", sans-serif IBM",
-    "url": "ip-evolution#open-source-type"
+    "url": "fonts?q=IBM%20Plex%20Sans%20SC#font-ibm-plex-sans-sc"
   },
   {
     "type": "font",
@@ -5573,7 +5573,7 @@
     "title": "Inter",
     "subtitle": "OFL-1.1 · 英文界面无衬线",
     "text": "英文界面无衬线 Latin UI sans serif 英文界面、产品、屏幕正文 Product UI and screen typography Latin Greek Cyrillic Inter, \"Helvetica Neue\", Arial, sans-serif Rasmus Andersson",
-    "url": "ip-evolution#open-source-type"
+    "url": "fonts?q=Inter#font-inter"
   },
   {
     "type": "font",
@@ -5581,7 +5581,7 @@
     "title": "IBM Plex Mono",
     "subtitle": "IBM Plex 等宽 · OFL-1.1 · 英文等宽",
     "text": "英文等宽 Latin monospace API、数据、代码、资产编号 APIs, data, code, asset identifiers Latin Greek Cyrillic \"IBM Plex Mono\", \"SFMono-Regular\", Consolas, monospace IBM",
-    "url": "ip-evolution#open-source-type"
+    "url": "fonts?q=IBM%20Plex%20Mono#font-ibm-plex-mono"
   },
   {
     "type": "font",
@@ -5589,6 +5589,126 @@
     "title": "EB Garamond",
     "subtitle": "OFL-1.1 · 英文人文衬线",
     "text": "英文人文衬线 Humanist Latin serif 出版、长文、文化与高端品牌 Publishing, long-form, cultural and premium brands Latin Greek Cyrillic \"EB Garamond\", Garamond, Georgia, serif Octavio Pardo / Google Fonts",
-    "url": "ip-evolution#open-source-type"
+    "url": "fonts?q=EB%20Garamond#font-eb-garamond"
+  },
+  {
+    "type": "font",
+    "slug": "zcool-xiaowei",
+    "title": "ZCOOL XiaoWei",
+    "subtitle": "站酷小薇体 · OFL-1.1 · 中文展示衬线",
+    "text": "中文展示衬线 Chinese display serif 文化标题、包装、短句展示 Cultural display, packaging and short headlines Hans Latin \"ZCOOL XiaoWei\", Georgia, serif ZCOOL / Google Fonts",
+    "url": "fonts?q=ZCOOL%20XiaoWei#font-zcool-xiaowei"
+  },
+  {
+    "type": "font",
+    "slug": "zcool-qingke-huangyou",
+    "title": "ZCOOL QingKe HuangYou",
+    "subtitle": "站酷庆科黄油体 · OFL-1.1 · 中文几何展示",
+    "text": "中文几何展示 Chinese geometric display 海报、餐饮、活动与年轻品牌 Posters, food brands, events and youth culture Hans Latin \"ZCOOL QingKe HuangYou\", \"Helvetica Neue\", Arial, sans-serif ZCOOL / Google Fonts",
+    "url": "fonts?q=ZCOOL%20QingKe%20HuangYou#font-zcool-qingke-huangyou"
+  },
+  {
+    "type": "font",
+    "slug": "ma-shan-zheng",
+    "title": "Ma Shan Zheng",
+    "subtitle": "马善政毛笔楷书 · OFL-1.1 · 中文书写展示",
+    "text": "中文书写展示 Chinese brush display 文化项目、标题与有限字数的品牌表达 Cultural projects, titles and short-form brand expression Hans Latin \"Ma Shan Zheng\", \"Helvetica Neue\", Arial, sans-serif Google Fonts",
+    "url": "fonts?q=Ma%20Shan%20Zheng#font-ma-shan-zheng"
+  },
+  {
+    "type": "font",
+    "slug": "long-cang",
+    "title": "Long Cang",
+    "subtitle": "龙藏体 · OFL-1.1 · 中文书法展示",
+    "text": "中文书法展示 Chinese calligraphic display 传统文化、餐饮题字与短标题 Heritage, food branding and short calligraphic titles Hans Latin \"Long Cang\", \"Helvetica Neue\", Arial, sans-serif Google Fonts",
+    "url": "fonts?q=Long%20Cang#font-long-cang"
+  },
+  {
+    "type": "font",
+    "slug": "roboto-flex",
+    "title": "Roboto Flex",
+    "subtitle": "OFL-1.1 · 英文可变无衬线",
+    "text": "英文可变无衬线 Variable Latin sans serif 响应式界面、产品与复杂排版系统 Responsive UI, products and complex type systems Latin \"Roboto Flex\", \"Helvetica Neue\", Arial, sans-serif Google Fonts",
+    "url": "fonts?q=Roboto%20Flex#font-roboto-flex"
+  },
+  {
+    "type": "font",
+    "slug": "open-sans",
+    "title": "Open Sans",
+    "subtitle": "OFL-1.1 · 英文易读无衬线",
+    "text": "英文易读无衬线 Readable Latin sans serif 长正文、界面与公共信息 Long-form copy, UI and public information Latin Greek Cyrillic Hebrew \"Open Sans\", \"Helvetica Neue\", Arial, sans-serif Google Fonts",
+    "url": "fonts?q=Open%20Sans#font-open-sans"
+  },
+  {
+    "type": "font",
+    "slug": "source-sans-3",
+    "title": "Source Sans 3",
+    "subtitle": "OFL-1.1 · 英文专业无衬线",
+    "text": "英文专业无衬线 Professional Latin sans serif 品牌系统、编辑排版与数字产品 Brand systems, editorial layouts and digital products Latin Greek Cyrillic \"Source Sans 3\", \"Helvetica Neue\", Arial, sans-serif Adobe / Google Fonts",
+    "url": "fonts?q=Source%20Sans%203#font-source-sans-3"
+  },
+  {
+    "type": "font",
+    "slug": "dm-sans",
+    "title": "DM Sans",
+    "subtitle": "OFL-1.1 · 英文几何无衬线",
+    "text": "英文几何无衬线 Geometric Latin sans serif 消费品牌、产品界面与短标题 Consumer brands, product UI and short display Latin \"DM Sans\", \"Helvetica Neue\", Arial, sans-serif Google Fonts",
+    "url": "fonts?q=DM%20Sans#font-dm-sans"
+  },
+  {
+    "type": "font",
+    "slug": "work-sans",
+    "title": "Work Sans",
+    "subtitle": "OFL-1.1 · 英文屏幕无衬线",
+    "text": "英文屏幕无衬线 Screen-first Latin sans serif 界面、信息设计与品牌正文 UI, information design and brand copy Latin \"Work Sans\", \"Helvetica Neue\", Arial, sans-serif Google Fonts",
+    "url": "fonts?q=Work%20Sans#font-work-sans"
+  },
+  {
+    "type": "font",
+    "slug": "space-grotesk",
+    "title": "Space Grotesk",
+    "subtitle": "OFL-1.1 · 英文科技展示",
+    "text": "英文科技展示 Technical Latin display sans 科技品牌、标题与数据产品 Technology brands, headlines and data products Latin \"Space Grotesk\", \"Helvetica Neue\", Arial, sans-serif Google Fonts",
+    "url": "fonts?q=Space%20Grotesk#font-space-grotesk"
+  },
+  {
+    "type": "font",
+    "slug": "playfair-display",
+    "title": "Playfair Display",
+    "subtitle": "OFL-1.1 · 英文高对比衬线",
+    "text": "英文高对比衬线 High-contrast Latin serif 出版、文化、酒店与编辑标题 Publishing, culture, hospitality and editorial display Latin Cyrillic \"Playfair Display\", Georgia, serif Google Fonts",
+    "url": "fonts?q=Playfair%20Display#font-playfair-display"
+  },
+  {
+    "type": "font",
+    "slug": "source-serif-4",
+    "title": "Source Serif 4",
+    "subtitle": "OFL-1.1 · 英文正文衬线",
+    "text": "英文正文衬线 Text-focused Latin serif 报告、长文、出版与规范文件 Reports, long-form, publishing and guidelines Latin Greek Cyrillic \"Source Serif 4\", Georgia, serif Adobe / Google Fonts",
+    "url": "fonts?q=Source%20Serif%204#font-source-serif-4"
+  },
+  {
+    "type": "font",
+    "slug": "jetbrains-mono",
+    "title": "JetBrains Mono",
+    "subtitle": "OFL-1.1 · 英文开发等宽",
+    "text": "英文开发等宽 Developer monospace 代码、API 文档、数据和开发工具 Code, API docs, data and developer tools Latin Greek Cyrillic \"JetBrains Mono\", \"SFMono-Regular\", Consolas, monospace JetBrains / Google Fonts",
+    "url": "fonts?q=JetBrains%20Mono#font-jetbrains-mono"
+  },
+  {
+    "type": "font",
+    "slug": "source-code-pro",
+    "title": "Source Code Pro",
+    "subtitle": "OFL-1.1 · 英文信息等宽",
+    "text": "英文信息等宽 Information monospace 技术品牌、资产编号、代码与表格 Technical brands, identifiers, code and tables Latin Greek Cyrillic \"Source Code Pro\", \"SFMono-Regular\", Consolas, monospace Adobe / Google Fonts",
+    "url": "fonts?q=Source%20Code%20Pro#font-source-code-pro"
+  },
+  {
+    "type": "font",
+    "slug": "google-sans-code",
+    "title": "Google Sans Code",
+    "subtitle": "OFL-1.1 · 英文现代等宽",
+    "text": "英文现代等宽 Modern coding monospace 代码、Agent 输出与技术界面 Code, agent output and technical interfaces Latin Greek Cyrillic \"Google Sans Code\", \"SFMono-Regular\", Consolas, monospace Google Fonts",
+    "url": "fonts?q=Google%20Sans%20Code#font-google-sans-code"
   }
 ]

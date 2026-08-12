@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-11T00:28:54.823Z",
-  "verifiedAt": "2026-08-11",
+  "generatedAt": "2026-08-12T10:55:14.535Z",
+  "verifiedAt": "2026-08-12",
   "name": "IPTrust Open-source Type Library",
   "description": {
     "zh": "采用开源许可证、允许商业使用与网页嵌入的中英文字体参考。",
@@ -11,6 +11,53 @@
     "zh": "字体版权归各自作者所有。商业使用、嵌入、修改与再分发须遵守对应许可证；字体文件不可单独售卖。",
     "en": "Copyright remains with each font author. Commercial use, embedding, modification and redistribution must follow the applicable license; font files may not be sold by themselves."
   },
+  "directories": [
+    {
+      "id": "google-fonts",
+      "name": "Google Fonts",
+      "url": "https://fonts.google.com/",
+      "note": {
+        "zh": "大规模开源字体目录，可按语言、分类与可变轴筛选。",
+        "en": "Large open-source catalog with language, category and variable-axis filters."
+      }
+    },
+    {
+      "id": "google-fonts-source",
+      "name": "Google Fonts Source",
+      "url": "https://github.com/google/fonts",
+      "note": {
+        "zh": "字体文件、元数据和逐字体许可证的官方仓库。",
+        "en": "Official repository for files, metadata and per-family licenses."
+      }
+    },
+    {
+      "id": "noto",
+      "name": "Noto Fonts",
+      "url": "https://fonts.google.com/noto",
+      "note": {
+        "zh": "覆盖多语言与多书写系统的官方字体集合。",
+        "en": "Official collection spanning languages and writing systems."
+      }
+    },
+    {
+      "id": "ibm-plex",
+      "name": "IBM Plex",
+      "url": "https://github.com/IBM/plex",
+      "note": {
+        "zh": "IBM 维护的开源字体家族与源文件。",
+        "en": "IBM-maintained open-source family and sources."
+      }
+    },
+    {
+      "id": "sil-fonts",
+      "name": "SIL Fonts",
+      "url": "https://software.sil.org/fonts/",
+      "note": {
+        "zh": "由 SIL 维护、覆盖多语种的 OFL 字体目录。",
+        "en": "SIL-maintained OFL catalog with broad script coverage."
+      }
+    }
+  ],
   "fonts": [
     {
       "id": "noto-sans-sc",
@@ -22,6 +69,7 @@
         "Hans",
         "Latin"
       ],
+      "categoryKey": "sans",
       "category": {
         "zh": "中文无衬线",
         "en": "Simplified Chinese sans serif"
@@ -72,6 +120,7 @@
         "Hans",
         "Latin"
       ],
+      "categoryKey": "serif",
       "category": {
         "zh": "中文衬线",
         "en": "Simplified Chinese serif"
@@ -122,6 +171,7 @@
         "Hans",
         "Latin"
       ],
+      "categoryKey": "sans",
       "category": {
         "zh": "中文现代无衬线",
         "en": "Modern Simplified Chinese sans serif"
@@ -186,6 +236,7 @@
         "Greek",
         "Cyrillic"
       ],
+      "categoryKey": "sans",
       "category": {
         "zh": "英文界面无衬线",
         "en": "Latin UI sans serif"
@@ -237,6 +288,7 @@
         "Greek",
         "Cyrillic"
       ],
+      "categoryKey": "mono",
       "category": {
         "zh": "英文等宽",
         "en": "Latin monospace"
@@ -301,6 +353,7 @@
         "Greek",
         "Cyrillic"
       ],
+      "categoryKey": "serif",
       "category": {
         "zh": "英文人文衬线",
         "en": "Humanist Latin serif"
@@ -338,6 +391,774 @@
           "sourceUrl": "https://raw.githubusercontent.com/google/fonts/038b637da7b3fd956a4ed93ffc607c3d5e4ce172/ofl/ebgaramond/EBGaramond%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-eb-garamond-400-800/9a84a3f622f5d1b5d1109216e49b1d0149e3785871199e2a60afc5e5badb66ac/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-eb-garamond-400-800/9a84a3f622f5d1b5d1109216e49b1d0149e3785871199e2a60afc5e5badb66ac/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "zcool-xiaowei",
+      "name": "ZCOOL XiaoWei",
+      "nameZh": "站酷小薇体",
+      "family": "ZCOOL XiaoWei",
+      "group": "zh",
+      "scripts": [
+        "Hans",
+        "Latin"
+      ],
+      "categoryKey": "serif",
+      "category": {
+        "zh": "中文展示衬线",
+        "en": "Chinese display serif"
+      },
+      "useCases": {
+        "zh": "文化标题、包装、短句展示",
+        "en": "Cultural display, packaging and short headlines"
+      },
+      "sample": "高楼宾客似曾识，日光底下无新事。让品牌成为可管理、可调用、可持续进化的系统。中文字体参考 0123456789 IPTrust Agent API MCP",
+      "cssStack": "\"ZCOOL XiaoWei\", Georgia, serif",
+      "weights": [
+        "400"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/google/fonts/blob/main/ofl/zcoolxiaowei/OFL.txt"
+      },
+      "source": {
+        "publisher": "ZCOOL / Google Fonts",
+        "projectUrl": "https://fonts.google.com/specimen/ZCOOL+XiaoWei",
+        "repository": "google/fonts",
+        "revision": "038b637da7b3fd956a4ed93ffc607c3d5e4ce172",
+        "release": "038b637da7b3"
+      },
+      "assets": [
+        {
+          "id": "font-zcool-xiaowei-400",
+          "weight": "400",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 19892,
+          "sha256": "1c7f3eb66e6ac8c1ecc1d5c328c6f53c5f641b62f711c57710d0c29e3e231045",
+          "sourceSha256": "a42b620140f493db42f741351dfbf343c0936d58588ee8004b8b2a218d997ff1",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/038b637da7b3fd956a4ed93ffc607c3d5e4ce172/ofl/zcoolxiaowei/ZCOOLXiaoWei-Regular.ttf",
+          "objectKey": "public/iptrust/font-zcool-xiaowei-400/1c7f3eb66e6ac8c1ecc1d5c328c6f53c5f641b62f711c57710d0c29e3e231045/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-zcool-xiaowei-400/1c7f3eb66e6ac8c1ecc1d5c328c6f53c5f641b62f711c57710d0c29e3e231045/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "zcool-qingke-huangyou",
+      "name": "ZCOOL QingKe HuangYou",
+      "nameZh": "站酷庆科黄油体",
+      "family": "ZCOOL QingKe HuangYou",
+      "group": "zh",
+      "scripts": [
+        "Hans",
+        "Latin"
+      ],
+      "categoryKey": "display",
+      "category": {
+        "zh": "中文几何展示",
+        "en": "Chinese geometric display"
+      },
+      "useCases": {
+        "zh": "海报、餐饮、活动与年轻品牌",
+        "en": "Posters, food brands, events and youth culture"
+      },
+      "sample": "高楼宾客似曾识，日光底下无新事。让品牌成为可管理、可调用、可持续进化的系统。中文字体参考 0123456789 IPTrust Agent API MCP",
+      "cssStack": "\"ZCOOL QingKe HuangYou\", \"Helvetica Neue\", Arial, sans-serif",
+      "weights": [
+        "400"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/google/fonts/blob/main/ofl/zcoolqingkehuangyou/OFL.txt"
+      },
+      "source": {
+        "publisher": "ZCOOL / Google Fonts",
+        "projectUrl": "https://fonts.google.com/specimen/ZCOOL+QingKe+HuangYou",
+        "repository": "google/fonts",
+        "revision": "038b637da7b3fd956a4ed93ffc607c3d5e4ce172",
+        "release": "038b637da7b3"
+      },
+      "assets": [
+        {
+          "id": "font-zcool-qingke-huangyou-400",
+          "weight": "400",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 14356,
+          "sha256": "cb7be65b33f752b5138b5ded9806c1528c324ba3868ae2561d6661b31c32eac4",
+          "sourceSha256": "54f0c0df4308cd74cd0f2fd3494ae054dbc4a1fd6fa7d71f4807eb4cdd8b4136",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/038b637da7b3fd956a4ed93ffc607c3d5e4ce172/ofl/zcoolqingkehuangyou/ZCOOLQingKeHuangYou-Regular.ttf",
+          "objectKey": "public/iptrust/font-zcool-qingke-huangyou-400/cb7be65b33f752b5138b5ded9806c1528c324ba3868ae2561d6661b31c32eac4/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-zcool-qingke-huangyou-400/cb7be65b33f752b5138b5ded9806c1528c324ba3868ae2561d6661b31c32eac4/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "ma-shan-zheng",
+      "name": "Ma Shan Zheng",
+      "nameZh": "马善政毛笔楷书",
+      "family": "Ma Shan Zheng",
+      "group": "zh",
+      "scripts": [
+        "Hans",
+        "Latin"
+      ],
+      "categoryKey": "handwriting",
+      "category": {
+        "zh": "中文书写展示",
+        "en": "Chinese brush display"
+      },
+      "useCases": {
+        "zh": "文化项目、标题与有限字数的品牌表达",
+        "en": "Cultural projects, titles and short-form brand expression"
+      },
+      "sample": "高楼宾客似曾识，日光底下无新事。让品牌成为可管理、可调用、可持续进化的系统。中文字体参考 0123456789 IPTrust Agent API MCP",
+      "cssStack": "\"Ma Shan Zheng\", \"Helvetica Neue\", Arial, sans-serif",
+      "weights": [
+        "400"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/google/fonts/blob/main/ofl/mashanzheng/OFL.txt"
+      },
+      "source": {
+        "publisher": "Google Fonts",
+        "projectUrl": "https://fonts.google.com/specimen/Ma+Shan+Zheng",
+        "repository": "google/fonts",
+        "revision": "038b637da7b3fd956a4ed93ffc607c3d5e4ce172",
+        "release": "038b637da7b3"
+      },
+      "assets": [
+        {
+          "id": "font-ma-shan-zheng-400",
+          "weight": "400",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 19880,
+          "sha256": "2f50f7097dd7024a446077b331b361d5af1244be466583d9e8fe5be038be9e75",
+          "sourceSha256": "6d2546bb189c732a8ca29af9e22457b152387d158aa459e4ac2ce1e51788b7fb",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/038b637da7b3fd956a4ed93ffc607c3d5e4ce172/ofl/mashanzheng/MaShanZheng-Regular.ttf",
+          "objectKey": "public/iptrust/font-ma-shan-zheng-400/2f50f7097dd7024a446077b331b361d5af1244be466583d9e8fe5be038be9e75/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-ma-shan-zheng-400/2f50f7097dd7024a446077b331b361d5af1244be466583d9e8fe5be038be9e75/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "long-cang",
+      "name": "Long Cang",
+      "nameZh": "龙藏体",
+      "family": "Long Cang",
+      "group": "zh",
+      "scripts": [
+        "Hans",
+        "Latin"
+      ],
+      "categoryKey": "handwriting",
+      "category": {
+        "zh": "中文书法展示",
+        "en": "Chinese calligraphic display"
+      },
+      "useCases": {
+        "zh": "传统文化、餐饮题字与短标题",
+        "en": "Heritage, food branding and short calligraphic titles"
+      },
+      "sample": "高楼宾客似曾识，日光底下无新事。让品牌成为可管理、可调用、可持续进化的系统。中文字体参考 0123456789 IPTrust Agent API MCP",
+      "cssStack": "\"Long Cang\", \"Helvetica Neue\", Arial, sans-serif",
+      "weights": [
+        "400"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/google/fonts/blob/main/ofl/longcang/OFL.txt"
+      },
+      "source": {
+        "publisher": "Google Fonts",
+        "projectUrl": "https://fonts.google.com/specimen/Long+Cang",
+        "repository": "google/fonts",
+        "revision": "038b637da7b3fd956a4ed93ffc607c3d5e4ce172",
+        "release": "038b637da7b3"
+      },
+      "assets": [
+        {
+          "id": "font-long-cang-400",
+          "weight": "400",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 17528,
+          "sha256": "1021ecae675a9fd3d593342a0a81dd09b3e6fd52bbca7ad9728cfedef0fa5df7",
+          "sourceSha256": "e5bf2c3f24ef2327c6f136d8f73e2f9dfdf44896fdbeb35a9515f44777bb91bc",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/038b637da7b3fd956a4ed93ffc607c3d5e4ce172/ofl/longcang/LongCang-Regular.ttf",
+          "objectKey": "public/iptrust/font-long-cang-400/1021ecae675a9fd3d593342a0a81dd09b3e6fd52bbca7ad9728cfedef0fa5df7/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-long-cang-400/1021ecae675a9fd3d593342a0a81dd09b3e6fd52bbca7ad9728cfedef0fa5df7/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "roboto-flex",
+      "name": "Roboto Flex",
+      "nameZh": "Roboto Flex",
+      "family": "Roboto Flex",
+      "group": "en",
+      "scripts": [
+        "Latin"
+      ],
+      "categoryKey": "sans",
+      "category": {
+        "zh": "英文可变无衬线",
+        "en": "Variable Latin sans serif"
+      },
+      "useCases": {
+        "zh": "响应式界面、产品与复杂排版系统",
+        "en": "Responsive UI, products and complex type systems"
+      },
+      "sample": "Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP",
+      "cssStack": "\"Roboto Flex\", \"Helvetica Neue\", Arial, sans-serif",
+      "weights": [
+        "100 900"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/google/fonts/blob/main/ofl/robotoflex/OFL.txt"
+      },
+      "source": {
+        "publisher": "Google Fonts",
+        "projectUrl": "https://fonts.google.com/specimen/Roboto+Flex",
+        "repository": "google/fonts",
+        "revision": "038b637da7b3fd956a4ed93ffc607c3d5e4ce172",
+        "release": "038b637da7b3"
+      },
+      "assets": [
+        {
+          "id": "font-roboto-flex-100-900",
+          "weight": "100 900",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 153008,
+          "sha256": "ba63dcfd9a0a947015229157a6a5ae725671b9acdba4103041ca41bf1377e121",
+          "sourceSha256": "9b523f7d82593df0107173849ebb8c817471a1df4b4fb2c3cbf40cfd810c8281",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/038b637da7b3fd956a4ed93ffc607c3d5e4ce172/ofl/robotoflex/RobotoFlex%5BGRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght%5D.ttf",
+          "objectKey": "public/iptrust/font-roboto-flex-100-900/ba63dcfd9a0a947015229157a6a5ae725671b9acdba4103041ca41bf1377e121/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-roboto-flex-100-900/ba63dcfd9a0a947015229157a6a5ae725671b9acdba4103041ca41bf1377e121/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "open-sans",
+      "name": "Open Sans",
+      "nameZh": "Open Sans",
+      "family": "Open Sans",
+      "group": "en",
+      "scripts": [
+        "Latin",
+        "Greek",
+        "Cyrillic",
+        "Hebrew"
+      ],
+      "categoryKey": "sans",
+      "category": {
+        "zh": "英文易读无衬线",
+        "en": "Readable Latin sans serif"
+      },
+      "useCases": {
+        "zh": "长正文、界面与公共信息",
+        "en": "Long-form copy, UI and public information"
+      },
+      "sample": "Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP",
+      "cssStack": "\"Open Sans\", \"Helvetica Neue\", Arial, sans-serif",
+      "weights": [
+        "100 900"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/google/fonts/blob/main/ofl/opensans/OFL.txt"
+      },
+      "source": {
+        "publisher": "Google Fonts",
+        "projectUrl": "https://fonts.google.com/specimen/Open+Sans",
+        "repository": "google/fonts",
+        "revision": "038b637da7b3fd956a4ed93ffc607c3d5e4ce172",
+        "release": "038b637da7b3"
+      },
+      "assets": [
+        {
+          "id": "font-open-sans-100-900",
+          "weight": "100 900",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 52704,
+          "sha256": "bde34ec1189ab60bb757eaa1c3eb4edbe85c21a1f2379bd73a7b3bb7556bef9f",
+          "sourceSha256": "36643644f318a812aab2d2ed3bb98f8cf0872527f835fe9398d95fe6b9adb878",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/038b637da7b3fd956a4ed93ffc607c3d5e4ce172/ofl/opensans/OpenSans%5Bwdth,wght%5D.ttf",
+          "objectKey": "public/iptrust/font-open-sans-100-900/bde34ec1189ab60bb757eaa1c3eb4edbe85c21a1f2379bd73a7b3bb7556bef9f/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-open-sans-100-900/bde34ec1189ab60bb757eaa1c3eb4edbe85c21a1f2379bd73a7b3bb7556bef9f/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "source-sans-3",
+      "name": "Source Sans 3",
+      "nameZh": "Source Sans 3",
+      "family": "Source Sans 3",
+      "group": "en",
+      "scripts": [
+        "Latin",
+        "Greek",
+        "Cyrillic"
+      ],
+      "categoryKey": "sans",
+      "category": {
+        "zh": "英文专业无衬线",
+        "en": "Professional Latin sans serif"
+      },
+      "useCases": {
+        "zh": "品牌系统、编辑排版与数字产品",
+        "en": "Brand systems, editorial layouts and digital products"
+      },
+      "sample": "Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP",
+      "cssStack": "\"Source Sans 3\", \"Helvetica Neue\", Arial, sans-serif",
+      "weights": [
+        "100 900"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/google/fonts/blob/main/ofl/sourcesans3/OFL.txt"
+      },
+      "source": {
+        "publisher": "Adobe / Google Fonts",
+        "projectUrl": "https://fonts.google.com/specimen/Source+Sans+3",
+        "repository": "google/fonts",
+        "revision": "038b637da7b3fd956a4ed93ffc607c3d5e4ce172",
+        "release": "038b637da7b3"
+      },
+      "assets": [
+        {
+          "id": "font-source-sans-3-100-900",
+          "weight": "100 900",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 30420,
+          "sha256": "d36ab24cffa66c48ab8ba1db6faede219de964b4410fd8a6eaf1a8984802c2b0",
+          "sourceSha256": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/038b637da7b3fd956a4ed93ffc607c3d5e4ce172/ofl/sourcesans3/SourceSans3%5Bwght%5D.ttf",
+          "objectKey": "public/iptrust/font-source-sans-3-100-900/d36ab24cffa66c48ab8ba1db6faede219de964b4410fd8a6eaf1a8984802c2b0/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-source-sans-3-100-900/d36ab24cffa66c48ab8ba1db6faede219de964b4410fd8a6eaf1a8984802c2b0/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "dm-sans",
+      "name": "DM Sans",
+      "nameZh": "DM Sans",
+      "family": "DM Sans",
+      "group": "en",
+      "scripts": [
+        "Latin"
+      ],
+      "categoryKey": "sans",
+      "category": {
+        "zh": "英文几何无衬线",
+        "en": "Geometric Latin sans serif"
+      },
+      "useCases": {
+        "zh": "消费品牌、产品界面与短标题",
+        "en": "Consumer brands, product UI and short display"
+      },
+      "sample": "Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP",
+      "cssStack": "\"DM Sans\", \"Helvetica Neue\", Arial, sans-serif",
+      "weights": [
+        "100 900"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/google/fonts/blob/main/ofl/dmsans/OFL.txt"
+      },
+      "source": {
+        "publisher": "Google Fonts",
+        "projectUrl": "https://fonts.google.com/specimen/DM+Sans",
+        "repository": "google/fonts",
+        "revision": "038b637da7b3fd956a4ed93ffc607c3d5e4ce172",
+        "release": "038b637da7b3"
+      },
+      "assets": [
+        {
+          "id": "font-dm-sans-100-900",
+          "weight": "100 900",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 34860,
+          "sha256": "87478112bc1abb6b43e6022fe77b8602939d736bb7e612b30755c3edf8c654e2",
+          "sourceSha256": "8cd08d97e89c24d0aa92edd2f0f4c8ee6195eee9b7c9f154865a58b02f0c1c0d",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/038b637da7b3fd956a4ed93ffc607c3d5e4ce172/ofl/dmsans/DMSans%5Bopsz,wght%5D.ttf",
+          "objectKey": "public/iptrust/font-dm-sans-100-900/87478112bc1abb6b43e6022fe77b8602939d736bb7e612b30755c3edf8c654e2/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-dm-sans-100-900/87478112bc1abb6b43e6022fe77b8602939d736bb7e612b30755c3edf8c654e2/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "work-sans",
+      "name": "Work Sans",
+      "nameZh": "Work Sans",
+      "family": "Work Sans",
+      "group": "en",
+      "scripts": [
+        "Latin"
+      ],
+      "categoryKey": "sans",
+      "category": {
+        "zh": "英文屏幕无衬线",
+        "en": "Screen-first Latin sans serif"
+      },
+      "useCases": {
+        "zh": "界面、信息设计与品牌正文",
+        "en": "UI, information design and brand copy"
+      },
+      "sample": "Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP",
+      "cssStack": "\"Work Sans\", \"Helvetica Neue\", Arial, sans-serif",
+      "weights": [
+        "100 900"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/google/fonts/blob/main/ofl/worksans/OFL.txt"
+      },
+      "source": {
+        "publisher": "Google Fonts",
+        "projectUrl": "https://fonts.google.com/specimen/Work+Sans",
+        "repository": "google/fonts",
+        "revision": "038b637da7b3fd956a4ed93ffc607c3d5e4ce172",
+        "release": "038b637da7b3"
+      },
+      "assets": [
+        {
+          "id": "font-work-sans-100-900",
+          "weight": "100 900",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 37772,
+          "sha256": "2ac1989572e2abbf3b66595f9b6a1e9013eb8018c6a46cb18f97c9ef0165cde4",
+          "sourceSha256": "f50f61f2ba738e239442d40bf1069adb195c224b6a5a73a581fc2f3ed62a9f63",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/038b637da7b3fd956a4ed93ffc607c3d5e4ce172/ofl/worksans/WorkSans%5Bwght%5D.ttf",
+          "objectKey": "public/iptrust/font-work-sans-100-900/2ac1989572e2abbf3b66595f9b6a1e9013eb8018c6a46cb18f97c9ef0165cde4/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-work-sans-100-900/2ac1989572e2abbf3b66595f9b6a1e9013eb8018c6a46cb18f97c9ef0165cde4/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "space-grotesk",
+      "name": "Space Grotesk",
+      "nameZh": "Space Grotesk",
+      "family": "Space Grotesk",
+      "group": "en",
+      "scripts": [
+        "Latin"
+      ],
+      "categoryKey": "display",
+      "category": {
+        "zh": "英文科技展示",
+        "en": "Technical Latin display sans"
+      },
+      "useCases": {
+        "zh": "科技品牌、标题与数据产品",
+        "en": "Technology brands, headlines and data products"
+      },
+      "sample": "Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP",
+      "cssStack": "\"Space Grotesk\", \"Helvetica Neue\", Arial, sans-serif",
+      "weights": [
+        "300 700"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/google/fonts/blob/main/ofl/spacegrotesk/OFL.txt"
+      },
+      "source": {
+        "publisher": "Google Fonts",
+        "projectUrl": "https://fonts.google.com/specimen/Space+Grotesk",
+        "repository": "google/fonts",
+        "revision": "038b637da7b3fd956a4ed93ffc607c3d5e4ce172",
+        "release": "038b637da7b3"
+      },
+      "assets": [
+        {
+          "id": "font-space-grotesk-300-700",
+          "weight": "300 700",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 14292,
+          "sha256": "2ad1d8c2a946eb5e0305ede6391a912e08b31c23d8350b28c8c84ed7bc541692",
+          "sourceSha256": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/038b637da7b3fd956a4ed93ffc607c3d5e4ce172/ofl/spacegrotesk/SpaceGrotesk%5Bwght%5D.ttf",
+          "objectKey": "public/iptrust/font-space-grotesk-300-700/2ad1d8c2a946eb5e0305ede6391a912e08b31c23d8350b28c8c84ed7bc541692/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-space-grotesk-300-700/2ad1d8c2a946eb5e0305ede6391a912e08b31c23d8350b28c8c84ed7bc541692/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "playfair-display",
+      "name": "Playfair Display",
+      "nameZh": "Playfair Display",
+      "family": "Playfair Display",
+      "group": "en",
+      "scripts": [
+        "Latin",
+        "Cyrillic"
+      ],
+      "categoryKey": "serif",
+      "category": {
+        "zh": "英文高对比衬线",
+        "en": "High-contrast Latin serif"
+      },
+      "useCases": {
+        "zh": "出版、文化、酒店与编辑标题",
+        "en": "Publishing, culture, hospitality and editorial display"
+      },
+      "sample": "Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP",
+      "cssStack": "\"Playfair Display\", Georgia, serif",
+      "weights": [
+        "400 900"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/google/fonts/blob/main/ofl/playfairdisplay/OFL.txt"
+      },
+      "source": {
+        "publisher": "Google Fonts",
+        "projectUrl": "https://fonts.google.com/specimen/Playfair+Display",
+        "repository": "google/fonts",
+        "revision": "038b637da7b3fd956a4ed93ffc607c3d5e4ce172",
+        "release": "038b637da7b3"
+      },
+      "assets": [
+        {
+          "id": "font-playfair-display-400-900",
+          "weight": "400 900",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 26136,
+          "sha256": "a41d6dce1a54fb53f5b3a3493de48dfb518d6bc9bd13c3e119bb7ca81fc8adf1",
+          "sourceSha256": "c40f2293766a503bc70cce9e512ef844a4ccb7cbcde792fe2ea31d191917d8d6",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/038b637da7b3fd956a4ed93ffc607c3d5e4ce172/ofl/playfairdisplay/PlayfairDisplay%5Bwght%5D.ttf",
+          "objectKey": "public/iptrust/font-playfair-display-400-900/a41d6dce1a54fb53f5b3a3493de48dfb518d6bc9bd13c3e119bb7ca81fc8adf1/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-playfair-display-400-900/a41d6dce1a54fb53f5b3a3493de48dfb518d6bc9bd13c3e119bb7ca81fc8adf1/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "source-serif-4",
+      "name": "Source Serif 4",
+      "nameZh": "Source Serif 4",
+      "family": "Source Serif 4",
+      "group": "en",
+      "scripts": [
+        "Latin",
+        "Greek",
+        "Cyrillic"
+      ],
+      "categoryKey": "serif",
+      "category": {
+        "zh": "英文正文衬线",
+        "en": "Text-focused Latin serif"
+      },
+      "useCases": {
+        "zh": "报告、长文、出版与规范文件",
+        "en": "Reports, long-form, publishing and guidelines"
+      },
+      "sample": "Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP",
+      "cssStack": "\"Source Serif 4\", Georgia, serif",
+      "weights": [
+        "200 900"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/google/fonts/blob/main/ofl/sourceserif4/OFL.txt"
+      },
+      "source": {
+        "publisher": "Adobe / Google Fonts",
+        "projectUrl": "https://fonts.google.com/specimen/Source+Serif+4",
+        "repository": "google/fonts",
+        "revision": "038b637da7b3fd956a4ed93ffc607c3d5e4ce172",
+        "release": "038b637da7b3"
+      },
+      "assets": [
+        {
+          "id": "font-source-serif-4-200-900",
+          "weight": "200 900",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 122348,
+          "sha256": "af887d0ea6fe3ba8953868b3deb9a897193051562653262b74becee4b8105e89",
+          "sourceSha256": "97b2d4da6e3cb494b5a1e66ae176914d852ccabef49e0c02c0df25f3e39aca0b",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/038b637da7b3fd956a4ed93ffc607c3d5e4ce172/ofl/sourceserif4/SourceSerif4%5Bopsz,wght%5D.ttf",
+          "objectKey": "public/iptrust/font-source-serif-4-200-900/af887d0ea6fe3ba8953868b3deb9a897193051562653262b74becee4b8105e89/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-source-serif-4-200-900/af887d0ea6fe3ba8953868b3deb9a897193051562653262b74becee4b8105e89/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "jetbrains-mono",
+      "name": "JetBrains Mono",
+      "nameZh": "JetBrains Mono",
+      "family": "JetBrains Mono",
+      "group": "mono",
+      "scripts": [
+        "Latin",
+        "Greek",
+        "Cyrillic"
+      ],
+      "categoryKey": "mono",
+      "category": {
+        "zh": "英文开发等宽",
+        "en": "Developer monospace"
+      },
+      "useCases": {
+        "zh": "代码、API 文档、数据和开发工具",
+        "en": "Code, API docs, data and developer tools"
+      },
+      "sample": "IPTrust / Agent / API / MCP / #EFE6D2 / 0123456789 / brand.system.evolve()",
+      "cssStack": "\"JetBrains Mono\", \"SFMono-Regular\", Consolas, monospace",
+      "weights": [
+        "100 800"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/google/fonts/blob/main/ofl/jetbrainsmono/OFL.txt"
+      },
+      "source": {
+        "publisher": "JetBrains / Google Fonts",
+        "projectUrl": "https://fonts.google.com/specimen/JetBrains+Mono",
+        "repository": "google/fonts",
+        "revision": "038b637da7b3fd956a4ed93ffc607c3d5e4ce172",
+        "release": "038b637da7b3"
+      },
+      "assets": [
+        {
+          "id": "font-jetbrains-mono-100-800",
+          "weight": "100 800",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 10936,
+          "sha256": "7e8685f2f91ada1ca782e43685fe40d0c870add56b17ceed0a335e932056a34f",
+          "sourceSha256": "48715a42ec242c21e9f02692891e147d022299a52e48d5e413e1a942193ffeda",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/038b637da7b3fd956a4ed93ffc607c3d5e4ce172/ofl/jetbrainsmono/JetBrainsMono%5Bwght%5D.ttf",
+          "objectKey": "public/iptrust/font-jetbrains-mono-100-800/7e8685f2f91ada1ca782e43685fe40d0c870add56b17ceed0a335e932056a34f/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-jetbrains-mono-100-800/7e8685f2f91ada1ca782e43685fe40d0c870add56b17ceed0a335e932056a34f/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "source-code-pro",
+      "name": "Source Code Pro",
+      "nameZh": "Source Code Pro",
+      "family": "Source Code Pro",
+      "group": "mono",
+      "scripts": [
+        "Latin",
+        "Greek",
+        "Cyrillic"
+      ],
+      "categoryKey": "mono",
+      "category": {
+        "zh": "英文信息等宽",
+        "en": "Information monospace"
+      },
+      "useCases": {
+        "zh": "技术品牌、资产编号、代码与表格",
+        "en": "Technical brands, identifiers, code and tables"
+      },
+      "sample": "IPTrust / Agent / API / MCP / #EFE6D2 / 0123456789 / brand.system.evolve()",
+      "cssStack": "\"Source Code Pro\", \"SFMono-Regular\", Consolas, monospace",
+      "weights": [
+        "200 900"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/google/fonts/blob/main/ofl/sourcecodepro/OFL.txt"
+      },
+      "source": {
+        "publisher": "Adobe / Google Fonts",
+        "projectUrl": "https://fonts.google.com/specimen/Source+Code+Pro",
+        "repository": "google/fonts",
+        "revision": "038b637da7b3fd956a4ed93ffc607c3d5e4ce172",
+        "release": "038b637da7b3"
+      },
+      "assets": [
+        {
+          "id": "font-source-code-pro-200-900",
+          "weight": "200 900",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 13600,
+          "sha256": "7233b6d036f2c14b2adcaba2123fd770027de7fed07ed034117cfacdf01b6738",
+          "sourceSha256": "b400fc584e10aff25d0e775ce181b4fc1c5ea1b5dc37b81aeb2084375b945790",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/038b637da7b3fd956a4ed93ffc607c3d5e4ce172/ofl/sourcecodepro/SourceCodePro%5Bwght%5D.ttf",
+          "objectKey": "public/iptrust/font-source-code-pro-200-900/7233b6d036f2c14b2adcaba2123fd770027de7fed07ed034117cfacdf01b6738/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-source-code-pro-200-900/7233b6d036f2c14b2adcaba2123fd770027de7fed07ed034117cfacdf01b6738/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "google-sans-code",
+      "name": "Google Sans Code",
+      "nameZh": "Google Sans Code",
+      "family": "Google Sans Code",
+      "group": "mono",
+      "scripts": [
+        "Latin",
+        "Greek",
+        "Cyrillic"
+      ],
+      "categoryKey": "mono",
+      "category": {
+        "zh": "英文现代等宽",
+        "en": "Modern coding monospace"
+      },
+      "useCases": {
+        "zh": "代码、Agent 输出与技术界面",
+        "en": "Code, agent output and technical interfaces"
+      },
+      "sample": "IPTrust / Agent / API / MCP / #EFE6D2 / 0123456789 / brand.system.evolve()",
+      "cssStack": "\"Google Sans Code\", \"SFMono-Regular\", Consolas, monospace",
+      "weights": [
+        "300 800"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/google/fonts/blob/main/ofl/googlesanscode/OFL.txt"
+      },
+      "source": {
+        "publisher": "Google Fonts",
+        "projectUrl": "https://fonts.google.com/specimen/Google+Sans+Code",
+        "repository": "google/fonts",
+        "revision": "038b637da7b3fd956a4ed93ffc607c3d5e4ce172",
+        "release": "038b637da7b3"
+      },
+      "assets": [
+        {
+          "id": "font-google-sans-code-300-800",
+          "weight": "300 800",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 9148,
+          "sha256": "aa2349c5e9ea477baf276b26d9c45de62ec1417fb9ec54207c0b00e006c8ba24",
+          "sourceSha256": "c9649573afcd966f61096b1e9c3c3115e7b54315ca2adf9839c6f8b17d5f8e1f",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/038b637da7b3fd956a4ed93ffc607c3d5e4ce172/ofl/googlesanscode/GoogleSansCode%5Bwght%5D.ttf",
+          "objectKey": "public/iptrust/font-google-sans-code-300-800/aa2349c5e9ea477baf276b26d9c45de62ec1417fb9ec54207c0b00e006c8ba24/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-google-sans-code-300-800/aa2349c5e9ea477baf276b26d9c45de62ec1417fb9ec54207c0b00e006c8ba24/demo.woff2"
         }
       ]
     }

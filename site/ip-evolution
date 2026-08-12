@@ -17,8 +17,8 @@
   <link rel="alternate" href="llms.txt" type="text/plain" title="IPTrust LLM Guide">
   <link rel="alternate" href="api/openapi.json" type="application/vnd.oai.openapi+json" title="IPTrust OpenAPI">
   <link rel="alternate" href="api/fonts.json" type="application/json" title="IPTrust Open-source Type Library">
-  <link rel="stylesheet" href="assets/site-b60797e-d1d3992d.css">
-  <link rel="modulepreload" href="assets/site-b60797e-d1d3992d.js">
+  <link rel="stylesheet" href="assets/site-6dcfe1b-f9954c03.css">
+  <link rel="modulepreload" href="assets/site-6dcfe1b-f9954c03.js">
 </head>
 <body class="ip-system-page">
   <header class="topbar">
@@ -78,128 +78,11 @@
       <article><strong data-i18n="evolution.assets">资产</strong><p data-i18n="evolution.assetsBody">把系统转化为人和 Agent 可调用的资产。</p></article>
       <article><strong data-i18n="evolution.governance">治理</strong><p data-i18n="evolution.governanceBody">记录版本、衡量偏差并持续回修。</p></article>
     </section>
-    <section class="font-library" id="open-source-type" aria-labelledby="fontLibraryTitle">
-      <header class="font-library-head">
-        <div>
-          <p class="eyebrow" data-i18n="fonts.label">字体参考</p>
-          <h2 id="fontLibraryTitle" data-i18n="fonts.title">开源可商用字体。</h2>
-        </div>
-        <p data-i18n="fonts.lead">官方来源、明确许可证与真实网页样张，供品牌表达和 Agent 调用参考。</p>
-      </header>
-      <div class="font-library-controls" aria-label="Font specimen controls">
-        <div class="font-filter" role="tablist" aria-label="Font groups">
-          <button type="button" role="tab" aria-selected="true" data-font-filter="zh" data-i18n="fonts.chinese">中文</button>
-          <button type="button" role="tab" aria-selected="false" data-font-filter="en">English</button>
-          <button type="button" role="tab" aria-selected="false" data-font-filter="mono">Mono</button>
-        </div>
-        <label class="font-control-size"><span data-i18n="fonts.size">字号</span><input type="range" min="28" max="72" value="48" step="2" data-font-size><output data-font-size-output>48</output></label>
-        <label><span data-i18n="fonts.weight">字重</span><select data-font-weight><option value="400">400</option><option value="600">600</option></select></label>
-      </div>
-      <div class="font-specimen-list">
-        <article class="font-specimen" data-font-id="noto-sans-sc" data-font-group="zh">
-    <header class="font-specimen-head">
-      <div>
-        <p class="font-specimen-name">Noto Sans SC <span>思源黑体</span></p>
-        <p class="font-specimen-meta"><span data-font-zh="中文无衬线" data-font-en="Simplified Chinese sans serif">中文无衬线</span> · OFL-1.1 · 2026-08-11</p>
-      </div>
-      <div class="font-specimen-use" data-font-zh="界面、正文、品牌规范" data-font-en="UI, body copy, brand guidelines">界面、正文、品牌规范</div>
-      <div class="font-specimen-actions">
-        <a href="https://github.com/notofonts/noto-cjk/tree/main/Sans" target="_blank" rel="noreferrer" data-i18n="fonts.source">官方出处</a>
-        <a href="https://github.com/notofonts/noto-cjk/blob/main/Sans/LICENSE" target="_blank" rel="noreferrer" data-i18n="fonts.license">许可证</a>
-        <button type="button" data-copy-font="noto-sans-sc" data-i18n="fonts.copyCss">复制 CSS</button>
-      </div>
-    </header>
-    <p class="font-specimen-sample" lang="zh-CN">高楼宾客似曾识，日光底下无新事。让品牌成为可管理、可调用、可持续进化的系统。中文字体参考 0123456789 IPTrust Agent API MCP</p>
-    <p class="font-load-state" data-font-load-state aria-live="polite" data-i18n="fonts.ready">滚动到此处加载真实字体</p>
-  </article>
-<article class="font-specimen" data-font-id="noto-serif-sc" data-font-group="zh">
-    <header class="font-specimen-head">
-      <div>
-        <p class="font-specimen-name">Noto Serif SC <span>思源宋体</span></p>
-        <p class="font-specimen-meta"><span data-font-zh="中文衬线" data-font-en="Simplified Chinese serif">中文衬线</span> · OFL-1.1 · 2026-08-11</p>
-      </div>
-      <div class="font-specimen-use" data-font-zh="标题、出版、文化叙事" data-font-en="Display, publishing, cultural narratives">标题、出版、文化叙事</div>
-      <div class="font-specimen-actions">
-        <a href="https://github.com/notofonts/noto-cjk/tree/main/Serif" target="_blank" rel="noreferrer" data-i18n="fonts.source">官方出处</a>
-        <a href="https://github.com/notofonts/noto-cjk/blob/main/Serif/LICENSE" target="_blank" rel="noreferrer" data-i18n="fonts.license">许可证</a>
-        <button type="button" data-copy-font="noto-serif-sc" data-i18n="fonts.copyCss">复制 CSS</button>
-      </div>
-    </header>
-    <p class="font-specimen-sample" lang="zh-CN">高楼宾客似曾识，日光底下无新事。让品牌成为可管理、可调用、可持续进化的系统。中文字体参考 0123456789 IPTrust Agent API MCP</p>
-    <p class="font-load-state" data-font-load-state aria-live="polite" data-i18n="fonts.ready">滚动到此处加载真实字体</p>
-  </article>
-<article class="font-specimen" data-font-id="ibm-plex-sans-sc" data-font-group="zh">
-    <header class="font-specimen-head">
-      <div>
-        <p class="font-specimen-name">IBM Plex Sans SC <span>IBM Plex 简体中文</span></p>
-        <p class="font-specimen-meta"><span data-font-zh="中文现代无衬线" data-font-en="Modern Simplified Chinese sans serif">中文现代无衬线</span> · OFL-1.1 · 2026-08-11</p>
-      </div>
-      <div class="font-specimen-use" data-font-zh="科技品牌、数据界面、专业文档" data-font-en="Technology brands, data UI, professional documents">科技品牌、数据界面、专业文档</div>
-      <div class="font-specimen-actions">
-        <a href="https://github.com/IBM/plex" target="_blank" rel="noreferrer" data-i18n="fonts.source">官方出处</a>
-        <a href="https://github.com/IBM/plex/blob/master/LICENSE.txt" target="_blank" rel="noreferrer" data-i18n="fonts.license">许可证</a>
-        <button type="button" data-copy-font="ibm-plex-sans-sc" data-i18n="fonts.copyCss">复制 CSS</button>
-      </div>
-    </header>
-    <p class="font-specimen-sample" lang="zh-CN">高楼宾客似曾识，日光底下无新事。让品牌成为可管理、可调用、可持续进化的系统。中文字体参考 0123456789 IPTrust Agent API MCP</p>
-    <p class="font-load-state" data-font-load-state aria-live="polite" data-i18n="fonts.ready">滚动到此处加载真实字体</p>
-  </article>
-<article class="font-specimen" data-font-id="inter" data-font-group="en">
-    <header class="font-specimen-head">
-      <div>
-        <p class="font-specimen-name">Inter</p>
-        <p class="font-specimen-meta"><span data-font-zh="英文界面无衬线" data-font-en="Latin UI sans serif">英文界面无衬线</span> · OFL-1.1 · 2026-08-11</p>
-      </div>
-      <div class="font-specimen-use" data-font-zh="英文界面、产品、屏幕正文" data-font-en="Product UI and screen typography">英文界面、产品、屏幕正文</div>
-      <div class="font-specimen-actions">
-        <a href="https://github.com/rsms/inter" target="_blank" rel="noreferrer" data-i18n="fonts.source">官方出处</a>
-        <a href="https://github.com/rsms/inter/blob/master/LICENSE.txt" target="_blank" rel="noreferrer" data-i18n="fonts.license">许可证</a>
-        <button type="button" data-copy-font="inter" data-i18n="fonts.copyCss">复制 CSS</button>
-      </div>
-    </header>
-    <p class="font-specimen-sample" lang="en">Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP</p>
-    <p class="font-load-state" data-font-load-state aria-live="polite" data-i18n="fonts.ready">滚动到此处加载真实字体</p>
-  </article>
-<article class="font-specimen" data-font-id="ibm-plex-mono" data-font-group="mono">
-    <header class="font-specimen-head">
-      <div>
-        <p class="font-specimen-name">IBM Plex Mono <span>IBM Plex 等宽</span></p>
-        <p class="font-specimen-meta"><span data-font-zh="英文等宽" data-font-en="Latin monospace">英文等宽</span> · OFL-1.1 · 2026-08-11</p>
-      </div>
-      <div class="font-specimen-use" data-font-zh="API、数据、代码、资产编号" data-font-en="APIs, data, code, asset identifiers">API、数据、代码、资产编号</div>
-      <div class="font-specimen-actions">
-        <a href="https://github.com/IBM/plex" target="_blank" rel="noreferrer" data-i18n="fonts.source">官方出处</a>
-        <a href="https://github.com/IBM/plex/blob/master/LICENSE.txt" target="_blank" rel="noreferrer" data-i18n="fonts.license">许可证</a>
-        <button type="button" data-copy-font="ibm-plex-mono" data-i18n="fonts.copyCss">复制 CSS</button>
-      </div>
-    </header>
-    <p class="font-specimen-sample" lang="en">IPTrust / Agent / API / MCP / #EFE6D2 / 0123456789 / brand.system.evolve()</p>
-    <p class="font-load-state" data-font-load-state aria-live="polite" data-i18n="fonts.ready">滚动到此处加载真实字体</p>
-  </article>
-<article class="font-specimen" data-font-id="eb-garamond" data-font-group="en">
-    <header class="font-specimen-head">
-      <div>
-        <p class="font-specimen-name">EB Garamond</p>
-        <p class="font-specimen-meta"><span data-font-zh="英文人文衬线" data-font-en="Humanist Latin serif">英文人文衬线</span> · OFL-1.1 · 2026-08-11</p>
-      </div>
-      <div class="font-specimen-use" data-font-zh="出版、长文、文化与高端品牌" data-font-en="Publishing, long-form, cultural and premium brands">出版、长文、文化与高端品牌</div>
-      <div class="font-specimen-actions">
-        <a href="https://github.com/octaviopardo/EBGaramond12" target="_blank" rel="noreferrer" data-i18n="fonts.source">官方出处</a>
-        <a href="https://github.com/octaviopardo/EBGaramond12/blob/master/OFL.txt" target="_blank" rel="noreferrer" data-i18n="fonts.license">许可证</a>
-        <button type="button" data-copy-font="eb-garamond" data-i18n="fonts.copyCss">复制 CSS</button>
-      </div>
-    </header>
-    <p class="font-specimen-sample" lang="en">Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP</p>
-    <p class="font-load-state" data-font-load-state aria-live="polite" data-i18n="fonts.ready">滚动到此处加载真实字体</p>
-  </article>
-      </div>
-      <footer class="font-library-license">
-        <strong data-i18n="fonts.licenseNote">授权说明</strong>
-        <p data-font-zh="字体版权归各自作者所有。商业使用、嵌入、修改与再分发须遵守对应许可证；字体文件不可单独售卖。" data-font-en="Copyright remains with each font author. Commercial use, embedding, modification and redistribution must follow the applicable license; font files may not be sold by themselves.">字体版权归各自作者所有。商业使用、嵌入、修改与再分发须遵守对应许可证；字体文件不可单独售卖。</p>
-        <a href="api/fonts.json" data-i18n="fonts.openApi">打开字体 JSON</a>
-      </footer>
-      <script type="application/json" id="fontCatalogData">{"schemaVersion":1,"generatedAt":"2026-08-11T00:28:54.823Z","verifiedAt":"2026-08-11","name":"IPTrust Open-source Type Library","description":{"zh":"采用开源许可证、允许商业使用与网页嵌入的中英文字体参考。","en":"Chinese and Latin type references licensed for commercial use and web embedding."},"licenseNotice":{"zh":"字体版权归各自作者所有。商业使用、嵌入、修改与再分发须遵守对应许可证；字体文件不可单独售卖。","en":"Copyright remains with each font author. Commercial use, embedding, modification and redistribution must follow the applicable license; font files may not be sold by themselves."},"fonts":[{"id":"noto-sans-sc","name":"Noto Sans SC","nameZh":"思源黑体","family":"Noto Sans SC","group":"zh","scripts":["Hans","Latin"],"category":{"zh":"中文无衬线","en":"Simplified Chinese sans serif"},"useCases":{"zh":"界面、正文、品牌规范","en":"UI, body copy, brand guidelines"},"sample":"高楼宾客似曾识，日光底下无新事。让品牌成为可管理、可调用、可持续进化的系统。中文字体参考 0123456789 IPTrust Agent API MCP","cssStack":"\"Noto Sans SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif","weights":["100 900"],"license":{"spdx":"OFL-1.1","name":"SIL Open Font License 1.1","url":"https://github.com/notofonts/noto-cjk/blob/main/Sans/LICENSE"},"source":{"publisher":"Noto Fonts","projectUrl":"https://github.com/notofonts/noto-cjk/tree/main/Sans","repository":"notofonts/noto-cjk","revision":"f8d157532fbfaeda587e826d4cd5b21a49186f7c","release":"f8d157532fbf"},"assets":[{"id":"font-noto-sans-sc-100-900","weight":"100 900","style":"normal","mimeType":"font/woff2","bytes":29132,"sha256":"fbb841b913905a85b69e81fe51bedf348a86403d64a03e8d2c79513b6d37931b","sourceSha256":"b1736bb633392cfc59b50d97c353d234111bd1721c9c83eaf643eaab9392e7f9","sourceUrl":"https://raw.githubusercontent.com/notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/google-fonts/NotoSansSC%5Bwght%5D.ttf","objectKey":"public/iptrust/font-noto-sans-sc-100-900/fbb841b913905a85b69e81fe51bedf348a86403d64a03e8d2c79513b6d37931b/demo.woff2","mediaUrl":"https://media.apuch.art/public/iptrust/font-noto-sans-sc-100-900/fbb841b913905a85b69e81fe51bedf348a86403d64a03e8d2c79513b6d37931b/demo.woff2"}]},{"id":"noto-serif-sc","name":"Noto Serif SC","nameZh":"思源宋体","family":"Noto Serif SC","group":"zh","scripts":["Hans","Latin"],"category":{"zh":"中文衬线","en":"Simplified Chinese serif"},"useCases":{"zh":"标题、出版、文化叙事","en":"Display, publishing, cultural narratives"},"sample":"高楼宾客似曾识，日光底下无新事。让品牌成为可管理、可调用、可持续进化的系统。中文字体参考 0123456789 IPTrust Agent API MCP","cssStack":"\"Noto Serif SC\", \"Songti SC\", SimSun, serif","weights":["100 900"],"license":{"spdx":"OFL-1.1","name":"SIL Open Font License 1.1","url":"https://github.com/notofonts/noto-cjk/blob/main/Serif/LICENSE"},"source":{"publisher":"Noto Fonts","projectUrl":"https://github.com/notofonts/noto-cjk/tree/main/Serif","repository":"notofonts/noto-cjk","revision":"f8d157532fbfaeda587e826d4cd5b21a49186f7c","release":"f8d157532fbf"},"assets":[{"id":"font-noto-serif-sc-100-900","weight":"100 900","style":"normal","mimeType":"font/woff2","bytes":35472,"sha256":"e983f9db1fc3c07ef40e457bb84eaef5c97b7870cc530b592fd917bd230ec4bc","sourceSha256":"050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9","sourceUrl":"https://raw.githubusercontent.com/notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/google-fonts/NotoSerifSC%5Bwght%5D.ttf","objectKey":"public/iptrust/font-noto-serif-sc-100-900/e983f9db1fc3c07ef40e457bb84eaef5c97b7870cc530b592fd917bd230ec4bc/demo.woff2","mediaUrl":"https://media.apuch.art/public/iptrust/font-noto-serif-sc-100-900/e983f9db1fc3c07ef40e457bb84eaef5c97b7870cc530b592fd917bd230ec4bc/demo.woff2"}]},{"id":"ibm-plex-sans-sc","name":"IBM Plex Sans SC","nameZh":"IBM Plex 简体中文","family":"IBM Plex Sans SC","group":"zh","scripts":["Hans","Latin"],"category":{"zh":"中文现代无衬线","en":"Modern Simplified Chinese sans serif"},"useCases":{"zh":"科技品牌、数据界面、专业文档","en":"Technology brands, data UI, professional documents"},"sample":"高楼宾客似曾识，日光底下无新事。让品牌成为可管理、可调用、可持续进化的系统。中文字体参考 0123456789 IPTrust Agent API MCP","cssStack":"\"IBM Plex Sans SC\", \"PingFang SC\", sans-serif","weights":["400","600"],"license":{"spdx":"OFL-1.1","name":"SIL Open Font License 1.1","url":"https://github.com/IBM/plex/blob/master/LICENSE.txt"},"source":{"publisher":"IBM","projectUrl":"https://github.com/IBM/plex","repository":"IBM/plex","revision":"bf260093582f04622aacc1e9f9ca604d7ccd0c42","release":"bf260093582f"},"assets":[{"id":"font-ibm-plex-sans-sc-400","weight":"400","style":"normal","mimeType":"font/woff2","bytes":17676,"sha256":"19c18df70b2df1b48f8aabf7f9bca334f2f81d42cc7e02eb361eca06fca8de6e","sourceSha256":"012e587c5a78d25f456057614b880fc7450b748c352573d8052245df2a71158a","sourceUrl":"https://raw.githubusercontent.com/IBM/plex/bf260093582f04622aacc1e9f9ca604d7ccd0c42/packages/plex-sans-sc/fonts/complete/ttf/hinted/IBMPlexSansSC-Regular.ttf","objectKey":"public/iptrust/font-ibm-plex-sans-sc-400/19c18df70b2df1b48f8aabf7f9bca334f2f81d42cc7e02eb361eca06fca8de6e/demo.woff2","mediaUrl":"https://media.apuch.art/public/iptrust/font-ibm-plex-sans-sc-400/19c18df70b2df1b48f8aabf7f9bca334f2f81d42cc7e02eb361eca06fca8de6e/demo.woff2"},{"id":"font-ibm-plex-sans-sc-600","weight":"600","style":"normal","mimeType":"font/woff2","bytes":17856,"sha256":"427b9969b8ade29ea8dba44becadfd3ee488e29741195f9deafd3ad80ebf88cc","sourceSha256":"76706e94340ac068ec2d398dc2f387946c815a3610f35c41cc93a8f8097d6c6b","sourceUrl":"https://raw.githubusercontent.com/IBM/plex/bf260093582f04622aacc1e9f9ca604d7ccd0c42/packages/plex-sans-sc/fonts/complete/ttf/hinted/IBMPlexSansSC-SemiBold.ttf","objectKey":"public/iptrust/font-ibm-plex-sans-sc-600/427b9969b8ade29ea8dba44becadfd3ee488e29741195f9deafd3ad80ebf88cc/demo.woff2","mediaUrl":"https://media.apuch.art/public/iptrust/font-ibm-plex-sans-sc-600/427b9969b8ade29ea8dba44becadfd3ee488e29741195f9deafd3ad80ebf88cc/demo.woff2"}]},{"id":"inter","name":"Inter","nameZh":"Inter","family":"Inter","group":"en","scripts":["Latin","Greek","Cyrillic"],"category":{"zh":"英文界面无衬线","en":"Latin UI sans serif"},"useCases":{"zh":"英文界面、产品、屏幕正文","en":"Product UI and screen typography"},"sample":"Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP","cssStack":"Inter, \"Helvetica Neue\", Arial, sans-serif","weights":["100 900"],"license":{"spdx":"OFL-1.1","name":"SIL Open Font License 1.1","url":"https://github.com/rsms/inter/blob/master/LICENSE.txt"},"source":{"publisher":"Rasmus Andersson","projectUrl":"https://github.com/rsms/inter","repository":"rsms/inter","revision":"353b61b9f4430d5f420d56605a6e7993e0941470","release":"4.1"},"assets":[{"id":"font-inter-100-900","weight":"100 900","style":"normal","mimeType":"font/woff2","bytes":55244,"sha256":"5c19676352edd2d78a9cb493b05f1141f0464eb2a39aa503d9ce9fbe5f8e9d9b","sourceSha256":"693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3","sourceUrl":"https://raw.githubusercontent.com/rsms/inter/353b61b9f4430d5f420d56605a6e7993e0941470/docs/font-files/InterVariable.woff2","objectKey":"public/iptrust/font-inter-100-900/5c19676352edd2d78a9cb493b05f1141f0464eb2a39aa503d9ce9fbe5f8e9d9b/demo.woff2","mediaUrl":"https://media.apuch.art/public/iptrust/font-inter-100-900/5c19676352edd2d78a9cb493b05f1141f0464eb2a39aa503d9ce9fbe5f8e9d9b/demo.woff2"}]},{"id":"ibm-plex-mono","name":"IBM Plex Mono","nameZh":"IBM Plex 等宽","family":"IBM Plex Mono","group":"mono","scripts":["Latin","Greek","Cyrillic"],"category":{"zh":"英文等宽","en":"Latin monospace"},"useCases":{"zh":"API、数据、代码、资产编号","en":"APIs, data, code, asset identifiers"},"sample":"IPTrust / Agent / API / MCP / #EFE6D2 / 0123456789 / brand.system.evolve()","cssStack":"\"IBM Plex Mono\", \"SFMono-Regular\", Consolas, monospace","weights":["400","600"],"license":{"spdx":"OFL-1.1","name":"SIL Open Font License 1.1","url":"https://github.com/IBM/plex/blob/master/LICENSE.txt"},"source":{"publisher":"IBM","projectUrl":"https://github.com/IBM/plex","repository":"IBM/plex","revision":"bf260093582f04622aacc1e9f9ca604d7ccd0c42","release":"bf260093582f"},"assets":[{"id":"font-ibm-plex-mono-400","weight":"400","style":"normal","mimeType":"font/woff2","bytes":8820,"sha256":"4928af1defcf94cdf4240fa667c71f9ad026b6a021df95a757e937ed4a741bfa","sourceSha256":"ba204497f16b6d334cee9d1e963a831b73e3a56e1d6300a8489d18df7214b350","sourceUrl":"https://raw.githubusercontent.com/IBM/plex/bf260093582f04622aacc1e9f9ca604d7ccd0c42/packages/plex-mono/fonts/complete/woff2/IBMPlexMono-Regular.woff2","objectKey":"public/iptrust/font-ibm-plex-mono-400/4928af1defcf94cdf4240fa667c71f9ad026b6a021df95a757e937ed4a741bfa/demo.woff2","mediaUrl":"https://media.apuch.art/public/iptrust/font-ibm-plex-mono-400/4928af1defcf94cdf4240fa667c71f9ad026b6a021df95a757e937ed4a741bfa/demo.woff2"},{"id":"font-ibm-plex-mono-600","weight":"600","style":"normal","mimeType":"font/woff2","bytes":9028,"sha256":"d664ce4ff248ac8e58dd4de5d1d78f109cbaa02e0dc1b723a5c12b0fb115e064","sourceSha256":"6a825b4824c01cbb401e829e5a066a1818411bcb3538b5a5792c5ca9b82343c3","sourceUrl":"https://raw.githubusercontent.com/IBM/plex/bf260093582f04622aacc1e9f9ca604d7ccd0c42/packages/plex-mono/fonts/complete/woff2/IBMPlexMono-SemiBold.woff2","objectKey":"public/iptrust/font-ibm-plex-mono-600/d664ce4ff248ac8e58dd4de5d1d78f109cbaa02e0dc1b723a5c12b0fb115e064/demo.woff2","mediaUrl":"https://media.apuch.art/public/iptrust/font-ibm-plex-mono-600/d664ce4ff248ac8e58dd4de5d1d78f109cbaa02e0dc1b723a5c12b0fb115e064/demo.woff2"}]},{"id":"eb-garamond","name":"EB Garamond","nameZh":"EB Garamond","family":"EB Garamond","group":"en","scripts":["Latin","Greek","Cyrillic"],"category":{"zh":"英文人文衬线","en":"Humanist Latin serif"},"useCases":{"zh":"出版、长文、文化与高端品牌","en":"Publishing, long-form, cultural and premium brands"},"sample":"Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP","cssStack":"\"EB Garamond\", Garamond, Georgia, serif","weights":["400 800"],"license":{"spdx":"OFL-1.1","name":"SIL Open Font License 1.1","url":"https://github.com/octaviopardo/EBGaramond12/blob/master/OFL.txt"},"source":{"publisher":"Octavio Pardo / Google Fonts","projectUrl":"https://github.com/octaviopardo/EBGaramond12","repository":"google/fonts","revision":"038b637da7b3fd956a4ed93ffc607c3d5e4ce172","release":"038b637da7b3"},"assets":[{"id":"font-eb-garamond-400-800","weight":"400 800","style":"normal","mimeType":"font/woff2","bytes":69592,"sha256":"9a84a3f622f5d1b5d1109216e49b1d0149e3785871199e2a60afc5e5badb66ac","sourceSha256":"ef9512f92f6d579e5dc75af59a5a4b1b8b47d2eda89e00b954d44520e5369027","sourceUrl":"https://raw.githubusercontent.com/google/fonts/038b637da7b3fd956a4ed93ffc607c3d5e4ce172/ofl/ebgaramond/EBGaramond%5Bwght%5D.ttf","objectKey":"public/iptrust/font-eb-garamond-400-800/9a84a3f622f5d1b5d1109216e49b1d0149e3785871199e2a60afc5e5badb66ac/demo.woff2","mediaUrl":"https://media.apuch.art/public/iptrust/font-eb-garamond-400-800/9a84a3f622f5d1b5d1109216e49b1d0149e3785871199e2a60afc5e5badb66ac/demo.woff2"}]}]}</script>
-    </section>
+    <a class="font-library-entry" id="open-source-type" href="fonts">
+      <div><p class="eyebrow" data-i18n="fonts.label">字体参考</p><h2 data-i18n="fonts.title">开源可商用字体。</h2></div>
+      <p><strong>21</strong><span data-i18n="fonts.curated">个已核验字体家族</span></p>
+      <span aria-hidden="true">↗</span>
+    </a>
     <section class="ip-system-content-shell" id="framework">
       <aside class="ip-system-toc" aria-label="IP System contents">
         <strong data-i18n="evolution.frameworkTitle">完整系统</strong>
@@ -613,6 +496,6 @@
       history.replaceState(null, "", repairUrl.pathname + repairUrl.search + repairUrl.hash);
     }
   </script>
-  <script src="assets/site-b60797e-d1d3992d.js" type="module"></script>
+  <script src="assets/site-6dcfe1b-f9954c03.js" type="module"></script>
 </body>
 </html>

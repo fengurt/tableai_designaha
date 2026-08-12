@@ -31,6 +31,10 @@
   Content-Type: text/html; charset=utf-8
   Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=86400
 
+/fonts
+  Content-Type: text/html; charset=utf-8
+  Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=86400
+
 /ip-evolution-repair
   Content-Type: text/html; charset=utf-8
   Cache-Control: private, no-store

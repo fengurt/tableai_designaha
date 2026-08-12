@@ -164,11 +164,11 @@
     "standalone"
   ],
   "version": {
-    "hash": "b60797e79deb0f37cae96466bf7fc70987b506c2",
-    "shortHash": "b60797e",
-    "date": "2026-08-12T15:57:02+08:00",
-    "message": "test: accept uncached temporary route recovery",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/b60797e79deb0f37cae96466bf7fc70987b506c2"
+    "hash": "6dcfe1b5b512897b87a5cf4ec93256c77576c60c",
+    "shortHash": "6dcfe1b",
+    "date": "2026-08-12T15:58:44+08:00",
+    "message": "fix: canonicalize repaired IP Evolution history",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/6dcfe1b5b512897b87a5cf4ec93256c77576c60c"
   },
   "historyUrl": "api/history/changoods.json",
   "history": [

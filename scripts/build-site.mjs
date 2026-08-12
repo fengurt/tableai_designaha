@@ -417,7 +417,9 @@ function markdownToc(markdown = "", prefix = "document") {
 }
 
 function fontLibraryRows(catalog) {
-  return catalog.fonts.map((font) => `<article class="font-specimen" data-font-id="${escapeBuildHtml(font.id)}" data-font-group="${escapeBuildHtml(font.group)}">
+  return catalog.fonts.map((font) => {
+    const searchText = [font.name, font.nameZh, font.category.zh, font.category.en, font.useCases.zh, font.useCases.en, font.source.publisher, font.scripts.join(" ")].filter(Boolean).join(" ").toLowerCase();
+    return `<article class="font-specimen" id="font-${escapeBuildHtml(font.id)}" data-font-id="${escapeBuildHtml(font.id)}" data-font-group="${escapeBuildHtml(font.group)}" data-font-category="${escapeBuildHtml(font.categoryKey || "sans")}" data-font-search-text="${escapeBuildHtml(searchText)}">
     <header class="font-specimen-head">
       <div>
         <p class="font-specimen-name">${escapeBuildHtml(font.name)}${font.nameZh && font.nameZh !== font.name ? ` <span>${escapeBuildHtml(font.nameZh)}</span>` : ""}</p>
@@ -432,7 +434,8 @@ function fontLibraryRows(catalog) {
     </header>
     <p class="font-specimen-sample" lang="${font.group === "zh" ? "zh-CN" : "en"}">${escapeBuildHtml(font.sample)}</p>
     <p class="font-load-state" data-font-load-state aria-live="polite" data-i18n="fonts.ready">滚动到此处加载真实字体</p>
-  </article>`).join("\n");
+  </article>`;
+  }).join("\n");
 }
 
 function loadVersions() {
@@ -992,7 +995,7 @@ const fontSearchPayload = fontCatalog.fonts.map((font) => ({
   title: font.name,
   subtitle: [font.nameZh !== font.name ? font.nameZh : "", font.license.spdx, font.category.zh].filter(Boolean).join(" · "),
   text: [font.category.zh, font.category.en, font.useCases.zh, font.useCases.en, font.scripts.join(" "), font.cssStack, font.source.publisher].filter(Boolean).join(" "),
-  url: "ip-evolution#open-source-type",
+  url: `fonts?q=${encodeURIComponent(font.name)}#font-${font.id}`,
 }));
 const searchPayload = [...brandSearchPayload, ...librarySearchPayload, ...fontSearchPayload];
 const agentEntryPayload = {
@@ -1226,7 +1229,7 @@ await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
     applications: "api/v2/applications",
   },
   fontLibrary: {
-    page: "ip-evolution#open-source-type",
+    page: "fonts",
     api: "api/fonts.json",
     licensePolicy: "Open-source licenses that permit commercial use and web embedding; each record carries its official source and license.",
     delivery: "Official font sources are subset to WOFF2, stored as immutable R2 objects and loaded only when specimens enter the viewport.",
@@ -1308,6 +1311,10 @@ await writeFile(join(siteDir, "_headers"), [
   "  Content-Type: text/html; charset=utf-8",
   "  Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=86400",
   "",
+  "/fonts",
+  "  Content-Type: text/html; charset=utf-8",
+  "  Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=86400",
+  "",
   "/ip-evolution-repair",
   "  Content-Type: text/html; charset=utf-8",
   "  Cache-Control: private, no-store",
@@ -1374,6 +1381,8 @@ await writeFile(join(siteDir, "_redirects"), [
   "/brands  /api/brands.json  200",
   "/knowledge  /library/index.html  200",
   "/library  /library/index.html  200",
+  "/fonts/  /fonts  302",
+  "/type  /fonts  302",
   "/ip-system  /ip_sys.md  200",
   "",
 ].join("\n"));
@@ -1477,7 +1486,7 @@ await writeFile(join(siteDir, "llms.txt"), [
   '{"mcpServers":{"iptrust":{"type":"http","url":"https://apuch.art/mcp"}}}',
   "",
   "Open-source type library:",
-  `- Page: https://apuch.art/ip-evolution#open-source-type`,
+  `- Page: https://apuch.art/fonts`,
   `- API: https://apuch.art/api/fonts.json`,
   `- Policy: ${fontCatalog.licenseNotice.en}`,
   ...fontCatalog.fonts.map((font) => `- ${font.name}${font.nameZh && font.nameZh !== font.name ? ` / ${font.nameZh}` : ""}: ${font.license.spdx} · ${font.source.projectUrl}`),
@@ -1514,6 +1523,7 @@ await writeFile(join(siteDir, "sitemap.xml"), `<?xml version="1.0" encoding="UTF
   <url><loc>${publicOrigin}/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
   <url><loc>${publicOrigin}/directory</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>${publicOrigin}/ip-evolution</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>${publicOrigin}/fonts</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>${publicOrigin}/library/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 ${indexPayload.map((brand) => `  <url><loc>${publicOrigin}/brand?brand=${encodeURIComponent(brand.slug)}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`).join("\n")}
 </urlset>`);
@@ -1794,33 +1804,11 @@ ${commonDiscoveryHead()}
       <article><strong data-i18n="evolution.assets">资产</strong><p data-i18n="evolution.assetsBody">把系统转化为人和 Agent 可调用的资产。</p></article>
       <article><strong data-i18n="evolution.governance">治理</strong><p data-i18n="evolution.governanceBody">记录版本、衡量偏差并持续回修。</p></article>
     </section>
-    <section class="font-library" id="open-source-type" aria-labelledby="fontLibraryTitle">
-      <header class="font-library-head">
-        <div>
-          <p class="eyebrow" data-i18n="fonts.label">字体参考</p>
-          <h2 id="fontLibraryTitle" data-i18n="fonts.title">开源可商用字体。</h2>
-        </div>
-        <p data-i18n="fonts.lead">官方来源、明确许可证与真实网页样张，供品牌表达和 Agent 调用参考。</p>
-      </header>
-      <div class="font-library-controls" aria-label="Font specimen controls">
-        <div class="font-filter" role="tablist" aria-label="Font groups">
-          <button type="button" role="tab" aria-selected="true" data-font-filter="zh" data-i18n="fonts.chinese">中文</button>
-          <button type="button" role="tab" aria-selected="false" data-font-filter="en">English</button>
-          <button type="button" role="tab" aria-selected="false" data-font-filter="mono">Mono</button>
-        </div>
-        <label class="font-control-size"><span data-i18n="fonts.size">字号</span><input type="range" min="28" max="72" value="48" step="2" data-font-size><output data-font-size-output>48</output></label>
-        <label><span data-i18n="fonts.weight">字重</span><select data-font-weight><option value="400">400</option><option value="600">600</option></select></label>
-      </div>
-      <div class="font-specimen-list">
-        ${fontLibraryRows(fontCatalog)}
-      </div>
-      <footer class="font-library-license">
-        <strong data-i18n="fonts.licenseNote">授权说明</strong>
-        <p data-font-zh="${escapeBuildHtml(fontCatalog.licenseNotice.zh)}" data-font-en="${escapeBuildHtml(fontCatalog.licenseNotice.en)}">${escapeBuildHtml(fontCatalog.licenseNotice.zh)}</p>
-        <a href="api/fonts.json" data-i18n="fonts.openApi">打开字体 JSON</a>
-      </footer>
-      <script type="application/json" id="fontCatalogData">${fontCatalogEmbeddedJson}</script>
-    </section>
+    <a class="font-library-entry" id="open-source-type" href="fonts">
+      <div><p class="eyebrow" data-i18n="fonts.label">字体参考</p><h2 data-i18n="fonts.title">开源可商用字体。</h2></div>
+      <p><strong>${fontCatalog.fonts.length}</strong><span data-i18n="fonts.curated">个已核验字体家族</span></p>
+      <span aria-hidden="true">↗</span>
+    </a>
     <section class="ip-system-content-shell" id="framework">
       <aside class="ip-system-toc" aria-label="IP System contents">
         <strong data-i18n="evolution.frameworkTitle">完整系统</strong>
@@ -1842,6 +1830,98 @@ ${commonDiscoveryHead()}
       history.replaceState(null, "", repairUrl.pathname + repairUrl.search + repairUrl.hash);
     }
   </script>
+  <script src="${siteJsPath}" type="module"></script>
+</body>
+</html>`);
+
+await writeFile(join(siteDir, "fonts"), html`<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="./">
+  <title>开源可商用字体 | ${hubName}</title>
+  <meta name="description" content="经过许可证核验的中英文字体目录、网页样张、官方出处与 Agent 可读数据。">
+  <link rel="canonical" href="${publicOrigin}/fonts">
+  <link rel="preconnect" href="https://media.apuch.art" crossorigin>
+${commonDiscoveryHead()}
+  <link rel="stylesheet" href="${siteCssPath}">
+  <link rel="modulepreload" href="${siteJsPath}">
+</head>
+<body class="font-directory-page">
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="${hubNameCn}"><img src="${hubLogoUrl}" alt="${hubNameCn}"></a>
+    <div class="topbar-search" role="search">
+      <input id="brandSearch" type="search" autocomplete="off" aria-label="Global search">
+      <div class="global-results" id="globalResults" aria-live="polite"></div>
+    </div>
+    <nav class="top-actions" aria-label="Primary actions">
+      <button class="api-link" type="button" id="apiConnectButton" aria-label="API connect"><span class="api-dot"></span>API</button>
+      <a href="directory">Directory</a>
+      <a href="ip-evolution" data-i18n="evolution.label">IP进化论</a>
+      <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language"><span class="is-active">CN</span><span class="lang-divider">/</span><span>EN</span></button>
+    </nav>
+  </header>
+  <section class="api-connect-panel hidden" id="apiConnectPanel" aria-live="polite">
+    <div class="api-connect-head"><div><p class="eyebrow">API</p><h2 data-i18n="api.title">连接 System API</h2></div><button class="icon-copy" type="button" id="apiConnectClose" data-icon-only="true" aria-label="Close">×</button></div>
+    <form class="api-connect-form" id="apiConnectForm" autocomplete="on">
+      <label><span data-i18n="api.key">System API Key</span><input id="apiAdminKey" name="admin_api_key" type="password" autocomplete="current-password" placeholder="System API Key" spellcheck="false"></label>
+      <label class="hidden" id="apiTotpField"><span>Google Authenticator</span><input id="apiTotpCode" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="000000"></label>
+      <button class="portal-action" type="submit" id="apiConnectSubmit" data-i18n="api.connect">Connect</button>
+    </form>
+    <p class="portal-status" id="apiConnectStatus"></p>
+    <div class="api-ops hidden" id="apiConnectedOps"><strong class="connected-pill" data-i18n="api.connected">Connected</strong><p class="muted" id="apiScopeText"></p><div class="portal-links"><a href="admin.html" data-i18n="api.openAdmin">Admin</a><a href="api/fonts.json">Fonts API</a></div></div>
+  </section>
+  <main class="font-directory-main">
+    <section class="font-directory-hero">
+      <div><p class="eyebrow" data-i18n="fonts.label">字体参考</p><h1 data-i18n="fonts.directoryTitle">开源可商用字体。</h1></div>
+      <div class="font-directory-summary">
+        <p data-i18n="fonts.directoryLead">从官方项目核验许可证、语言覆盖与网页演示。用于品牌、产品、出版与 Agent 选型。</p>
+        <p class="font-directory-count"><strong data-font-result-count>${fontCatalog.fonts.length}</strong><span data-i18n="fonts.families">字体家族</span></p>
+      </div>
+    </section>
+    <section class="font-license-callout" aria-label="Google Fonts license note">
+      <strong>Google Fonts</strong>
+      <p data-i18n="fonts.googleNote">Google Fonts 收录字体均以开源许可证发布，可用于商业项目；具体使用、修改与再分发仍应遵守每款字体的许可证。</p>
+      <a href="https://developers.google.com/fonts" target="_blank" rel="noreferrer" data-i18n="fonts.googleOfficial">Google 官方说明 ↗</a>
+    </section>
+    <section class="font-directory-toolbar" aria-label="Font directory controls">
+      <label class="font-directory-search"><span data-i18n="fonts.searchLabel">搜索字体</span><input type="search" data-font-search autocomplete="off" placeholder="字体名称 / 用途 / Publisher"></label>
+      <div class="font-filter" role="tablist" aria-label="Font languages">
+        <button type="button" role="tab" aria-selected="true" data-font-filter="all" data-i18n="fonts.all">全部</button>
+        <button type="button" role="tab" aria-selected="false" data-font-filter="zh" data-i18n="fonts.chinese">中文</button>
+        <button type="button" role="tab" aria-selected="false" data-font-filter="en">English</button>
+        <button type="button" role="tab" aria-selected="false" data-font-filter="mono">Mono</button>
+      </div>
+      <label class="font-control-size"><span data-i18n="fonts.size">字号</span><input type="range" min="24" max="72" value="46" step="2" data-font-size><output data-font-size-output>46</output></label>
+      <label><span data-i18n="fonts.weight">字重</span><select data-font-weight><option value="400">400</option><option value="600">600</option></select></label>
+    </section>
+    <section class="font-directory-layout font-library" id="open-source-type">
+      <aside class="font-category-list" aria-label="Font categories">
+        <strong data-i18n="fonts.categories">分类</strong>
+        <button type="button" aria-pressed="true" data-font-category="all" data-i18n="fonts.all">全部</button>
+        <button type="button" aria-pressed="false" data-font-category="sans" data-i18n="fonts.sans">无衬线</button>
+        <button type="button" aria-pressed="false" data-font-category="serif" data-i18n="fonts.serif">衬线</button>
+        <button type="button" aria-pressed="false" data-font-category="display" data-i18n="fonts.display">展示</button>
+        <button type="button" aria-pressed="false" data-font-category="handwriting" data-i18n="fonts.handwriting">书写</button>
+        <button type="button" aria-pressed="false" data-font-category="mono" data-i18n="fonts.mono">等宽</button>
+      </aside>
+      <div>
+        <div class="font-specimen-list">${fontLibraryRows(fontCatalog)}</div>
+        <p class="font-empty" data-font-empty hidden data-i18n="fonts.empty">没有匹配字体。</p>
+      </div>
+    </section>
+    <section class="font-sources" aria-labelledby="fontSourcesTitle">
+      <header><p class="eyebrow" data-i18n="fonts.moreSources">更多官方字体来源</p><h2 id="fontSourcesTitle" data-i18n="fonts.findMore">去哪里找更多字体。</h2></header>
+      <div>${(fontCatalog.directories || []).map((directory) => `<a href="${escapeBuildHtml(directory.url)}" target="_blank" rel="noreferrer"><strong>${escapeBuildHtml(directory.name)}</strong><span data-font-zh="${escapeBuildHtml(directory.note.zh)}" data-font-en="${escapeBuildHtml(directory.note.en)}">${escapeBuildHtml(directory.note.zh)}</span><i aria-hidden="true">↗</i></a>`).join("")}</div>
+    </section>
+    <footer class="font-library-license">
+      <strong data-i18n="fonts.licenseNote">授权说明</strong>
+      <p data-font-zh="${escapeBuildHtml(fontCatalog.licenseNotice.zh)}" data-font-en="${escapeBuildHtml(fontCatalog.licenseNotice.en)}">${escapeBuildHtml(fontCatalog.licenseNotice.zh)}</p>
+      <a href="api/fonts.json" data-i18n="fonts.openApi">打开字体 JSON</a>
+    </footer>
+    <script type="application/json" id="fontCatalogData">${fontCatalogEmbeddedJson}</script>
+  </main>
   <script src="${siteJsPath}" type="module"></script>
 </body>
 </html>`);
@@ -2770,6 +2850,49 @@ p { line-height: 1.65; }
   padding: 92px 0 76px;
   border-bottom: 1px solid var(--ink);
 }
+.font-library-entry {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) auto 52px;
+  gap: 28px;
+  align-items: center;
+  padding: 42px 0;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  color: var(--ink);
+  text-decoration: none;
+}
+.font-library-entry h2 { margin: 7px 0 0; font-size: clamp(34px, 5vw, 64px); line-height: 1; }
+.font-library-entry > p { display: flex; align-items: baseline; gap: 9px; margin: 0; color: var(--muted); }
+.font-library-entry > p strong { color: var(--ink); font-size: 28px; }
+.font-library-entry > span { font-size: 30px; transition: transform 180ms ease; }
+.font-library-entry:hover > span { transform: translate(4px, -4px); }
+.font-directory-main { width: min(1420px, calc(100% - 64px)); margin: 0 auto; padding: 98px 0 70px; }
+.font-directory-hero { display: grid; grid-template-columns: minmax(320px, 1.2fr) minmax(300px, .8fr); gap: clamp(48px, 9vw, 150px); align-items: end; padding: 46px 0 62px; border-bottom: 1px solid var(--ink); }
+.font-directory-hero h1 { max-width: 760px; margin: 10px 0 0; font-size: clamp(58px, 8vw, 112px); line-height: .95; letter-spacing: 0; text-wrap: balance; }
+.font-directory-summary > p:first-child { max-width: 580px; margin: 0; color: var(--muted); font-size: 17px; line-height: 1.75; }
+.font-directory-count { display: flex; gap: 10px; align-items: baseline; margin: 32px 0 0; }
+.font-directory-count strong { font-size: 32px; }
+.font-directory-count span { color: var(--muted); font-size: 12px; }
+.font-license-callout { display: grid; grid-template-columns: 180px minmax(0, 1fr) auto; gap: 30px; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.font-license-callout p { max-width: 800px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
+.font-license-callout a { color: var(--ink); font-size: 12px; font-weight: 760; text-decoration: none; border-bottom: 1px solid var(--line); }
+.font-directory-toolbar { position: sticky; top: 67px; z-index: 16; display: grid; grid-template-columns: minmax(220px, 1fr) auto minmax(190px, .42fr) auto; gap: 20px; align-items: end; padding: 14px 0; border-bottom: 1px solid var(--ink); background: color-mix(in srgb, var(--paper) 94%, transparent); backdrop-filter: blur(14px); }
+.font-directory-toolbar label { display: flex; align-items: center; gap: 10px; margin: 0; color: var(--muted); font-size: 11px; font-weight: 720; }
+.font-directory-toolbar input[type="search"] { width: 100%; min-height: 38px; padding: 7px 2px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; color: var(--ink); }
+.font-directory-toolbar input[type="range"] { flex: 1; padding: 0; accent-color: var(--ink); }
+.font-directory-toolbar select { width: 72px; min-height: 36px; padding: 5px; background: transparent; }
+.font-directory-layout { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: clamp(34px, 6vw, 92px); padding: 0; border-bottom: 1px solid var(--ink); }
+.font-category-list { position: sticky; top: 142px; align-self: start; display: flex; flex-direction: column; padding-top: 26px; }
+.font-category-list strong { margin-bottom: 12px; font-size: 11px; text-transform: uppercase; }
+.font-category-list button { display: flex; justify-content: space-between; min-height: 38px; padding: 8px 0; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; color: var(--muted); text-align: left; }
+.font-category-list button[aria-pressed="true"] { color: var(--ink); font-weight: 800; }
+.font-empty { padding: 80px 0; color: var(--muted); }
+.font-sources { display: grid; grid-template-columns: minmax(260px, .75fr) minmax(0, 1.25fr); gap: clamp(48px, 9vw, 148px); padding: 92px 0 70px; border-bottom: 1px solid var(--ink); }
+.font-sources h2 { margin: 8px 0 0; font-size: clamp(38px, 5vw, 68px); line-height: 1.02; text-wrap: balance; }
+.font-sources > div { border-top: 1px solid var(--ink); }
+.font-sources a { display: grid; grid-template-columns: minmax(150px, .38fr) minmax(0, 1fr) auto; gap: 22px; padding: 18px 0; border-bottom: 1px solid var(--line); color: var(--ink); text-decoration: none; }
+.font-sources a span { color: var(--muted); font-size: 12px; line-height: 1.6; }
+.font-sources a i { font-style: normal; }
 .font-library-head {
   display: grid;
   grid-template-columns: minmax(260px, .8fr) minmax(320px, 1fr);
@@ -4119,6 +4242,22 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .ip-system-hero { min-height: auto; }
   .ip-system-layers article { grid-template-columns: 1fr; gap: 8px; }
   .font-library { --font-demo-size: 38px; padding: 64px 0 54px; }
+  .font-library-entry { grid-template-columns: 1fr auto; padding: 30px 0; }
+  .font-library-entry > p { display: none; }
+  .font-directory-main { width: min(100% - 32px, 1420px); padding-top: 70px; }
+  .font-directory-hero { grid-template-columns: 1fr; gap: 30px; padding: 28px 0 42px; }
+  .font-directory-hero h1 { font-size: clamp(48px, 15vw, 72px); }
+  .font-license-callout { grid-template-columns: 1fr; gap: 8px; align-items: start; }
+  .font-license-callout a { justify-self: start; }
+  .font-directory-toolbar { position: relative; top: auto; grid-template-columns: 1fr; gap: 12px; padding: 18px 0; backdrop-filter: none; }
+  .font-directory-layout { grid-template-columns: 1fr; gap: 0; padding: 0; }
+  .font-category-list { position: relative; top: auto; flex-direction: row; gap: 0; overflow-x: auto; padding: 18px 0 0; }
+  .font-category-list strong { display: none; }
+  .font-category-list button { flex: 0 0 auto; padding: 8px 14px; border: 1px solid var(--line); border-right: 0; }
+  .font-category-list button:last-child { border-right: 1px solid var(--line); }
+  .font-sources { grid-template-columns: 1fr; gap: 36px; padding: 64px 0 50px; }
+  .font-sources a { grid-template-columns: 1fr auto; }
+  .font-sources a span { grid-column: 1 / -1; grid-row: 2; }
   .font-library-head { grid-template-columns: 1fr; gap: 14px; }
   .font-library-head h2 { font-size: 36px; }
   .font-library-controls { grid-template-columns: 1fr; gap: 12px; }
@@ -4398,6 +4537,23 @@ const i18n = {
     "fonts.fallback": "字体加载失败，已使用系统字体",
     "fonts.licenseNote": "授权说明",
     "fonts.openApi": "打开字体 JSON",
+    "fonts.curated": "个已核验字体家族",
+    "fonts.directoryTitle": "开源可商用字体。",
+    "fonts.directoryLead": "从官方项目核验许可证、语言覆盖与网页演示。用于品牌、产品、出版与 Agent 选型。",
+    "fonts.families": "字体家族",
+    "fonts.googleNote": "Google Fonts 收录字体均以开源许可证发布，可用于商业项目；具体使用、修改与再分发仍应遵守每款字体的许可证。",
+    "fonts.googleOfficial": "Google 官方说明 ↗",
+    "fonts.searchLabel": "搜索字体",
+    "fonts.all": "全部",
+    "fonts.categories": "分类",
+    "fonts.sans": "无衬线",
+    "fonts.serif": "衬线",
+    "fonts.display": "展示",
+    "fonts.handwriting": "书写",
+    "fonts.mono": "等宽",
+    "fonts.empty": "没有匹配字体。",
+    "fonts.moreSources": "更多官方字体来源",
+    "fonts.findMore": "去哪里找更多字体。",
     "api.title": "System API",
     "api.key": "System API Key",
     "api.connect": "Connect",
@@ -4581,6 +4737,23 @@ const i18n = {
     "fonts.fallback": "Font failed to load; using the system fallback",
     "fonts.licenseNote": "License note",
     "fonts.openApi": "Open font JSON",
+    "fonts.curated": "verified font families",
+    "fonts.directoryTitle": "Open fonts for commercial use.",
+    "fonts.directoryLead": "Official projects, verified licenses, script coverage and real web specimens for brands, products, publishing and agents.",
+    "fonts.families": "font families",
+    "fonts.googleNote": "Google Fonts families are released under open-source licenses and may be used commercially. Use, modification and redistribution still follow each family's license.",
+    "fonts.googleOfficial": "Google's official guidance ↗",
+    "fonts.searchLabel": "Search fonts",
+    "fonts.all": "All",
+    "fonts.categories": "Categories",
+    "fonts.sans": "Sans serif",
+    "fonts.serif": "Serif",
+    "fonts.display": "Display",
+    "fonts.handwriting": "Handwriting",
+    "fonts.mono": "Monospace",
+    "fonts.empty": "No matching fonts.",
+    "fonts.moreSources": "More official font sources",
+    "fonts.findMore": "Where to find more fonts.",
     "api.title": "System API",
     "api.key": "System API Key",
     "api.connect": "Connect",
@@ -5253,20 +5426,49 @@ function setupFontLibrary() {
   root.dataset.ready = "true";
   const catalog = fontCatalogData();
   const specimens = [...root.querySelectorAll(".font-specimen")];
-  const filterButtons = [...root.querySelectorAll("[data-font-filter]")];
-  const size = root.querySelector("[data-font-size]");
-  const sizeOutput = root.querySelector("[data-font-size-output]");
-  const weight = root.querySelector("[data-font-weight]");
+  const filterButtons = [...document.querySelectorAll("[data-font-filter]")];
+  const size = document.querySelector("[data-font-size]");
+  const sizeOutput = document.querySelector("[data-font-size-output]");
+  const weight = document.querySelector("[data-font-weight]");
+  const directorySearch = document.querySelector("[data-font-search]");
+  const categoryButtons = [...document.querySelectorAll(".font-category-list button[data-font-category]")];
+  const resultCount = document.querySelector("[data-font-result-count]");
+  const empty = document.querySelector("[data-font-empty]");
+  const initialParams = new URLSearchParams(location.search);
+  let activeGroup = initialParams.get("group") || "all";
+  let activeCategory = initialParams.get("category") || "all";
+  let directoryQuery = initialParams.get("q") || "";
 
-  const applyFilter = (group) => {
-    filterButtons.forEach((button) => button.setAttribute("aria-selected", String(button.dataset.fontFilter === group)));
+  const applyFilter = () => {
+    filterButtons.forEach((button) => button.setAttribute("aria-selected", String(button.dataset.fontFilter === activeGroup)));
+    categoryButtons.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.fontCategory === activeCategory)));
+    const normalizedQuery = directoryQuery.trim().toLowerCase();
+    let visible = 0;
     specimens.forEach((article) => {
-      article.hidden = article.dataset.fontGroup !== group;
+      const groupMatch = activeGroup === "all" || article.dataset.fontGroup === activeGroup;
+      const categoryMatch = activeCategory === "all" || article.dataset.fontCategory === activeCategory;
+      const queryMatch = !normalizedQuery || (article.dataset.fontSearchText || "").includes(normalizedQuery);
+      article.hidden = !(groupMatch && categoryMatch && queryMatch);
+      if (!article.hidden) visible += 1;
       if (!article.hidden && !fontSpecimenObserver) loadFontSpecimen(article);
     });
+    if (resultCount) resultCount.textContent = String(visible);
+    if (empty) empty.hidden = visible !== 0;
+    if (document.body.classList.contains("font-directory-page")) {
+      const url = new URL(location.href);
+      directoryQuery ? url.searchParams.set("q", directoryQuery) : url.searchParams.delete("q");
+      activeGroup !== "all" ? url.searchParams.set("group", activeGroup) : url.searchParams.delete("group");
+      activeCategory !== "all" ? url.searchParams.set("category", activeCategory) : url.searchParams.delete("category");
+      history.replaceState(null, "", url);
+    }
   };
 
-  filterButtons.forEach((button) => button.addEventListener("click", () => applyFilter(button.dataset.fontFilter)));
+  filterButtons.forEach((button) => button.addEventListener("click", () => { activeGroup = button.dataset.fontFilter; applyFilter(); }));
+  categoryButtons.forEach((button) => button.addEventListener("click", () => { activeCategory = button.dataset.fontCategory; applyFilter(); }));
+  if (directorySearch) {
+    directorySearch.value = directoryQuery;
+    directorySearch.addEventListener("input", () => { directoryQuery = directorySearch.value; applyFilter(); });
+  }
   size?.addEventListener("input", () => {
     root.style.setProperty("--font-demo-size", \`\${size.value}px\`);
     if (sizeOutput) sizeOutput.textContent = size.value;
@@ -5296,7 +5498,7 @@ function setupFontLibrary() {
     specimens.forEach((article) => fontSpecimenObserver.observe(article));
   }
 
-  applyFilter("zh");
+  applyFilter();
   applyFontLibraryLocale();
 }
 

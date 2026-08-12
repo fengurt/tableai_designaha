@@ -35,7 +35,7 @@ MCP configuration:
 {"mcpServers":{"iptrust":{"type":"http","url":"https://apuch.art/mcp"}}}
 
 Open-source type library:
-- Page: https://apuch.art/ip-evolution#open-source-type
+- Page: https://apuch.art/fonts
 - API: https://apuch.art/api/fonts.json
 - Policy: Copyright remains with each font author. Commercial use, embedding, modification and redistribution must follow the applicable license; font files may not be sold by themselves.
 - Noto Sans SC / 思源黑体: OFL-1.1 · https://github.com/notofonts/noto-cjk/tree/main/Sans
@@ -44,6 +44,21 @@ Open-source type library:
 - Inter: OFL-1.1 · https://github.com/rsms/inter
 - IBM Plex Mono / IBM Plex 等宽: OFL-1.1 · https://github.com/IBM/plex
 - EB Garamond: OFL-1.1 · https://github.com/octaviopardo/EBGaramond12
+- ZCOOL XiaoWei / 站酷小薇体: OFL-1.1 · https://fonts.google.com/specimen/ZCOOL+XiaoWei
+- ZCOOL QingKe HuangYou / 站酷庆科黄油体: OFL-1.1 · https://fonts.google.com/specimen/ZCOOL+QingKe+HuangYou
+- Ma Shan Zheng / 马善政毛笔楷书: OFL-1.1 · https://fonts.google.com/specimen/Ma+Shan+Zheng
+- Long Cang / 龙藏体: OFL-1.1 · https://fonts.google.com/specimen/Long+Cang
+- Roboto Flex: OFL-1.1 · https://fonts.google.com/specimen/Roboto+Flex
+- Open Sans: OFL-1.1 · https://fonts.google.com/specimen/Open+Sans
+- Source Sans 3: OFL-1.1 · https://fonts.google.com/specimen/Source+Sans+3
+- DM Sans: OFL-1.1 · https://fonts.google.com/specimen/DM+Sans
+- Work Sans: OFL-1.1 · https://fonts.google.com/specimen/Work+Sans
+- Space Grotesk: OFL-1.1 · https://fonts.google.com/specimen/Space+Grotesk
+- Playfair Display: OFL-1.1 · https://fonts.google.com/specimen/Playfair+Display
+- Source Serif 4: OFL-1.1 · https://fonts.google.com/specimen/Source+Serif+4
+- JetBrains Mono: OFL-1.1 · https://fonts.google.com/specimen/JetBrains+Mono
+- Source Code Pro: OFL-1.1 · https://fonts.google.com/specimen/Source+Code+Pro
+- Google Sans Code: OFL-1.1 · https://fonts.google.com/specimen/Google+Sans+Code
 
 Brands:
 - Table AI (tableai): /api/brands/tableai.json · mainLocale EN · palette #0A1626 / #A88B52
