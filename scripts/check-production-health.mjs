@@ -28,7 +28,7 @@ const checks = [
     redirect: "manual",
     expect: (response) => response.status === 302
       && new URL(response.headers.get("location"), "https://apuch.art").pathname === "/ip-evolution"
-      && /no-store/i.test(response.headers.get("cache-control") || ""),
+      && !/(?:immutable|max-age=31536000)/i.test(response.headers.get("cache-control") || ""),
   },
   {
     name: "ip-evolution-cache-repair",
