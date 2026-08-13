@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 import { existsSync } from "node:fs";
-import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import { dirname, extname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
@@ -24,7 +24,7 @@ const samples = {
 const subsetSamples = {
   zh: "高楼宾客似曾识，日光底下无新事。让品牌成为可管理、可调用、可持续进化的系统。中文字体参考 0123456789 IPTrust Agent API MCP",
   en: "Brands become living systems. Build, express, govern, evolve. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 IPTrust Agent API MCP",
-  mono: "IPTrust / Agent / API / MCP / #EFE6D2 / 0123456789 / brand.system.evolve()",
+  mono: "高楼宾客似曾识，日光底下无新事 IPTrust / Agent / API / MCP / #EFE6D2 / 0123456789 / brand.system.evolve()",
 };
 
 const repositories = {
@@ -32,6 +32,11 @@ const repositories = {
   ibm: { repo: "IBM/plex", ref: "master" },
   inter: { repo: "rsms/inter", ref: "master" },
   google: { repo: "google/fonts", ref: "main" },
+  lxgw: { repo: "lxgw/LxgwWenKai", ref: "main" },
+  lxgwMarker: { repo: "lxgw/LxgwMarkerGothic", ref: "main" },
+  lxgwZhenKai: { repo: "lxgw/LxgwZhenKai", ref: "main" },
+  lxgw975Hei: { repo: "lxgw/975Hei", ref: "master" },
+  lxgw975Yuan: { repo: "lxgw/975Yuan", ref: "master" },
 };
 
 const googleOfl = (directory) => ({
@@ -91,6 +96,15 @@ const definitions = [
     license: { spdx: "OFL-1.1", name: "SIL Open Font License 1.1", url: "https://github.com/notofonts/noto-cjk/blob/main/Serif/LICENSE" },
     source: { publisher: "Noto Fonts", projectUrl: "https://github.com/notofonts/noto-cjk/tree/main/Serif", repository: "noto" },
     files: [{ weight: "100 900", path: "google-fonts/NotoSerifSC[wght].ttf" }],
+  },
+  {
+    id: "noto-sans-mono-sc", name: "Noto Sans Mono CJK SC", nameZh: "思源等宽简体中文", family: "Noto Sans Mono CJK SC", group: "mono", categoryKey: "mono",
+    scripts: ["Hans", "Latin"], category: { zh: "中文等宽", en: "Simplified Chinese monospace" },
+    useCases: { zh: "中文代码、数据、API 文档与编号", en: "Chinese code, data, API docs and identifiers" }, sample: samples.mono,
+    cssStack: '"Noto Sans Mono CJK SC", "SFMono-Regular", monospace',
+    license: { spdx: "OFL-1.1", name: "SIL Open Font License 1.1", url: "https://github.com/notofonts/noto-cjk/blob/main/Sans/LICENSE" },
+    source: { publisher: "Noto Fonts", projectUrl: "https://github.com/notofonts/noto-cjk/tree/main/Sans", repository: "noto" },
+    files: [{ weight: "100 900", path: "Sans/Variable/TTF/Mono/NotoSansMonoCJKsc-VF.ttf" }],
   },
   {
     id: "ibm-plex-sans-sc",
@@ -183,6 +197,75 @@ const definitions = [
     directory: "longcang", file: "LongCang-Regular.ttf", weight: "400",
   }),
   googleFont({
+    id: "zcool-kuaile", name: "ZCOOL KuaiLe", nameZh: "站酷快乐体", group: "zh", scripts: ["Hans", "Latin"], categoryKey: "display",
+    category: { zh: "中文趣味展示", en: "Playful Chinese display" }, useCases: { zh: "活动、餐饮、儿童与轻松品牌表达", en: "Events, food, children and playful brand expression" },
+    directory: "zcoolkuaile", file: "ZCOOLKuaiLe-Regular.ttf", weight: "400", publisher: "ZCOOL / Google Fonts",
+  }),
+  googleFont({
+    id: "zhi-mang-xing", name: "Zhi Mang Xing", nameZh: "钟齐志莽行书", group: "zh", scripts: ["Hans", "Latin"], categoryKey: "handwriting",
+    category: { zh: "中文行书展示", en: "Chinese running-script display" }, useCases: { zh: "文化标题、题字与短句展示", en: "Cultural headlines, inscriptions and short display" },
+    directory: "zhimangxing", file: "ZhiMangXing-Regular.ttf", weight: "400",
+  }),
+  googleFont({
+    id: "liu-jian-mao-cao", name: "Liu Jian Mao Cao", nameZh: "刘建毛草", group: "zh", scripts: ["Hans", "Latin"], categoryKey: "handwriting",
+    category: { zh: "中文草书展示", en: "Chinese cursive display" }, useCases: { zh: "艺术、文化与短标题题字", en: "Art, culture and short calligraphic display" },
+    directory: "liujianmaocao", file: "LiuJianMaoCao-Regular.ttf", weight: "400",
+  }),
+  {
+    id: "lxgw-wenkai", name: "LXGW WenKai", nameZh: "霞鹜文楷", family: "LXGW WenKai", group: "zh", categoryKey: "serif",
+    scripts: ["Hans", "Hant", "Latin"], category: { zh: "中文人文楷体", en: "Humanist Chinese Kaiti" },
+    useCases: { zh: "长文、出版、文化品牌与屏幕阅读", en: "Long-form, publishing, cultural brands and screen reading" }, sample: samples.zh,
+    cssStack: '"LXGW WenKai", "Kaiti SC", serif',
+    license: { spdx: "OFL-1.1", name: "SIL Open Font License 1.1", url: "https://github.com/lxgw/LxgwWenKai/blob/main/OFL.txt" },
+    source: { publisher: "LXGW", projectUrl: "https://github.com/lxgw/LxgwWenKai", repository: "lxgw" },
+    files: [{ weight: "400", path: "fonts/TTF/LXGWWenKai-Regular.ttf" }],
+  },
+  {
+    id: "lxgw-wenkai-mono", name: "LXGW WenKai Mono", nameZh: "霞鹜文楷等宽", family: "LXGW WenKai Mono", group: "mono", categoryKey: "mono",
+    scripts: ["Hans", "Hant", "Latin"], category: { zh: "中文人文等宽", en: "Humanist Chinese monospace" },
+    useCases: { zh: "中文代码、数据、注释与技术出版", en: "Chinese code, data, annotations and technical publishing" }, sample: samples.mono,
+    cssStack: '"LXGW WenKai Mono", "SFMono-Regular", monospace',
+    license: { spdx: "OFL-1.1", name: "SIL Open Font License 1.1", url: "https://github.com/lxgw/LxgwWenKai/blob/main/OFL.txt" },
+    source: { publisher: "LXGW", projectUrl: "https://github.com/lxgw/LxgwWenKai", repository: "lxgw" },
+    files: [{ weight: "400", path: "fonts/TTF/LXGWWenKaiMono-Regular.ttf" }],
+  },
+  {
+    id: "lxgw-marker-gothic", name: "LXGW Marker Gothic", nameZh: "霞鹜漫黑", family: "LXGW Marker Gothic", group: "zh", categoryKey: "display",
+    scripts: ["Hans", "Latin"], category: { zh: "中文手绘黑体", en: "Hand-drawn Chinese gothic" },
+    useCases: { zh: "海报、餐饮、活动与手绘品牌表达", en: "Posters, food, events and hand-drawn branding" }, sample: samples.zh,
+    cssStack: '"LXGW Marker Gothic", "PingFang SC", sans-serif',
+    license: { spdx: "OFL-1.1", name: "SIL Open Font License 1.1", url: "https://github.com/lxgw/LxgwMarkerGothic/blob/main/OFL.txt" },
+    source: { publisher: "LXGW", projectUrl: "https://github.com/lxgw/LxgwMarkerGothic", repository: "lxgwMarker" },
+    files: [{ weight: "400", path: "fonts/ttf/LXGWMarkerGothic-Regular.ttf" }],
+  },
+  {
+    id: "lxgw-zhenkai", name: "LXGW ZhenKai", nameZh: "霞鹜臻楷", family: "LXGW ZhenKai", group: "zh", categoryKey: "serif",
+    scripts: ["Hans"], category: { zh: "中文楷体", en: "Simplified Chinese Kaiti" },
+    useCases: { zh: "文化标题、出版与传统品牌表达", en: "Cultural display, publishing and heritage branding" }, sample: samples.zh,
+    cssStack: '"LXGW ZhenKai", "Kaiti SC", serif',
+    license: { spdx: "OFL-1.1", name: "SIL Open Font License 1.1", url: "https://github.com/lxgw/LxgwZhenKai/blob/main/OFL.txt" },
+    source: { publisher: "LXGW", projectUrl: "https://github.com/lxgw/LxgwZhenKai", repository: "lxgwZhenKai" },
+    files: [{ weight: "400", path: "documentation/old_files/TTF-subset/LXGWZhenKai-HanOnly-Level1.ttf" }],
+  },
+  {
+    id: "lxgw-975-hei", name: "LXGW 975 Hei", nameZh: "霞鹜九七五黑", family: "LXGW 975 Hei", group: "zh", categoryKey: "sans",
+    scripts: ["Hans", "Latin"], category: { zh: "中文现代黑体", en: "Modern Simplified Chinese sans" },
+    useCases: { zh: "品牌、界面、标题与公共信息", en: "Branding, UI, display and public information" }, sample: samples.zh,
+    cssStack: '"LXGW 975 Hei", "PingFang SC", sans-serif',
+    license: { spdx: "OFL-1.1", name: "SIL Open Font License 1.1", url: "https://github.com/lxgw/975Hei/blob/master/OFL.txt" },
+    source: { publisher: "LXGW", projectUrl: "https://github.com/lxgw/975Hei", repository: "lxgw975Hei" },
+    files: [{ weight: "400", path: "TTF/LXGW975HeiSC-400W.ttf" }],
+  },
+  {
+    id: "lxgw-975-yuan", name: "LXGW 975 Yuan", nameZh: "霞鹜九七五圆", family: "LXGW 975 Yuan", group: "zh", categoryKey: "sans",
+    scripts: ["Hans", "Latin"], category: { zh: "中文圆体", en: "Rounded Simplified Chinese sans" },
+    useCases: { zh: "生活方式、儿童、消费与友好界面", en: "Lifestyle, children, consumer brands and friendly UI" }, sample: samples.zh,
+    cssStack: '"LXGW 975 Yuan", "PingFang SC", sans-serif',
+    license: { spdx: "OFL-1.1", name: "SIL Open Font License 1.1", url: "https://github.com/lxgw/975Yuan/blob/master/OFL.txt" },
+    source: { publisher: "LXGW", projectUrl: "https://github.com/lxgw/975Yuan", repository: "lxgw975Yuan" },
+    files: [{ weight: "400", path: "TTF/LXGW975YuanSC-400W.ttf" }],
+  },
+  googleFont({
     id: "roboto-flex", name: "Roboto Flex", categoryKey: "sans", category: { zh: "英文可变无衬线", en: "Variable Latin sans serif" },
     useCases: { zh: "响应式界面、产品与复杂排版系统", en: "Responsive UI, products and complex type systems" }, directory: "robotoflex", file: "RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
   }),
@@ -271,10 +354,28 @@ await mkdir(sourceDir, { recursive: true });
 await mkdir(outputDir, { recursive: true });
 await mkdir(dirname(outputPath), { recursive: true });
 
+const expectedSourceFiles = new Set(definitions.flatMap((definition) => definition.files.map((file, index) => `${definition.id}-${index}${extname(file.path) || ".font"}`)));
+const expectedSubsetFiles = new Set(definitions.flatMap((definition) => definition.files.map((file) => `${definition.id}-${String(file.weight).replaceAll(" ", "-")}.woff2`)));
+for (const file of await readdir(sourceDir)) {
+  if (!expectedSourceFiles.has(file)) await rm(join(sourceDir, file), { force: true });
+}
+for (const file of await readdir(outputDir)) {
+  if (!expectedSubsetFiles.has(file)) await rm(join(outputDir, file), { force: true });
+}
+
 const revisions = {};
 for (const [key, repository] of Object.entries(repositories)) {
-  const commit = await json(`https://api.github.com/repos/${repository.repo}/commits/${repository.ref}`);
-  revisions[key] = commit.sha;
+  let revision = "";
+  for (let attempt = 0; attempt < 3 && !revision; attempt += 1) {
+    const result = spawnSync("git", ["ls-remote", `https://github.com/${repository.repo}.git`, `refs/heads/${repository.ref}`], {
+      cwd: root,
+      encoding: "utf8",
+    });
+    revision = result.stdout?.trim().split(/\s+/)[0] || "";
+    if (!revision && attempt < 2) await new Promise((resolve) => setTimeout(resolve, 750 * (attempt + 1)));
+  }
+  if (!revision) throw new Error(`revision_lookup_failed:${repository.repo}:${repository.ref}`);
+  revisions[key] = revision;
 }
 
 const fonts = [];

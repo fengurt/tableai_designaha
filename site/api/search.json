@@ -5561,6 +5561,14 @@
   },
   {
     "type": "font",
+    "slug": "noto-sans-mono-sc",
+    "title": "Noto Sans Mono CJK SC",
+    "subtitle": "思源等宽简体中文 · OFL-1.1 · 中文等宽",
+    "text": "中文等宽 Simplified Chinese monospace 中文代码、数据、API 文档与编号 Chinese code, data, API docs and identifiers Hans Latin \"Noto Sans Mono CJK SC\", \"SFMono-Regular\", monospace Noto Fonts",
+    "url": "fonts?q=Noto%20Sans%20Mono%20CJK%20SC#font-noto-sans-mono-sc"
+  },
+  {
+    "type": "font",
     "slug": "ibm-plex-sans-sc",
     "title": "IBM Plex Sans SC",
     "subtitle": "IBM Plex 简体中文 · OFL-1.1 · 中文现代无衬线",
@@ -5622,6 +5630,78 @@
     "subtitle": "龙藏体 · OFL-1.1 · 中文书法展示",
     "text": "中文书法展示 Chinese calligraphic display 传统文化、餐饮题字与短标题 Heritage, food branding and short calligraphic titles Hans Latin \"Long Cang\", \"Helvetica Neue\", Arial, sans-serif Google Fonts",
     "url": "fonts?q=Long%20Cang#font-long-cang"
+  },
+  {
+    "type": "font",
+    "slug": "zcool-kuaile",
+    "title": "ZCOOL KuaiLe",
+    "subtitle": "站酷快乐体 · OFL-1.1 · 中文趣味展示",
+    "text": "中文趣味展示 Playful Chinese display 活动、餐饮、儿童与轻松品牌表达 Events, food, children and playful brand expression Hans Latin \"ZCOOL KuaiLe\", \"Helvetica Neue\", Arial, sans-serif ZCOOL / Google Fonts",
+    "url": "fonts?q=ZCOOL%20KuaiLe#font-zcool-kuaile"
+  },
+  {
+    "type": "font",
+    "slug": "zhi-mang-xing",
+    "title": "Zhi Mang Xing",
+    "subtitle": "钟齐志莽行书 · OFL-1.1 · 中文行书展示",
+    "text": "中文行书展示 Chinese running-script display 文化标题、题字与短句展示 Cultural headlines, inscriptions and short display Hans Latin \"Zhi Mang Xing\", \"Helvetica Neue\", Arial, sans-serif Google Fonts",
+    "url": "fonts?q=Zhi%20Mang%20Xing#font-zhi-mang-xing"
+  },
+  {
+    "type": "font",
+    "slug": "liu-jian-mao-cao",
+    "title": "Liu Jian Mao Cao",
+    "subtitle": "刘建毛草 · OFL-1.1 · 中文草书展示",
+    "text": "中文草书展示 Chinese cursive display 艺术、文化与短标题题字 Art, culture and short calligraphic display Hans Latin \"Liu Jian Mao Cao\", \"Helvetica Neue\", Arial, sans-serif Google Fonts",
+    "url": "fonts?q=Liu%20Jian%20Mao%20Cao#font-liu-jian-mao-cao"
+  },
+  {
+    "type": "font",
+    "slug": "lxgw-wenkai",
+    "title": "LXGW WenKai",
+    "subtitle": "霞鹜文楷 · OFL-1.1 · 中文人文楷体",
+    "text": "中文人文楷体 Humanist Chinese Kaiti 长文、出版、文化品牌与屏幕阅读 Long-form, publishing, cultural brands and screen reading Hans Hant Latin \"LXGW WenKai\", \"Kaiti SC\", serif LXGW",
+    "url": "fonts?q=LXGW%20WenKai#font-lxgw-wenkai"
+  },
+  {
+    "type": "font",
+    "slug": "lxgw-wenkai-mono",
+    "title": "LXGW WenKai Mono",
+    "subtitle": "霞鹜文楷等宽 · OFL-1.1 · 中文人文等宽",
+    "text": "中文人文等宽 Humanist Chinese monospace 中文代码、数据、注释与技术出版 Chinese code, data, annotations and technical publishing Hans Hant Latin \"LXGW WenKai Mono\", \"SFMono-Regular\", monospace LXGW",
+    "url": "fonts?q=LXGW%20WenKai%20Mono#font-lxgw-wenkai-mono"
+  },
+  {
+    "type": "font",
+    "slug": "lxgw-marker-gothic",
+    "title": "LXGW Marker Gothic",
+    "subtitle": "霞鹜漫黑 · OFL-1.1 · 中文手绘黑体",
+    "text": "中文手绘黑体 Hand-drawn Chinese gothic 海报、餐饮、活动与手绘品牌表达 Posters, food, events and hand-drawn branding Hans Latin \"LXGW Marker Gothic\", \"PingFang SC\", sans-serif LXGW",
+    "url": "fonts?q=LXGW%20Marker%20Gothic#font-lxgw-marker-gothic"
+  },
+  {
+    "type": "font",
+    "slug": "lxgw-zhenkai",
+    "title": "LXGW ZhenKai",
+    "subtitle": "霞鹜臻楷 · OFL-1.1 · 中文楷体",
+    "text": "中文楷体 Simplified Chinese Kaiti 文化标题、出版与传统品牌表达 Cultural display, publishing and heritage branding Hans \"LXGW ZhenKai\", \"Kaiti SC\", serif LXGW",
+    "url": "fonts?q=LXGW%20ZhenKai#font-lxgw-zhenkai"
+  },
+  {
+    "type": "font",
+    "slug": "lxgw-975-hei",
+    "title": "LXGW 975 Hei",
+    "subtitle": "霞鹜九七五黑 · OFL-1.1 · 中文现代黑体",
+    "text": "中文现代黑体 Modern Simplified Chinese sans 品牌、界面、标题与公共信息 Branding, UI, display and public information Hans Latin \"LXGW 975 Hei\", \"PingFang SC\", sans-serif LXGW",
+    "url": "fonts?q=LXGW%20975%20Hei#font-lxgw-975-hei"
+  },
+  {
+    "type": "font",
+    "slug": "lxgw-975-yuan",
+    "title": "LXGW 975 Yuan",
+    "subtitle": "霞鹜九七五圆 · OFL-1.1 · 中文圆体",
+    "text": "中文圆体 Rounded Simplified Chinese sans 生活方式、儿童、消费与友好界面 Lifestyle, children, consumer brands and friendly UI Hans Latin \"LXGW 975 Yuan\", \"PingFang SC\", sans-serif LXGW",
+    "url": "fonts?q=LXGW%20975%20Yuan#font-lxgw-975-yuan"
   },
   {
     "type": "font",

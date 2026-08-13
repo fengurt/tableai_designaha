@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-08-12T11:33:09.183Z",
+  "generatedAt": "2026-08-13T04:05:36.250Z",
   "version": {
-    "hash": "6d44c62ed6e687de9930f8eeb1ac99d1f24d19f8",
-    "shortHash": "6d44c62",
-    "date": "2026-08-12T19:03:13+08:00",
-    "message": "feat: launch searchable open font directory",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/6d44c62ed6e687de9930f8eeb1ac99d1f24d19f8"
+    "hash": "675d3b6080e1d2e2a91786de492408141c3e9695",
+    "shortHash": "675d3b6",
+    "date": "2026-08-12T19:33:36+08:00",
+    "message": "feat: clarify commercial font licensing",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/675d3b6080e1d2e2a91786de492408141c3e9695"
   },
   "brands": [
     {
@@ -396,8 +396,8 @@
     "api": "api/fonts.json",
     "licensePolicy": "Open-source licenses that permit commercial use and web embedding; each record carries its official source and license.",
     "delivery": "Official font sources are subset to WOFF2, stored as immutable R2 objects and loaded only when specimens enter the viewport.",
-    "count": 21,
-    "verifiedAt": "2026-08-12"
+    "count": 31,
+    "verifiedAt": "2026-08-13"
   },
   "library": {
     "page": "library/",
@@ -453,11 +453,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "6d44c62ed6e687de9930f8eeb1ac99d1f24d19f8",
-      "shortHash": "6d44c62",
-      "date": "2026-08-12T19:03:13+08:00",
-      "message": "feat: launch searchable open font directory",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/6d44c62ed6e687de9930f8eeb1ac99d1f24d19f8"
+      "hash": "675d3b6080e1d2e2a91786de492408141c3e9695",
+      "shortHash": "675d3b6",
+      "date": "2026-08-12T19:33:36+08:00",
+      "message": "feat: clarify commercial font licensing",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/675d3b6080e1d2e2a91786de492408141c3e9695"
     }
   },
   "sync": {

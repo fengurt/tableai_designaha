@@ -147,11 +147,11 @@
     "child"
   ],
   "version": {
-    "hash": "6d44c62ed6e687de9930f8eeb1ac99d1f24d19f8",
-    "shortHash": "6d44c62",
-    "date": "2026-08-12T19:03:13+08:00",
-    "message": "feat: launch searchable open font directory",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/6d44c62ed6e687de9930f8eeb1ac99d1f24d19f8"
+    "hash": "675d3b6080e1d2e2a91786de492408141c3e9695",
+    "shortHash": "675d3b6",
+    "date": "2026-08-12T19:33:36+08:00",
+    "message": "feat: clarify commercial font licensing",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/675d3b6080e1d2e2a91786de492408141c3e9695"
   },
   "historyUrl": "api/history/xiaotaoyuan.json",
   "history": [

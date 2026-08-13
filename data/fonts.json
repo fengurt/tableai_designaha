@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-12T11:29:26.541Z",
-  "verifiedAt": "2026-08-12",
+  "generatedAt": "2026-08-13T04:05:20.309Z",
+  "verifiedAt": "2026-08-13",
   "name": "IPTrust Open-source Type Library",
   "description": {
     "zh": "采用开源许可证、允许商业使用与网页嵌入的中英文字体参考。",
@@ -226,6 +226,57 @@
           "sourceUrl": "https://raw.githubusercontent.com/notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/google-fonts/NotoSerifSC%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-noto-serif-sc-100-900/e983f9db1fc3c07ef40e457bb84eaef5c97b7870cc530b592fd917bd230ec4bc/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-noto-serif-sc-100-900/e983f9db1fc3c07ef40e457bb84eaef5c97b7870cc530b592fd917bd230ec4bc/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "noto-sans-mono-sc",
+      "name": "Noto Sans Mono CJK SC",
+      "nameZh": "思源等宽简体中文",
+      "family": "Noto Sans Mono CJK SC",
+      "group": "mono",
+      "scripts": [
+        "Hans",
+        "Latin"
+      ],
+      "categoryKey": "mono",
+      "category": {
+        "zh": "中文等宽",
+        "en": "Simplified Chinese monospace"
+      },
+      "useCases": {
+        "zh": "中文代码、数据、API 文档与编号",
+        "en": "Chinese code, data, API docs and identifiers"
+      },
+      "sample": "高楼宾客似曾识，日光底下无新事",
+      "cssStack": "\"Noto Sans Mono CJK SC\", \"SFMono-Regular\", monospace",
+      "weights": [
+        "100 900"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/notofonts/noto-cjk/blob/main/Sans/LICENSE"
+      },
+      "source": {
+        "publisher": "Noto Fonts",
+        "projectUrl": "https://github.com/notofonts/noto-cjk/tree/main/Sans",
+        "repository": "notofonts/noto-cjk",
+        "revision": "f8d157532fbfaeda587e826d4cd5b21a49186f7c",
+        "release": "f8d157532fbf"
+      },
+      "assets": [
+        {
+          "id": "font-noto-sans-mono-sc-100-900",
+          "weight": "100 900",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 31616,
+          "sha256": "0c70d310fe7588863bee5cef0d8c32dd28ae0882f9a6b60a04d5fcc20f55d91e",
+          "sourceSha256": "9fe57a71eb48e50cccb77903123d08857edefcf289c7b309462c4c3d82208126",
+          "sourceUrl": "https://raw.githubusercontent.com/notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/Sans/Variable/TTF/Mono/NotoSansMonoCJKsc-VF.ttf",
+          "objectKey": "public/iptrust/font-noto-sans-mono-sc-100-900/0c70d310fe7588863bee5cef0d8c32dd28ae0882f9a6b60a04d5fcc20f55d91e/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-noto-sans-mono-sc-100-900/0c70d310fe7588863bee5cef0d8c32dd28ae0882f9a6b60a04d5fcc20f55d91e/demo.woff2"
         }
       ]
     },
@@ -663,6 +714,466 @@
           "sourceUrl": "https://raw.githubusercontent.com/google/fonts/038b637da7b3fd956a4ed93ffc607c3d5e4ce172/ofl/longcang/LongCang-Regular.ttf",
           "objectKey": "public/iptrust/font-long-cang-400/1021ecae675a9fd3d593342a0a81dd09b3e6fd52bbca7ad9728cfedef0fa5df7/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-long-cang-400/1021ecae675a9fd3d593342a0a81dd09b3e6fd52bbca7ad9728cfedef0fa5df7/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "zcool-kuaile",
+      "name": "ZCOOL KuaiLe",
+      "nameZh": "站酷快乐体",
+      "family": "ZCOOL KuaiLe",
+      "group": "zh",
+      "scripts": [
+        "Hans",
+        "Latin"
+      ],
+      "categoryKey": "display",
+      "category": {
+        "zh": "中文趣味展示",
+        "en": "Playful Chinese display"
+      },
+      "useCases": {
+        "zh": "活动、餐饮、儿童与轻松品牌表达",
+        "en": "Events, food, children and playful brand expression"
+      },
+      "sample": "高楼宾客似曾识，日光底下无新事",
+      "cssStack": "\"ZCOOL KuaiLe\", \"Helvetica Neue\", Arial, sans-serif",
+      "weights": [
+        "400"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/google/fonts/blob/main/ofl/zcoolkuaile/OFL.txt"
+      },
+      "source": {
+        "publisher": "ZCOOL / Google Fonts",
+        "projectUrl": "https://fonts.google.com/specimen/ZCOOL+KuaiLe",
+        "repository": "google/fonts",
+        "revision": "038b637da7b3fd956a4ed93ffc607c3d5e4ce172",
+        "release": "038b637da7b3"
+      },
+      "assets": [
+        {
+          "id": "font-zcool-kuaile-400",
+          "weight": "400",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 6216,
+          "sha256": "dbb76821061713880b2c7b4d48c194f88cabdd8db007186ff3c450c368473b18",
+          "sourceSha256": "812a6fc1fe54b6d73a419245c32dfeba8aa33104d5be90d1cf6af082007cb71d",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/038b637da7b3fd956a4ed93ffc607c3d5e4ce172/ofl/zcoolkuaile/ZCOOLKuaiLe-Regular.ttf",
+          "objectKey": "public/iptrust/font-zcool-kuaile-400/dbb76821061713880b2c7b4d48c194f88cabdd8db007186ff3c450c368473b18/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-zcool-kuaile-400/dbb76821061713880b2c7b4d48c194f88cabdd8db007186ff3c450c368473b18/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "zhi-mang-xing",
+      "name": "Zhi Mang Xing",
+      "nameZh": "钟齐志莽行书",
+      "family": "Zhi Mang Xing",
+      "group": "zh",
+      "scripts": [
+        "Hans",
+        "Latin"
+      ],
+      "categoryKey": "handwriting",
+      "category": {
+        "zh": "中文行书展示",
+        "en": "Chinese running-script display"
+      },
+      "useCases": {
+        "zh": "文化标题、题字与短句展示",
+        "en": "Cultural headlines, inscriptions and short display"
+      },
+      "sample": "高楼宾客似曾识，日光底下无新事",
+      "cssStack": "\"Zhi Mang Xing\", \"Helvetica Neue\", Arial, sans-serif",
+      "weights": [
+        "400"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/google/fonts/blob/main/ofl/zhimangxing/OFL.txt"
+      },
+      "source": {
+        "publisher": "Google Fonts",
+        "projectUrl": "https://fonts.google.com/specimen/Zhi+Mang+Xing",
+        "repository": "google/fonts",
+        "revision": "038b637da7b3fd956a4ed93ffc607c3d5e4ce172",
+        "release": "038b637da7b3"
+      },
+      "assets": [
+        {
+          "id": "font-zhi-mang-xing-400",
+          "weight": "400",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 15356,
+          "sha256": "ba2e1448800012a5f0a35d9796b5b3d44fd67e05dedf821b64b6e6b58f33a379",
+          "sourceSha256": "644e0cae9b40f0b10ab729a01bd32032e3973bac22be3dccae01bf6ae7fde969",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/038b637da7b3fd956a4ed93ffc607c3d5e4ce172/ofl/zhimangxing/ZhiMangXing-Regular.ttf",
+          "objectKey": "public/iptrust/font-zhi-mang-xing-400/ba2e1448800012a5f0a35d9796b5b3d44fd67e05dedf821b64b6e6b58f33a379/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-zhi-mang-xing-400/ba2e1448800012a5f0a35d9796b5b3d44fd67e05dedf821b64b6e6b58f33a379/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "liu-jian-mao-cao",
+      "name": "Liu Jian Mao Cao",
+      "nameZh": "刘建毛草",
+      "family": "Liu Jian Mao Cao",
+      "group": "zh",
+      "scripts": [
+        "Hans",
+        "Latin"
+      ],
+      "categoryKey": "handwriting",
+      "category": {
+        "zh": "中文草书展示",
+        "en": "Chinese cursive display"
+      },
+      "useCases": {
+        "zh": "艺术、文化与短标题题字",
+        "en": "Art, culture and short calligraphic display"
+      },
+      "sample": "高楼宾客似曾识，日光底下无新事",
+      "cssStack": "\"Liu Jian Mao Cao\", \"Helvetica Neue\", Arial, sans-serif",
+      "weights": [
+        "400"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/google/fonts/blob/main/ofl/liujianmaocao/OFL.txt"
+      },
+      "source": {
+        "publisher": "Google Fonts",
+        "projectUrl": "https://fonts.google.com/specimen/Liu+Jian+Mao+Cao",
+        "repository": "google/fonts",
+        "revision": "038b637da7b3fd956a4ed93ffc607c3d5e4ce172",
+        "release": "038b637da7b3"
+      },
+      "assets": [
+        {
+          "id": "font-liu-jian-mao-cao-400",
+          "weight": "400",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 15536,
+          "sha256": "918993712a436257cd206be0c5da24dc0385f29bea722bbb90499abdcee23da0",
+          "sourceSha256": "cab396b91a5b7c0b4005a35891180d06e6751f5ac261fe680aec65c1ae209033",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/038b637da7b3fd956a4ed93ffc607c3d5e4ce172/ofl/liujianmaocao/LiuJianMaoCao-Regular.ttf",
+          "objectKey": "public/iptrust/font-liu-jian-mao-cao-400/918993712a436257cd206be0c5da24dc0385f29bea722bbb90499abdcee23da0/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-liu-jian-mao-cao-400/918993712a436257cd206be0c5da24dc0385f29bea722bbb90499abdcee23da0/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "lxgw-wenkai",
+      "name": "LXGW WenKai",
+      "nameZh": "霞鹜文楷",
+      "family": "LXGW WenKai",
+      "group": "zh",
+      "scripts": [
+        "Hans",
+        "Hant",
+        "Latin"
+      ],
+      "categoryKey": "serif",
+      "category": {
+        "zh": "中文人文楷体",
+        "en": "Humanist Chinese Kaiti"
+      },
+      "useCases": {
+        "zh": "长文、出版、文化品牌与屏幕阅读",
+        "en": "Long-form, publishing, cultural brands and screen reading"
+      },
+      "sample": "高楼宾客似曾识，日光底下无新事",
+      "cssStack": "\"LXGW WenKai\", \"Kaiti SC\", serif",
+      "weights": [
+        "400"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/lxgw/LxgwWenKai/blob/main/OFL.txt"
+      },
+      "source": {
+        "publisher": "LXGW",
+        "projectUrl": "https://github.com/lxgw/LxgwWenKai",
+        "repository": "lxgw/LxgwWenKai",
+        "revision": "ed634e2291ff8adcffbab553d6c26cc95a0e4a0c",
+        "release": "ed634e2291ff"
+      },
+      "assets": [
+        {
+          "id": "font-lxgw-wenkai-400",
+          "weight": "400",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 13932,
+          "sha256": "8b6ea95672f3fc7ff76fe7abd858816cca72e8834b137574e6de22f9c7c4e4ed",
+          "sourceSha256": "39ad71264b588165b469e35e6afb162a378dacd1f95348160240ba9038ac3009",
+          "sourceUrl": "https://raw.githubusercontent.com/lxgw/LxgwWenKai/ed634e2291ff8adcffbab553d6c26cc95a0e4a0c/fonts/TTF/LXGWWenKai-Regular.ttf",
+          "objectKey": "public/iptrust/font-lxgw-wenkai-400/8b6ea95672f3fc7ff76fe7abd858816cca72e8834b137574e6de22f9c7c4e4ed/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-lxgw-wenkai-400/8b6ea95672f3fc7ff76fe7abd858816cca72e8834b137574e6de22f9c7c4e4ed/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "lxgw-wenkai-mono",
+      "name": "LXGW WenKai Mono",
+      "nameZh": "霞鹜文楷等宽",
+      "family": "LXGW WenKai Mono",
+      "group": "mono",
+      "scripts": [
+        "Hans",
+        "Hant",
+        "Latin"
+      ],
+      "categoryKey": "mono",
+      "category": {
+        "zh": "中文人文等宽",
+        "en": "Humanist Chinese monospace"
+      },
+      "useCases": {
+        "zh": "中文代码、数据、注释与技术出版",
+        "en": "Chinese code, data, annotations and technical publishing"
+      },
+      "sample": "高楼宾客似曾识，日光底下无新事",
+      "cssStack": "\"LXGW WenKai Mono\", \"SFMono-Regular\", monospace",
+      "weights": [
+        "400"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/lxgw/LxgwWenKai/blob/main/OFL.txt"
+      },
+      "source": {
+        "publisher": "LXGW",
+        "projectUrl": "https://github.com/lxgw/LxgwWenKai",
+        "repository": "lxgw/LxgwWenKai",
+        "revision": "ed634e2291ff8adcffbab553d6c26cc95a0e4a0c",
+        "release": "ed634e2291ff"
+      },
+      "assets": [
+        {
+          "id": "font-lxgw-wenkai-mono-400",
+          "weight": "400",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 15560,
+          "sha256": "4bc051d2a1d2973ce99e3ba2b4278066e3c608371dab601b5f40769548fcac28",
+          "sourceSha256": "bc068e4e395c396f2909ffdfac3a3751578b73ed3d64a79c9c31bfa84e43debe",
+          "sourceUrl": "https://raw.githubusercontent.com/lxgw/LxgwWenKai/ed634e2291ff8adcffbab553d6c26cc95a0e4a0c/fonts/TTF/LXGWWenKaiMono-Regular.ttf",
+          "objectKey": "public/iptrust/font-lxgw-wenkai-mono-400/4bc051d2a1d2973ce99e3ba2b4278066e3c608371dab601b5f40769548fcac28/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-lxgw-wenkai-mono-400/4bc051d2a1d2973ce99e3ba2b4278066e3c608371dab601b5f40769548fcac28/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "lxgw-marker-gothic",
+      "name": "LXGW Marker Gothic",
+      "nameZh": "霞鹜漫黑",
+      "family": "LXGW Marker Gothic",
+      "group": "zh",
+      "scripts": [
+        "Hans",
+        "Latin"
+      ],
+      "categoryKey": "display",
+      "category": {
+        "zh": "中文手绘黑体",
+        "en": "Hand-drawn Chinese gothic"
+      },
+      "useCases": {
+        "zh": "海报、餐饮、活动与手绘品牌表达",
+        "en": "Posters, food, events and hand-drawn branding"
+      },
+      "sample": "高楼宾客似曾识，日光底下无新事",
+      "cssStack": "\"LXGW Marker Gothic\", \"PingFang SC\", sans-serif",
+      "weights": [
+        "400"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/lxgw/LxgwMarkerGothic/blob/main/OFL.txt"
+      },
+      "source": {
+        "publisher": "LXGW",
+        "projectUrl": "https://github.com/lxgw/LxgwMarkerGothic",
+        "repository": "lxgw/LxgwMarkerGothic",
+        "revision": "8c45e4f1a347afc84d1db5b94449a9523da07331",
+        "release": "8c45e4f1a347"
+      },
+      "assets": [
+        {
+          "id": "font-lxgw-marker-gothic-400",
+          "weight": "400",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 7780,
+          "sha256": "04849b5fe700dfb96ac41d178015cbc9d248f088e2b1a7cdb266717582d4eb91",
+          "sourceSha256": "9a1e46379442856b9fc64de1d9bd4120903780990e28d99fd6415cadee78a47d",
+          "sourceUrl": "https://raw.githubusercontent.com/lxgw/LxgwMarkerGothic/8c45e4f1a347afc84d1db5b94449a9523da07331/fonts/ttf/LXGWMarkerGothic-Regular.ttf",
+          "objectKey": "public/iptrust/font-lxgw-marker-gothic-400/04849b5fe700dfb96ac41d178015cbc9d248f088e2b1a7cdb266717582d4eb91/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-lxgw-marker-gothic-400/04849b5fe700dfb96ac41d178015cbc9d248f088e2b1a7cdb266717582d4eb91/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "lxgw-zhenkai",
+      "name": "LXGW ZhenKai",
+      "nameZh": "霞鹜臻楷",
+      "family": "LXGW ZhenKai",
+      "group": "zh",
+      "scripts": [
+        "Hans"
+      ],
+      "categoryKey": "serif",
+      "category": {
+        "zh": "中文楷体",
+        "en": "Simplified Chinese Kaiti"
+      },
+      "useCases": {
+        "zh": "文化标题、出版与传统品牌表达",
+        "en": "Cultural display, publishing and heritage branding"
+      },
+      "sample": "高楼宾客似曾识，日光底下无新事",
+      "cssStack": "\"LXGW ZhenKai\", \"Kaiti SC\", serif",
+      "weights": [
+        "400"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/lxgw/LxgwZhenKai/blob/main/OFL.txt"
+      },
+      "source": {
+        "publisher": "LXGW",
+        "projectUrl": "https://github.com/lxgw/LxgwZhenKai",
+        "repository": "lxgw/LxgwZhenKai",
+        "revision": "c576bb1fbf557b4c7bce13c6fc808cbae8e50efa",
+        "release": "c576bb1fbf55"
+      },
+      "assets": [
+        {
+          "id": "font-lxgw-zhenkai-400",
+          "weight": "400",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 10104,
+          "sha256": "95a74ff22bfc296c53019dea4a728a25156b0d40d063ffc9b69ae9af10efbcad",
+          "sourceSha256": "dbb370b8d8eee594dca9af589eef6e707f686743292f51aba19793483e28d3f5",
+          "sourceUrl": "https://raw.githubusercontent.com/lxgw/LxgwZhenKai/c576bb1fbf557b4c7bce13c6fc808cbae8e50efa/documentation/old_files/TTF-subset/LXGWZhenKai-HanOnly-Level1.ttf",
+          "objectKey": "public/iptrust/font-lxgw-zhenkai-400/95a74ff22bfc296c53019dea4a728a25156b0d40d063ffc9b69ae9af10efbcad/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-lxgw-zhenkai-400/95a74ff22bfc296c53019dea4a728a25156b0d40d063ffc9b69ae9af10efbcad/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "lxgw-975-hei",
+      "name": "LXGW 975 Hei",
+      "nameZh": "霞鹜九七五黑",
+      "family": "LXGW 975 Hei",
+      "group": "zh",
+      "scripts": [
+        "Hans",
+        "Latin"
+      ],
+      "categoryKey": "sans",
+      "category": {
+        "zh": "中文现代黑体",
+        "en": "Modern Simplified Chinese sans"
+      },
+      "useCases": {
+        "zh": "品牌、界面、标题与公共信息",
+        "en": "Branding, UI, display and public information"
+      },
+      "sample": "高楼宾客似曾识，日光底下无新事",
+      "cssStack": "\"LXGW 975 Hei\", \"PingFang SC\", sans-serif",
+      "weights": [
+        "400"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/lxgw/975Hei/blob/master/OFL.txt"
+      },
+      "source": {
+        "publisher": "LXGW",
+        "projectUrl": "https://github.com/lxgw/975Hei",
+        "repository": "lxgw/975Hei",
+        "revision": "6e0e1cb9387699381099d7a8ae79591b2f6c4ad7",
+        "release": "6e0e1cb93876"
+      },
+      "assets": [
+        {
+          "id": "font-lxgw-975-hei-400",
+          "weight": "400",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 8700,
+          "sha256": "1e559989d156e01e7a6a846729261eea013ad31ee275fc69724f5239deea1ea5",
+          "sourceSha256": "a66482e17172b4bf989bbf7e6cdaaaa83e5f15d6ff621ef9034bdbbef4ba0466",
+          "sourceUrl": "https://raw.githubusercontent.com/lxgw/975Hei/6e0e1cb9387699381099d7a8ae79591b2f6c4ad7/TTF/LXGW975HeiSC-400W.ttf",
+          "objectKey": "public/iptrust/font-lxgw-975-hei-400/1e559989d156e01e7a6a846729261eea013ad31ee275fc69724f5239deea1ea5/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-lxgw-975-hei-400/1e559989d156e01e7a6a846729261eea013ad31ee275fc69724f5239deea1ea5/demo.woff2"
+        }
+      ]
+    },
+    {
+      "id": "lxgw-975-yuan",
+      "name": "LXGW 975 Yuan",
+      "nameZh": "霞鹜九七五圆",
+      "family": "LXGW 975 Yuan",
+      "group": "zh",
+      "scripts": [
+        "Hans",
+        "Latin"
+      ],
+      "categoryKey": "sans",
+      "category": {
+        "zh": "中文圆体",
+        "en": "Rounded Simplified Chinese sans"
+      },
+      "useCases": {
+        "zh": "生活方式、儿童、消费与友好界面",
+        "en": "Lifestyle, children, consumer brands and friendly UI"
+      },
+      "sample": "高楼宾客似曾识，日光底下无新事",
+      "cssStack": "\"LXGW 975 Yuan\", \"PingFang SC\", sans-serif",
+      "weights": [
+        "400"
+      ],
+      "license": {
+        "spdx": "OFL-1.1",
+        "name": "SIL Open Font License 1.1",
+        "url": "https://github.com/lxgw/975Yuan/blob/master/OFL.txt"
+      },
+      "source": {
+        "publisher": "LXGW",
+        "projectUrl": "https://github.com/lxgw/975Yuan",
+        "repository": "lxgw/975Yuan",
+        "revision": "37b753f408b25d3ab3d25cbddb5dd9dacca0289a",
+        "release": "37b753f408b2"
+      },
+      "assets": [
+        {
+          "id": "font-lxgw-975-yuan-400",
+          "weight": "400",
+          "style": "normal",
+          "mimeType": "font/woff2",
+          "bytes": 10588,
+          "sha256": "7e7a6c0395b634d2918cb10a0ddb6224545b8014a35431ee267eafa8a06c822b",
+          "sourceSha256": "d14f5a453a221525f0db4887412712cbc03a84d0dc44ce2d22d51d1c136ed9a1",
+          "sourceUrl": "https://raw.githubusercontent.com/lxgw/975Yuan/37b753f408b25d3ab3d25cbddb5dd9dacca0289a/TTF/LXGW975YuanSC-400W.ttf",
+          "objectKey": "public/iptrust/font-lxgw-975-yuan-400/7e7a6c0395b634d2918cb10a0ddb6224545b8014a35431ee267eafa8a06c822b/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-lxgw-975-yuan-400/7e7a6c0395b634d2918cb10a0ddb6224545b8014a35431ee267eafa8a06c822b/demo.woff2"
         }
       ]
     },

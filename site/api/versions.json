@@ -1,5 +1,12 @@
 [
   {
+    "hash": "675d3b6080e1d2e2a91786de492408141c3e9695",
+    "shortHash": "675d3b6",
+    "date": "2026-08-12T19:33:36+08:00",
+    "message": "feat: clarify commercial font licensing",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/675d3b6080e1d2e2a91786de492408141c3e9695"
+  },
+  {
     "hash": "6d44c62ed6e687de9930f8eeb1ac99d1f24d19f8",
     "shortHash": "6d44c62",
     "date": "2026-08-12T19:03:13+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-07-19T21:49:19+08:00",
     "message": "fix: normalize brand search indexing",
     "url": "https://github.com/fengurt/tableai_designaha/commit/bdd9764d1d5239666a3b9def6e2cafbdf4d1e659"
-  },
-  {
-    "hash": "f00a7899dc5da392abf1d4153c8eee3930bd9495",
-    "shortHash": "f00a789",
-    "date": "2026-07-19T21:37:44+08:00",
-    "message": "perf: serve responsive brand media",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/f00a7899dc5da392abf1d4153c8eee3930bd9495"
   }
 ]

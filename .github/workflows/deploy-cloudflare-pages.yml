@@ -47,6 +47,17 @@ jobs:
       - name: Install dependencies
         if: steps.cloudflare.outputs.enabled == 'true'
         run: npm ci
+      - name: Sync changed font previews to R2
+        if: steps.cloudflare.outputs.enabled == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet HEAD^ HEAD -- scripts/sync-font-library.mjs data/fonts.json; then
+            echo "Font catalog unchanged; skipping R2 font sync."
+            exit 0
+          fi
+          python -m pip install --disable-pip-version-check fonttools brotli
+          npm run sync:fonts:upload
       - name: Build static site
         if: steps.cloudflare.outputs.enabled == 'true'
         run: npm run build:site

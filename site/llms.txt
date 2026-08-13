@@ -40,6 +40,7 @@ Open-source type library:
 - Policy: Copyright remains with each font author. Commercial use, embedding, modification and redistribution must follow the applicable license; font files may not be sold by themselves.
 - Noto Sans SC / 思源黑体: OFL-1.1 · https://github.com/notofonts/noto-cjk/tree/main/Sans
 - Noto Serif SC / 思源宋体: OFL-1.1 · https://github.com/notofonts/noto-cjk/tree/main/Serif
+- Noto Sans Mono CJK SC / 思源等宽简体中文: OFL-1.1 · https://github.com/notofonts/noto-cjk/tree/main/Sans
 - IBM Plex Sans SC / IBM Plex 简体中文: OFL-1.1 · https://github.com/IBM/plex
 - Inter: OFL-1.1 · https://github.com/rsms/inter
 - IBM Plex Mono / IBM Plex 等宽: OFL-1.1 · https://github.com/IBM/plex
@@ -48,6 +49,15 @@ Open-source type library:
 - ZCOOL QingKe HuangYou / 站酷庆科黄油体: OFL-1.1 · https://fonts.google.com/specimen/ZCOOL+QingKe+HuangYou
 - Ma Shan Zheng / 马善政毛笔楷书: OFL-1.1 · https://fonts.google.com/specimen/Ma+Shan+Zheng
 - Long Cang / 龙藏体: OFL-1.1 · https://fonts.google.com/specimen/Long+Cang
+- ZCOOL KuaiLe / 站酷快乐体: OFL-1.1 · https://fonts.google.com/specimen/ZCOOL+KuaiLe
+- Zhi Mang Xing / 钟齐志莽行书: OFL-1.1 · https://fonts.google.com/specimen/Zhi+Mang+Xing
+- Liu Jian Mao Cao / 刘建毛草: OFL-1.1 · https://fonts.google.com/specimen/Liu+Jian+Mao+Cao
+- LXGW WenKai / 霞鹜文楷: OFL-1.1 · https://github.com/lxgw/LxgwWenKai
+- LXGW WenKai Mono / 霞鹜文楷等宽: OFL-1.1 · https://github.com/lxgw/LxgwWenKai
+- LXGW Marker Gothic / 霞鹜漫黑: OFL-1.1 · https://github.com/lxgw/LxgwMarkerGothic
+- LXGW ZhenKai / 霞鹜臻楷: OFL-1.1 · https://github.com/lxgw/LxgwZhenKai
+- LXGW 975 Hei / 霞鹜九七五黑: OFL-1.1 · https://github.com/lxgw/975Hei
+- LXGW 975 Yuan / 霞鹜九七五圆: OFL-1.1 · https://github.com/lxgw/975Yuan
 - Roboto Flex: OFL-1.1 · https://fonts.google.com/specimen/Roboto+Flex
 - Open Sans: OFL-1.1 · https://fonts.google.com/specimen/Open+Sans
 - Source Sans 3: OFL-1.1 · https://fonts.google.com/specimen/Source+Sans+3
