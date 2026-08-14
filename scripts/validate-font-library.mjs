@@ -5,6 +5,9 @@ import { fileURLToPath } from "node:url";
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const catalog = JSON.parse(await readFile(join(root, "data", "fonts.json"), "utf8"));
 const googleDirectory = JSON.parse(await readFile(join(root, "data", "google-fonts-directory.json"), "utf8"));
+const approvedCommercialLicenses = new Set(["OFL-1.1", "Apache-2.0", "UFL-1.0"]);
+const approvedProjectHosts = new Set(["fonts.google.com", "github.com"]);
+const approvedLicenseHosts = new Set(["github.com", "openfontlicense.org", "www.apache.org", "ubuntu.com"]);
 
 if (catalog.schemaVersion !== 1) throw new Error("font_schema_version");
 if (!/^\d{4}-\d{2}-\d{2}$/.test(catalog.verifiedAt || "")) throw new Error("font_verified_at");
@@ -17,11 +20,15 @@ if (catalog.fonts.length < 50) throw new Error("font_curated_count");
 for (const font of catalog.fonts) {
   if (!font.id || ids.has(font.id)) throw new Error(`font_id:${font.id}`);
   ids.add(font.id);
-  if (!commercialLicenses.has(font.license?.spdx) || !font.license?.url?.startsWith("https://")) throw new Error(`font_license:${font.id}`);
-  if (!font.source?.projectUrl?.startsWith("https://") || !/^[a-f0-9]{40}$/.test(font.source?.revision || "")) throw new Error(`font_source:${font.id}`);
+  if (!approvedCommercialLicenses.has(font.license?.spdx) || !commercialLicenses.has(font.license?.spdx)) throw new Error(`font_license:${font.id}`);
+  const licenseUrl = new URL(font.license?.url || "https://invalid.local");
+  if (licenseUrl.protocol !== "https:" || !approvedLicenseHosts.has(licenseUrl.hostname)) throw new Error(`font_license_source:${font.id}`);
+  const projectUrl = new URL(font.source?.projectUrl || "https://invalid.local");
+  if (projectUrl.protocol !== "https:" || !approvedProjectHosts.has(projectUrl.hostname) || !/^[a-f0-9]{40}$/.test(font.source?.revision || "")) throw new Error(`font_source:${font.id}`);
   if (!font.cssStack || !font.sample || !font.categoryKey || !Array.isArray(font.assets) || !font.assets.length) throw new Error(`font_metadata:${font.id}`);
   for (const asset of font.assets) {
     if (asset.mimeType !== "font/woff2" || !/^[a-f0-9]{64}$/.test(asset.sha256 || "")) throw new Error(`font_asset:${font.id}`);
+    if (!/^[a-f0-9]{64}$/.test(asset.sourceSha256 || "") || !asset.sourceUrl?.startsWith("https://")) throw new Error(`font_asset_source:${font.id}`);
     if (!asset.mediaUrl?.startsWith("https://media.apuch.art/public/iptrust/font-")) throw new Error(`font_media_url:${font.id}`);
   }
 }
