@@ -27,6 +27,7 @@ Machine-readable entry points:
 - https://apuch.art/api/brands/{slug}.json
 - https://apuch.art/api/history/{slug}.json
 - https://apuch.art/api/fonts.json
+- https://apuch.art/api/google-fonts.json
 - https://apuch.art/api/v2/assets?ownerType=owned-ip&ownerId={slug}
 - https://apuch.art/mcp (MCP Streamable HTTP, protocol 2025-11-25)
 - https://apuch.art/skills/iptrust-live-update/SKILL.md
@@ -37,6 +38,7 @@ MCP configuration:
 Open-source type library:
 - Page: https://apuch.art/fonts
 - API: https://apuch.art/api/fonts.json
+- Official directory API: https://apuch.art/api/google-fonts.json (1928 license-matched families)
 - Policy: Copyright remains with each font author. Commercial use, embedding, modification and redistribution must follow the applicable license; font files may not be sold by themselves.
 - Noto Sans SC / 思源黑体: OFL-1.1 · https://github.com/notofonts/noto-cjk/tree/main/Sans
 - Noto Serif SC / 思源宋体: OFL-1.1 · https://github.com/notofonts/noto-cjk/tree/main/Serif

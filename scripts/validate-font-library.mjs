@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const catalog = JSON.parse(await readFile(join(root, "data", "fonts.json"), "utf8"));
+const googleDirectory = JSON.parse(await readFile(join(root, "data", "google-fonts-directory.json"), "utf8"));
 
 if (catalog.schemaVersion !== 1) throw new Error("font_schema_version");
 if (!/^\d{4}-\d{2}-\d{2}$/.test(catalog.verifiedAt || "")) throw new Error("font_verified_at");
@@ -23,4 +24,22 @@ for (const font of catalog.fonts) {
   }
 }
 
-console.log(JSON.stringify({ ok: true, fonts: catalog.fonts.length, assets: catalog.fonts.flatMap((font) => font.assets).length, verifiedAt: catalog.verifiedAt }, null, 2));
+if (googleDirectory.schemaVersion !== 1 || googleDirectory.stats?.verifiedFamilies < 1000) throw new Error("google_font_directory_count");
+if (googleDirectory.families.length !== googleDirectory.stats.verifiedFamilies) throw new Error("google_font_directory_stats");
+const directoryIds = new Set();
+for (const font of googleDirectory.families) {
+  if (!font.id || directoryIds.has(font.id)) throw new Error(`google_font_id:${font.id}`);
+  directoryIds.add(font.id);
+  if (!font.family || !Array.isArray(font.groups) || !Array.isArray(font.subsets)) throw new Error(`google_font_metadata:${font.id}`);
+  if (!["OFL-1.1", "Apache-2.0", "UFL-1.0"].includes(font.license?.spdx) || !font.license?.url?.startsWith("https://github.com/google/fonts/")) throw new Error(`google_font_license:${font.id}`);
+  if (!font.source?.projectUrl?.startsWith("https://fonts.google.com/specimen/")) throw new Error(`google_font_source:${font.id}`);
+}
+
+console.log(JSON.stringify({
+  ok: true,
+  selfHostedFonts: catalog.fonts.length,
+  assets: catalog.fonts.flatMap((font) => font.assets).length,
+  officialIndexedFonts: googleDirectory.stats.verifiedFamilies,
+  excludedOfficialFonts: googleDirectory.stats.excludedFamilies,
+  verifiedAt: googleDirectory.verifiedAt,
+}, null, 2));

@@ -25,6 +25,7 @@
     "datasets": "api/library/datasets",
     "relations": "api/library/relations",
     "fonts": "api/fonts.json",
+    "googleFonts": "api/google-fonts.json",
     "allVersions": "api/versions.json",
     "brand": "api/brands/{slug}.json",
     "brandHistory": "api/history/{slug}.json",

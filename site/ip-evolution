@@ -17,8 +17,8 @@
   <link rel="alternate" href="llms.txt" type="text/plain" title="IPTrust LLM Guide">
   <link rel="alternate" href="api/openapi.json" type="application/vnd.oai.openapi+json" title="IPTrust OpenAPI">
   <link rel="alternate" href="api/fonts.json" type="application/json" title="IPTrust Open-source Type Library">
-  <link rel="stylesheet" href="assets/site-c4a7413-63f224af.css">
-  <link rel="modulepreload" href="assets/site-c4a7413-63f224af.js">
+  <link rel="stylesheet" href="assets/site-5e80f2b-1bf6f090.css">
+  <link rel="modulepreload" href="assets/site-5e80f2b-1bf6f090.js">
 </head>
 <body class="ip-system-page">
   <header class="topbar">
@@ -80,7 +80,7 @@
     </section>
     <a class="font-library-entry" id="open-source-type" href="fonts">
       <div><p class="eyebrow" data-i18n="fonts.label">字体参考</p><h2 data-i18n="fonts.title">开源可商用字体。</h2></div>
-      <p><strong>31</strong><span data-i18n="fonts.curated">个已核验字体家族</span></p>
+      <p><strong>1928</strong><span data-i18n="fonts.officialIndexed">官方索引</span></p>
       <span aria-hidden="true">↗</span>
     </a>
     <section class="ip-system-content-shell" id="framework">
@@ -496,6 +496,6 @@
       history.replaceState(null, "", repairUrl.pathname + repairUrl.search + repairUrl.hash);
     }
   </script>
-  <script src="assets/site-c4a7413-63f224af.js" type="module"></script>
+  <script src="assets/site-5e80f2b-1bf6f090.js" type="module"></script>
 </body>
 </html>

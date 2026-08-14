@@ -165,11 +165,11 @@
     "standalone"
   ],
   "version": {
-    "hash": "c4a7413b32b95a3c06667d193628de2074912b88",
-    "shortHash": "c4a7413",
-    "date": "2026-08-14T08:39:51+08:00",
-    "message": "feat: show bilingual font specimens",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/c4a7413b32b95a3c06667d193628de2074912b88"
+    "hash": "5e80f2b513fc05cfb9f8a20d8536ad6932718bb7",
+    "shortHash": "5e80f2b",
+    "date": "2026-08-14T09:07:01+08:00",
+    "message": "fix: match font samples to language filters",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/5e80f2b513fc05cfb9f8a20d8536ad6932718bb7"
   },
   "historyUrl": "api/history/tableai.json",
   "history": [

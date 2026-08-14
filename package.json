@@ -30,6 +30,7 @@
     "check:production": "node scripts/check-production-health.mjs",
     "sync:fonts": "node scripts/sync-font-library.mjs",
     "sync:fonts:upload": "node scripts/sync-font-library.mjs --upload",
+    "sync:font-directory": "node scripts/sync-google-fonts-directory.mjs",
     "seed:platform": "node scripts/build-platform-seed.mjs",
     "encrypt:ksamint-skills": "node scripts/encrypt-private-skills.mjs",
     "sync:skill": "cp KiND/tokens/kind.tokens.json .cursor/skills/kind-design/tokens.json"

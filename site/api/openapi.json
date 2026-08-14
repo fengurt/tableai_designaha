@@ -99,6 +99,24 @@
         }
       }
     },
+    "/api/google-fonts.json": {
+      "get": {
+        "operationId": "listOfficialGoogleFonts",
+        "summary": "List Google Fonts families matched to official metadata and per-family license paths",
+        "responses": {
+          "200": {
+            "description": "Official Google Fonts reference directory",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v2/assets": {
       "get": {
         "operationId": "listAssets",
