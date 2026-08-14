@@ -13,11 +13,11 @@
     "Sanctem/README.md"
   ],
   "latest": {
-    "hash": "bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
-    "shortHash": "bcd28bc",
-    "date": "2026-08-04T06:00:43+08:00",
-    "message": "Rename 侍天 English brand name to tiansight",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
+    "hash": "6c28043d87c25fa124e6997cafb2c5e6492ffc0e",
+    "shortHash": "6c28043",
+    "date": "2026-08-14T08:33:39+08:00",
+    "message": "feat: streamline brand pages and publish tiansight slug",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/6c28043d87c25fa124e6997cafb2c5e6492ffc0e",
     "sourcePaths": [
       "config/brands.json",
       "Sanctem",
@@ -25,6 +25,18 @@
     ]
   },
   "versions": [
+    {
+      "hash": "6c28043d87c25fa124e6997cafb2c5e6492ffc0e",
+      "shortHash": "6c28043",
+      "date": "2026-08-14T08:33:39+08:00",
+      "message": "feat: streamline brand pages and publish tiansight slug",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/6c28043d87c25fa124e6997cafb2c5e6492ffc0e",
+      "sourcePaths": [
+        "config/brands.json",
+        "Sanctem",
+        "Sanctem/README.md"
+      ]
+    },
     {
       "hash": "bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
       "shortHash": "bcd28bc",
@@ -247,18 +259,6 @@
       "date": "2026-07-04T22:02:17+08:00",
       "message": "Add Sidera reference notes",
       "url": "https://github.com/fengurt/tableai_designaha/commit/a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
-      "sourcePaths": [
-        "config/brands.json",
-        "Sanctem",
-        "Sanctem/README.md"
-      ]
-    },
-    {
-      "hash": "0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
-      "shortHash": "0e3d71b",
-      "date": "2026-07-04T21:38:07+08:00",
-      "message": "Add PaM Design Office IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
       "sourcePaths": [
         "config/brands.json",
         "Sanctem",

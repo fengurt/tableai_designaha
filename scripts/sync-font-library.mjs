@@ -16,8 +16,8 @@ const verifiedAt = process.env.FONT_VERIFIED_AT || new Date().toISOString().slic
 
 const samples = {
   zh: "高楼宾客似曾识，日光底下无新事",
-  en: "高楼宾客似曾识，日光底下无新事",
-  mono: "高楼宾客似曾识，日光底下无新事",
+  en: "Building Tomorrow, Today.",
+  mono: "高楼宾客似曾识，日光底下无新事 / Building Tomorrow, Today.",
 };
 
 // Keep the existing broad glyph subset stable while presenting a concise specimen.
@@ -459,6 +459,10 @@ const payload = {
   description: {
     zh: "采用开源许可证、允许商业使用与网页嵌入的中英文字体参考。",
     en: "Chinese and Latin type references licensed for commercial use and web embedding.",
+  },
+  specimens: {
+    zh: samples.zh,
+    en: samples.en,
   },
   licenseNotice: {
     zh: "字体版权归各自作者所有。商业使用、嵌入、修改与再分发须遵守对应许可证；字体文件不可单独售卖。",

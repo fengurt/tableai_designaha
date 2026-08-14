@@ -7,6 +7,10 @@
     "zh": "采用开源许可证、允许商业使用与网页嵌入的中英文字体参考。",
     "en": "Chinese and Latin type references licensed for commercial use and web embedding."
   },
+  "specimens": {
+    "zh": "高楼宾客似曾识，日光底下无新事",
+    "en": "Building Tomorrow, Today."
+  },
   "licenseNotice": {
     "zh": "字体版权归各自作者所有。商业使用、嵌入、修改与再分发须遵守对应许可证；字体文件不可单独售卖。",
     "en": "Copyright remains with each font author. Commercial use, embedding, modification and redistribution must follow the applicable license; font files may not be sold by themselves."
@@ -248,7 +252,7 @@
         "zh": "中文代码、数据、API 文档与编号",
         "en": "Chinese code, data, API docs and identifiers"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事",
+      "sample": "高楼宾客似曾识，日光底下无新事 / Building Tomorrow, Today.",
       "cssStack": "\"Noto Sans Mono CJK SC\", \"SFMono-Regular\", monospace",
       "weights": [
         "100 900"
@@ -364,7 +368,7 @@
         "zh": "英文界面、产品、屏幕正文",
         "en": "Product UI and screen typography"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事",
+      "sample": "Building Tomorrow, Today.",
       "cssStack": "Inter, \"Helvetica Neue\", Arial, sans-serif",
       "weights": [
         "100 900"
@@ -416,7 +420,7 @@
         "zh": "API、数据、代码、资产编号",
         "en": "APIs, data, code, asset identifiers"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事",
+      "sample": "高楼宾客似曾识，日光底下无新事 / Building Tomorrow, Today.",
       "cssStack": "\"IBM Plex Mono\", \"SFMono-Regular\", Consolas, monospace",
       "weights": [
         "400",
@@ -481,7 +485,7 @@
         "zh": "出版、长文、文化与高端品牌",
         "en": "Publishing, long-form, cultural and premium brands"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事",
+      "sample": "Building Tomorrow, Today.",
       "cssStack": "\"EB Garamond\", Garamond, Georgia, serif",
       "weights": [
         "400 800"
@@ -942,7 +946,7 @@
         "zh": "中文代码、数据、注释与技术出版",
         "en": "Chinese code, data, annotations and technical publishing"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事",
+      "sample": "高楼宾客似曾识，日光底下无新事 / Building Tomorrow, Today.",
       "cssStack": "\"LXGW WenKai Mono\", \"SFMono-Regular\", monospace",
       "weights": [
         "400"
@@ -1195,7 +1199,7 @@
         "zh": "响应式界面、产品与复杂排版系统",
         "en": "Responsive UI, products and complex type systems"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事",
+      "sample": "Building Tomorrow, Today.",
       "cssStack": "\"Roboto Flex\", \"Helvetica Neue\", Arial, sans-serif",
       "weights": [
         "100 900"
@@ -1248,7 +1252,7 @@
         "zh": "长正文、界面与公共信息",
         "en": "Long-form copy, UI and public information"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事",
+      "sample": "Building Tomorrow, Today.",
       "cssStack": "\"Open Sans\", \"Helvetica Neue\", Arial, sans-serif",
       "weights": [
         "100 900"
@@ -1300,7 +1304,7 @@
         "zh": "品牌系统、编辑排版与数字产品",
         "en": "Brand systems, editorial layouts and digital products"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事",
+      "sample": "Building Tomorrow, Today.",
       "cssStack": "\"Source Sans 3\", \"Helvetica Neue\", Arial, sans-serif",
       "weights": [
         "100 900"
@@ -1350,7 +1354,7 @@
         "zh": "消费品牌、产品界面与短标题",
         "en": "Consumer brands, product UI and short display"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事",
+      "sample": "Building Tomorrow, Today.",
       "cssStack": "\"DM Sans\", \"Helvetica Neue\", Arial, sans-serif",
       "weights": [
         "100 900"
@@ -1400,7 +1404,7 @@
         "zh": "界面、信息设计与品牌正文",
         "en": "UI, information design and brand copy"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事",
+      "sample": "Building Tomorrow, Today.",
       "cssStack": "\"Work Sans\", \"Helvetica Neue\", Arial, sans-serif",
       "weights": [
         "100 900"
@@ -1450,7 +1454,7 @@
         "zh": "科技品牌、标题与数据产品",
         "en": "Technology brands, headlines and data products"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事",
+      "sample": "Building Tomorrow, Today.",
       "cssStack": "\"Space Grotesk\", \"Helvetica Neue\", Arial, sans-serif",
       "weights": [
         "300 700"
@@ -1501,7 +1505,7 @@
         "zh": "出版、文化、酒店与编辑标题",
         "en": "Publishing, culture, hospitality and editorial display"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事",
+      "sample": "Building Tomorrow, Today.",
       "cssStack": "\"Playfair Display\", Georgia, serif",
       "weights": [
         "400 900"
@@ -1553,7 +1557,7 @@
         "zh": "报告、长文、出版与规范文件",
         "en": "Reports, long-form, publishing and guidelines"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事",
+      "sample": "Building Tomorrow, Today.",
       "cssStack": "\"Source Serif 4\", Georgia, serif",
       "weights": [
         "200 900"
@@ -1605,7 +1609,7 @@
         "zh": "代码、API 文档、数据和开发工具",
         "en": "Code, API docs, data and developer tools"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事",
+      "sample": "高楼宾客似曾识，日光底下无新事 / Building Tomorrow, Today.",
       "cssStack": "\"JetBrains Mono\", \"SFMono-Regular\", Consolas, monospace",
       "weights": [
         "100 800"
@@ -1657,7 +1661,7 @@
         "zh": "技术品牌、资产编号、代码与表格",
         "en": "Technical brands, identifiers, code and tables"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事",
+      "sample": "高楼宾客似曾识，日光底下无新事 / Building Tomorrow, Today.",
       "cssStack": "\"Source Code Pro\", \"SFMono-Regular\", Consolas, monospace",
       "weights": [
         "200 900"
@@ -1709,7 +1713,7 @@
         "zh": "代码、Agent 输出与技术界面",
         "en": "Code, agent output and technical interfaces"
       },
-      "sample": "高楼宾客似曾识，日光底下无新事",
+      "sample": "高楼宾客似曾识，日光底下无新事 / Building Tomorrow, Today.",
       "cssStack": "\"Google Sans Code\", \"SFMono-Regular\", Consolas, monospace",
       "weights": [
         "300 800"

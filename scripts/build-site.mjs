@@ -417,6 +417,10 @@ function markdownToc(markdown = "", prefix = "document") {
 }
 
 function fontLibraryRows(catalog) {
+  const specimens = {
+    zh: catalog.specimens?.zh || "高楼宾客似曾识，日光底下无新事",
+    en: catalog.specimens?.en || "Building Tomorrow, Today.",
+  };
   return catalog.fonts.map((font) => {
     const searchText = [font.name, font.nameZh, font.category.zh, font.category.en, font.useCases.zh, font.useCases.en, font.source.publisher, font.scripts.join(" ")].filter(Boolean).join(" ").toLowerCase();
     return `<article class="font-specimen" id="font-${escapeBuildHtml(font.id)}" data-font-id="${escapeBuildHtml(font.id)}" data-font-group="${escapeBuildHtml(font.group)}" data-font-category="${escapeBuildHtml(font.categoryKey || "sans")}" data-font-search-text="${escapeBuildHtml(searchText)}">
@@ -432,7 +436,10 @@ function fontLibraryRows(catalog) {
         <button type="button" data-copy-font="${escapeBuildHtml(font.id)}" data-i18n="fonts.copyCss">复制 CSS</button>
       </div>
     </header>
-    <p class="font-specimen-sample" lang="${font.group === "zh" ? "zh-CN" : "en"}">${escapeBuildHtml(font.sample)}</p>
+    <div class="font-specimen-samples">
+      <p class="font-specimen-sample" lang="zh-CN">${escapeBuildHtml(specimens.zh)}</p>
+      <p class="font-specimen-sample" lang="en">${escapeBuildHtml(specimens.en)}</p>
+    </div>
     <p class="font-load-state" data-font-load-state aria-live="polite" data-i18n="fonts.ready">滚动到此处加载真实字体</p>
   </article>`;
   }).join("\n");
@@ -3013,7 +3020,7 @@ p { line-height: 1.65; }
 .font-specimen-actions button:hover { border-bottom-color: var(--ink); }
 .font-specimen-sample {
   min-height: 2.7em;
-  margin: 30px 0 0;
+  margin: 0;
   font-family: var(--demo-font, ui-sans-serif, system-ui, sans-serif);
   font-size: var(--font-demo-size);
   font-weight: var(--font-demo-weight);
@@ -3022,6 +3029,11 @@ p { line-height: 1.65; }
   letter-spacing: 0;
   overflow-wrap: anywhere;
   text-wrap: pretty;
+}
+.font-specimen-samples { display: grid; gap: 5px; margin-top: 30px; }
+.font-specimen-samples .font-specimen-sample + .font-specimen-sample {
+  min-height: 1.5em;
+  color: color-mix(in srgb, var(--ink) 78%, var(--paper));
 }
 .font-load-state { min-height: 17px; margin-top: 14px; }
 .font-specimen.is-loaded .font-load-state { color: var(--green); }
@@ -4313,7 +4325,7 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .font-specimen { min-height: 300px; }
   .font-specimen-head { grid-template-columns: 1fr; gap: 12px; }
   .font-specimen-actions { justify-content: flex-start; }
-  .font-specimen-sample { margin-top: 24px; }
+  .font-specimen-samples { margin-top: 24px; }
   .font-license-types > header,
   .font-license-types article { grid-template-columns: 1fr; gap: 10px; }
   .font-license-types article a { justify-self: start; }
@@ -5469,7 +5481,10 @@ async function loadFontSpecimen(article) {
     if (document.fonts?.load) {
       const weight = $("[data-font-weight]")?.value || "400";
       await Promise.race([
-        document.fonts.load(\`\${weight} 32px "\${alias}"\`, font.sample.slice(0, 80)),
+        document.fonts.load(
+          \`\${weight} 32px "\${alias}"\`,
+          String((font.group === "en" ? catalog.specimens?.en : catalog.specimens?.zh) || font.sample).slice(0, 80),
+        ),
         new Promise((_, reject) => setTimeout(() => reject(new Error("font_timeout")), 7000)),
       ]);
     }

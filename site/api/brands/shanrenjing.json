@@ -194,14 +194,26 @@
     "standalone"
   ],
   "version": {
-    "hash": "c1f75944a73f940b16c696e6a93e2e609d4eb492",
-    "shortHash": "c1f7594",
-    "date": "2026-08-13T12:06:04+08:00",
-    "message": "feat: expand deployable open font library",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/c1f75944a73f940b16c696e6a93e2e609d4eb492"
+    "hash": "6c28043d87c25fa124e6997cafb2c5e6492ffc0e",
+    "shortHash": "6c28043",
+    "date": "2026-08-14T08:33:39+08:00",
+    "message": "feat: streamline brand pages and publish tiansight slug",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/6c28043d87c25fa124e6997cafb2c5e6492ffc0e"
   },
   "historyUrl": "api/history/shanrenjing.json",
   "history": [
+    {
+      "hash": "6c28043d87c25fa124e6997cafb2c5e6492ffc0e",
+      "shortHash": "6c28043",
+      "date": "2026-08-14T08:33:39+08:00",
+      "message": "feat: streamline brand pages and publish tiansight slug",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/6c28043d87c25fa124e6997cafb2c5e6492ffc0e",
+      "sourcePaths": [
+        "config/brands.json",
+        "Shanrenjing",
+        "Shanrenjing/README.md"
+      ]
+    },
     {
       "hash": "bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
       "shortHash": "bcd28bc",
@@ -256,18 +268,6 @@
       "date": "2026-07-20T08:12:03+08:00",
       "message": "feat: add IP taxonomy and brand architecture",
       "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b",
-      "sourcePaths": [
-        "config/brands.json",
-        "Shanrenjing",
-        "Shanrenjing/README.md"
-      ]
-    },
-    {
-      "hash": "eaf43202c781d92d9f70111ca8c13c14f5af8e86",
-      "shortHash": "eaf4320",
-      "date": "2026-07-19T14:13:21+08:00",
-      "message": "Add public IP library, remote MCP, and Adobe asset pipeline",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/eaf43202c781d92d9f70111ca8c13c14f5af8e86",
       "sourcePaths": [
         "config/brands.json",
         "Shanrenjing",
