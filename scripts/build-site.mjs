@@ -2937,6 +2937,12 @@ p { line-height: 1.65; }
 .font-directory-toolbar input[type="range"] { flex: 1; padding: 0; accent-color: var(--ink); }
 .font-directory-toolbar select { width: 72px; min-height: 36px; padding: 5px; background: transparent; }
 .font-directory-layout { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: clamp(34px, 6vw, 92px); padding: 0; border-bottom: 1px solid var(--ink); }
+.font-directory-layout > *,
+.font-specimen-list,
+.font-specimen,
+.font-specimen-head,
+.font-specimen-head > *,
+.font-specimen-samples { min-width: 0; }
 .font-category-list { position: sticky; top: 142px; align-self: start; display: flex; flex-direction: column; padding-top: 26px; }
 .font-category-list strong { margin-bottom: 12px; font-size: 11px; text-transform: uppercase; }
 .font-category-list button { display: flex; justify-content: space-between; min-height: 38px; padding: 8px 0; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; color: var(--muted); text-align: left; }

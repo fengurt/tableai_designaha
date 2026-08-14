@@ -165,11 +165,11 @@
     "standalone"
   ],
   "version": {
-    "hash": "c6fb4325d24c2f589aa34a3f86abb4d648dbd010",
-    "shortHash": "c6fb432",
-    "date": "2026-08-14T10:50:21+08:00",
-    "message": "feat: expand popular font specimens",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/c6fb4325d24c2f589aa34a3f86abb4d648dbd010"
+    "hash": "d24476209a895cdf30af4fe962050d437b8fc071",
+    "shortHash": "d244762",
+    "date": "2026-08-14T11:01:04+08:00",
+    "message": "fix: make font subsets reproducible",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/d24476209a895cdf30af4fe962050d437b8fc071"
   },
   "historyUrl": "api/history/tableai.json",
   "history": [
