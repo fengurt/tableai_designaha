@@ -147,11 +147,11 @@
     "child"
   ],
   "version": {
-    "hash": "5e80f2b513fc05cfb9f8a20d8536ad6932718bb7",
-    "shortHash": "5e80f2b",
-    "date": "2026-08-14T09:07:01+08:00",
-    "message": "fix: match font samples to language filters",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/5e80f2b513fc05cfb9f8a20d8536ad6932718bb7"
+    "hash": "fba7acc5b5316ed48bd988454c69e2e972e14cb1",
+    "shortHash": "fba7acc",
+    "date": "2026-08-14T09:33:01+08:00",
+    "message": "feat: expand open font directory",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/fba7acc5b5316ed48bd988454c69e2e972e14cb1"
   },
   "historyUrl": "api/history/mutangwan.json",
   "history": [

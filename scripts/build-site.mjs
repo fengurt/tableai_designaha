@@ -425,11 +425,11 @@ function fontLibraryRows(catalog) {
   };
   return catalog.fonts.map((font) => {
     const searchText = [font.name, font.nameZh, font.category.zh, font.category.en, font.useCases.zh, font.useCases.en, font.source.publisher, font.scripts.join(" ")].filter(Boolean).join(" ").toLowerCase();
-    return `<article class="font-specimen" id="font-${escapeBuildHtml(font.id)}" data-font-id="${escapeBuildHtml(font.id)}" data-font-group="${escapeBuildHtml(font.group)}" data-font-category="${escapeBuildHtml(font.categoryKey || "sans")}" data-font-search-text="${escapeBuildHtml(searchText)}">
+    return `<article class="font-specimen" id="font-${escapeBuildHtml(font.id)}" data-font-id="${escapeBuildHtml(font.id)}" data-font-group="${escapeBuildHtml(font.group)}" data-font-category="${escapeBuildHtml(font.categoryKey || "sans")}" data-font-popularity="${font.popularity || ""}" data-font-search-text="${escapeBuildHtml(searchText)}">
     <header class="font-specimen-head">
       <div>
         <p class="font-specimen-name">${escapeBuildHtml(font.name)}${font.nameZh && font.nameZh !== font.name ? ` <span>${escapeBuildHtml(font.nameZh)}</span>` : ""}</p>
-        <p class="font-specimen-meta"><span data-font-zh="${escapeBuildHtml(font.category.zh)}" data-font-en="${escapeBuildHtml(font.category.en)}">${escapeBuildHtml(font.category.zh)}</span> · ${escapeBuildHtml(font.license.spdx)} · ${escapeBuildHtml(catalog.verifiedAt)}</p>
+        <p class="font-specimen-meta"><span data-font-zh="${escapeBuildHtml(font.category.zh)}" data-font-en="${escapeBuildHtml(font.category.en)}">${escapeBuildHtml(font.category.zh)}</span> · ${escapeBuildHtml(font.license.spdx)}${font.popularity ? ` · GF #${font.popularity}` : ""} · ${escapeBuildHtml(catalog.verifiedAt)}</p>
       </div>
       <div class="font-specimen-use" data-font-zh="${escapeBuildHtml(font.useCases.zh)}" data-font-en="${escapeBuildHtml(font.useCases.en)}">${escapeBuildHtml(font.useCases.zh)}</div>
       <div class="font-specimen-actions">
@@ -1927,6 +1927,7 @@ ${commonDiscoveryHead()}
       <label class="font-directory-search"><span data-i18n="fonts.searchLabel">搜索字体</span><input type="search" data-font-search autocomplete="off" placeholder="字体名称 / 用途 / Publisher"></label>
       <div class="font-filter" role="tablist" aria-label="Font languages">
         <button type="button" role="tab" aria-selected="true" data-font-filter="all" data-i18n="fonts.all">全部</button>
+        <button type="button" role="tab" aria-selected="false" data-font-filter="popular" data-i18n="fonts.popular">热门</button>
         <button type="button" role="tab" aria-selected="false" data-font-filter="zh" data-i18n="fonts.chinese">中文</button>
         <button type="button" role="tab" aria-selected="false" data-font-filter="en">English</button>
         <button type="button" role="tab" aria-selected="false" data-font-filter="mono">Mono</button>
@@ -4677,6 +4678,7 @@ const i18n = {
     "fonts.googleOfficial": "Google 官方说明 ↗",
     "fonts.searchLabel": "搜索字体",
     "fonts.all": "全部",
+    "fonts.popular": "热门",
     "fonts.categories": "分类",
     "fonts.sans": "无衬线",
     "fonts.serif": "衬线",
@@ -4894,6 +4896,7 @@ const i18n = {
     "fonts.googleOfficial": "Google's official guidance ↗",
     "fonts.searchLabel": "Search fonts",
     "fonts.all": "All",
+    "fonts.popular": "Popular",
     "fonts.categories": "Categories",
     "fonts.sans": "Sans serif",
     "fonts.serif": "Serif",
@@ -5607,7 +5610,7 @@ function setupFontLibrary() {
     if (!googleFontDirectoryCache || !referenceList || !referenceStatus) return;
     const normalizedQuery = directoryQuery.trim().toLowerCase();
     const filtered = googleFontDirectoryCache.families.filter((font) => {
-      const groupMatch = activeGroup === "all" || font.groups.includes(activeGroup);
+      const groupMatch = activeGroup === "all" || (activeGroup === "popular" ? Number(font.popularity) <= 100 : font.groups.includes(activeGroup));
       const categoryMatch = activeCategory === "all" || font.category === activeCategory;
       const queryMatch = !normalizedQuery || [font.family, font.displayName, font.category, font.designers.join(" "), font.subsets.join(" ")].join(" ").toLowerCase().includes(normalizedQuery);
       return groupMatch && categoryMatch && queryMatch;
@@ -5655,7 +5658,7 @@ function setupFontLibrary() {
     const normalizedQuery = directoryQuery.trim().toLowerCase();
     let visible = 0;
     specimens.forEach((article) => {
-      const groupMatch = activeGroup === "all" || article.dataset.fontGroup === activeGroup;
+      const groupMatch = activeGroup === "all" || (activeGroup === "popular" ? Number(article.dataset.fontPopularity) > 0 && Number(article.dataset.fontPopularity) <= 100 : article.dataset.fontGroup === activeGroup);
       const categoryMatch = activeCategory === "all" || article.dataset.fontCategory === activeCategory;
       const queryMatch = !normalizedQuery || (article.dataset.fontSearchText || "").includes(normalizedQuery);
       article.hidden = !(groupMatch && categoryMatch && queryMatch);
@@ -5704,13 +5707,15 @@ function setupFontLibrary() {
   });
 
   if ("IntersectionObserver" in window) {
+    const network = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    const conservativeLoading = network?.saveData || /(^|-)2g$/.test(network?.effectiveType || "");
     fontSpecimenObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         loadFontSpecimen(entry.target);
         fontSpecimenObserver.unobserve(entry.target);
       });
-    }, { rootMargin: "240px 0px" });
+    }, { rootMargin: conservativeLoading ? "0px" : "160px 0px" });
     specimens.forEach((article) => fontSpecimenObserver.observe(article));
     if (referenceSection) {
       const directoryObserver = new IntersectionObserver((entries) => {

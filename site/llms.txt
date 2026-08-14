@@ -71,6 +71,27 @@ Open-source type library:
 - JetBrains Mono: OFL-1.1 · https://fonts.google.com/specimen/JetBrains+Mono
 - Source Code Pro: OFL-1.1 · https://fonts.google.com/specimen/Source+Code+Pro
 - Google Sans Code: OFL-1.1 · https://fonts.google.com/specimen/Google+Sans+Code
+- Roboto: OFL-1.1 · https://fonts.google.com/specimen/Roboto
+- Montserrat: OFL-1.1 · https://fonts.google.com/specimen/Montserrat
+- Poppins: OFL-1.1 · https://fonts.google.com/specimen/Poppins
+- Lato: OFL-1.1 · https://fonts.google.com/specimen/Lato
+- Roboto Condensed: OFL-1.1 · https://fonts.google.com/specimen/Roboto+Condensed
+- Roboto Mono: OFL-1.1 · https://fonts.google.com/specimen/Roboto+Mono
+- Oswald: OFL-1.1 · https://fonts.google.com/specimen/Oswald
+- Noto Sans: OFL-1.1 · https://fonts.google.com/specimen/Noto+Sans
+- Raleway: OFL-1.1 · https://fonts.google.com/specimen/Raleway
+- Nunito Sans: OFL-1.1 · https://fonts.google.com/specimen/Nunito+Sans
+- Roboto Slab: Apache-2.0 · https://fonts.google.com/specimen/Roboto+Slab
+- Rubik: OFL-1.1 · https://fonts.google.com/specimen/Rubik
+- Ubuntu: UFL-1.0 · https://fonts.google.com/specimen/Ubuntu
+- Manrope: OFL-1.1 · https://fonts.google.com/specimen/Manrope
+- Outfit: OFL-1.1 · https://fonts.google.com/specimen/Outfit
+- Lora: OFL-1.1 · https://fonts.google.com/specimen/Lora
+- Bebas Neue: OFL-1.1 · https://fonts.google.com/specimen/Bebas+Neue
+- Figtree: OFL-1.1 · https://fonts.google.com/specimen/Figtree
+- Plus Jakarta Sans: OFL-1.1 · https://fonts.google.com/specimen/Plus+Jakarta+Sans
+- Bricolage Grotesque: OFL-1.1 · https://fonts.google.com/specimen/Bricolage+Grotesque
+- Public Sans: OFL-1.1 · https://fonts.google.com/specimen/Public+Sans
 
 Brands:
 - Table AI (tableai; assetKey tableai): /api/brands/tableai.json · mainLocale EN · palette #0A1626 / #A88B52

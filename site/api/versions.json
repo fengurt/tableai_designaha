@@ -1,5 +1,12 @@
 [
   {
+    "hash": "fba7acc5b5316ed48bd988454c69e2e972e14cb1",
+    "shortHash": "fba7acc",
+    "date": "2026-08-14T09:33:01+08:00",
+    "message": "feat: expand open font directory",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/fba7acc5b5316ed48bd988454c69e2e972e14cb1"
+  },
+  {
     "hash": "5e80f2b513fc05cfb9f8a20d8536ad6932718bb7",
     "shortHash": "5e80f2b",
     "date": "2026-08-14T09:07:01+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-07-20T14:13:03+08:00",
     "message": "fix: cache Pages HTML without zone routes",
     "url": "https://github.com/fengurt/tableai_designaha/commit/362d8736b279a864d8fdcaf633c1706941dad6a0"
-  },
-  {
-    "hash": "a2b75c2e09f125e2697ae8409c0316758a82ee3a",
-    "shortHash": "a2b75c2",
-    "date": "2026-07-20T14:05:40+08:00",
-    "message": "fix: route apex through edge cache",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a2b75c2e09f125e2697ae8409c0316758a82ee3a"
   }
 ]

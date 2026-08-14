@@ -12,10 +12,12 @@ if (!Array.isArray(catalog.fonts) || catalog.fonts.length < 20) throw new Error(
 if (!Array.isArray(catalog.directories) || catalog.directories.length < 4) throw new Error(`font_directories:${catalog.directories?.length}`);
 
 const ids = new Set();
+const commercialLicenses = new Set((catalog.licenseTypes || []).filter((license) => license.commercial).map((license) => license.spdx));
+if (catalog.fonts.length < 50) throw new Error("font_curated_count");
 for (const font of catalog.fonts) {
   if (!font.id || ids.has(font.id)) throw new Error(`font_id:${font.id}`);
   ids.add(font.id);
-  if (font.license?.spdx !== "OFL-1.1" || !font.license?.url?.startsWith("https://")) throw new Error(`font_license:${font.id}`);
+  if (!commercialLicenses.has(font.license?.spdx) || !font.license?.url?.startsWith("https://")) throw new Error(`font_license:${font.id}`);
   if (!font.source?.projectUrl?.startsWith("https://") || !/^[a-f0-9]{40}$/.test(font.source?.revision || "")) throw new Error(`font_source:${font.id}`);
   if (!font.cssStack || !font.sample || !font.categoryKey || !Array.isArray(font.assets) || !font.assets.length) throw new Error(`font_metadata:${font.id}`);
   for (const asset of font.assets) {
@@ -23,6 +25,12 @@ for (const font of catalog.fonts) {
     if (!asset.mediaUrl?.startsWith("https://media.apuch.art/public/iptrust/font-")) throw new Error(`font_media_url:${font.id}`);
   }
 }
+const fontAssets = catalog.fonts.flatMap((font) => font.assets);
+const totalDemoBytes = fontAssets.reduce((sum, asset) => sum + asset.bytes, 0);
+const largestDemoBytes = Math.max(...fontAssets.map((asset) => asset.bytes));
+if (totalDemoBytes !== catalog.performance?.totalDemoBytes || largestDemoBytes !== catalog.performance?.largestDemoBytes) throw new Error("font_performance_stats");
+if (totalDemoBytes > 1_500_000 || largestDemoBytes > 80_000) throw new Error("font_performance_budget");
+if (catalog.fonts.filter((font) => font.popularity && font.popularity <= 100).length < 30) throw new Error("font_popular_coverage");
 
 if (googleDirectory.schemaVersion !== 1 || googleDirectory.stats?.verifiedFamilies < 1000) throw new Error("google_font_directory_count");
 if (googleDirectory.families.length !== googleDirectory.stats.verifiedFamilies) throw new Error("google_font_directory_stats");
@@ -38,7 +46,9 @@ for (const font of googleDirectory.families) {
 console.log(JSON.stringify({
   ok: true,
   selfHostedFonts: catalog.fonts.length,
-  assets: catalog.fonts.flatMap((font) => font.assets).length,
+  assets: fontAssets.length,
+  totalDemoBytes,
+  largestDemoBytes,
   officialIndexedFonts: googleDirectory.stats.verifiedFamilies,
   excludedOfficialFonts: googleDirectory.stats.excludedFamilies,
   verifiedAt: googleDirectory.verifiedAt,

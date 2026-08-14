@@ -10,6 +10,7 @@ const workDir = join(root, ".tmp", "font-library");
 const sourceDir = join(workDir, "source");
 const outputDir = join(workDir, "woff2");
 const outputPath = join(root, "data", "fonts.json");
+const directoryPath = join(root, "data", "google-fonts-directory.json");
 const mediaBase = process.env.MEDIA_BASE_URL || "https://media.apuch.art";
 const upload = process.argv.includes("--upload");
 const verifiedAt = process.env.FONT_VERIFIED_AT || new Date().toISOString().slice(0, 10);
@@ -39,13 +40,23 @@ const repositories = {
   lxgw975Yuan: { repo: "lxgw/975Yuan", ref: "master" },
 };
 
-const googleOfl = (directory) => ({
-  spdx: "OFL-1.1",
-  name: "SIL Open Font License 1.1",
-  url: `https://github.com/google/fonts/blob/main/ofl/${directory}/OFL.txt`,
+const googleDirectory = JSON.parse(await readFile(directoryPath, "utf8"));
+const googleMetadataByFamily = new Map(googleDirectory.families.map((font) => [font.family, font]));
+
+const googleLicenses = {
+  ofl: { spdx: "OFL-1.1", name: "SIL Open Font License 1.1", file: "OFL.txt" },
+  apache: { spdx: "Apache-2.0", name: "Apache License 2.0", file: "LICENSE.txt" },
+  ufl: { spdx: "UFL-1.0", name: "Ubuntu Font Licence 1.0", file: "UFL.txt" },
+};
+
+const googleLicense = (directory, licenseDirectory = "ofl") => ({
+  spdx: googleLicenses[licenseDirectory].spdx,
+  name: googleLicenses[licenseDirectory].name,
+  url: `https://github.com/google/fonts/blob/main/${licenseDirectory}/${directory}/${googleLicenses[licenseDirectory].file}`,
 });
 
-function googleFont({ id, name, nameZh = name, group = "en", scripts = ["Latin"], categoryKey, category, useCases, directory, file, weight = "100 900", publisher = "Google Fonts" }) {
+function googleFont({ id, name, nameZh = name, group = "en", scripts = ["Latin"], categoryKey, category, useCases, directory, file, files, weight = "100 900", publisher = "Google Fonts", licenseDirectory = "ofl" }) {
+  const metadata = googleMetadataByFamily.get(name);
   return {
     id,
     name,
@@ -58,9 +69,12 @@ function googleFont({ id, name, nameZh = name, group = "en", scripts = ["Latin"]
     useCases,
     sample: samples[group] || samples.en,
     cssStack: `"${name}", ${categoryKey === "mono" ? '"SFMono-Regular", Consolas, monospace' : categoryKey === "serif" ? 'Georgia, serif' : '"Helvetica Neue", Arial, sans-serif'}`,
-    license: googleOfl(directory),
+    license: googleLicense(directory, licenseDirectory),
     source: { publisher, projectUrl: `https://fonts.google.com/specimen/${encodeURIComponent(name).replaceAll("%20", "+")}`, repository: "google" },
-    files: [{ weight, path: `ofl/${directory}/${file}` }],
+    files: files || [{ weight, path: `${licenseDirectory}/${directory}/${file}` }],
+    pinAxes: (metadata?.variableAxes || [])
+      .filter((axis) => axis.tag !== "wght")
+      .map((axis) => `${axis.tag}=${axis.defaultValue}`),
   };
 }
 
@@ -309,6 +323,102 @@ const definitions = [
     id: "google-sans-code", name: "Google Sans Code", scripts: ["Latin", "Greek", "Cyrillic"], group: "mono", categoryKey: "mono", category: { zh: "英文现代等宽", en: "Modern coding monospace" },
     useCases: { zh: "代码、Agent 输出与技术界面", en: "Code, agent output and technical interfaces" }, directory: "googlesanscode", file: "GoogleSansCode[wght].ttf", weight: "300 800",
   }),
+  googleFont({
+    id: "roboto", name: "Roboto", categoryKey: "sans", category: { zh: "英文通用无衬线", en: "Universal UI sans serif" },
+    useCases: { zh: "产品界面、信息系统与屏幕正文", en: "Product UI, information systems and screen copy" }, directory: "roboto", file: "Roboto[wdth,wght].ttf",
+  }),
+  googleFont({
+    id: "montserrat", name: "Montserrat", categoryKey: "sans", category: { zh: "英文几何无衬线", en: "Geometric display sans serif" },
+    useCases: { zh: "品牌标题、活动视觉与数字产品", en: "Brand headlines, campaigns and digital products" }, directory: "montserrat", file: "Montserrat[wght].ttf",
+  }),
+  googleFont({
+    id: "poppins", name: "Poppins", categoryKey: "sans", category: { zh: "英文几何无衬线", en: "Geometric Latin sans serif" },
+    useCases: { zh: "消费品牌、产品界面与短标题", en: "Consumer brands, product UI and short headlines" }, directory: "poppins",
+    files: [
+      { weight: "400", path: "ofl/poppins/Poppins-Regular.ttf" },
+      { weight: "600", path: "ofl/poppins/Poppins-SemiBold.ttf" },
+    ],
+  }),
+  googleFont({
+    id: "lato", name: "Lato", categoryKey: "sans", category: { zh: "英文人文无衬线", en: "Humanist Latin sans serif" },
+    useCases: { zh: "企业品牌、长正文与服务界面", en: "Corporate brands, long copy and service UI" }, directory: "lato",
+    files: [
+      { weight: "400", path: "ofl/lato/Lato-Regular.ttf" },
+      { weight: "600", path: "ofl/lato/Lato-SemiBold.ttf" },
+    ],
+  }),
+  googleFont({
+    id: "roboto-condensed", name: "Roboto Condensed", categoryKey: "sans", category: { zh: "英文紧缩无衬线", en: "Condensed UI sans serif" },
+    useCases: { zh: "密集信息、导视、数据与标题", en: "Dense information, wayfinding, data and headlines" }, directory: "robotocondensed", file: "RobotoCondensed[wght].ttf",
+  }),
+  googleFont({
+    id: "roboto-mono", name: "Roboto Mono", group: "mono", categoryKey: "mono", category: { zh: "英文通用等宽", en: "Universal monospace" },
+    useCases: { zh: "代码、API、数据表格与编号", en: "Code, APIs, data tables and identifiers" }, directory: "robotomono", file: "RobotoMono[wght].ttf",
+  }),
+  googleFont({
+    id: "oswald", name: "Oswald", categoryKey: "display", category: { zh: "英文紧缩展示", en: "Condensed display sans" },
+    useCases: { zh: "海报、出版标题与高冲击品牌表达", en: "Posters, editorial headlines and high-impact branding" }, directory: "oswald", file: "Oswald[wght].ttf", weight: "200 700",
+  }),
+  googleFont({
+    id: "noto-sans", name: "Noto Sans", scripts: ["Latin", "Greek", "Cyrillic"], categoryKey: "sans", category: { zh: "多语言无衬线", en: "Multilingual sans serif" },
+    useCases: { zh: "国际品牌、产品界面与多语言正文", en: "Global brands, product UI and multilingual copy" }, directory: "notosans", file: "NotoSans[wdth,wght].ttf",
+  }),
+  googleFont({
+    id: "raleway", name: "Raleway", categoryKey: "display", category: { zh: "英文优雅无衬线", en: "Elegant display sans serif" },
+    useCases: { zh: "品牌标题、酒店、文化与生活方式", en: "Brand headlines, hospitality, culture and lifestyle" }, directory: "raleway", file: "Raleway[wght].ttf",
+  }),
+  googleFont({
+    id: "nunito-sans", name: "Nunito Sans", categoryKey: "sans", category: { zh: "英文圆润无衬线", en: "Rounded humanist sans serif" },
+    useCases: { zh: "友好界面、教育、健康与消费品牌", en: "Friendly UI, education, health and consumer brands" }, directory: "nunitosans", file: "NunitoSans[YTLC,opsz,wdth,wght].ttf",
+  }),
+  googleFont({
+    id: "roboto-slab", name: "Roboto Slab", categoryKey: "serif", category: { zh: "英文机械衬线", en: "Contemporary slab serif" },
+    useCases: { zh: "编辑标题、报告与技术品牌", en: "Editorial headlines, reports and technical brands" }, directory: "robotoslab", file: "RobotoSlab[wght].ttf", licenseDirectory: "apache",
+  }),
+  googleFont({
+    id: "rubik", name: "Rubik", categoryKey: "sans", category: { zh: "英文圆角无衬线", en: "Soft-cornered sans serif" },
+    useCases: { zh: "数字产品、消费品牌与信息设计", en: "Digital products, consumer brands and information design" }, directory: "rubik", file: "Rubik[wght].ttf",
+  }),
+  googleFont({
+    id: "ubuntu", name: "Ubuntu", categoryKey: "sans", category: { zh: "英文人文无衬线", en: "Humanist interface sans serif" },
+    useCases: { zh: "软件界面、科技品牌与技术文档", en: "Software UI, technology brands and technical documents" }, directory: "ubuntu", licenseDirectory: "ufl",
+    files: [
+      { weight: "400", path: "ufl/ubuntu/Ubuntu-Regular.ttf" },
+      { weight: "700", path: "ufl/ubuntu/Ubuntu-Bold.ttf" },
+    ],
+  }),
+  googleFont({
+    id: "manrope", name: "Manrope", categoryKey: "sans", category: { zh: "英文现代无衬线", en: "Modern geometric sans serif" },
+    useCases: { zh: "科技、金融、产品界面与品牌系统", en: "Technology, finance, product UI and brand systems" }, directory: "manrope", file: "Manrope[wght].ttf", weight: "200 800",
+  }),
+  googleFont({
+    id: "outfit", name: "Outfit", categoryKey: "sans", category: { zh: "英文几何无衬线", en: "Contemporary geometric sans" },
+    useCases: { zh: "数字品牌、标题与产品界面", en: "Digital brands, headlines and product UI" }, directory: "outfit", file: "Outfit[wght].ttf",
+  }),
+  googleFont({
+    id: "lora", name: "Lora", categoryKey: "serif", category: { zh: "英文书写衬线", en: "Calligraphic text serif" },
+    useCases: { zh: "文化叙事、出版、酒店与长文", en: "Cultural narratives, publishing, hospitality and long-form" }, directory: "lora", file: "Lora[wght].ttf", weight: "400 700",
+  }),
+  googleFont({
+    id: "bebas-neue", name: "Bebas Neue", categoryKey: "display", category: { zh: "英文紧缩标题", en: "Condensed display face" },
+    useCases: { zh: "海报、餐饮、体育与大字标题", en: "Posters, food, sport and large headlines" }, directory: "bebasneue", file: "BebasNeue-Regular.ttf", weight: "400",
+  }),
+  googleFont({
+    id: "figtree", name: "Figtree", categoryKey: "sans", category: { zh: "英文现代无衬线", en: "Modern screen sans serif" },
+    useCases: { zh: "产品界面、品牌正文与信息设计", en: "Product UI, brand copy and information design" }, directory: "figtree", file: "Figtree[wght].ttf",
+  }),
+  googleFont({
+    id: "plus-jakarta-sans", name: "Plus Jakarta Sans", categoryKey: "sans", category: { zh: "英文当代无衬线", en: "Contemporary geometric sans" },
+    useCases: { zh: "创业品牌、界面、演示与消费产品", en: "Startup brands, UI, presentations and consumer products" }, directory: "plusjakartasans", file: "PlusJakartaSans[wght].ttf", weight: "200 800",
+  }),
+  googleFont({
+    id: "bricolage-grotesque", name: "Bricolage Grotesque", categoryKey: "display", category: { zh: "英文可变展示无衬线", en: "Expressive variable grotesque" },
+    useCases: { zh: "创意品牌、文化项目与高辨识标题", en: "Creative brands, cultural projects and distinctive headlines" }, directory: "bricolagegrotesque", file: "BricolageGrotesque[opsz,wdth,wght].ttf", weight: "200 800",
+  }),
+  googleFont({
+    id: "public-sans", name: "Public Sans", categoryKey: "sans", category: { zh: "英文公共服务无衬线", en: "Public-service sans serif" },
+    useCases: { zh: "公共服务、企业系统、界面与长正文", en: "Public services, enterprise systems, UI and long copy" }, directory: "publicsans", file: "PublicSans[wght].ttf",
+  }),
 ];
 
 function sha256(buffer) {
@@ -355,7 +465,10 @@ await mkdir(outputDir, { recursive: true });
 await mkdir(dirname(outputPath), { recursive: true });
 
 const expectedSourceFiles = new Set(definitions.flatMap((definition) => definition.files.map((file, index) => `${definition.id}-${index}${extname(file.path) || ".font"}`)));
-const expectedSubsetFiles = new Set(definitions.flatMap((definition) => definition.files.map((file) => `${definition.id}-${String(file.weight).replaceAll(" ", "-")}.woff2`)));
+const expectedSubsetFiles = new Set(definitions.flatMap((definition) => definition.files.flatMap((file) => {
+  const filename = `${definition.id}-${String(file.weight).replaceAll(" ", "-")}.woff2`;
+  return [filename, `${filename}.meta.json`];
+})));
 for (const file of await readdir(sourceDir)) {
   if (!expectedSourceFiles.has(file)) await rm(join(sourceDir, file), { force: true });
 }
@@ -389,22 +502,53 @@ for (const definition of definitions) {
     const sourceUrl = `https://raw.githubusercontent.com/${repository.repo}/${revision}/${file.path.replaceAll("[", "%5B").replaceAll("]", "%5D")}`;
     const sourceBuffer = await download(sourceUrl, sourcePath);
     const subsetPath = join(outputDir, `${definition.id}-${String(file.weight).replaceAll(" ", "-")}.woff2`);
-    const samplePath = join(workDir, `${definition.group}.txt`);
-    await writeFile(samplePath, subsetSamples[definition.group] || subsetSamples.en);
-    await rm(subsetPath, { force: true });
-    run(process.env.PYFTSUBSET || "pyftsubset", [
-      sourcePath,
-      `--output-file=${subsetPath}`,
-      `--text-file=${samplePath}`,
-      "--flavor=woff2",
-      "--layout-features=*",
-      "--name-IDs=*",
-      "--name-legacy",
-      "--name-languages=*",
-      "--notdef-glyph",
-      "--notdef-outline",
-      "--recommended-glyphs",
-    ]);
+    const subsetMetaPath = `${subsetPath}.meta.json`;
+    const buildKey = sha256(Buffer.from(JSON.stringify({
+      sourceSha256: sha256(sourceBuffer),
+      sample: subsetSamples[definition.group] || subsetSamples.en,
+      weight: file.weight,
+      pinAxes: definition.pinAxes || [],
+    })));
+    let cachedBuildKey = "";
+    if (existsSync(subsetMetaPath)) {
+      try {
+        cachedBuildKey = JSON.parse(await readFile(subsetMetaPath, "utf8")).buildKey || "";
+      } catch {}
+    }
+    if (!existsSync(subsetPath) || cachedBuildKey !== buildKey) {
+      let subsetSourcePath = sourcePath;
+      if (definition.pinAxes?.length && extension.toLowerCase() === ".ttf") {
+        const instancePath = join(workDir, `${definition.id}-${index}-instance.ttf`);
+        await rm(instancePath, { force: true });
+        const instanceResult = spawnSync("fonttools", ["varLib.instancer", "-q", sourcePath, ...definition.pinAxes, `--output=${instancePath}`], {
+          cwd: root,
+          encoding: "utf8",
+          env: process.env,
+        });
+        if (instanceResult.status === 0 && existsSync(instancePath)) {
+          subsetSourcePath = instancePath;
+        } else {
+          console.warn(`font_axis_pin_skipped:${definition.id}:${definition.pinAxes.join(",")}`);
+        }
+      }
+      const samplePath = join(workDir, `${definition.group}.txt`);
+      await writeFile(samplePath, subsetSamples[definition.group] || subsetSamples.en);
+      await rm(subsetPath, { force: true });
+      run(process.env.PYFTSUBSET || "pyftsubset", [
+        subsetSourcePath,
+        `--output-file=${subsetPath}`,
+        `--text-file=${samplePath}`,
+        "--flavor=woff2",
+        "--layout-features=*",
+        "--name-IDs=*",
+        "--name-legacy",
+        "--name-languages=*",
+        "--notdef-glyph",
+        "--notdef-outline",
+        "--recommended-glyphs",
+      ]);
+      await writeFile(subsetMetaPath, `${JSON.stringify({ buildKey })}\n`);
+    }
     const buffer = await readFile(subsetPath);
     const digest = sha256(buffer);
     const assetId = `font-${definition.id}-${String(file.weight).replaceAll(" ", "-")}`;
@@ -439,6 +583,7 @@ for (const definition of definitions) {
     sample: definition.sample,
     cssStack: definition.cssStack,
     weights: definition.files.map((file) => file.weight),
+    popularity: googleMetadataByFamily.get(definition.family)?.popularity || null,
     license: definition.license,
     source: {
       publisher: definition.source.publisher,
@@ -463,6 +608,14 @@ const payload = {
   specimens: {
     zh: samples.zh,
     en: samples.en,
+  },
+  performance: {
+    delivery: "immutable-r2-woff2",
+    loading: "viewport-lazy",
+    subset: "specimen-glyphs-only",
+    variableAxes: "weight-only-where-supported",
+    totalDemoBytes: fonts.flatMap((font) => font.assets).reduce((sum, asset) => sum + asset.bytes, 0),
+    largestDemoBytes: Math.max(...fonts.flatMap((font) => font.assets).map((asset) => asset.bytes)),
   },
   licenseNotice: {
     zh: "字体版权归各自作者所有。商业使用、嵌入、修改与再分发须遵守对应许可证；字体文件不可单独售卖。",
