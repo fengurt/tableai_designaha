@@ -1,5 +1,12 @@
 [
   {
+    "hash": "c4a7413b32b95a3c06667d193628de2074912b88",
+    "shortHash": "c4a7413",
+    "date": "2026-08-14T08:39:51+08:00",
+    "message": "feat: show bilingual font specimens",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/c4a7413b32b95a3c06667d193628de2074912b88"
+  },
+  {
     "hash": "6c28043d87c25fa124e6997cafb2c5e6492ffc0e",
     "shortHash": "6c28043",
     "date": "2026-08-14T08:33:39+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-07-20T13:58:19+08:00",
     "message": "feat: add food brand architecture and edge performance",
     "url": "https://github.com/fengurt/tableai_designaha/commit/5f6dced3cbe228a68c1519b403401944a42d0c5d"
-  },
-  {
-    "hash": "f751eee60c6804d66538efd7dd7ef1e5e5a57de0",
-    "shortHash": "f751eee",
-    "date": "2026-07-20T08:17:19+08:00",
-    "message": "fix: prevent orphaned directory headline",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/f751eee60c6804d66538efd7dd7ef1e5e5a57de0"
   }
 ]

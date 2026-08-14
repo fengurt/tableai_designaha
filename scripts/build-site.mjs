@@ -3035,6 +3035,8 @@ p { line-height: 1.65; }
   min-height: 1.5em;
   color: color-mix(in srgb, var(--ink) 78%, var(--paper));
 }
+.font-library[data-active-font-group="zh"] .font-specimen-sample[lang="en"],
+.font-library[data-active-font-group="en"] .font-specimen-sample[lang="zh-CN"] { display: none; }
 .font-load-state { min-height: 17px; margin-top: 14px; }
 .font-specimen.is-loaded .font-load-state { color: var(--green); }
 .font-specimen.is-fallback .font-load-state { color: #9b5b2f; }
@@ -5519,6 +5521,7 @@ function setupFontLibrary() {
   let directoryQuery = initialParams.get("q") || "";
 
   const applyFilter = () => {
+    root.dataset.activeFontGroup = activeGroup;
     filterButtons.forEach((button) => button.setAttribute("aria-selected", String(button.dataset.fontFilter === activeGroup)));
     categoryButtons.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.fontCategory === activeCategory)));
     const normalizedQuery = directoryQuery.trim().toLowerCase();

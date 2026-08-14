@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-08-14T00:36:55.633Z",
+  "generatedAt": "2026-08-14T01:06:42.064Z",
   "version": {
-    "hash": "6c28043d87c25fa124e6997cafb2c5e6492ffc0e",
-    "shortHash": "6c28043",
-    "date": "2026-08-14T08:33:39+08:00",
-    "message": "feat: streamline brand pages and publish tiansight slug",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/6c28043d87c25fa124e6997cafb2c5e6492ffc0e"
+    "hash": "c4a7413b32b95a3c06667d193628de2074912b88",
+    "shortHash": "c4a7413",
+    "date": "2026-08-14T08:39:51+08:00",
+    "message": "feat: show bilingual font specimens",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/c4a7413b32b95a3c06667d193628de2074912b88"
   },
   "brands": [
     {
@@ -489,11 +489,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "6c28043d87c25fa124e6997cafb2c5e6492ffc0e",
-      "shortHash": "6c28043",
-      "date": "2026-08-14T08:33:39+08:00",
-      "message": "feat: streamline brand pages and publish tiansight slug",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/6c28043d87c25fa124e6997cafb2c5e6492ffc0e"
+      "hash": "c4a7413b32b95a3c06667d193628de2074912b88",
+      "shortHash": "c4a7413",
+      "date": "2026-08-14T08:39:51+08:00",
+      "message": "feat: show bilingual font specimens",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/c4a7413b32b95a3c06667d193628de2074912b88"
     }
   },
   "sync": {
