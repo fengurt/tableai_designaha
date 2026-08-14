@@ -2,7 +2,7 @@
   "slug": "sidera",
   "name": "侍天 - 智慧餐饮",
   "mainLanguage": "zh",
-  "apiUrl": "api/brands/sidera.json",
+  "apiUrl": "api/brands/tiansight.json",
   "source": {
     "github": "https://github.com/fengurt/tableai_designaha/tree/main/Sidera",
     "folder": "Sidera"

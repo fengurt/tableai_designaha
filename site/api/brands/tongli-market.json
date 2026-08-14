@@ -159,11 +159,11 @@
     "parent"
   ],
   "version": {
-    "hash": "675d3b6080e1d2e2a91786de492408141c3e9695",
-    "shortHash": "675d3b6",
-    "date": "2026-08-12T19:33:36+08:00",
-    "message": "feat: clarify commercial font licensing",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/675d3b6080e1d2e2a91786de492408141c3e9695"
+    "hash": "c1f75944a73f940b16c696e6a93e2e609d4eb492",
+    "shortHash": "c1f7594",
+    "date": "2026-08-13T12:06:04+08:00",
+    "message": "feat: expand deployable open font library",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/c1f75944a73f940b16c696e6a93e2e609d4eb492"
   },
   "historyUrl": "api/history/tongli-market.json",
   "history": [
@@ -240,6 +240,7 @@
       ]
     }
   ],
+  "publicSlug": "tongli-market",
   "url": "brand.html?brand=tongli-market",
   "apiUrl": "api/brands/tongli-market.json",
   "status": "documented",

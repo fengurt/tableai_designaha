@@ -71,39 +71,39 @@ Open-source type library:
 - Google Sans Code: OFL-1.1 · https://fonts.google.com/specimen/Google+Sans+Code
 
 Brands:
-- Table AI (tableai): /api/brands/tableai.json · mainLocale EN · palette #0A1626 / #A88B52
-- 凡纳弘途 (vanahom): /api/brands/vanahom.json · mainLocale CN · palette #B12137 / #A8ADAD
-- Sanctem (sanctem): /api/brands/sanctem.json · mainLocale EN · palette #1D2A24 / #B58A5F
-- KiND (kind): /api/brands/kind.json · mainLocale EN · palette #0E8C7B / #E8765A
-- 亚太艺术疗愈联盟 (apha): /api/brands/apha.json · mainLocale CN · palette #557F8F / #8FAF83
-- 无魔协会 (manaendless): /api/brands/manaendless.json · mainLocale CN · palette #7BC8C4 / #B7A7D8
-- OPC Global (opcglobal): /api/brands/opcglobal.json · mainLocale EN · palette #1D3557 / #B79B63
-- 岁知社 (iptrust): /api/brands/iptrust.json · mainLocale CN · palette #10263D / #B99B5B
-- 峰值永造局 (fengzhi): /api/brands/fengzhi.json · mainLocale CN · palette #1A1714 / #A47B36
-- Axisee (axisee): /api/brands/axisee.json · mainLocale EN · palette #1A2B4A / #B12137
-- 侍天 - 智慧餐饮 (sidera): /api/brands/sidera.json · mainLocale CN · palette #EFE6D2 / #76551F
-- 1stepmore (1stepmore): /api/brands/1stepmore.json · mainLocale EN · palette #123047 / #C89B3C
-- 游赋社 (agem): /api/brands/agem.json · mainLocale CN · palette #155E75 / #D9823B
-- 燃古豋 (rgd): /api/brands/rgd.json · mainLocale CN · palette #E06B3A / #C8A15A
-- 常幸 (changoods): /api/brands/changoods.json · mainLocale CN · palette #486B3F / #D2A94C
-- 博雅问渠书院 (boya): /api/brands/boya.json · mainLocale CN · palette #243B6B / #B89A5E
-- APUCH (apuch): /api/brands/apuch.json · mainLocale EN · palette #14304A / #A88B52
-- 帕姆建筑 (pam): /api/brands/pam.json · mainLocale CN · palette #1F1D1A / #9A6B4A
-- ksamint (ksamint): /api/brands/ksamint.json · mainLocale EN · palette #0F4B42 / #7EDBC6
-- iNucleus (inucleus): /api/brands/inucleus.json · mainLocale EN · palette #111827 / #7DD3FC
-- 信致旅游 (xinzhi-travel): /api/brands/xinzhi-travel.json · mainLocale CN · palette #245C4B / #D3A84F
-- 中智游集团 (zhongzhiyou): /api/brands/zhongzhiyou.json · mainLocale CN · palette #1F5F57 / #C7A25A
-- Nibiru (nibiru): /api/brands/nibiru.json · mainLocale EN · palette #1D2BFF / #7CF7D4
-- 深圳微软出海中心 (shenzhen-microsoft-global-center): /api/brands/shenzhen-microsoft-global-center.json · mainLocale CN · palette #2563EB / #00A4EF
-- 山人境 (shanrenjing): /api/brands/shanrenjing.json · mainLocale CN · palette #173F38 / #D5A53B
-- 烤鱼神话 (kaoyu-shenhua): /api/brands/kaoyu-shenhua.json · mainLocale CN · palette #241714 / #B33A2B
-- 延安石窑宾馆 (yanan-shiyao-hotel): /api/brands/yanan-shiyao-hotel.json · mainLocale CN · palette #352F2A / #A87946
-- 同里市集 (tongli-market): /api/brands/tongli-market.json · mainLocale CN · palette #26483D / #C95D3A
-- 同香荟 (tongxianghui): /api/brands/tongxianghui.json · mainLocale CN · palette #742337 / #D29A4A
-- 睦堂湾 (mutangwan): /api/brands/mutangwan.json · mainLocale CN · palette #174556 / #C58B4E
-- 双囍烧腊 (shuangxi-shaola): /api/brands/shuangxi-shaola.json · mainLocale CN · palette #A92732 / #D6A33E
-- 港佬煲仔炉车仔面碟头饭 (ganglao-baozailu): /api/brands/ganglao-baozailu.json · mainLocale CN · palette #25594F / #D36B3F
-- 小桃园 (xiaotaoyuan): /api/brands/xiaotaoyuan.json · mainLocale CN · palette #8D3F45 / #E3A15A
-- 苏帮袁 (subangyuan): /api/brands/subangyuan.json · mainLocale CN · palette #315849 / #A84E3E
-- 游园京梦 (youyuan-jingmeng): /api/brands/youyuan-jingmeng.json · mainLocale CN · palette #2E514A / #A55764
-- 清水亭 (qingshuiting): /api/brands/qingshuiting.json · mainLocale CN · palette #1F5A63 / #B56E42
+- Table AI (tableai; assetKey tableai): /api/brands/tableai.json · mainLocale EN · palette #0A1626 / #A88B52
+- 凡纳弘途 (vanahom; assetKey vanahom): /api/brands/vanahom.json · mainLocale CN · palette #B12137 / #A8ADAD
+- Sanctem (sanctem; assetKey sanctem): /api/brands/sanctem.json · mainLocale EN · palette #1D2A24 / #B58A5F
+- KiND (kind; assetKey kind): /api/brands/kind.json · mainLocale EN · palette #0E8C7B / #E8765A
+- 亚太艺术疗愈联盟 (apha; assetKey apha): /api/brands/apha.json · mainLocale CN · palette #557F8F / #8FAF83
+- 无魔协会 (manaendless; assetKey manaendless): /api/brands/manaendless.json · mainLocale CN · palette #7BC8C4 / #B7A7D8
+- OPC Global (opcglobal; assetKey opcglobal): /api/brands/opcglobal.json · mainLocale EN · palette #1D3557 / #B79B63
+- 岁知社 (iptrust; assetKey iptrust): /api/brands/iptrust.json · mainLocale CN · palette #10263D / #B99B5B
+- 峰值永造局 (fengzhi; assetKey fengzhi): /api/brands/fengzhi.json · mainLocale CN · palette #1A1714 / #A47B36
+- Axisee (axisee; assetKey axisee): /api/brands/axisee.json · mainLocale EN · palette #1A2B4A / #B12137
+- 侍天 - 智慧餐饮 (tiansight; assetKey sidera): /api/brands/tiansight.json · mainLocale CN · palette #EFE6D2 / #76551F
+- 1stepmore (1stepmore; assetKey 1stepmore): /api/brands/1stepmore.json · mainLocale EN · palette #123047 / #C89B3C
+- 游赋社 (agem; assetKey agem): /api/brands/agem.json · mainLocale CN · palette #155E75 / #D9823B
+- 燃古豋 (rgd; assetKey rgd): /api/brands/rgd.json · mainLocale CN · palette #E06B3A / #C8A15A
+- 常幸 (changoods; assetKey changoods): /api/brands/changoods.json · mainLocale CN · palette #486B3F / #D2A94C
+- 博雅问渠书院 (boya; assetKey boya): /api/brands/boya.json · mainLocale CN · palette #243B6B / #B89A5E
+- APUCH (apuch; assetKey apuch): /api/brands/apuch.json · mainLocale EN · palette #14304A / #A88B52
+- 帕姆建筑 (pam; assetKey pam): /api/brands/pam.json · mainLocale CN · palette #1F1D1A / #9A6B4A
+- ksamint (ksamint; assetKey ksamint): /api/brands/ksamint.json · mainLocale EN · palette #0F4B42 / #7EDBC6
+- iNucleus (inucleus; assetKey inucleus): /api/brands/inucleus.json · mainLocale EN · palette #111827 / #7DD3FC
+- 信致旅游 (xinzhi-travel; assetKey xinzhi-travel): /api/brands/xinzhi-travel.json · mainLocale CN · palette #245C4B / #D3A84F
+- 中智游集团 (zhongzhiyou; assetKey zhongzhiyou): /api/brands/zhongzhiyou.json · mainLocale CN · palette #1F5F57 / #C7A25A
+- Nibiru (nibiru; assetKey nibiru): /api/brands/nibiru.json · mainLocale EN · palette #1D2BFF / #7CF7D4
+- 深圳微软出海中心 (shenzhen-microsoft-global-center; assetKey shenzhen-microsoft-global-center): /api/brands/shenzhen-microsoft-global-center.json · mainLocale CN · palette #2563EB / #00A4EF
+- 山人境 (shanrenjing; assetKey shanrenjing): /api/brands/shanrenjing.json · mainLocale CN · palette #173F38 / #D5A53B
+- 烤鱼神话 (kaoyu-shenhua; assetKey kaoyu-shenhua): /api/brands/kaoyu-shenhua.json · mainLocale CN · palette #241714 / #B33A2B
+- 延安石窑宾馆 (yanan-shiyao-hotel; assetKey yanan-shiyao-hotel): /api/brands/yanan-shiyao-hotel.json · mainLocale CN · palette #352F2A / #A87946
+- 同里市集 (tongli-market; assetKey tongli-market): /api/brands/tongli-market.json · mainLocale CN · palette #26483D / #C95D3A
+- 同香荟 (tongxianghui; assetKey tongxianghui): /api/brands/tongxianghui.json · mainLocale CN · palette #742337 / #D29A4A
+- 睦堂湾 (mutangwan; assetKey mutangwan): /api/brands/mutangwan.json · mainLocale CN · palette #174556 / #C58B4E
+- 双囍烧腊 (shuangxi-shaola; assetKey shuangxi-shaola): /api/brands/shuangxi-shaola.json · mainLocale CN · palette #A92732 / #D6A33E
+- 港佬煲仔炉车仔面碟头饭 (ganglao-baozailu; assetKey ganglao-baozailu): /api/brands/ganglao-baozailu.json · mainLocale CN · palette #25594F / #D36B3F
+- 小桃园 (xiaotaoyuan; assetKey xiaotaoyuan): /api/brands/xiaotaoyuan.json · mainLocale CN · palette #8D3F45 / #E3A15A
+- 苏帮袁 (subangyuan; assetKey subangyuan): /api/brands/subangyuan.json · mainLocale CN · palette #315849 / #A84E3E
+- 游园京梦 (youyuan-jingmeng; assetKey youyuan-jingmeng): /api/brands/youyuan-jingmeng.json · mainLocale CN · palette #2E514A / #A55764
+- 清水亭 (qingshuiting; assetKey qingshuiting): /api/brands/qingshuiting.json · mainLocale CN · palette #1F5A63 / #B56E42

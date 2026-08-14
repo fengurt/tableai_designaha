@@ -1,5 +1,12 @@
 [
   {
+    "hash": "c1f75944a73f940b16c696e6a93e2e609d4eb492",
+    "shortHash": "c1f7594",
+    "date": "2026-08-13T12:06:04+08:00",
+    "message": "feat: expand deployable open font library",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/c1f75944a73f940b16c696e6a93e2e609d4eb492"
+  },
+  {
     "hash": "675d3b6080e1d2e2a91786de492408141c3e9695",
     "shortHash": "675d3b6",
     "date": "2026-08-12T19:33:36+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-07-20T08:12:03+08:00",
     "message": "feat: add IP taxonomy and brand architecture",
     "url": "https://github.com/fengurt/tableai_designaha/commit/bc7b985d4a6a1afb395c8b77ff6c2105e757780b"
-  },
-  {
-    "hash": "bdd9764d1d5239666a3b9def6e2cafbdf4d1e659",
-    "shortHash": "bdd9764",
-    "date": "2026-07-19T21:49:19+08:00",
-    "message": "fix: normalize brand search indexing",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/bdd9764d1d5239666a3b9def6e2cafbdf4d1e659"
   }
 ]

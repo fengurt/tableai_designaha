@@ -11,17 +11,18 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-08-13T04:05:36.250Z",
+  "generatedAt": "2026-08-14T00:33:24.530Z",
   "version": {
-    "hash": "675d3b6080e1d2e2a91786de492408141c3e9695",
-    "shortHash": "675d3b6",
-    "date": "2026-08-12T19:33:36+08:00",
-    "message": "feat: clarify commercial font licensing",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/675d3b6080e1d2e2a91786de492408141c3e9695"
+    "hash": "c1f75944a73f940b16c696e6a93e2e609d4eb492",
+    "shortHash": "c1f7594",
+    "date": "2026-08-13T12:06:04+08:00",
+    "message": "feat: expand deployable open font library",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/c1f75944a73f940b16c696e6a93e2e609d4eb492"
   },
   "brands": [
     {
       "slug": "tableai",
+      "assetKey": "tableai",
       "name": "Table AI",
       "mainLanguage": "en",
       "mainLocale": "EN",
@@ -31,6 +32,7 @@
     },
     {
       "slug": "vanahom",
+      "assetKey": "vanahom",
       "name": "凡纳弘途",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -40,6 +42,7 @@
     },
     {
       "slug": "sanctem",
+      "assetKey": "sanctem",
       "name": "Sanctem",
       "mainLanguage": "en",
       "mainLocale": "EN",
@@ -49,6 +52,7 @@
     },
     {
       "slug": "kind",
+      "assetKey": "kind",
       "name": "KiND",
       "mainLanguage": "en",
       "mainLocale": "EN",
@@ -58,6 +62,7 @@
     },
     {
       "slug": "apha",
+      "assetKey": "apha",
       "name": "亚太艺术疗愈联盟",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -67,6 +72,7 @@
     },
     {
       "slug": "manaendless",
+      "assetKey": "manaendless",
       "name": "无魔协会",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -76,6 +82,7 @@
     },
     {
       "slug": "opcglobal",
+      "assetKey": "opcglobal",
       "name": "OPC Global",
       "mainLanguage": "en",
       "mainLocale": "EN",
@@ -85,6 +92,7 @@
     },
     {
       "slug": "iptrust",
+      "assetKey": "iptrust",
       "name": "岁知社",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -94,6 +102,7 @@
     },
     {
       "slug": "fengzhi",
+      "assetKey": "fengzhi",
       "name": "峰值永造局",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -103,6 +112,7 @@
     },
     {
       "slug": "axisee",
+      "assetKey": "axisee",
       "name": "Axisee",
       "mainLanguage": "en",
       "mainLocale": "EN",
@@ -111,16 +121,18 @@
       "guideUrl": "brand.html?brand=axisee"
     },
     {
-      "slug": "sidera",
+      "slug": "tiansight",
+      "assetKey": "sidera",
       "name": "侍天 - 智慧餐饮",
       "mainLanguage": "zh",
       "mainLocale": "CN",
-      "apiUrl": "api/brands/sidera.json",
+      "apiUrl": "api/brands/tiansight.json",
       "historyUrl": "api/history/sidera.json",
-      "guideUrl": "brand.html?brand=sidera"
+      "guideUrl": "brand.html?brand=tiansight"
     },
     {
       "slug": "1stepmore",
+      "assetKey": "1stepmore",
       "name": "1stepmore",
       "mainLanguage": "en",
       "mainLocale": "EN",
@@ -130,6 +142,7 @@
     },
     {
       "slug": "agem",
+      "assetKey": "agem",
       "name": "游赋社",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -139,6 +152,7 @@
     },
     {
       "slug": "rgd",
+      "assetKey": "rgd",
       "name": "燃古豋",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -148,6 +162,7 @@
     },
     {
       "slug": "changoods",
+      "assetKey": "changoods",
       "name": "常幸",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -157,6 +172,7 @@
     },
     {
       "slug": "boya",
+      "assetKey": "boya",
       "name": "博雅问渠书院",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -166,6 +182,7 @@
     },
     {
       "slug": "apuch",
+      "assetKey": "apuch",
       "name": "APUCH",
       "mainLanguage": "en",
       "mainLocale": "EN",
@@ -175,6 +192,7 @@
     },
     {
       "slug": "pam",
+      "assetKey": "pam",
       "name": "帕姆建筑",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -184,6 +202,7 @@
     },
     {
       "slug": "ksamint",
+      "assetKey": "ksamint",
       "name": "ksamint",
       "mainLanguage": "en",
       "mainLocale": "EN",
@@ -193,6 +212,7 @@
     },
     {
       "slug": "inucleus",
+      "assetKey": "inucleus",
       "name": "iNucleus",
       "mainLanguage": "en",
       "mainLocale": "EN",
@@ -202,6 +222,7 @@
     },
     {
       "slug": "xinzhi-travel",
+      "assetKey": "xinzhi-travel",
       "name": "信致旅游",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -211,6 +232,7 @@
     },
     {
       "slug": "zhongzhiyou",
+      "assetKey": "zhongzhiyou",
       "name": "中智游集团",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -220,6 +242,7 @@
     },
     {
       "slug": "nibiru",
+      "assetKey": "nibiru",
       "name": "Nibiru",
       "mainLanguage": "en",
       "mainLocale": "EN",
@@ -229,6 +252,7 @@
     },
     {
       "slug": "shenzhen-microsoft-global-center",
+      "assetKey": "shenzhen-microsoft-global-center",
       "name": "深圳微软出海中心",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -238,6 +262,7 @@
     },
     {
       "slug": "shanrenjing",
+      "assetKey": "shanrenjing",
       "name": "山人境",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -247,6 +272,7 @@
     },
     {
       "slug": "kaoyu-shenhua",
+      "assetKey": "kaoyu-shenhua",
       "name": "烤鱼神话",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -256,6 +282,7 @@
     },
     {
       "slug": "yanan-shiyao-hotel",
+      "assetKey": "yanan-shiyao-hotel",
       "name": "延安石窑宾馆",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -265,6 +292,7 @@
     },
     {
       "slug": "tongli-market",
+      "assetKey": "tongli-market",
       "name": "同里市集",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -274,6 +302,7 @@
     },
     {
       "slug": "tongxianghui",
+      "assetKey": "tongxianghui",
       "name": "同香荟",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -283,6 +312,7 @@
     },
     {
       "slug": "mutangwan",
+      "assetKey": "mutangwan",
       "name": "睦堂湾",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -292,6 +322,7 @@
     },
     {
       "slug": "shuangxi-shaola",
+      "assetKey": "shuangxi-shaola",
       "name": "双囍烧腊",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -301,6 +332,7 @@
     },
     {
       "slug": "ganglao-baozailu",
+      "assetKey": "ganglao-baozailu",
       "name": "港佬煲仔炉车仔面碟头饭",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -310,6 +342,7 @@
     },
     {
       "slug": "xiaotaoyuan",
+      "assetKey": "xiaotaoyuan",
       "name": "小桃园",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -319,6 +352,7 @@
     },
     {
       "slug": "subangyuan",
+      "assetKey": "subangyuan",
       "name": "苏帮袁",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -328,6 +362,7 @@
     },
     {
       "slug": "youyuan-jingmeng",
+      "assetKey": "youyuan-jingmeng",
       "name": "游园京梦",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -337,6 +372,7 @@
     },
     {
       "slug": "qingshuiting",
+      "assetKey": "qingshuiting",
       "name": "清水亭",
       "mainLanguage": "zh",
       "mainLocale": "CN",
@@ -453,11 +489,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "675d3b6080e1d2e2a91786de492408141c3e9695",
-      "shortHash": "675d3b6",
-      "date": "2026-08-12T19:33:36+08:00",
-      "message": "feat: clarify commercial font licensing",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/675d3b6080e1d2e2a91786de492408141c3e9695"
+      "hash": "c1f75944a73f940b16c696e6a93e2e609d4eb492",
+      "shortHash": "c1f7594",
+      "date": "2026-08-13T12:06:04+08:00",
+      "message": "feat: expand deployable open font library",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/c1f75944a73f940b16c696e6a93e2e609d4eb492"
     }
   },
   "sync": {

@@ -847,14 +847,15 @@ for (const brand of brands) {
     keywords: brand.theme?.keywords ?? [],
     images: images.map((image) => ({ ...image })),
   };
+  const publicSlug = brand.publicSlug || brand.slug;
   const assetKit = {
     assetKey: brand.slug,
     endpoints: {
-      brand: `api/brands/${brand.slug}.json`,
+      brand: `api/brands/${publicSlug}.json`,
       logo: logoImage?.sitePath ?? "",
-      images: `api/brands/${brand.slug}.json#images`,
-      adobe: adobeAssets.length ? `api/brands/${brand.slug}.json#adobeAssets` : "",
-      tokens: `api/brands/${brand.slug}.json#tokens`,
+      images: `api/brands/${publicSlug}.json#images`,
+      adobe: adobeAssets.length ? `api/brands/${publicSlug}.json#adobeAssets` : "",
+      tokens: `api/brands/${publicSlug}.json#tokens`,
       history: `api/history/${brand.slug}.json`,
     },
     moodboard,
@@ -881,8 +882,9 @@ for (const brand of brands) {
     version: versions[0] ?? null,
     historyUrl: `api/history/${brand.slug}.json`,
     history: history.slice(0, 6),
-    url: `brand.html?brand=${brand.slug}`,
-    apiUrl: `api/brands/${brand.slug}.json`,
+    publicSlug,
+    url: `brand.html?brand=${publicSlug}`,
+    apiUrl: `api/brands/${publicSlug}.json`,
     status: guides.length ? "documented" : "placeholder",
     guides,
     tokens,
@@ -924,6 +926,9 @@ for (const brand of brands) {
     versions: history,
   }, null, 2));
   await writeFile(join(brandApiDir, `${brand.slug}.json`), JSON.stringify(payload, null, 2));
+  if (payload.publicSlug !== brand.slug) {
+    await writeFile(join(brandApiDir, `${payload.publicSlug}.json`), JSON.stringify(payload, null, 2));
+  }
 }
 
 const indexPayload = brandPayloads.map(({ guides, tokens, images, adobeAssets, history, ...brand }) => ({
@@ -967,7 +972,7 @@ const brandSearchPayload = brandPayloads.flatMap((brand) => {
     title: guide.title,
     subtitle: `${brand.display?.default?.name ?? brand.name} · ${guide.path}`,
     text: guide.excerpt,
-    url: `brand.html?brand=${brand.slug}`,
+    url: brand.url,
   }));
   return [...base, ...guides];
 });
@@ -1190,13 +1195,14 @@ await writeFile(join(apiDir, "manifest.json"), JSON.stringify({
   generatedAt: new Date().toISOString(),
   version: versions[0] ?? null,
   brands: indexPayload.map((brand) => ({
-    slug: brand.slug,
+    slug: brand.publicSlug || brand.slug,
+    assetKey: brand.slug,
     name: brand.mainName,
     mainLanguage: brand.mainLanguage,
     mainLocale: brand.mainLocale,
-    apiUrl: `api/brands/${brand.slug}.json`,
+    apiUrl: brand.apiUrl,
     historyUrl: `api/history/${brand.slug}.json`,
-    guideUrl: `brand.html?brand=${brand.slug}`,
+    guideUrl: brand.url,
   })),
   mcp: {
     local: "mcp/src/index.ts",
@@ -1492,7 +1498,7 @@ await writeFile(join(siteDir, "llms.txt"), [
   ...fontCatalog.fonts.map((font) => `- ${font.name}${font.nameZh && font.nameZh !== font.name ? ` / ${font.nameZh}` : ""}: ${font.license.spdx} · ${font.source.projectUrl}`),
   "",
   "Brands:",
-  ...indexPayload.map((brand) => `- ${brand.mainName} (${brand.slug}): /api/brands/${brand.slug}.json · mainLocale ${brand.mainLocale} · palette ${brand.theme?.primary ?? "n/a"} / ${brand.theme?.accent ?? "n/a"}`),
+  ...indexPayload.map((brand) => `- ${brand.mainName} (${brand.publicSlug || brand.slug}; assetKey ${brand.slug}): /${brand.apiUrl} · mainLocale ${brand.mainLocale} · palette ${brand.theme?.primary ?? "n/a"} / ${brand.theme?.accent ?? "n/a"}`),
 ].join("\n"));
 
 await writeFile(join(siteDir, "site.webmanifest"), JSON.stringify({
@@ -1525,7 +1531,7 @@ await writeFile(join(siteDir, "sitemap.xml"), `<?xml version="1.0" encoding="UTF
   <url><loc>${publicOrigin}/ip-evolution</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>${publicOrigin}/fonts</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>${publicOrigin}/library/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-${indexPayload.map((brand) => `  <url><loc>${publicOrigin}/brand?brand=${encodeURIComponent(brand.slug)}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`).join("\n")}
+${indexPayload.map((brand) => `  <url><loc>${publicOrigin}/brand?brand=${encodeURIComponent(brand.publicSlug || brand.slug)}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`).join("\n")}
 </urlset>`);
 
 await writeFile(join(siteDir, "favicon.svg"), html`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 609.45 609.45">
@@ -3603,8 +3609,8 @@ p { line-height: 1.65; }
   color: var(--brand-ink);
 }
 .brand-sidera .brand-hero {
-  min-height: min(680px, calc(100dvh - 150px));
-  padding: clamp(30px, 5vw, 72px) 0;
+  min-height: auto;
+  padding: clamp(24px, 4vw, 48px) 0;
   border-bottom: 1px solid var(--brand-line);
   grid-template-columns: minmax(0, .9fr) minmax(320px, 1.1fr);
 }
@@ -3612,7 +3618,7 @@ p { line-height: 1.65; }
 .brand-sidera .brand-hero h1 {
   max-width: 7ch;
   margin: 10px 0 18px;
-  font-size: clamp(72px, 10vw, 138px);
+  font-size: clamp(64px, 8vw, 108px);
   font-weight: 600;
   line-height: .96;
   letter-spacing: 0;
@@ -3858,6 +3864,25 @@ p { line-height: 1.65; }
   gap: 10px;
   margin: 0 0 30px;
 }
+.brand-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 28px;
+  border-top: 1px solid var(--brand-line, var(--line));
+}
+.brand-facts > div { min-width: 0; padding: 17px 26px 17px 0; border-bottom: 1px solid var(--brand-line, var(--line)); }
+.brand-facts > div:nth-child(even) { padding-left: 26px; border-left: 1px solid var(--brand-line, var(--line)); }
+.brand-facts strong { display: block; margin-bottom: 5px; color: var(--brand-muted, var(--muted)); font-size: 11px; font-weight: 750; }
+.brand-facts p { margin: 0; line-height: 1.55; }
+.brand-facts a { color: inherit; overflow-wrap: anywhere; }
+.brand-advanced { margin-top: 36px; border-top: 1px solid var(--brand-ink, var(--ink)); border-bottom: 1px solid var(--brand-line, var(--line)); }
+.brand-advanced > summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 0; cursor: pointer; list-style: none; font-weight: 750; }
+.brand-advanced > summary::-webkit-details-marker { display: none; }
+.brand-advanced > summary::after { content: "+"; font-size: 20px; font-weight: 400; }
+.brand-advanced[open] > summary::after { content: "−"; }
+.brand-advanced > summary small { margin-left: auto; color: var(--brand-muted, var(--muted)); font-weight: 500; }
+.brand-advanced-body { padding: 8px 0 28px; }
+.brand-shell > .brand-assets { margin-top: 34px; }
 .adobe-assets { margin: 0 0 28px; border-top: 1px solid var(--brand-ink, var(--ink)); }
 .adobe-assets-head { display: flex; align-items: end; justify-content: space-between; gap: 18px; padding: 18px 0; }
 .adobe-assets-head h2 { margin: 5px 0 0; }
@@ -4239,6 +4264,9 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .resource-grid { grid-template-columns: 1fr; }
   .endpoint-grid, .mood-grid { grid-template-columns: 1fr; }
   .profile-form-grid { grid-template-columns: 1fr; }
+  .brand-facts { grid-template-columns: 1fr; }
+  .brand-facts > div:nth-child(even) { padding-left: 0; border-left: 0; }
+  .brand-advanced > summary small { display: none; }
   .adobe-source-file { grid-template-columns: 1fr; }
   .adobe-source-preview { min-height: 220px; border-right: 0; border-bottom: 1px solid var(--brand-line, var(--line)); }
   .hub-hero { min-height: auto; padding-top: 36px; }
@@ -4476,6 +4504,7 @@ const i18n = {
     "brand.copyIpSystem": "复制 Apply Brief",
     "brand.ipSystemCopied": "已复制 IP System Apply Brief",
     "brand.guideline": "品牌规范",
+    "brand.more": "更多资料",
     "brand.moodBoard": "Mood Board",
     "brand.visualAssets": "视觉资产",
     "brand.adobeAssets": "Adobe 源文件",
@@ -4682,6 +4711,7 @@ const i18n = {
     "brand.copyIpSystem": "Copy apply brief",
     "brand.ipSystemCopied": "IP System apply brief copied",
     "brand.guideline": "Brand guideline",
+    "brand.more": "More resources",
     "brand.moodBoard": "Mood Board",
     "brand.visualAssets": "Visual assets",
     "brand.adobeAssets": "Adobe sources",
@@ -6262,6 +6292,39 @@ function moodBoard(brand = {}) {
   \`;
 }
 
+function compactBrandFacts(brand = {}, display = {}, localized = {}) {
+  const facts = [
+    brand.officialWebsite ? [t("brand.website"), \`<a href="\${escapeHtml(brand.officialWebsite)}">\${escapeHtml(brand.officialWebsite)}</a>\`] : null,
+    localized.business ? [t("brand.business"), escapeHtml(localized.business)] : null,
+    display.classification?.tracks?.length ? [t("brand.tracks"), escapeHtml(listText(display.classification.tracks))] : null,
+    display.classification?.audiences?.length ? [t("brand.audiences"), escapeHtml(listText(display.classification.audiences))] : null,
+    localized.notes ? [t("brand.notes"), escapeHtml(localized.notes)] : null,
+  ].filter(Boolean);
+  if (!facts.length) return "";
+  return \`<section class="brand-facts">\${facts.map(([label, value]) => \`<div><strong>\${escapeHtml(label)}</strong><p>\${value}</p></div>\`).join("")}</section>\`;
+}
+
+function brandAdvancedDetails(brand = {}) {
+  const guideHtml = brand.guides?.map((guide) => \`
+    <article class="guide guide-rendered">
+      <p class="eyebrow">\${escapeHtml(t("brand.guideline"))}</p>
+      <div class="rendered-document brand-guide-document">\${guide.html || ("<p>" + escapeHtml(guide.excerpt || "") + "</p>")}</div>
+    </article>
+  \`).join("") || "";
+  return \`
+    <details class="brand-advanced">
+      <summary><span>\${escapeHtml(t("brand.more"))}</span><small>API · IP System · Guidelines</small></summary>
+      <div class="brand-advanced-body">
+        \${profileEditor(brand)}
+        <section class="brand-architecture" id="brandArchitecture" aria-live="polite"></section>
+        \${ipSystemPanel(brand)}
+        \${brandAssetHub(brand)}
+        \${guideHtml}
+      </div>
+    </details>
+  \`;
+}
+
 async function renderGlobalResults(query) {
   const panel = $("#globalResults");
   if (!panel) return;
@@ -6409,26 +6472,16 @@ async function renderBrand() {
   const brand = await loadJson(\`api/brands/\${slug}.json\`);
   const display = mainBrand(brand);
   const localized = localizedBrand(brand);
-  const isSidera = brand.slug === "sidera";
+  const isSidera = brand.slug === "sidera" || brand.publicSlug === "tiansight";
   const isKaoyu = brand.slug === "kaoyu-shenhua";
   const heroName = isSidera ? "侍天" : display.name;
   const heroSecondaryName = isSidera ? "智慧餐饮 · tiansight" : isKaoyu ? "KAOYUSHENHUA · 一炉火，烧了三十多年" : display.secondaryName;
   const heroEyebrow = isSidera ? "智慧领航者 · WISDOM NAVIGATOR" : isKaoyu ? (currentLocale === "en" ? "Charcoal fire · Live fish · No prefab" : "老灶火 · 活鱼现烤 · 无预制") : statusLabel(brand.status);
-  const sideraPrinciples = currentLocale === "en" ? ["SEE CLEARLY", "MOVE DECISIVELY", "COMPOUND VALUE"] : ["看得清", "改得动", "能复利"];
-  const kaoyuPrinciples = currentLocale === "en"
-    ? ["Live fish, grilled to order", "Home cooking, wok-hot", "No prefab dishes"]
-    : ["活鱼现点现烤", "家常菜现炒现做", "全店无预制菜"];
-  const kaoyuSlogan = currentLocale === "en"
-    ? "Thirty-plus years of plain truth becomes the myth."
-    : "把实话坚持三十多年，就成了神话。";
-  const kaoyuStoryLead = currentLocale === "en"
-    ? "Since 1990 at the stove, since 2015 in Changping, Beijing — one live fish, one charcoal fire, one plain promise for the neighborhood."
-    : "1990年入行，2015年落地北京昌平。一条活鱼，一炉旺火，一句实在话——让街坊吃口新鲜的、热乎的。";
   document.title = \`\${display.name} · Brand Guidelines\`;
   const descriptionMeta = document.querySelector('meta[name="description"]');
   if (descriptionMeta) descriptionMeta.setAttribute("content", localized.intro || brand.description || "IPTrust brand guideline and assets.");
   const canonical = document.querySelector('link[rel="canonical"]');
-  if (canonical) canonical.setAttribute("href", new URL(\`brand?brand=\${encodeURIComponent(brand.slug)}\`, location.origin + "/").href);
+  if (canonical) canonical.setAttribute("href", new URL(\`brand?brand=\${encodeURIComponent(brand.publicSlug || brand.slug)}\`, location.origin + "/").href);
   const hero = brand.adobeAssets?.[0]?.hero?.sitePath
     ? brand.adobeAssets[0].hero
     : preferredBrandImage(brand.images || []);
@@ -6441,15 +6494,13 @@ async function renderBrand() {
           <p class="muted alt-name">\${escapeHtml(heroSecondaryName || "")}</p>
           <p>\${escapeHtml(localized.intro)}</p>
           <div class="profile-tags">
-            \${display.classification.tracks.map((item) => \`<span>\${escapeHtml(item)}</span>\`).join("")}
-            \${display.classification.audiences.map((item) => \`<span>\${escapeHtml(item)}</span>\`).join("")}
+            \${display.classification.tracks.slice(0, 3).map((item) => \`<span>\${escapeHtml(item)}</span>\`).join("")}
           </div>
           \${swatches(brand.theme, true)}
           <div class="actions">
             \${isKaoyu ? \`<a class="button" href="kaoyu-shenhua/">\${currentLocale === "en" ? "Brand story" : "品牌故事"}</a>\` : ""}
             <button class="button" type="button" data-copy-brand="\${escapeHtml(brand.slug)}">\${escapeHtml(t("brand.copyAgentPack"))}</button>
-            <a class="button\${isKaoyu ? " ghost" : ""}" href="\${brand.apiUrl}">\${t("brand.openJson")}</a>
-            <a class="button ghost" href="\${brand.source.github}">\${t("brand.source")}</a>
+            \${brand.officialWebsite ? \`<a class="button ghost" href="\${escapeHtml(brand.officialWebsite)}">\${escapeHtml(t("brand.website"))}</a>\` : ""}
           </div>
         </div>
         \${hero ? \`
@@ -6475,54 +6526,23 @@ async function renderBrand() {
           </div>
         \` : ""}
       </section>
-      \${isSidera ? \`<section class="sidera-principles">\${sideraPrinciples.map((item) => \`<span>\${escapeHtml(item)}</span>\`).join("")}</section>\` : ""}
-      \${isKaoyu ? \`
-        <section class="kaoyu-principles">\${kaoyuPrinciples.map((item) => \`<span>\${escapeHtml(item)}</span>\`).join("")}</section>
-        <section class="kaoyu-story" id="kaoyu-story">
-          <h2>\${currentLocale === "en" ? "One fire, thirty-plus years" : "一炉火，烧了三十多年"}</h2>
-          <p class="lead">\${escapeHtml(kaoyuStoryLead)}</p>
-          <p class="slogan">\${escapeHtml(kaoyuSlogan)}</p>
-          <div class="kaoyu-story-links actions">
-            <a class="button" href="kaoyu-shenhua/">\${currentLocale === "en" ? "Open story page" : "打开故事页"}</a>
-            <a class="button ghost" href="#kaoyu-shenhua-guide-1-品牌叙事-完整版">\${currentLocale === "en" ? "Full narrative" : "完整版叙事"}</a>
-          </div>
-        </section>
-      \` : ""}
-      \${profileEditor(brand)}
-      <section class="brand-architecture" id="brandArchitecture" aria-live="polite"></section>
-      \${ipSystemPanel(brand)}
-      \${brandAssetHub(brand)}
       \${adobeAssetPanel(brand.adobeAssets || [])}
-      \${moodBoard(brand)}
-      <section class="resource-list">
-        <div class="resource-grid">
-          <div class="resource"><strong>\${t("brand.website")}</strong><br>\${brand.officialWebsite ? \`<a href="\${escapeHtml(brand.officialWebsite)}">\${escapeHtml(brand.officialWebsite)}</a>\` : escapeHtml(t("brand.blank"))}</div>
-          <div class="resource"><strong>\${t("brand.mainLanguage")}</strong><br>\${escapeHtml(languageLabel(brand.mainLanguage || brand.profile?.mainLanguage) || t("brand.blank"))}</div>
-          <div class="resource"><strong>\${t("brand.intro")}</strong><br>\${escapeHtml(localized.intro || t("brand.blank"))}</div>
-          <div class="resource"><strong>\${t("brand.business")}</strong><br>\${escapeHtml(localized.business || t("brand.blank"))}</div>
-          <div class="resource"><strong>\${t("brand.notes")}</strong><br>\${escapeHtml(localized.notes || t("brand.blank"))}</div>
-          <div class="resource"><strong>\${t("brand.tracks")}</strong><br>\${escapeHtml(listText(display.classification.tracks) || t("brand.blank"))}</div>
-          <div class="resource"><strong>\${t("brand.audiences")}</strong><br>\${escapeHtml(listText(display.classification.audiences) || t("brand.blank"))}</div>
-          <div class="resource"><strong>\${t("brand.tags")}</strong><br>\${escapeHtml(listText(display.classification.tags) || t("brand.blank"))}</div>
-        </div>
-        <div class="resource"><strong>\${t("brand.colors")}</strong><br>\${escapeHtml(brand.theme?.keywords?.join(" · ") || "")}</div>
-        <div class="resource"><strong>\${t("brand.editable")}</strong><br>\${brand.editablePaths?.map(escapeHtml).join("<br>") || t("brand.noneGuide")}</div>
-        <div class="resource"><strong>\${t("brand.tokens")}</strong><br>\${brand.tokens?.map((token) => escapeHtml(token.path)).join("<br>") || t("brand.noneTokens")}</div>
-      </section>
-      \${brand.guides?.map((guide) => \`
-        <article class="guide guide-rendered">
-          <p class="eyebrow">\${escapeHtml(t("brand.guideline"))}</p>
-          <div class="rendered-document brand-guide-document">\${guide.html || ("<p>" + escapeHtml(guide.excerpt || "") + "</p>")}</div>
-        </article>
-      \`).join("") || ""}
+      \${brandAssetStrip(brand.images || [])}
+      \${compactBrandFacts(brand, display, localized)}
+      \${brandAdvancedDetails(brand)}
     </div>
   \`;
   page.setAttribute("aria-busy", "false");
   setupCopyButtons([brand]);
-  setupProfileEditor(brand);
-  setupIpSystemPanel(brand);
   setupAssetCopyButtons();
-  renderBrandArchitecture(slug).catch(console.error);
+  const advanced = page.querySelector(".brand-advanced");
+  advanced?.addEventListener("toggle", () => {
+    if (!advanced.open || advanced.dataset.ready) return;
+    advanced.dataset.ready = "true";
+    setupProfileEditor(brand);
+    setupIpSystemPanel(brand);
+    renderBrandArchitecture(brand.slug).catch(console.error);
+  });
 }
 
 function renderBrandFailure(error) {
