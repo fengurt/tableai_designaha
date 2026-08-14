@@ -504,6 +504,7 @@ for (const definition of definitions) {
     const subsetPath = join(outputDir, `${definition.id}-${String(file.weight).replaceAll(" ", "-")}.woff2`);
     const subsetMetaPath = `${subsetPath}.meta.json`;
     const buildKey = sha256(Buffer.from(JSON.stringify({
+      pipelineVersion: 2,
       sourceSha256: sha256(sourceBuffer),
       sample: subsetSamples[definition.group] || subsetSamples.en,
       weight: file.weight,
@@ -520,7 +521,7 @@ for (const definition of definitions) {
       if (definition.pinAxes?.length && extension.toLowerCase() === ".ttf") {
         const instancePath = join(workDir, `${definition.id}-${index}-instance.ttf`);
         await rm(instancePath, { force: true });
-        const instanceResult = spawnSync("fonttools", ["varLib.instancer", "-q", sourcePath, ...definition.pinAxes, `--output=${instancePath}`], {
+        const instanceResult = spawnSync("fonttools", ["varLib.instancer", "-q", "--no-recalc-timestamp", sourcePath, ...definition.pinAxes, `--output=${instancePath}`], {
           cwd: root,
           encoding: "utf8",
           env: process.env,
@@ -543,6 +544,7 @@ for (const definition of definitions) {
         "--name-IDs=*",
         "--name-legacy",
         "--name-languages=*",
+        "--no-recalc-timestamp",
         "--notdef-glyph",
         "--notdef-outline",
         "--recommended-glyphs",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-14T02:48:59.041Z",
+  "generatedAt": "2026-08-14T03:00:36.761Z",
   "verifiedAt": "2026-08-14",
   "name": "IPTrust Open-source Type Library",
   "description": {
@@ -16,7 +16,7 @@
     "loading": "viewport-lazy",
     "subset": "specimen-glyphs-only",
     "variableAxes": "weight-only-where-supported",
-    "totalDemoBytes": 1183104,
+    "totalDemoBytes": 1183092,
     "largestDemoBytes": 69592
   },
   "licenseNotice": {
@@ -1251,12 +1251,12 @@
           "weight": "100 900",
           "style": "normal",
           "mimeType": "font/woff2",
-          "bytes": 15116,
-          "sha256": "784a4c9c78c6a818dd4e24b42f48fefc7767841c1725e92bc87fb1e86072df4e",
+          "bytes": 15036,
+          "sha256": "bfbfefba129da052668514c1255303921dfc697db2fdcbedd3d4292de2adf410",
           "sourceSha256": "9b523f7d82593df0107173849ebb8c817471a1df4b4fb2c3cbf40cfd810c8281",
           "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/robotoflex/RobotoFlex%5BGRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght%5D.ttf",
-          "objectKey": "public/iptrust/font-roboto-flex-100-900/784a4c9c78c6a818dd4e24b42f48fefc7767841c1725e92bc87fb1e86072df4e/demo.woff2",
-          "mediaUrl": "https://media.apuch.art/public/iptrust/font-roboto-flex-100-900/784a4c9c78c6a818dd4e24b42f48fefc7767841c1725e92bc87fb1e86072df4e/demo.woff2"
+          "objectKey": "public/iptrust/font-roboto-flex-100-900/bfbfefba129da052668514c1255303921dfc697db2fdcbedd3d4292de2adf410/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-roboto-flex-100-900/bfbfefba129da052668514c1255303921dfc697db2fdcbedd3d4292de2adf410/demo.woff2"
         }
       ]
     },
@@ -1306,11 +1306,11 @@
           "style": "normal",
           "mimeType": "font/woff2",
           "bytes": 30896,
-          "sha256": "768a6810fd0a9040a0a9049c001e877a02e222565ede0fd1eebab941f87f8b74",
+          "sha256": "1126b3cc7f42513e16a93e4caae63a4ebbace40972a7d39f840f4b42f1284c61",
           "sourceSha256": "36643644f318a812aab2d2ed3bb98f8cf0872527f835fe9398d95fe6b9adb878",
           "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/opensans/OpenSans%5Bwdth,wght%5D.ttf",
-          "objectKey": "public/iptrust/font-open-sans-100-900/768a6810fd0a9040a0a9049c001e877a02e222565ede0fd1eebab941f87f8b74/demo.woff2",
-          "mediaUrl": "https://media.apuch.art/public/iptrust/font-open-sans-100-900/768a6810fd0a9040a0a9049c001e877a02e222565ede0fd1eebab941f87f8b74/demo.woff2"
+          "objectKey": "public/iptrust/font-open-sans-100-900/1126b3cc7f42513e16a93e4caae63a4ebbace40972a7d39f840f4b42f1284c61/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-open-sans-100-900/1126b3cc7f42513e16a93e4caae63a4ebbace40972a7d39f840f4b42f1284c61/demo.woff2"
         }
       ]
     },
@@ -1409,12 +1409,12 @@
           "weight": "100 900",
           "style": "normal",
           "mimeType": "font/woff2",
-          "bytes": 19320,
-          "sha256": "dd9fee308d5974a72f6c3b7140f60cc5515684878a4c3266e195be8a36dbbbb3",
+          "bytes": 19300,
+          "sha256": "c6a78b068a4ec51a08a39cfa2207484cca0fb28686462775ba1990293cac1239",
           "sourceSha256": "8cd08d97e89c24d0aa92edd2f0f4c8ee6195eee9b7c9f154865a58b02f0c1c0d",
           "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/dmsans/DMSans%5Bopsz,wght%5D.ttf",
-          "objectKey": "public/iptrust/font-dm-sans-100-900/dd9fee308d5974a72f6c3b7140f60cc5515684878a4c3266e195be8a36dbbbb3/demo.woff2",
-          "mediaUrl": "https://media.apuch.art/public/iptrust/font-dm-sans-100-900/dd9fee308d5974a72f6c3b7140f60cc5515684878a4c3266e195be8a36dbbbb3/demo.woff2"
+          "objectKey": "public/iptrust/font-dm-sans-100-900/c6a78b068a4ec51a08a39cfa2207484cca0fb28686462775ba1990293cac1239/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-dm-sans-100-900/c6a78b068a4ec51a08a39cfa2207484cca0fb28686462775ba1990293cac1239/demo.woff2"
         }
       ]
     },
@@ -1616,12 +1616,12 @@
           "weight": "200 900",
           "style": "normal",
           "mimeType": "font/woff2",
-          "bytes": 48560,
-          "sha256": "1b239494a9336bf36cd4bab7b102e38685e2d64edbf44cebe0abe30bf2bd7208",
+          "bytes": 48596,
+          "sha256": "b465e763c7e31868579fae1f2c0b752688e1d7f191143d05a0e5ddf6db5cfcd6",
           "sourceSha256": "97b2d4da6e3cb494b5a1e66ae176914d852ccabef49e0c02c0df25f3e39aca0b",
           "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/sourceserif4/SourceSerif4%5Bopsz,wght%5D.ttf",
-          "objectKey": "public/iptrust/font-source-serif-4-200-900/1b239494a9336bf36cd4bab7b102e38685e2d64edbf44cebe0abe30bf2bd7208/demo.woff2",
-          "mediaUrl": "https://media.apuch.art/public/iptrust/font-source-serif-4-200-900/1b239494a9336bf36cd4bab7b102e38685e2d64edbf44cebe0abe30bf2bd7208/demo.woff2"
+          "objectKey": "public/iptrust/font-source-serif-4-200-900/b465e763c7e31868579fae1f2c0b752688e1d7f191143d05a0e5ddf6db5cfcd6/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-source-serif-4-200-900/b465e763c7e31868579fae1f2c0b752688e1d7f191143d05a0e5ddf6db5cfcd6/demo.woff2"
         }
       ]
     },
@@ -1826,12 +1826,12 @@
           "weight": "100 900",
           "style": "normal",
           "mimeType": "font/woff2",
-          "bytes": 32872,
-          "sha256": "cba2c1864c1c363cab2cca84f3961ced6fc2859f4a46e379c1887127286b8534",
+          "bytes": 32864,
+          "sha256": "63fb9e1e8ee864a2c21369525f85a1972beaffe997bf681f5e23c70b7a143913",
           "sourceSha256": "d7598e12c5dbef095ff8272cfc55da0250bd07fbdecbac8a530b9b277872a134",
           "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/roboto/Roboto%5Bwdth,wght%5D.ttf",
-          "objectKey": "public/iptrust/font-roboto-100-900/cba2c1864c1c363cab2cca84f3961ced6fc2859f4a46e379c1887127286b8534/demo.woff2",
-          "mediaUrl": "https://media.apuch.art/public/iptrust/font-roboto-100-900/cba2c1864c1c363cab2cca84f3961ced6fc2859f4a46e379c1887127286b8534/demo.woff2"
+          "objectKey": "public/iptrust/font-roboto-100-900/63fb9e1e8ee864a2c21369525f85a1972beaffe997bf681f5e23c70b7a143913/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-roboto-100-900/63fb9e1e8ee864a2c21369525f85a1972beaffe997bf681f5e23c70b7a143913/demo.woff2"
         }
       ]
     },
@@ -2211,12 +2211,12 @@
           "weight": "100 900",
           "style": "normal",
           "mimeType": "font/woff2",
-          "bytes": 26240,
-          "sha256": "188e5676f680b1b8a8829acb2ab8fdd81c05224e0c8d34d5ce3d72d483b3c2b0",
+          "bytes": 26272,
+          "sha256": "330060595b73fce38c9ceded27a8e4aec048f502738875251a4190476aa3bcb5",
           "sourceSha256": "bfb7bb691513f12e734dc346c03a03f784912432d7e3fa8e56efcf906fe86b3d",
           "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/notosans/NotoSans%5Bwdth,wght%5D.ttf",
-          "objectKey": "public/iptrust/font-noto-sans-100-900/188e5676f680b1b8a8829acb2ab8fdd81c05224e0c8d34d5ce3d72d483b3c2b0/demo.woff2",
-          "mediaUrl": "https://media.apuch.art/public/iptrust/font-noto-sans-100-900/188e5676f680b1b8a8829acb2ab8fdd81c05224e0c8d34d5ce3d72d483b3c2b0/demo.woff2"
+          "objectKey": "public/iptrust/font-noto-sans-100-900/330060595b73fce38c9ceded27a8e4aec048f502738875251a4190476aa3bcb5/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-noto-sans-100-900/330060595b73fce38c9ceded27a8e4aec048f502738875251a4190476aa3bcb5/demo.woff2"
         }
       ]
     },
@@ -2313,12 +2313,12 @@
           "weight": "100 900",
           "style": "normal",
           "mimeType": "font/woff2",
-          "bytes": 16496,
-          "sha256": "27e1077e4af4acafdfee9093c3d819d5ab4dad0b56fb770d08ee9475ca0521fd",
+          "bytes": 16488,
+          "sha256": "767ba21d48089bf3d3b6545fe3eafc3e08940b563a9f70fa630101772ddb1a71",
           "sourceSha256": "f934d7142fb4784bf828da485b7dcbd90c0c80d514e9d49a5da0ed3a1ae2491d",
           "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/nunitosans/NunitoSans%5BYTLC,opsz,wdth,wght%5D.ttf",
-          "objectKey": "public/iptrust/font-nunito-sans-100-900/27e1077e4af4acafdfee9093c3d819d5ab4dad0b56fb770d08ee9475ca0521fd/demo.woff2",
-          "mediaUrl": "https://media.apuch.art/public/iptrust/font-nunito-sans-100-900/27e1077e4af4acafdfee9093c3d819d5ab4dad0b56fb770d08ee9475ca0521fd/demo.woff2"
+          "objectKey": "public/iptrust/font-nunito-sans-100-900/767ba21d48089bf3d3b6545fe3eafc3e08940b563a9f70fa630101772ddb1a71/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-nunito-sans-100-900/767ba21d48089bf3d3b6545fe3eafc3e08940b563a9f70fa630101772ddb1a71/demo.woff2"
         }
       ]
     },
@@ -2836,12 +2836,12 @@
           "weight": "200 800",
           "style": "normal",
           "mimeType": "font/woff2",
-          "bytes": 22568,
-          "sha256": "fb7965dbff1f0a2515dd98de098bca917300dc5d1d5197eac6a74d1e0d1996e6",
+          "bytes": 22604,
+          "sha256": "419c4dbab8444b79460d66f2163e8fc37134bd84f6f19020b2f3a9172cb77229",
           "sourceSha256": "413e7357809ddd12fd80a96a8a396de0e401638d4acd3cb3e37532f0472ac682",
           "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/bricolagegrotesque/BricolageGrotesque%5Bopsz,wdth,wght%5D.ttf",
-          "objectKey": "public/iptrust/font-bricolage-grotesque-200-800/fb7965dbff1f0a2515dd98de098bca917300dc5d1d5197eac6a74d1e0d1996e6/demo.woff2",
-          "mediaUrl": "https://media.apuch.art/public/iptrust/font-bricolage-grotesque-200-800/fb7965dbff1f0a2515dd98de098bca917300dc5d1d5197eac6a74d1e0d1996e6/demo.woff2"
+          "objectKey": "public/iptrust/font-bricolage-grotesque-200-800/419c4dbab8444b79460d66f2163e8fc37134bd84f6f19020b2f3a9172cb77229/demo.woff2",
+          "mediaUrl": "https://media.apuch.art/public/iptrust/font-bricolage-grotesque-200-800/419c4dbab8444b79460d66f2163e8fc37134bd84f6f19020b2f3a9172cb77229/demo.woff2"
         }
       ]
     },

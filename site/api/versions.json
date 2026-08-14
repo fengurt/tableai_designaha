@@ -1,5 +1,12 @@
 [
   {
+    "hash": "c6fb4325d24c2f589aa34a3f86abb4d648dbd010",
+    "shortHash": "c6fb432",
+    "date": "2026-08-14T10:50:21+08:00",
+    "message": "feat: expand popular font specimens",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/c6fb4325d24c2f589aa34a3f86abb4d648dbd010"
+  },
+  {
     "hash": "fba7acc5b5316ed48bd988454c69e2e972e14cb1",
     "shortHash": "fba7acc",
     "date": "2026-08-14T09:33:01+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-07-20T14:17:32+08:00",
     "message": "fix: proxy Pages through cached edge",
     "url": "https://github.com/fengurt/tableai_designaha/commit/b682d02c4c810b8cd42fcafe3dfdbc020c374115"
-  },
-  {
-    "hash": "362d8736b279a864d8fdcaf633c1706941dad6a0",
-    "shortHash": "362d873",
-    "date": "2026-07-20T14:13:03+08:00",
-    "message": "fix: cache Pages HTML without zone routes",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/362d8736b279a864d8fdcaf633c1706941dad6a0"
   }
 ]
