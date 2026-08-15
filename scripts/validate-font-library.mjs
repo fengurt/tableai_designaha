@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -5,6 +6,7 @@ import { fileURLToPath } from "node:url";
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const catalog = JSON.parse(await readFile(join(root, "data", "fonts.json"), "utf8"));
 const googleDirectory = JSON.parse(await readFile(join(root, "data", "google-fonts-directory.json"), "utf8"));
+const licenseArchive = JSON.parse(await readFile(join(root, "licenses", "fonts", "manifest.json"), "utf8"));
 const approvedCommercialLicenses = new Set(["OFL-1.1", "Apache-2.0", "UFL-1.0"]);
 const approvedProjectHosts = new Set(["fonts.google.com", "github.com"]);
 const approvedLicenseHosts = new Set(["github.com", "openfontlicense.org", "www.apache.org", "ubuntu.com"]);
@@ -17,6 +19,8 @@ if (!Array.isArray(catalog.directories) || catalog.directories.length < 4) throw
 const ids = new Set();
 const commercialLicenses = new Set((catalog.licenseTypes || []).filter((license) => license.commercial).map((license) => license.spdx));
 if (catalog.fonts.length < 50) throw new Error("font_curated_count");
+if (licenseArchive.schemaVersion !== 1 || licenseArchive.fonts?.length !== catalog.fonts.length) throw new Error("font_license_archive_count");
+const archivedLicenses = new Map(licenseArchive.fonts.map((font) => [font.id, font]));
 for (const font of catalog.fonts) {
   if (!font.id || ids.has(font.id)) throw new Error(`font_id:${font.id}`);
   ids.add(font.id);
@@ -25,6 +29,12 @@ for (const font of catalog.fonts) {
   if (licenseUrl.protocol !== "https:" || !approvedLicenseHosts.has(licenseUrl.hostname)) throw new Error(`font_license_source:${font.id}`);
   const projectUrl = new URL(font.source?.projectUrl || "https://invalid.local");
   if (projectUrl.protocol !== "https:" || !approvedProjectHosts.has(projectUrl.hostname) || !/^[a-f0-9]{40}$/.test(font.source?.revision || "")) throw new Error(`font_source:${font.id}`);
+  const archived = archivedLicenses.get(font.id);
+  if (!archived || archived.spdx !== font.license.spdx || archived.licenseSha256 !== font.license.archive?.licenseSha256) throw new Error(`font_license_archive:${font.id}`);
+  const archivedText = await readFile(join(root, archived.licensePath));
+  if (createHash("sha256").update(archivedText).digest("hex") !== archived.licenseSha256) throw new Error(`font_license_archive_hash:${font.id}`);
+  const provenanceText = await readFile(join(root, archived.provenancePath));
+  if (createHash("sha256").update(provenanceText).digest("hex") !== archived.provenanceSha256) throw new Error(`font_provenance_hash:${font.id}`);
   if (!font.cssStack || !font.sample || !font.categoryKey || !Array.isArray(font.assets) || !font.assets.length) throw new Error(`font_metadata:${font.id}`);
   for (const asset of font.assets) {
     if (asset.mimeType !== "font/woff2" || !/^[a-f0-9]{64}$/.test(asset.sha256 || "")) throw new Error(`font_asset:${font.id}`);

@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-08-14T03:13:29.409Z",
+  "generatedAt": "2026-08-15T08:56:41.668Z",
   "version": {
-    "hash": "d24476209a895cdf30af4fe962050d437b8fc071",
-    "shortHash": "d244762",
-    "date": "2026-08-14T11:01:04+08:00",
-    "message": "fix: make font subsets reproducible",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/d24476209a895cdf30af4fe962050d437b8fc071"
+    "hash": "721d34a6e85da0b6334a8429a990804fa34f8024",
+    "shortHash": "721d34a",
+    "date": "2026-08-14T11:25:49+08:00",
+    "message": "chore: enforce commercial font provenance",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/721d34a6e85da0b6334a8429a990804fa34f8024"
   },
   "brands": [
     {
@@ -435,7 +435,7 @@
     "delivery": "Official font sources are subset to WOFF2, stored as immutable R2 objects and loaded only when specimens enter the viewport.",
     "count": 52,
     "officialDirectoryCount": 1928,
-    "verifiedAt": "2026-08-14"
+    "verifiedAt": "2026-08-15"
   },
   "library": {
     "page": "library/",
@@ -491,11 +491,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "d24476209a895cdf30af4fe962050d437b8fc071",
-      "shortHash": "d244762",
-      "date": "2026-08-14T11:01:04+08:00",
-      "message": "fix: make font subsets reproducible",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/d24476209a895cdf30af4fe962050d437b8fc071"
+      "hash": "721d34a6e85da0b6334a8429a990804fa34f8024",
+      "shortHash": "721d34a",
+      "date": "2026-08-14T11:25:49+08:00",
+      "message": "chore: enforce commercial font provenance",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/721d34a6e85da0b6334a8429a990804fa34f8024"
     }
   },
   "sync": {

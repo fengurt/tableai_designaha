@@ -186,7 +186,7 @@ const definitions = [
     useCases: { zh: "出版、长文、文化与高端品牌", en: "Publishing, long-form, cultural and premium brands" },
     sample: samples.en,
     cssStack: '"EB Garamond", Garamond, Georgia, serif',
-    license: { spdx: "OFL-1.1", name: "SIL Open Font License 1.1", url: "https://github.com/octaviopardo/EBGaramond12/blob/master/OFL.txt" },
+    license: googleLicense("ebgaramond"),
     source: { publisher: "Octavio Pardo / Google Fonts", projectUrl: "https://github.com/octaviopardo/EBGaramond12", repository: "google" },
     files: [{ weight: "400 800", path: "ofl/ebgaramond/EBGaramond[wght].ttf" }],
   },

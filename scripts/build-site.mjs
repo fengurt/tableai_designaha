@@ -21,6 +21,7 @@ const libraryDataDir = join(root, "data", "library");
 const assetManifestPath = join(root, "data", "assets", "manifest.json");
 const fontCatalogPath = join(root, "data", "fonts.json");
 const googleFontDirectoryPath = join(root, "data", "google-fonts-directory.json");
+const fontLicenseArchiveDir = join(root, "licenses", "fonts");
 
 const brands = JSON.parse(await readFile(join(root, "config/brands.json"), "utf8"));
 const ipSystem = JSON.parse(await readFile(join(root, "config/ip-system.json"), "utf8"));
@@ -708,6 +709,13 @@ if (existsSync(join(root, "skills/iptrust-live-update/SKILL.md"))) {
 }
 if (existsSync(join(root, "IP-System/ip_sys.md"))) {
   await copyFile(join(root, "IP-System/ip_sys.md"), join(siteDir, "ip_sys.md"));
+}
+if (existsSync(fontLicenseArchiveDir)) {
+  for (const source of await walk(fontLicenseArchiveDir)) {
+    const destination = join(siteDir, relative(root, source));
+    await mkdir(dirname(destination), { recursive: true });
+    await copyFile(source, destination);
+  }
 }
 if (!assetManifest && existsSync(join(root, "assets/contact/wecom-qr.png"))) {
   await copyFile(join(root, "assets/contact/wecom-qr.png"), join(contactDir, "wecom-qr.png"));

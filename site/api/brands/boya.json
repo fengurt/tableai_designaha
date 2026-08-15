@@ -164,11 +164,11 @@
     "standalone"
   ],
   "version": {
-    "hash": "d24476209a895cdf30af4fe962050d437b8fc071",
-    "shortHash": "d244762",
-    "date": "2026-08-14T11:01:04+08:00",
-    "message": "fix: make font subsets reproducible",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/d24476209a895cdf30af4fe962050d437b8fc071"
+    "hash": "721d34a6e85da0b6334a8429a990804fa34f8024",
+    "shortHash": "721d34a",
+    "date": "2026-08-14T11:25:49+08:00",
+    "message": "chore: enforce commercial font provenance",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/721d34a6e85da0b6334a8429a990804fa34f8024"
   },
   "historyUrl": "api/history/boya.json",
   "history": [

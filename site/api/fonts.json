@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-14T03:00:36.761Z",
-  "verifiedAt": "2026-08-14",
+  "generatedAt": "2026-08-15T08:54:56.640Z",
+  "verifiedAt": "2026-08-15",
   "name": "IPTrust Open-source Type Library",
   "description": {
     "zh": "采用开源许可证、允许商业使用与网页嵌入的中英文字体参考。",
@@ -167,7 +167,16 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/notofonts/noto-cjk/blob/main/Sans/LICENSE"
+        "url": "https://github.com/notofonts/noto-cjk/blob/main/Sans/LICENSE",
+        "archive": {
+          "licensePath": "licenses/fonts/noto-sans-sc/LICENSE.txt",
+          "provenancePath": "licenses/fonts/noto-sans-sc/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/noto-sans-sc/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/noto-sans-sc/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/Sans/LICENSE",
+          "licenseSha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Noto Fonts",
@@ -219,7 +228,16 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/notofonts/noto-cjk/blob/main/Serif/LICENSE"
+        "url": "https://github.com/notofonts/noto-cjk/blob/main/Serif/LICENSE",
+        "archive": {
+          "licensePath": "licenses/fonts/noto-serif-sc/LICENSE.txt",
+          "provenancePath": "licenses/fonts/noto-serif-sc/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/noto-serif-sc/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/noto-serif-sc/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/Serif/LICENSE",
+          "licenseSha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Noto Fonts",
@@ -271,7 +289,16 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/notofonts/noto-cjk/blob/main/Sans/LICENSE"
+        "url": "https://github.com/notofonts/noto-cjk/blob/main/Sans/LICENSE",
+        "archive": {
+          "licensePath": "licenses/fonts/noto-sans-mono-sc/LICENSE.txt",
+          "provenancePath": "licenses/fonts/noto-sans-mono-sc/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/noto-sans-mono-sc/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/noto-sans-mono-sc/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/Sans/LICENSE",
+          "licenseSha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Noto Fonts",
@@ -324,7 +351,16 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/IBM/plex/blob/master/LICENSE.txt"
+        "url": "https://github.com/IBM/plex/blob/master/LICENSE.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/ibm-plex-sans-sc/LICENSE.txt",
+          "provenancePath": "licenses/fonts/ibm-plex-sans-sc/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/ibm-plex-sans-sc/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/ibm-plex-sans-sc/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/IBM/plex/bf260093582f04622aacc1e9f9ca604d7ccd0c42/LICENSE.txt",
+          "licenseSha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "IBM",
@@ -389,7 +425,16 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/rsms/inter/blob/master/LICENSE.txt"
+        "url": "https://github.com/rsms/inter/blob/master/LICENSE.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/inter/LICENSE.txt",
+          "provenancePath": "licenses/fonts/inter/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/inter/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/inter/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/rsms/inter/353b61b9f4430d5f420d56605a6e7993e0941470/LICENSE.txt",
+          "licenseSha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Rasmus Andersson",
@@ -443,7 +488,16 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/IBM/plex/blob/master/LICENSE.txt"
+        "url": "https://github.com/IBM/plex/blob/master/LICENSE.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/ibm-plex-mono/LICENSE.txt",
+          "provenancePath": "licenses/fonts/ibm-plex-mono/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/ibm-plex-mono/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/ibm-plex-mono/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/IBM/plex/bf260093582f04622aacc1e9f9ca604d7ccd0c42/LICENSE.txt",
+          "licenseSha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "IBM",
@@ -508,14 +562,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/octaviopardo/EBGaramond12/blob/master/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/ebgaramond/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/eb-garamond/LICENSE.txt",
+          "provenancePath": "licenses/fonts/eb-garamond/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/eb-garamond/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/eb-garamond/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/ebgaramond/OFL.txt",
+          "licenseSha256": "0985066662eb755ed3683ae5482a81a9195b49ce3f7e165cc2388b3dbece7dd7",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Octavio Pardo / Google Fonts",
         "projectUrl": "https://github.com/octaviopardo/EBGaramond12",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -526,7 +589,7 @@
           "bytes": 69592,
           "sha256": "9a84a3f622f5d1b5d1109216e49b1d0149e3785871199e2a60afc5e5badb66ac",
           "sourceSha256": "ef9512f92f6d579e5dc75af59a5a4b1b8b47d2eda89e00b954d44520e5369027",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/ebgaramond/EBGaramond%5Bwght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/ebgaramond/EBGaramond%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-eb-garamond-400-800/9a84a3f622f5d1b5d1109216e49b1d0149e3785871199e2a60afc5e5badb66ac/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-eb-garamond-400-800/9a84a3f622f5d1b5d1109216e49b1d0149e3785871199e2a60afc5e5badb66ac/demo.woff2"
         }
@@ -560,14 +623,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/zcoolxiaowei/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/zcoolxiaowei/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/zcool-xiaowei/LICENSE.txt",
+          "provenancePath": "licenses/fonts/zcool-xiaowei/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/zcool-xiaowei/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/zcool-xiaowei/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/zcoolxiaowei/OFL.txt",
+          "licenseSha256": "a094514ca57cf8f9c5e8d8d1adab5d8cd3a377297ff016f9df2c05b3ecd77f0a",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "ZCOOL / Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/ZCOOL+XiaoWei",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -578,7 +650,7 @@
           "bytes": 19892,
           "sha256": "1c7f3eb66e6ac8c1ecc1d5c328c6f53c5f641b62f711c57710d0c29e3e231045",
           "sourceSha256": "a42b620140f493db42f741351dfbf343c0936d58588ee8004b8b2a218d997ff1",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/zcoolxiaowei/ZCOOLXiaoWei-Regular.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/zcoolxiaowei/ZCOOLXiaoWei-Regular.ttf",
           "objectKey": "public/iptrust/font-zcool-xiaowei-400/1c7f3eb66e6ac8c1ecc1d5c328c6f53c5f641b62f711c57710d0c29e3e231045/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-zcool-xiaowei-400/1c7f3eb66e6ac8c1ecc1d5c328c6f53c5f641b62f711c57710d0c29e3e231045/demo.woff2"
         }
@@ -612,14 +684,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/zcoolqingkehuangyou/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/zcoolqingkehuangyou/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/zcool-qingke-huangyou/LICENSE.txt",
+          "provenancePath": "licenses/fonts/zcool-qingke-huangyou/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/zcool-qingke-huangyou/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/zcool-qingke-huangyou/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/zcoolqingkehuangyou/OFL.txt",
+          "licenseSha256": "f1bce31b817dee01c1e4ef8bc45d8ecb95f01f4abbf0a985007cb3cd0fd8123d",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "ZCOOL / Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/ZCOOL+QingKe+HuangYou",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -630,7 +711,7 @@
           "bytes": 14356,
           "sha256": "cb7be65b33f752b5138b5ded9806c1528c324ba3868ae2561d6661b31c32eac4",
           "sourceSha256": "54f0c0df4308cd74cd0f2fd3494ae054dbc4a1fd6fa7d71f4807eb4cdd8b4136",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/zcoolqingkehuangyou/ZCOOLQingKeHuangYou-Regular.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/zcoolqingkehuangyou/ZCOOLQingKeHuangYou-Regular.ttf",
           "objectKey": "public/iptrust/font-zcool-qingke-huangyou-400/cb7be65b33f752b5138b5ded9806c1528c324ba3868ae2561d6661b31c32eac4/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-zcool-qingke-huangyou-400/cb7be65b33f752b5138b5ded9806c1528c324ba3868ae2561d6661b31c32eac4/demo.woff2"
         }
@@ -664,14 +745,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/mashanzheng/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/mashanzheng/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/ma-shan-zheng/LICENSE.txt",
+          "provenancePath": "licenses/fonts/ma-shan-zheng/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/ma-shan-zheng/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/ma-shan-zheng/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/mashanzheng/OFL.txt",
+          "licenseSha256": "d7bdb1cee215b689e23c2f95672a6084c790542170648267a55114103d756a08",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Ma+Shan+Zheng",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -682,7 +772,7 @@
           "bytes": 19880,
           "sha256": "2f50f7097dd7024a446077b331b361d5af1244be466583d9e8fe5be038be9e75",
           "sourceSha256": "6d2546bb189c732a8ca29af9e22457b152387d158aa459e4ac2ce1e51788b7fb",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/mashanzheng/MaShanZheng-Regular.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/mashanzheng/MaShanZheng-Regular.ttf",
           "objectKey": "public/iptrust/font-ma-shan-zheng-400/2f50f7097dd7024a446077b331b361d5af1244be466583d9e8fe5be038be9e75/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-ma-shan-zheng-400/2f50f7097dd7024a446077b331b361d5af1244be466583d9e8fe5be038be9e75/demo.woff2"
         }
@@ -716,14 +806,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/longcang/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/longcang/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/long-cang/LICENSE.txt",
+          "provenancePath": "licenses/fonts/long-cang/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/long-cang/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/long-cang/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/longcang/OFL.txt",
+          "licenseSha256": "603546b7219a94bb59bf8294458194a5010119486354092b66a09a3fd61aeacc",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Long+Cang",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -734,7 +833,7 @@
           "bytes": 17528,
           "sha256": "1021ecae675a9fd3d593342a0a81dd09b3e6fd52bbca7ad9728cfedef0fa5df7",
           "sourceSha256": "e5bf2c3f24ef2327c6f136d8f73e2f9dfdf44896fdbeb35a9515f44777bb91bc",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/longcang/LongCang-Regular.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/longcang/LongCang-Regular.ttf",
           "objectKey": "public/iptrust/font-long-cang-400/1021ecae675a9fd3d593342a0a81dd09b3e6fd52bbca7ad9728cfedef0fa5df7/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-long-cang-400/1021ecae675a9fd3d593342a0a81dd09b3e6fd52bbca7ad9728cfedef0fa5df7/demo.woff2"
         }
@@ -768,14 +867,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/zcoolkuaile/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/zcoolkuaile/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/zcool-kuaile/LICENSE.txt",
+          "provenancePath": "licenses/fonts/zcool-kuaile/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/zcool-kuaile/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/zcool-kuaile/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/zcoolkuaile/OFL.txt",
+          "licenseSha256": "538078469839b4a2e7ad22bef4ebe41681a4e53749bb2a072144024f1d6d703d",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "ZCOOL / Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/ZCOOL+KuaiLe",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -786,7 +894,7 @@
           "bytes": 6216,
           "sha256": "dbb76821061713880b2c7b4d48c194f88cabdd8db007186ff3c450c368473b18",
           "sourceSha256": "812a6fc1fe54b6d73a419245c32dfeba8aa33104d5be90d1cf6af082007cb71d",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/zcoolkuaile/ZCOOLKuaiLe-Regular.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/zcoolkuaile/ZCOOLKuaiLe-Regular.ttf",
           "objectKey": "public/iptrust/font-zcool-kuaile-400/dbb76821061713880b2c7b4d48c194f88cabdd8db007186ff3c450c368473b18/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-zcool-kuaile-400/dbb76821061713880b2c7b4d48c194f88cabdd8db007186ff3c450c368473b18/demo.woff2"
         }
@@ -820,14 +928,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/zhimangxing/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/zhimangxing/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/zhi-mang-xing/LICENSE.txt",
+          "provenancePath": "licenses/fonts/zhi-mang-xing/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/zhi-mang-xing/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/zhi-mang-xing/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/zhimangxing/OFL.txt",
+          "licenseSha256": "10947328199e369a3e6b4a67e8e5507ed99d5bbb264a1f156415aa9b665e4d15",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Zhi+Mang+Xing",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -838,7 +955,7 @@
           "bytes": 15356,
           "sha256": "ba2e1448800012a5f0a35d9796b5b3d44fd67e05dedf821b64b6e6b58f33a379",
           "sourceSha256": "644e0cae9b40f0b10ab729a01bd32032e3973bac22be3dccae01bf6ae7fde969",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/zhimangxing/ZhiMangXing-Regular.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/zhimangxing/ZhiMangXing-Regular.ttf",
           "objectKey": "public/iptrust/font-zhi-mang-xing-400/ba2e1448800012a5f0a35d9796b5b3d44fd67e05dedf821b64b6e6b58f33a379/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-zhi-mang-xing-400/ba2e1448800012a5f0a35d9796b5b3d44fd67e05dedf821b64b6e6b58f33a379/demo.woff2"
         }
@@ -872,14 +989,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/liujianmaocao/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/liujianmaocao/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/liu-jian-mao-cao/LICENSE.txt",
+          "provenancePath": "licenses/fonts/liu-jian-mao-cao/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/liu-jian-mao-cao/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/liu-jian-mao-cao/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/liujianmaocao/OFL.txt",
+          "licenseSha256": "ff56684b0212481e7c3886c26d5a655de9b211c8119e5ccc756138a97b066acc",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Liu+Jian+Mao+Cao",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -890,7 +1016,7 @@
           "bytes": 15536,
           "sha256": "918993712a436257cd206be0c5da24dc0385f29bea722bbb90499abdcee23da0",
           "sourceSha256": "cab396b91a5b7c0b4005a35891180d06e6751f5ac261fe680aec65c1ae209033",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/liujianmaocao/LiuJianMaoCao-Regular.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/liujianmaocao/LiuJianMaoCao-Regular.ttf",
           "objectKey": "public/iptrust/font-liu-jian-mao-cao-400/918993712a436257cd206be0c5da24dc0385f29bea722bbb90499abdcee23da0/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-liu-jian-mao-cao-400/918993712a436257cd206be0c5da24dc0385f29bea722bbb90499abdcee23da0/demo.woff2"
         }
@@ -925,7 +1051,16 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/lxgw/LxgwWenKai/blob/main/OFL.txt"
+        "url": "https://github.com/lxgw/LxgwWenKai/blob/main/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/lxgw-wenkai/LICENSE.txt",
+          "provenancePath": "licenses/fonts/lxgw-wenkai/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/lxgw-wenkai/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/lxgw-wenkai/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/lxgw/LxgwWenKai/50f4b182415a8c33d9a456df220b66a284e2509b/OFL.txt",
+          "licenseSha256": "1a25e35da1031c6c3436fde545bb9cb5aca954e9873afe510c834b8b79bd21a0",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "LXGW",
@@ -978,7 +1113,16 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/lxgw/LxgwWenKai/blob/main/OFL.txt"
+        "url": "https://github.com/lxgw/LxgwWenKai/blob/main/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/lxgw-wenkai-mono/LICENSE.txt",
+          "provenancePath": "licenses/fonts/lxgw-wenkai-mono/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/lxgw-wenkai-mono/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/lxgw-wenkai-mono/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/lxgw/LxgwWenKai/50f4b182415a8c33d9a456df220b66a284e2509b/OFL.txt",
+          "licenseSha256": "1a25e35da1031c6c3436fde545bb9cb5aca954e9873afe510c834b8b79bd21a0",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "LXGW",
@@ -1030,7 +1174,16 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/lxgw/LxgwMarkerGothic/blob/main/OFL.txt"
+        "url": "https://github.com/lxgw/LxgwMarkerGothic/blob/main/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/lxgw-marker-gothic/LICENSE.txt",
+          "provenancePath": "licenses/fonts/lxgw-marker-gothic/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/lxgw-marker-gothic/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/lxgw-marker-gothic/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/lxgw/LxgwMarkerGothic/8c45e4f1a347afc84d1db5b94449a9523da07331/OFL.txt",
+          "licenseSha256": "a5e70c8b156c4103b96a4f6af65ad6562e03c0e87373dc3ab43e04d6997ec46e",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "LXGW",
@@ -1081,7 +1234,16 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/lxgw/LxgwZhenKai/blob/main/OFL.txt"
+        "url": "https://github.com/lxgw/LxgwZhenKai/blob/main/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/lxgw-zhenkai/LICENSE.txt",
+          "provenancePath": "licenses/fonts/lxgw-zhenkai/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/lxgw-zhenkai/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/lxgw-zhenkai/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/lxgw/LxgwZhenKai/c576bb1fbf557b4c7bce13c6fc808cbae8e50efa/OFL.txt",
+          "licenseSha256": "1ee66a22ddfa5241d407a5fd9a2ba666c4de5700f17182d5ee729e0434e7b42d",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "LXGW",
@@ -1133,7 +1295,16 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/lxgw/975Hei/blob/master/OFL.txt"
+        "url": "https://github.com/lxgw/975Hei/blob/master/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/lxgw-975-hei/LICENSE.txt",
+          "provenancePath": "licenses/fonts/lxgw-975-hei/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/lxgw-975-hei/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/lxgw-975-hei/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/lxgw/975Hei/6e0e1cb9387699381099d7a8ae79591b2f6c4ad7/OFL.txt",
+          "licenseSha256": "ffd8591c727408126ac1165204f22c339832f792241ca90e8f6f06a34da1e5f2",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "LXGW",
@@ -1185,7 +1356,16 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/lxgw/975Yuan/blob/master/OFL.txt"
+        "url": "https://github.com/lxgw/975Yuan/blob/master/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/lxgw-975-yuan/LICENSE.txt",
+          "provenancePath": "licenses/fonts/lxgw-975-yuan/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/lxgw-975-yuan/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/lxgw-975-yuan/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/lxgw/975Yuan/37b753f408b25d3ab3d25cbddb5dd9dacca0289a/OFL.txt",
+          "licenseSha256": "e9c4c62582807c250061e07ede99f4c0c7e1a7d536e621ec68d049f1f7ee0d81",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "LXGW",
@@ -1236,14 +1416,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/robotoflex/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/robotoflex/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/roboto-flex/LICENSE.txt",
+          "provenancePath": "licenses/fonts/roboto-flex/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/roboto-flex/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/roboto-flex/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/robotoflex/OFL.txt",
+          "licenseSha256": "9cbaed04b20c853f99840efe5dc96956f6f6120ed83a0ade35f9281a2b63e5d0",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Roboto+Flex",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -1254,7 +1443,7 @@
           "bytes": 15036,
           "sha256": "bfbfefba129da052668514c1255303921dfc697db2fdcbedd3d4292de2adf410",
           "sourceSha256": "9b523f7d82593df0107173849ebb8c817471a1df4b4fb2c3cbf40cfd810c8281",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/robotoflex/RobotoFlex%5BGRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/robotoflex/RobotoFlex%5BGRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght%5D.ttf",
           "objectKey": "public/iptrust/font-roboto-flex-100-900/bfbfefba129da052668514c1255303921dfc697db2fdcbedd3d4292de2adf410/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-roboto-flex-100-900/bfbfefba129da052668514c1255303921dfc697db2fdcbedd3d4292de2adf410/demo.woff2"
         }
@@ -1290,14 +1479,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/opensans/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/opensans/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/open-sans/LICENSE.txt",
+          "provenancePath": "licenses/fonts/open-sans/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/open-sans/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/open-sans/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/opensans/OFL.txt",
+          "licenseSha256": "fbbbcfef55318de350562559b671360de6d597112ecc5c73881b05092db89602",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Open+Sans",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -1308,7 +1506,7 @@
           "bytes": 30896,
           "sha256": "1126b3cc7f42513e16a93e4caae63a4ebbace40972a7d39f840f4b42f1284c61",
           "sourceSha256": "36643644f318a812aab2d2ed3bb98f8cf0872527f835fe9398d95fe6b9adb878",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/opensans/OpenSans%5Bwdth,wght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/opensans/OpenSans%5Bwdth,wght%5D.ttf",
           "objectKey": "public/iptrust/font-open-sans-100-900/1126b3cc7f42513e16a93e4caae63a4ebbace40972a7d39f840f4b42f1284c61/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-open-sans-100-900/1126b3cc7f42513e16a93e4caae63a4ebbace40972a7d39f840f4b42f1284c61/demo.woff2"
         }
@@ -1343,14 +1541,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/sourcesans3/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/sourcesans3/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/source-sans-3/LICENSE.txt",
+          "provenancePath": "licenses/fonts/source-sans-3/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/source-sans-3/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/source-sans-3/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/sourcesans3/OFL.txt",
+          "licenseSha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Adobe / Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Source+Sans+3",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -1361,7 +1568,7 @@
           "bytes": 30420,
           "sha256": "d36ab24cffa66c48ab8ba1db6faede219de964b4410fd8a6eaf1a8984802c2b0",
           "sourceSha256": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/sourcesans3/SourceSans3%5Bwght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/sourcesans3/SourceSans3%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-source-sans-3-100-900/d36ab24cffa66c48ab8ba1db6faede219de964b4410fd8a6eaf1a8984802c2b0/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-source-sans-3-100-900/d36ab24cffa66c48ab8ba1db6faede219de964b4410fd8a6eaf1a8984802c2b0/demo.woff2"
         }
@@ -1394,14 +1601,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/dmsans/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/dmsans/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/dm-sans/LICENSE.txt",
+          "provenancePath": "licenses/fonts/dm-sans/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/dm-sans/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/dm-sans/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/dmsans/OFL.txt",
+          "licenseSha256": "9af36190332437f5ecd09974de43c1f7c77a310a996cdd8ceb25628b458840e1",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/DM+Sans",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -1412,7 +1628,7 @@
           "bytes": 19300,
           "sha256": "c6a78b068a4ec51a08a39cfa2207484cca0fb28686462775ba1990293cac1239",
           "sourceSha256": "8cd08d97e89c24d0aa92edd2f0f4c8ee6195eee9b7c9f154865a58b02f0c1c0d",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/dmsans/DMSans%5Bopsz,wght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/dmsans/DMSans%5Bopsz,wght%5D.ttf",
           "objectKey": "public/iptrust/font-dm-sans-100-900/c6a78b068a4ec51a08a39cfa2207484cca0fb28686462775ba1990293cac1239/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-dm-sans-100-900/c6a78b068a4ec51a08a39cfa2207484cca0fb28686462775ba1990293cac1239/demo.woff2"
         }
@@ -1445,14 +1661,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/worksans/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/worksans/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/work-sans/LICENSE.txt",
+          "provenancePath": "licenses/fonts/work-sans/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/work-sans/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/work-sans/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/worksans/OFL.txt",
+          "licenseSha256": "749aca05078664ce682dce1b1b10096ac397cb088c1a6df4e1bb56f0092a9272",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Work+Sans",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -1463,7 +1688,7 @@
           "bytes": 37772,
           "sha256": "2ac1989572e2abbf3b66595f9b6a1e9013eb8018c6a46cb18f97c9ef0165cde4",
           "sourceSha256": "f50f61f2ba738e239442d40bf1069adb195c224b6a5a73a581fc2f3ed62a9f63",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/worksans/WorkSans%5Bwght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/worksans/WorkSans%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-work-sans-100-900/2ac1989572e2abbf3b66595f9b6a1e9013eb8018c6a46cb18f97c9ef0165cde4/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-work-sans-100-900/2ac1989572e2abbf3b66595f9b6a1e9013eb8018c6a46cb18f97c9ef0165cde4/demo.woff2"
         }
@@ -1496,14 +1721,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/spacegrotesk/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/spacegrotesk/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/space-grotesk/LICENSE.txt",
+          "provenancePath": "licenses/fonts/space-grotesk/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/space-grotesk/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/space-grotesk/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/spacegrotesk/OFL.txt",
+          "licenseSha256": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Space+Grotesk",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -1514,7 +1748,7 @@
           "bytes": 14292,
           "sha256": "2ad1d8c2a946eb5e0305ede6391a912e08b31c23d8350b28c8c84ed7bc541692",
           "sourceSha256": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/spacegrotesk/SpaceGrotesk%5Bwght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/spacegrotesk/SpaceGrotesk%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-space-grotesk-300-700/2ad1d8c2a946eb5e0305ede6391a912e08b31c23d8350b28c8c84ed7bc541692/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-space-grotesk-300-700/2ad1d8c2a946eb5e0305ede6391a912e08b31c23d8350b28c8c84ed7bc541692/demo.woff2"
         }
@@ -1548,14 +1782,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/playfairdisplay/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/playfairdisplay/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/playfair-display/LICENSE.txt",
+          "provenancePath": "licenses/fonts/playfair-display/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/playfair-display/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/playfair-display/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/playfairdisplay/OFL.txt",
+          "licenseSha256": "566be814f8e96e93dfa16101331557eb6b5467e9e03f627c0910fe93ca12300e",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Playfair+Display",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -1566,7 +1809,7 @@
           "bytes": 26136,
           "sha256": "a41d6dce1a54fb53f5b3a3493de48dfb518d6bc9bd13c3e119bb7ca81fc8adf1",
           "sourceSha256": "c40f2293766a503bc70cce9e512ef844a4ccb7cbcde792fe2ea31d191917d8d6",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/playfairdisplay/PlayfairDisplay%5Bwght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/playfairdisplay/PlayfairDisplay%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-playfair-display-400-900/a41d6dce1a54fb53f5b3a3493de48dfb518d6bc9bd13c3e119bb7ca81fc8adf1/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-playfair-display-400-900/a41d6dce1a54fb53f5b3a3493de48dfb518d6bc9bd13c3e119bb7ca81fc8adf1/demo.woff2"
         }
@@ -1601,14 +1844,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/sourceserif4/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/sourceserif4/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/source-serif-4/LICENSE.txt",
+          "provenancePath": "licenses/fonts/source-serif-4/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/source-serif-4/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/source-serif-4/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/sourceserif4/OFL.txt",
+          "licenseSha256": "5f94c3fd3a23131a417ab5a0c8452de57e70c3cfb9f604d88241f7065ebf9fd9",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Adobe / Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Source+Serif+4",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -1619,7 +1871,7 @@
           "bytes": 48596,
           "sha256": "b465e763c7e31868579fae1f2c0b752688e1d7f191143d05a0e5ddf6db5cfcd6",
           "sourceSha256": "97b2d4da6e3cb494b5a1e66ae176914d852ccabef49e0c02c0df25f3e39aca0b",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/sourceserif4/SourceSerif4%5Bopsz,wght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/sourceserif4/SourceSerif4%5Bopsz,wght%5D.ttf",
           "objectKey": "public/iptrust/font-source-serif-4-200-900/b465e763c7e31868579fae1f2c0b752688e1d7f191143d05a0e5ddf6db5cfcd6/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-source-serif-4-200-900/b465e763c7e31868579fae1f2c0b752688e1d7f191143d05a0e5ddf6db5cfcd6/demo.woff2"
         }
@@ -1654,14 +1906,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/jetbrainsmono/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/jetbrainsmono/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/jetbrains-mono/LICENSE.txt",
+          "provenancePath": "licenses/fonts/jetbrains-mono/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/jetbrains-mono/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/jetbrains-mono/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/jetbrainsmono/OFL.txt",
+          "licenseSha256": "b2fe5e8987594e9ffd1d2ca52a2f5d73eb8335243893c5d6254b5ad69269591d",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "JetBrains / Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/JetBrains+Mono",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -1672,7 +1933,7 @@
           "bytes": 10936,
           "sha256": "7e8685f2f91ada1ca782e43685fe40d0c870add56b17ceed0a335e932056a34f",
           "sourceSha256": "48715a42ec242c21e9f02692891e147d022299a52e48d5e413e1a942193ffeda",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/jetbrainsmono/JetBrainsMono%5Bwght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/jetbrainsmono/JetBrainsMono%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-jetbrains-mono-100-800/7e8685f2f91ada1ca782e43685fe40d0c870add56b17ceed0a335e932056a34f/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-jetbrains-mono-100-800/7e8685f2f91ada1ca782e43685fe40d0c870add56b17ceed0a335e932056a34f/demo.woff2"
         }
@@ -1707,14 +1968,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/sourcecodepro/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/sourcecodepro/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/source-code-pro/LICENSE.txt",
+          "provenancePath": "licenses/fonts/source-code-pro/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/source-code-pro/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/source-code-pro/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/sourcecodepro/OFL.txt",
+          "licenseSha256": "cb30d3086a8b3ce0b9e3690bf48d6620402b61160bc658076f95180ccd9e9dae",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Adobe / Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Source+Code+Pro",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -1725,7 +1995,7 @@
           "bytes": 13600,
           "sha256": "7233b6d036f2c14b2adcaba2123fd770027de7fed07ed034117cfacdf01b6738",
           "sourceSha256": "b400fc584e10aff25d0e775ce181b4fc1c5ea1b5dc37b81aeb2084375b945790",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/sourcecodepro/SourceCodePro%5Bwght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/sourcecodepro/SourceCodePro%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-source-code-pro-200-900/7233b6d036f2c14b2adcaba2123fd770027de7fed07ed034117cfacdf01b6738/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-source-code-pro-200-900/7233b6d036f2c14b2adcaba2123fd770027de7fed07ed034117cfacdf01b6738/demo.woff2"
         }
@@ -1760,14 +2030,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/googlesanscode/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/googlesanscode/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/google-sans-code/LICENSE.txt",
+          "provenancePath": "licenses/fonts/google-sans-code/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/google-sans-code/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/google-sans-code/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/googlesanscode/OFL.txt",
+          "licenseSha256": "ff8f4fbc4f1a71c7d4c6481c48dc2b21c43f8dc15872536667fee45c15d20928",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Google+Sans+Code",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -1778,7 +2057,7 @@
           "bytes": 9148,
           "sha256": "aa2349c5e9ea477baf276b26d9c45de62ec1417fb9ec54207c0b00e006c8ba24",
           "sourceSha256": "c9649573afcd966f61096b1e9c3c3115e7b54315ca2adf9839c6f8b17d5f8e1f",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/googlesanscode/GoogleSansCode%5Bwght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/googlesanscode/GoogleSansCode%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-google-sans-code-300-800/aa2349c5e9ea477baf276b26d9c45de62ec1417fb9ec54207c0b00e006c8ba24/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-google-sans-code-300-800/aa2349c5e9ea477baf276b26d9c45de62ec1417fb9ec54207c0b00e006c8ba24/demo.woff2"
         }
@@ -1811,14 +2090,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/roboto/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/roboto/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/roboto/LICENSE.txt",
+          "provenancePath": "licenses/fonts/roboto/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/roboto/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/roboto/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/roboto/OFL.txt",
+          "licenseSha256": "061402327a96aadb0bfb694a960ed289ecd38d383e396243831ab81feb109c41",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Roboto",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -1829,7 +2117,7 @@
           "bytes": 32864,
           "sha256": "63fb9e1e8ee864a2c21369525f85a1972beaffe997bf681f5e23c70b7a143913",
           "sourceSha256": "d7598e12c5dbef095ff8272cfc55da0250bd07fbdecbac8a530b9b277872a134",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/roboto/Roboto%5Bwdth,wght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/roboto/Roboto%5Bwdth,wght%5D.ttf",
           "objectKey": "public/iptrust/font-roboto-100-900/63fb9e1e8ee864a2c21369525f85a1972beaffe997bf681f5e23c70b7a143913/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-roboto-100-900/63fb9e1e8ee864a2c21369525f85a1972beaffe997bf681f5e23c70b7a143913/demo.woff2"
         }
@@ -1862,14 +2150,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/montserrat/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/montserrat/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/montserrat/LICENSE.txt",
+          "provenancePath": "licenses/fonts/montserrat/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/montserrat/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/montserrat/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/montserrat/OFL.txt",
+          "licenseSha256": "8b7141c03fa4f8d44e6345d5d4931709290f0f67875e452e95ac1fd3a027802e",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Montserrat",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -1880,7 +2177,7 @@
           "bytes": 33104,
           "sha256": "0c79c77f271b80f1935cd1ffa09094d336716f3870c04bbade5cb23018371c0e",
           "sourceSha256": "0f7b311b2f3279e4eef9b2f968bcdbab6e28f4daeb1f049f4f278a902bcd82f7",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/montserrat/Montserrat%5Bwght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/montserrat/Montserrat%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-montserrat-100-900/0c79c77f271b80f1935cd1ffa09094d336716f3870c04bbade5cb23018371c0e/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-montserrat-100-900/0c79c77f271b80f1935cd1ffa09094d336716f3870c04bbade5cb23018371c0e/demo.woff2"
         }
@@ -1914,14 +2211,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/poppins/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/poppins/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/poppins/LICENSE.txt",
+          "provenancePath": "licenses/fonts/poppins/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/poppins/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/poppins/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/poppins/OFL.txt",
+          "licenseSha256": "6be04893d770899a015649c7aa3b582f871b272f8747a92b78b17c3e5c8b2573",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Poppins",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -1932,7 +2238,7 @@
           "bytes": 3952,
           "sha256": "e6a1b0104c212665fe62dc379671f4628617046457da296ac3da29e973888dd5",
           "sourceSha256": "7e65201e9b79159e2300267cc885e16c8dcef2424cdfa09a29bfb0980a94a7ba",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/poppins/Poppins-Regular.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/poppins/Poppins-Regular.ttf",
           "objectKey": "public/iptrust/font-poppins-400/e6a1b0104c212665fe62dc379671f4628617046457da296ac3da29e973888dd5/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-poppins-400/e6a1b0104c212665fe62dc379671f4628617046457da296ac3da29e973888dd5/demo.woff2"
         },
@@ -1944,7 +2250,7 @@
           "bytes": 4036,
           "sha256": "69c270649f2999a1ee349f235db888374084192ef7d750f51fa07d7ea2941f24",
           "sourceSha256": "d3bf1bdaf0550e83da9ac0b1d1d9fe6db086835a83aa28578e609a394b9a0286",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/poppins/Poppins-SemiBold.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/poppins/Poppins-SemiBold.ttf",
           "objectKey": "public/iptrust/font-poppins-600/69c270649f2999a1ee349f235db888374084192ef7d750f51fa07d7ea2941f24/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-poppins-600/69c270649f2999a1ee349f235db888374084192ef7d750f51fa07d7ea2941f24/demo.woff2"
         }
@@ -1978,14 +2284,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/lato/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/lato/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/lato/LICENSE.txt",
+          "provenancePath": "licenses/fonts/lato/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/lato/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/lato/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/lato/OFL.txt",
+          "licenseSha256": "74ba064d03f1f1c4a952da936c3eb71866c34404916734de3cae73b34357e59e",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Lato",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -1996,7 +2311,7 @@
           "bytes": 23172,
           "sha256": "51b2d883a849894b0a0db4e08bce0da07e2ec53e442e7d540d866d1b101339ed",
           "sourceSha256": "d636e4683231f931eda222d588e944d082bfd3bdba02f928bee461c0f185b251",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/lato/Lato-Regular.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/lato/Lato-Regular.ttf",
           "objectKey": "public/iptrust/font-lato-400/51b2d883a849894b0a0db4e08bce0da07e2ec53e442e7d540d866d1b101339ed/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-lato-400/51b2d883a849894b0a0db4e08bce0da07e2ec53e442e7d540d866d1b101339ed/demo.woff2"
         },
@@ -2008,7 +2323,7 @@
           "bytes": 22904,
           "sha256": "bc498145054c644e4f54705b0c5e91269528ad6d2767f6c7c8125350b659c92a",
           "sourceSha256": "71b8b7decbe75a881ed267be539d402bd1e9420b799658aada4e0d1bd5af803c",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/lato/Lato-SemiBold.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/lato/Lato-SemiBold.ttf",
           "objectKey": "public/iptrust/font-lato-600/bc498145054c644e4f54705b0c5e91269528ad6d2767f6c7c8125350b659c92a/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-lato-600/bc498145054c644e4f54705b0c5e91269528ad6d2767f6c7c8125350b659c92a/demo.woff2"
         }
@@ -2041,14 +2356,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/robotocondensed/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/robotocondensed/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/roboto-condensed/LICENSE.txt",
+          "provenancePath": "licenses/fonts/roboto-condensed/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/roboto-condensed/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/roboto-condensed/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/robotocondensed/OFL.txt",
+          "licenseSha256": "0e4cc6ece88573545be2ed25835363662a6182ba4a4c1b5c8feda52add30e8a6",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Roboto+Condensed",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -2059,7 +2383,7 @@
           "bytes": 42284,
           "sha256": "2cd2593cc4c5f72bcd85391ca3a325025828c48d0485dc9362ca4cd7ac5c1c57",
           "sourceSha256": "dace262afcee68a5276f200d8026c57221735c0118ab5fda8c2c0d3dc409a8d0",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/robotocondensed/RobotoCondensed%5Bwght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/robotocondensed/RobotoCondensed%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-roboto-condensed-100-900/2cd2593cc4c5f72bcd85391ca3a325025828c48d0485dc9362ca4cd7ac5c1c57/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-roboto-condensed-100-900/2cd2593cc4c5f72bcd85391ca3a325025828c48d0485dc9362ca4cd7ac5c1c57/demo.woff2"
         }
@@ -2092,14 +2416,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/robotomono/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/robotomono/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/roboto-mono/LICENSE.txt",
+          "provenancePath": "licenses/fonts/roboto-mono/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/roboto-mono/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/roboto-mono/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/robotomono/OFL.txt",
+          "licenseSha256": "50ab8dd54680d3473f649c9db86fece88434d097c7834475c1c72d2f8c429215",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Roboto+Mono",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -2110,7 +2443,7 @@
           "bytes": 13068,
           "sha256": "aa2e2c9a6bf0af7d695333c2033d21211b55ec835817b063f25566c15564b44d",
           "sourceSha256": "66a80e79d17e4c7cabd162e2916578a4cc08fd19eef6e2a643305eae9c567b2b",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/robotomono/RobotoMono%5Bwght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/robotomono/RobotoMono%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-roboto-mono-100-900/aa2e2c9a6bf0af7d695333c2033d21211b55ec835817b063f25566c15564b44d/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-roboto-mono-100-900/aa2e2c9a6bf0af7d695333c2033d21211b55ec835817b063f25566c15564b44d/demo.woff2"
         }
@@ -2143,14 +2476,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/oswald/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/oswald/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/oswald/LICENSE.txt",
+          "provenancePath": "licenses/fonts/oswald/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/oswald/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/oswald/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/oswald/OFL.txt",
+          "licenseSha256": "0fd731a904b729a4e02eaf5e8ebd06783edd9abe400e8882760160230675b652",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Oswald",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -2161,7 +2503,7 @@
           "bytes": 14348,
           "sha256": "720b7f67f186a4dd99a54925f63ab62fd0b3a34bdd7ae76702055780cf31de35",
           "sourceSha256": "5b38c246e255a12f5712d640d56bcced0472466fc68983d2d0410ec0457c2817",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/oswald/Oswald%5Bwght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/oswald/Oswald%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-oswald-200-700/720b7f67f186a4dd99a54925f63ab62fd0b3a34bdd7ae76702055780cf31de35/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-oswald-200-700/720b7f67f186a4dd99a54925f63ab62fd0b3a34bdd7ae76702055780cf31de35/demo.woff2"
         }
@@ -2196,14 +2538,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/notosans/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/notosans/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/noto-sans/LICENSE.txt",
+          "provenancePath": "licenses/fonts/noto-sans/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/noto-sans/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/noto-sans/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/notosans/OFL.txt",
+          "licenseSha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Noto+Sans",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -2214,7 +2565,7 @@
           "bytes": 26272,
           "sha256": "330060595b73fce38c9ceded27a8e4aec048f502738875251a4190476aa3bcb5",
           "sourceSha256": "bfb7bb691513f12e734dc346c03a03f784912432d7e3fa8e56efcf906fe86b3d",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/notosans/NotoSans%5Bwdth,wght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/notosans/NotoSans%5Bwdth,wght%5D.ttf",
           "objectKey": "public/iptrust/font-noto-sans-100-900/330060595b73fce38c9ceded27a8e4aec048f502738875251a4190476aa3bcb5/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-noto-sans-100-900/330060595b73fce38c9ceded27a8e4aec048f502738875251a4190476aa3bcb5/demo.woff2"
         }
@@ -2247,14 +2598,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/raleway/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/raleway/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/raleway/LICENSE.txt",
+          "provenancePath": "licenses/fonts/raleway/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/raleway/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/raleway/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/raleway/OFL.txt",
+          "licenseSha256": "7e946cf1171784d1015279e7dc35f827957a6b5d1f1f659ae0c98e5f5e37ed9b",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Raleway",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -2265,7 +2625,7 @@
           "bytes": 37612,
           "sha256": "f4b6510f2036393c06d1a29826d8b02db6fcb393b3b736bf901c05f5339971d4",
           "sourceSha256": "8bbcc3eb8275c388f4bcd998832f8a4b943eadbaf6a595205312774b5951aefb",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/raleway/Raleway%5Bwght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/raleway/Raleway%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-raleway-100-900/f4b6510f2036393c06d1a29826d8b02db6fcb393b3b736bf901c05f5339971d4/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-raleway-100-900/f4b6510f2036393c06d1a29826d8b02db6fcb393b3b736bf901c05f5339971d4/demo.woff2"
         }
@@ -2298,14 +2658,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/nunitosans/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/nunitosans/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/nunito-sans/LICENSE.txt",
+          "provenancePath": "licenses/fonts/nunito-sans/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/nunito-sans/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/nunito-sans/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/nunitosans/OFL.txt",
+          "licenseSha256": "efbb0c9e864cef973982d9a17567e6be5c3d1759695574586f3f18c7ecca064b",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Nunito+Sans",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -2316,7 +2685,7 @@
           "bytes": 16488,
           "sha256": "767ba21d48089bf3d3b6545fe3eafc3e08940b563a9f70fa630101772ddb1a71",
           "sourceSha256": "f934d7142fb4784bf828da485b7dcbd90c0c80d514e9d49a5da0ed3a1ae2491d",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/nunitosans/NunitoSans%5BYTLC,opsz,wdth,wght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/nunitosans/NunitoSans%5BYTLC,opsz,wdth,wght%5D.ttf",
           "objectKey": "public/iptrust/font-nunito-sans-100-900/767ba21d48089bf3d3b6545fe3eafc3e08940b563a9f70fa630101772ddb1a71/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-nunito-sans-100-900/767ba21d48089bf3d3b6545fe3eafc3e08940b563a9f70fa630101772ddb1a71/demo.woff2"
         }
@@ -2349,14 +2718,23 @@
       "license": {
         "spdx": "Apache-2.0",
         "name": "Apache License 2.0",
-        "url": "https://github.com/google/fonts/blob/main/apache/robotoslab/LICENSE.txt"
+        "url": "https://github.com/google/fonts/blob/main/apache/robotoslab/LICENSE.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/roboto-slab/LICENSE.txt",
+          "provenancePath": "licenses/fonts/roboto-slab/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/roboto-slab/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/roboto-slab/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/apache/robotoslab/LICENSE.txt",
+          "licenseSha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Roboto+Slab",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -2367,7 +2745,7 @@
           "bytes": 30168,
           "sha256": "c783a1fc70945c5a3b7cd083004d645fa392f83b2b76668fe8eccc47413630f9",
           "sourceSha256": "786ae192477447d33c6672c3055fba7cbfe45184c9a79e77a14f15716ca05b16",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/apache/robotoslab/RobotoSlab%5Bwght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/apache/robotoslab/RobotoSlab%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-roboto-slab-100-900/c783a1fc70945c5a3b7cd083004d645fa392f83b2b76668fe8eccc47413630f9/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-roboto-slab-100-900/c783a1fc70945c5a3b7cd083004d645fa392f83b2b76668fe8eccc47413630f9/demo.woff2"
         }
@@ -2400,14 +2778,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/rubik/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/rubik/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/rubik/LICENSE.txt",
+          "provenancePath": "licenses/fonts/rubik/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/rubik/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/rubik/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/rubik/OFL.txt",
+          "licenseSha256": "472cbe7c25441df63e9c7864b43eb3c0f4b3df950c66a76224e6cfe1eae843fb",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Rubik",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -2418,7 +2805,7 @@
           "bytes": 17052,
           "sha256": "f69d6651f2ebdecafb1329a62b9a384b40dab5314a9bd416ac480256b0f7b124",
           "sourceSha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/rubik/Rubik%5Bwght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/rubik/Rubik%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-rubik-100-900/f69d6651f2ebdecafb1329a62b9a384b40dab5314a9bd416ac480256b0f7b124/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-rubik-100-900/f69d6651f2ebdecafb1329a62b9a384b40dab5314a9bd416ac480256b0f7b124/demo.woff2"
         }
@@ -2452,14 +2839,23 @@
       "license": {
         "spdx": "UFL-1.0",
         "name": "Ubuntu Font Licence 1.0",
-        "url": "https://github.com/google/fonts/blob/main/ufl/ubuntu/UFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ufl/ubuntu/UFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/ubuntu/LICENSE.txt",
+          "provenancePath": "licenses/fonts/ubuntu/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/ubuntu/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/ubuntu/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ufl/ubuntu/UFL.txt",
+          "licenseSha256": "2f0015108d68627bd788d313f529c21ff4da2c2c42a5e1f3883acc83480f9002",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Ubuntu",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -2470,7 +2866,7 @@
           "bytes": 19284,
           "sha256": "999af186f40a9a076497f6233b731a61de089925b3e849e91f11fdd1c6c5a19b",
           "sourceSha256": "3128df86a31805618436d0ae5651ba4285d0c9de0a39057d025f64ee33bceb64",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ufl/ubuntu/Ubuntu-Regular.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ufl/ubuntu/Ubuntu-Regular.ttf",
           "objectKey": "public/iptrust/font-ubuntu-400/999af186f40a9a076497f6233b731a61de089925b3e849e91f11fdd1c6c5a19b/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-ubuntu-400/999af186f40a9a076497f6233b731a61de089925b3e849e91f11fdd1c6c5a19b/demo.woff2"
         },
@@ -2482,7 +2878,7 @@
           "bytes": 16252,
           "sha256": "13618c78e2826512a7391d1bd857dcdd3ac5dc88abc225e7fecce83473f1943c",
           "sourceSha256": "679b5c1e09cab3156bb8ef529735f9382bf31ca7ac737382ab959297f8d82ad4",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ufl/ubuntu/Ubuntu-Bold.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ufl/ubuntu/Ubuntu-Bold.ttf",
           "objectKey": "public/iptrust/font-ubuntu-700/13618c78e2826512a7391d1bd857dcdd3ac5dc88abc225e7fecce83473f1943c/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-ubuntu-700/13618c78e2826512a7391d1bd857dcdd3ac5dc88abc225e7fecce83473f1943c/demo.woff2"
         }
@@ -2515,14 +2911,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/manrope/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/manrope/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/manrope/LICENSE.txt",
+          "provenancePath": "licenses/fonts/manrope/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/manrope/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/manrope/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/manrope/OFL.txt",
+          "licenseSha256": "e01b637272e0cbdfb240184dd98ea5cc671556d9894dae2668d92ab2c906787c",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Manrope",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -2533,7 +2938,7 @@
           "bytes": 11460,
           "sha256": "1fc8c87309f7b284eb2c097f28e1eb26e9d52a5b4bd77dd73989f8334271eb91",
           "sourceSha256": "d0639be45d0af36e798172419d7bd173c4bd4f29e2b76cbb69db1d11bf8b0a40",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/manrope/Manrope%5Bwght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/manrope/Manrope%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-manrope-200-800/1fc8c87309f7b284eb2c097f28e1eb26e9d52a5b4bd77dd73989f8334271eb91/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-manrope-200-800/1fc8c87309f7b284eb2c097f28e1eb26e9d52a5b4bd77dd73989f8334271eb91/demo.woff2"
         }
@@ -2566,14 +2971,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/outfit/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/outfit/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/outfit/LICENSE.txt",
+          "provenancePath": "licenses/fonts/outfit/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/outfit/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/outfit/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/outfit/OFL.txt",
+          "licenseSha256": "c676351bf8576b9aba743cd5eaa8c0e7ee0d51f805d720447b4df4ddb6a2e416",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Outfit",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -2584,7 +2998,7 @@
           "bytes": 19232,
           "sha256": "bae0c63ccb6fa58603d2eec2635e94bd4570f89eacb8a06af4c1dc4e3717b7a1",
           "sourceSha256": "fc7287273e66929776e2ba54f144fe699080bec29f61bf649d70d871468aeade",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/outfit/Outfit%5Bwght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/outfit/Outfit%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-outfit-100-900/bae0c63ccb6fa58603d2eec2635e94bd4570f89eacb8a06af4c1dc4e3717b7a1/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-outfit-100-900/bae0c63ccb6fa58603d2eec2635e94bd4570f89eacb8a06af4c1dc4e3717b7a1/demo.woff2"
         }
@@ -2617,14 +3031,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/lora/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/lora/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/lora/LICENSE.txt",
+          "provenancePath": "licenses/fonts/lora/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/lora/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/lora/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/lora/OFL.txt",
+          "licenseSha256": "1d9a970809ac804b582a6ce7f0ebc4e7fefcbfd7ff6299cad35ee656a21be716",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Lora",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -2635,7 +3058,7 @@
           "bytes": 17940,
           "sha256": "e38d60b705ad85f3629d2e9c896ace7fcf08ccea40c1b0b6143a54da97b5d7c2",
           "sourceSha256": "822a6621ccbe8d97d20ac88c1c41f5615c9c2c202eaa75f272cd452aac6475a7",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/lora/Lora%5Bwght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/lora/Lora%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-lora-400-700/e38d60b705ad85f3629d2e9c896ace7fcf08ccea40c1b0b6143a54da97b5d7c2/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-lora-400-700/e38d60b705ad85f3629d2e9c896ace7fcf08ccea40c1b0b6143a54da97b5d7c2/demo.woff2"
         }
@@ -2668,14 +3091,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/bebasneue/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/bebasneue/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/bebas-neue/LICENSE.txt",
+          "provenancePath": "licenses/fonts/bebas-neue/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/bebas-neue/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/bebas-neue/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/bebasneue/OFL.txt",
+          "licenseSha256": "72082f6cb4d04be2ecf7cc7d9e1e7d73787f0af8a5a278a47cade70c16b78341",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Bebas+Neue",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -2686,7 +3118,7 @@
           "bytes": 7960,
           "sha256": "0471a2502b8b80bc310de9391ab8fb24d828241941a870917a6c7f39533f934f",
           "sourceSha256": "08e4623805102d819f58601e46e345648846075e363b2ceb23313c2d1c83ec73",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/bebasneue/BebasNeue-Regular.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/bebasneue/BebasNeue-Regular.ttf",
           "objectKey": "public/iptrust/font-bebas-neue-400/0471a2502b8b80bc310de9391ab8fb24d828241941a870917a6c7f39533f934f/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-bebas-neue-400/0471a2502b8b80bc310de9391ab8fb24d828241941a870917a6c7f39533f934f/demo.woff2"
         }
@@ -2719,14 +3151,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/figtree/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/figtree/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/figtree/LICENSE.txt",
+          "provenancePath": "licenses/fonts/figtree/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/figtree/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/figtree/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/figtree/OFL.txt",
+          "licenseSha256": "140d37233e7f3ce7313798befa9600893bcceaf41a55fa0fa5ad52f7f657a268",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Figtree",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -2737,7 +3178,7 @@
           "bytes": 10920,
           "sha256": "da4f3e5905e86b1dc5f01a804ad6f207f038129a465258f04edfba5bedd5f221",
           "sourceSha256": "26ad3db9b31ff7dde67a91ff515d022d2f495cd506590699cf264f0bfe6fb714",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/figtree/Figtree%5Bwght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/figtree/Figtree%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-figtree-100-900/da4f3e5905e86b1dc5f01a804ad6f207f038129a465258f04edfba5bedd5f221/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-figtree-100-900/da4f3e5905e86b1dc5f01a804ad6f207f038129a465258f04edfba5bedd5f221/demo.woff2"
         }
@@ -2770,14 +3211,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/plusjakartasans/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/plusjakartasans/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/plus-jakarta-sans/LICENSE.txt",
+          "provenancePath": "licenses/fonts/plus-jakarta-sans/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/plus-jakarta-sans/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/plus-jakarta-sans/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/plusjakartasans/OFL.txt",
+          "licenseSha256": "995c7199cab65954f545996326755daee7b63cc6b42b06c13da1f9502ab08a99",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Plus+Jakarta+Sans",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -2788,7 +3238,7 @@
           "bytes": 19352,
           "sha256": "9d893d8128ef0fb4060774a791e10d531a4f5d3438e4478fae82719c2a752fac",
           "sourceSha256": "89b3fb38aa0d275d7a731d0d817a4f1622b316b4d7fbdedcf02ee9099ff68bc8",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/plusjakartasans/PlusJakartaSans%5Bwght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/plusjakartasans/PlusJakartaSans%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-plus-jakarta-sans-200-800/9d893d8128ef0fb4060774a791e10d531a4f5d3438e4478fae82719c2a752fac/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-plus-jakarta-sans-200-800/9d893d8128ef0fb4060774a791e10d531a4f5d3438e4478fae82719c2a752fac/demo.woff2"
         }
@@ -2821,14 +3271,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/bricolagegrotesque/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/bricolagegrotesque/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/bricolage-grotesque/LICENSE.txt",
+          "provenancePath": "licenses/fonts/bricolage-grotesque/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/bricolage-grotesque/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/bricolage-grotesque/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/bricolagegrotesque/OFL.txt",
+          "licenseSha256": "4b5a7d8f37f5602621c8a8d7358a6a2e71317e6c231c661e15aef0275d3e07ba",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Bricolage+Grotesque",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -2839,7 +3298,7 @@
           "bytes": 22604,
           "sha256": "419c4dbab8444b79460d66f2163e8fc37134bd84f6f19020b2f3a9172cb77229",
           "sourceSha256": "413e7357809ddd12fd80a96a8a396de0e401638d4acd3cb3e37532f0472ac682",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/bricolagegrotesque/BricolageGrotesque%5Bopsz,wdth,wght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/bricolagegrotesque/BricolageGrotesque%5Bopsz,wdth,wght%5D.ttf",
           "objectKey": "public/iptrust/font-bricolage-grotesque-200-800/419c4dbab8444b79460d66f2163e8fc37134bd84f6f19020b2f3a9172cb77229/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-bricolage-grotesque-200-800/419c4dbab8444b79460d66f2163e8fc37134bd84f6f19020b2f3a9172cb77229/demo.woff2"
         }
@@ -2872,14 +3331,23 @@
       "license": {
         "spdx": "OFL-1.1",
         "name": "SIL Open Font License 1.1",
-        "url": "https://github.com/google/fonts/blob/main/ofl/publicsans/OFL.txt"
+        "url": "https://github.com/google/fonts/blob/main/ofl/publicsans/OFL.txt",
+        "archive": {
+          "licensePath": "licenses/fonts/public-sans/LICENSE.txt",
+          "provenancePath": "licenses/fonts/public-sans/PROVENANCE.md",
+          "licenseUrl": "https://apuch.art/licenses/fonts/public-sans/LICENSE.txt",
+          "provenanceUrl": "https://apuch.art/licenses/fonts/public-sans/PROVENANCE.md",
+          "pinnedSourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/publicsans/OFL.txt",
+          "licenseSha256": "157a9e77f7580246e97c769490e2e977ae94399f9d30f4556015c41fe8c28bac",
+          "verifiedAt": "2026-08-15"
+        }
       },
       "source": {
         "publisher": "Google Fonts",
         "projectUrl": "https://fonts.google.com/specimen/Public+Sans",
         "repository": "google/fonts",
-        "revision": "73fc2ff52147e34a74804b500cf89ca219eac55d",
-        "release": "73fc2ff52147"
+        "revision": "352f6b7d9d6cc4fa9e242b931291d31b21a6dc84",
+        "release": "352f6b7d9d6c"
       },
       "assets": [
         {
@@ -2890,7 +3358,7 @@
           "bytes": 14768,
           "sha256": "ce9553113783e448b21d201c0370fc8d521329104fd92be68230d177e9f33502",
           "sourceSha256": "d75a7dc1a27eb9e336d5b33f55489d2ecb5621bf694d5c43b2415bce2ca830a8",
-          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/73fc2ff52147e34a74804b500cf89ca219eac55d/ofl/publicsans/PublicSans%5Bwght%5D.ttf",
+          "sourceUrl": "https://raw.githubusercontent.com/google/fonts/352f6b7d9d6cc4fa9e242b931291d31b21a6dc84/ofl/publicsans/PublicSans%5Bwght%5D.ttf",
           "objectKey": "public/iptrust/font-public-sans-100-900/ce9553113783e448b21d201c0370fc8d521329104fd92be68230d177e9f33502/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-public-sans-100-900/ce9553113783e448b21d201c0370fc8d521329104fd92be68230d177e9f33502/demo.woff2"
         }

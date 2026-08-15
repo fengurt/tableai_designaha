@@ -1,5 +1,19 @@
 [
   {
+    "hash": "721d34a6e85da0b6334a8429a990804fa34f8024",
+    "shortHash": "721d34a",
+    "date": "2026-08-14T11:25:49+08:00",
+    "message": "chore: enforce commercial font provenance",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/721d34a6e85da0b6334a8429a990804fa34f8024"
+  },
+  {
+    "hash": "e83fd292706dc1739a84dc2cc7ad19f8027b870b",
+    "shortHash": "e83fd29",
+    "date": "2026-08-14T11:14:27+08:00",
+    "message": "fix: contain mobile font specimens",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/e83fd292706dc1739a84dc2cc7ad19f8027b870b"
+  },
+  {
     "hash": "d24476209a895cdf30af4fe962050d437b8fc071",
     "shortHash": "d244762",
     "date": "2026-08-14T11:01:04+08:00",
@@ -124,19 +138,5 @@
     "date": "2026-07-21T14:05:18+08:00",
     "message": "feat: refine Sidera ink identity",
     "url": "https://github.com/fengurt/tableai_designaha/commit/6f63b2069bcdacfd11655b35e842197792c58bb2"
-  },
-  {
-    "hash": "b110959b9d9b8d9ca8a98c74709d21a4289cb856",
-    "shortHash": "b110959",
-    "date": "2026-07-21T11:38:35+08:00",
-    "message": "perf: cache public shell and versioned data",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/b110959b9d9b8d9ca8a98c74709d21a4289cb856"
-  },
-  {
-    "hash": "e20dcbb9374ada65c1185e12b8310467e215e3fd",
-    "shortHash": "e20dcbb",
-    "date": "2026-07-20T19:19:21+08:00",
-    "message": "fix: restore direct Pages delivery",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/e20dcbb9374ada65c1185e12b8310467e215e3fd"
   }
 ]
