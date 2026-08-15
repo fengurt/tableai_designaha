@@ -426,10 +426,7 @@ function fontLibraryRows(catalog) {
   };
   return catalog.fonts.map((font) => {
     const searchText = [font.name, font.nameZh, font.category.zh, font.category.en, font.useCases.zh, font.useCases.en, font.source.publisher, font.scripts.join(" ")].filter(Boolean).join(" ").toLowerCase();
-    const downloads = font.assets.map((asset) => {
-      const format = extname(asset.sourceFilename || "").slice(1).toUpperCase() || "FONT";
-      return `<a href="${escapeBuildHtml(asset.sourceMediaUrl)}" download="${escapeBuildHtml(asset.sourceFilename)}" title="${escapeBuildHtml(`${asset.sourceFilename} · ${formatFileSize(asset.sourceBytes)}`)}"><span data-i18n="fonts.download">下载</span> ${format} · ${formatFileSize(asset.sourceBytes)}</a>`;
-    }).join("");
+    const download = font.package ? `<a href="${escapeBuildHtml(font.package.mediaUrl)}" download="${escapeBuildHtml(font.package.filename)}" title="${escapeBuildHtml(`${font.package.filename} · ${font.package.contents.length} files · ${formatFileSize(font.package.bytes)}`)}"><span data-i18n="fonts.downloadPackage">下载字体包</span> · ZIP · ${formatFileSize(font.package.bytes)}</a>` : "";
     return `<article class="font-specimen" id="font-${escapeBuildHtml(font.id)}" data-font-id="${escapeBuildHtml(font.id)}" data-font-group="${escapeBuildHtml(font.group)}" data-font-category="${escapeBuildHtml(font.categoryKey || "sans")}" data-font-popularity="${font.popularity || ""}" data-font-search-text="${escapeBuildHtml(searchText)}">
     <header class="font-specimen-head">
       <div>
@@ -440,7 +437,7 @@ function fontLibraryRows(catalog) {
       <div class="font-specimen-actions">
         <a href="${escapeBuildHtml(font.source.projectUrl)}" target="_blank" rel="noreferrer" data-i18n="fonts.source">官方出处</a>
         <a href="${escapeBuildHtml(font.license.url)}" target="_blank" rel="noreferrer">${escapeBuildHtml(font.license.spdx)} · <span data-i18n="fonts.commercial">可商用</span></a>
-        ${downloads}
+        ${download}
         <button type="button" data-copy-font="${escapeBuildHtml(font.id)}" data-i18n="fonts.copyCss">复制 CSS</button>
       </div>
     </header>
@@ -1926,15 +1923,9 @@ ${commonDiscoveryHead()}
     <section class="font-directory-hero">
       <div><p class="eyebrow" data-i18n="fonts.label">字体参考</p><h1 data-i18n="fonts.directoryTitle">开源可商用字体。</h1></div>
       <div class="font-directory-summary">
-        <p data-i18n="fonts.directoryLead">从官方项目核验许可证、语言覆盖与网页演示。用于品牌、产品、出版与 Agent 选型。</p>
         <p class="font-directory-count"><strong data-font-result-count>${fontCatalog.fonts.length}</strong><span data-i18n="fonts.selfHosted">自托管</span><strong>${googleFontDirectory.stats.verifiedFamilies.toLocaleString("en-US")}</strong><span data-i18n="fonts.officialIndexed">官方索引</span></p>
-        <p class="font-directory-scope" data-i18n="fonts.scope">精选字体提供本站真实样张；官方索引提供完整许可证与来源检索。</p>
+        <a class="font-directory-reference" href="#fontSourcesTitle" data-i18n="fonts.referenceDocs">参考文档</a>
       </div>
-    </section>
-    <section class="font-license-callout" aria-label="Google Fonts license note">
-      <strong>Google Fonts</strong>
-      <p data-i18n="fonts.googleNote">Google Fonts 收录字体均以开源许可证发布，可用于商业项目；具体使用、修改与再分发仍应遵守每款字体的许可证。</p>
-      <a href="https://developers.google.com/fonts" target="_blank" rel="noreferrer" data-i18n="fonts.googleOfficial">Google 官方说明 ↗</a>
     </section>
     <section class="font-directory-toolbar" aria-label="Font directory controls">
       <label class="font-directory-search"><span data-i18n="fonts.searchLabel">搜索字体</span><input type="search" data-font-search autocomplete="off" placeholder="字体名称 / 用途 / Publisher"></label>
@@ -2936,14 +2927,11 @@ p { line-height: 1.65; }
 .font-directory-main { width: min(1420px, calc(100% - 64px)); margin: 0 auto; padding: 98px 0 70px; }
 .font-directory-hero { display: grid; grid-template-columns: minmax(320px, 1.2fr) minmax(300px, .8fr); gap: clamp(48px, 9vw, 150px); align-items: end; padding: 46px 0 62px; border-bottom: 1px solid var(--ink); }
 .font-directory-hero h1 { max-width: 760px; margin: 10px 0 0; font-size: clamp(58px, 8vw, 112px); line-height: .95; letter-spacing: 0; text-wrap: balance; }
-.font-directory-summary > p:first-child { max-width: 580px; margin: 0; color: var(--muted); font-size: 17px; line-height: 1.75; }
-.font-directory-count { display: flex; gap: 10px; align-items: baseline; margin: 32px 0 0; }
+.font-directory-summary { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 18px 30px; }
+.font-directory-count { display: flex; gap: 10px; align-items: baseline; margin: 0; }
 .font-directory-count strong { font-size: 32px; }
 .font-directory-count span { color: var(--muted); font-size: 12px; }
-.font-license-callout { display: grid; grid-template-columns: 180px minmax(0, 1fr) auto; gap: 30px; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--line); }
-.font-license-callout p { max-width: 800px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
-.font-license-callout a { color: var(--ink); font-size: 12px; font-weight: 760; text-decoration: none; border-bottom: 1px solid var(--line); }
-.font-directory-scope { grid-column: 1 / -1; margin: 4px 0 0; color: var(--muted); font-size: 11px; }
+.font-directory-reference { color: var(--ink); font-size: 12px; font-weight: 760; text-decoration: none; border-bottom: 1px solid var(--line); }
 .font-directory-toolbar { position: sticky; top: 67px; z-index: 16; display: grid; grid-template-columns: minmax(220px, 1fr) auto minmax(190px, .42fr) auto; gap: 20px; align-items: end; padding: 14px 0; border-bottom: 1px solid var(--ink); background: color-mix(in srgb, var(--paper) 94%, transparent); backdrop-filter: blur(14px); }
 .font-directory-toolbar label { display: flex; align-items: center; gap: 10px; margin: 0; color: var(--muted); font-size: 11px; font-weight: 720; }
 .font-directory-toolbar label > span { flex: 0 0 auto; white-space: nowrap; }
@@ -4379,8 +4367,6 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .font-directory-main { width: min(100% - 32px, 1420px); padding-top: 70px; }
   .font-directory-hero { grid-template-columns: 1fr; gap: 30px; padding: 28px 0 42px; }
   .font-directory-hero h1 { font-size: clamp(48px, 15vw, 72px); }
-  .font-license-callout { grid-template-columns: 1fr; gap: 8px; align-items: start; }
-  .font-license-callout a { justify-self: start; }
   .font-directory-toolbar { position: relative; top: auto; grid-template-columns: 1fr; gap: 12px; padding: 18px 0; backdrop-filter: none; }
   .font-directory-layout { grid-template-columns: 1fr; gap: 0; padding: 0; }
   .font-category-list { position: relative; top: auto; flex-direction: row; gap: 0; overflow-x: auto; padding: 18px 0 0; }
@@ -4697,7 +4683,8 @@ const i18n = {
     "fonts.source": "官方出处",
     "fonts.license": "许可证",
     "fonts.commercial": "可商用",
-    "fonts.download": "下载",
+    "fonts.downloadPackage": "下载字体包",
+    "fonts.referenceDocs": "参考文档",
     "fonts.copyCss": "复制 CSS",
     "fonts.cssCopied": "已复制字体 CSS",
     "fonts.ready": "滚动到此处加载真实字体",
@@ -4708,11 +4695,9 @@ const i18n = {
     "fonts.openApi": "打开字体 JSON",
     "fonts.curated": "个已核验字体家族",
     "fonts.directoryTitle": "开源可商用字体。",
-    "fonts.directoryLead": "从官方项目核验许可证、语言覆盖与网页演示。用于品牌、产品、出版与 Agent 选型。",
     "fonts.families": "字体家族",
     "fonts.selfHosted": "自托管",
     "fonts.officialIndexed": "官方索引",
-    "fonts.scope": "精选字体提供本站真实样张；官方索引提供完整许可证与来源检索。",
     "fonts.officialDirectory": "官方完整目录",
     "fonts.officialDirectoryLead": "逐款匹配 Google Fonts 官方元数据与源码仓库许可证；按需载入，不拖慢首屏。",
     "fonts.openDirectoryApi": "打开目录 API",
@@ -4916,7 +4901,8 @@ const i18n = {
     "fonts.source": "Official source",
     "fonts.license": "License",
     "fonts.commercial": "Commercial use",
-    "fonts.download": "Download",
+    "fonts.downloadPackage": "Download package",
+    "fonts.referenceDocs": "Reference",
     "fonts.copyCss": "Copy CSS",
     "fonts.cssCopied": "Font CSS copied",
     "fonts.ready": "Scroll here to load the live font",
@@ -4927,11 +4913,9 @@ const i18n = {
     "fonts.openApi": "Open font JSON",
     "fonts.curated": "verified font families",
     "fonts.directoryTitle": "Open fonts for commercial use.",
-    "fonts.directoryLead": "Official projects, verified licenses, script coverage and real web specimens for brands, products, publishing and agents.",
     "fonts.families": "font families",
     "fonts.selfHosted": "self-hosted",
     "fonts.officialIndexed": "official index",
-    "fonts.scope": "Selected families have live self-hosted specimens; the official index provides full license and provenance search.",
     "fonts.officialDirectory": "Complete official directory",
     "fonts.officialDirectoryLead": "Each family is matched to official Google Fonts metadata and its repository license; the index loads on demand to protect first-load performance.",
     "fonts.openDirectoryApi": "Open directory API",

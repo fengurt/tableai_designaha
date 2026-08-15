@@ -87,7 +87,7 @@ export async function serveMedia(request, env) {
   if (isPrivate && !(await signed(request, env, pathname))) return json(request, { error: "invalid_or_expired_signature" }, { status: 403 }, true);
 
   const key = pathname.slice(1);
-  const downloadName = pathname.startsWith("/public/iptrust/font-source-") ? pathname.split("/").at(-1) : "";
+  const downloadName = /^\/public\/iptrust\/font-(?:source|package)-/.test(pathname) ? pathname.split("/").at(-1) : "";
   const bucket = isPrivate ? env.ORIGINALS : env.PREVIEWS;
   const size = url.searchParams.get("size") || "original";
   const rangeHeader = request.headers.get("range");

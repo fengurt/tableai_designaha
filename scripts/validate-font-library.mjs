@@ -18,6 +18,7 @@ if (!Array.isArray(catalog.directories) || catalog.directories.length < 4) throw
 
 const ids = new Set();
 const sourceObjectKeys = new Set();
+const packageObjectKeys = new Set();
 const commercialLicenses = new Set((catalog.licenseTypes || []).filter((license) => license.commercial).map((license) => license.spdx));
 if (catalog.fonts.length < 50) throw new Error("font_curated_count");
 if (licenseArchive.schemaVersion !== 1 || licenseArchive.fonts?.length !== catalog.fonts.length) throw new Error("font_license_archive_count");
@@ -46,13 +47,20 @@ for (const font of catalog.fonts) {
     if (asset.sourceMediaUrl !== `https://media.apuch.art/${asset.sourceObjectKey}`) throw new Error(`font_source_media_url:${font.id}`);
     sourceObjectKeys.add(asset.sourceObjectKey);
   }
+  if (!font.package?.filename?.endsWith("-font-package.zip") || font.package.mimeType !== "application/zip" || !(font.package.bytes > 0) || !/^[a-f0-9]{64}$/.test(font.package.sha256 || "")) throw new Error(`font_package:${font.id}`);
+  if (!font.package.objectKey?.startsWith(`public/iptrust/font-package-${font.id}/`) || font.package.objectKey.includes("..") || packageObjectKeys.has(font.package.objectKey)) throw new Error(`font_package_object:${font.id}`);
+  if (font.package.mediaUrl !== `https://media.apuch.art/${font.package.objectKey}`) throw new Error(`font_package_media_url:${font.id}`);
+  if (!font.package.contents?.includes("LICENSE.txt") || !font.package.contents?.includes("PROVENANCE.md") || !font.package.contents?.includes("README.md") || !font.package.contents?.includes("manifest.json") || font.package.contents.filter((name) => name.startsWith("fonts/")).length !== font.assets.length) throw new Error(`font_package_contents:${font.id}`);
+  packageObjectKeys.add(font.package.objectKey);
 }
 const fontAssets = catalog.fonts.flatMap((font) => font.assets);
 const totalDemoBytes = fontAssets.reduce((sum, asset) => sum + asset.bytes, 0);
 const largestDemoBytes = Math.max(...fontAssets.map((asset) => asset.bytes));
 const totalSourceBytes = fontAssets.reduce((sum, asset) => sum + asset.sourceBytes, 0);
+const totalPackageBytes = catalog.fonts.reduce((sum, font) => sum + font.package.bytes, 0);
 if (totalDemoBytes !== catalog.performance?.totalDemoBytes || largestDemoBytes !== catalog.performance?.largestDemoBytes) throw new Error("font_performance_stats");
 if (totalSourceBytes !== catalog.performance?.totalSourceBytes || catalog.performance?.downloads !== "full-source-on-demand") throw new Error("font_source_performance_stats");
+if (totalPackageBytes !== catalog.performance?.totalPackageBytes || catalog.performance?.packageDelivery !== "family-zip-with-license-and-provenance") throw new Error("font_package_performance_stats");
 if (totalDemoBytes > 1_500_000 || largestDemoBytes > 80_000) throw new Error("font_performance_budget");
 if (catalog.fonts.filter((font) => font.popularity && font.popularity <= 100).length < 30) throw new Error("font_popular_coverage");
 
@@ -74,6 +82,7 @@ console.log(JSON.stringify({
   totalDemoBytes,
   largestDemoBytes,
   totalSourceBytes,
+  totalPackageBytes,
   officialIndexedFonts: googleDirectory.stats.verifiedFamilies,
   excludedOfficialFonts: googleDirectory.stats.excludedFamilies,
   verifiedAt: googleDirectory.verifiedAt,

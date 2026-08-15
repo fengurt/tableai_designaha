@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-15T12:53:31.940Z",
+  "generatedAt": "2026-08-15T13:29:17.502Z",
   "verifiedAt": "2026-08-15",
   "name": "IPTrust Open-source Type Library",
   "description": {
@@ -19,7 +19,9 @@
     "variableAxes": "weight-only-where-supported",
     "totalDemoBytes": 1183092,
     "largestDemoBytes": 69592,
-    "totalSourceBytes": 228879516
+    "totalSourceBytes": 228879516,
+    "totalPackageBytes": 129894120,
+    "packageDelivery": "family-zip-with-license-and-provenance"
   },
   "licenseNotice": {
     "zh": "字体版权归各自作者所有。商业使用、嵌入、修改与再分发须遵守对应许可证；字体文件不可单独售卖。",
@@ -205,7 +207,22 @@
           "objectKey": "public/iptrust/font-noto-sans-sc-100-900/fbb841b913905a85b69e81fe51bedf348a86403d64a03e8d2c79513b6d37931b/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-noto-sans-sc-100-900/fbb841b913905a85b69e81fe51bedf348a86403d64a03e8d2c79513b6d37931b/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "noto-sans-sc-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 11280951,
+        "sha256": "54b95814897a05fe78073d8289c19f91c302fadb3c29fe436e12c34db9d6c58a",
+        "objectKey": "public/iptrust/font-package-noto-sans-sc/54b95814897a05fe78073d8289c19f91c302fadb3c29fe436e12c34db9d6c58a/noto-sans-sc-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-noto-sans-sc/54b95814897a05fe78073d8289c19f91c302fadb3c29fe436e12c34db9d6c58a/noto-sans-sc-font-package.zip",
+        "contents": [
+          "fonts/noto-sans-sc-100-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "noto-serif-sc",
@@ -271,7 +288,22 @@
           "objectKey": "public/iptrust/font-noto-serif-sc-100-900/e983f9db1fc3c07ef40e457bb84eaef5c97b7870cc530b592fd917bd230ec4bc/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-noto-serif-sc-100-900/e983f9db1fc3c07ef40e457bb84eaef5c97b7870cc530b592fd917bd230ec4bc/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "noto-serif-sc-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 15458848,
+        "sha256": "139668bd005a810e5eed747333f4557df99fb9e898540fbf44f9a6df33a446c9",
+        "objectKey": "public/iptrust/font-package-noto-serif-sc/139668bd005a810e5eed747333f4557df99fb9e898540fbf44f9a6df33a446c9/noto-serif-sc-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-noto-serif-sc/139668bd005a810e5eed747333f4557df99fb9e898540fbf44f9a6df33a446c9/noto-serif-sc-font-package.zip",
+        "contents": [
+          "fonts/noto-serif-sc-100-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "noto-sans-mono-sc",
@@ -337,7 +369,22 @@
           "objectKey": "public/iptrust/font-noto-sans-mono-sc-100-900/0c70d310fe7588863bee5cef0d8c32dd28ae0882f9a6b60a04d5fcc20f55d91e/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-noto-sans-mono-sc-100-900/0c70d310fe7588863bee5cef0d8c32dd28ae0882f9a6b60a04d5fcc20f55d91e/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "noto-sans-mono-sc-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 19091585,
+        "sha256": "3b90be77756f71a679d44fdb1d885b55b65640a524d5489472c5ba26a62e3707",
+        "objectKey": "public/iptrust/font-package-noto-sans-mono-sc/3b90be77756f71a679d44fdb1d885b55b65640a524d5489472c5ba26a62e3707/noto-sans-mono-sc-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-noto-sans-mono-sc/3b90be77756f71a679d44fdb1d885b55b65640a524d5489472c5ba26a62e3707/noto-sans-mono-sc-font-package.zip",
+        "contents": [
+          "fonts/noto-sans-mono-sc-100-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "ibm-plex-sans-sc",
@@ -421,7 +468,23 @@
           "objectKey": "public/iptrust/font-ibm-plex-sans-sc-600/427b9969b8ade29ea8dba44becadfd3ee488e29741195f9deafd3ad80ebf88cc/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-ibm-plex-sans-sc-600/427b9969b8ade29ea8dba44becadfd3ee488e29741195f9deafd3ad80ebf88cc/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "ibm-plex-sans-sc-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 10747940,
+        "sha256": "206136153b81009df049c7d2a21ae4b29057120aa5085f8f7282a347ef2e0f04",
+        "objectKey": "public/iptrust/font-package-ibm-plex-sans-sc/206136153b81009df049c7d2a21ae4b29057120aa5085f8f7282a347ef2e0f04/ibm-plex-sans-sc-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-ibm-plex-sans-sc/206136153b81009df049c7d2a21ae4b29057120aa5085f8f7282a347ef2e0f04/ibm-plex-sans-sc-font-package.zip",
+        "contents": [
+          "fonts/ibm-plex-sans-sc-400.ttf",
+          "fonts/ibm-plex-sans-sc-600.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "inter",
@@ -488,7 +551,22 @@
           "objectKey": "public/iptrust/font-inter-100-900/5c19676352edd2d78a9cb493b05f1141f0464eb2a39aa503d9ce9fbe5f8e9d9b/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-inter-100-900/5c19676352edd2d78a9cb493b05f1141f0464eb2a39aa503d9ce9fbe5f8e9d9b/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "inter-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 355974,
+        "sha256": "6b39ab2cbf9e5aaf2e27ef1320e01566b2f2c8d80c774f275241087e134d59d7",
+        "objectKey": "public/iptrust/font-package-inter/6b39ab2cbf9e5aaf2e27ef1320e01566b2f2c8d80c774f275241087e134d59d7/inter-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-inter/6b39ab2cbf9e5aaf2e27ef1320e01566b2f2c8d80c774f275241087e134d59d7/inter-font-package.zip",
+        "contents": [
+          "fonts/inter-100-900.woff2",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "ibm-plex-mono",
@@ -573,7 +651,23 @@
           "objectKey": "public/iptrust/font-ibm-plex-mono-600/d664ce4ff248ac8e58dd4de5d1d78f109cbaa02e0dc1b723a5c12b0fb115e064/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-ibm-plex-mono-600/d664ce4ff248ac8e58dd4de5d1d78f109cbaa02e0dc1b723a5c12b0fb115e064/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "ibm-plex-mono-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 104505,
+        "sha256": "a9d2e130aa865174128a39ef6c3767c3ffce72843ff7c0ff53700fd8abfde517",
+        "objectKey": "public/iptrust/font-package-ibm-plex-mono/a9d2e130aa865174128a39ef6c3767c3ffce72843ff7c0ff53700fd8abfde517/ibm-plex-mono-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-ibm-plex-mono/a9d2e130aa865174128a39ef6c3767c3ffce72843ff7c0ff53700fd8abfde517/ibm-plex-mono-font-package.zip",
+        "contents": [
+          "fonts/ibm-plex-mono-400.woff2",
+          "fonts/ibm-plex-mono-600.woff2",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "eb-garamond",
@@ -640,7 +734,22 @@
           "objectKey": "public/iptrust/font-eb-garamond-400-800/9a84a3f622f5d1b5d1109216e49b1d0149e3785871199e2a60afc5e5badb66ac/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-eb-garamond-400-800/9a84a3f622f5d1b5d1109216e49b1d0149e3785871199e2a60afc5e5badb66ac/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "eb-garamond-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 404271,
+        "sha256": "c8923d765f7e5e5b5ded880b6cff50bd967c854cd00acdacbb309f3503d01ddd",
+        "objectKey": "public/iptrust/font-package-eb-garamond/c8923d765f7e5e5b5ded880b6cff50bd967c854cd00acdacbb309f3503d01ddd/eb-garamond-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-eb-garamond/c8923d765f7e5e5b5ded880b6cff50bd967c854cd00acdacbb309f3503d01ddd/eb-garamond-font-package.zip",
+        "contents": [
+          "fonts/eb-garamond-400-800.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "zcool-xiaowei",
@@ -706,7 +815,22 @@
           "objectKey": "public/iptrust/font-zcool-xiaowei-400/1c7f3eb66e6ac8c1ecc1d5c328c6f53c5f641b62f711c57710d0c29e3e231045/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-zcool-xiaowei-400/1c7f3eb66e6ac8c1ecc1d5c328c6f53c5f641b62f711c57710d0c29e3e231045/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "zcool-xiaowei-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 3419893,
+        "sha256": "99aeb47de976886292ba6ba35ee23bc6faee3ddd6defdf34c62ff0aba21a2b53",
+        "objectKey": "public/iptrust/font-package-zcool-xiaowei/99aeb47de976886292ba6ba35ee23bc6faee3ddd6defdf34c62ff0aba21a2b53/zcool-xiaowei-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-zcool-xiaowei/99aeb47de976886292ba6ba35ee23bc6faee3ddd6defdf34c62ff0aba21a2b53/zcool-xiaowei-font-package.zip",
+        "contents": [
+          "fonts/zcool-xiaowei-400.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "zcool-qingke-huangyou",
@@ -772,7 +896,22 @@
           "objectKey": "public/iptrust/font-zcool-qingke-huangyou-400/cb7be65b33f752b5138b5ded9806c1528c324ba3868ae2561d6661b31c32eac4/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-zcool-qingke-huangyou-400/cb7be65b33f752b5138b5ded9806c1528c324ba3868ae2561d6661b31c32eac4/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "zcool-qingke-huangyou-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 3514807,
+        "sha256": "16b62ce9b4a0982135975a5ecb5e7246bef7b39c8b4645fc44f3870d01f06969",
+        "objectKey": "public/iptrust/font-package-zcool-qingke-huangyou/16b62ce9b4a0982135975a5ecb5e7246bef7b39c8b4645fc44f3870d01f06969/zcool-qingke-huangyou-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-zcool-qingke-huangyou/16b62ce9b4a0982135975a5ecb5e7246bef7b39c8b4645fc44f3870d01f06969/zcool-qingke-huangyou-font-package.zip",
+        "contents": [
+          "fonts/zcool-qingke-huangyou-400.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "ma-shan-zheng",
@@ -838,7 +977,22 @@
           "objectKey": "public/iptrust/font-ma-shan-zheng-400/2f50f7097dd7024a446077b331b361d5af1244be466583d9e8fe5be038be9e75/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-ma-shan-zheng-400/2f50f7097dd7024a446077b331b361d5af1244be466583d9e8fe5be038be9e75/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "ma-shan-zheng-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 3808653,
+        "sha256": "4da38121c430e0aee1768f68d34e5e6daf306c78cb280039088d7a03531b5871",
+        "objectKey": "public/iptrust/font-package-ma-shan-zheng/4da38121c430e0aee1768f68d34e5e6daf306c78cb280039088d7a03531b5871/ma-shan-zheng-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-ma-shan-zheng/4da38121c430e0aee1768f68d34e5e6daf306c78cb280039088d7a03531b5871/ma-shan-zheng-font-package.zip",
+        "contents": [
+          "fonts/ma-shan-zheng-400.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "long-cang",
@@ -904,7 +1058,22 @@
           "objectKey": "public/iptrust/font-long-cang-400/1021ecae675a9fd3d593342a0a81dd09b3e6fd52bbca7ad9728cfedef0fa5df7/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-long-cang-400/1021ecae675a9fd3d593342a0a81dd09b3e6fd52bbca7ad9728cfedef0fa5df7/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "long-cang-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 3465321,
+        "sha256": "a9d217e72cd7721b3726cac85ae6946a30c9b6722c4ab200c18d086f6ce0794f",
+        "objectKey": "public/iptrust/font-package-long-cang/a9d217e72cd7721b3726cac85ae6946a30c9b6722c4ab200c18d086f6ce0794f/long-cang-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-long-cang/a9d217e72cd7721b3726cac85ae6946a30c9b6722c4ab200c18d086f6ce0794f/long-cang-font-package.zip",
+        "contents": [
+          "fonts/long-cang-400.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "zcool-kuaile",
@@ -970,7 +1139,22 @@
           "objectKey": "public/iptrust/font-zcool-kuaile-400/dbb76821061713880b2c7b4d48c194f88cabdd8db007186ff3c450c368473b18/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-zcool-kuaile-400/dbb76821061713880b2c7b4d48c194f88cabdd8db007186ff3c450c368473b18/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "zcool-kuaile-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 1112196,
+        "sha256": "055bd33aeeb860476440faf96d778bb3fec64e4170476990452e3d03dda51aea",
+        "objectKey": "public/iptrust/font-package-zcool-kuaile/055bd33aeeb860476440faf96d778bb3fec64e4170476990452e3d03dda51aea/zcool-kuaile-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-zcool-kuaile/055bd33aeeb860476440faf96d778bb3fec64e4170476990452e3d03dda51aea/zcool-kuaile-font-package.zip",
+        "contents": [
+          "fonts/zcool-kuaile-400.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "zhi-mang-xing",
@@ -1036,7 +1220,22 @@
           "objectKey": "public/iptrust/font-zhi-mang-xing-400/ba2e1448800012a5f0a35d9796b5b3d44fd67e05dedf821b64b6e6b58f33a379/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-zhi-mang-xing-400/ba2e1448800012a5f0a35d9796b5b3d44fd67e05dedf821b64b6e6b58f33a379/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "zhi-mang-xing-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 2723137,
+        "sha256": "321611549207ca2370220dff3adc361e77d1370273637487d806c451736e2d1b",
+        "objectKey": "public/iptrust/font-package-zhi-mang-xing/321611549207ca2370220dff3adc361e77d1370273637487d806c451736e2d1b/zhi-mang-xing-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-zhi-mang-xing/321611549207ca2370220dff3adc361e77d1370273637487d806c451736e2d1b/zhi-mang-xing-font-package.zip",
+        "contents": [
+          "fonts/zhi-mang-xing-400.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "liu-jian-mao-cao",
@@ -1102,7 +1301,22 @@
           "objectKey": "public/iptrust/font-liu-jian-mao-cao-400/918993712a436257cd206be0c5da24dc0385f29bea722bbb90499abdcee23da0/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-liu-jian-mao-cao-400/918993712a436257cd206be0c5da24dc0385f29bea722bbb90499abdcee23da0/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "liu-jian-mao-cao-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 2712709,
+        "sha256": "2bd6631f5daafdc38b2191b44894c9ce338c01976bcf1405593a5b820f1be08f",
+        "objectKey": "public/iptrust/font-package-liu-jian-mao-cao/2bd6631f5daafdc38b2191b44894c9ce338c01976bcf1405593a5b820f1be08f/liu-jian-mao-cao-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-liu-jian-mao-cao/2bd6631f5daafdc38b2191b44894c9ce338c01976bcf1405593a5b820f1be08f/liu-jian-mao-cao-font-package.zip",
+        "contents": [
+          "fonts/liu-jian-mao-cao-400.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "lxgw-wenkai",
@@ -1169,7 +1383,22 @@
           "objectKey": "public/iptrust/font-lxgw-wenkai-400/8b6ea95672f3fc7ff76fe7abd858816cca72e8834b137574e6de22f9c7c4e4ed/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-lxgw-wenkai-400/8b6ea95672f3fc7ff76fe7abd858816cca72e8834b137574e6de22f9c7c4e4ed/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "lxgw-wenkai-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 12738152,
+        "sha256": "582580669ac50c1e92cd42e9cc8b7bfb24da532eea53f0e1a32498525f154ce0",
+        "objectKey": "public/iptrust/font-package-lxgw-wenkai/582580669ac50c1e92cd42e9cc8b7bfb24da532eea53f0e1a32498525f154ce0/lxgw-wenkai-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-lxgw-wenkai/582580669ac50c1e92cd42e9cc8b7bfb24da532eea53f0e1a32498525f154ce0/lxgw-wenkai-font-package.zip",
+        "contents": [
+          "fonts/lxgw-wenkai-400.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "lxgw-wenkai-mono",
@@ -1236,7 +1465,22 @@
           "objectKey": "public/iptrust/font-lxgw-wenkai-mono-400/4bc051d2a1d2973ce99e3ba2b4278066e3c608371dab601b5f40769548fcac28/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-lxgw-wenkai-mono-400/4bc051d2a1d2973ce99e3ba2b4278066e3c608371dab601b5f40769548fcac28/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "lxgw-wenkai-mono-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 12755243,
+        "sha256": "c1efdd3366ea4e99a658fb3ca116196f2849da4de789725ced146756544a1700",
+        "objectKey": "public/iptrust/font-package-lxgw-wenkai-mono/c1efdd3366ea4e99a658fb3ca116196f2849da4de789725ced146756544a1700/lxgw-wenkai-mono-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-lxgw-wenkai-mono/c1efdd3366ea4e99a658fb3ca116196f2849da4de789725ced146756544a1700/lxgw-wenkai-mono-font-package.zip",
+        "contents": [
+          "fonts/lxgw-wenkai-mono-400.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "lxgw-marker-gothic",
@@ -1302,7 +1546,22 @@
           "objectKey": "public/iptrust/font-lxgw-marker-gothic-400/04849b5fe700dfb96ac41d178015cbc9d248f088e2b1a7cdb266717582d4eb91/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-lxgw-marker-gothic-400/04849b5fe700dfb96ac41d178015cbc9d248f088e2b1a7cdb266717582d4eb91/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "lxgw-marker-gothic-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 1843957,
+        "sha256": "ec0465a136c60d9e03193e2b64994e7812b82af9f4a2063a2c9b047e61c83990",
+        "objectKey": "public/iptrust/font-package-lxgw-marker-gothic/ec0465a136c60d9e03193e2b64994e7812b82af9f4a2063a2c9b047e61c83990/lxgw-marker-gothic-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-lxgw-marker-gothic/ec0465a136c60d9e03193e2b64994e7812b82af9f4a2063a2c9b047e61c83990/lxgw-marker-gothic-font-package.zip",
+        "contents": [
+          "fonts/lxgw-marker-gothic-400.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "lxgw-zhenkai",
@@ -1367,7 +1626,22 @@
           "objectKey": "public/iptrust/font-lxgw-zhenkai-400/95a74ff22bfc296c53019dea4a728a25156b0d40d063ffc9b69ae9af10efbcad/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-lxgw-zhenkai-400/95a74ff22bfc296c53019dea4a728a25156b0d40d063ffc9b69ae9af10efbcad/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "lxgw-zhenkai-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 1287007,
+        "sha256": "2b60580b6b6899b2667800381a54cb6ef9a247f06159d185b610228041463bd4",
+        "objectKey": "public/iptrust/font-package-lxgw-zhenkai/2b60580b6b6899b2667800381a54cb6ef9a247f06159d185b610228041463bd4/lxgw-zhenkai-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-lxgw-zhenkai/2b60580b6b6899b2667800381a54cb6ef9a247f06159d185b610228041463bd4/lxgw-zhenkai-font-package.zip",
+        "contents": [
+          "fonts/lxgw-zhenkai-400.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "lxgw-975-hei",
@@ -1433,7 +1707,22 @@
           "objectKey": "public/iptrust/font-lxgw-975-hei-400/1e559989d156e01e7a6a846729261eea013ad31ee275fc69724f5239deea1ea5/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-lxgw-975-hei-400/1e559989d156e01e7a6a846729261eea013ad31ee275fc69724f5239deea1ea5/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "lxgw-975-hei-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 6700619,
+        "sha256": "bd99f60ae90ec18c68575eaae24b02fe8f75b7f63d9d1d9e37d71270d02a245e",
+        "objectKey": "public/iptrust/font-package-lxgw-975-hei/bd99f60ae90ec18c68575eaae24b02fe8f75b7f63d9d1d9e37d71270d02a245e/lxgw-975-hei-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-lxgw-975-hei/bd99f60ae90ec18c68575eaae24b02fe8f75b7f63d9d1d9e37d71270d02a245e/lxgw-975-hei-font-package.zip",
+        "contents": [
+          "fonts/lxgw-975-hei-400.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "lxgw-975-yuan",
@@ -1499,7 +1788,22 @@
           "objectKey": "public/iptrust/font-lxgw-975-yuan-400/7e7a6c0395b634d2918cb10a0ddb6224545b8014a35431ee267eafa8a06c822b/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-lxgw-975-yuan-400/7e7a6c0395b634d2918cb10a0ddb6224545b8014a35431ee267eafa8a06c822b/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "lxgw-975-yuan-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 8572619,
+        "sha256": "a1ffe9c1ff95a48631d7a019daebdcd5ad37a34ab32f8e4fb1a5cd93c6322b52",
+        "objectKey": "public/iptrust/font-package-lxgw-975-yuan/a1ffe9c1ff95a48631d7a019daebdcd5ad37a34ab32f8e4fb1a5cd93c6322b52/lxgw-975-yuan-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-lxgw-975-yuan/a1ffe9c1ff95a48631d7a019daebdcd5ad37a34ab32f8e4fb1a5cd93c6322b52/lxgw-975-yuan-font-package.zip",
+        "contents": [
+          "fonts/lxgw-975-yuan-400.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "roboto-flex",
@@ -1564,7 +1868,22 @@
           "objectKey": "public/iptrust/font-roboto-flex-100-900/bfbfefba129da052668514c1255303921dfc697db2fdcbedd3d4292de2adf410/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-roboto-flex-100-900/bfbfefba129da052668514c1255303921dfc697db2fdcbedd3d4292de2adf410/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "roboto-flex-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 1024812,
+        "sha256": "39b530094736cf743a505b5891aeecb4ee86d84c92c31af68003073342523fa5",
+        "objectKey": "public/iptrust/font-package-roboto-flex/39b530094736cf743a505b5891aeecb4ee86d84c92c31af68003073342523fa5/roboto-flex-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-roboto-flex/39b530094736cf743a505b5891aeecb4ee86d84c92c31af68003073342523fa5/roboto-flex-font-package.zip",
+        "contents": [
+          "fonts/roboto-flex-100-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "open-sans",
@@ -1632,7 +1951,22 @@
           "objectKey": "public/iptrust/font-open-sans-100-900/1126b3cc7f42513e16a93e4caae63a4ebbace40972a7d39f840f4b42f1284c61/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-open-sans-100-900/1126b3cc7f42513e16a93e4caae63a4ebbace40972a7d39f840f4b42f1284c61/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "open-sans-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 350409,
+        "sha256": "e8dbf78c1706a8fad2a66fc524bbc44c9d7672accea3c8b46938556f24c136a2",
+        "objectKey": "public/iptrust/font-package-open-sans/e8dbf78c1706a8fad2a66fc524bbc44c9d7672accea3c8b46938556f24c136a2/open-sans-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-open-sans/e8dbf78c1706a8fad2a66fc524bbc44c9d7672accea3c8b46938556f24c136a2/open-sans-font-package.zip",
+        "contents": [
+          "fonts/open-sans-100-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "source-sans-3",
@@ -1699,7 +2033,22 @@
           "objectKey": "public/iptrust/font-source-sans-3-100-900/d36ab24cffa66c48ab8ba1db6faede219de964b4410fd8a6eaf1a8984802c2b0/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-source-sans-3-100-900/d36ab24cffa66c48ab8ba1db6faede219de964b4410fd8a6eaf1a8984802c2b0/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "source-sans-3-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 237451,
+        "sha256": "fb678721d174bb18cf6e5a8cf5cffc97c920bea0ff67f6b18bcdf9a767dea676",
+        "objectKey": "public/iptrust/font-package-source-sans-3/fb678721d174bb18cf6e5a8cf5cffc97c920bea0ff67f6b18bcdf9a767dea676/source-sans-3-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-source-sans-3/fb678721d174bb18cf6e5a8cf5cffc97c920bea0ff67f6b18bcdf9a767dea676/source-sans-3-font-package.zip",
+        "contents": [
+          "fonts/source-sans-3-100-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "dm-sans",
@@ -1764,7 +2113,22 @@
           "objectKey": "public/iptrust/font-dm-sans-100-900/c6a78b068a4ec51a08a39cfa2207484cca0fb28686462775ba1990293cac1239/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-dm-sans-100-900/c6a78b068a4ec51a08a39cfa2207484cca0fb28686462775ba1990293cac1239/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "dm-sans-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 113261,
+        "sha256": "49aa2d183c7392a5c0300a38eb6f52bf06acec3e9643a8a6ce9e9291653d117c",
+        "objectKey": "public/iptrust/font-package-dm-sans/49aa2d183c7392a5c0300a38eb6f52bf06acec3e9643a8a6ce9e9291653d117c/dm-sans-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-dm-sans/49aa2d183c7392a5c0300a38eb6f52bf06acec3e9643a8a6ce9e9291653d117c/dm-sans-font-package.zip",
+        "contents": [
+          "fonts/dm-sans-100-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "work-sans",
@@ -1829,7 +2193,22 @@
           "objectKey": "public/iptrust/font-work-sans-100-900/2ac1989572e2abbf3b66595f9b6a1e9013eb8018c6a46cb18f97c9ef0165cde4/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-work-sans-100-900/2ac1989572e2abbf3b66595f9b6a1e9013eb8018c6a46cb18f97c9ef0165cde4/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "work-sans-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 173539,
+        "sha256": "ed48399cc5c556a62bfc69353f4047e206d13eeff51c59a0b765d1652acf324b",
+        "objectKey": "public/iptrust/font-package-work-sans/ed48399cc5c556a62bfc69353f4047e206d13eeff51c59a0b765d1652acf324b/work-sans-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-work-sans/ed48399cc5c556a62bfc69353f4047e206d13eeff51c59a0b765d1652acf324b/work-sans-font-package.zip",
+        "contents": [
+          "fonts/work-sans-100-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "space-grotesk",
@@ -1894,7 +2273,22 @@
           "objectKey": "public/iptrust/font-space-grotesk-300-700/2ad1d8c2a946eb5e0305ede6391a912e08b31c23d8350b28c8c84ed7bc541692/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-space-grotesk-300-700/2ad1d8c2a946eb5e0305ede6391a912e08b31c23d8350b28c8c84ed7bc541692/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "space-grotesk-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 68020,
+        "sha256": "4c8e83bac19889c6ba8f445e4d12c09b839438d1ce3dfd85aac1ec9ba9bdff02",
+        "objectKey": "public/iptrust/font-package-space-grotesk/4c8e83bac19889c6ba8f445e4d12c09b839438d1ce3dfd85aac1ec9ba9bdff02/space-grotesk-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-space-grotesk/4c8e83bac19889c6ba8f445e4d12c09b839438d1ce3dfd85aac1ec9ba9bdff02/space-grotesk-font-package.zip",
+        "contents": [
+          "fonts/space-grotesk-300-700.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "playfair-display",
@@ -1960,7 +2354,22 @@
           "objectKey": "public/iptrust/font-playfair-display-400-900/a41d6dce1a54fb53f5b3a3493de48dfb518d6bc9bd13c3e119bb7ca81fc8adf1/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-playfair-display-400-900/a41d6dce1a54fb53f5b3a3493de48dfb518d6bc9bd13c3e119bb7ca81fc8adf1/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "playfair-display-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 139636,
+        "sha256": "54c749e301c900b9399b02ac35fe12e02326109486b694ff1df566f093bcd4f0",
+        "objectKey": "public/iptrust/font-package-playfair-display/54c749e301c900b9399b02ac35fe12e02326109486b694ff1df566f093bcd4f0/playfair-display-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-playfair-display/54c749e301c900b9399b02ac35fe12e02326109486b694ff1df566f093bcd4f0/playfair-display-font-package.zip",
+        "contents": [
+          "fonts/playfair-display-400-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "source-serif-4",
@@ -2027,7 +2436,22 @@
           "objectKey": "public/iptrust/font-source-serif-4-200-900/b465e763c7e31868579fae1f2c0b752688e1d7f191143d05a0e5ddf6db5cfcd6/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-source-serif-4-200-900/b465e763c7e31868579fae1f2c0b752688e1d7f191143d05a0e5ddf6db5cfcd6/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "source-serif-4-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 555982,
+        "sha256": "96e584314feb291bb189bf84bb0c8e4f65242fa3b3c0ff8f1dc35311006bf2aa",
+        "objectKey": "public/iptrust/font-package-source-serif-4/96e584314feb291bb189bf84bb0c8e4f65242fa3b3c0ff8f1dc35311006bf2aa/source-serif-4-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-source-serif-4/96e584314feb291bb189bf84bb0c8e4f65242fa3b3c0ff8f1dc35311006bf2aa/source-serif-4-font-package.zip",
+        "contents": [
+          "fonts/source-serif-4-200-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "jetbrains-mono",
@@ -2094,7 +2518,22 @@
           "objectKey": "public/iptrust/font-jetbrains-mono-100-800/7e8685f2f91ada1ca782e43685fe40d0c870add56b17ceed0a335e932056a34f/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-jetbrains-mono-100-800/7e8685f2f91ada1ca782e43685fe40d0c870add56b17ceed0a335e932056a34f/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "jetbrains-mono-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 94874,
+        "sha256": "f336173aa29984a160a6ea32012e9352edc7ce60476ae9fb5b7afe1e0a628a7c",
+        "objectKey": "public/iptrust/font-package-jetbrains-mono/f336173aa29984a160a6ea32012e9352edc7ce60476ae9fb5b7afe1e0a628a7c/jetbrains-mono-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-jetbrains-mono/f336173aa29984a160a6ea32012e9352edc7ce60476ae9fb5b7afe1e0a628a7c/jetbrains-mono-font-package.zip",
+        "contents": [
+          "fonts/jetbrains-mono-100-800.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "source-code-pro",
@@ -2161,7 +2600,22 @@
           "objectKey": "public/iptrust/font-source-code-pro-200-900/7233b6d036f2c14b2adcaba2123fd770027de7fed07ed034117cfacdf01b6738/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-source-code-pro-200-900/7233b6d036f2c14b2adcaba2123fd770027de7fed07ed034117cfacdf01b6738/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "source-code-pro-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 119230,
+        "sha256": "aea56a2ec48d33ca223d92aa90048f34bc7d4ff0243bcaaf55d9c35df3257481",
+        "objectKey": "public/iptrust/font-package-source-code-pro/aea56a2ec48d33ca223d92aa90048f34bc7d4ff0243bcaaf55d9c35df3257481/source-code-pro-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-source-code-pro/aea56a2ec48d33ca223d92aa90048f34bc7d4ff0243bcaaf55d9c35df3257481/source-code-pro-font-package.zip",
+        "contents": [
+          "fonts/source-code-pro-200-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "google-sans-code",
@@ -2228,7 +2682,22 @@
           "objectKey": "public/iptrust/font-google-sans-code-300-800/aa2349c5e9ea477baf276b26d9c45de62ec1417fb9ec54207c0b00e006c8ba24/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-google-sans-code-300-800/aa2349c5e9ea477baf276b26d9c45de62ec1417fb9ec54207c0b00e006c8ba24/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "google-sans-code-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 77255,
+        "sha256": "c5c5ba0e4246d1249391057b936894e98155d91958af2545f8de8f3ace3a0262",
+        "objectKey": "public/iptrust/font-package-google-sans-code/c5c5ba0e4246d1249391057b936894e98155d91958af2545f8de8f3ace3a0262/google-sans-code-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-google-sans-code/c5c5ba0e4246d1249391057b936894e98155d91958af2545f8de8f3ace3a0262/google-sans-code-font-package.zip",
+        "contents": [
+          "fonts/google-sans-code-300-800.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "roboto",
@@ -2293,7 +2762,22 @@
           "objectKey": "public/iptrust/font-roboto-100-900/63fb9e1e8ee864a2c21369525f85a1972beaffe997bf681f5e23c70b7a143913/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-roboto-100-900/63fb9e1e8ee864a2c21369525f85a1972beaffe997bf681f5e23c70b7a143913/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "roboto-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 284464,
+        "sha256": "8b321652ac6f1b21e5ca5a7db6962bb2ff4b68ebfb038b477d78d8370cafae4a",
+        "objectKey": "public/iptrust/font-package-roboto/8b321652ac6f1b21e5ca5a7db6962bb2ff4b68ebfb038b477d78d8370cafae4a/roboto-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-roboto/8b321652ac6f1b21e5ca5a7db6962bb2ff4b68ebfb038b477d78d8370cafae4a/roboto-font-package.zip",
+        "contents": [
+          "fonts/roboto-100-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "montserrat",
@@ -2358,7 +2842,22 @@
           "objectKey": "public/iptrust/font-montserrat-100-900/0c79c77f271b80f1935cd1ffa09094d336716f3870c04bbade5cb23018371c0e/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-montserrat-100-900/0c79c77f271b80f1935cd1ffa09094d336716f3870c04bbade5cb23018371c0e/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "montserrat-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 298620,
+        "sha256": "08a0ff9abc27c3ddf3685972dcea0454dc62c18786cadaab54d3f87d7a4c96a0",
+        "objectKey": "public/iptrust/font-package-montserrat/08a0ff9abc27c3ddf3685972dcea0454dc62c18786cadaab54d3f87d7a4c96a0/montserrat-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-montserrat/08a0ff9abc27c3ddf3685972dcea0454dc62c18786cadaab54d3f87d7a4c96a0/montserrat-font-package.zip",
+        "contents": [
+          "fonts/montserrat-100-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "poppins",
@@ -2441,7 +2940,23 @@
           "objectKey": "public/iptrust/font-poppins-600/69c270649f2999a1ee349f235db888374084192ef7d750f51fa07d7ea2941f24/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-poppins-600/69c270649f2999a1ee349f235db888374084192ef7d750f51fa07d7ea2941f24/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "poppins-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 147709,
+        "sha256": "15202db2ad9dee95199f8699a01bcd65ac2477abcb3e510009b4c17a868d8612",
+        "objectKey": "public/iptrust/font-package-poppins/15202db2ad9dee95199f8699a01bcd65ac2477abcb3e510009b4c17a868d8612/poppins-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-poppins/15202db2ad9dee95199f8699a01bcd65ac2477abcb3e510009b4c17a868d8612/poppins-font-package.zip",
+        "contents": [
+          "fonts/poppins-400.ttf",
+          "fonts/poppins-600.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "lato",
@@ -2524,7 +3039,23 @@
           "objectKey": "public/iptrust/font-lato-600/bc498145054c644e4f54705b0c5e91269528ad6d2767f6c7c8125350b659c92a/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-lato-600/bc498145054c644e4f54705b0c5e91269528ad6d2767f6c7c8125350b659c92a/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "lato-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 680805,
+        "sha256": "e2a61e43f7203fd4d1825fdfd1bd2ff239f733cf26a70f8d2c3b452deb9b121d",
+        "objectKey": "public/iptrust/font-package-lato/e2a61e43f7203fd4d1825fdfd1bd2ff239f733cf26a70f8d2c3b452deb9b121d/lato-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-lato/e2a61e43f7203fd4d1825fdfd1bd2ff239f733cf26a70f8d2c3b452deb9b121d/lato-font-package.zip",
+        "contents": [
+          "fonts/lato-400.ttf",
+          "fonts/lato-600.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "roboto-condensed",
@@ -2589,7 +3120,22 @@
           "objectKey": "public/iptrust/font-roboto-condensed-100-900/2cd2593cc4c5f72bcd85391ca3a325025828c48d0485dc9362ca4cd7ac5c1c57/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-roboto-condensed-100-900/2cd2593cc4c5f72bcd85391ca3a325025828c48d0485dc9362ca4cd7ac5c1c57/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "roboto-condensed-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 216818,
+        "sha256": "6096500f35500c9ca7b37ef8263bed0b5fe84ba3d22353d33bb59287adf6b355",
+        "objectKey": "public/iptrust/font-package-roboto-condensed/6096500f35500c9ca7b37ef8263bed0b5fe84ba3d22353d33bb59287adf6b355/roboto-condensed-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-roboto-condensed/6096500f35500c9ca7b37ef8263bed0b5fe84ba3d22353d33bb59287adf6b355/roboto-condensed-font-package.zip",
+        "contents": [
+          "fonts/roboto-condensed-100-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "roboto-mono",
@@ -2654,7 +3200,22 @@
           "objectKey": "public/iptrust/font-roboto-mono-100-900/aa2e2c9a6bf0af7d695333c2033d21211b55ec835817b063f25566c15564b44d/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-roboto-mono-100-900/aa2e2c9a6bf0af7d695333c2033d21211b55ec835817b063f25566c15564b44d/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "roboto-mono-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 133075,
+        "sha256": "1fb9c7416ab6870ae4e016768eb5fa826952b12c15e35e5c461b54b744904246",
+        "objectKey": "public/iptrust/font-package-roboto-mono/1fb9c7416ab6870ae4e016768eb5fa826952b12c15e35e5c461b54b744904246/roboto-mono-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-roboto-mono/1fb9c7416ab6870ae4e016768eb5fa826952b12c15e35e5c461b54b744904246/roboto-mono-font-package.zip",
+        "contents": [
+          "fonts/roboto-mono-100-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "oswald",
@@ -2719,7 +3280,22 @@
           "objectKey": "public/iptrust/font-oswald-200-700/720b7f67f186a4dd99a54925f63ab62fd0b3a34bdd7ae76702055780cf31de35/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-oswald-200-700/720b7f67f186a4dd99a54925f63ab62fd0b3a34bdd7ae76702055780cf31de35/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "oswald-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 95025,
+        "sha256": "9d7b1df0c3bb9ec6aa6d079b4b6127c13ce4c1957e3ff1c19eb03fecd96922f0",
+        "objectKey": "public/iptrust/font-package-oswald/9d7b1df0c3bb9ec6aa6d079b4b6127c13ce4c1957e3ff1c19eb03fecd96922f0/oswald-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-oswald/9d7b1df0c3bb9ec6aa6d079b4b6127c13ce4c1957e3ff1c19eb03fecd96922f0/oswald-font-package.zip",
+        "contents": [
+          "fonts/oswald-200-700.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "noto-sans",
@@ -2786,7 +3362,22 @@
           "objectKey": "public/iptrust/font-noto-sans-100-900/330060595b73fce38c9ceded27a8e4aec048f502738875251a4190476aa3bcb5/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-noto-sans-100-900/330060595b73fce38c9ceded27a8e4aec048f502738875251a4190476aa3bcb5/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "noto-sans-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 1197049,
+        "sha256": "85120b613f390fd7b4366e2ad700cb538d9f4ffbfb6e8b3243ff25cd17fb270c",
+        "objectKey": "public/iptrust/font-package-noto-sans/85120b613f390fd7b4366e2ad700cb538d9f4ffbfb6e8b3243ff25cd17fb270c/noto-sans-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-noto-sans/85120b613f390fd7b4366e2ad700cb538d9f4ffbfb6e8b3243ff25cd17fb270c/noto-sans-font-package.zip",
+        "contents": [
+          "fonts/noto-sans-100-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "raleway",
@@ -2851,7 +3442,22 @@
           "objectKey": "public/iptrust/font-raleway-100-900/f4b6510f2036393c06d1a29826d8b02db6fcb393b3b736bf901c05f5339971d4/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-raleway-100-900/f4b6510f2036393c06d1a29826d8b02db6fcb393b3b736bf901c05f5339971d4/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "raleway-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 170531,
+        "sha256": "9f943f1768f9b823c0f2e3895986e23d804ae4f7e9fc76d837726c31f910b3a3",
+        "objectKey": "public/iptrust/font-package-raleway/9f943f1768f9b823c0f2e3895986e23d804ae4f7e9fc76d837726c31f910b3a3/raleway-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-raleway/9f943f1768f9b823c0f2e3895986e23d804ae4f7e9fc76d837726c31f910b3a3/raleway-font-package.zip",
+        "contents": [
+          "fonts/raleway-100-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "nunito-sans",
@@ -2916,7 +3522,22 @@
           "objectKey": "public/iptrust/font-nunito-sans-100-900/767ba21d48089bf3d3b6545fe3eafc3e08940b563a9f70fa630101772ddb1a71/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-nunito-sans-100-900/767ba21d48089bf3d3b6545fe3eafc3e08940b563a9f70fa630101772ddb1a71/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "nunito-sans-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 265501,
+        "sha256": "619c19da99e20baac9e37b9f7478371014293ed40b6197e3e3e573b0ab29c413",
+        "objectKey": "public/iptrust/font-package-nunito-sans/619c19da99e20baac9e37b9f7478371014293ed40b6197e3e3e573b0ab29c413/nunito-sans-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-nunito-sans/619c19da99e20baac9e37b9f7478371014293ed40b6197e3e3e573b0ab29c413/nunito-sans-font-package.zip",
+        "contents": [
+          "fonts/nunito-sans-100-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "roboto-slab",
@@ -2981,7 +3602,22 @@
           "objectKey": "public/iptrust/font-roboto-slab-100-900/c783a1fc70945c5a3b7cd083004d645fa392f83b2b76668fe8eccc47413630f9/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-roboto-slab-100-900/c783a1fc70945c5a3b7cd083004d645fa392f83b2b76668fe8eccc47413630f9/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "roboto-slab-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 153770,
+        "sha256": "4bf21960aa582de24f0a9894bfd713c4912e1de56d63a80b406259a9053f8f02",
+        "objectKey": "public/iptrust/font-package-roboto-slab/4bf21960aa582de24f0a9894bfd713c4912e1de56d63a80b406259a9053f8f02/roboto-slab-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-roboto-slab/4bf21960aa582de24f0a9894bfd713c4912e1de56d63a80b406259a9053f8f02/roboto-slab-font-package.zip",
+        "contents": [
+          "fonts/roboto-slab-100-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "rubik",
@@ -3046,7 +3682,22 @@
           "objectKey": "public/iptrust/font-rubik-100-900/f69d6651f2ebdecafb1329a62b9a384b40dab5314a9bd416ac480256b0f7b124/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-rubik-100-900/f69d6651f2ebdecafb1329a62b9a384b40dab5314a9bd416ac480256b0f7b124/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "rubik-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 150569,
+        "sha256": "69b16dee549e6e69ae3bcfb3c0cea78c3ec9c406f437fca6a0a710423bac158c",
+        "objectKey": "public/iptrust/font-package-rubik/69b16dee549e6e69ae3bcfb3c0cea78c3ec9c406f437fca6a0a710423bac158c/rubik-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-rubik/69b16dee549e6e69ae3bcfb3c0cea78c3ec9c406f437fca6a0a710423bac158c/rubik-font-package.zip",
+        "contents": [
+          "fonts/rubik-100-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "ubuntu",
@@ -3129,7 +3780,23 @@
           "objectKey": "public/iptrust/font-ubuntu-700/13618c78e2826512a7391d1bd857dcdd3ac5dc88abc225e7fecce83473f1943c/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-ubuntu-700/13618c78e2826512a7391d1bd857dcdd3ac5dc88abc225e7fecce83473f1943c/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "ubuntu-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 335113,
+        "sha256": "6efc3585647848ddcfe44a72c0693b601ff5da3fc1ee06e2723632e160bc3a70",
+        "objectKey": "public/iptrust/font-package-ubuntu/6efc3585647848ddcfe44a72c0693b601ff5da3fc1ee06e2723632e160bc3a70/ubuntu-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-ubuntu/6efc3585647848ddcfe44a72c0693b601ff5da3fc1ee06e2723632e160bc3a70/ubuntu-font-package.zip",
+        "contents": [
+          "fonts/ubuntu-400.ttf",
+          "fonts/ubuntu-700.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "manrope",
@@ -3194,7 +3861,22 @@
           "objectKey": "public/iptrust/font-manrope-200-800/1fc8c87309f7b284eb2c097f28e1eb26e9d52a5b4bd77dd73989f8334271eb91/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-manrope-200-800/1fc8c87309f7b284eb2c097f28e1eb26e9d52a5b4bd77dd73989f8334271eb91/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "manrope-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 71999,
+        "sha256": "f40628ddd2c1cefc4c4d924e6f1cc45f34c1b3a154eefc0c4405c8a8b3d9a00d",
+        "objectKey": "public/iptrust/font-package-manrope/f40628ddd2c1cefc4c4d924e6f1cc45f34c1b3a154eefc0c4405c8a8b3d9a00d/manrope-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-manrope/f40628ddd2c1cefc4c4d924e6f1cc45f34c1b3a154eefc0c4405c8a8b3d9a00d/manrope-font-package.zip",
+        "contents": [
+          "fonts/manrope-200-800.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "outfit",
@@ -3259,7 +3941,22 @@
           "objectKey": "public/iptrust/font-outfit-100-900/bae0c63ccb6fa58603d2eec2635e94bd4570f89eacb8a06af4c1dc4e3717b7a1/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-outfit-100-900/bae0c63ccb6fa58603d2eec2635e94bd4570f89eacb8a06af4c1dc4e3717b7a1/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "outfit-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 60299,
+        "sha256": "9a9a3ea3a385e365b93c541eb93abce83d8e553fca58441a6aa967049ba3eeb0",
+        "objectKey": "public/iptrust/font-package-outfit/9a9a3ea3a385e365b93c541eb93abce83d8e553fca58441a6aa967049ba3eeb0/outfit-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-outfit/9a9a3ea3a385e365b93c541eb93abce83d8e553fca58441a6aa967049ba3eeb0/outfit-font-package.zip",
+        "contents": [
+          "fonts/outfit-100-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "lora",
@@ -3324,7 +4021,22 @@
           "objectKey": "public/iptrust/font-lora-400-700/e38d60b705ad85f3629d2e9c896ace7fcf08ccea40c1b0b6143a54da97b5d7c2/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-lora-400-700/e38d60b705ad85f3629d2e9c896ace7fcf08ccea40c1b0b6143a54da97b5d7c2/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "lora-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 111228,
+        "sha256": "f07b782d75aa8622c2f23d15357ee8cdaf206a9cbf0c8a4b33f279d94ac7118b",
+        "objectKey": "public/iptrust/font-package-lora/f07b782d75aa8622c2f23d15357ee8cdaf206a9cbf0c8a4b33f279d94ac7118b/lora-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-lora/f07b782d75aa8622c2f23d15357ee8cdaf206a9cbf0c8a4b33f279d94ac7118b/lora-font-package.zip",
+        "contents": [
+          "fonts/lora-400-700.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "bebas-neue",
@@ -3389,7 +4101,22 @@
           "objectKey": "public/iptrust/font-bebas-neue-400/0471a2502b8b80bc310de9391ab8fb24d828241941a870917a6c7f39533f934f/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-bebas-neue-400/0471a2502b8b80bc310de9391ab8fb24d828241941a870917a6c7f39533f934f/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "bebas-neue-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 32734,
+        "sha256": "19556c82be395d5288ed5f99be7bd8ce9cf5e2178659f7db157667c7e44f6df9",
+        "objectKey": "public/iptrust/font-package-bebas-neue/19556c82be395d5288ed5f99be7bd8ce9cf5e2178659f7db157667c7e44f6df9/bebas-neue-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-bebas-neue/19556c82be395d5288ed5f99be7bd8ce9cf5e2178659f7db157667c7e44f6df9/bebas-neue-font-package.zip",
+        "contents": [
+          "fonts/bebas-neue-400.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "figtree",
@@ -3454,7 +4181,22 @@
           "objectKey": "public/iptrust/font-figtree-100-900/da4f3e5905e86b1dc5f01a804ad6f207f038129a465258f04edfba5bedd5f221/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-figtree-100-900/da4f3e5905e86b1dc5f01a804ad6f207f038129a465258f04edfba5bedd5f221/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "figtree-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 39410,
+        "sha256": "31c143dd386c9593ed98774fed4103d0084e36b88a245d3358c308282646422f",
+        "objectKey": "public/iptrust/font-package-figtree/31c143dd386c9593ed98774fed4103d0084e36b88a245d3358c308282646422f/figtree-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-figtree/31c143dd386c9593ed98774fed4103d0084e36b88a245d3358c308282646422f/figtree-font-package.zip",
+        "contents": [
+          "fonts/figtree-100-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "plus-jakarta-sans",
@@ -3519,7 +4261,22 @@
           "objectKey": "public/iptrust/font-plus-jakarta-sans-200-800/9d893d8128ef0fb4060774a791e10d531a4f5d3438e4478fae82719c2a752fac/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-plus-jakarta-sans-200-800/9d893d8128ef0fb4060774a791e10d531a4f5d3438e4478fae82719c2a752fac/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "plus-jakarta-sans-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 83479,
+        "sha256": "75322a265acfd62eda79971a07338ee84699ffb37d58c57875aeb3dbf0c3231f",
+        "objectKey": "public/iptrust/font-package-plus-jakarta-sans/75322a265acfd62eda79971a07338ee84699ffb37d58c57875aeb3dbf0c3231f/plus-jakarta-sans-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-plus-jakarta-sans/75322a265acfd62eda79971a07338ee84699ffb37d58c57875aeb3dbf0c3231f/plus-jakarta-sans-font-package.zip",
+        "contents": [
+          "fonts/plus-jakarta-sans-200-800.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "bricolage-grotesque",
@@ -3584,7 +4341,22 @@
           "objectKey": "public/iptrust/font-bricolage-grotesque-200-800/419c4dbab8444b79460d66f2163e8fc37134bd84f6f19020b2f3a9172cb77229/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-bricolage-grotesque-200-800/419c4dbab8444b79460d66f2163e8fc37134bd84f6f19020b2f3a9172cb77229/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "bricolage-grotesque-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 256697,
+        "sha256": "cbf321b2b460a2c53c45fbfaeae8d6c3e80e7a3e1a182a0c2fb75ed7738bbdd8",
+        "objectKey": "public/iptrust/font-package-bricolage-grotesque/cbf321b2b460a2c53c45fbfaeae8d6c3e80e7a3e1a182a0c2fb75ed7738bbdd8/bricolage-grotesque-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-bricolage-grotesque/cbf321b2b460a2c53c45fbfaeae8d6c3e80e7a3e1a182a0c2fb75ed7738bbdd8/bricolage-grotesque-font-package.zip",
+        "contents": [
+          "fonts/bricolage-grotesque-200-800.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     },
     {
       "id": "public-sans",
@@ -3649,7 +4421,22 @@
           "objectKey": "public/iptrust/font-public-sans-100-900/ce9553113783e448b21d201c0370fc8d521329104fd92be68230d177e9f33502/demo.woff2",
           "mediaUrl": "https://media.apuch.art/public/iptrust/font-public-sans-100-900/ce9553113783e448b21d201c0370fc8d521329104fd92be68230d177e9f33502/demo.woff2"
         }
-      ]
+      ],
+      "package": {
+        "filename": "public-sans-font-package.zip",
+        "mimeType": "application/zip",
+        "bytes": 56369,
+        "sha256": "7d93711fef7829e3917f8a56fb131f29ce5ae99afd36a3d56744e0bade123239",
+        "objectKey": "public/iptrust/font-package-public-sans/7d93711fef7829e3917f8a56fb131f29ce5ae99afd36a3d56744e0bade123239/public-sans-font-package.zip",
+        "mediaUrl": "https://media.apuch.art/public/iptrust/font-package-public-sans/7d93711fef7829e3917f8a56fb131f29ce5ae99afd36a3d56744e0bade123239/public-sans-font-package.zip",
+        "contents": [
+          "fonts/public-sans-100-900.ttf",
+          "LICENSE.txt",
+          "PROVENANCE.md",
+          "README.md",
+          "manifest.json"
+        ]
+      }
     }
   ]
 }

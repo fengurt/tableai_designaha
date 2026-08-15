@@ -169,11 +169,11 @@
     "standalone"
   ],
   "version": {
-    "hash": "f957d898c3b8f4fdccbddb3988bd3f2d78583e7b",
-    "shortHash": "f957d89",
-    "date": "2026-08-15T20:30:21+08:00",
-    "message": "fix: adapt font directory for medium screens",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/f957d898c3b8f4fdccbddb3988bd3f2d78583e7b"
+    "hash": "82103e8430d317daa665bb7a738460b142479c20",
+    "shortHash": "82103e8",
+    "date": "2026-08-15T20:56:15+08:00",
+    "message": "feat: deliver full font downloads via CDN",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/82103e8430d317daa665bb7a738460b142479c20"
   },
   "historyUrl": "api/history/xinzhi-travel.json",
   "history": [

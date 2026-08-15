@@ -1,5 +1,12 @@
 [
   {
+    "hash": "82103e8430d317daa665bb7a738460b142479c20",
+    "shortHash": "82103e8",
+    "date": "2026-08-15T20:56:15+08:00",
+    "message": "feat: deliver full font downloads via CDN",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/82103e8430d317daa665bb7a738460b142479c20"
+  },
+  {
     "hash": "f957d898c3b8f4fdccbddb3988bd3f2d78583e7b",
     "shortHash": "f957d89",
     "date": "2026-08-15T20:30:21+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-07-24T09:25:16+08:00",
     "message": "feat: publish OPC Global brand assets",
     "url": "https://github.com/fengurt/tableai_designaha/commit/735ff5e693bb2ee2fe4dbd66a2aa337e1d8368bf"
-  },
-  {
-    "hash": "fa30da14e08bc70e600864c069a2cc55cf38631f",
-    "shortHash": "fa30da1",
-    "date": "2026-07-23T09:50:41+08:00",
-    "message": "feat: move Sidera to pale manuscript theme",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/fa30da14e08bc70e600864c069a2cc55cf38631f"
   }
 ]
