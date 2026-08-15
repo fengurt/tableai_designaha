@@ -140,11 +140,11 @@
     "standalone"
   ],
   "version": {
-    "hash": "5923402edf134c7ee5c4ac5db5003e829dd4f5bb",
-    "shortHash": "5923402",
-    "date": "2026-08-15T16:57:04+08:00",
-    "message": "feat: archive font license provenance",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/5923402edf134c7ee5c4ac5db5003e829dd4f5bb"
+    "hash": "f957d898c3b8f4fdccbddb3988bd3f2d78583e7b",
+    "shortHash": "f957d89",
+    "date": "2026-08-15T20:30:21+08:00",
+    "message": "fix: adapt font directory for medium screens",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/f957d898c3b8f4fdccbddb3988bd3f2d78583e7b"
   },
   "historyUrl": "api/history/inucleus.json",
   "history": [

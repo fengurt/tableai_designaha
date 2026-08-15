@@ -426,6 +426,10 @@ function fontLibraryRows(catalog) {
   };
   return catalog.fonts.map((font) => {
     const searchText = [font.name, font.nameZh, font.category.zh, font.category.en, font.useCases.zh, font.useCases.en, font.source.publisher, font.scripts.join(" ")].filter(Boolean).join(" ").toLowerCase();
+    const downloads = font.assets.map((asset) => {
+      const format = extname(asset.sourceFilename || "").slice(1).toUpperCase() || "FONT";
+      return `<a href="${escapeBuildHtml(asset.sourceMediaUrl)}" download="${escapeBuildHtml(asset.sourceFilename)}" title="${escapeBuildHtml(`${asset.sourceFilename} · ${formatFileSize(asset.sourceBytes)}`)}"><span data-i18n="fonts.download">下载</span> ${format} · ${formatFileSize(asset.sourceBytes)}</a>`;
+    }).join("");
     return `<article class="font-specimen" id="font-${escapeBuildHtml(font.id)}" data-font-id="${escapeBuildHtml(font.id)}" data-font-group="${escapeBuildHtml(font.group)}" data-font-category="${escapeBuildHtml(font.categoryKey || "sans")}" data-font-popularity="${font.popularity || ""}" data-font-search-text="${escapeBuildHtml(searchText)}">
     <header class="font-specimen-head">
       <div>
@@ -436,6 +440,7 @@ function fontLibraryRows(catalog) {
       <div class="font-specimen-actions">
         <a href="${escapeBuildHtml(font.source.projectUrl)}" target="_blank" rel="noreferrer" data-i18n="fonts.source">官方出处</a>
         <a href="${escapeBuildHtml(font.license.url)}" target="_blank" rel="noreferrer">${escapeBuildHtml(font.license.spdx)} · <span data-i18n="fonts.commercial">可商用</span></a>
+        ${downloads}
         <button type="button" data-copy-font="${escapeBuildHtml(font.id)}" data-i18n="fonts.copyCss">复制 CSS</button>
       </div>
     </header>
@@ -4692,6 +4697,7 @@ const i18n = {
     "fonts.source": "官方出处",
     "fonts.license": "许可证",
     "fonts.commercial": "可商用",
+    "fonts.download": "下载",
     "fonts.copyCss": "复制 CSS",
     "fonts.cssCopied": "已复制字体 CSS",
     "fonts.ready": "滚动到此处加载真实字体",
@@ -4910,6 +4916,7 @@ const i18n = {
     "fonts.source": "Official source",
     "fonts.license": "License",
     "fonts.commercial": "Commercial use",
+    "fonts.download": "Download",
     "fonts.copyCss": "Copy CSS",
     "fonts.cssCopied": "Font CSS copied",
     "fonts.ready": "Scroll here to load the live font",

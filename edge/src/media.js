@@ -36,7 +36,7 @@ function cacheResult(response, state, timing = "", method = "GET") {
   return new Response(method === "HEAD" ? null : response.body, { status: response.status, statusText: response.statusText, headers });
 }
 
-function objectResponse(object, { isPrivate = false, range = null, totalSize = object.size, method = "GET" } = {}) {
+function objectResponse(object, { isPrivate = false, range = null, totalSize = object.size, method = "GET", downloadName = "" } = {}) {
   const headers = new Headers();
   object.writeHttpMetadata(headers);
   headers.set("ETag", object.httpEtag);
@@ -44,6 +44,7 @@ function objectResponse(object, { isPrivate = false, range = null, totalSize = o
   headers.set("X-Content-Type-Options", "nosniff");
   headers.set("Cache-Control", isPrivate ? "private, no-store" : "public, max-age=31536000, immutable");
   headers.set("Vary", "Accept");
+  if (downloadName) headers.set("Content-Disposition", `attachment; filename="${downloadName.replace(/[^a-zA-Z0-9._-]/g, "_")}"`);
   if (range) {
     headers.set("Content-Range", `bytes ${range.offset}-${range.offset + range.length - 1}/${totalSize}`);
     headers.set("Content-Length", String(range.length));
@@ -86,6 +87,7 @@ export async function serveMedia(request, env) {
   if (isPrivate && !(await signed(request, env, pathname))) return json(request, { error: "invalid_or_expired_signature" }, { status: 403 }, true);
 
   const key = pathname.slice(1);
+  const downloadName = pathname.startsWith("/public/iptrust/font-source-") ? pathname.split("/").at(-1) : "";
   const bucket = isPrivate ? env.ORIGINALS : env.PREVIEWS;
   const size = url.searchParams.get("size") || "original";
   const rangeHeader = request.headers.get("range");
@@ -93,7 +95,7 @@ export async function serveMedia(request, env) {
   const cache = caches.default;
   const cacheKey = mediaCacheKey(request, pathname, size, format);
 
-  if (isPublic && !rangeHeader) {
+  if (isPublic && !rangeHeader && request.method === "GET") {
     const cached = await cache.match(cacheKey);
     if (cached) return cacheResult(cached, "HIT", `total;dur=${Date.now() - startedAt}`, request.method);
   }
@@ -101,7 +103,7 @@ export async function serveMedia(request, env) {
   if (isPublic && WIDTHS[size] && format !== "original" && !rangeHeader && request.method === "GET") {
     const persisted = await env.PREVIEWS.get(variantKey(key, size, format));
     if (persisted) {
-      const response = objectResponse(persisted);
+      const response = objectResponse(persisted, { downloadName });
       await cache.put(cacheKey, response.clone());
       return cacheResult(response, "MISS", `r2;dur=${Date.now() - startedAt}, variant;desc=persisted`);
     }
@@ -109,7 +111,7 @@ export async function serveMedia(request, env) {
     const object = await bucket.get(key);
     const contentType = object?.httpMetadata?.contentType || "";
     const canTransform = object && /^image\/(png|jpeg|webp|avif)$/i.test(contentType) && object.size <= 20 * 1024 * 1024 && env.IMAGES;
-    if (!canTransform) return object ? cacheResult(objectResponse(object), "BYPASS", `r2;dur=${Date.now() - startedAt}`) : json(request, { error: "not_found" }, { status: 404 });
+    if (!canTransform) return object ? cacheResult(objectResponse(object, { downloadName }), "BYPASS", `r2;dur=${Date.now() - startedAt}`) : json(request, { error: "not_found" }, { status: 404 });
 
     const transformed = (await env.IMAGES.input(object.body)
       .transform({ width: WIDTHS[size], fit: "scale-down" })
@@ -130,12 +132,12 @@ export async function serveMedia(request, env) {
     if (!range) return new Response(null, { status: 416, headers: { "Content-Range": `bytes */${head.size}` } });
     const object = await bucket.get(key, { range });
     if (!object) return json(request, { error: "not_found" }, { status: 404 });
-    return cacheResult(objectResponse(object, { isPrivate, range, totalSize: head.size, method: request.method }), "BYPASS", `r2;dur=${Date.now() - startedAt}`);
+    return cacheResult(objectResponse(object, { isPrivate, range, totalSize: head.size, method: request.method, downloadName }), "BYPASS", `r2;dur=${Date.now() - startedAt}`);
   }
 
   const object = request.method === "HEAD" ? await bucket.head(key) : await bucket.get(key);
   if (!object) return json(request, { error: "not_found" }, { status: 404 });
-  const response = objectResponse(object, { isPrivate, method: request.method });
+  const response = objectResponse(object, { isPrivate, method: request.method, downloadName });
   if (isPublic && request.method === "GET") await cache.put(cacheKey, response.clone());
   return cacheResult(response, isPrivate ? "BYPASS" : "MISS", `r2;dur=${Date.now() - startedAt}`);
 }

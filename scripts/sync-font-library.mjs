@@ -15,6 +15,33 @@ const mediaBase = process.env.MEDIA_BASE_URL || "https://media.apuch.art";
 const upload = process.argv.includes("--upload");
 const verifiedAt = process.env.FONT_VERIFIED_AT || new Date().toISOString().slice(0, 10);
 
+const sourceMimeTypes = {
+  ".otf": "font/otf",
+  ".ttc": "font/collection",
+  ".ttf": "font/ttf",
+  ".woff": "font/woff",
+  ".woff2": "font/woff2",
+};
+
+function normalizedWeight(weight) {
+  return String(weight).trim().replaceAll(" ", "-");
+}
+
+async function remoteObjectMatches(url, { bytes, mimeType, filename = "" }) {
+  try {
+    const response = await fetch(url, { headers: { Range: "bytes=0-0" } });
+    const responseType = (response.headers.get("content-type") || "").split(";", 1)[0];
+    const disposition = response.headers.get("content-disposition") || "";
+    const totalBytes = Number((response.headers.get("content-range") || "").split("/")[1]);
+    return response.status === 206
+      && totalBytes === bytes
+      && responseType === mimeType
+      && (!filename || disposition.includes(filename));
+  } catch {
+    return false;
+  }
+}
+
 const samples = {
   zh: "高楼宾客似曾识，日光底下无新事",
   en: "Building Tomorrow, Today.",
@@ -501,7 +528,7 @@ for (const definition of definitions) {
     const sourcePath = join(sourceDir, `${definition.id}-${index}${extension}`);
     const sourceUrl = `https://raw.githubusercontent.com/${repository.repo}/${revision}/${file.path.replaceAll("[", "%5B").replaceAll("]", "%5D")}`;
     const sourceBuffer = await download(sourceUrl, sourcePath);
-    const subsetPath = join(outputDir, `${definition.id}-${String(file.weight).replaceAll(" ", "-")}.woff2`);
+    const subsetPath = join(outputDir, `${definition.id}-${normalizedWeight(file.weight)}.woff2`);
     const subsetMetaPath = `${subsetPath}.meta.json`;
     const buildKey = sha256(Buffer.from(JSON.stringify({
       pipelineVersion: 2,
@@ -553,8 +580,12 @@ for (const definition of definitions) {
     }
     const buffer = await readFile(subsetPath);
     const digest = sha256(buffer);
-    const assetId = `font-${definition.id}-${String(file.weight).replaceAll(" ", "-")}`;
+    const assetId = `font-${definition.id}-${normalizedWeight(file.weight)}`;
     const objectKey = `public/iptrust/${assetId}/${digest}/demo.woff2`;
+    const sourceDigest = sha256(sourceBuffer);
+    const sourceFilename = `${definition.id}-${normalizedWeight(file.weight)}${extension.toLowerCase()}`;
+    const sourceObjectKey = `public/iptrust/font-source-${definition.id}-${normalizedWeight(file.weight)}/${sourceDigest}/${sourceFilename}`;
+    const sourceMimeType = sourceMimeTypes[extension.toLowerCase()] || "application/octet-stream";
     const asset = {
       id: assetId,
       weight: file.weight,
@@ -562,13 +593,27 @@ for (const definition of definitions) {
       mimeType: "font/woff2",
       bytes: buffer.length,
       sha256: digest,
-      sourceSha256: sha256(sourceBuffer),
+      sourceSha256: sourceDigest,
       sourceUrl,
+      sourceFilename,
+      sourceMimeType,
+      sourceBytes: sourceBuffer.length,
+      sourceObjectKey,
+      sourceMediaUrl: `${mediaBase}/${sourceObjectKey}`,
       objectKey,
       mediaUrl: `${mediaBase}/${objectKey}`,
     };
     if (upload) {
-      run("npx", ["wrangler", "r2", "object", "put", `iptrust-media-preview/${objectKey}`, "--remote", "--config", "edge/wrangler.toml", "--file", subsetPath, "--content-type", "font/woff2", "--cache-control", "public, max-age=31536000, immutable", "--force"]);
+      const [demoExists, sourceExists] = await Promise.all([
+        remoteObjectMatches(asset.mediaUrl, { bytes: asset.bytes, mimeType: asset.mimeType }),
+        remoteObjectMatches(asset.sourceMediaUrl, { bytes: asset.sourceBytes, mimeType: asset.sourceMimeType, filename: asset.sourceFilename }),
+      ]);
+      if (!demoExists) {
+        run("npx", ["wrangler", "r2", "object", "put", `iptrust-media-preview/${objectKey}`, "--remote", "--config", "edge/wrangler.toml", "--file", subsetPath, "--content-type", "font/woff2", "--cache-control", "public, max-age=31536000, immutable", "--force"]);
+      }
+      if (!sourceExists) {
+        run("npx", ["wrangler", "r2", "object", "put", `iptrust-media-preview/${sourceObjectKey}`, "--remote", "--config", "edge/wrangler.toml", "--file", sourcePath, "--content-type", sourceMimeType, "--content-disposition", `attachment; filename=\"${sourceFilename}\"`, "--cache-control", "public, max-age=31536000, immutable", "--force"]);
+      }
     }
     assets.push(asset);
   }
@@ -612,12 +657,14 @@ const payload = {
     en: samples.en,
   },
   performance: {
-    delivery: "immutable-r2-woff2",
+    delivery: "immutable-r2-cdn",
     loading: "viewport-lazy",
     subset: "specimen-glyphs-only",
+    downloads: "full-source-on-demand",
     variableAxes: "weight-only-where-supported",
     totalDemoBytes: fonts.flatMap((font) => font.assets).reduce((sum, asset) => sum + asset.bytes, 0),
     largestDemoBytes: Math.max(...fonts.flatMap((font) => font.assets).map((asset) => asset.bytes)),
+    totalSourceBytes: fonts.flatMap((font) => font.assets).reduce((sum, asset) => sum + asset.sourceBytes, 0),
   },
   licenseNotice: {
     zh: "字体版权归各自作者所有。商业使用、嵌入、修改与再分发须遵守对应许可证；字体文件不可单独售卖。",
