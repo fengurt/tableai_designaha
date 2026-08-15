@@ -2941,6 +2941,7 @@ p { line-height: 1.65; }
 .font-directory-scope { grid-column: 1 / -1; margin: 4px 0 0; color: var(--muted); font-size: 11px; }
 .font-directory-toolbar { position: sticky; top: 67px; z-index: 16; display: grid; grid-template-columns: minmax(220px, 1fr) auto minmax(190px, .42fr) auto; gap: 20px; align-items: end; padding: 14px 0; border-bottom: 1px solid var(--ink); background: color-mix(in srgb, var(--paper) 94%, transparent); backdrop-filter: blur(14px); }
 .font-directory-toolbar label { display: flex; align-items: center; gap: 10px; margin: 0; color: var(--muted); font-size: 11px; font-weight: 720; }
+.font-directory-toolbar label > span { flex: 0 0 auto; white-space: nowrap; }
 .font-directory-toolbar input[type="search"] { width: 100%; min-height: 38px; padding: 7px 2px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; color: var(--ink); }
 .font-directory-toolbar input[type="range"] { flex: 1; padding: 0; accent-color: var(--ink); }
 .font-directory-toolbar select { width: 72px; min-height: 36px; padding: 5px; background: transparent; }
@@ -3078,6 +3079,7 @@ p { line-height: 1.65; }
   color: var(--ink);
   font-size: 11px;
   font-weight: 760;
+  white-space: nowrap;
   text-decoration: none;
 }
 .font-specimen-actions a:hover,
@@ -4448,6 +4450,31 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
 @media (min-width: 761px) and (max-width: 1080px) {
   .hub-hero { grid-template-columns: 1fr; min-height: auto; }
   .ip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .font-directory-main { width: min(100% - 48px, 1420px); }
+  .font-directory-toolbar { grid-template-columns: minmax(0, 1fr) auto; gap: 12px 24px; }
+  .font-directory-toolbar .font-directory-search { grid-column: 1; grid-row: 1; }
+  .font-directory-toolbar .font-filter { grid-column: 2; grid-row: 1; }
+  .font-directory-toolbar .font-control-size { grid-column: 1; grid-row: 2; }
+  .font-directory-toolbar > label:last-child { grid-column: 2; grid-row: 2; justify-self: end; }
+  .font-directory-layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .font-category-list {
+    position: sticky;
+    top: 181px;
+    z-index: 14;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+    background: color-mix(in srgb, var(--paper) 96%, transparent);
+    backdrop-filter: blur(14px);
+  }
+  .font-category-list strong { display: none; }
+  .font-category-list button { flex: 1 0 auto; justify-content: center; min-height: 34px; padding: 6px 14px; border: 0; border-right: 1px solid var(--line); border-bottom: 0; }
+  .font-category-list button:last-child { border-right: 0; }
+  .font-specimen { min-height: 300px; padding: 28px 0 34px; }
+  .font-specimen-head { grid-template-columns: minmax(220px, .85fr) minmax(260px, 1.15fr); gap: 16px 28px; }
+  .font-specimen-actions { grid-column: 1 / -1; justify-content: flex-start; }
+  .font-specimen-samples { margin-top: 26px; }
 }
 .brand-loading,
 .brand-load-error {

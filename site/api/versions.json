@@ -1,5 +1,12 @@
 [
   {
+    "hash": "5923402edf134c7ee5c4ac5db5003e829dd4f5bb",
+    "shortHash": "5923402",
+    "date": "2026-08-15T16:57:04+08:00",
+    "message": "feat: archive font license provenance",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/5923402edf134c7ee5c4ac5db5003e829dd4f5bb"
+  },
+  {
     "hash": "721d34a6e85da0b6334a8429a990804fa34f8024",
     "shortHash": "721d34a",
     "date": "2026-08-14T11:25:49+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-07-23T08:17:39+08:00",
     "message": "feat: streamline homepage system entries",
     "url": "https://github.com/fengurt/tableai_designaha/commit/e5029a71a21490b114fdb27e2ebea1a5b1ac0132"
-  },
-  {
-    "hash": "6f63b2069bcdacfd11655b35e842197792c58bb2",
-    "shortHash": "6f63b20",
-    "date": "2026-07-21T14:05:18+08:00",
-    "message": "feat: refine Sidera ink identity",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/6f63b2069bcdacfd11655b35e842197792c58bb2"
   }
 ]
