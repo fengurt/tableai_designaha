@@ -1569,6 +1569,7 @@ await writeFile(join(siteDir, "sitemap.xml"), `<?xml version="1.0" encoding="UTF
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>${publicOrigin}/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
   <url><loc>${publicOrigin}/directory</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>${publicOrigin}/about</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>${publicOrigin}/ip-evolution</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>${publicOrigin}/fonts</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>${publicOrigin}/library/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -1660,10 +1661,10 @@ ${commonDiscoveryHead()}
       <div class="global-results" id="globalResults" aria-live="polite"></div>
     </div>
     <nav class="top-actions" aria-label="Primary actions">
+      <a href="directory" data-i18n="nav.directory">目录</a>
+      <a href="ip-evolution" data-i18n="evolution.label">IP进化论</a>
+      <a href="about" data-i18n="nav.about">关于</a>
       <button class="api-link" type="button" id="apiConnectButton" aria-label="API connect"><span class="api-dot"></span>API</button>
-      <a href="./#agent-entry" data-i18n="portal.agentNav">Agent</a>
-      <a href="./#partner-entry" data-i18n="portal.partnerNav">Partner</a>
-      <a href="./#collab-entry" data-i18n="portal.collabNav">Collab</a>
       <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language"><span class="is-active">CN</span><span class="lang-divider">/</span><span>EN</span></button>
     </nav>
   </header>
@@ -1704,76 +1705,62 @@ ${commonDiscoveryHead()}
       </div>
       <div class="hero-index" id="heroIndex" role="region" tabindex="0" aria-label="可滚动 IP 名录 / Scrollable IP directory" aria-live="polite">${initialHeroIndexHtml}</div>
     </section>
-    <section class="system-entry" id="ip-evolution" aria-label="IPTrust system">
-      <a href="ip-evolution" class="system-entry-main" aria-labelledby="evolutionTitle">
-        <div class="evolution-copy">
-          <p class="eyebrow" data-i18n="evolution.label">IP进化论</p>
-          <h2 id="evolutionTitle" data-i18n="evolution.title">让品牌成为可管理的系统。</h2>
-        </div>
-        <div class="evolution-path" aria-label="IP Evolution framework">
-          <span data-i18n="evolution.architecture">架构</span>
-          <span data-i18n="evolution.core">内核</span>
-          <span data-i18n="evolution.expression">表达</span>
-          <span data-i18n="evolution.assets">资产</span>
-          <span data-i18n="evolution.governance">治理</span>
-        </div>
-        <span class="evolution-open" aria-hidden="true">&#8599;</span>
-      </a>
-      <a href="library/" class="system-entry-library" id="knowledge-library" aria-labelledby="libraryTitle">
-        <div class="library-entry-copy">
-          <p class="eyebrow" data-i18n="library.label">知名品牌资产</p>
-          <h2 id="libraryTitle" data-i18n="library.title">权威品牌、案例与数据。</h2>
-        </div>
-        <div class="library-entry-stats" aria-label="Library coverage">
-          <span><strong>${publicOrganizationCount}</strong><small data-i18n="library.organizations">组织</small></span>
-          <span><strong>${fortuneCount}</strong><small>Fortune 500</small></span>
-          <span><strong>${sasacCount}</strong><small data-i18n="library.centralEnterprises">中央企业</small></span>
-        </div>
-        <span class="library-entry-open" aria-hidden="true">&#8599;</span>
-      </a>
+    <section class="home-entries" aria-label="IPTrust entries">
+      <a class="home-entry" href="directory"><small data-i18n="home.directoryLabel">全部 IP</small><strong data-i18n="home.directoryTitle">IP 目录</strong><span>${indexPayload.length}</span></a>
+      <a class="home-entry" href="ip-evolution"><small data-i18n="home.systemLabel">品牌系统</small><strong data-i18n="evolution.label">IP进化论</strong><span aria-hidden="true">&#8599;</span></a>
+      <a class="home-entry" href="library/"><small data-i18n="home.libraryLabel">参考资料</small><strong data-i18n="library.label">知名品牌资产</strong><span aria-hidden="true">&#8599;</span></a>
+      <button class="home-entry home-entry-agent" type="button" data-portal-action="agent"><small>Agent</small><strong data-i18n="portal.agentAction">复制 Agent Pack</strong><span aria-hidden="true">+</span></button>
+      <p class="home-entry-status" data-portal-status="agent" aria-live="polite"></p>
     </section>
-    <section class="entry-portals" aria-label="IPTrust entries">
-      <article class="portal portal-agent" id="agent-entry">
-        <div class="portal-agent-copy">
-          <div class="agent-access-label">
-            <p class="eyebrow">Agent Access</p>
-            <span class="agent-health" data-agent-health aria-live="polite"><i></i><span data-i18n="portal.agentChecking">Checking MCP</span></span>
-          </div>
-          <h3 data-i18n="portal.agentTitle">调用品牌标准。</h3>
-          <p data-i18n="portal.agentBody">通过 MCP 或 JSON 获取主名称、品牌色、Logo、素材与出处。</p>
-          <div class="agent-protocols" aria-label="Agent endpoints">
-            <code>/mcp</code><code>/agent.json</code><code>/api/brands/{slug}.json</code>
-          </div>
-        </div>
-        <div class="agent-actions">
-          <button class="portal-action" type="button" data-portal-action="agent" data-i18n="portal.agentAction">复制 Agent Pack</button>
-          <button class="portal-secondary" type="button" data-copy-mcp-config data-i18n="portal.copyMcp">复制 MCP 配置</button>
-          <a class="portal-secondary" href="agent.json" data-i18n="portal.openAgentGuide">Agent 指南</a>
-        </div>
-        <p class="portal-status" data-portal-status="agent" aria-live="polite"></p>
-      </article>
-      <article class="portal" id="partner-entry">
-        <p class="eyebrow">Partner</p>
-        <h3 data-i18n="portal.partnerTitle">我是合伙人</h3>
-        <p data-i18n="portal.partnerBody">Key first.</p>
-        <button class="portal-action" type="button" data-portal-action="partner" data-portal-href="admin.html" data-i18n="portal.partnerAction">Key first</button>
-        <p class="portal-status" data-portal-status="partner" aria-live="polite"></p>
-      </article>
-      <article class="portal" id="collab-entry">
-        <p class="eyebrow">Collab</p>
-        <h3 data-i18n="portal.collabTitle">我想合作</h3>
-        <p data-i18n="portal.collabBody">Email</p>
-        <button class="portal-action" type="button" data-portal-action="collab" data-portal-href="mailto:hi@tableai.ai" data-i18n="portal.collabAction">Email</button>
-        <p class="portal-status" data-portal-status="collab" aria-live="polite"></p>
-      </article>
+  </main>
+  <footer class="home-footer">
+    <span>${hubNameCn} · ${hubNameEn}</span>
+    <nav aria-label="Secondary actions"><a href="about" data-i18n="nav.about">关于</a><a href="admin" data-i18n="nav.admin">管理</a><a href="mailto:hi@tableai.ai" data-i18n="portal.collabNav">合作</a></nav>
+  </footer>
+  <script src="${siteJsPath}" type="module"></script>
+</body>
+</html>`);
+
+await writeFile(join(siteDir, "about"), html`<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>关于 | ${hubName}</title>
+  <meta name="description" content="${hubName} 的产品入口、Agent 调用方式与合作说明。">
+  <link rel="canonical" href="${publicOrigin}/about">
+${commonDiscoveryHead()}
+  <link rel="stylesheet" href="${siteCssPath}">
+  <link rel="modulepreload" href="${siteJsPath}">
+</head>
+<body class="about-page">
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="${hubNameCn}"><img src="${hubLogoUrl}" alt="${hubNameCn}"></a>
+    <div class="topbar-search" role="search"><input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP"><div class="global-results" id="globalResults" aria-live="polite"></div></div>
+    <nav class="top-actions" aria-label="Primary actions">
+      <a href="directory" data-i18n="nav.directory">目录</a>
+      <a href="ip-evolution" data-i18n="evolution.label">IP进化论</a>
+      <a href="about" data-i18n="nav.about">关于</a>
+      <a href="./" class="api-link"><span class="api-dot"></span>API</a>
+      <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language"><span class="is-active">CN</span><span class="lang-divider">/</span><span>EN</span></button>
+    </nav>
+  </header>
+  <main class="about-main">
+    <header class="about-hero"><p class="eyebrow">IPTrust</p><h1 data-i18n="about.title">关于岁知社。</h1><p data-i18n="about.lead">品牌标准、资产与出处，供人和 Agent 清晰调用。</p></header>
+    <nav class="about-index" aria-label="Product entries">
+      <a href="directory"><strong data-i18n="home.directoryTitle">IP 目录</strong><span data-i18n="about.directoryBody">浏览、搜索与筛选全部 IP。</span><b>${indexPayload.length}</b></a>
+      <a href="ip-evolution"><strong data-i18n="evolution.label">IP进化论</strong><span data-i18n="about.systemBody">架构、内核、表达、资产与治理。</span><b>&#8599;</b></a>
+      <a href="library/"><strong data-i18n="library.label">知名品牌资产</strong><span data-i18n="about.libraryBody">有出处的品牌、案例、报告与数据。</span><b>${publicOrganizationCount}</b></a>
+      <a href="fonts"><strong data-i18n="fonts.label">字体参考</strong><span data-i18n="about.fontsBody">开源可商用字体与授权原文。</span><b>${fontCatalog.fonts.length}</b></a>
+    </nav>
+    <section class="about-section" id="agent">
+      <header><p class="eyebrow">Agent</p><h2 data-i18n="portal.agentTitle">调用品牌标准。</h2></header>
+      <div class="about-section-body"><p data-i18n="portal.agentBody">通过 MCP 或 JSON 获取主名称、品牌色、Logo、素材与出处。</p><div class="about-endpoints"><a href="mcp"><code>/mcp</code></a><a href="agent.json"><code>/agent.json</code></a><a href="api/brands.json"><code>/api/brands.json</code></a></div><div class="about-actions"><button class="portal-action" type="button" data-portal-action="agent" data-i18n="portal.agentAction">复制 Agent Pack</button><button class="portal-secondary" type="button" data-copy-mcp-config data-i18n="portal.copyMcp">复制 MCP 配置</button></div><p class="portal-status" data-portal-status="agent" aria-live="polite"></p></div>
     </section>
-    <section class="section-head">
-      <div>
-        <h2 data-i18n="home.sectionTitle">IP</h2>
-      </div>
-      <div class="section-actions"><a class="directory-shortcut" href="directory">筛选 / Filter</a><span id="brandCount" class="count-pill"></span></div>
+    <section class="about-section">
+      <header><p class="eyebrow" data-i18n="about.accessLabel">访问</p><h2 data-i18n="about.accessTitle">管理与合作。</h2></header>
+      <div class="about-access"><a href="admin"><small data-i18n="portal.partnerNav">合伙人</small><strong data-i18n="portal.partnerAction">Key first</strong><span>&#8599;</span></a><a href="mailto:hi@tableai.ai"><small data-i18n="portal.collabNav">合作</small><strong>hi@tableai.ai</strong><span>&#8599;</span></a></div>
     </section>
-    <section class="ip-grid" id="brandGrid" aria-live="polite"></section>
   </main>
   <script src="${siteJsPath}" type="module"></script>
 </body>
@@ -4549,6 +4536,8 @@ const i18n = {
     "hub.description": "岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。",
     "nav.manifest": "清单",
     "nav.admin": "管理",
+    "nav.directory": "目录",
+    "nav.about": "关于",
     "nav.agent": "我是 Agent",
     "nav.partner": "我是合伙人",
     "nav.collab": "我想合作",
@@ -4559,6 +4548,18 @@ const i18n = {
     "home.sectionTitle": "IP",
     "home.searchPlaceholder": "搜索 IP / Asset Key",
     "home.noResults": "没有匹配的 IP。",
+    "home.directoryLabel": "全部 IP",
+    "home.directoryTitle": "IP 目录",
+    "home.systemLabel": "品牌系统",
+    "home.libraryLabel": "参考资料",
+    "about.title": "关于岁知社。",
+    "about.lead": "品牌标准、资产与出处，供人和 Agent 清晰调用。",
+    "about.directoryBody": "浏览、搜索与筛选全部 IP。",
+    "about.systemBody": "架构、内核、表达、资产与治理。",
+    "about.libraryBody": "有出处的品牌、案例、报告与数据。",
+    "about.fontsBody": "开源可商用字体与授权原文。",
+    "about.accessLabel": "访问",
+    "about.accessTitle": "管理与合作。",
     "library.label": "知名品牌资产",
     "library.title": "权威品牌、案例与数据。",
     "library.organizations": "组织",
@@ -4767,6 +4768,8 @@ const i18n = {
     "hub.description": "IPTrust is an IP trust hub for people and agents.",
     "nav.manifest": "Manifest",
     "nav.admin": "Admin",
+    "nav.directory": "Directory",
+    "nav.about": "About",
     "nav.agent": "I am an Agent",
     "nav.partner": "I am a Partner",
     "nav.collab": "Work with Us",
@@ -4777,6 +4780,18 @@ const i18n = {
     "home.sectionTitle": "IP",
     "home.searchPlaceholder": "Search IP / Asset Key",
     "home.noResults": "No matching IP.",
+    "home.directoryLabel": "All IP",
+    "home.directoryTitle": "IP Directory",
+    "home.systemLabel": "Brand system",
+    "home.libraryLabel": "Reference",
+    "about.title": "About IPTrust.",
+    "about.lead": "Brand standards, assets, and provenance, clearly callable by people and agents.",
+    "about.directoryBody": "Browse, search, and filter every IP.",
+    "about.systemBody": "Architecture, core, expression, assets, and governance.",
+    "about.libraryBody": "Sourced brands, cases, reports, and data.",
+    "about.fontsBody": "Open-source commercial-use fonts and original licenses.",
+    "about.accessLabel": "Access",
+    "about.accessTitle": "Manage and collaborate.",
     "library.label": "KNOWN BRAND ASSETS",
     "library.title": "Authoritative brands, cases, and data.",
     "library.organizations": "Organizations",
@@ -5027,6 +5042,8 @@ function applyI18n() {
   document.documentElement.dataset.locale = currentLocale;
   if (document.body.classList.contains("hub-home")) {
     document.title = t("hub.name");
+  } else if (document.body.classList.contains("about-page")) {
+    document.title = \`\${t("nav.about")} · \${t("hub.name")}\`;
   } else if (document.querySelector(".admin")) {
     document.title = \`Admin · \${t("hub.name")}\`;
   }

@@ -1,5 +1,12 @@
 [
   {
+    "hash": "5f3b6fd902647567394c8a27e0c08aead63caf94",
+    "shortHash": "5f3b6fd",
+    "date": "2026-08-15T21:45:09+08:00",
+    "message": "feat: bundle fonts with license records",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/5f3b6fd902647567394c8a27e0c08aead63caf94"
+  },
+  {
     "hash": "82103e8430d317daa665bb7a738460b142479c20",
     "shortHash": "82103e8",
     "date": "2026-08-15T20:56:15+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-08-04T06:00:43+08:00",
     "message": "Rename 侍天 English brand name to tiansight",
     "url": "https://github.com/fengurt/tableai_designaha/commit/bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6"
-  },
-  {
-    "hash": "735ff5e693bb2ee2fe4dbd66a2aa337e1d8368bf",
-    "shortHash": "735ff5e",
-    "date": "2026-07-24T09:25:16+08:00",
-    "message": "feat: publish OPC Global brand assets",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/735ff5e693bb2ee2fe4dbd66a2aa337e1d8368bf"
   }
 ]

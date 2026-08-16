@@ -28,4 +28,14 @@ if (!page.includes('id="open-source-type"')) throw new Error("font_library_missi
 const repairPage = await readFile(join(root, "site", "ip-evolution-repair"), "utf8");
 if (!repairPage.includes('/ip-evolution?repaired=1')) throw new Error("repair_route_missing");
 
-console.log(JSON.stringify({ ok: true, redirects: cases.length, canonical: "https://apuch.art/ip-evolution" }, null, 2));
+const homePage = await readFile(join(root, "site", "index.html"), "utf8");
+if (!homePage.includes('class="home-entries"')) throw new Error("home_entries_missing");
+if (homePage.includes('id="brandGrid"')) throw new Error("home_duplicate_brand_grid");
+if (homePage.includes('class="system-entry"')) throw new Error("home_explainer_not_removed");
+
+const aboutPage = await readFile(join(root, "site", "about"), "utf8");
+if (!aboutPage.includes('class="about-page"')) throw new Error("about_page_missing");
+if (!aboutPage.includes('rel="canonical" href="https://apuch.art/about"')) throw new Error("about_canonical");
+if (!aboutPage.includes('href="mcp"') || !aboutPage.includes('href="agent.json"')) throw new Error("about_agent_docs_missing");
+
+console.log(JSON.stringify({ ok: true, redirects: cases.length, canonical: "https://apuch.art/ip-evolution", about: "https://apuch.art/about" }, null, 2));

@@ -5,7 +5,15 @@ const checks = [
   {
     name: "homepage",
     url: "https://apuch.art/",
-    expect: (response, body) => response.ok && /<title>[^<]*(?:IPTrust|岁知社)/i.test(body),
+    expect: (response, body) => response.ok
+      && /<title>[^<]*(?:IPTrust|岁知社)/i.test(body)
+      && /class="home-entries"/.test(body)
+      && !/id="brandGrid"/.test(body),
+  },
+  {
+    name: "about",
+    url: "https://apuch.art/about",
+    expect: (response, body) => response.ok && /class="about-page"/.test(body) && /href="mcp"/.test(body),
   },
   {
     name: "ip-evolution",
