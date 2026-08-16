@@ -147,11 +147,11 @@
     "parent"
   ],
   "version": {
-    "hash": "a71ca6419386b0484dd4e9e87702fcdb47ddd8fb",
-    "shortHash": "a71ca64",
-    "date": "2026-08-16T08:49:25+08:00",
-    "message": "feat: simplify IPTrust homepage",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/a71ca6419386b0484dd4e9e87702fcdb47ddd8fb"
+    "hash": "70e35b66e27f2c9897644a5762207931d6ad6288",
+    "shortHash": "70e35b6",
+    "date": "2026-08-16T08:52:54+08:00",
+    "message": "fix: serve about as HTML",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/70e35b66e27f2c9897644a5762207931d6ad6288"
   },
   "historyUrl": "api/history/youyuan-jingmeng.json",
   "history": [

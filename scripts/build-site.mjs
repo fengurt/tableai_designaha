@@ -1569,7 +1569,7 @@ await writeFile(join(siteDir, "sitemap.xml"), `<?xml version="1.0" encoding="UTF
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>${publicOrigin}/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
   <url><loc>${publicOrigin}/directory</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
-  <url><loc>${publicOrigin}/about</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>${publicOrigin}/about/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>${publicOrigin}/ip-evolution</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>${publicOrigin}/fonts</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>${publicOrigin}/library/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -1727,9 +1727,10 @@ await writeFile(join(siteDir, "about", "index.html"), html`<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="../">
   <title>关于 | ${hubName}</title>
   <meta name="description" content="${hubName} 的产品入口、Agent 调用方式与合作说明。">
-  <link rel="canonical" href="${publicOrigin}/about">
+  <link rel="canonical" href="${publicOrigin}/about/">
 ${commonDiscoveryHead()}
   <link rel="stylesheet" href="${siteCssPath}">
   <link rel="modulepreload" href="${siteJsPath}">

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://apuch.art/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
   <url><loc>https://apuch.art/directory</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
-  <url><loc>https://apuch.art/about</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://apuch.art/about/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://apuch.art/ip-evolution</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://apuch.art/fonts</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://apuch.art/library/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>

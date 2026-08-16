@@ -35,7 +35,8 @@ if (homePage.includes('class="system-entry"')) throw new Error("home_explainer_n
 
 const aboutPage = await readFile(join(root, "site", "about", "index.html"), "utf8");
 if (!aboutPage.includes('class="about-page"')) throw new Error("about_page_missing");
-if (!aboutPage.includes('rel="canonical" href="https://apuch.art/about"')) throw new Error("about_canonical");
+if (!aboutPage.includes('<base href="../">')) throw new Error("about_base_missing");
+if (!aboutPage.includes('rel="canonical" href="https://apuch.art/about/"')) throw new Error("about_canonical");
 if (!aboutPage.includes('href="mcp"') || !aboutPage.includes('href="agent.json"')) throw new Error("about_agent_docs_missing");
 
 console.log(JSON.stringify({ ok: true, redirects: cases.length, canonical: "https://apuch.art/ip-evolution", about: "https://apuch.art/about" }, null, 2));
