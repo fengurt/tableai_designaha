@@ -1721,7 +1721,8 @@ ${commonDiscoveryHead()}
 </body>
 </html>`);
 
-await writeFile(join(siteDir, "about"), html`<!doctype html>
+await mkdir(join(siteDir, "about"), { recursive: true });
+await writeFile(join(siteDir, "about", "index.html"), html`<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">

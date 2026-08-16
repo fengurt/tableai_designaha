@@ -33,7 +33,7 @@ if (!homePage.includes('class="home-entries"')) throw new Error("home_entries_mi
 if (homePage.includes('id="brandGrid"')) throw new Error("home_duplicate_brand_grid");
 if (homePage.includes('class="system-entry"')) throw new Error("home_explainer_not_removed");
 
-const aboutPage = await readFile(join(root, "site", "about"), "utf8");
+const aboutPage = await readFile(join(root, "site", "about", "index.html"), "utf8");
 if (!aboutPage.includes('class="about-page"')) throw new Error("about_page_missing");
 if (!aboutPage.includes('rel="canonical" href="https://apuch.art/about"')) throw new Error("about_canonical");
 if (!aboutPage.includes('href="mcp"') || !aboutPage.includes('href="agent.json"')) throw new Error("about_agent_docs_missing");

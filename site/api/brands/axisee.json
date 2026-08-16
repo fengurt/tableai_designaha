@@ -165,11 +165,11 @@
     "standalone"
   ],
   "version": {
-    "hash": "5f3b6fd902647567394c8a27e0c08aead63caf94",
-    "shortHash": "5f3b6fd",
-    "date": "2026-08-15T21:45:09+08:00",
-    "message": "feat: bundle fonts with license records",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/5f3b6fd902647567394c8a27e0c08aead63caf94"
+    "hash": "a71ca6419386b0484dd4e9e87702fcdb47ddd8fb",
+    "shortHash": "a71ca64",
+    "date": "2026-08-16T08:49:25+08:00",
+    "message": "feat: simplify IPTrust homepage",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a71ca6419386b0484dd4e9e87702fcdb47ddd8fb"
   },
   "historyUrl": "api/history/axisee.json",
   "history": [

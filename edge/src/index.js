@@ -26,6 +26,7 @@ function cacheKey(request, kind) {
     if (/^(?:utm_.+|deploy|refresh|v)$/i.test(key)) url.searchParams.delete(key);
   }
   if (kind === "api") url.searchParams.set("__iptrust_origin", request.headers.get("origin") || "public");
+  if (kind === "site" && url.pathname === "/about") url.searchParams.set("__iptrust_route", "about-v1");
   return new Request(url, { method: "GET" });
 }
 
@@ -65,7 +66,8 @@ async function serveSite(request, env, ctx) {
     if (cached) return cacheResponse(cached, "HIT", request.method, `total;dur=${Date.now() - startedAt}`);
   }
 
-  const upstream = new URL(`${incoming.pathname}${incoming.search}`, env.PAGES_ORIGIN);
+  const upstreamPath = incoming.pathname === "/about" ? "/about/index.html" : incoming.pathname;
+  const upstream = new URL(`${upstreamPath}${incoming.search}`, env.PAGES_ORIGIN);
   const headers = new Headers(request.headers);
   headers.delete("host");
   const response = await fetch(new Request(upstream, { method: request.method, headers, redirect: "manual" }));

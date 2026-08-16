@@ -1,5 +1,12 @@
 [
   {
+    "hash": "a71ca6419386b0484dd4e9e87702fcdb47ddd8fb",
+    "shortHash": "a71ca64",
+    "date": "2026-08-16T08:49:25+08:00",
+    "message": "feat: simplify IPTrust homepage",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/a71ca6419386b0484dd4e9e87702fcdb47ddd8fb"
+  },
+  {
     "hash": "5f3b6fd902647567394c8a27e0c08aead63caf94",
     "shortHash": "5f3b6fd",
     "date": "2026-08-15T21:45:09+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-08-12T12:18:22+08:00",
     "message": "feat: reconcile IPTrust platform and production baseline",
     "url": "https://github.com/fengurt/tableai_designaha/commit/142064cd93616dc3758cd67a052ee364e2aed9a4"
-  },
-  {
-    "hash": "bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6",
-    "shortHash": "bcd28bc",
-    "date": "2026-08-04T06:00:43+08:00",
-    "message": "Rename 侍天 English brand name to tiansight",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/bcd28bc5dcefd3d090488e9f90ce43ec673b2ec6"
   }
 ]

@@ -13,7 +13,10 @@ const checks = [
   {
     name: "about",
     url: "https://apuch.art/about",
-    expect: (response, body) => response.ok && /class="about-page"/.test(body) && /href="mcp"/.test(body),
+    expect: (response, body) => response.ok
+      && /text\/html/i.test(response.headers.get("content-type") || "")
+      && /class="about-page"/.test(body)
+      && /href="mcp"/.test(body),
   },
   {
     name: "ip-evolution",
