@@ -165,11 +165,11 @@
     "standalone"
   ],
   "version": {
-    "hash": "70e35b66e27f2c9897644a5762207931d6ad6288",
-    "shortHash": "70e35b6",
-    "date": "2026-08-16T08:52:54+08:00",
-    "message": "fix: serve about as HTML",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/70e35b66e27f2c9897644a5762207931d6ad6288"
+    "hash": "023912fb3434a3e51c398957794d4d0eab3cdeb8",
+    "shortHash": "023912f",
+    "date": "2026-08-16T08:56:23+08:00",
+    "message": "fix: resolve about page assets",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/023912fb3434a3e51c398957794d4d0eab3cdeb8"
   },
   "historyUrl": "api/history/manaendless.json",
   "history": [

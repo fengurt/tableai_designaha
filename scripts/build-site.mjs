@@ -1636,8 +1636,8 @@ await writeFile(join(siteDir, "index.html"), html`<!doctype html>
   <link rel="canonical" href="${publicOrigin}/">
   <link rel="preconnect" href="https://media.apuch.art" crossorigin>
 ${commonDiscoveryHead()}
-  <link rel="stylesheet" href="${siteCssPath}">
-  <link rel="modulepreload" href="${siteJsPath}">
+  <link rel="stylesheet" href="/${siteCssPath}">
+  <link rel="modulepreload" href="/${siteJsPath}">
   <script type="application/ld+json">${JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -1717,7 +1717,7 @@ ${commonDiscoveryHead()}
     <span>${hubNameCn} · ${hubNameEn}</span>
     <nav aria-label="Secondary actions"><a href="about" data-i18n="nav.about">关于</a><a href="admin" data-i18n="nav.admin">管理</a><a href="mailto:hi@tableai.ai" data-i18n="portal.collabNav">合作</a></nav>
   </footer>
-  <script src="${siteJsPath}" type="module"></script>
+  <script src="/${siteJsPath}" type="module"></script>
 </body>
 </html>`);
 
@@ -1732,8 +1732,8 @@ await writeFile(join(siteDir, "about", "index.html"), html`<!doctype html>
   <meta name="description" content="${hubName} 的产品入口、Agent 调用方式与合作说明。">
   <link rel="canonical" href="${publicOrigin}/about/">
 ${commonDiscoveryHead()}
-  <link rel="stylesheet" href="${siteCssPath}">
-  <link rel="modulepreload" href="${siteJsPath}">
+  <link rel="stylesheet" href="/${siteCssPath}">
+  <link rel="modulepreload" href="/${siteJsPath}">
 </head>
 <body class="about-page">
   <header class="topbar">
@@ -1764,7 +1764,7 @@ ${commonDiscoveryHead()}
       <div class="about-access"><a href="admin"><small data-i18n="portal.partnerNav">合伙人</small><strong data-i18n="portal.partnerAction">Key first</strong><span>&#8599;</span></a><a href="mailto:hi@tableai.ai"><small data-i18n="portal.collabNav">合作</small><strong>hi@tableai.ai</strong><span>&#8599;</span></a></div>
     </section>
   </main>
-  <script src="${siteJsPath}" type="module"></script>
+  <script src="/${siteJsPath}" type="module"></script>
 </body>
 </html>`);
 
