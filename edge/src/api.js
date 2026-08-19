@@ -349,6 +349,108 @@ async function assetRoutes(request, env, parts) {
   return error(request, "not_found", 404);
 }
 
+function organizationValue(row) {
+  return {
+    id: row.id,
+    slug: row.slug,
+    name: row.name,
+    nativeName: row.native_name,
+    mainLanguage: row.main_language,
+    description: row.description,
+    officialWebsite: row.official_website,
+    logoUrl: row.logo_url,
+    logoSourceUrl: row.logo_source_url,
+    country: row.country,
+    headquarters: row.headquarters,
+    industry: row.industry,
+    ticker: row.ticker,
+    verificationStatus: row.verification_status,
+    sourceId: row.source_id,
+    sourceUrl: row.source_url,
+    sourcePublisher: row.source_publisher,
+    sourceDate: row.source_date,
+    fetchedAt: row.fetched_at,
+    rank: row.rank,
+    year: row.year,
+    metadata: parseJson(row.metadata_json),
+    logoSource: row.logo_source,
+    logoProvider: row.logo_provider,
+    logoQuality: row.logo_quality,
+    logoStatus: row.logo_status,
+    logoProvenanceUrl: row.logo_provenance_url,
+    fallbackLogoUrl: row.fallback_logo_url,
+    logoCheckedAt: row.logo_checked_at,
+  };
+}
+
+function libraryItemValue(row) {
+  return {
+    id: row.id,
+    slug: row.slug,
+    type: row.type,
+    title: { zh: row.title_zh, en: row.title_en },
+    summary: { zh: row.summary_zh, en: row.summary_en },
+    sourceUrl: row.source_url,
+    sourcePublisher: row.source_publisher,
+    publishedAt: row.published_at,
+    access: row.access,
+    externalUrl: row.external_url,
+    verificationStatus: row.verification_status,
+    metadata: parseJson(row.metadata_json),
+    version: row.version,
+    updatedAt: row.updated_at,
+  };
+}
+
+// Paged reads for the public library. Returns null for a collection with no D1 table,
+// so the caller can fall back to the built snapshot.
+async function listLibraryCollection(env, request, collection, itemType) {
+  const url = new URL(request.url);
+  const limit = Math.min(Math.max(Number(url.searchParams.get("limit")) || 60, 1), 200);
+  const offset = Math.max(Number(url.searchParams.get("offset")) || 0, 0);
+  const q = (url.searchParams.get("q") || "").trim().slice(0, 120);
+  const like = `%${q.replaceAll("\\", "\\\\").replaceAll("%", "\\%").replaceAll("_", "\\_")}%`;
+  const source = (url.searchParams.get("source") || "").trim().slice(0, 120);
+
+  if (collection === "organizations") {
+    const where = ["1=1"];
+    const binds = [];
+    if (source) { where.push("c.source_id=?"); binds.push(source); }
+    if (q) {
+      const columns = ["o.name", "o.native_name", "o.industry", "o.country", "o.ticker", "o.description"];
+      where.push(`(${columns.map((column) => `${column} LIKE ? ESCAPE '\\'`).join(" OR ")})`);
+      for (const _ of columns) binds.push(like);
+    }
+    const clause = where.join(" AND ");
+    const from = "FROM organizations o JOIN organization_collections c ON c.organization_id=o.id";
+    const totalRow = await env.DB.prepare(`SELECT COUNT(*) AS total ${from} WHERE ${clause}`).bind(...binds).first();
+    const rows = await env.DB.prepare(`SELECT o.*, c.source_id, c.rank, c.year, c.metadata_json ${from} WHERE ${clause} ORDER BY c.rank IS NULL, c.rank ASC, o.name ASC LIMIT ? OFFSET ?`).bind(...binds, limit, offset).all();
+    return { total: Number(totalRow?.total || 0), items: (rows.results || []).map(organizationValue), storage: "d1" };
+  }
+
+  if (itemType) {
+    const where = ["type=?"];
+    const binds = [itemType];
+    if (q) {
+      const columns = ["title_zh", "title_en", "summary_zh", "summary_en", "source_publisher"];
+      where.push(`(${columns.map((column) => `${column} LIKE ? ESCAPE '\\'`).join(" OR ")})`);
+      for (const _ of columns) binds.push(like);
+    }
+    const clause = where.join(" AND ");
+    const totalRow = await env.DB.prepare(`SELECT COUNT(*) AS total FROM library_items WHERE ${clause}`).bind(...binds).first();
+    const rows = await env.DB.prepare(`SELECT * FROM library_items WHERE ${clause} ORDER BY COALESCE(published_at, updated_at) DESC, id ASC LIMIT ? OFFSET ?`).bind(...binds, limit, offset).all();
+    return { total: Number(totalRow?.total || 0), items: (rows.results || []).map(libraryItemValue), storage: "d1" };
+  }
+
+  if (collection === "sources") {
+    const rows = await env.DB.prepare("SELECT * FROM library_sources ORDER BY year DESC, name ASC").all();
+    const items = (rows.results || []).map((row) => ({ id: row.id, name: row.name, publisher: row.publisher, type: row.type, year: row.year, sourceDate: row.source_date, sourceUrl: row.source_url, authority: row.authority, refresh: row.refresh, fetchedAt: row.fetched_at, metadata: parseJson(row.metadata_json) }));
+    return { total: items.length, items, storage: "d1" };
+  }
+
+  return null;
+}
+
 async function libraryRoutes(request, env, parts) {
   const collection = parts[1] || "organizations";
   const itemId = cleanSegment(parts[2] || "");
@@ -376,9 +478,12 @@ async function libraryRoutes(request, env, parts) {
     return json(request, value, { headers: { ETag: entityEtag("library", row.id, row.version) } }, Boolean(actor));
   }
   if (request.method === "GET") {
-    const target = new URL(`${env.PUBLIC_SITE_URL}/api/library/${collection}`);
-    target.search = new URL(request.url).search;
+    const listed = await listLibraryCollection(env, request, collection, itemType);
+    if (listed) return json(request, listed, { headers: { "Cache-Control": "public, max-age=60, stale-while-revalidate=300" } });
+    // Collections with no D1 table of their own still come from the built snapshot.
+    const target = new URL(`${env.PUBLIC_SITE_URL}/api/library/${collection}.json`);
     const response = await fetch(target);
+    if (!response.ok) return error(request, "not_found", 404);
     return new Response(response.body, { status: response.status, headers: { "Content-Type": "application/json", "Cache-Control": "public, max-age=60, stale-while-revalidate=300" } });
   }
   const auth = await requireActor(request, env, "library:write");

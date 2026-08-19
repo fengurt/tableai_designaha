@@ -11,13 +11,13 @@
       "description": "IPTrust is an IP trust hub for people and agents."
     }
   },
-  "generatedAt": "2026-08-19T08:42:05.702Z",
+  "generatedAt": "2026-08-19T10:30:19.815Z",
   "version": {
-    "hash": "97409964b2887b3882c3d0e2637e16b082de0505",
-    "shortHash": "9740996",
-    "date": "2026-08-16T09:01:13+08:00",
-    "message": "fix: use absolute app assets",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/97409964b2887b3882c3d0e2637e16b082de0505"
+    "hash": "c5cd31c3aeadd567d055154f5b979a8d08414f30",
+    "shortHash": "c5cd31c",
+    "date": "2026-08-19T08:42:41+00:00",
+    "message": "fix: consolidate deploy on Cloudflare Pages",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/c5cd31c3aeadd567d055154f5b979a8d08414f30"
   },
   "brands": [
     {
@@ -491,11 +491,11 @@
     "apiUrl": "api/versions.json",
     "perBrandApiUrl": "api/history/{slug}.json",
     "latest": {
-      "hash": "97409964b2887b3882c3d0e2637e16b082de0505",
-      "shortHash": "9740996",
-      "date": "2026-08-16T09:01:13+08:00",
-      "message": "fix: use absolute app assets",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/97409964b2887b3882c3d0e2637e16b082de0505"
+      "hash": "c5cd31c3aeadd567d055154f5b979a8d08414f30",
+      "shortHash": "c5cd31c",
+      "date": "2026-08-19T08:42:41+00:00",
+      "message": "fix: consolidate deploy on Cloudflare Pages",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/c5cd31c3aeadd567d055154f5b979a8d08414f30"
     }
   },
   "sync": {

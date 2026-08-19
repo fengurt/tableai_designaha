@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "a14576c10f197c8d";
+const BUILD_VERSION = "3ecbe247d4c6c489";
 
 const i18n = {
   cn: {

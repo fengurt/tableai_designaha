@@ -38,7 +38,7 @@ async function fetchLibrary() {
   const params = new URLSearchParams({ limit: state.limit, offset: state.offset });
   if (state.q) params.set("q", state.q);
   if (state.source && state.type === "organizations") params.set("source", state.source);
-  const dynamicUrl = `../api/library/${state.type}?${params}`;
+  const dynamicUrl = `/api/v2/library/${state.type}?${params}`;
   try {
     const response = await fetch(dynamicUrl, { cache: "no-cache" });
     if (!response.ok || !(response.headers.get("content-type") || "").includes("json")) throw new Error("dynamic unavailable");
