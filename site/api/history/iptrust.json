@@ -123,6 +123,17 @@
       ]
     },
     {
+      "hash": "6f0d28b10ae106649819acdfcbbc51bf8f4b5b76",
+      "shortHash": "6f0d28b",
+      "date": "2026-07-10T22:27:54+08:00",
+      "message": "Version design system assets",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/6f0d28b10ae106649819acdfcbbc51bf8f4b5b76",
+      "sourcePaths": [
+        "config/brands.json",
+        "IPTRUST"
+      ]
+    },
+    {
       "hash": "307513830db51470695adf67b4da3df8b2d669bb",
       "shortHash": "3075138",
       "date": "2026-07-10T22:06:39+08:00",
@@ -227,17 +238,6 @@
       "date": "2026-07-06T06:21:22+08:00",
       "message": "Add ksamint IP",
       "url": "https://github.com/fengurt/tableai_designaha/commit/b0269d253a8cf1b693e2cbb6513aeefadb543b34",
-      "sourcePaths": [
-        "config/brands.json",
-        "IPTRUST"
-      ]
-    },
-    {
-      "hash": "067a47c76f1cb812b607335089911c282f4d8f78",
-      "shortHash": "067a47c",
-      "date": "2026-07-05T10:24:24+08:00",
-      "message": "Add Sanctem IP and brand logos",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/067a47c76f1cb812b607335089911c282f4d8f78",
       "sourcePaths": [
         "config/brands.json",
         "IPTRUST"

@@ -123,6 +123,17 @@
       ]
     },
     {
+      "hash": "6f0d28b10ae106649819acdfcbbc51bf8f4b5b76",
+      "shortHash": "6f0d28b",
+      "date": "2026-07-10T22:27:54+08:00",
+      "message": "Version design system assets",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/6f0d28b10ae106649819acdfcbbc51bf8f4b5b76",
+      "sourcePaths": [
+        "config/brands.json",
+        "MANAENDLESS"
+      ]
+    },
+    {
       "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
       "shortHash": "a5bf7cf",
       "date": "2026-07-10T20:21:24+08:00",
@@ -227,17 +238,6 @@
       "date": "2026-07-05T10:24:24+08:00",
       "message": "Add Sanctem IP and brand logos",
       "url": "https://github.com/fengurt/tableai_designaha/commit/067a47c76f1cb812b607335089911c282f4d8f78",
-      "sourcePaths": [
-        "config/brands.json",
-        "MANAENDLESS"
-      ]
-    },
-    {
-      "hash": "a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
-      "shortHash": "a0e6ecd",
-      "date": "2026-07-04T22:02:17+08:00",
-      "message": "Add Sidera reference notes",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
       "sourcePaths": [
         "config/brands.json",
         "MANAENDLESS"

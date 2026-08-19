@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const BUILD_VERSION = "b60797e-d1d3992d";
+const BUILD_VERSION = "a14576c10f197c8d";
 
 const i18n = {
   cn: {
@@ -7,6 +7,8 @@ const i18n = {
     "hub.description": "岁知社 IPTrust 是一个面向人和 Agent 的 IP 品牌信任中枢。",
     "nav.manifest": "清单",
     "nav.admin": "管理",
+    "nav.directory": "目录",
+    "nav.about": "关于",
     "nav.agent": "我是 Agent",
     "nav.partner": "我是合伙人",
     "nav.collab": "我想合作",
@@ -17,6 +19,18 @@ const i18n = {
     "home.sectionTitle": "IP",
     "home.searchPlaceholder": "搜索 IP / Asset Key",
     "home.noResults": "没有匹配的 IP。",
+    "home.directoryLabel": "全部 IP",
+    "home.directoryTitle": "IP 目录",
+    "home.systemLabel": "品牌系统",
+    "home.libraryLabel": "参考资料",
+    "about.title": "关于岁知社。",
+    "about.lead": "品牌标准、资产与出处，供人和 Agent 清晰调用。",
+    "about.directoryBody": "浏览、搜索与筛选全部 IP。",
+    "about.systemBody": "架构、内核、表达、资产与治理。",
+    "about.libraryBody": "有出处的品牌、案例、报告与数据。",
+    "about.fontsBody": "开源可商用字体与授权原文。",
+    "about.accessLabel": "访问",
+    "about.accessTitle": "管理与合作。",
     "library.label": "知名品牌资产",
     "library.title": "权威品牌、案例与数据。",
     "library.organizations": "组织",
@@ -64,6 +78,7 @@ const i18n = {
     "brand.copyIpSystem": "复制 Apply Brief",
     "brand.ipSystemCopied": "已复制 IP System Apply Brief",
     "brand.guideline": "品牌规范",
+    "brand.more": "更多资料",
     "brand.moodBoard": "Mood Board",
     "brand.visualAssets": "视觉资产",
     "brand.adobeAssets": "Adobe 源文件",
@@ -139,6 +154,9 @@ const i18n = {
     "fonts.weight": "字重",
     "fonts.source": "官方出处",
     "fonts.license": "许可证",
+    "fonts.commercial": "可商用",
+    "fonts.downloadPackage": "下载字体包",
+    "fonts.referenceDocs": "参考文档",
     "fonts.copyCss": "复制 CSS",
     "fonts.cssCopied": "已复制字体 CSS",
     "fonts.ready": "滚动到此处加载真实字体",
@@ -147,6 +165,37 @@ const i18n = {
     "fonts.fallback": "字体加载失败，已使用系统字体",
     "fonts.licenseNote": "授权说明",
     "fonts.openApi": "打开字体 JSON",
+    "fonts.curated": "个已核验字体家族",
+    "fonts.directoryTitle": "开源可商用字体。",
+    "fonts.families": "字体家族",
+    "fonts.selfHosted": "自托管",
+    "fonts.officialIndexed": "官方索引",
+    "fonts.officialDirectory": "官方完整目录",
+    "fonts.officialDirectoryLead": "逐款匹配 Google Fonts 官方元数据与源码仓库许可证；按需载入，不拖慢首屏。",
+    "fonts.openDirectoryApi": "打开目录 API",
+    "fonts.directoryReady": "滚动到此处载入官方目录。",
+    "fonts.directoryLoading": "正在载入官方目录…",
+    "fonts.directoryFailed": "官方目录载入失败，请重试。",
+    "fonts.loadMore": "载入更多",
+    "fonts.selfHostedBadge": "本站样张",
+    "fonts.googleNote": "Google Fonts 收录字体均以开源许可证发布，可用于商业项目；具体使用、修改与再分发仍应遵守每款字体的许可证。",
+    "fonts.googleOfficial": "Google 官方说明 ↗",
+    "fonts.searchLabel": "搜索字体",
+    "fonts.all": "全部",
+    "fonts.popular": "热门",
+    "fonts.categories": "分类",
+    "fonts.sans": "无衬线",
+    "fonts.serif": "衬线",
+    "fonts.display": "展示",
+    "fonts.handwriting": "书写",
+    "fonts.mono": "等宽",
+    "fonts.empty": "没有匹配字体。",
+    "fonts.moreSources": "更多官方字体来源",
+    "fonts.findMore": "去哪里找更多字体。",
+    "fonts.licenseTypes": "许可证商用类型",
+    "fonts.readLicense": "先看类型，再看原文。",
+    "fonts.originalLicense": "许可证原文",
+    "fonts.licenseDisclaimer": "这里是选型摘要，不替代许可证原文。正式发布前仍需核对具体字体版本及其随附许可证。",
     "api.title": "System API",
     "api.key": "System API Key",
     "api.connect": "Connect",
@@ -190,6 +239,8 @@ const i18n = {
     "hub.description": "IPTrust is an IP trust hub for people and agents.",
     "nav.manifest": "Manifest",
     "nav.admin": "Admin",
+    "nav.directory": "Directory",
+    "nav.about": "About",
     "nav.agent": "I am an Agent",
     "nav.partner": "I am a Partner",
     "nav.collab": "Work with Us",
@@ -200,6 +251,18 @@ const i18n = {
     "home.sectionTitle": "IP",
     "home.searchPlaceholder": "Search IP / Asset Key",
     "home.noResults": "No matching IP.",
+    "home.directoryLabel": "All IP",
+    "home.directoryTitle": "IP Directory",
+    "home.systemLabel": "Brand system",
+    "home.libraryLabel": "Reference",
+    "about.title": "About IPTrust.",
+    "about.lead": "Brand standards, assets, and provenance, clearly callable by people and agents.",
+    "about.directoryBody": "Browse, search, and filter every IP.",
+    "about.systemBody": "Architecture, core, expression, assets, and governance.",
+    "about.libraryBody": "Sourced brands, cases, reports, and data.",
+    "about.fontsBody": "Open-source commercial-use fonts and original licenses.",
+    "about.accessLabel": "Access",
+    "about.accessTitle": "Manage and collaborate.",
     "library.label": "KNOWN BRAND ASSETS",
     "library.title": "Authoritative brands, cases, and data.",
     "library.organizations": "Organizations",
@@ -247,6 +310,7 @@ const i18n = {
     "brand.copyIpSystem": "Copy apply brief",
     "brand.ipSystemCopied": "IP System apply brief copied",
     "brand.guideline": "Brand guideline",
+    "brand.more": "More resources",
     "brand.moodBoard": "Mood Board",
     "brand.visualAssets": "Visual assets",
     "brand.adobeAssets": "Adobe sources",
@@ -322,6 +386,9 @@ const i18n = {
     "fonts.weight": "Weight",
     "fonts.source": "Official source",
     "fonts.license": "License",
+    "fonts.commercial": "Commercial use",
+    "fonts.downloadPackage": "Download package",
+    "fonts.referenceDocs": "Reference",
     "fonts.copyCss": "Copy CSS",
     "fonts.cssCopied": "Font CSS copied",
     "fonts.ready": "Scroll here to load the live font",
@@ -330,6 +397,37 @@ const i18n = {
     "fonts.fallback": "Font failed to load; using the system fallback",
     "fonts.licenseNote": "License note",
     "fonts.openApi": "Open font JSON",
+    "fonts.curated": "verified font families",
+    "fonts.directoryTitle": "Open fonts for commercial use.",
+    "fonts.families": "font families",
+    "fonts.selfHosted": "self-hosted",
+    "fonts.officialIndexed": "official index",
+    "fonts.officialDirectory": "Complete official directory",
+    "fonts.officialDirectoryLead": "Each family is matched to official Google Fonts metadata and its repository license; the index loads on demand to protect first-load performance.",
+    "fonts.openDirectoryApi": "Open directory API",
+    "fonts.directoryReady": "Scroll here to load the official directory.",
+    "fonts.directoryLoading": "Loading the official directory…",
+    "fonts.directoryFailed": "The official directory failed to load. Try again.",
+    "fonts.loadMore": "Load more",
+    "fonts.selfHostedBadge": "Live specimen",
+    "fonts.googleNote": "Google Fonts families are released under open-source licenses and may be used commercially. Use, modification and redistribution still follow each family's license.",
+    "fonts.googleOfficial": "Google's official guidance ↗",
+    "fonts.searchLabel": "Search fonts",
+    "fonts.all": "All",
+    "fonts.popular": "Popular",
+    "fonts.categories": "Categories",
+    "fonts.sans": "Sans serif",
+    "fonts.serif": "Serif",
+    "fonts.display": "Display",
+    "fonts.handwriting": "Handwriting",
+    "fonts.mono": "Monospace",
+    "fonts.empty": "No matching fonts.",
+    "fonts.moreSources": "More official font sources",
+    "fonts.findMore": "Where to find more fonts.",
+    "fonts.licenseTypes": "Commercial license types",
+    "fonts.readLicense": "Read the type, then the source.",
+    "fonts.originalLicense": "Original license",
+    "fonts.licenseDisclaimer": "This is a selection summary, not a substitute for the license text. Verify the exact font version and bundled license before release.",
     "api.title": "System API",
     "api.key": "System API Key",
     "api.connect": "Connect",
@@ -388,6 +486,7 @@ let cachedVersions = null;
 let currentQuery = "";
 let cachedPortalSkillText = "";
 let fontCatalogCache = null;
+let googleFontDirectoryCache = null;
 let fontSpecimenObserver = null;
 
 function contentLang(locale = currentLocale) {
@@ -414,6 +513,8 @@ function applyI18n() {
   document.documentElement.dataset.locale = currentLocale;
   if (document.body.classList.contains("hub-home")) {
     document.title = t("hub.name");
+  } else if (document.body.classList.contains("about-page")) {
+    document.title = `${t("nav.about")} · ${t("hub.name")}`;
   } else if (document.querySelector(".admin")) {
     document.title = `Admin · ${t("hub.name")}`;
   }
@@ -981,7 +1082,10 @@ async function loadFontSpecimen(article) {
     if (document.fonts?.load) {
       const weight = $("[data-font-weight]")?.value || "400";
       await Promise.race([
-        document.fonts.load(`${weight} 32px "${alias}"`, font.sample.slice(0, 80)),
+        document.fonts.load(
+          `${weight} 32px "${alias}"`,
+          String((font.group === "en" ? catalog.specimens?.en : catalog.specimens?.zh) || font.sample).slice(0, 80),
+        ),
         new Promise((_, reject) => setTimeout(() => reject(new Error("font_timeout")), 7000)),
       ]);
     }
@@ -1002,20 +1106,108 @@ function setupFontLibrary() {
   root.dataset.ready = "true";
   const catalog = fontCatalogData();
   const specimens = [...root.querySelectorAll(".font-specimen")];
-  const filterButtons = [...root.querySelectorAll("[data-font-filter]")];
-  const size = root.querySelector("[data-font-size]");
-  const sizeOutput = root.querySelector("[data-font-size-output]");
-  const weight = root.querySelector("[data-font-weight]");
+  const filterButtons = [...document.querySelectorAll("[data-font-filter]")];
+  const size = document.querySelector("[data-font-size]");
+  const sizeOutput = document.querySelector("[data-font-size-output]");
+  const weight = document.querySelector("[data-font-weight]");
+  const directorySearch = document.querySelector("[data-font-search]");
+  const categoryButtons = [...document.querySelectorAll(".font-category-list button[data-font-category]")];
+  const resultCount = document.querySelector("[data-font-result-count]");
+  const empty = document.querySelector("[data-font-empty]");
+  const initialParams = new URLSearchParams(location.search);
+  let activeGroup = initialParams.get("group") || "all";
+  let activeCategory = initialParams.get("category") || "all";
+  let directoryQuery = initialParams.get("q") || "";
+  const referenceSection = $("#official-font-directory");
+  const referenceList = referenceSection?.querySelector("[data-google-font-results]");
+  const referenceStatus = referenceSection?.querySelector("[data-google-font-status]");
+  const referenceMore = referenceSection?.querySelector("[data-google-font-more]");
+  const hostedByFamily = new Map((catalog?.fonts || []).map((font) => [String(font.family || font.name).toLowerCase(), font.id]));
+  let referenceLimit = 80;
+  let referenceLoading = null;
 
-  const applyFilter = (group) => {
-    filterButtons.forEach((button) => button.setAttribute("aria-selected", String(button.dataset.fontFilter === group)));
-    specimens.forEach((article) => {
-      article.hidden = article.dataset.fontGroup !== group;
-      if (!article.hidden && !fontSpecimenObserver) loadFontSpecimen(article);
+  const renderOfficialDirectory = () => {
+    if (!googleFontDirectoryCache || !referenceList || !referenceStatus) return;
+    const normalizedQuery = directoryQuery.trim().toLowerCase();
+    const filtered = googleFontDirectoryCache.families.filter((font) => {
+      const groupMatch = activeGroup === "all" || (activeGroup === "popular" ? Number(font.popularity) <= 100 : font.groups.includes(activeGroup));
+      const categoryMatch = activeCategory === "all" || font.category === activeCategory;
+      const queryMatch = !normalizedQuery || [font.family, font.displayName, font.category, font.designers.join(" "), font.subsets.join(" ")].join(" ").toLowerCase().includes(normalizedQuery);
+      return groupMatch && categoryMatch && queryMatch;
     });
+    const visible = filtered.slice(0, referenceLimit);
+    referenceStatus.textContent = `${filtered.length.toLocaleString()} / ${googleFontDirectoryCache.stats.verifiedFamilies.toLocaleString()} Google Fonts`;
+    referenceList.innerHTML = visible.map((font) => {
+      const hostedId = hostedByFamily.get(font.family.toLowerCase());
+      return `
+        <a class="font-reference-row" href="${escapeHtml(font.source.projectUrl)}" target="_blank" rel="noreferrer">
+          <strong>${escapeHtml(font.family)}${hostedId ? `<span class="font-reference-badge" data-i18n="fonts.selfHostedBadge">${escapeHtml(t("fonts.selfHostedBadge"))}</span>` : ""}</strong>
+          <span>${escapeHtml(font.category)} · ${font.styles} styles</span>
+          <span>${escapeHtml(font.subsets.slice(0, 5).join(" · "))}</span>
+          <span class="font-reference-license">${escapeHtml(font.license.spdx)} ↗</span>
+        </a>
+      `;
+    }).join("");
+    if (referenceMore) referenceMore.hidden = visible.length >= filtered.length;
   };
 
-  filterButtons.forEach((button) => button.addEventListener("click", () => applyFilter(button.dataset.fontFilter)));
+  const activateOfficialDirectory = async () => {
+    if (googleFontDirectoryCache) {
+      renderOfficialDirectory();
+      return;
+    }
+    if (referenceLoading) return referenceLoading;
+    if (referenceStatus) referenceStatus.textContent = t("fonts.directoryLoading");
+    referenceLoading = loadJson("api/google-fonts.json")
+      .then((data) => {
+        googleFontDirectoryCache = data;
+        renderOfficialDirectory();
+      })
+      .catch((error) => {
+        console.warn("Google Fonts directory failed to load.", error);
+        if (referenceStatus) referenceStatus.textContent = t("fonts.directoryFailed");
+      })
+      .finally(() => { referenceLoading = null; });
+    return referenceLoading;
+  };
+
+  const applyFilter = () => {
+    root.dataset.activeFontGroup = activeGroup;
+    filterButtons.forEach((button) => button.setAttribute("aria-selected", String(button.dataset.fontFilter === activeGroup)));
+    categoryButtons.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.fontCategory === activeCategory)));
+    const normalizedQuery = directoryQuery.trim().toLowerCase();
+    let visible = 0;
+    specimens.forEach((article) => {
+      const groupMatch = activeGroup === "all" || (activeGroup === "popular" ? Number(article.dataset.fontPopularity) > 0 && Number(article.dataset.fontPopularity) <= 100 : article.dataset.fontGroup === activeGroup);
+      const categoryMatch = activeCategory === "all" || article.dataset.fontCategory === activeCategory;
+      const queryMatch = !normalizedQuery || (article.dataset.fontSearchText || "").includes(normalizedQuery);
+      article.hidden = !(groupMatch && categoryMatch && queryMatch);
+      if (!article.hidden) visible += 1;
+      if (!article.hidden && !fontSpecimenObserver) loadFontSpecimen(article);
+    });
+    if (resultCount) resultCount.textContent = String(visible);
+    if (empty) empty.hidden = visible !== 0;
+    if (document.body.classList.contains("font-directory-page")) {
+      const url = new URL(location.href);
+      directoryQuery ? url.searchParams.set("q", directoryQuery) : url.searchParams.delete("q");
+      activeGroup !== "all" ? url.searchParams.set("group", activeGroup) : url.searchParams.delete("group");
+      activeCategory !== "all" ? url.searchParams.set("category", activeCategory) : url.searchParams.delete("category");
+      history.replaceState(null, "", url);
+    }
+    if (googleFontDirectoryCache) renderOfficialDirectory();
+    else if (directoryQuery) activateOfficialDirectory();
+  };
+
+  filterButtons.forEach((button) => button.addEventListener("click", () => { activeGroup = button.dataset.fontFilter; applyFilter(); }));
+  categoryButtons.forEach((button) => button.addEventListener("click", () => { activeCategory = button.dataset.fontCategory; applyFilter(); }));
+  if (directorySearch) {
+    directorySearch.value = directoryQuery;
+    directorySearch.addEventListener("input", () => { directoryQuery = directorySearch.value; applyFilter(); });
+  }
+  referenceMore?.addEventListener("click", () => {
+    referenceLimit += 80;
+    renderOfficialDirectory();
+  });
   size?.addEventListener("input", () => {
     root.style.setProperty("--font-demo-size", `${size.value}px`);
     if (sizeOutput) sizeOutput.textContent = size.value;
@@ -1035,17 +1227,29 @@ function setupFontLibrary() {
   });
 
   if ("IntersectionObserver" in window) {
+    const network = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    const conservativeLoading = network?.saveData || /(^|-)2g$/.test(network?.effectiveType || "");
     fontSpecimenObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         loadFontSpecimen(entry.target);
         fontSpecimenObserver.unobserve(entry.target);
       });
-    }, { rootMargin: "240px 0px" });
+    }, { rootMargin: conservativeLoading ? "0px" : "160px 0px" });
     specimens.forEach((article) => fontSpecimenObserver.observe(article));
+    if (referenceSection) {
+      const directoryObserver = new IntersectionObserver((entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        activateOfficialDirectory();
+        directoryObserver.disconnect();
+      }, { rootMargin: "360px 0px" });
+      directoryObserver.observe(referenceSection);
+    }
+  } else if (referenceSection) {
+    activateOfficialDirectory();
   }
 
-  applyFilter("zh");
+  applyFilter();
   applyFontLibraryLocale();
 }
 
@@ -1775,6 +1979,39 @@ function moodBoard(brand = {}) {
   `;
 }
 
+function compactBrandFacts(brand = {}, display = {}, localized = {}) {
+  const facts = [
+    brand.officialWebsite ? [t("brand.website"), `<a href="${escapeHtml(brand.officialWebsite)}">${escapeHtml(brand.officialWebsite)}</a>`] : null,
+    localized.business ? [t("brand.business"), escapeHtml(localized.business)] : null,
+    display.classification?.tracks?.length ? [t("brand.tracks"), escapeHtml(listText(display.classification.tracks))] : null,
+    display.classification?.audiences?.length ? [t("brand.audiences"), escapeHtml(listText(display.classification.audiences))] : null,
+    localized.notes ? [t("brand.notes"), escapeHtml(localized.notes)] : null,
+  ].filter(Boolean);
+  if (!facts.length) return "";
+  return `<section class="brand-facts">${facts.map(([label, value]) => `<div><strong>${escapeHtml(label)}</strong><p>${value}</p></div>`).join("")}</section>`;
+}
+
+function brandAdvancedDetails(brand = {}) {
+  const guideHtml = brand.guides?.map((guide) => `
+    <article class="guide guide-rendered">
+      <p class="eyebrow">${escapeHtml(t("brand.guideline"))}</p>
+      <div class="rendered-document brand-guide-document">${guide.html || ("<p>" + escapeHtml(guide.excerpt || "") + "</p>")}</div>
+    </article>
+  `).join("") || "";
+  return `
+    <details class="brand-advanced">
+      <summary><span>${escapeHtml(t("brand.more"))}</span><small>API · IP System · Guidelines</small></summary>
+      <div class="brand-advanced-body">
+        ${profileEditor(brand)}
+        <section class="brand-architecture" id="brandArchitecture" aria-live="polite"></section>
+        ${ipSystemPanel(brand)}
+        ${brandAssetHub(brand)}
+        ${guideHtml}
+      </div>
+    </details>
+  `;
+}
+
 async function renderGlobalResults(query) {
   const panel = $("#globalResults");
   if (!panel) return;
@@ -1922,26 +2159,16 @@ async function renderBrand() {
   const brand = await loadJson(`api/brands/${slug}.json`);
   const display = mainBrand(brand);
   const localized = localizedBrand(brand);
-  const isSidera = brand.slug === "sidera";
+  const isSidera = brand.slug === "sidera" || brand.publicSlug === "tiansight";
   const isKaoyu = brand.slug === "kaoyu-shenhua";
   const heroName = isSidera ? "侍天" : display.name;
   const heroSecondaryName = isSidera ? "智慧餐饮 · tiansight" : isKaoyu ? "KAOYUSHENHUA · 一炉火，烧了三十多年" : display.secondaryName;
   const heroEyebrow = isSidera ? "智慧领航者 · WISDOM NAVIGATOR" : isKaoyu ? (currentLocale === "en" ? "Charcoal fire · Live fish · No prefab" : "老灶火 · 活鱼现烤 · 无预制") : statusLabel(brand.status);
-  const sideraPrinciples = currentLocale === "en" ? ["SEE CLEARLY", "MOVE DECISIVELY", "COMPOUND VALUE"] : ["看得清", "改得动", "能复利"];
-  const kaoyuPrinciples = currentLocale === "en"
-    ? ["Live fish, grilled to order", "Home cooking, wok-hot", "No prefab dishes"]
-    : ["活鱼现点现烤", "家常菜现炒现做", "全店无预制菜"];
-  const kaoyuSlogan = currentLocale === "en"
-    ? "Thirty-plus years of plain truth becomes the myth."
-    : "把实话坚持三十多年，就成了神话。";
-  const kaoyuStoryLead = currentLocale === "en"
-    ? "Since 1990 at the stove, since 2015 in Changping, Beijing — one live fish, one charcoal fire, one plain promise for the neighborhood."
-    : "1990年入行，2015年落地北京昌平。一条活鱼，一炉旺火，一句实在话——让街坊吃口新鲜的、热乎的。";
   document.title = `${display.name} · Brand Guidelines`;
   const descriptionMeta = document.querySelector('meta[name="description"]');
   if (descriptionMeta) descriptionMeta.setAttribute("content", localized.intro || brand.description || "IPTrust brand guideline and assets.");
   const canonical = document.querySelector('link[rel="canonical"]');
-  if (canonical) canonical.setAttribute("href", new URL(`brand?brand=${encodeURIComponent(brand.slug)}`, location.origin + "/").href);
+  if (canonical) canonical.setAttribute("href", new URL(`brand?brand=${encodeURIComponent(brand.publicSlug || brand.slug)}`, location.origin + "/").href);
   const hero = brand.adobeAssets?.[0]?.hero?.sitePath
     ? brand.adobeAssets[0].hero
     : preferredBrandImage(brand.images || []);
@@ -1954,15 +2181,13 @@ async function renderBrand() {
           <p class="muted alt-name">${escapeHtml(heroSecondaryName || "")}</p>
           <p>${escapeHtml(localized.intro)}</p>
           <div class="profile-tags">
-            ${display.classification.tracks.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}
-            ${display.classification.audiences.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}
+            ${display.classification.tracks.slice(0, 3).map((item) => `<span>${escapeHtml(item)}</span>`).join("")}
           </div>
           ${swatches(brand.theme, true)}
           <div class="actions">
             ${isKaoyu ? `<a class="button" href="kaoyu-shenhua/">${currentLocale === "en" ? "Brand story" : "品牌故事"}</a>` : ""}
             <button class="button" type="button" data-copy-brand="${escapeHtml(brand.slug)}">${escapeHtml(t("brand.copyAgentPack"))}</button>
-            <a class="button${isKaoyu ? " ghost" : ""}" href="${brand.apiUrl}">${t("brand.openJson")}</a>
-            <a class="button ghost" href="${brand.source.github}">${t("brand.source")}</a>
+            ${brand.officialWebsite ? `<a class="button ghost" href="${escapeHtml(brand.officialWebsite)}">${escapeHtml(t("brand.website"))}</a>` : ""}
           </div>
         </div>
         ${hero ? `
@@ -1988,54 +2213,23 @@ async function renderBrand() {
           </div>
         ` : ""}
       </section>
-      ${isSidera ? `<section class="sidera-principles">${sideraPrinciples.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}</section>` : ""}
-      ${isKaoyu ? `
-        <section class="kaoyu-principles">${kaoyuPrinciples.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}</section>
-        <section class="kaoyu-story" id="kaoyu-story">
-          <h2>${currentLocale === "en" ? "One fire, thirty-plus years" : "一炉火，烧了三十多年"}</h2>
-          <p class="lead">${escapeHtml(kaoyuStoryLead)}</p>
-          <p class="slogan">${escapeHtml(kaoyuSlogan)}</p>
-          <div class="kaoyu-story-links actions">
-            <a class="button" href="kaoyu-shenhua/">${currentLocale === "en" ? "Open story page" : "打开故事页"}</a>
-            <a class="button ghost" href="#kaoyu-shenhua-guide-1-品牌叙事-完整版">${currentLocale === "en" ? "Full narrative" : "完整版叙事"}</a>
-          </div>
-        </section>
-      ` : ""}
-      ${profileEditor(brand)}
-      <section class="brand-architecture" id="brandArchitecture" aria-live="polite"></section>
-      ${ipSystemPanel(brand)}
-      ${brandAssetHub(brand)}
       ${adobeAssetPanel(brand.adobeAssets || [])}
-      ${moodBoard(brand)}
-      <section class="resource-list">
-        <div class="resource-grid">
-          <div class="resource"><strong>${t("brand.website")}</strong><br>${brand.officialWebsite ? `<a href="${escapeHtml(brand.officialWebsite)}">${escapeHtml(brand.officialWebsite)}</a>` : escapeHtml(t("brand.blank"))}</div>
-          <div class="resource"><strong>${t("brand.mainLanguage")}</strong><br>${escapeHtml(languageLabel(brand.mainLanguage || brand.profile?.mainLanguage) || t("brand.blank"))}</div>
-          <div class="resource"><strong>${t("brand.intro")}</strong><br>${escapeHtml(localized.intro || t("brand.blank"))}</div>
-          <div class="resource"><strong>${t("brand.business")}</strong><br>${escapeHtml(localized.business || t("brand.blank"))}</div>
-          <div class="resource"><strong>${t("brand.notes")}</strong><br>${escapeHtml(localized.notes || t("brand.blank"))}</div>
-          <div class="resource"><strong>${t("brand.tracks")}</strong><br>${escapeHtml(listText(display.classification.tracks) || t("brand.blank"))}</div>
-          <div class="resource"><strong>${t("brand.audiences")}</strong><br>${escapeHtml(listText(display.classification.audiences) || t("brand.blank"))}</div>
-          <div class="resource"><strong>${t("brand.tags")}</strong><br>${escapeHtml(listText(display.classification.tags) || t("brand.blank"))}</div>
-        </div>
-        <div class="resource"><strong>${t("brand.colors")}</strong><br>${escapeHtml(brand.theme?.keywords?.join(" · ") || "")}</div>
-        <div class="resource"><strong>${t("brand.editable")}</strong><br>${brand.editablePaths?.map(escapeHtml).join("<br>") || t("brand.noneGuide")}</div>
-        <div class="resource"><strong>${t("brand.tokens")}</strong><br>${brand.tokens?.map((token) => escapeHtml(token.path)).join("<br>") || t("brand.noneTokens")}</div>
-      </section>
-      ${brand.guides?.map((guide) => `
-        <article class="guide guide-rendered">
-          <p class="eyebrow">${escapeHtml(t("brand.guideline"))}</p>
-          <div class="rendered-document brand-guide-document">${guide.html || ("<p>" + escapeHtml(guide.excerpt || "") + "</p>")}</div>
-        </article>
-      `).join("") || ""}
+      ${brandAssetStrip(brand.images || [])}
+      ${compactBrandFacts(brand, display, localized)}
+      ${brandAdvancedDetails(brand)}
     </div>
   `;
   page.setAttribute("aria-busy", "false");
   setupCopyButtons([brand]);
-  setupProfileEditor(brand);
-  setupIpSystemPanel(brand);
   setupAssetCopyButtons();
-  renderBrandArchitecture(slug).catch(console.error);
+  const advanced = page.querySelector(".brand-advanced");
+  advanced?.addEventListener("toggle", () => {
+    if (!advanced.open || advanced.dataset.ready) return;
+    advanced.dataset.ready = "true";
+    setupProfileEditor(brand);
+    setupIpSystemPanel(brand);
+    renderBrandArchitecture(brand.slug).catch(console.error);
+  });
 }
 
 function renderBrandFailure(error) {

@@ -17,9 +17,11 @@ binary assets as described in `docs/stack-baseline.md`.
    changes, deploys the Worker and then deploys Pages from the same commit.
 7. Run `npm run check:production` after the workflow succeeds.
 
-`.github/workflows/deploy-pages.yml` publishes the GitHub Pages fallback at
-`https://fengurt.github.io/tableai_designaha/`. It is not the production
-origin and must not be treated as the latest operational state.
+Cloudflare Pages is the only publishing target. The former
+`.github/workflows/deploy-pages.yml` GitHub Pages mirror was removed: it could not serve
+`_worker.js`, `_routes.json`, `_headers` or `_redirects`, and the absolute `/assets/...` URLs in
+the generated pages do not resolve under a `/tableai_designaha/` path prefix, so it published a
+copy that could never work.
 
 ## Emergency deployment
 

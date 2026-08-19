@@ -55,6 +55,19 @@ const checks = [
   },
 ];
 
+// Advisories report but never fail the deploy. They cover configuration that lives in the
+// Cloudflare dashboard rather than in this repository, so a red result here is a task for an
+// operator, not a reason to block a release.
+const advisories = [
+  {
+    name: "www-canonical",
+    url: "https://www.apuch.art/",
+    redirect: "manual",
+    expect: (response) => [301, 308].includes(response.status)
+      && new URL(response.headers.get("location") || "/", "https://www.apuch.art/").origin === "https://apuch.art",
+  },
+];
+
 async function runCheck(check) {
   const started = performance.now();
   const controller = new AbortController();
@@ -100,6 +113,12 @@ for (let attempt = 1; attempt <= attempts; attempt += 1) {
   }
   if (!failures.length) break;
   if (attempt < attempts) await new Promise((resolve) => setTimeout(resolve, 1200));
+}
+
+for (const result of await Promise.all(advisories.map(runCheck))) {
+  const state = result.passed ? "PASS" : "WARN";
+  console.log(`${state} advisory=${result.name} status=${result.status} duration_ms=${result.durationMs}${result.error ? ` error=${JSON.stringify(result.error)}` : ""}`);
+  if (!result.passed) console.log(`  see docs/cloudflare-pages.md for the ${result.name} configuration`);
 }
 
 if (failures.length) {

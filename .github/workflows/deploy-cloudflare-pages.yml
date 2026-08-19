@@ -52,7 +52,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if git diff --quiet HEAD^ HEAD -- scripts/sync-font-library.mjs data/fonts.json; then
+          if git rev-parse --verify --quiet HEAD^ >/dev/null \
+            && git diff --quiet HEAD^ HEAD -- scripts/sync-font-library.mjs data/fonts.json; then
             echo "Font catalog unchanged; skipping R2 font sync."
             exit 0
           fi
@@ -104,7 +105,7 @@ jobs:
         with:
           apiToken: ${{ env.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ env.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy site --project-name=${{ steps.cloudflare.outputs.project }} --branch=main
+          command: pages deploy site --project-name=${{ steps.cloudflare.outputs.project }} --branch=main --commit-hash=${{ github.sha }} --commit-dirty=true
       - name: Verify production
         if: steps.cloudflare.outputs.enabled == 'true'
         run: npm run check:production

@@ -2,6 +2,13 @@
 
 This workflow pulls domain/resource metadata from Cloudflare and Tencent Cloud, updates due-date status on every run, encrypts the inventory, and exposes it only through the protected System API.
 
+> **Not currently served.** `/api/resources` was a Pages Function. Pages Functions are no longer
+> part of this project — `site/_worker.js` takes precedence over a `functions/` directory, and
+> `site/_routes.json` never routed that path — so it has not answered a request in production.
+> The removed implementation is in Git history (`functions/api/resources.js`). To bring it back,
+> port it into `edge/src/api.js` under `/api/v2/` and set `RESOURCE_ENCRYPTION_KEY` on the
+> `iptrust-edge` Worker. The sync and encryption steps below still work.
+
 ## Data Flow
 
 1. Run `npm run sync:cloud-resources`.

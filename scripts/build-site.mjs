@@ -647,26 +647,26 @@ const previousHistoryBySlug = new Map(await Promise.all(brands.map(async (brand)
   return [brand.slug, previous?.versions ?? []];
 })));
 const versions = mergeVersionHistory(loadVersions(), previousVersions, 20);
+// site.css and site.js are emitted from this script's own templates plus the files below.
+// buildVersion names them for a one-year immutable cache, so every source that can change
+// their bytes must be listed here — an unlisted input would ship under a cached filename.
 const buildFingerprint = createHash("sha256");
 for (const inputPath of ["scripts/build-site.mjs", "styles/editorial.css", "config/brands.json", "config/ip-system.json", "package.json", "IP-System/ip_sys.md", "data/fonts.json", "data/google-fonts-directory.json", "data/library/sync.json", "library/library.css", "library/library.js"]) {
   buildFingerprint.update(await readFile(join(root, inputPath)));
 }
-const buildVersion = `${versions[0]?.shortHash ?? "dev"}-${buildFingerprint.digest("hex").slice(0, 8)}`;
+const buildVersion = buildFingerprint.digest("hex").slice(0, 16);
 const siteCssPath = `assets/site-${buildVersion}.css`;
 const siteJsPath = `assets/site-${buildVersion}.js`;
 const ipSystemMarkdown = await readFile(join(root, "IP-System/ip_sys.md"), "utf8");
 const ipSystemDocumentHtml = renderMarkdownDocument(ipSystemMarkdown, "ip-system");
 const ipSystemTocHtml = markdownToc(ipSystemMarkdown, "ip-system");
 
+// Retain only the assets the last few builds still point at, so a page loaded just before a
+// deploy keeps resolving. Retaining every file ever emitted grows the repo and the deploy without
+// bound.
 const retainedVersionedAssets = [];
 const previousIndexPath = join(siteDir, "index.html");
 const previousIndexes = [];
-if (existsSync(assetsDir)) {
-  const existingVersioned = (await readdir(assetsDir)).filter((filename) => /^site-[a-z0-9-]+\.(?:css|js)$/.test(filename));
-  for (const filename of existingVersioned) {
-    retainedVersionedAssets.push({ filename, data: await readFile(join(assetsDir, filename)) });
-  }
-}
 if (existsSync(previousIndexPath)) previousIndexes.push(await readFile(previousIndexPath, "utf8"));
 for (const revision of ["HEAD", "HEAD^"]) {
   try {

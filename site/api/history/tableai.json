@@ -134,6 +134,18 @@
       ]
     },
     {
+      "hash": "6f0d28b10ae106649819acdfcbbc51bf8f4b5b76",
+      "shortHash": "6f0d28b",
+      "date": "2026-07-10T22:27:54+08:00",
+      "message": "Version design system assets",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/6f0d28b10ae106649819acdfcbbc51bf8f4b5b76",
+      "sourcePaths": [
+        "config/brands.json",
+        "TABLEAI",
+        "TABLEAI/TableAI_DESIGN.md"
+      ]
+    },
+    {
       "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
       "shortHash": "a5bf7cf",
       "date": "2026-07-10T20:21:24+08:00",
@@ -247,18 +259,6 @@
       "date": "2026-07-05T10:48:18+08:00",
       "message": "Add transparent Table AI logo",
       "url": "https://github.com/fengurt/tableai_designaha/commit/542890fcc565ebcb28a3b1cd1113563d1535f5cf",
-      "sourcePaths": [
-        "config/brands.json",
-        "TABLEAI",
-        "TABLEAI/TableAI_DESIGN.md"
-      ]
-    },
-    {
-      "hash": "067a47c76f1cb812b607335089911c282f4d8f78",
-      "shortHash": "067a47c",
-      "date": "2026-07-05T10:24:24+08:00",
-      "message": "Add Sanctem IP and brand logos",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/067a47c76f1cb812b607335089911c282f4d8f78",
       "sourcePaths": [
         "config/brands.json",
         "TABLEAI",

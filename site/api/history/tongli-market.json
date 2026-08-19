@@ -122,6 +122,18 @@
       ]
     },
     {
+      "hash": "6f0d28b10ae106649819acdfcbbc51bf8f4b5b76",
+      "shortHash": "6f0d28b",
+      "date": "2026-07-10T22:27:54+08:00",
+      "message": "Version design system assets",
+      "url": "https://github.com/fengurt/tableai_designaha/commit/6f0d28b10ae106649819acdfcbbc51bf8f4b5b76",
+      "sourcePaths": [
+        "config/brands.json",
+        "TongliMarket",
+        "TongliMarket/README.md"
+      ]
+    },
+    {
       "hash": "a5bf7cfbce47907a1d9b38b490a0eb8c434735e9",
       "shortHash": "a5bf7cf",
       "date": "2026-07-10T20:21:24+08:00",
@@ -247,18 +259,6 @@
       "date": "2026-07-04T22:02:17+08:00",
       "message": "Add Sidera reference notes",
       "url": "https://github.com/fengurt/tableai_designaha/commit/a0e6ecdeb7c9f436d1fc0081c43299056e0601ce",
-      "sourcePaths": [
-        "config/brands.json",
-        "TongliMarket",
-        "TongliMarket/README.md"
-      ]
-    },
-    {
-      "hash": "0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
-      "shortHash": "0e3d71b",
-      "date": "2026-07-04T21:38:07+08:00",
-      "message": "Add PaM Design Office IP",
-      "url": "https://github.com/fengurt/tableai_designaha/commit/0e3d71ba924b859205ea91bc3c5cf3e60e7f61b8",
       "sourcePaths": [
         "config/brands.json",
         "TongliMarket",
