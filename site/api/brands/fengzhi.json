@@ -165,11 +165,11 @@
     "standalone"
   ],
   "version": {
-    "hash": "97409964b2887b3882c3d0e2637e16b082de0505",
-    "shortHash": "9740996",
-    "date": "2026-08-16T09:01:13+08:00",
-    "message": "fix: use absolute app assets",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/97409964b2887b3882c3d0e2637e16b082de0505"
+    "hash": "dd042f5968222ea27fb7ec3ff4e75f63ce57d3bc",
+    "shortHash": "dd042f5",
+    "date": "2026-08-20T08:06:20+08:00",
+    "message": "feat: prioritize transparent document logos",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/dd042f5968222ea27fb7ec3ff4e75f63ce57d3bc"
   },
   "historyUrl": "api/history/fengzhi.json",
   "history": [

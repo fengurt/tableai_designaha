@@ -39,4 +39,7 @@ if (!aboutPage.includes('<base href="../">')) throw new Error("about_base_missin
 if (!aboutPage.includes('rel="canonical" href="https://apuch.art/about/"')) throw new Error("about_canonical");
 if (!aboutPage.includes('href="mcp"') || !aboutPage.includes('href="agent.json"')) throw new Error("about_agent_docs_missing");
 
+const siteScript = await readFile(join(root, "site", "assets", "site.js"), "utf8");
+if (!siteScript.includes("function minimalReferenceText") || !siteScript.includes("data-copy-minimal")) throw new Error("minimal_copy_missing");
+
 console.log(JSON.stringify({ ok: true, redirects: cases.length, canonical: "https://apuch.art/ip-evolution", about: "https://apuch.art/about" }, null, 2));

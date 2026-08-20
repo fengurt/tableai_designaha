@@ -4580,12 +4580,14 @@ const i18n = {
     "copy.selected": "已选中，请按 ⌘C / Ctrl+C 复制",
     "copy.fail": "复制失败",
     "copy.referenceDone": "已复制 IP Agent Reference",
+    "copy.minimalDone": "已复制极简品牌信息",
     "copy.assetUrl": "复制资产地址",
     "copy.assetDone": "已复制资产地址",
     "copy.colorDone": "已复制色值",
     "copy.pantoneDone": "已复制 Pantone 近似值",
     "brand.openJson": "打开 JSON",
     "brand.copyAgentPack": "复制 Agent Pack",
+    "brand.copyMinimal": "极简复制",
     "brand.source": "源文件",
     "brand.colors": "品牌颜色",
     "brand.website": "官网",
@@ -4814,12 +4816,14 @@ const i18n = {
     "copy.selected": "Selected. Press Cmd/Ctrl+C to copy.",
     "copy.fail": "Failed",
     "copy.referenceDone": "IP Agent Reference copied",
+    "copy.minimalDone": "Minimal brand info copied",
     "copy.assetUrl": "Copy asset URL",
     "copy.assetDone": "Asset URL copied",
     "copy.colorDone": "Color copied",
     "copy.pantoneDone": "Pantone approximation copied",
     "brand.openJson": "Open JSON",
     "brand.copyAgentPack": "Copy Agent Pack",
+    "brand.copyMinimal": "Quick copy",
     "brand.source": "Source",
     "brand.colors": "Brand colors",
     "brand.website": "Website",
@@ -5473,6 +5477,18 @@ function referenceText(brand = {}) {
   ].join("\\n");
 }
 
+function minimalReferenceText(brand = {}) {
+  const transparentLogo = (brand.images || []).find((image) => image.documentLogo)
+    || (brand.images || []).find((image) => image.backgroundTransparent && image.format === "PNG");
+  return [
+    \`中文名: \${brand.display?.zh?.name || "暂无"}\`,
+    \`English: \${brand.display?.en?.name || "TBD"}\`,
+    \`主色: \${brand.theme?.primary || "TBD"}\`,
+    \`辅助色: \${brand.theme?.accent || brand.theme?.secondary || "TBD"}\`,
+    \`透明 PNG: \${transparentLogo?.sitePath || "暂无"}\`,
+  ].join("\\n");
+}
+
 function ipSystemApplyText(brand = {}) {
   const localized = mainBrand(brand);
   const brandUrl = new URL(brand.url || \`brand.html?brand=\${brand.slug}\`, location.href).href;
@@ -5792,13 +5808,13 @@ function setupFontLibrary() {
   applyFontLibraryLocale();
 }
 
-async function copyReference(brand, button) {
+async function copyReference(brand, button, minimal = false) {
   const previous = button.textContent;
   if (!button.dataset.iconOnly) button.textContent = t("copy.copying");
   button.classList.add("copying");
   button.setAttribute("aria-busy", "true");
-  const result = await writeClipboardText(referenceText(brand));
-  const message = feedbackMessage(result, "copy.referenceDone");
+  const result = await writeClipboardText(minimal ? minimalReferenceText(brand) : referenceText(brand));
+  const message = feedbackMessage(result, minimal ? "copy.minimalDone" : "copy.referenceDone");
   if (!button.dataset.iconOnly) button.textContent = message;
   button.classList.remove("copying");
   button.dataset.feedback = message;
@@ -6267,7 +6283,7 @@ function setupCopyButtons(brands) {
       try {
         const brand = bySlug.get(button.dataset.copyBrand);
         if (!brand) throw new Error(\`Unknown brand \${button.dataset.copyBrand}\`);
-        await copyReference(brand, button);
+        await copyReference(brand, button, button.hasAttribute("data-copy-minimal"));
       } catch (error) {
         button.textContent = t("copy.fail");
         console.error(error);
@@ -6730,6 +6746,7 @@ async function renderBrand() {
           <div class="actions">
             \${isKaoyu ? \`<a class="button" href="kaoyu-shenhua/">\${currentLocale === "en" ? "Brand story" : "品牌故事"}</a>\` : ""}
             <button class="button" type="button" data-copy-brand="\${escapeHtml(brand.slug)}">\${escapeHtml(t("brand.copyAgentPack"))}</button>
+            <button class="button ghost" type="button" data-copy-brand="\${escapeHtml(brand.slug)}" data-copy-minimal>\${escapeHtml(t("brand.copyMinimal"))}</button>
             \${brand.officialWebsite ? \`<a class="button ghost" href="\${escapeHtml(brand.officialWebsite)}">\${escapeHtml(t("brand.website"))}</a>\` : ""}
           </div>
         </div>
