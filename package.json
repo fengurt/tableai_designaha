@@ -19,6 +19,7 @@
     "seed:library": "node scripts/build-library-seed.mjs",
     "process:adobe-assets": "node scripts/process-adobe-assets.mjs",
     "assets:manifest": "node scripts/build-asset-manifest.mjs",
+    "assets:logos": "node scripts/enrich-logo-metadata.mjs",
     "assets:migrate:dry": "node scripts/migrate-assets-to-r2.mjs",
     "assets:migrate:upload": "node scripts/migrate-assets-to-r2.mjs --upload",
     "assets:migrate:verify": "node scripts/migrate-assets-to-r2.mjs --verify",

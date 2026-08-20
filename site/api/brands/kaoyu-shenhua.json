@@ -177,11 +177,11 @@
     "standalone"
   ],
   "version": {
-    "hash": "023912fb3434a3e51c398957794d4d0eab3cdeb8",
-    "shortHash": "023912f",
-    "date": "2026-08-16T08:56:23+08:00",
-    "message": "fix: resolve about page assets",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/023912fb3434a3e51c398957794d4d0eab3cdeb8"
+    "hash": "97409964b2887b3882c3d0e2637e16b082de0505",
+    "shortHash": "9740996",
+    "date": "2026-08-16T09:01:13+08:00",
+    "message": "fix: use absolute app assets",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/97409964b2887b3882c3d0e2637e16b082de0505"
   },
   "historyUrl": "api/history/kaoyu-shenhua.json",
   "history": [
@@ -290,7 +290,9 @@
       "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc",
@@ -307,7 +309,9 @@
       "sha256": "8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49",
@@ -324,7 +328,9 @@
       "sha256": "81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea",
@@ -341,7 +347,9 @@
       "sha256": "25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7",
@@ -358,7 +366,9 @@
       "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": true,
+      "documentLogo": false
     }
   ],
   "assetManifest": [
@@ -410,7 +420,9 @@
         "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49",
@@ -435,7 +447,9 @@
         "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea",
@@ -460,7 +474,9 @@
         "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7",
@@ -485,7 +501,9 @@
         "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0",
@@ -510,7 +528,9 @@
         "/assets/adobe/kaoyu-shenhua/kaoyu-shenhua-logo.ai"
       ],
       "status": "processing",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     }
   ],
   "adobeAssets": [
@@ -676,7 +696,9 @@
           "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc",
@@ -693,7 +715,9 @@
           "sha256": "8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49",
@@ -710,7 +734,9 @@
           "sha256": "81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": true,
+          "documentLogo": false
         },
         {
           "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea",
@@ -727,7 +753,9 @@
           "sha256": "25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7",
@@ -744,7 +772,9 @@
           "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": true,
+          "documentLogo": false
         }
       ]
     }
@@ -824,7 +854,9 @@
         "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-8ddb72565efc",
@@ -841,7 +873,9 @@
         "sha256": "8ddb72565efc64b726af57cb932205e8e9cb0eebbd2693fe3c9f2f2dd197313c",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49",
@@ -858,7 +892,9 @@
         "sha256": "81970113ed493bc2f6801f5c9999be7a58b2b385e681955b501b8fec4b24325c",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": true,
+        "documentLogo": false
       },
       {
         "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea",
@@ -875,7 +911,9 @@
         "sha256": "25ecdbf612ea818b49b61f6aed23120c52e59221ef9a131e752b20093f546033",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7",
@@ -892,7 +930,9 @@
         "sha256": "a0530b1e1ad7324efcb6098f2b4bf9bbebf350917efc74e6eb749bc1e331c4c0",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": true,
+        "documentLogo": false
       }
     ]
   },

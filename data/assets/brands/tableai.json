@@ -24,7 +24,9 @@
       "mediaUrl": "https://media.apuch.art/public/tableai/tableai-logo-a2a-logo-2054a6a35cb0/2054a6a35cb07ef17fae5fd4a1498db4e5eabc9c62a248ff2ea65f2b6e65453a/original.png",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "tableai-logo-tableai-a2a-logo-transparent-c1e7752b39f5",
@@ -49,7 +51,9 @@
         "/assets/brand-images/tableai-tableai-a2a-logo-transparent.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "id": "tableai-logo-tableai-a2a-logo-2054a6a35cb0",
@@ -74,7 +78,9 @@
         "/assets/brand-images/tableai-tableai-a2a-logo.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "tableai-hero-tableai-brand-hero-df017e1f0d5d",

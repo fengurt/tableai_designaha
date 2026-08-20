@@ -165,11 +165,11 @@
     "standalone"
   ],
   "version": {
-    "hash": "023912fb3434a3e51c398957794d4d0eab3cdeb8",
-    "shortHash": "023912f",
-    "date": "2026-08-16T08:56:23+08:00",
-    "message": "fix: resolve about page assets",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/023912fb3434a3e51c398957794d4d0eab3cdeb8"
+    "hash": "97409964b2887b3882c3d0e2637e16b082de0505",
+    "shortHash": "9740996",
+    "date": "2026-08-16T09:01:13+08:00",
+    "message": "fix: use absolute app assets",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/97409964b2887b3882c3d0e2637e16b082de0505"
   },
   "historyUrl": "api/history/opcglobal.json",
   "history": [
@@ -262,7 +262,9 @@
       "sha256": "8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "opcglobal-logo-black-jpg-76a48309a215",
@@ -279,7 +281,9 @@
       "sha256": "76a48309a2156fdf1f1918955f202a1533bc708bec99c0bb65351942a6d169fa",
       "access": "public",
       "colorway": "black",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "opcglobal-logo-black-transparent-ca9f06b66f58",
@@ -296,7 +300,9 @@
       "sha256": "ca9f06b66f583a3c3eb8261316dfd299790f1f614fdcdf7a7d3965f3fd8000ed",
       "access": "public",
       "colorway": "black",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "assetId": "opcglobal-logo-blue-jpg-78995d0f5c1e",
@@ -313,7 +319,9 @@
       "sha256": "78995d0f5c1e8a84b6cab4fbac635261a5c078b342dc14805547b18edae565a4",
       "access": "public",
       "colorway": "blue",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "opcglobal-hero-primary-blue-c970696e04ab",
@@ -330,7 +338,9 @@
       "sha256": "c970696e04ab2859dd66c7b85c2c1b461d06ede4e2d65ec6a97d9c11db1396b3",
       "access": "public",
       "colorway": "blue",
-      "primaryAsset": true
+      "primaryAsset": true,
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "assetId": "opcglobal-logo-vector-b58c3be7390a",
@@ -347,7 +357,9 @@
       "sha256": "b58c3be7390a1b625de8ad7d5c953fe8b95d1467692977c338c9b255f266502c",
       "access": "public",
       "colorway": "monochrome",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "opcglobal-logo-white-jpg-d5eff2b4da39",
@@ -364,7 +376,9 @@
       "sha256": "d5eff2b4da3934baa24e81764426d26de564afd1b050fad8e36eacda40633da5",
       "access": "public",
       "colorway": "white",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "opcglobal-logo-white-transparent-f1f76209c767",
@@ -381,7 +395,9 @@
       "sha256": "f1f76209c76744d1e9f7b4b692ab6f3b01e4df4e0e3b2a3cbb6e310be02dc8fe",
       "access": "public",
       "colorway": "white",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "assetId": "opcglobal-logo-yellow-jpg-0c3d48dedef6",
@@ -398,7 +414,9 @@
       "sha256": "0c3d48dedef6da1720ab08fe37784b2e173503066821ebb0531cf15561fa481b",
       "access": "public",
       "colorway": "yellow",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "opcglobal-logo-yellow-transparent-9f71f58faaf3",
@@ -415,7 +433,9 @@
       "sha256": "9f71f58faaf3a693e9777af9cd6401cf46d927e7f78effd5b0a4d1eb1a9ba87d",
       "access": "public",
       "colorway": "yellow",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": true,
+      "documentLogo": true
     }
   ],
   "assetManifest": [
@@ -446,7 +466,9 @@
         "colorway": "black",
         "primary": false,
         "originalRelativePath": "黑色/黑色.jpg"
-      }
+      },
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "opcglobal-logo-black-transparent-ca9f06b66f58",
@@ -475,7 +497,9 @@
         "colorway": "black",
         "primary": false,
         "originalRelativePath": "黑色/黑色透明.png"
-      }
+      },
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "id": "opcglobal-logo-blue-jpg-78995d0f5c1e",
@@ -504,7 +528,9 @@
         "colorway": "blue",
         "primary": false,
         "originalRelativePath": "蓝色/蓝色蓝色_白色透明.jpg"
-      }
+      },
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "opcglobal-hero-opcglobal-brand-hero-8351935e9abc",
@@ -558,7 +584,9 @@
         "colorway": "blue",
         "primary": true,
         "originalRelativePath": "蓝色/蓝色.png"
-      }
+      },
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "id": "opcglobal-logo-vector-b58c3be7390a",
@@ -587,7 +615,9 @@
         "colorway": "monochrome",
         "primary": false,
         "originalRelativePath": "logo-svg.svg"
-      }
+      },
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "opcglobal-logo-white-jpg-d5eff2b4da39",
@@ -616,7 +646,9 @@
         "colorway": "white",
         "primary": false,
         "originalRelativePath": "白色/白色.jpg"
-      }
+      },
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "opcglobal-logo-white-transparent-f1f76209c767",
@@ -645,7 +677,9 @@
         "colorway": "white",
         "primary": false,
         "originalRelativePath": "白色/白色透明.png"
-      }
+      },
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "id": "opcglobal-logo-yellow-jpg-0c3d48dedef6",
@@ -674,7 +708,9 @@
         "colorway": "yellow",
         "primary": false,
         "originalRelativePath": "黄色/黄色白色透明.jpg"
-      }
+      },
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "opcglobal-logo-yellow-transparent-9f71f58faaf3",
@@ -703,7 +739,9 @@
         "colorway": "yellow",
         "primary": false,
         "originalRelativePath": "黄色/黄色.png"
-      }
+      },
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "id": "opcglobal-source-master-ai-79d455673610",
@@ -842,7 +880,9 @@
           "sha256": "8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "opcglobal-logo-black-jpg-76a48309a215",
@@ -859,7 +899,9 @@
           "sha256": "76a48309a2156fdf1f1918955f202a1533bc708bec99c0bb65351942a6d169fa",
           "access": "public",
           "colorway": "black",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "opcglobal-logo-black-transparent-ca9f06b66f58",
@@ -876,7 +918,9 @@
           "sha256": "ca9f06b66f583a3c3eb8261316dfd299790f1f614fdcdf7a7d3965f3fd8000ed",
           "access": "public",
           "colorway": "black",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": true,
+          "documentLogo": true
         },
         {
           "assetId": "opcglobal-logo-blue-jpg-78995d0f5c1e",
@@ -893,7 +937,9 @@
           "sha256": "78995d0f5c1e8a84b6cab4fbac635261a5c078b342dc14805547b18edae565a4",
           "access": "public",
           "colorway": "blue",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "opcglobal-hero-primary-blue-c970696e04ab",
@@ -910,7 +956,9 @@
           "sha256": "c970696e04ab2859dd66c7b85c2c1b461d06ede4e2d65ec6a97d9c11db1396b3",
           "access": "public",
           "colorway": "blue",
-          "primaryAsset": true
+          "primaryAsset": true,
+          "backgroundTransparent": true,
+          "documentLogo": true
         },
         {
           "assetId": "opcglobal-logo-vector-b58c3be7390a",
@@ -927,7 +975,9 @@
           "sha256": "b58c3be7390a1b625de8ad7d5c953fe8b95d1467692977c338c9b255f266502c",
           "access": "public",
           "colorway": "monochrome",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "opcglobal-logo-white-jpg-d5eff2b4da39",
@@ -944,7 +994,9 @@
           "sha256": "d5eff2b4da3934baa24e81764426d26de564afd1b050fad8e36eacda40633da5",
           "access": "public",
           "colorway": "white",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "opcglobal-logo-white-transparent-f1f76209c767",
@@ -961,7 +1013,9 @@
           "sha256": "f1f76209c76744d1e9f7b4b692ab6f3b01e4df4e0e3b2a3cbb6e310be02dc8fe",
           "access": "public",
           "colorway": "white",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": true,
+          "documentLogo": true
         },
         {
           "assetId": "opcglobal-logo-yellow-jpg-0c3d48dedef6",
@@ -978,7 +1032,9 @@
           "sha256": "0c3d48dedef6da1720ab08fe37784b2e173503066821ebb0531cf15561fa481b",
           "access": "public",
           "colorway": "yellow",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "opcglobal-logo-yellow-transparent-9f71f58faaf3",
@@ -995,7 +1051,9 @@
           "sha256": "9f71f58faaf3a693e9777af9cd6401cf46d927e7f78effd5b0a4d1eb1a9ba87d",
           "access": "public",
           "colorway": "yellow",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": true,
+          "documentLogo": true
         }
       ]
     }
@@ -1070,7 +1128,9 @@
         "sha256": "8351935e9abc74b963309f2ec5677f22a9eaf4998c0e0cb59ecd55be42e4fe40",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "opcglobal-logo-black-jpg-76a48309a215",
@@ -1087,7 +1147,9 @@
         "sha256": "76a48309a2156fdf1f1918955f202a1533bc708bec99c0bb65351942a6d169fa",
         "access": "public",
         "colorway": "black",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "opcglobal-logo-black-transparent-ca9f06b66f58",
@@ -1104,7 +1166,9 @@
         "sha256": "ca9f06b66f583a3c3eb8261316dfd299790f1f614fdcdf7a7d3965f3fd8000ed",
         "access": "public",
         "colorway": "black",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": true,
+        "documentLogo": true
       },
       {
         "assetId": "opcglobal-logo-blue-jpg-78995d0f5c1e",
@@ -1121,7 +1185,9 @@
         "sha256": "78995d0f5c1e8a84b6cab4fbac635261a5c078b342dc14805547b18edae565a4",
         "access": "public",
         "colorway": "blue",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "opcglobal-hero-primary-blue-c970696e04ab",
@@ -1138,7 +1204,9 @@
         "sha256": "c970696e04ab2859dd66c7b85c2c1b461d06ede4e2d65ec6a97d9c11db1396b3",
         "access": "public",
         "colorway": "blue",
-        "primaryAsset": true
+        "primaryAsset": true,
+        "backgroundTransparent": true,
+        "documentLogo": true
       },
       {
         "assetId": "opcglobal-logo-vector-b58c3be7390a",
@@ -1155,7 +1223,9 @@
         "sha256": "b58c3be7390a1b625de8ad7d5c953fe8b95d1467692977c338c9b255f266502c",
         "access": "public",
         "colorway": "monochrome",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "opcglobal-logo-white-jpg-d5eff2b4da39",
@@ -1172,7 +1242,9 @@
         "sha256": "d5eff2b4da3934baa24e81764426d26de564afd1b050fad8e36eacda40633da5",
         "access": "public",
         "colorway": "white",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "opcglobal-logo-white-transparent-f1f76209c767",
@@ -1189,7 +1261,9 @@
         "sha256": "f1f76209c76744d1e9f7b4b692ab6f3b01e4df4e0e3b2a3cbb6e310be02dc8fe",
         "access": "public",
         "colorway": "white",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": true,
+        "documentLogo": true
       },
       {
         "assetId": "opcglobal-logo-yellow-jpg-0c3d48dedef6",
@@ -1206,7 +1280,9 @@
         "sha256": "0c3d48dedef6da1720ab08fe37784b2e173503066821ebb0531cf15561fa481b",
         "access": "public",
         "colorway": "yellow",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "opcglobal-logo-yellow-transparent-9f71f58faaf3",
@@ -1223,7 +1299,9 @@
         "sha256": "9f71f58faaf3a693e9777af9cd6401cf46d927e7f78effd5b0a4d1eb1a9ba87d",
         "access": "public",
         "colorway": "yellow",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": true,
+        "documentLogo": true
       }
     ]
   },

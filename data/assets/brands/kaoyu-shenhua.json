@@ -51,7 +51,9 @@
         "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49",
@@ -76,7 +78,9 @@
         "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea",
@@ -101,7 +105,9 @@
         "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7",
@@ -126,7 +132,9 @@
         "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0",
@@ -151,7 +159,9 @@
         "/assets/adobe/kaoyu-shenhua/kaoyu-shenhua-logo.ai"
       ],
       "status": "processing",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     }
   ]
 }

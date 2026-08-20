@@ -165,11 +165,11 @@
     "standalone"
   ],
   "version": {
-    "hash": "023912fb3434a3e51c398957794d4d0eab3cdeb8",
-    "shortHash": "023912f",
-    "date": "2026-08-16T08:56:23+08:00",
-    "message": "fix: resolve about page assets",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/023912fb3434a3e51c398957794d4d0eab3cdeb8"
+    "hash": "97409964b2887b3882c3d0e2637e16b082de0505",
+    "shortHash": "9740996",
+    "date": "2026-08-16T09:01:13+08:00",
+    "message": "fix: use absolute app assets",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/97409964b2887b3882c3d0e2637e16b082de0505"
   },
   "historyUrl": "api/history/iptrust.json",
   "history": [
@@ -262,7 +262,9 @@
       "sha256": "63c7b53792f9a8f56ee0f0b2bfaad3705c4895fed8d0ba6c687c750e9fdc5eb1",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "iptrust-logo-iptrust-logo-black-4a253cbe0faa",
@@ -279,7 +281,9 @@
       "sha256": "4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "assetId": "iptrust-image-iptrust-wide-black-f61b168f6766",
@@ -296,7 +300,9 @@
       "sha256": "f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "iptrust-image-iptrust-wide-white-5e6f803129e8",
@@ -313,7 +319,9 @@
       "sha256": "5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "iptrust-logo-wideblack-f61b168f6766",
@@ -330,7 +338,9 @@
       "sha256": "f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "assetId": "iptrust-logo-widewhite-5e6f803129e8",
@@ -347,7 +357,9 @@
       "sha256": "5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "assetId": "iptrust-logo-logo-logo-687e84896c21",
@@ -364,7 +376,9 @@
       "sha256": "687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "iptrust-logo-logo-0a15e78e0a37",
@@ -381,7 +395,9 @@
       "sha256": "0a15e78e0a37949254ad500a9c83802f48d0f2f2039c2856e7f40d176e60f254",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "iptrust-logo-logo-d50caec22786",
@@ -398,7 +414,9 @@
       "sha256": "d50caec22786b6b1fd6f8e7b4e6fd9d3a2f366684308deaec96408fbe6b37529",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "assetId": "iptrust-logo-logo-logo-34178b12bc90",
@@ -415,7 +433,9 @@
       "sha256": "34178b12bc90ce079e0304f43b0ee6b35952a8230aae0ad30c516dfd25e861b2",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "iptrust-logo-logo-logo-ae217dbf366f",
@@ -432,7 +452,9 @@
       "sha256": "ae217dbf366f5e6a149fed179e126da3620e42e85d6fb2197de710cceb6ca595",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "assetId": "iptrust-logo-logo-logo-3a0b20c18a58",
@@ -449,7 +471,9 @@
       "sha256": "3a0b20c18a587240e50379c842b7cf36bb8e97940bbfb09cfebad32ea2198489",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "iptrust-logo-logo-logo-9043654071cb",
@@ -466,7 +490,9 @@
       "sha256": "9043654071cb9443d555c06c33f696dbe8b17e4b59e12ad1b3380db4dd421210",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "iptrust-logo-logo-logo-3b5bda396c04",
@@ -483,7 +509,9 @@
       "sha256": "3b5bda396c0426d723aaecb178ebfec5b28e04de79b82aaacb52159c7a4b7705",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "assetId": "iptrust-logo-logo-logo-6c27005c50a2",
@@ -500,7 +528,9 @@
       "sha256": "6c27005c50a296eb02ccbc3c69aeed7b94b0f346d5c8973f2ae887f0b7dc2be0",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "iptrust-logo-logo-logo-7e72d10a5d55",
@@ -517,7 +547,9 @@
       "sha256": "7e72d10a5d5583ae67e3019c5bf08cee636c5b656342aa6fcb69201004ce2a20",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "iptrust-logo-logo-logo-943c106495e0",
@@ -534,7 +566,9 @@
       "sha256": "943c106495e0ef5e27af4e93578568a25abfbed6a80950c077cc94493604f663",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "iptrust-logo-logohdpi-4a253cbe0faa",
@@ -551,7 +585,9 @@
       "sha256": "4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": true,
+      "documentLogo": true
     }
   ],
   "assetManifest": [
@@ -628,7 +664,9 @@
         "/assets/brand-images/iptrust-logo-black.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "id": "iptrust-image-iptrust-wide-black-f61b168f6766",
@@ -701,7 +739,9 @@
       "mediaUrl": "https://media.apuch.art/private/iptrust/iptrust-logo-logo-35c437df08fc/35c437df08fcd01d10438aa05e04bc33195f3f04b6bc5dd4610a1810cbe23126/source.ai",
       "legacyUrls": [],
       "status": "processing",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-wideblack-f61b168f6766",
@@ -726,7 +766,9 @@
         "/assets/brand-images/iptrust-logo-set-wideblack.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-widewhite-5e6f803129e8",
@@ -751,7 +793,9 @@
         "/assets/brand-images/iptrust-logo-set-widewhite.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-687e84896c21",
@@ -774,7 +818,9 @@
       "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-687e84896c21/687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca/original.svg",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-0a15e78e0a37",
@@ -799,7 +845,9 @@
         "/assets/brand-images/iptrust-logo.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-d50caec22786",
@@ -824,7 +872,9 @@
         "/assets/brand-images/iptrust-logo.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "id": "iptrust-logo-logo-logo-34178b12bc90",
@@ -849,7 +899,9 @@
         "/assets/brand-images/iptrust-logo-logo.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-ae217dbf366f",
@@ -874,7 +926,9 @@
         "/assets/brand-images/iptrust-logo-logo.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-3a0b20c18a58",
@@ -897,7 +951,9 @@
       "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-3a0b20c18a58/3a0b20c18a587240e50379c842b7cf36bb8e97940bbfb09cfebad32ea2198489/original.svg",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-9043654071cb",
@@ -922,7 +978,9 @@
         "/assets/brand-images/iptrust-logo-logo-2.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-3b5bda396c04",
@@ -947,7 +1005,9 @@
         "/assets/brand-images/iptrust-logo-logo-2.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-6c27005c50a2",
@@ -970,7 +1030,9 @@
       "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-6c27005c50a2/6c27005c50a296eb02ccbc3c69aeed7b94b0f346d5c8973f2ae887f0b7dc2be0/original.svg",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-7e72d10a5d55",
@@ -995,7 +1057,9 @@
         "/assets/brand-images/iptrust-logo-logo-3.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-943c106495e0",
@@ -1018,7 +1082,9 @@
       "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-943c106495e0/943c106495e0ef5e27af4e93578568a25abfbed6a80950c077cc94493604f663/original.svg",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logohdpi-4a253cbe0faa",
@@ -1043,7 +1109,9 @@
         "/assets/brand-images/iptrust-logohdpi.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": true
     }
   ],
   "adobeAssets": [],
@@ -1112,7 +1180,9 @@
           "sha256": "63c7b53792f9a8f56ee0f0b2bfaad3705c4895fed8d0ba6c687c750e9fdc5eb1",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "iptrust-logo-iptrust-logo-black-4a253cbe0faa",
@@ -1129,7 +1199,9 @@
           "sha256": "4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": true,
+          "documentLogo": true
         },
         {
           "assetId": "iptrust-image-iptrust-wide-black-f61b168f6766",
@@ -1146,7 +1218,9 @@
           "sha256": "f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "iptrust-image-iptrust-wide-white-5e6f803129e8",
@@ -1163,7 +1237,9 @@
           "sha256": "5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "iptrust-logo-wideblack-f61b168f6766",
@@ -1180,7 +1256,9 @@
           "sha256": "f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": true,
+          "documentLogo": false
         },
         {
           "assetId": "iptrust-logo-widewhite-5e6f803129e8",
@@ -1197,7 +1275,9 @@
           "sha256": "5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": true,
+          "documentLogo": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-687e84896c21",
@@ -1214,7 +1294,9 @@
           "sha256": "687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "iptrust-logo-logo-0a15e78e0a37",
@@ -1231,7 +1313,9 @@
           "sha256": "0a15e78e0a37949254ad500a9c83802f48d0f2f2039c2856e7f40d176e60f254",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "iptrust-logo-logo-d50caec22786",
@@ -1248,7 +1332,9 @@
           "sha256": "d50caec22786b6b1fd6f8e7b4e6fd9d3a2f366684308deaec96408fbe6b37529",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": true,
+          "documentLogo": true
         },
         {
           "assetId": "iptrust-logo-logo-logo-34178b12bc90",
@@ -1265,7 +1351,9 @@
           "sha256": "34178b12bc90ce079e0304f43b0ee6b35952a8230aae0ad30c516dfd25e861b2",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-ae217dbf366f",
@@ -1282,7 +1370,9 @@
           "sha256": "ae217dbf366f5e6a149fed179e126da3620e42e85d6fb2197de710cceb6ca595",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": true,
+          "documentLogo": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-3a0b20c18a58",
@@ -1299,7 +1389,9 @@
           "sha256": "3a0b20c18a587240e50379c842b7cf36bb8e97940bbfb09cfebad32ea2198489",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-9043654071cb",
@@ -1316,7 +1408,9 @@
           "sha256": "9043654071cb9443d555c06c33f696dbe8b17e4b59e12ad1b3380db4dd421210",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-3b5bda396c04",
@@ -1333,7 +1427,9 @@
           "sha256": "3b5bda396c0426d723aaecb178ebfec5b28e04de79b82aaacb52159c7a4b7705",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": true,
+          "documentLogo": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-6c27005c50a2",
@@ -1350,7 +1446,9 @@
           "sha256": "6c27005c50a296eb02ccbc3c69aeed7b94b0f346d5c8973f2ae887f0b7dc2be0",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-7e72d10a5d55",
@@ -1367,7 +1465,9 @@
           "sha256": "7e72d10a5d5583ae67e3019c5bf08cee636c5b656342aa6fcb69201004ce2a20",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "iptrust-logo-logo-logo-943c106495e0",
@@ -1384,7 +1484,9 @@
           "sha256": "943c106495e0ef5e27af4e93578568a25abfbed6a80950c077cc94493604f663",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "iptrust-logo-logohdpi-4a253cbe0faa",
@@ -1401,7 +1503,9 @@
           "sha256": "4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": true,
+          "documentLogo": true
         }
       ]
     }
@@ -1476,7 +1580,9 @@
         "sha256": "63c7b53792f9a8f56ee0f0b2bfaad3705c4895fed8d0ba6c687c750e9fdc5eb1",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "iptrust-logo-iptrust-logo-black-4a253cbe0faa",
@@ -1493,7 +1599,9 @@
         "sha256": "4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": true,
+        "documentLogo": true
       },
       {
         "assetId": "iptrust-image-iptrust-wide-black-f61b168f6766",
@@ -1510,7 +1618,9 @@
         "sha256": "f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "iptrust-image-iptrust-wide-white-5e6f803129e8",
@@ -1527,7 +1637,9 @@
         "sha256": "5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "iptrust-logo-wideblack-f61b168f6766",
@@ -1544,7 +1656,9 @@
         "sha256": "f61b168f676655eab9a0b19051f15c9656dd31d847196e02e530666e030569b4",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": true,
+        "documentLogo": false
       },
       {
         "assetId": "iptrust-logo-widewhite-5e6f803129e8",
@@ -1561,7 +1675,9 @@
         "sha256": "5e6f803129e889dd56e332945b3e32bda371d7e974ca38005179917e19edd920",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": true,
+        "documentLogo": false
       },
       {
         "assetId": "iptrust-logo-logo-logo-687e84896c21",
@@ -1578,7 +1694,9 @@
         "sha256": "687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "iptrust-logo-logo-0a15e78e0a37",
@@ -1595,7 +1713,9 @@
         "sha256": "0a15e78e0a37949254ad500a9c83802f48d0f2f2039c2856e7f40d176e60f254",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "iptrust-logo-logo-d50caec22786",
@@ -1612,7 +1732,9 @@
         "sha256": "d50caec22786b6b1fd6f8e7b4e6fd9d3a2f366684308deaec96408fbe6b37529",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": true,
+        "documentLogo": true
       },
       {
         "assetId": "iptrust-logo-logo-logo-34178b12bc90",
@@ -1629,7 +1751,9 @@
         "sha256": "34178b12bc90ce079e0304f43b0ee6b35952a8230aae0ad30c516dfd25e861b2",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "iptrust-logo-logo-logo-ae217dbf366f",
@@ -1646,7 +1770,9 @@
         "sha256": "ae217dbf366f5e6a149fed179e126da3620e42e85d6fb2197de710cceb6ca595",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": true,
+        "documentLogo": false
       },
       {
         "assetId": "iptrust-logo-logo-logo-3a0b20c18a58",
@@ -1663,7 +1789,9 @@
         "sha256": "3a0b20c18a587240e50379c842b7cf36bb8e97940bbfb09cfebad32ea2198489",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "iptrust-logo-logo-logo-9043654071cb",
@@ -1680,7 +1808,9 @@
         "sha256": "9043654071cb9443d555c06c33f696dbe8b17e4b59e12ad1b3380db4dd421210",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "iptrust-logo-logo-logo-3b5bda396c04",
@@ -1697,7 +1827,9 @@
         "sha256": "3b5bda396c0426d723aaecb178ebfec5b28e04de79b82aaacb52159c7a4b7705",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": true,
+        "documentLogo": false
       },
       {
         "assetId": "iptrust-logo-logo-logo-6c27005c50a2",
@@ -1714,7 +1846,9 @@
         "sha256": "6c27005c50a296eb02ccbc3c69aeed7b94b0f346d5c8973f2ae887f0b7dc2be0",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "iptrust-logo-logo-logo-7e72d10a5d55",
@@ -1731,7 +1865,9 @@
         "sha256": "7e72d10a5d5583ae67e3019c5bf08cee636c5b656342aa6fcb69201004ce2a20",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "iptrust-logo-logo-logo-943c106495e0",
@@ -1748,7 +1884,9 @@
         "sha256": "943c106495e0ef5e27af4e93578568a25abfbed6a80950c077cc94493604f663",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "iptrust-logo-logohdpi-4a253cbe0faa",
@@ -1765,7 +1903,9 @@
         "sha256": "4a253cbe0faa2a0ef62d149ffe2ddf8e6bac179bd964b767673baa3ec5386b64",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": true,
+        "documentLogo": true
       }
     ]
   },

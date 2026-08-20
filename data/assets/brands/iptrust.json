@@ -76,7 +76,9 @@
         "/assets/brand-images/iptrust-logo-black.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "id": "iptrust-image-iptrust-wide-black-f61b168f6766",
@@ -149,7 +151,9 @@
       "mediaUrl": "https://media.apuch.art/private/iptrust/iptrust-logo-logo-35c437df08fc/35c437df08fcd01d10438aa05e04bc33195f3f04b6bc5dd4610a1810cbe23126/source.ai",
       "legacyUrls": [],
       "status": "processing",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-wideblack-f61b168f6766",
@@ -174,7 +178,9 @@
         "/assets/brand-images/iptrust-logo-set-wideblack.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-widewhite-5e6f803129e8",
@@ -199,7 +205,9 @@
         "/assets/brand-images/iptrust-logo-set-widewhite.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-687e84896c21",
@@ -222,7 +230,9 @@
       "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-687e84896c21/687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca/original.svg",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-0a15e78e0a37",
@@ -247,7 +257,9 @@
         "/assets/brand-images/iptrust-logo.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-d50caec22786",
@@ -272,7 +284,9 @@
         "/assets/brand-images/iptrust-logo.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "id": "iptrust-logo-logo-logo-34178b12bc90",
@@ -297,7 +311,9 @@
         "/assets/brand-images/iptrust-logo-logo.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-ae217dbf366f",
@@ -322,7 +338,9 @@
         "/assets/brand-images/iptrust-logo-logo.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-3a0b20c18a58",
@@ -345,7 +363,9 @@
       "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-3a0b20c18a58/3a0b20c18a587240e50379c842b7cf36bb8e97940bbfb09cfebad32ea2198489/original.svg",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-9043654071cb",
@@ -370,7 +390,9 @@
         "/assets/brand-images/iptrust-logo-logo-2.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-3b5bda396c04",
@@ -395,7 +417,9 @@
         "/assets/brand-images/iptrust-logo-logo-2.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-6c27005c50a2",
@@ -418,7 +442,9 @@
       "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-6c27005c50a2/6c27005c50a296eb02ccbc3c69aeed7b94b0f346d5c8973f2ae887f0b7dc2be0/original.svg",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-7e72d10a5d55",
@@ -443,7 +469,9 @@
         "/assets/brand-images/iptrust-logo-logo-3.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-943c106495e0",
@@ -466,7 +494,9 @@
       "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-943c106495e0/943c106495e0ef5e27af4e93578568a25abfbed6a80950c077cc94493604f663/original.svg",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logohdpi-4a253cbe0faa",
@@ -491,7 +521,9 @@
         "/assets/brand-images/iptrust-logohdpi.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": true
     }
   ]
 }

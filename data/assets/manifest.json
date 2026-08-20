@@ -1,10 +1,10 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-02T22:56:29.484Z",
+  "generatedAt": "2026-08-19T23:50:52.097Z",
   "mediaBase": "https://media.apuch.art",
-  "count": 81,
-  "totalBytes": 34317639,
-  "sourceCount": 79,
+  "count": 82,
+  "totalBytes": 34368007,
+  "sourceCount": 82,
   "items": [
     {
       "id": "apha-hero-apha-brand-hero-fc9496d55971",
@@ -104,7 +104,9 @@
         "/assets/brand-images/axisee-axisee-logo.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "fengzhi-hero-fengzhi-brand-hero-fe388cc906c9",
@@ -248,7 +250,9 @@
         "/assets/brand-images/iptrust-logo-black.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "id": "iptrust-image-iptrust-wide-black-f61b168f6766",
@@ -321,7 +325,9 @@
       "mediaUrl": "https://media.apuch.art/private/iptrust/iptrust-logo-logo-35c437df08fc/35c437df08fcd01d10438aa05e04bc33195f3f04b6bc5dd4610a1810cbe23126/source.ai",
       "legacyUrls": [],
       "status": "processing",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-wideblack-f61b168f6766",
@@ -346,7 +352,9 @@
         "/assets/brand-images/iptrust-logo-set-wideblack.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-widewhite-5e6f803129e8",
@@ -371,7 +379,9 @@
         "/assets/brand-images/iptrust-logo-set-widewhite.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-687e84896c21",
@@ -394,7 +404,9 @@
       "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-687e84896c21/687e84896c21dc32e723ea2a24f733f65be7aeb80e9ea507152b8cd33d7b73ca/original.svg",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-0a15e78e0a37",
@@ -419,7 +431,9 @@
         "/assets/brand-images/iptrust-logo.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-d50caec22786",
@@ -444,7 +458,9 @@
         "/assets/brand-images/iptrust-logo.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "id": "iptrust-logo-logo-logo-34178b12bc90",
@@ -469,7 +485,9 @@
         "/assets/brand-images/iptrust-logo-logo.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-ae217dbf366f",
@@ -494,7 +512,9 @@
         "/assets/brand-images/iptrust-logo-logo.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-3a0b20c18a58",
@@ -517,7 +537,9 @@
       "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-3a0b20c18a58/3a0b20c18a587240e50379c842b7cf36bb8e97940bbfb09cfebad32ea2198489/original.svg",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-9043654071cb",
@@ -542,7 +564,9 @@
         "/assets/brand-images/iptrust-logo-logo-2.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-3b5bda396c04",
@@ -567,7 +591,9 @@
         "/assets/brand-images/iptrust-logo-logo-2.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-6c27005c50a2",
@@ -590,7 +616,9 @@
       "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-6c27005c50a2/6c27005c50a296eb02ccbc3c69aeed7b94b0f346d5c8973f2ae887f0b7dc2be0/original.svg",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-7e72d10a5d55",
@@ -615,7 +643,9 @@
         "/assets/brand-images/iptrust-logo-logo-3.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logo-logo-943c106495e0",
@@ -638,7 +668,9 @@
       "mediaUrl": "https://media.apuch.art/public/iptrust/iptrust-logo-logo-logo-943c106495e0/943c106495e0ef5e27af4e93578568a25abfbed6a80950c077cc94493604f663/original.svg",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "iptrust-logo-logohdpi-4a253cbe0faa",
@@ -663,7 +695,9 @@
         "/assets/brand-images/iptrust-logohdpi.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "id": "kaoyu-shenhua-hero-kaoyu-shenhua-brand-hero-a0530b1e1ad7",
@@ -713,7 +747,9 @@
         "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-01-81970113ed49",
@@ -738,7 +774,9 @@
         "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-01.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-25ecdbf612ea",
@@ -763,7 +801,9 @@
         "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-page-02-a0530b1e1ad7",
@@ -788,7 +828,9 @@
         "/assets/brand-images/kaoyu-shenhua-kaoyu-shenhua-logo-page-02.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "kaoyu-shenhua-logo-kaoyu-shenhua-logo-e7f64c62b8b0",
@@ -813,7 +855,9 @@
         "/assets/adobe/kaoyu-shenhua/kaoyu-shenhua-logo.ai"
       ],
       "status": "processing",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "kind-hero-kind-brand-hero-c7224d4b8fb7",
@@ -892,7 +936,9 @@
         "colorway": "black",
         "primary": false,
         "originalRelativePath": "黑色/黑色.jpg"
-      }
+      },
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "opcglobal-logo-black-transparent-ca9f06b66f58",
@@ -921,7 +967,9 @@
         "colorway": "black",
         "primary": false,
         "originalRelativePath": "黑色/黑色透明.png"
-      }
+      },
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "id": "opcglobal-logo-blue-jpg-78995d0f5c1e",
@@ -950,7 +998,9 @@
         "colorway": "blue",
         "primary": false,
         "originalRelativePath": "蓝色/蓝色蓝色_白色透明.jpg"
-      }
+      },
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "opcglobal-hero-opcglobal-brand-hero-8351935e9abc",
@@ -1004,7 +1054,9 @@
         "colorway": "blue",
         "primary": true,
         "originalRelativePath": "蓝色/蓝色.png"
-      }
+      },
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "id": "opcglobal-logo-vector-b58c3be7390a",
@@ -1033,7 +1085,9 @@
         "colorway": "monochrome",
         "primary": false,
         "originalRelativePath": "logo-svg.svg"
-      }
+      },
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "opcglobal-logo-white-jpg-d5eff2b4da39",
@@ -1062,7 +1116,9 @@
         "colorway": "white",
         "primary": false,
         "originalRelativePath": "白色/白色.jpg"
-      }
+      },
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "opcglobal-logo-white-transparent-f1f76209c767",
@@ -1091,7 +1147,9 @@
         "colorway": "white",
         "primary": false,
         "originalRelativePath": "白色/白色透明.png"
-      }
+      },
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "id": "opcglobal-logo-yellow-jpg-0c3d48dedef6",
@@ -1120,7 +1178,9 @@
         "colorway": "yellow",
         "primary": false,
         "originalRelativePath": "黄色/黄色白色透明.jpg"
-      }
+      },
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "opcglobal-logo-yellow-transparent-9f71f58faaf3",
@@ -1149,7 +1209,9 @@
         "colorway": "yellow",
         "primary": false,
         "originalRelativePath": "黄色/黄色.png"
-      }
+      },
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "id": "opcglobal-source-master-ai-79d455673610",
@@ -1228,7 +1290,9 @@
         "/assets/brand-images/sanctem-sanctem-logo-black-alt.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "sanctem-logo-sanctem-logo-black-1857cc80cd4b",
@@ -1253,7 +1317,9 @@
         "/assets/brand-images/sanctem-sanctem-logo-black.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "sanctem-logo-sanctem-logo-color-6c9467089bab",
@@ -1278,7 +1344,9 @@
         "/assets/brand-images/sanctem-sanctem-logo-color.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "sanctem-logo-sanctem-logo-color-dc34ba67f3af",
@@ -1303,7 +1371,9 @@
         "/assets/brand-images/sanctem-sanctem-logo-color.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "sanctem-logo-sanctem-logo-white-black-alt-592a2bac1aee",
@@ -1328,7 +1398,9 @@
         "/assets/brand-images/sanctem-sanctem-logo-white-black-alt.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "sanctem-logo-sanctem-logo-white-black-8a50506dc636",
@@ -1353,7 +1425,9 @@
         "/assets/brand-images/sanctem-sanctem-logo-white-black.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "sanctem-logo-sanctem-logo-white-5045acdbe817",
@@ -1378,7 +1452,9 @@
         "/assets/brand-images/sanctem-sanctem-logo-white.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "sanctem-logo-sanctem-ce4ee817a3f7",
@@ -1401,7 +1477,9 @@
       "mediaUrl": "https://media.apuch.art/private/sanctem/sanctem-logo-sanctem-ce4ee817a3f7/ce4ee817a3f7fab9ceba17ada0e8fcb38cc9a124cd621c6098da0e3959c94608/source.ai",
       "legacyUrls": [],
       "status": "processing",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "sidera-hero-sidera-brand-hero-3501c8d23cb5",
@@ -1429,6 +1507,31 @@
       "version": 1
     },
     {
+      "id": "sidera-logo-sidera-logo-document-transparent-4c63205cf059",
+      "ownerType": "owned-ip",
+      "ownerId": "sidera",
+      "role": "logo",
+      "title": "sidera logo document transparent",
+      "access": "public",
+      "sourcePath": "Sidera/assets/brand-images/sidera-logo-document-transparent.png",
+      "sourceFilename": "sidera-logo-document-transparent.png",
+      "sha256": "4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22",
+      "mimeType": "image/png",
+      "extension": "png",
+      "bytes": 50368,
+      "size": "49.2 KB",
+      "width": 601,
+      "height": 640,
+      "dimensions": "601 x 640 px",
+      "backgroundTransparent": true,
+      "documentLogo": true,
+      "objectKey": "public/sidera/sidera-logo-sidera-logo-document-transparent-4c63205cf059/4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22/original.png",
+      "mediaUrl": "https://media.apuch.art/public/sidera/sidera-logo-sidera-logo-document-transparent-4c63205cf059/4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22/original.png",
+      "legacyUrls": [],
+      "status": "ready",
+      "version": 1
+    },
+    {
       "id": "sidera-logo-sidera-logo-small-5b6faaba06bd",
       "ownerType": "owned-ip",
       "ownerId": "sidera",
@@ -1445,6 +1548,8 @@
       "width": 320,
       "height": 320,
       "dimensions": "320 x 320 px",
+      "backgroundTransparent": false,
+      "documentLogo": false,
       "objectKey": "public/sidera/sidera-logo-sidera-logo-small-5b6faaba06bd/5b6faaba06bdd791c480b94aeb0e0d0face1ae67eca65d12334c036828c72149/original.jpg",
       "mediaUrl": "https://media.apuch.art/public/sidera/sidera-logo-sidera-logo-small-5b6faaba06bd/5b6faaba06bdd791c480b94aeb0e0d0face1ae67eca65d12334c036828c72149/original.jpg",
       "legacyUrls": [],
@@ -1468,6 +1573,8 @@
       "width": 2000,
       "height": 2000,
       "dimensions": "2000 x 2000 px",
+      "backgroundTransparent": false,
+      "documentLogo": false,
       "objectKey": "public/sidera/sidera-logo-sidera-logo-220079a53598/220079a535987196ce0567964022154788e52c0bb22ec5c2b05e99a5cfa34658/original.png",
       "mediaUrl": "https://media.apuch.art/public/sidera/sidera-logo-sidera-logo-220079a53598/220079a535987196ce0567964022154788e52c0bb22ec5c2b05e99a5cfa34658/original.png",
       "legacyUrls": [],
@@ -1495,7 +1602,9 @@
       "mediaUrl": "https://media.apuch.art/public/tableai/tableai-logo-a2a-logo-2054a6a35cb0/2054a6a35cb07ef17fae5fd4a1498db4e5eabc9c62a248ff2ea65f2b6e65453a/original.png",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "tableai-logo-tableai-a2a-logo-transparent-c1e7752b39f5",
@@ -1520,7 +1629,9 @@
         "/assets/brand-images/tableai-tableai-a2a-logo-transparent.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "id": "tableai-logo-tableai-a2a-logo-2054a6a35cb0",
@@ -1545,7 +1656,9 @@
         "/assets/brand-images/tableai-tableai-a2a-logo.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "tableai-hero-tableai-brand-hero-df017e1f0d5d",
@@ -1620,7 +1733,9 @@
         "/assets/brand-images/vanahom-vanahom-logo-black.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "vanahom-logo-vanahom-logo-black-66b6749dd5bc",
@@ -1645,7 +1760,9 @@
         "/assets/brand-images/vanahom-vanahom-logo-black.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "vanahom-logo-vanahom-logo-grey-04526fd5fec0",
@@ -1670,7 +1787,9 @@
         "/assets/brand-images/vanahom-vanahom-logo-grey.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "vanahom-logo-vanahom-logo-grey-1d786386b770",
@@ -1695,7 +1814,9 @@
         "/assets/brand-images/vanahom-vanahom-logo-grey.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "vanahom-logo-vanahom-logo-red-3a4ea7360403",
@@ -1720,7 +1841,9 @@
         "/assets/brand-images/vanahom-vanahom-logo-red.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "vanahom-logo-vanahom-logo-red-30e1cf3ac718",
@@ -1745,7 +1868,9 @@
         "/assets/brand-images/vanahom-vanahom-logo-red.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "vanahom-logo-vanahom-logo-white-ea52341e2e3c",
@@ -1770,7 +1895,9 @@
         "/assets/brand-images/vanahom-vanahom-logo-white.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "vanahom-logo-vanahom-logo-white-34644c520c8a",
@@ -1795,7 +1922,9 @@
         "/assets/brand-images/vanahom-vanahom-logo-white.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "vanahom-logo-vanahom-grey-7cef9ef2e3e2",
@@ -1818,7 +1947,9 @@
       "mediaUrl": "https://media.apuch.art/private/vanahom/vanahom-logo-vanahom-grey-7cef9ef2e3e2/7cef9ef2e3e201f0c0a49de5cff1b9b1ce5ff93cc6b88288a86ee31881ba73ba/source.ai",
       "legacyUrls": [],
       "status": "processing",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "vanahom-logo-sanctem-grey-11625d517dc0",
@@ -1841,7 +1972,9 @@
       "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-sanctem-grey-11625d517dc0/11625d517dc05c9a1c4b0d96e094df1bb5fd8e44506b99de22c0216a32057b65/original.png",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "vanahom-logo-sanctem-square-d8bf86799be1",
@@ -1864,7 +1997,9 @@
       "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-sanctem-square-d8bf86799be1/d8bf86799be14adb5933c9de96a2cb614b6f92ee8f0000d692b84de7bcca3116/original.png",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "id": "vanahom-logo-sanctem-grey-868e91d64b3b",
@@ -1887,7 +2022,9 @@
       "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-sanctem-grey-868e91d64b3b/868e91d64b3b276c948ef090d8f8d4995e6dc5ff631bb8b30afab7d93aa079a6/original.svg",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "vanahom-logo-vanahom-grey-6f8004ae00d1",
@@ -1910,7 +2047,9 @@
       "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-grey-6f8004ae00d1/6f8004ae00d10085af2207fdbf7604ee9dbac1cb1331cec32a1fe95df0fbbda6/original.svg",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "vanahom-logo-vanahom-red-bc1229feaa16",
@@ -1933,7 +2072,9 @@
       "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-red-bc1229feaa16/bc1229feaa169e426a7efa797d18a9a63c902e0ea4528f963653bb2296149c69/original.svg",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "vanahom-logo-vanahom-grey-be3801b3cee7",
@@ -1956,7 +2097,9 @@
       "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-grey-be3801b3cee7/be3801b3cee7bcf8fffad8e4d5dc0b9b7594bccc9f6ea6badbd6fbe7e566e78f/original.png",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "vanahom-logo-vanahom-red-ae206d679bd8",
@@ -1979,7 +2122,9 @@
       "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-red-ae206d679bd8/ae206d679bd8f5de8cbe63dfff015035e71dd6cc3cd20178f68f6c84fde59197/original.png",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "vanahom-logo-vanahom-grey-square-f7b913bf77e5",
@@ -2002,7 +2147,9 @@
       "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-grey-square-f7b913bf77e5/f7b913bf77e5c7f240a4b7edc95c3fead0cef6008820a59a58892f8073c7c3e0/original.png",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "id": "vanahom-logo-vanahom-red-square-668e241a4114",
@@ -2025,7 +2172,9 @@
       "mediaUrl": "https://media.apuch.art/public/vanahom/vanahom-logo-vanahom-red-square-668e241a4114/668e241a4114e0b6339bf987cb8df7b823f078386f5ea107678766ab5bcf3a3f/original.png",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": true
     }
   ]
 }

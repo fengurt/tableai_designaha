@@ -119,6 +119,8 @@ for (const name of brandsOnly ? [] : libraryNames) {
 }
 
 for (const asset of assets.items) {
+  const metadata = { ...(asset.metadata || {}), sourcePath: asset.sourcePath, backgroundTransparent: Boolean(asset.backgroundTransparent), documentLogo: Boolean(asset.documentLogo) };
+  statements.push(`INSERT INTO assets(id,owner_type,owner_id,role,title,access,source_object_key,source_filename,sha256,mime_type,extension,bytes,width,height,status,version,metadata_json,created_at,updated_at) VALUES(${[asset.id, asset.ownerType, asset.ownerId, asset.role, asset.title, asset.access, asset.objectKey, asset.sourceFilename, asset.sha256, asset.mimeType, asset.extension].map(q).join(",")},${asset.bytes},${asset.width ?? "NULL"},${asset.height ?? "NULL"},${q(asset.status)},1,${q(JSON.stringify(metadata))},${q(timestamp)},${q(timestamp)}) ON CONFLICT(id) DO UPDATE SET role=excluded.role,title=excluded.title,access=excluded.access,source_object_key=excluded.source_object_key,source_filename=excluded.source_filename,sha256=excluded.sha256,mime_type=excluded.mime_type,extension=excluded.extension,bytes=excluded.bytes,width=excluded.width,height=excluded.height,status=excluded.status,metadata_json=excluded.metadata_json,updated_at=excluded.updated_at;`);
   if (!brandsOnly) outbox(`seed-search-asset-${asset.id}`, "search.index", "asset", asset.id, 1, { entityType: "asset", entityId: asset.id });
   const isPublicRaster = asset.access === "public" && /^image\/(png|jpeg|webp|avif)$/.test(asset.mimeType || "");
   if (isPublicRaster) outbox(`seed-process-responsive-v1-${asset.id}`, "asset.process", "asset", asset.id, 1, { assetId: asset.id, ownerId: asset.ownerId, objectKey: asset.objectKey, access: asset.access, mimeType: asset.mimeType, extension: asset.extension, expectedSha256: asset.sha256 });
@@ -134,4 +136,4 @@ for (const name of await readdir(tempDir)) {
 const chunks = [];
 for (let index = 1; index < statements.length; index += 10) chunks.push(["PRAGMA foreign_keys = ON;", ...statements.slice(index, index + 10)]);
 for (const [index, chunk] of chunks.entries()) await writeFile(join(tempDir, `${seedPrefix}-${String(index + 1).padStart(3, "0")}.sql`), `${chunk.join("\n")}\n`);
-console.log(JSON.stringify({ mode: brandsOnly ? "brands" : "full", brands: brands.length, assets: brandsOnly ? 0 : assets.count, statements: statements.length, chunks: chunks.length }, null, 2));
+console.log(JSON.stringify({ mode: brandsOnly ? "brands" : "full", brands: brands.length, assets: assets.count, statements: statements.length, chunks: chunks.length }, null, 2));

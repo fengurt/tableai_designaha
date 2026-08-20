@@ -219,6 +219,8 @@ function brandImageOutputName(brand, rel, usedNames) {
 function buildAssetScore(image = {}) {
   const text = [image.path, image.sitePath, image.title].filter(Boolean).join(" ").toLowerCase();
   let score = 0;
+  if (image.documentLogo) score += 140;
+  if (image.backgroundTransparent) score += 70;
   if (text.includes("logo")) score += 60;
   if (text.includes("a2a")) score += 35;
   if (text.includes("transparent") || text.includes("clear")) score += 42;
@@ -770,6 +772,8 @@ for (const brand of brands) {
       access: item.access,
       colorway: item.metadata?.colorway || "",
       primaryAsset: Boolean(item.metadata?.primary),
+      backgroundTransparent: Boolean(item.backgroundTransparent),
+      documentLogo: Boolean(item.documentLogo),
     });
   }
 
@@ -4612,6 +4616,8 @@ const i18n = {
     "brand.more": "更多资料",
     "brand.moodBoard": "Mood Board",
     "brand.visualAssets": "视觉资产",
+    "brand.documentLogo": "文档级小 Logo",
+    "brand.transparent": "透明背景",
     "brand.adobeAssets": "Adobe 源文件",
     "brand.preview": "预览",
     "brand.original": "原始文件",
@@ -4844,6 +4850,8 @@ const i18n = {
     "brand.more": "More resources",
     "brand.moodBoard": "Mood Board",
     "brand.visualAssets": "Visual assets",
+    "brand.documentLogo": "Document logo",
+    "brand.transparent": "Transparent background",
     "brand.adobeAssets": "Adobe sources",
     "brand.preview": "Preview",
     "brand.original": "Original",
@@ -5413,7 +5421,7 @@ function referenceText(brand = {}) {
   const mcpSource = new URL("mcp", location.origin + "/").href;
   const assetApiUrl = new URL(\`api/v2/assets?ownerType=owned-ip&ownerId=\${encodeURIComponent(brand.slug)}\`, location.href).href;
   const preferredLogo = preferredBrandImage(brand.images || []);
-  const logoPath = brand.logoUrl || preferredLogo?.sitePath || brand.heroImage || "";
+  const logoPath = preferredLogo?.sitePath || brand.logoUrl || brand.heroImage || "";
   const logoUrl = logoPath ? new URL(logoPath, location.href).href : "TBD";
   const publicAssetUrls = (brand.images || []).map((image) => image.sitePath).filter(Boolean).map((path) => new URL(path, location.href).href);
   const colors = palette(brand.theme)
@@ -6318,6 +6326,8 @@ function normalizeSearchText(value = "") {
 function assetScore(image = {}) {
   const text = [image.path, image.sitePath, image.title].filter(Boolean).join(" ").toLowerCase();
   let score = 0;
+  if (image.documentLogo) score += 140;
+  if (image.backgroundTransparent) score += 70;
   if (text.includes("logo")) score += 60;
   if (text.includes("a2a")) score += 35;
   if (text.includes("transparent") || text.includes("clear")) score += 42;
@@ -6355,6 +6365,8 @@ function brandAssetStrip(images = []) {
                 \${image.format ? \`<span>\${escapeHtml(image.format)}</span>\` : ""}
                 \${image.size ? \`<span>\${escapeHtml(image.size)}</span>\` : ""}
                 \${image.dimensions ? \`<span class="brand-asset-dimensions">\${escapeHtml(image.dimensions.replace(" x ", " × "))}</span>\` : ""}
+                \${image.documentLogo ? \`<span>\${escapeHtml(t("brand.documentLogo"))}</span>\` : ""}
+                \${image.backgroundTransparent ? \`<span>\${escapeHtml(t("brand.transparent"))}</span>\` : ""}
               </span>
             </div>
           </div>
@@ -6729,6 +6741,8 @@ async function renderBrand() {
               <strong>\${escapeHtml(hero.title || display.name)}</strong>
               <span>\${escapeHtml([hero.format, hero.size].filter(Boolean).join(" · "))}</span>
               \${hero.dimensions ? \`<span>\${escapeHtml(hero.dimensions.replace(" x ", " × "))}</span>\` : ""}
+              \${hero.documentLogo ? \`<span>\${escapeHtml(t("brand.documentLogo"))}</span>\` : ""}
+              \${hero.backgroundTransparent ? \`<span>\${escapeHtml(t("brand.transparent"))}</span>\` : ""}
             </div>
           </div>
         \` : isSidera ? \`

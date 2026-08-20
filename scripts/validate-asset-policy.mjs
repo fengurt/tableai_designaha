@@ -18,7 +18,11 @@ for (const item of manifest.items) {
   if (ids.has(item.id) || keys.has(item.objectKey)) throw new Error(`Duplicate asset identity: ${item.id}`);
   ids.add(item.id);
   keys.add(item.objectKey);
+  if (item.documentLogo && (item.mimeType !== "image/png" || !item.backgroundTransparent || item.bytes > 512 * 1024 || Math.max(item.width || 0, item.height || 0) > 1280)) {
+    throw new Error(`Invalid document logo: ${item.id}`);
+  }
 }
+if (!manifest.items.some((item) => item.ownerId === "sidera" && item.documentLogo)) throw new Error("Missing tiansight document logo");
 
 function walk(directory) {
   if (!existsSync(directory)) return [];

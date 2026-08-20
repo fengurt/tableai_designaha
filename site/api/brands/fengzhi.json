@@ -165,11 +165,11 @@
     "standalone"
   ],
   "version": {
-    "hash": "023912fb3434a3e51c398957794d4d0eab3cdeb8",
-    "shortHash": "023912f",
-    "date": "2026-08-16T08:56:23+08:00",
-    "message": "fix: resolve about page assets",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/023912fb3434a3e51c398957794d4d0eab3cdeb8"
+    "hash": "97409964b2887b3882c3d0e2637e16b082de0505",
+    "shortHash": "9740996",
+    "date": "2026-08-16T09:01:13+08:00",
+    "message": "fix: use absolute app assets",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/97409964b2887b3882c3d0e2637e16b082de0505"
   },
   "historyUrl": "api/history/fengzhi.json",
   "history": [
@@ -501,7 +501,9 @@
       "sha256": "fe388cc906c9dfb10ceedeb83b772dd02c22c0f5801739d56e6354c728749fd8",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "fengzhi-image-jiege-mark-mono-d7b2e1dc871a",
@@ -518,7 +520,9 @@
       "sha256": "d7b2e1dc871abb01b9d9cb8eaf26a19217b2a84cbae87412dc1475839d91001d",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "fengzhi-image-jiege-mark-reversed-e8792c4ac6fa",
@@ -535,7 +539,9 @@
       "sha256": "e8792c4ac6fa70a515099352396d145c4b0d072376aae3d4840a3a2b26c970d5",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "fengzhi-image-jiege-mark-2e5746a16797",
@@ -552,7 +558,9 @@
       "sha256": "2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     }
   ],
   "assetManifest": [
@@ -717,7 +725,9 @@
           "sha256": "fe388cc906c9dfb10ceedeb83b772dd02c22c0f5801739d56e6354c728749fd8",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "fengzhi-image-jiege-mark-mono-d7b2e1dc871a",
@@ -734,7 +744,9 @@
           "sha256": "d7b2e1dc871abb01b9d9cb8eaf26a19217b2a84cbae87412dc1475839d91001d",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "fengzhi-image-jiege-mark-reversed-e8792c4ac6fa",
@@ -751,7 +763,9 @@
           "sha256": "e8792c4ac6fa70a515099352396d145c4b0d072376aae3d4840a3a2b26c970d5",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "fengzhi-image-jiege-mark-2e5746a16797",
@@ -768,7 +782,9 @@
           "sha256": "2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         }
       ]
     }
@@ -843,7 +859,9 @@
         "sha256": "fe388cc906c9dfb10ceedeb83b772dd02c22c0f5801739d56e6354c728749fd8",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "fengzhi-image-jiege-mark-mono-d7b2e1dc871a",
@@ -860,7 +878,9 @@
         "sha256": "d7b2e1dc871abb01b9d9cb8eaf26a19217b2a84cbae87412dc1475839d91001d",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "fengzhi-image-jiege-mark-reversed-e8792c4ac6fa",
@@ -877,7 +897,9 @@
         "sha256": "e8792c4ac6fa70a515099352396d145c4b0d072376aae3d4840a3a2b26c970d5",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "fengzhi-image-jiege-mark-2e5746a16797",
@@ -894,7 +916,9 @@
         "sha256": "2e5746a167973d2bda97532da22610a362ce334de3f5b35331e17aec147f77f3",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       }
     ]
   },

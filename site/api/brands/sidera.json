@@ -172,11 +172,11 @@
     "standalone"
   ],
   "version": {
-    "hash": "023912fb3434a3e51c398957794d4d0eab3cdeb8",
-    "shortHash": "023912f",
-    "date": "2026-08-16T08:56:23+08:00",
-    "message": "fix: resolve about page assets",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/023912fb3434a3e51c398957794d4d0eab3cdeb8"
+    "hash": "97409964b2887b3882c3d0e2637e16b082de0505",
+    "shortHash": "9740996",
+    "date": "2026-08-16T09:01:13+08:00",
+    "message": "fix: use absolute app assets",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/97409964b2887b3882c3d0e2637e16b082de0505"
   },
   "historyUrl": "api/history/sidera.json",
   "history": [
@@ -284,7 +284,28 @@
       "sha256": "3501c8d23cb5507005b8d8dea3904e72dbc849783b039a90406b976f7fbf7672",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
+    },
+    {
+      "assetId": "sidera-logo-sidera-logo-document-transparent-4c63205cf059",
+      "path": "Sidera/assets/brand-images/sidera-logo-document-transparent.png",
+      "sitePath": "https://media.apuch.art/public/sidera/sidera-logo-sidera-logo-document-transparent-4c63205cf059/4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22/original.png",
+      "mediaUrl": "https://media.apuch.art/public/sidera/sidera-logo-sidera-logo-document-transparent-4c63205cf059/4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22/original.png",
+      "title": "sidera logo document transparent",
+      "format": "PNG",
+      "bytes": 50368,
+      "size": "49.2 KB",
+      "width": 601,
+      "height": 640,
+      "dimensions": "601 x 640 px",
+      "sha256": "4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22",
+      "access": "public",
+      "colorway": "",
+      "primaryAsset": false,
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "assetId": "sidera-logo-sidera-logo-small-5b6faaba06bd",
@@ -301,7 +322,9 @@
       "sha256": "5b6faaba06bdd791c480b94aeb0e0d0face1ae67eca65d12334c036828c72149",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "sidera-logo-sidera-logo-220079a53598",
@@ -318,7 +341,9 @@
       "sha256": "220079a535987196ce0567964022154788e52c0bb22ec5c2b05e99a5cfa34658",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     }
   ],
   "assetManifest": [
@@ -348,6 +373,31 @@
       "version": 1
     },
     {
+      "id": "sidera-logo-sidera-logo-document-transparent-4c63205cf059",
+      "ownerType": "owned-ip",
+      "ownerId": "sidera",
+      "role": "logo",
+      "title": "sidera logo document transparent",
+      "access": "public",
+      "sourcePath": "Sidera/assets/brand-images/sidera-logo-document-transparent.png",
+      "sourceFilename": "sidera-logo-document-transparent.png",
+      "sha256": "4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22",
+      "mimeType": "image/png",
+      "extension": "png",
+      "bytes": 50368,
+      "size": "49.2 KB",
+      "width": 601,
+      "height": 640,
+      "dimensions": "601 x 640 px",
+      "backgroundTransparent": true,
+      "documentLogo": true,
+      "objectKey": "public/sidera/sidera-logo-sidera-logo-document-transparent-4c63205cf059/4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22/original.png",
+      "mediaUrl": "https://media.apuch.art/public/sidera/sidera-logo-sidera-logo-document-transparent-4c63205cf059/4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22/original.png",
+      "legacyUrls": [],
+      "status": "ready",
+      "version": 1
+    },
+    {
       "id": "sidera-logo-sidera-logo-small-5b6faaba06bd",
       "ownerType": "owned-ip",
       "ownerId": "sidera",
@@ -364,6 +414,8 @@
       "width": 320,
       "height": 320,
       "dimensions": "320 x 320 px",
+      "backgroundTransparent": false,
+      "documentLogo": false,
       "objectKey": "public/sidera/sidera-logo-sidera-logo-small-5b6faaba06bd/5b6faaba06bdd791c480b94aeb0e0d0face1ae67eca65d12334c036828c72149/original.jpg",
       "mediaUrl": "https://media.apuch.art/public/sidera/sidera-logo-sidera-logo-small-5b6faaba06bd/5b6faaba06bdd791c480b94aeb0e0d0face1ae67eca65d12334c036828c72149/original.jpg",
       "legacyUrls": [],
@@ -387,6 +439,8 @@
       "width": 2000,
       "height": 2000,
       "dimensions": "2000 x 2000 px",
+      "backgroundTransparent": false,
+      "documentLogo": false,
       "objectKey": "public/sidera/sidera-logo-sidera-logo-220079a53598/220079a535987196ce0567964022154788e52c0bb22ec5c2b05e99a5cfa34658/original.png",
       "mediaUrl": "https://media.apuch.art/public/sidera/sidera-logo-sidera-logo-220079a53598/220079a535987196ce0567964022154788e52c0bb22ec5c2b05e99a5cfa34658/original.png",
       "legacyUrls": [],
@@ -395,12 +449,12 @@
     }
   ],
   "adobeAssets": [],
-  "logoUrl": "https://media.apuch.art/public/sidera/sidera-logo-sidera-logo-220079a53598/220079a535987196ce0567964022154788e52c0bb22ec5c2b05e99a5cfa34658/original.png",
+  "logoUrl": "https://media.apuch.art/public/sidera/sidera-logo-sidera-logo-document-transparent-4c63205cf059/4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22/original.png",
   "assetKit": {
     "assetKey": "sidera",
     "endpoints": {
       "brand": "api/brands/tiansight.json",
-      "logo": "https://media.apuch.art/public/sidera/sidera-logo-sidera-logo-220079a53598/220079a535987196ce0567964022154788e52c0bb22ec5c2b05e99a5cfa34658/original.png",
+      "logo": "https://media.apuch.art/public/sidera/sidera-logo-sidera-logo-document-transparent-4c63205cf059/4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22/original.png",
       "images": "api/brands/tiansight.json#images",
       "adobe": "",
       "tokens": "api/brands/tiansight.json#tokens",
@@ -460,7 +514,28 @@
           "sha256": "3501c8d23cb5507005b8d8dea3904e72dbc849783b039a90406b976f7fbf7672",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
+        },
+        {
+          "assetId": "sidera-logo-sidera-logo-document-transparent-4c63205cf059",
+          "path": "Sidera/assets/brand-images/sidera-logo-document-transparent.png",
+          "sitePath": "https://media.apuch.art/public/sidera/sidera-logo-sidera-logo-document-transparent-4c63205cf059/4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22/original.png",
+          "mediaUrl": "https://media.apuch.art/public/sidera/sidera-logo-sidera-logo-document-transparent-4c63205cf059/4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22/original.png",
+          "title": "sidera logo document transparent",
+          "format": "PNG",
+          "bytes": 50368,
+          "size": "49.2 KB",
+          "width": 601,
+          "height": 640,
+          "dimensions": "601 x 640 px",
+          "sha256": "4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22",
+          "access": "public",
+          "colorway": "",
+          "primaryAsset": false,
+          "backgroundTransparent": true,
+          "documentLogo": true
         },
         {
           "assetId": "sidera-logo-sidera-logo-small-5b6faaba06bd",
@@ -477,7 +552,9 @@
           "sha256": "5b6faaba06bdd791c480b94aeb0e0d0face1ae67eca65d12334c036828c72149",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "sidera-logo-sidera-logo-220079a53598",
@@ -494,7 +571,9 @@
           "sha256": "220079a535987196ce0567964022154788e52c0bb22ec5c2b05e99a5cfa34658",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         }
       ]
     }
@@ -569,7 +648,28 @@
         "sha256": "3501c8d23cb5507005b8d8dea3904e72dbc849783b039a90406b976f7fbf7672",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
+      },
+      {
+        "assetId": "sidera-logo-sidera-logo-document-transparent-4c63205cf059",
+        "path": "Sidera/assets/brand-images/sidera-logo-document-transparent.png",
+        "sitePath": "https://media.apuch.art/public/sidera/sidera-logo-sidera-logo-document-transparent-4c63205cf059/4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22/original.png",
+        "mediaUrl": "https://media.apuch.art/public/sidera/sidera-logo-sidera-logo-document-transparent-4c63205cf059/4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22/original.png",
+        "title": "sidera logo document transparent",
+        "format": "PNG",
+        "bytes": 50368,
+        "size": "49.2 KB",
+        "width": 601,
+        "height": 640,
+        "dimensions": "601 x 640 px",
+        "sha256": "4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22",
+        "access": "public",
+        "colorway": "",
+        "primaryAsset": false,
+        "backgroundTransparent": true,
+        "documentLogo": true
       },
       {
         "assetId": "sidera-logo-sidera-logo-small-5b6faaba06bd",
@@ -586,7 +686,9 @@
         "sha256": "5b6faaba06bdd791c480b94aeb0e0d0face1ae67eca65d12334c036828c72149",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "sidera-logo-sidera-logo-220079a53598",
@@ -603,7 +705,9 @@
         "sha256": "220079a535987196ce0567964022154788e52c0bb22ec5c2b05e99a5cfa34658",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       }
     ]
   },

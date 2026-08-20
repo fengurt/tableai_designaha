@@ -51,7 +51,9 @@
         "/assets/brand-images/axisee-axisee-logo.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     }
   ]
 }

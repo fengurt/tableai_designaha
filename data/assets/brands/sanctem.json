@@ -51,7 +51,9 @@
         "/assets/brand-images/sanctem-sanctem-logo-black-alt.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "sanctem-logo-sanctem-logo-black-1857cc80cd4b",
@@ -76,7 +78,9 @@
         "/assets/brand-images/sanctem-sanctem-logo-black.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "sanctem-logo-sanctem-logo-color-6c9467089bab",
@@ -101,7 +105,9 @@
         "/assets/brand-images/sanctem-sanctem-logo-color.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "sanctem-logo-sanctem-logo-color-dc34ba67f3af",
@@ -126,7 +132,9 @@
         "/assets/brand-images/sanctem-sanctem-logo-color.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "sanctem-logo-sanctem-logo-white-black-alt-592a2bac1aee",
@@ -151,7 +159,9 @@
         "/assets/brand-images/sanctem-sanctem-logo-white-black-alt.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "sanctem-logo-sanctem-logo-white-black-8a50506dc636",
@@ -176,7 +186,9 @@
         "/assets/brand-images/sanctem-sanctem-logo-white-black.jpg"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "sanctem-logo-sanctem-logo-white-5045acdbe817",
@@ -201,7 +213,9 @@
         "/assets/brand-images/sanctem-sanctem-logo-white.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     },
     {
       "id": "sanctem-logo-sanctem-ce4ee817a3f7",
@@ -224,7 +238,9 @@
       "mediaUrl": "https://media.apuch.art/private/sanctem/sanctem-logo-sanctem-ce4ee817a3f7/ce4ee817a3f7fab9ceba17ada0e8fcb38cc9a124cd621c6098da0e3959c94608/source.ai",
       "legacyUrls": [],
       "status": "processing",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     }
   ]
 }

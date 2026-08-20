@@ -165,11 +165,11 @@
     "standalone"
   ],
   "version": {
-    "hash": "023912fb3434a3e51c398957794d4d0eab3cdeb8",
-    "shortHash": "023912f",
-    "date": "2026-08-16T08:56:23+08:00",
-    "message": "fix: resolve about page assets",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/023912fb3434a3e51c398957794d4d0eab3cdeb8"
+    "hash": "97409964b2887b3882c3d0e2637e16b082de0505",
+    "shortHash": "9740996",
+    "date": "2026-08-16T09:01:13+08:00",
+    "message": "fix: use absolute app assets",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/97409964b2887b3882c3d0e2637e16b082de0505"
   },
   "historyUrl": "api/history/tableai.json",
   "history": [
@@ -285,7 +285,9 @@
       "sha256": "df017e1f0d5dd4d71f6d6ea84f93038aa0ed682aa228bf4268b9e64d0eb3f537",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "tableai-logo-a2a-logo-2054a6a35cb0",
@@ -302,7 +304,9 @@
       "sha256": "2054a6a35cb07ef17fae5fd4a1498db4e5eabc9c62a248ff2ea65f2b6e65453a",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "tableai-logo-tableai-a2a-logo-transparent-c1e7752b39f5",
@@ -319,7 +323,9 @@
       "sha256": "c1e7752b39f5607594e40f701395a0f6ef3addb8b5a964880408e522fe34c210",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "assetId": "tableai-logo-tableai-a2a-logo-2054a6a35cb0",
@@ -336,7 +342,9 @@
       "sha256": "2054a6a35cb07ef17fae5fd4a1498db4e5eabc9c62a248ff2ea65f2b6e65453a",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     }
   ],
   "assetManifest": [
@@ -361,7 +369,9 @@
       "mediaUrl": "https://media.apuch.art/public/tableai/tableai-logo-a2a-logo-2054a6a35cb0/2054a6a35cb07ef17fae5fd4a1498db4e5eabc9c62a248ff2ea65f2b6e65453a/original.png",
       "legacyUrls": [],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "tableai-logo-tableai-a2a-logo-transparent-c1e7752b39f5",
@@ -386,7 +396,9 @@
         "/assets/brand-images/tableai-tableai-a2a-logo-transparent.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": true
     },
     {
       "id": "tableai-logo-tableai-a2a-logo-2054a6a35cb0",
@@ -411,7 +423,9 @@
         "/assets/brand-images/tableai-tableai-a2a-logo.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "id": "tableai-hero-tableai-brand-hero-df017e1f0d5d",
@@ -505,7 +519,9 @@
           "sha256": "df017e1f0d5dd4d71f6d6ea84f93038aa0ed682aa228bf4268b9e64d0eb3f537",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "tableai-logo-a2a-logo-2054a6a35cb0",
@@ -522,7 +538,9 @@
           "sha256": "2054a6a35cb07ef17fae5fd4a1498db4e5eabc9c62a248ff2ea65f2b6e65453a",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "tableai-logo-tableai-a2a-logo-transparent-c1e7752b39f5",
@@ -539,7 +557,9 @@
           "sha256": "c1e7752b39f5607594e40f701395a0f6ef3addb8b5a964880408e522fe34c210",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": true,
+          "documentLogo": true
         },
         {
           "assetId": "tableai-logo-tableai-a2a-logo-2054a6a35cb0",
@@ -556,7 +576,9 @@
           "sha256": "2054a6a35cb07ef17fae5fd4a1498db4e5eabc9c62a248ff2ea65f2b6e65453a",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         }
       ]
     }
@@ -631,7 +653,9 @@
         "sha256": "df017e1f0d5dd4d71f6d6ea84f93038aa0ed682aa228bf4268b9e64d0eb3f537",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "tableai-logo-a2a-logo-2054a6a35cb0",
@@ -648,7 +672,9 @@
         "sha256": "2054a6a35cb07ef17fae5fd4a1498db4e5eabc9c62a248ff2ea65f2b6e65453a",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "tableai-logo-tableai-a2a-logo-transparent-c1e7752b39f5",
@@ -665,7 +691,9 @@
         "sha256": "c1e7752b39f5607594e40f701395a0f6ef3addb8b5a964880408e522fe34c210",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": true,
+        "documentLogo": true
       },
       {
         "assetId": "tableai-logo-tableai-a2a-logo-2054a6a35cb0",
@@ -682,7 +710,9 @@
         "sha256": "2054a6a35cb07ef17fae5fd4a1498db4e5eabc9c62a248ff2ea65f2b6e65453a",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       }
     ]
   },

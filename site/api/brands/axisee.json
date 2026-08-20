@@ -165,11 +165,11 @@
     "standalone"
   ],
   "version": {
-    "hash": "023912fb3434a3e51c398957794d4d0eab3cdeb8",
-    "shortHash": "023912f",
-    "date": "2026-08-16T08:56:23+08:00",
-    "message": "fix: resolve about page assets",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/023912fb3434a3e51c398957794d4d0eab3cdeb8"
+    "hash": "97409964b2887b3882c3d0e2637e16b082de0505",
+    "shortHash": "9740996",
+    "date": "2026-08-16T09:01:13+08:00",
+    "message": "fix: use absolute app assets",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/97409964b2887b3882c3d0e2637e16b082de0505"
   },
   "historyUrl": "api/history/axisee.json",
   "history": [
@@ -278,7 +278,9 @@
       "sha256": "3c42c46656933438947f69248397748722fd580e006146938a77fb7aceb76e4f",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": false,
+      "documentLogo": false
     },
     {
       "assetId": "axisee-logo-axisee-logo-5f1cfebfc5b9",
@@ -295,7 +297,9 @@
       "sha256": "5f1cfebfc5b92db2708c2957b47419a456de13e78c20ddab4973056b08cafe3b",
       "access": "public",
       "colorway": "",
-      "primaryAsset": false
+      "primaryAsset": false,
+      "backgroundTransparent": true,
+      "documentLogo": false
     }
   ],
   "assetManifest": [
@@ -347,7 +351,9 @@
         "/assets/brand-images/axisee-axisee-logo.png"
       ],
       "status": "ready",
-      "version": 1
+      "version": 1,
+      "backgroundTransparent": true,
+      "documentLogo": false
     }
   ],
   "adobeAssets": [],
@@ -416,7 +422,9 @@
           "sha256": "3c42c46656933438947f69248397748722fd580e006146938a77fb7aceb76e4f",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": false,
+          "documentLogo": false
         },
         {
           "assetId": "axisee-logo-axisee-logo-5f1cfebfc5b9",
@@ -433,7 +441,9 @@
           "sha256": "5f1cfebfc5b92db2708c2957b47419a456de13e78c20ddab4973056b08cafe3b",
           "access": "public",
           "colorway": "",
-          "primaryAsset": false
+          "primaryAsset": false,
+          "backgroundTransparent": true,
+          "documentLogo": false
         }
       ]
     }
@@ -508,7 +518,9 @@
         "sha256": "3c42c46656933438947f69248397748722fd580e006146938a77fb7aceb76e4f",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": false,
+        "documentLogo": false
       },
       {
         "assetId": "axisee-logo-axisee-logo-5f1cfebfc5b9",
@@ -525,7 +537,9 @@
         "sha256": "5f1cfebfc5b92db2708c2957b47419a456de13e78c20ddab4973056b08cafe3b",
         "access": "public",
         "colorway": "",
-        "primaryAsset": false
+        "primaryAsset": false,
+        "backgroundTransparent": true,
+        "documentLogo": false
       }
     ]
   },
