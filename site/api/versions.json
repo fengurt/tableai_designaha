@@ -1,5 +1,12 @@
 [
   {
+    "hash": "347cfbb2eb50ed335e9242a14c40a827fa8e1af4",
+    "shortHash": "347cfbb",
+    "date": "2026-08-20T12:49:38+08:00",
+    "message": "feat: add minimal IP copy",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/347cfbb2eb50ed335e9242a14c40a827fa8e1af4"
+  },
+  {
     "hash": "dd042f5968222ea27fb7ec3ff4e75f63ce57d3bc",
     "shortHash": "dd042f5",
     "date": "2026-08-20T08:06:20+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-08-12T19:33:36+08:00",
     "message": "feat: clarify commercial font licensing",
     "url": "https://github.com/fengurt/tableai_designaha/commit/675d3b6080e1d2e2a91786de492408141c3e9695"
-  },
-  {
-    "hash": "6d44c62ed6e687de9930f8eeb1ac99d1f24d19f8",
-    "shortHash": "6d44c62",
-    "date": "2026-08-12T19:03:13+08:00",
-    "message": "feat: launch searchable open font directory",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/6d44c62ed6e687de9930f8eeb1ac99d1f24d19f8"
   }
 ]

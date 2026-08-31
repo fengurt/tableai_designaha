@@ -1794,10 +1794,10 @@ ${commonDiscoveryHead()}
       <div class="global-results" id="globalResults" aria-live="polite"></div>
     </div>
     <nav class="top-actions" aria-label="Primary actions">
+      <a href="directory" data-i18n="nav.directory">目录</a>
+      <a href="ip-evolution" data-i18n="evolution.label">IP进化论</a>
+      <a href="about" data-i18n="nav.about">关于</a>
       <button class="api-link" type="button" id="apiConnectButton" aria-label="API connect"><span class="api-dot"></span>API</button>
-      <a href="./#agent-entry" data-i18n="portal.agentNav">Agent</a>
-      <a href="./#partner-entry" data-i18n="portal.partnerNav">Partner</a>
-      <a href="./#collab-entry" data-i18n="portal.collabNav">Collab</a>
       <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language"><span class="is-active">CN</span><span class="lang-divider">/</span><span>EN</span></button>
     </nav>
   </header>
@@ -1896,9 +1896,10 @@ ${commonDiscoveryHead()}
       <div class="global-results" id="globalResults" aria-live="polite"></div>
     </div>
     <nav class="top-actions" aria-label="Primary actions">
-      <button class="api-link" type="button" id="apiConnectButton" aria-label="API connect"><span class="api-dot"></span>API</button>
-      <a href="directory">Directory</a>
+      <a href="directory" data-i18n="nav.directory">目录</a>
       <a href="ip-evolution" data-i18n="evolution.label">IP进化论</a>
+      <a href="about" data-i18n="nav.about">关于</a>
+      <button class="api-link" type="button" id="apiConnectButton" aria-label="API connect"><span class="api-dot"></span>API</button>
       <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language"><span class="is-active">CN</span><span class="lang-divider">/</span><span>EN</span></button>
     </nav>
   </header>
@@ -2015,10 +2016,10 @@ ${commonDiscoveryHead()}
       <div class="global-results" id="globalResults" aria-live="polite"></div>
     </div>
     <nav class="top-actions" aria-label="Primary actions">
+      <a href="directory" data-i18n="nav.directory">目录</a>
+      <a href="ip-evolution" data-i18n="evolution.label">IP进化论</a>
+      <a href="about" data-i18n="nav.about">关于</a>
       <button class="api-link" type="button" id="apiConnectButton" aria-label="API connect"><span class="api-dot"></span>API</button>
-      <a href="./#agent-entry" data-i18n="portal.agentNav">Agent</a>
-      <a href="./#partner-entry" data-i18n="portal.partnerNav">Partner</a>
-      <a href="./#collab-entry" data-i18n="portal.collabNav">Collab</a>
       <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language"><span class="is-active">CN</span><span class="lang-divider">/</span><span>EN</span></button>
     </nav>
   </header>
@@ -2080,9 +2081,10 @@ ${commonDiscoveryHead()}
     <a class="brand" href="./" aria-label="${hubNameCn}"><img src="${hubLogoUrl}" alt="${hubNameCn}"></a>
     <div class="topbar-search" role="search"><input id="brandSearch" type="search" autocomplete="off" aria-label="Search IP"><div class="global-results" id="globalResults" aria-live="polite"></div></div>
     <nav class="top-actions" aria-label="Primary actions">
-      <a href="directory" aria-current="${kind === "directory" ? "page" : "false"}">Directory</a>
+      <a href="directory" data-i18n="nav.directory" aria-current="${kind === "directory" ? "page" : "false"}">目录</a>
+      <a href="ip-evolution" data-i18n="evolution.label">IP进化论</a>
+      <a href="about" data-i18n="nav.about">关于</a>
       <button class="api-link" type="button" id="apiConnectButton" aria-label="API connect"><span class="api-dot"></span>API</button>
-      <a href="./#agent-entry">Agent</a><a href="./#partner-entry">Partner</a><a href="./#collab-entry">Collab</a>
       <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language"><span class="is-active">CN</span><span class="lang-divider">/</span><span>EN</span></button>
     </nav>
   </header>
@@ -2119,10 +2121,10 @@ ${commonDiscoveryHead()}
       <div class="global-results" id="globalResults" aria-live="polite"></div>
     </div>
     <nav class="top-actions" aria-label="Primary actions">
+      <a href="directory" data-i18n="nav.directory">目录</a>
+      <a href="ip-evolution" data-i18n="evolution.label">IP进化论</a>
+      <a href="about" data-i18n="nav.about">关于</a>
       <button class="api-link" type="button" id="apiConnectButton" aria-label="API connect"><span class="api-dot"></span>API</button>
-      <a href="./#agent-entry" data-i18n="portal.agentNav">Agent</a>
-      <a href="./#partner-entry" data-i18n="portal.partnerNav">Partner</a>
-      <a href="./#collab-entry" data-i18n="portal.collabNav">Collab</a>
       <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language"><span class="is-active">CN</span><span class="lang-divider">/</span><span>EN</span></button>
     </nav>
   </header>
@@ -3676,9 +3678,9 @@ p { line-height: 1.65; }
 }
 .brand-sidera .brand-hero {
   min-height: auto;
-  padding: clamp(24px, 4vw, 48px) 0;
+  padding: clamp(24px, 4vw, 42px) 0;
   border-bottom: 1px solid var(--brand-line);
-  grid-template-columns: minmax(0, .9fr) minmax(320px, 1.1fr);
+  grid-template-columns: minmax(0, .86fr) minmax(320px, 1.14fr);
 }
 .brand-sidera .brand-hero > div:first-child { max-width: 620px; }
 .brand-sidera .brand-hero h1 {
@@ -3711,12 +3713,18 @@ p { line-height: 1.65; }
 .brand-sidera .ip-system-panel {
   border-radius: 2px;
 }
-.brand-sidera .brand-visual { background: var(--brand-primary); }
+.brand-sidera .brand-visual {
+  min-height: 0;
+  max-height: 520px;
+  aspect-ratio: 4 / 3;
+  background: var(--brand-primary);
+}
 .brand-sidera .brand-visual img {
   height: 100%;
-  max-height: none;
-  padding: 0;
-  object-fit: cover;
+  max-height: 520px;
+  padding: clamp(22px, 3vw, 42px);
+  padding-bottom: clamp(68px, 6vw, 84px);
+  object-fit: contain;
 }
 .sidera-compass-visual {
   position: relative;
@@ -6814,16 +6822,6 @@ function primaryIpName(ip = {}) {
   return ip.mainLanguage === "en" ? (ip.names?.en || ip.names?.zh || ip.slug) : (ip.names?.zh || ip.names?.en || ip.slug);
 }
 
-function setupDirectoryLink() {
-  document.querySelectorAll(".top-actions").forEach((nav) => {
-    if (nav.querySelector('[href="directory"]')) return;
-    const link = document.createElement("a");
-    link.href = "directory";
-    link.textContent = "Directory";
-    nav.insertBefore(link, nav.firstChild);
-  });
-}
-
 function secondaryIpName(ip = {}) {
   const primary = primaryIpName(ip);
   return [ip.names?.zh, ip.names?.en].find((name) => name && name !== primary) || "";
@@ -6975,7 +6973,6 @@ function setupWebVitals() {
 
 applyI18n();
 setupLanguageToggle();
-setupDirectoryLink();
 setupSearch();
 setupPortalActions();
 setupAgentGateway();

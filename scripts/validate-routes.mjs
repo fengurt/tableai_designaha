@@ -41,5 +41,16 @@ if (!aboutPage.includes('href="mcp"') || !aboutPage.includes('href="agent.json"'
 
 const siteScript = await readFile(join(root, "site", "assets", "site.js"), "utf8");
 if (!siteScript.includes("function minimalReferenceText") || !siteScript.includes("data-copy-minimal")) throw new Error("minimal_copy_missing");
+if (siteScript.includes("setupDirectoryLink")) throw new Error("dynamic_directory_link_regression");
+
+const siteCss = await readFile(join(root, "site", "assets", "site.css"), "utf8");
+if (!/\.brand-sidera \.brand-visual img\s*\{[^}]*object-fit:\s*contain/s.test(siteCss)) throw new Error("sidera_logo_crop_regression");
+
+for (const relativePath of ["index.html", "about/index.html", "brand.html", "ip-evolution", "fonts", "directory/index.html", "admin.html"]) {
+  const html = await readFile(join(root, "site", relativePath), "utf8");
+  for (const key of ["nav.directory", "evolution.label", "nav.about"]) {
+    if (!html.includes(`data-i18n="${key}"`)) throw new Error(`topbar_missing:${relativePath}:${key}`);
+  }
+}
 
 console.log(JSON.stringify({ ok: true, redirects: cases.length, canonical: "https://apuch.art/ip-evolution", about: "https://apuch.art/about" }, null, 2));

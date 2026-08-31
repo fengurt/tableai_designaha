@@ -552,6 +552,7 @@ button:active { transform: translateY(1px); }
   width: 100%;
   max-height: 420px;
   padding: clamp(28px, 4vw, 56px);
+  padding-bottom: clamp(68px, 6vw, 84px);
   object-fit: contain;
 }
 .profile-tags span,
