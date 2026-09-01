@@ -11,13 +11,21 @@ function negotiatedFormat(request, size, pathname) {
   return "original";
 }
 
-function mediaCacheKey(request, pathname, size, format) {
+function mediaCacheKey(request, pathname, size, format, downloadName = "") {
   const url = new URL(request.url);
   url.pathname = pathname;
   url.search = "";
   url.searchParams.set("__iptrust_size", size);
   url.searchParams.set("__iptrust_format", format);
+  if (downloadName) url.searchParams.set("__iptrust_download", downloadName);
   return new Request(url, { method: "GET" });
+}
+
+export function mediaDownloadName(url, pathname) {
+  const requested = url.searchParams.get("download") || "";
+  if (!requested) return /^\/public\/iptrust\/font-(?:source|package)-/.test(pathname) ? pathname.split("/").at(-1) : "";
+  return String(requested === "1" ? pathname.split("/").at(-1) : requested)
+    .split(/[\\/]/).pop().replace(/[\u0000-\u001f\u007f]/g, "").slice(0, 180) || "asset";
 }
 
 function variantKey(key, size, format) {
@@ -44,7 +52,7 @@ function objectResponse(object, { isPrivate = false, range = null, totalSize = o
   headers.set("X-Content-Type-Options", "nosniff");
   headers.set("Cache-Control", isPrivate ? "private, no-store" : "public, max-age=31536000, immutable");
   headers.set("Vary", "Accept");
-  if (downloadName) headers.set("Content-Disposition", `attachment; filename="${downloadName.replace(/[^a-zA-Z0-9._-]/g, "_")}"`);
+  if (downloadName) headers.set("Content-Disposition", `attachment; filename="${downloadName.replace(/[^a-zA-Z0-9._-]/g, "_")}"; filename*=UTF-8''${encodeURIComponent(downloadName)}`);
   if (range) {
     headers.set("Content-Range", `bytes ${range.offset}-${range.offset + range.length - 1}/${totalSize}`);
     headers.set("Content-Length", String(range.length));
@@ -87,13 +95,13 @@ export async function serveMedia(request, env) {
   if (isPrivate && !(await signed(request, env, pathname))) return json(request, { error: "invalid_or_expired_signature" }, { status: 403 }, true);
 
   const key = pathname.slice(1);
-  const downloadName = /^\/public\/iptrust\/font-(?:source|package)-/.test(pathname) ? pathname.split("/").at(-1) : "";
+  const downloadName = mediaDownloadName(url, pathname);
   const bucket = isPrivate ? env.ORIGINALS : env.PREVIEWS;
   const size = url.searchParams.get("size") || "original";
   const rangeHeader = request.headers.get("range");
   const format = negotiatedFormat(request, size, pathname);
   const cache = caches.default;
-  const cacheKey = mediaCacheKey(request, pathname, size, format);
+  const cacheKey = mediaCacheKey(request, pathname, size, format, downloadName);
 
   if (isPublic && !rangeHeader && request.method === "GET") {
     const cached = await cache.match(cacheKey);

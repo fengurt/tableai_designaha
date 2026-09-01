@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { canonicalSiteRedirect } from "../edge/src/index.js";
+import { mediaDownloadName } from "../edge/src/media.js";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const cases = [
@@ -41,10 +42,16 @@ if (!aboutPage.includes('href="mcp"') || !aboutPage.includes('href="agent.json"'
 
 const siteScript = await readFile(join(root, "site", "assets", "site.js"), "utf8");
 if (!siteScript.includes("function minimalReferenceText") || !siteScript.includes("data-copy-minimal")) throw new Error("minimal_copy_missing");
+if (!siteScript.includes("data-download-asset")) throw new Error("asset_download_missing");
+if (siteScript.includes("const heroName = isSidera") || siteScript.includes("const heroEyebrow = isSidera")) throw new Error("brand_display_logic_not_shared");
 if (siteScript.includes("setupDirectoryLink")) throw new Error("dynamic_directory_link_regression");
 
+if (mediaDownloadName(new URL("https://media.apuch.art/public/ip/logo/original.png?download=brand-logo.png"), "/public/ip/logo/original.png") !== "brand-logo.png") throw new Error("asset_download_name");
+if (mediaDownloadName(new URL("https://media.apuch.art/public/ip/logo/original.png?download=../品牌-logo.png"), "/public/ip/logo/original.png") !== "品牌-logo.png") throw new Error("asset_download_name_safety");
+if (mediaDownloadName(new URL("https://media.apuch.art/public/ip/logo/original.png"), "/public/ip/logo/original.png")) throw new Error("asset_inline_response");
+
 const siteCss = await readFile(join(root, "site", "assets", "site.css"), "utf8");
-if (!/\.brand-sidera \.brand-visual img\s*\{[^}]*object-fit:\s*contain/s.test(siteCss)) throw new Error("sidera_logo_crop_regression");
+if (!/\.brand-visual img\s*\{[^}]*object-fit:\s*contain/s.test(siteCss)) throw new Error("brand_logo_crop_regression");
 
 for (const relativePath of ["index.html", "about/index.html", "brand.html", "ip-evolution", "fonts", "directory/index.html", "admin.html"]) {
   const html = await readFile(join(root, "site", relativePath), "utf8");

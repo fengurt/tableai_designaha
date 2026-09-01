@@ -4591,6 +4591,7 @@ const i18n = {
     "copy.minimalDone": "已复制极简品牌信息",
     "copy.assetUrl": "复制资产地址",
     "copy.assetDone": "已复制资产地址",
+    "brand.download": "下载",
     "copy.colorDone": "已复制色值",
     "copy.pantoneDone": "已复制 Pantone 近似值",
     "brand.openJson": "打开 JSON",
@@ -4623,7 +4624,7 @@ const i18n = {
     "brand.copyIpSystem": "复制 Apply Brief",
     "brand.ipSystemCopied": "已复制 IP System Apply Brief",
     "brand.guideline": "品牌规范",
-    "brand.more": "更多资料",
+    "brand.more": "资料",
     "brand.moodBoard": "Mood Board",
     "brand.visualAssets": "视觉资产",
     "brand.documentLogo": "文档级小 Logo",
@@ -4827,6 +4828,7 @@ const i18n = {
     "copy.minimalDone": "Minimal brand info copied",
     "copy.assetUrl": "Copy asset URL",
     "copy.assetDone": "Asset URL copied",
+    "brand.download": "Download",
     "copy.colorDone": "Color copied",
     "copy.pantoneDone": "Pantone approximation copied",
     "brand.openJson": "Open JSON",
@@ -4859,7 +4861,7 @@ const i18n = {
     "brand.copyIpSystem": "Copy apply brief",
     "brand.ipSystemCopied": "IP System apply brief copied",
     "brand.guideline": "Brand guideline",
-    "brand.more": "More resources",
+    "brand.more": "Details",
     "brand.moodBoard": "Mood Board",
     "brand.visualAssets": "Visual assets",
     "brand.documentLogo": "Document logo",
@@ -5196,6 +5198,10 @@ function imageDimensionAttributes(asset = {}) {
 
 function copyIcon() {
   return \`<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="10" height="10" rx="2"></rect><path d="M5 15V7a2 2 0 0 1 2-2h8"></path></svg>\`;
+}
+
+function downloadIcon() {
+  return \`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m-4-4 4 4 4-4M5 20h14"></path></svg>\`;
 }
 
 function themeStyle(theme = {}) {
@@ -6371,6 +6377,22 @@ function preferredBrandImage(images = []) {
   return assetScore(candidates[0]) > 0 ? candidates[0] : images[0];
 }
 
+function assetDownloadUrl(asset = {}) {
+  const url = new URL(asset.sitePath, location.href);
+  url.searchParams.set("download", String(asset.path || url.pathname).split("/").pop() || "asset");
+  return url.href;
+}
+
+function assetActions(asset = {}) {
+  if (!asset.sitePath) return "";
+  return \`
+    <div class="asset-actions">
+      <button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="\${escapeHtml(asset.sitePath)}" aria-label="\${escapeHtml(t("copy.assetUrl"))}">\${copyIcon()}</button>
+      <a class="asset-download-button" href="\${escapeHtml(assetDownloadUrl(asset))}" data-download-asset download aria-label="\${escapeHtml(t("brand.download"))}" title="\${escapeHtml(t("brand.download"))}">\${downloadIcon()}</a>
+    </div>
+  \`;
+}
+
 function brandAssetStrip(images = []) {
   if (!images.length) return "";
   return \`
@@ -6382,7 +6404,7 @@ function brandAssetStrip(images = []) {
             <a class="brand-asset-link \${image.colorway ? \`asset-colorway-\${escapeHtml(image.colorway)}\` : ""}" href="\${escapeHtml(image.sitePath)}">
               <img \${responsiveImageAttributes(image.sitePath, [320, 640, 1280], "(max-width: 760px) 54vw, 240px")} alt="\${escapeHtml(image.title || "")}" loading="lazy" decoding="async">
             </a>
-            <button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="\${escapeHtml(image.sitePath)}" aria-label="\${escapeHtml(t("copy.assetUrl"))}">\${copyIcon()}</button>
+            \${assetActions(image)}
             <div class="brand-asset-info">
               <span class="brand-asset-name">\${escapeHtml(image.title || image.path || "Asset")}</span>
               <span class="brand-asset-meta">
@@ -6405,14 +6427,14 @@ function adobeAssetPanel(adobeAssets = []) {
   return \`
     <section class="adobe-assets" aria-label="Adobe source assets">
       <div class="adobe-assets-head">
-        <div><p class="eyebrow">ADOBE</p><h2>\${escapeHtml(t("brand.adobeAssets"))}</h2></div>
+        <p class="eyebrow">\${escapeHtml(t("brand.adobeAssets"))}</p>
         <span class="asset-key">AI / EPS / PS / PDF / PSD</span>
       </div>
       \${adobeAssets.map((asset) => \`
         <article class="adobe-source-file">
           <div class="adobe-source-preview">
             \${asset.preview?.sitePath ? \`<img \${responsiveImageAttributes(asset.preview.sitePath, [320, 640, 1280], "(max-width: 760px) 100vw, 42vw")} alt="\${escapeHtml(asset.title || "Adobe asset")}" loading="lazy" decoding="async">\` : ""}
-            \${asset.preview?.sitePath ? \`<button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="\${escapeHtml(asset.preview.sitePath)}" aria-label="\${escapeHtml(t("copy.assetUrl"))}">\${copyIcon()}</button>\` : ""}
+            \${assetActions(asset.preview)}
           </div>
           <div class="adobe-source-body">
             <p class="eyebrow">\${escapeHtml(asset.source?.format || "ADOBE")}</p>
@@ -6558,7 +6580,7 @@ function compactBrandFacts(brand = {}, display = {}, localized = {}) {
   return \`<section class="brand-facts">\${facts.map(([label, value]) => \`<div><strong>\${escapeHtml(label)}</strong><p>\${value}</p></div>\`).join("")}</section>\`;
 }
 
-function brandAdvancedDetails(brand = {}) {
+function brandAdvancedDetails(brand = {}, display = {}, localized = {}) {
   const guideHtml = brand.guides?.map((guide) => \`
     <article class="guide guide-rendered">
       <p class="eyebrow">\${escapeHtml(t("brand.guideline"))}</p>
@@ -6567,8 +6589,9 @@ function brandAdvancedDetails(brand = {}) {
   \`).join("") || "";
   return \`
     <details class="brand-advanced">
-      <summary><span>\${escapeHtml(t("brand.more"))}</span><small>API · IP System · Guidelines</small></summary>
+      <summary><span>\${escapeHtml(t("brand.more"))}</span></summary>
       <div class="brand-advanced-body">
+        \${compactBrandFacts(brand, display, localized)}
         \${profileEditor(brand)}
         <section class="brand-architecture" id="brandArchitecture" aria-live="polite"></section>
         \${ipSystemPanel(brand)}
@@ -6726,11 +6749,6 @@ async function renderBrand() {
   const brand = await loadJson(\`api/brands/\${slug}.json\`);
   const display = mainBrand(brand);
   const localized = localizedBrand(brand);
-  const isSidera = brand.slug === "sidera" || brand.publicSlug === "tiansight";
-  const isKaoyu = brand.slug === "kaoyu-shenhua";
-  const heroName = isSidera ? "侍天" : display.name;
-  const heroSecondaryName = isSidera ? "智慧餐饮 · tiansight" : isKaoyu ? "KAOYUSHENHUA · 一炉火，烧了三十多年" : display.secondaryName;
-  const heroEyebrow = isSidera ? "智慧领航者 · WISDOM NAVIGATOR" : isKaoyu ? (currentLocale === "en" ? "Charcoal fire · Live fish · No prefab" : "老灶火 · 活鱼现烤 · 无预制") : statusLabel(brand.status);
   document.title = \`\${display.name} · Brand Guidelines\`;
   const descriptionMeta = document.querySelector('meta[name="description"]');
   if (descriptionMeta) descriptionMeta.setAttribute("content", localized.intro || brand.description || "IPTrust brand guideline and assets.");
@@ -6740,28 +6758,23 @@ async function renderBrand() {
     ? brand.adobeAssets[0].hero
     : preferredBrandImage(brand.images || []);
   page.innerHTML = \`
-    <div class="brand-shell \${themeClass(brand.theme)} brand-\${escapeHtml(brand.slug)}" style="\${themeStyle(brand.theme)}">
+    <div class="brand-shell \${themeClass(brand.theme)}" style="\${themeStyle(brand.theme)}">
       <section class="brand-hero">
         <div>
-          <p class="eyebrow">\${escapeHtml(heroEyebrow)}</p>
-          <h1>\${escapeHtml(heroName)}</h1>
-          <p class="muted alt-name">\${escapeHtml(heroSecondaryName || "")}</p>
+          <p class="eyebrow">\${escapeHtml(statusLabel(brand.status))}</p>
+          <h1>\${escapeHtml(display.name)}</h1>
+          <p class="muted alt-name">\${escapeHtml(display.secondaryName || "")}</p>
           <p>\${escapeHtml(localized.intro)}</p>
-          <div class="profile-tags">
-            \${display.classification.tracks.slice(0, 3).map((item) => \`<span>\${escapeHtml(item)}</span>\`).join("")}
-          </div>
           \${swatches(brand.theme, true)}
           <div class="actions">
-            \${isKaoyu ? \`<a class="button" href="kaoyu-shenhua/">\${currentLocale === "en" ? "Brand story" : "品牌故事"}</a>\` : ""}
-            <button class="button" type="button" data-copy-brand="\${escapeHtml(brand.slug)}">\${escapeHtml(t("brand.copyAgentPack"))}</button>
-            <button class="button ghost" type="button" data-copy-brand="\${escapeHtml(brand.slug)}" data-copy-minimal>\${escapeHtml(t("brand.copyMinimal"))}</button>
+            <button class="button" type="button" data-copy-brand="\${escapeHtml(brand.slug)}" data-copy-minimal>\${escapeHtml(t("brand.copyMinimal"))}</button>
             \${brand.officialWebsite ? \`<a class="button ghost" href="\${escapeHtml(brand.officialWebsite)}">\${escapeHtml(t("brand.website"))}</a>\` : ""}
           </div>
         </div>
         \${hero ? \`
           <div class="brand-visual">
             <img \${responsiveImageAttributes(hero.sitePath, [640, 1280, 2400], "(max-width: 900px) 100vw, 52vw")} \${imageDimensionAttributes(hero)} alt="\${escapeHtml(hero.title || display.name)}" loading="eager" fetchpriority="high" decoding="async">
-            <button class="asset-copy-button icon-copy" type="button" data-icon-only="true" data-copy-asset-url="\${escapeHtml(hero.sitePath)}" aria-label="\${escapeHtml(t("copy.assetUrl"))}">\${copyIcon()}</button>
+            \${assetActions(hero)}
             <div class="brand-visual-meta">
               <strong>\${escapeHtml(hero.title || display.name)}</strong>
               <span>\${escapeHtml([hero.format, hero.size].filter(Boolean).join(" · "))}</span>
@@ -6770,23 +6783,11 @@ async function renderBrand() {
               \${hero.backgroundTransparent ? \`<span>\${escapeHtml(t("brand.transparent"))}</span>\` : ""}
             </div>
           </div>
-        \` : isSidera ? \`
-          <div class="brand-visual sidera-compass-visual" role="img" aria-label="侍天智慧领航罗盘">
-            <div class="sidera-compass-ring" aria-hidden="true"><div class="sidera-compass-core"><span class="sidera-compass-mark">侍</span></div></div>
-            <span class="sidera-seal" aria-hidden="true">侍天</span>
-            <p class="sidera-compass-caption">TIANSIGHT / WISDOM NAVIGATOR</p>
-          </div>
-        \` : isKaoyu ? \`
-          <div class="brand-visual kaoyu-fire-visual" role="img" aria-label="烤鱼神话炉火">
-            <span class="kaoyu-fire-mark">火</span>
-            <p class="kaoyu-fire-caption">KAOYUSHENHUA / CHARCOAL FIRE</p>
-          </div>
         \` : ""}
       </section>
-      \${adobeAssetPanel(brand.adobeAssets || [])}
       \${brandAssetStrip(brand.images || [])}
-      \${compactBrandFacts(brand, display, localized)}
-      \${brandAdvancedDetails(brand)}
+      \${adobeAssetPanel(brand.adobeAssets || [])}
+      \${brandAdvancedDetails(brand, display, localized)}
     </div>
   \`;
   page.setAttribute("aria-busy", "false");

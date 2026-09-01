@@ -1,5 +1,12 @@
 [
   {
+    "hash": "cad36c5ded24066497b8169cad9783db90ebfb9f",
+    "shortHash": "cad36c5",
+    "date": "2026-08-31T18:44:14+08:00",
+    "message": "fix: unify navigation and brand hero",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/cad36c5ded24066497b8169cad9783db90ebfb9f"
+  },
+  {
     "hash": "347cfbb2eb50ed335e9242a14c40a827fa8e1af4",
     "shortHash": "347cfbb",
     "date": "2026-08-20T12:49:38+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-08-13T12:06:04+08:00",
     "message": "feat: expand deployable open font library",
     "url": "https://github.com/fengurt/tableai_designaha/commit/c1f75944a73f940b16c696e6a93e2e609d4eb492"
-  },
-  {
-    "hash": "675d3b6080e1d2e2a91786de492408141c3e9695",
-    "shortHash": "675d3b6",
-    "date": "2026-08-12T19:33:36+08:00",
-    "message": "feat: clarify commercial font licensing",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/675d3b6080e1d2e2a91786de492408141c3e9695"
   }
 ]
