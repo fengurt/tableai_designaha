@@ -169,11 +169,11 @@
     "standalone"
   ],
   "version": {
-    "hash": "cad36c5ded24066497b8169cad9783db90ebfb9f",
-    "shortHash": "cad36c5",
-    "date": "2026-08-31T18:44:14+08:00",
-    "message": "fix: unify navigation and brand hero",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/cad36c5ded24066497b8169cad9783db90ebfb9f"
+    "hash": "59c4eb6b0ae3294734806a7fbe6664d873740622",
+    "shortHash": "59c4eb6",
+    "date": "2026-09-01T09:03:36+08:00",
+    "message": "feat: unify IP asset pages and downloads",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/59c4eb6b0ae3294734806a7fbe6664d873740622"
   },
   "historyUrl": "api/history/xinzhi-travel.json",
   "history": [

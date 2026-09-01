@@ -1,5 +1,12 @@
 [
   {
+    "hash": "59c4eb6b0ae3294734806a7fbe6664d873740622",
+    "shortHash": "59c4eb6",
+    "date": "2026-09-01T09:03:36+08:00",
+    "message": "feat: unify IP asset pages and downloads",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/59c4eb6b0ae3294734806a7fbe6664d873740622"
+  },
+  {
     "hash": "cad36c5ded24066497b8169cad9783db90ebfb9f",
     "shortHash": "cad36c5",
     "date": "2026-08-31T18:44:14+08:00",
@@ -131,12 +138,5 @@
     "date": "2026-08-14T08:33:39+08:00",
     "message": "feat: streamline brand pages and publish tiansight slug",
     "url": "https://github.com/fengurt/tableai_designaha/commit/6c28043d87c25fa124e6997cafb2c5e6492ffc0e"
-  },
-  {
-    "hash": "c1f75944a73f940b16c696e6a93e2e609d4eb492",
-    "shortHash": "c1f7594",
-    "date": "2026-08-13T12:06:04+08:00",
-    "message": "feat: expand deployable open font library",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/c1f75944a73f940b16c696e6a93e2e609d4eb492"
   }
 ]

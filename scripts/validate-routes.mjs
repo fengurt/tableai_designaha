@@ -52,6 +52,8 @@ if (mediaDownloadName(new URL("https://media.apuch.art/public/ip/logo/original.p
 
 const siteCss = await readFile(join(root, "site", "assets", "site.css"), "utf8");
 if (!/\.brand-visual img\s*\{[^}]*object-fit:\s*contain/s.test(siteCss)) throw new Error("brand_logo_crop_regression");
+if (!/\.brand-asset-link\s*\{[^}]*overflow:\s*hidden/s.test(siteCss)) throw new Error("brand_asset_preview_overflow");
+if (!/\.brand-asset img\s*\{[^}]*max-height:\s*100%/s.test(siteCss)) throw new Error("brand_asset_image_bounds");
 
 for (const relativePath of ["index.html", "about/index.html", "brand.html", "ip-evolution", "fonts", "directory/index.html", "admin.html"]) {
   const html = await readFile(join(root, "site", relativePath), "utf8");
