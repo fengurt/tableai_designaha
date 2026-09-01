@@ -24,7 +24,11 @@ if (canonicalSiteRedirect(new Request("https://apuch.art/ip-evolution"))) throw 
 const page = await readFile(join(root, "site", "ip-evolution"), "utf8");
 if (!page.includes("<title>IP进化论 | 岁知社 IPTrust</title>")) throw new Error("ip_evolution_title");
 if (!page.includes('rel="canonical" href="https://apuch.art/ip-evolution"')) throw new Error("ip_evolution_canonical");
-if (!page.includes('id="open-source-type"')) throw new Error("font_library_missing");
+if (!page.includes("data-evolution-map")) throw new Error("ip_evolution_map_missing");
+const sourceFramework = await readFile(join(root, "IP-System", "ip_sys.md"), "utf8");
+const sourceSectionCount = (sourceFramework.match(/^#{2,3}\s/gm) || []).length;
+const renderedSectionCount = (page.match(/<h[23] id="ip-system-/g) || []).length;
+if (renderedSectionCount !== sourceSectionCount) throw new Error(`ip_evolution_content_loss:${renderedSectionCount}:${sourceSectionCount}`);
 
 const repairPage = await readFile(join(root, "site", "ip-evolution-repair"), "utf8");
 if (!repairPage.includes('/ip-evolution?repaired=1')) throw new Error("repair_route_missing");
@@ -43,6 +47,7 @@ if (!aboutPage.includes('href="mcp"') || !aboutPage.includes('href="agent.json"'
 const siteScript = await readFile(join(root, "site", "assets", "site.js"), "utf8");
 if (!siteScript.includes("function minimalReferenceText") || !siteScript.includes("data-copy-minimal")) throw new Error("minimal_copy_missing");
 if (!siteScript.includes("data-download-asset")) throw new Error("asset_download_missing");
+if (!siteScript.includes("function setupEvolutionMap()")) throw new Error("ip_evolution_map_script_missing");
 if (siteScript.includes("const heroName = isSidera") || siteScript.includes("const heroEyebrow = isSidera")) throw new Error("brand_display_logic_not_shared");
 if (siteScript.includes("setupDirectoryLink")) throw new Error("dynamic_directory_link_regression");
 

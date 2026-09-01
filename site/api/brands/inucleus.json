@@ -140,11 +140,11 @@
     "standalone"
   ],
   "version": {
-    "hash": "59c4eb6b0ae3294734806a7fbe6664d873740622",
-    "shortHash": "59c4eb6",
-    "date": "2026-09-01T09:03:36+08:00",
-    "message": "feat: unify IP asset pages and downloads",
-    "url": "https://github.com/fengurt/tableai_designaha/commit/59c4eb6b0ae3294734806a7fbe6664d873740622"
+    "hash": "6d0b90a132ae2fe9197dd7bf0712e96880984f8e",
+    "shortHash": "6d0b90a",
+    "date": "2026-09-01T11:20:03+08:00",
+    "message": "fix: contain IP asset previews",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/6d0b90a132ae2fe9197dd7bf0712e96880984f8e"
   },
   "historyUrl": "api/history/inucleus.json",
   "history": [

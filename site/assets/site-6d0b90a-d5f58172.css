@@ -675,6 +675,22 @@ p { line-height: 1.65; }
   font-size: clamp(18px, 2vw, 24px);
 }
 .ip-system-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.ip-system-layers { display: grid; }
+.ip-system-layers article {
+  display: grid;
+  grid-template-columns: minmax(150px, .35fr) minmax(0, 1fr);
+  gap: 30px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+.ip-system-layers strong { font-size: clamp(23px, 3vw, 34px); }
+.ip-system-layers p {
+  align-self: center;
+  max-width: 620px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+}
 .font-library {
   --font-demo-size: 48px;
   --font-demo-weight: 400;
@@ -2139,6 +2155,7 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .library-entry-stats span:nth-child(2n) { padding-left: 14px; }
   .library-entry-open { grid-column: 2; grid-row: 1; }
   .ip-system-hero { min-height: auto; }
+  .ip-system-layers article { grid-template-columns: 1fr; gap: 8px; }
   .font-library { --font-demo-size: 38px; padding: 64px 0 54px; }
   .font-library-entry { grid-template-columns: 1fr auto; padding: 30px 0; }
   .font-library-entry > p { display: none; }
@@ -2983,6 +3000,7 @@ button:active { transform: translateY(1px); }
 
 .ip-system-hero { min-height: min(500px, calc(60dvh - 58px)); padding-top: clamp(42px, 6vw, 74px); }
 .ip-system-hero h1 { max-width: 1120px; font-size: clamp(56px, 7vw, 94px); line-height: .92; }
+.ip-system-layers article { padding: 22px 0; }
 .ip-system-content-shell { padding-top: clamp(60px, 7vw, 92px); }
 .ip-system-toc { top: 92px; }
 .evolution-map {

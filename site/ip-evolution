@@ -17,8 +17,8 @@
   <link rel="alternate" href="llms.txt" type="text/plain" title="IPTrust LLM Guide">
   <link rel="alternate" href="api/openapi.json" type="application/vnd.oai.openapi+json" title="IPTrust OpenAPI">
   <link rel="alternate" href="api/fonts.json" type="application/json" title="IPTrust Open-source Type Library">
-  <link rel="stylesheet" href="assets/site-59c4eb6-3e8d66a5.css">
-  <link rel="modulepreload" href="assets/site-59c4eb6-3e8d66a5.js">
+  <link rel="stylesheet" href="assets/site-6d0b90a-59c8f341.css">
+  <link rel="modulepreload" href="assets/site-6d0b90a-59c8f341.js">
 </head>
 <body class="ip-system-page">
   <header class="topbar">
@@ -67,22 +67,32 @@
       <h1 data-i18n="evolution.pageTitle">让品牌持续进化。</h1>
       <p data-i18n="evolution.pageLead">架构、内核、表达、资产与治理，构成可管理、可调用、可持续更新的闭环。</p>
       <div class="ip-system-actions">
-        <a class="button" href="#framework" data-i18n="evolution.readFramework">查看完整系统</a>
-        <a class="button ghost" href="./#brandGrid" data-i18n="evolution.applyToIp">选择一个 IP</a>
+        <a class="button" href="#system-map" data-i18n="evolution.exploreMap">探索系统图谱</a>
+        <a class="button ghost" href="#framework" data-i18n="evolution.readFramework">查看完整正文</a>
       </div>
     </section>
-    <section class="ip-system-layers" aria-label="IP Evolution layers">
-      <article><strong data-i18n="evolution.architecture">架构</strong><p data-i18n="evolution.architectureBody">先判断品牌关系与命名层级。</p></article>
-      <article><strong data-i18n="evolution.core">内核</strong><p data-i18n="evolution.coreBody">明确使命、受众、定位与主张。</p></article>
-      <article><strong data-i18n="evolution.expression">表达</strong><p data-i18n="evolution.expressionBody">统一语言、视觉、声音与行为。</p></article>
-      <article><strong data-i18n="evolution.assets">资产</strong><p data-i18n="evolution.assetsBody">把系统转化为人和 Agent 可调用的资产。</p></article>
-      <article><strong data-i18n="evolution.governance">治理</strong><p data-i18n="evolution.governanceBody">记录版本、衡量偏差并持续回修。</p></article>
+    <section class="evolution-map" id="system-map" data-evolution-map>
+      <header class="evolution-map-head">
+        <div><p class="eyebrow" data-i18n="evolution.mapLabel">交互图谱</p><h2 data-i18n="evolution.mapTitle">看见系统，进入细节。</h2></div>
+        <p data-i18n="evolution.mapLead">沿主路径理解方法论；选择任一节点，读取对应章节的全部内容。</p>
+        <p class="evolution-map-count"><strong data-map-count>0</strong><span data-i18n="evolution.mapModules">模块</span></p>
+      </header>
+      <div class="evolution-map-toolbar">
+        <label><span data-i18n="evolution.mapSearch">搜索图谱</span><input id="evolutionMapSearch" type="search" autocomplete="off" data-i18n-placeholder="evolution.mapSearchPlaceholder" placeholder="使命、定位、资产、治理…"></label>
+        <button id="evolutionMapReset" type="button" data-i18n="evolution.mapReset">全部</button>
+        <output id="evolutionMapStatus" aria-live="polite"></output>
+      </div>
+      <div class="evolution-map-workspace">
+        <div class="evolution-map-canvas" id="evolutionMapCanvas">
+          <svg id="evolutionMapLinks" aria-hidden="true"></svg>
+          <div class="evolution-map-nodes" id="evolutionMapNodes"></div>
+        </div>
+        <aside class="evolution-map-detail" aria-live="polite">
+          <header><span data-map-detail-index>00</span><a data-map-detail-source href="#framework" data-i18n="evolution.mapSource">完整正文 ↓</a></header>
+          <div class="rendered-document" id="evolutionMapDetail"></div>
+        </aside>
+      </div>
     </section>
-    <a class="font-library-entry" id="open-source-type" href="fonts">
-      <div><p class="eyebrow" data-i18n="fonts.label">字体参考</p><h2 data-i18n="fonts.title">开源可商用字体。</h2></div>
-      <p><strong>1928</strong><span data-i18n="fonts.officialIndexed">官方索引</span></p>
-      <span aria-hidden="true">↗</span>
-    </a>
     <section class="ip-system-content-shell" id="framework">
       <aside class="ip-system-toc" aria-label="IP System contents">
         <strong data-i18n="evolution.frameworkTitle">完整系统</strong>
@@ -487,7 +497,7 @@
     <section class="ip-system-loop">
       <p data-i18n="evolution.loop">识别品牌，建立系统，生成资产，回收反馈，再次进化。</p>
     </section>
-    <noscript><p class="ip-system-noscript">页面内容可正常阅读；开启 JavaScript 后可使用字体筛选、样张加载与复制功能。</p></noscript>
+    <noscript><p class="ip-system-noscript">页面内容可正常阅读；开启 JavaScript 后可使用交互图谱。</p></noscript>
   </main>
   <script>
     const repairUrl = new URL(location.href);
@@ -496,6 +506,6 @@
       history.replaceState(null, "", repairUrl.pathname + repairUrl.search + repairUrl.hash);
     }
   </script>
-  <script src="assets/site-59c4eb6-3e8d66a5.js" type="module"></script>
+  <script src="assets/site-6d0b90a-59c8f341.js" type="module"></script>
 </body>
 </html>

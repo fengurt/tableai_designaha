@@ -1833,22 +1833,32 @@ ${commonDiscoveryHead()}
       <h1 data-i18n="evolution.pageTitle">让品牌持续进化。</h1>
       <p data-i18n="evolution.pageLead">架构、内核、表达、资产与治理，构成可管理、可调用、可持续更新的闭环。</p>
       <div class="ip-system-actions">
-        <a class="button" href="#framework" data-i18n="evolution.readFramework">查看完整系统</a>
-        <a class="button ghost" href="./#brandGrid" data-i18n="evolution.applyToIp">选择一个 IP</a>
+        <a class="button" href="#system-map" data-i18n="evolution.exploreMap">探索系统图谱</a>
+        <a class="button ghost" href="#framework" data-i18n="evolution.readFramework">查看完整正文</a>
       </div>
     </section>
-    <section class="ip-system-layers" aria-label="IP Evolution layers">
-      <article><strong data-i18n="evolution.architecture">架构</strong><p data-i18n="evolution.architectureBody">先判断品牌关系与命名层级。</p></article>
-      <article><strong data-i18n="evolution.core">内核</strong><p data-i18n="evolution.coreBody">明确使命、受众、定位与主张。</p></article>
-      <article><strong data-i18n="evolution.expression">表达</strong><p data-i18n="evolution.expressionBody">统一语言、视觉、声音与行为。</p></article>
-      <article><strong data-i18n="evolution.assets">资产</strong><p data-i18n="evolution.assetsBody">把系统转化为人和 Agent 可调用的资产。</p></article>
-      <article><strong data-i18n="evolution.governance">治理</strong><p data-i18n="evolution.governanceBody">记录版本、衡量偏差并持续回修。</p></article>
+    <section class="evolution-map" id="system-map" data-evolution-map>
+      <header class="evolution-map-head">
+        <div><p class="eyebrow" data-i18n="evolution.mapLabel">交互图谱</p><h2 data-i18n="evolution.mapTitle">看见系统，进入细节。</h2></div>
+        <p data-i18n="evolution.mapLead">沿主路径理解方法论；选择任一节点，读取对应章节的全部内容。</p>
+        <p class="evolution-map-count"><strong data-map-count>0</strong><span data-i18n="evolution.mapModules">模块</span></p>
+      </header>
+      <div class="evolution-map-toolbar">
+        <label><span data-i18n="evolution.mapSearch">搜索图谱</span><input id="evolutionMapSearch" type="search" autocomplete="off" data-i18n-placeholder="evolution.mapSearchPlaceholder" placeholder="使命、定位、资产、治理…"></label>
+        <button id="evolutionMapReset" type="button" data-i18n="evolution.mapReset">全部</button>
+        <output id="evolutionMapStatus" aria-live="polite"></output>
+      </div>
+      <div class="evolution-map-workspace">
+        <div class="evolution-map-canvas" id="evolutionMapCanvas">
+          <svg id="evolutionMapLinks" aria-hidden="true"></svg>
+          <div class="evolution-map-nodes" id="evolutionMapNodes"></div>
+        </div>
+        <aside class="evolution-map-detail" aria-live="polite">
+          <header><span data-map-detail-index>00</span><a data-map-detail-source href="#framework" data-i18n="evolution.mapSource">完整正文 ↓</a></header>
+          <div class="rendered-document" id="evolutionMapDetail"></div>
+        </aside>
+      </div>
     </section>
-    <a class="font-library-entry" id="open-source-type" href="fonts">
-      <div><p class="eyebrow" data-i18n="fonts.label">字体参考</p><h2 data-i18n="fonts.title">开源可商用字体。</h2></div>
-      <p><strong>${googleFontDirectory.stats.verifiedFamilies}</strong><span data-i18n="fonts.officialIndexed">官方索引</span></p>
-      <span aria-hidden="true">↗</span>
-    </a>
     <section class="ip-system-content-shell" id="framework">
       <aside class="ip-system-toc" aria-label="IP System contents">
         <strong data-i18n="evolution.frameworkTitle">完整系统</strong>
@@ -1861,7 +1871,7 @@ ${commonDiscoveryHead()}
     <section class="ip-system-loop">
       <p data-i18n="evolution.loop">识别品牌，建立系统，生成资产，回收反馈，再次进化。</p>
     </section>
-    <noscript><p class="ip-system-noscript">页面内容可正常阅读；开启 JavaScript 后可使用字体筛选、样张加载与复制功能。</p></noscript>
+    <noscript><p class="ip-system-noscript">页面内容可正常阅读；开启 JavaScript 后可使用交互图谱。</p></noscript>
   </main>
   <script>
     const repairUrl = new URL(location.href);
@@ -2881,22 +2891,6 @@ p { line-height: 1.65; }
   font-size: clamp(18px, 2vw, 24px);
 }
 .ip-system-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
-.ip-system-layers { display: grid; }
-.ip-system-layers article {
-  display: grid;
-  grid-template-columns: minmax(150px, .35fr) minmax(0, 1fr);
-  gap: 30px;
-  padding: 24px 0;
-  border-bottom: 1px solid var(--line);
-}
-.ip-system-layers strong { font-size: clamp(23px, 3vw, 34px); }
-.ip-system-layers p {
-  align-self: center;
-  max-width: 620px;
-  margin: 0;
-  color: var(--muted);
-  font-size: 16px;
-}
 .font-library {
   --font-demo-size: 48px;
   --font-demo-weight: 400;
@@ -4361,7 +4355,6 @@ textarea { min-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, 
   .library-entry-stats span:nth-child(2n) { padding-left: 14px; }
   .library-entry-open { grid-column: 2; grid-row: 1; }
   .ip-system-hero { min-height: auto; }
-  .ip-system-layers article { grid-template-columns: 1fr; gap: 8px; }
   .font-library { --font-demo-size: 38px; padding: 64px 0 54px; }
   .font-library-entry { grid-template-columns: 1fr auto; padding: 30px 0; }
   .font-library-entry > p { display: none; }
@@ -4690,9 +4683,18 @@ const i18n = {
     "evolution.expressionBody": "统一语言、视觉、声音与行为。",
     "evolution.assetsBody": "把系统转化为人和 Agent 可调用的资产。",
     "evolution.governanceBody": "记录版本、衡量偏差并持续回修。",
-    "evolution.readFramework": "查看完整系统",
+    "evolution.readFramework": "查看完整正文",
     "evolution.frameworkTitle": "完整系统",
     "evolution.applyToIp": "选择一个 IP",
+    "evolution.exploreMap": "探索系统图谱",
+    "evolution.mapLabel": "交互图谱",
+    "evolution.mapTitle": "看见系统，进入细节。",
+    "evolution.mapLead": "沿主路径理解方法论；选择任一节点，读取对应章节的全部内容。",
+    "evolution.mapModules": "模块",
+    "evolution.mapSearch": "搜索图谱",
+    "evolution.mapSearchPlaceholder": "使命、定位、资产、治理…",
+    "evolution.mapReset": "全部",
+    "evolution.mapSource": "完整正文 ↓",
     "evolution.loop": "识别品牌，建立系统，生成资产，回收反馈，再次进化。",
     "fonts.label": "字体参考",
     "fonts.title": "开源可商用字体。",
@@ -4927,9 +4929,18 @@ const i18n = {
     "evolution.expressionBody": "Align language, visual, sound, and behavior.",
     "evolution.assetsBody": "Create assets that people and agents can call.",
     "evolution.governanceBody": "Track versions, measure gaps, and keep improving.",
-    "evolution.readFramework": "Explore the system",
+    "evolution.readFramework": "Read the full framework",
     "evolution.frameworkTitle": "System contents",
     "evolution.applyToIp": "Choose an IP",
+    "evolution.exploreMap": "Explore the system map",
+    "evolution.mapLabel": "INTERACTIVE MAP",
+    "evolution.mapTitle": "See the system. Enter the detail.",
+    "evolution.mapLead": "Follow the main path, then select any node to read its complete source section.",
+    "evolution.mapModules": "modules",
+    "evolution.mapSearch": "Search the map",
+    "evolution.mapSearchPlaceholder": "mission, positioning, assets, governance…",
+    "evolution.mapReset": "All",
+    "evolution.mapSource": "Full source ↓",
     "evolution.loop": "Identify the brand. Build the system. Create assets. Learn from feedback. Evolve again.",
     "fonts.label": "TYPE REFERENCE",
     "fonts.title": "Open-source commercial-use fonts.",
@@ -6941,6 +6952,151 @@ async function renderBrandArchitecture(slug) {
   node.innerHTML = \`<header><p class="eyebrow">Architecture</p><h2>\${currentLocale === "en" ? "Brand lineage" : "品牌谱系"}</h2></header><div class="lineage-grid">\${graph.parents.map((relation) => \`<a href="ip?ip=\${relation.parent}"><small>Parent IP</small><strong>\${escapeHtml(relation.parentNames?.zh || relation.parentNames?.en || relation.parent)}</strong></a>\`).join("")}\${graph.children.map((relation) => \`<a href="ip?ip=\${relation.child}"><small>Child IP</small><strong>\${escapeHtml(relation.childNames?.zh || relation.childNames?.en || relation.child)}</strong></a>\`).join("")}\${graph.applications.map((app) => \`<a href="application?application=\${app.slug}"><small>Application</small><strong>\${escapeHtml(app.names?.zh || app.names?.en || app.slug)}</strong></a>\`).join("")}</div>\`;
 }
 
+function setupEvolutionMap() {
+  const root = document.querySelector("[data-evolution-map]");
+  const documentNode = document.querySelector(".ip-system-document");
+  if (!root || !documentNode || root.dataset.ready) return;
+  root.dataset.ready = "true";
+
+  let parentId = "";
+  const sections = [...documentNode.querySelectorAll("h2, h3")].map((heading, index) => {
+    const depth = Number(heading.tagName.slice(1));
+    if (depth === 2) parentId = heading.id;
+    const nodes = [heading];
+    for (let node = heading.nextElementSibling; node; node = node.nextElementSibling) {
+      const nextDepth = /^H[23]$/.test(node.tagName) ? Number(node.tagName.slice(1)) : 9;
+      if (nextDepth <= depth) break;
+      nodes.push(node);
+    }
+    return { id: heading.id, label: heading.textContent.trim(), depth, parentId: depth === 3 ? parentId : "", index, nodes, text: nodes.map((node) => node.textContent).join(" ").toLowerCase() };
+  });
+  if (!sections.length) return;
+
+  const nodesRoot = $("#evolutionMapNodes");
+  const detail = $("#evolutionMapDetail");
+  const detailIndex = root.querySelector("[data-map-detail-index]");
+  const detailSource = root.querySelector("[data-map-detail-source]");
+  const count = root.querySelector("[data-map-count]");
+  const status = $("#evolutionMapStatus");
+  const search = $("#evolutionMapSearch");
+  const reset = $("#evolutionMapReset");
+  const canvas = $("#evolutionMapCanvas");
+  const svg = $("#evolutionMapLinks");
+  const buttons = new Map();
+  let activeId = "";
+
+  const splitLabel = (section) => {
+    const parts = section.label.split("·").map((part) => part.trim());
+    return parts.length > 1 ? [parts.shift(), parts.join(" · ")] : [String(section.index + 1).padStart(2, "0"), section.label];
+  };
+  const makeButton = (section, className) => {
+    const button = document.createElement("button");
+    const [kicker, label] = splitLabel(section);
+    button.type = "button";
+    button.className = className;
+    button.dataset.mapTarget = section.id;
+    button.dataset.depth = String(section.depth);
+    button.title = section.label;
+    button.innerHTML = "<small></small><strong></strong>";
+    button.querySelector("small").textContent = kicker;
+    button.querySelector("strong").textContent = label;
+    buttons.set(section.id, button);
+    return button;
+  };
+
+  for (const section of sections.filter((item) => item.depth === 2)) {
+    const group = document.createElement("article");
+    group.className = "evolution-map-group";
+    group.dataset.mapGroup = section.id;
+    group.append(makeButton(section, "evolution-map-node evolution-map-node-main"));
+    const children = sections.filter((item) => item.parentId === section.id);
+    if (children.length) {
+      const childRoot = document.createElement("div");
+      childRoot.className = "evolution-map-children";
+      children.forEach((child) => childRoot.append(makeButton(child, "evolution-map-node evolution-map-node-child")));
+      group.append(childRoot);
+    }
+    nodesRoot.append(group);
+  }
+  count.textContent = String(sections.length);
+
+  const drawLinks = () => {
+    const box = canvas.getBoundingClientRect();
+    const main = sections.filter((item) => item.depth === 2).map((item) => buttons.get(item.id));
+    svg.setAttribute("viewBox", \`0 0 \${box.width} \${box.height}\`);
+    svg.replaceChildren();
+    const defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
+    defs.innerHTML = '<marker id="evolution-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z"/></marker>';
+    svg.append(defs);
+    main.slice(0, -1).forEach((from, index) => {
+      const to = main[index + 1];
+      const a = from.getBoundingClientRect();
+      const b = to.getBoundingClientRect();
+      const sameRow = Math.abs(a.top - b.top) < 36;
+      const x1 = (sameRow ? a.right : a.left + a.width / 2) - box.left;
+      const y1 = (sameRow ? a.top + a.height / 2 : a.bottom) - box.top;
+      const x2 = (sameRow ? b.left : b.left + b.width / 2) - box.left;
+      const y2 = (sameRow ? b.top + b.height / 2 : b.top) - box.top;
+      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      const bend = sameRow ? Math.max(20, (x2 - x1) / 2) : Math.max(24, (y2 - y1) / 2);
+      path.setAttribute("d", sameRow ? \`M\${x1} \${y1} C\${x1 + bend} \${y1} \${x2 - bend} \${y2} \${x2} \${y2}\` : \`M\${x1} \${y1} C\${x1} \${y1 + bend} \${x2} \${y2 - bend} \${x2} \${y2}\`);
+      path.setAttribute("marker-end", "url(#evolution-arrow)");
+      path.classList.toggle("is-active", from.dataset.mapTarget === activeId || to.dataset.mapTarget === activeId);
+      svg.append(path);
+    });
+  };
+
+  const showSection = (id, updateUrl = true) => {
+    const section = sections.find((item) => item.id === id) || sections[0];
+    activeId = section.id;
+    buttons.forEach((button, key) => {
+      const active = key === activeId;
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+    detail.replaceChildren(...section.nodes.map((node) => {
+      const clone = node.cloneNode(true);
+      clone.removeAttribute("id");
+      clone.querySelectorAll("[id]").forEach((child) => child.removeAttribute("id"));
+      return clone;
+    }));
+    detailIndex.textContent = String(section.index + 1).padStart(2, "0");
+    detailSource.href = \`#\${section.id}\`;
+    if (updateUrl) history.replaceState(null, "", \`\${location.pathname}\${location.search}#\${section.id}\`);
+    requestAnimationFrame(drawLinks);
+  };
+
+  const filter = () => {
+    const query = search.value.trim().toLowerCase();
+    const matches = new Set(sections.filter((section) => !query || section.text.includes(query)).map((section) => section.id));
+    root.querySelectorAll("[data-map-group]").forEach((group) => {
+      const groupMatches = matches.has(group.dataset.mapGroup) || [...group.querySelectorAll("[data-map-target]")].some((button) => matches.has(button.dataset.mapTarget));
+      group.classList.toggle("is-dimmed", Boolean(query) && !groupMatches);
+    });
+    buttons.forEach((button, id) => button.classList.toggle("is-match", Boolean(query) && matches.has(id)));
+    status.textContent = query ? \`\${matches.size} / \${sections.length}\` : \`\${sections.length}\`;
+    return matches;
+  };
+
+  nodesRoot.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-map-target]");
+    if (button) showSection(button.dataset.mapTarget);
+  });
+  search.addEventListener("input", filter);
+  search.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter") return;
+    const first = [...filter()][0];
+    if (first) showSection(first);
+  });
+  reset.addEventListener("click", () => { search.value = ""; filter(); showSection(sections[0].id); search.focus(); });
+  if ("ResizeObserver" in window) new ResizeObserver(() => requestAnimationFrame(drawLinks)).observe(canvas);
+  else addEventListener("resize", () => requestAnimationFrame(drawLinks));
+  const initial = sections.some((section) => \`#\${section.id}\` === location.hash) ? location.hash.slice(1) : sections[0].id;
+  filter();
+  showSection(initial, false);
+  root.classList.add("is-ready");
+}
+
 function setupWebVitals() {
   if (!("PerformanceObserver" in window) || Math.random() > 0.1) return;
   const metrics = { ttfb: 0, lcp: 0, cls: 0, inp: 0, transferSize: 0 };
@@ -6979,6 +7135,7 @@ setupPortalActions();
 setupAgentGateway();
 setupApiConnect();
 setupFontLibrary();
+setupEvolutionMap();
 renderHeroIndex().catch(console.error);
 renderIndex().catch(console.error);
 renderBrand().catch(renderBrandFailure);
