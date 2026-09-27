@@ -1,0 +1,76 @@
+{
+  "$description": "岁知社 IPTrust design tokens in W3C DTCG format. Published brand palette with semantic aliases for trusted IP asset stewardship and agent-readable collaboration.",
+  "color": {
+    "$type": "color",
+    "navy": { "$value": "#10263D", "$description": "Published primary — brand structure, headings, navigation" },
+    "navy-soft": { "$value": "#1B3854", "$description": "Derived hover and secondary navy" },
+    "navy-container": { "$value": "#E8EDF1", "$description": "Derived pale navy container" },
+    "gold": { "$value": "#B99B5B", "$description": "Published accent — sparing emphasis and key data" },
+    "gold-deep": { "$value": "#725C2F", "$description": "Derived readable gold text on light surfaces" },
+    "gold-mist": { "$value": "#B99B5B14", "$description": "Derived subtle accent surface" },
+    "platinum": { "$value": "#C7CCD1", "$description": "Published secondary — dividers and neutral boundaries" },
+    "white": { "$value": "#FFFFFF", "$description": "Published paper — cards and input surfaces" },
+    "warm-paper": { "$value": "#F5F2EA", "$description": "Published surface — page background" },
+    "warm-paper-deep": { "$value": "#ECE8DE", "$description": "Derived elevated surface" },
+    "ink": { "$value": "#17202A", "$description": "Published ink — body text" },
+    "muted": { "$value": "#5C6570", "$description": "Published muted — supporting text and metadata" },
+    "outline": { "$value": "#7A828A", "$description": "Derived accessible boundary" },
+    "error": { "$value": "#B42318", "$description": "Functional error and destructive state" }
+  },
+  "semantic": {
+    "$type": "color",
+    "$description": "Role-based aliases for interface use.",
+    "background": { "$value": "{color.warm-paper}" },
+    "surface": { "$value": "{color.white}" },
+    "surface-raised": { "$value": "{color.warm-paper-deep}" },
+    "text": { "$value": "{color.ink}" },
+    "text-strong": { "$value": "{color.navy}" },
+    "text-muted": { "$value": "{color.muted}" },
+    "border": { "$value": "{color.platinum}" },
+    "border-strong": { "$value": "{color.navy}" },
+    "accent": { "$value": "{color.gold}" },
+    "accent-text": { "$value": "{color.gold-deep}" },
+    "error": { "$value": "{color.error}" }
+  },
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "sans": { "$value": ["Noto Sans SC", "system-ui", "sans-serif"], "$description": "Chinese-first system font stack; no external font dependency" }
+    },
+    "weight": {
+      "$type": "fontWeight",
+      "body": { "$value": 400 },
+      "label": { "$value": 600 },
+      "heading": { "$value": 600 },
+      "display": { "$value": 700 }
+    },
+    "size": {
+      "$type": "dimension",
+      "headline-xl": { "$value": "40px", "$extensions": { "iptrust.lineHeight": "1.2", "iptrust.weight": 700 } },
+      "headline-lg": { "$value": "32px", "$extensions": { "iptrust.lineHeight": "1.3", "iptrust.weight": 600 } },
+      "headline-md": { "$value": "24px", "$extensions": { "iptrust.lineHeight": "1.4", "iptrust.weight": 600 } },
+      "body-lg": { "$value": "18px", "$extensions": { "iptrust.lineHeight": "1.7" } },
+      "body-md": { "$value": "16px", "$extensions": { "iptrust.lineHeight": "1.7" } },
+      "label-sm": { "$value": "12px", "$extensions": { "iptrust.lineHeight": "1.4", "iptrust.weight": 600 } }
+    }
+  },
+  "space": {
+    "$type": "dimension",
+    "$description": "8px-based spacing grid.",
+    "xs": { "$value": "4px" },
+    "sm": { "$value": "8px" },
+    "md": { "$value": "16px" },
+    "lg": { "$value": "24px" },
+    "xl": { "$value": "40px" },
+    "xxl": { "$value": "80px" },
+    "container-max": { "$value": "1200px" }
+  },
+  "radius": {
+    "$type": "dimension",
+    "$description": "Restrained radii for a reliable records interface.",
+    "sm": { "$value": "2px" },
+    "default": { "$value": "4px" },
+    "md": { "$value": "6px" },
+    "full": { "$value": "9999px" }
+  }
+}
